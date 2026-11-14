@@ -37,7 +37,7 @@ export function GeneralStepCard({
           className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary dark:bg-primary/15"
           aria-hidden
         >
-          <Icon className="size-[18px]" strokeWidth={1.75} />
+          <Icon className="size-4.5" strokeWidth={1.75} />
         </span>
       </div>
       <div className="space-y-1.5">

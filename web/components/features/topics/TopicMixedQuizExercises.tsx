@@ -12,7 +12,10 @@ import { ExercisePercentBadge } from "@/components/features/topics/ExercisePerce
 import { ExerciseResultDialog } from "@/components/features/topics/ExerciseResultDialog";
 import { ExerciseStepNav } from "@/components/features/topics/ExerciseStepNav";
 import { Button } from "@/components/ui/Button";
-import type { FillBlankExercise, TopicQuizExercise } from "@/data/grammar/types";
+import type {
+  FillBlankExercise,
+  TopicQuizExercise,
+} from "@/data/grammar/types";
 import { useExerciseNavigation } from "@/hooks/useExerciseNavigation";
 import {
   fillBlankSpeakText,
@@ -249,8 +252,8 @@ export function TopicMixedQuizExercises({
           }
         />
 
-        {exercise.type === "multiple_choice" ? (
-          <>
+        <form className="space-y-4" onSubmit={handleCheck}>
+          {exercise.type === "multiple_choice" ? (
             <InstantMultipleChoiceOptions
               options={exercise.options}
               correctIndex={exercise.correctIndex}
@@ -260,37 +263,35 @@ export function TopicMixedQuizExercises({
               labelledBy={promptId}
               optionsAriaLabel={t("optionsAria")}
             />
-          </>
-        ) : (
-          <label className="flex w-full flex-col gap-1.5 text-sm">
-            <input
-              type="text"
-              value={current.answer}
-              disabled={current.checked}
-              onChange={(event) =>
-                updateCurrent({ answer: event.target.value })
-              }
-              placeholder={t("answerPlaceholder")}
-              autoComplete="off"
-              spellCheck={false}
-              className={cn(
-                "h-11 rounded-lg border bg-surface px-3 text-brand-950 outline-none transition-colors",
-                "placeholder:text-brand-600/60 focus:ring-2",
-                "dark:bg-brand-900 dark:text-brand-100 dark:placeholder:text-brand-400/70",
-                current.checked &&
-                  isCorrect &&
-                  "border-emerald-500/60 focus:border-emerald-500 focus:ring-emerald-500/20",
-                current.checked &&
-                  !isCorrect &&
-                  "border-red-500/60 focus:border-red-500 focus:ring-red-500/20",
-                !current.checked &&
-                  "border-brand-400/70 focus:border-brand-800 focus:ring-brand-800/20 dark:border-brand-600 dark:focus:border-brand-400 dark:focus:ring-brand-400/20",
-              )}
-            />
-          </label>
-        )}
+          ) : (
+            <label className="flex w-full flex-col gap-1.5 text-sm">
+              <input
+                type="text"
+                value={current.answer}
+                disabled={current.checked}
+                onChange={(event) =>
+                  updateCurrent({ answer: event.target.value })
+                }
+                placeholder={t("answerPlaceholder")}
+                autoComplete="off"
+                spellCheck={false}
+                className={cn(
+                  "h-11 rounded-lg border bg-surface px-3 text-brand-950 outline-none transition-colors",
+                  "placeholder:text-brand-600/60 focus:ring-2",
+                  "dark:bg-brand-900 dark:text-brand-100 dark:placeholder:text-brand-400/70",
+                  current.checked &&
+                    isCorrect &&
+                    "border-emerald-500/60 focus:border-emerald-500 focus:ring-emerald-500/20",
+                  current.checked &&
+                    !isCorrect &&
+                    "border-red-500/60 focus:border-red-500 focus:ring-red-500/20",
+                  !current.checked &&
+                    "border-brand-400/70 focus:border-brand-800 focus:ring-brand-800/20 dark:border-brand-600 dark:focus:border-brand-400 dark:focus:ring-brand-400/20",
+                )}
+              />
+            </label>
+          )}
 
-        <form className="space-y-4" onSubmit={handleCheck}>
           <ExerciseStepNav
             canGoPrevious={canGoPrevious}
             canGoNext={canGoNext && current.checked}
