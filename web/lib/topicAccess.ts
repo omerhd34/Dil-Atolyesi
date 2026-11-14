@@ -13,6 +13,8 @@ export const CEFR_LEVEL_ORDER: CefrLevel[] = [
   "C2",
 ];
 
+export const BYPASS_LEVEL_LOCK = true;
+
 export const CEFR_LEVEL_BADGE_CLASS: Record<CefrLevel, string> = {
   A1: "bg-sky-500/15 text-sky-700 dark:bg-sky-400/30 dark:text-sky-200",
   A2: "bg-teal-500/15 text-teal-700 dark:bg-teal-400/30 dark:text-teal-200",
@@ -95,6 +97,10 @@ export function canAccessLevel(
   level: CefrLevel,
   passedExams: readonly CefrLevel[] = [],
 ): boolean {
+  if (BYPASS_LEVEL_LOCK) {
+    return true;
+  }
+
   const previous = getPreviousLevel(level);
   if (!previous) {
     return true;
