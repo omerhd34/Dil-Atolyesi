@@ -5,30 +5,30 @@ export const topicContent36: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Üslupsal Öne Çıkarma ve Sıfat Devriklikleri" konusu C2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"İsim Fiiller ve Mastarlar" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "36-1",
-        title: "Üslupsal Öne Çıkarma ve Sıfat Devriklikleri",
-        titleEn: "Stylistic Fronting & Adjective Inversion",
+        title: "İsim Fiiller ve Mastarlar",
+        titleEn: "Gerunds & Infinitives",
         paragraphs: [
-          '"Üslupsal Öne Çıkarma ve Sıfat Devriklikleri" başlığında Üslupsal Öne Çıkarma ve Sıfat Devriklikleri konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C2 seviyesinde düzenli tekrar yeterlidir.",
+          '"İsim Fiiller ve Mastarlar" başlığında İsim Fiiller ve Mastarlar konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
             en: "I understand this topic.",
             tr: "Bu konuyu anlıyorum.",
-            note: "Üslupsal Öne Çıkarma ve Sıfat Devriklikleri — örnek 1",
+            note: "İsim Fiiller ve Mastarlar — örnek 1",
           },
           {
-            en: "Topic focus: Üslupsal Öne Çıkarma ve Sıfat Devriklikleri",
-            tr: "Konu odağı: Üslupsal Öne Çıkarma ve Sıfat Devriklikleri",
+            en: "Topic focus: İsim Fiiller ve Mastarlar",
+            tr: "Konu odağı: İsim Fiiller ve Mastarlar",
           },
           {
-            en: "Subtopic: Üslupsal Öne Çıkarma ve Sıfat Devriklikleri",
-            tr: "Alt konu: Üslupsal Öne Çıkarma ve Sıfat Devriklikleri",
+            en: "Subtopic: İsim Fiiller ve Mastarlar",
+            tr: "Alt konu: İsim Fiiller ve Mastarlar",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent36: TopicContent = {
       id: "36-ex-36-1-1",
       subtopicId: "36-1",
       type: "multiple_choice",
-      prompt: "\"Üslupsal Öne Çıkarma & Sıfat Devriklikleri\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"İsim Fiiller & Mastarlar\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Üslupsal Öne Çıkarma & Sıfat Devriklikleri",
+        "İsim Fiiller & Mastarlar",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Üslupsal Öne Çıkarma & Sıfat Devriklikleri\" başlığı altındadır.",
+      explanation: "Bu alt konu \"İsim Fiiller & Mastarlar\" başlığı altındadır.",
     },
     {
       id: "36-ex-36-1-2",
       subtopicId: "36-1",
       type: "multiple_choice",
-      prompt: "C2 seviyesindeki \"Üslupsal Öne Çıkarma & Sıfat Devriklikleri\" için doğru yaklaşım hangisidir?",
+      prompt: "B1 seviyesindeki \"İsim Fiiller & Mastarlar\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent36: TopicContent = {
       id: "36-tf-36-1-1",
       subtopicId: "36-1",
       type: "true_false",
-      prompt: "\"Üslupsal Öne Çıkarma & Sıfat Devriklikleri\" başlığı \"Üslupsal Öne Çıkarma & Sıfat Devriklikleri\" konusunun bir parçasıdır.",
+      prompt: "\"İsim Fiiller & Mastarlar\" başlığı \"İsim Fiiller & Mastarlar\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Üslupsal Öne Çıkarma & Sıfat Devriklikleri\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"İsim Fiiller & Mastarlar\" konusu altında işlenir.",
     },
     {
       id: "36-fb-36-1-1",
       subtopicId: "36-1",
       type: "fill_blank",
-      prompt: "\"Üslupsal Öne Çıkarma & Sıfat Devriklikleri\" konusu _____ seviyesine uygundur.",
-      answer: "C2",
-      explanation: "Bu konu C2 seviyesindedir.",
+      prompt: "\"İsim Fiiller & Mastarlar\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "36-match-1",
@@ -90,12 +90,12 @@ export const topicContent36: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Stylistic Fronting & Adjective Inversion",
-          right: "Üslupsal Öne Çıkarma & Sıfat Devriklikleri",
+          left: "Gerunds & Infinitives",
+          right: "İsim Fiiller & Mastarlar",
         },
         {
-          left: "C2 level",
-          right: "C2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,24 +154,23 @@ export const topicContent36: TopicContent = {
       id: "quiz-36-36-1-1",
       subtopicId: "36-1",
       type: "multiple_choice",
-      prompt:
-        '"Üslupsal Öne Çıkarma ve Sıfat Devriklikleri" alt konusu hangi ana konuya aittir?',
+      prompt: '"İsim Fiiller ve Mastarlar" alt konusu hangi ana konuya aittir?',
       options: [
-        "Üslupsal Öne Çıkarma ve Sıfat Devriklikleri",
+        "İsim Fiiller ve Mastarlar",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "Üslupsal Öne Çıkarma ve Sıfat Devriklikleri" başlığı altındadır.',
+        'Bu alt konu "İsim Fiiller ve Mastarlar" başlığı altındadır.',
     },
     {
       id: "quiz-36-36-1-2",
       subtopicId: "36-1",
       type: "multiple_choice",
       prompt:
-        'C2 seviyesindeki "Üslupsal Öne Çıkarma ve Sıfat Devriklikleri" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "İsim Fiiller ve Mastarlar" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,8 +184,7 @@ export const topicContent36: TopicContent = {
       id: "quiz-36-36-1-3",
       subtopicId: "36-1",
       type: "multiple_choice",
-      prompt:
-        '"Üslupsal Öne Çıkarma ve Sıfat Devriklikleri" çalışırken hangisi doğrudur?',
+      prompt: '"İsim Fiiller ve Mastarlar" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -200,11 +198,10 @@ export const topicContent36: TopicContent = {
       id: "quiz-36-level",
       subtopicId: "36-1",
       type: "multiple_choice",
-      prompt:
-        '"Üslupsal Öne Çıkarma ve Sıfat Devriklikleri" konusu hangi seviyeye aittir?',
-      options: ["C2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"İsim Fiiller ve Mastarlar" konusu hangi seviyeye aittir?',
+      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu C2 seviyesindedir.",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
 };

@@ -2,33 +2,31 @@ import type { TopicContent } from "@/data/grammar/types";
 
 export const topicContent24: TopicContent = {
   topicId: "24",
-  viewMinutes: 10,
   lesson: {
-    intro:
-      '"İsim Fiiller ve Mastarlar" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+    intro: "\"Belgisiz Zamirler\" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.",
     sections: [
       {
         subtopicId: "24-1",
-        title: "İsim Fiiller ve Mastarlar",
-        titleEn: "Gerunds & Infinitives",
+        title: "Belgisiz Zamirler",
+        titleEn: "Someone is at the door. I didn't buy anything.",
         paragraphs: [
-          '"İsim Fiiller ve Mastarlar" başlığında İsim Fiiller ve Mastarlar konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
+          "\"Belgisiz Zamirler\" başlığında Belgisiz Zamirler konusunun önemli noktalarını adım adım görürsün.",
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
             en: "I understand this topic.",
             tr: "Bu konuyu anlıyorum.",
-            note: "İsim Fiiller ve Mastarlar — örnek 1",
+            note: "Belgisiz Zamirler — örnek 1",
           },
           {
-            en: "Topic focus: İsim Fiiller ve Mastarlar",
-            tr: "Konu odağı: İsim Fiiller ve Mastarlar",
+            en: "Topic focus: Belgisiz Zamirler",
+            tr: "Konu odağı: Belgisiz Zamirler",
           },
           {
-            en: "Subtopic: İsim Fiiller ve Mastarlar",
-            tr: "Alt konu: İsim Fiiller ve Mastarlar",
+            en: "Subtopic: Belgisiz Zamirler",
+            tr: "Alt konu: Belgisiz Zamirler",
           },
         ],
       },
@@ -39,21 +37,21 @@ export const topicContent24: TopicContent = {
       id: "24-ex-24-1-1",
       subtopicId: "24-1",
       type: "multiple_choice",
-      prompt: "\"İsim Fiiller & Mastarlar\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Belgisiz Zamirler\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İsim Fiiller & Mastarlar",
+        "Belgisiz Zamirler",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"İsim Fiiller & Mastarlar\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Belgisiz Zamirler\" başlığı altındadır.",
     },
     {
       id: "24-ex-24-1-2",
       subtopicId: "24-1",
       type: "multiple_choice",
-      prompt: "B1 seviyesindeki \"İsim Fiiller & Mastarlar\" için doğru yaklaşım hangisidir?",
+      prompt: "A2 seviyesindeki \"Belgisiz Zamirler\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +65,21 @@ export const topicContent24: TopicContent = {
       id: "24-tf-24-1-1",
       subtopicId: "24-1",
       type: "true_false",
-      prompt: "\"İsim Fiiller & Mastarlar\" başlığı \"İsim Fiiller & Mastarlar\" konusunun bir parçasıdır.",
+      prompt: "\"Belgisiz Zamirler\" başlığı \"Belgisiz Zamirler\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"İsim Fiiller & Mastarlar\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Belgisiz Zamirler\" konusu altında işlenir.",
     },
     {
       id: "24-fb-24-1-1",
       subtopicId: "24-1",
       type: "fill_blank",
-      prompt: "\"İsim Fiiller & Mastarlar\" konusu _____ seviyesine uygundur.",
-      answer: "B1",
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Belgisiz Zamirler\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "24-match-1",
@@ -90,12 +88,12 @@ export const topicContent24: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Gerunds & Infinitives",
-          right: "İsim Fiiller & Mastarlar",
+          left: "Indefinite Pronouns (someone, anything, nowhere)",
+          right: "Belgisiz Zamirler",
         },
         {
-          left: "B1 level",
-          right: "B1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -154,27 +152,25 @@ export const topicContent24: TopicContent = {
       id: "quiz-24-24-1-1",
       subtopicId: "24-1",
       type: "multiple_choice",
-      prompt: '"İsim Fiiller ve Mastarlar" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Belgisiz Zamirler\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İsim Fiiller ve Mastarlar",
-        "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
+        "Tamamen farklı bir konu",
+        "Belgisiz Zamirler",
       ],
-      correctIndex: 0,
-      explanation:
-        'Bu alt konu "İsim Fiiller ve Mastarlar" başlığı altındadır.',
+      correctIndex: 3,
+      explanation: "Bu alt konu \"Belgisiz Zamirler\" başlığı altındadır.",
     },
     {
       id: "quiz-24-24-1-2",
       subtopicId: "24-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "İsim Fiiller ve Mastarlar" için doğru yaklaşım hangisidir?',
+      prompt: "A2 seviyesindeki \"Belgisiz Zamirler\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
-        "Konuyu tamamen atlamak",
         "Sadece çeviri yapmadan ezberlemek",
+        "Konuyu tamamen atlamak",
         "Hiç alıştırma çözmemek",
       ],
       correctIndex: 0,
@@ -184,7 +180,7 @@ export const topicContent24: TopicContent = {
       id: "quiz-24-24-1-3",
       subtopicId: "24-1",
       type: "multiple_choice",
-      prompt: '"İsim Fiiller ve Mastarlar" çalışırken hangisi doğrudur?',
+      prompt: "\"Belgisiz Zamirler\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -198,10 +194,16 @@ export const topicContent24: TopicContent = {
       id: "quiz-24-level",
       subtopicId: "24-1",
       type: "multiple_choice",
-      prompt: '"İsim Fiiller ve Mastarlar" konusu hangi seviyeye aittir?',
-      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
-      correctIndex: 0,
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Belgisiz Zamirler\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Seviye yok",
+        "Yanlış seviye",
+        "A2",
+      ],
+      correctIndex: 3,
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
+  viewMinutes: 5,
 };

@@ -5,30 +5,30 @@ export const topicContent13: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Kipler: Yapabilmek" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "13-1",
-        title: "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
-        titleEn: "Past Continuous",
+        title: "Kipler: Yapabilmek",
+        titleEn: "Modals: Can / Can't",
         paragraphs: [
-          '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" başlığında Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
+          '"Kipler: Yapabilmek" başlığında Kipler: Yapabilmek konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "Let's practice together.",
-            tr: "Birlikte pratik yapalım.",
-            note: "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi — örnek 1",
+            en: "I use this every day.",
+            tr: "Bunu her gün kullanırım.",
+            note: "Kipler: Yapabilmek — örnek 1",
           },
           {
-            en: "Topic focus: Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
-            tr: "Konu odağı: Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
+            en: "Topic focus: Kipler: Yapabilmek",
+            tr: "Konu odağı: Kipler: Yapabilmek",
           },
           {
-            en: "Subtopic: Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
-            tr: "Alt konu: Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
+            en: "Subtopic: Kipler: Yapabilmek",
+            tr: "Alt konu: Kipler: Yapabilmek",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent13: TopicContent = {
       id: "13-ex-13-1-1",
       subtopicId: "13-1",
       type: "multiple_choice",
-      prompt: "\"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Kipler: Yapabilmek\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
+        "Kipler: Yapabilmek",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Kipler: Yapabilmek\" başlığı altındadır.",
     },
     {
       id: "13-ex-13-1-2",
       subtopicId: "13-1",
       type: "multiple_choice",
-      prompt: "A2 seviyesindeki \"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" için doğru yaklaşım hangisidir?",
+      prompt: "A1 seviyesindeki \"Kipler: Yapabilmek\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent13: TopicContent = {
       id: "13-tf-13-1-1",
       subtopicId: "13-1",
       type: "true_false",
-      prompt: "\"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" başlığı \"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" konusunun bir parçasıdır.",
+      prompt: "\"Kipler: Yapabilmek\" başlığı \"Kipler: Yapabilmek\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Kipler: Yapabilmek\" konusu altında işlenir.",
     },
     {
       id: "13-fb-13-1-1",
       subtopicId: "13-1",
       type: "fill_blank",
-      prompt: "\"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" konusu _____ seviyesine uygundur.",
-      answer: "A2",
-      explanation: "Bu konu A2 seviyesindedir.",
+      prompt: "\"Kipler: Yapabilmek\" konusu _____ seviyesine uygundur.",
+      answer: "A1",
+      explanation: "Bu konu A1 seviyesindedir.",
     },
     {
       id: "13-match-1",
@@ -90,12 +90,12 @@ export const topicContent13: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Past Continuous",
-          right: "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
+          left: "Modals: Can / Can't",
+          right: "Kipler: Yapabilmek",
         },
         {
-          left: "A2 level",
-          right: "A2 seviyesi",
+          left: "A1 level",
+          right: "A1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,24 +154,22 @@ export const topicContent13: TopicContent = {
       id: "quiz-13-13-1-1",
       subtopicId: "13-1",
       type: "multiple_choice",
-      prompt:
-        '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" alt konusu hangi ana konuya aittir?',
+      prompt: '"Kipler: Yapabilmek" alt konusu hangi ana konuya aittir?',
       options: [
-        "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
+        "Kipler: Yapabilmek",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" başlığı altındadır.',
+      explanation: 'Bu alt konu "Kipler: Yapabilmek" başlığı altındadır.',
     },
     {
       id: "quiz-13-13-1-2",
       subtopicId: "13-1",
       type: "multiple_choice",
       prompt:
-        'A2 seviyesindeki "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" için doğru yaklaşım hangisidir?',
+        'A1 seviyesindeki "Kipler: Yapabilmek" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,8 +183,7 @@ export const topicContent13: TopicContent = {
       id: "quiz-13-13-1-3",
       subtopicId: "13-1",
       type: "multiple_choice",
-      prompt:
-        '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" çalışırken hangisi doğrudur?',
+      prompt: '"Kipler: Yapabilmek" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -200,11 +197,10 @@ export const topicContent13: TopicContent = {
       id: "quiz-13-level",
       subtopicId: "13-1",
       type: "multiple_choice",
-      prompt:
-        '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" konusu hangi seviyeye aittir?',
-      options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Kipler: Yapabilmek" konusu hangi seviyeye aittir?',
+      options: ["A1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu A2 seviyesindedir.",
+      explanation: "Bu konu A1 seviyesindedir.",
     },
   ],
 };

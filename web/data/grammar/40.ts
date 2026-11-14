@@ -5,30 +5,30 @@ export const topicContent40: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"İleri Düzey Biçem ve Ton Nüansları" konusu C2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" konusu C2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "40-1",
-        title: "İleri Düzey Biçem ve Ton Nüansları",
-        titleEn: "Advanced Register & Tone Nuances",
+        title: "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
+        titleEn: "Complex Modal Aspects & Unreal Past",
         paragraphs: [
-          '"İleri Düzey Biçem ve Ton Nüansları" başlığında İleri Düzey Biçem ve Ton Nüansları konusunun önemli noktalarını adım adım görürsün.',
+          '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" başlığında Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş konusunun önemli noktalarını adım adım görürsün.',
           "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "I use this every day.",
-            tr: "Bunu her gün kullanırım.",
-            note: "İleri Düzey Biçem ve Ton Nüansları — örnek 1",
+            en: "Can you repeat that?",
+            tr: "Tekrar eder misin?",
+            note: "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş — örnek 1",
           },
           {
-            en: "Topic focus: İleri Düzey Biçem ve Ton Nüansları",
-            tr: "Konu odağı: İleri Düzey Biçem ve Ton Nüansları",
+            en: "Topic focus: Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
+            tr: "Konu odağı: Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
           },
           {
-            en: "Subtopic: İleri Düzey Biçem ve Ton Nüansları",
-            tr: "Alt konu: İleri Düzey Biçem ve Ton Nüansları",
+            en: "Subtopic: Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
+            tr: "Alt konu: Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent40: TopicContent = {
       id: "40-ex-40-1-1",
       subtopicId: "40-1",
       type: "multiple_choice",
-      prompt: "\"İleri Düzey Biçem & Ton Nüansları\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İleri Düzey Biçem & Ton Nüansları",
+        "Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"İleri Düzey Biçem & Ton Nüansları\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" başlığı altındadır.",
     },
     {
       id: "40-ex-40-1-2",
       subtopicId: "40-1",
       type: "multiple_choice",
-      prompt: "C2 seviyesindeki \"İleri Düzey Biçem & Ton Nüansları\" için doğru yaklaşım hangisidir?",
+      prompt: "C2 seviyesindeki \"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,19 +67,19 @@ export const topicContent40: TopicContent = {
       id: "40-tf-40-1-1",
       subtopicId: "40-1",
       type: "true_false",
-      prompt: "\"İleri Düzey Biçem & Ton Nüansları\" başlığı \"İleri Düzey Biçem & Ton Nüansları\" konusunun bir parçasıdır.",
+      prompt: "\"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" başlığı \"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"İleri Düzey Biçem & Ton Nüansları\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" konusu altında işlenir.",
     },
     {
       id: "40-fb-40-1-1",
       subtopicId: "40-1",
       type: "fill_blank",
-      prompt: "\"İleri Düzey Biçem & Ton Nüansları\" konusu _____ seviyesine uygundur.",
+      prompt: "\"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" konusu _____ seviyesine uygundur.",
       answer: "C2",
       explanation: "Bu konu C2 seviyesindedir.",
     },
@@ -90,8 +90,8 @@ export const topicContent40: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Advanced Register & Tone Nuances",
-          right: "İleri Düzey Biçem & Ton Nüansları",
+          left: "Complex Modal Aspects & Unreal Past",
+          right: "Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş",
         },
         {
           left: "C2 level",
@@ -155,23 +155,23 @@ export const topicContent40: TopicContent = {
       subtopicId: "40-1",
       type: "multiple_choice",
       prompt:
-        '"İleri Düzey Biçem ve Ton Nüansları" alt konusu hangi ana konuya aittir?',
+        '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" alt konusu hangi ana konuya aittir?',
       options: [
-        "İleri Düzey Biçem ve Ton Nüansları",
+        "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "İleri Düzey Biçem ve Ton Nüansları" başlığı altındadır.',
+        'Bu alt konu "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" başlığı altındadır.',
     },
     {
       id: "quiz-40-40-1-2",
       subtopicId: "40-1",
       type: "multiple_choice",
       prompt:
-        'C2 seviyesindeki "İleri Düzey Biçem ve Ton Nüansları" için doğru yaklaşım hangisidir?',
+        'C2 seviyesindeki "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -186,7 +186,7 @@ export const topicContent40: TopicContent = {
       subtopicId: "40-1",
       type: "multiple_choice",
       prompt:
-        '"İleri Düzey Biçem ve Ton Nüansları" çalışırken hangisi doğrudur?',
+        '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -201,7 +201,7 @@ export const topicContent40: TopicContent = {
       subtopicId: "40-1",
       type: "multiple_choice",
       prompt:
-        '"İleri Düzey Biçem ve Ton Nüansları" konusu hangi seviyeye aittir?',
+        '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" konusu hangi seviyeye aittir?',
       options: ["C2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
       explanation: "Bu konu C2 seviyesindedir.",

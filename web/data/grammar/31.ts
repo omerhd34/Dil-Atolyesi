@@ -2,33 +2,31 @@ import type { TopicContent } from "@/data/grammar/types";
 
 export const topicContent31: TopicContent = {
   topicId: "31",
-  viewMinutes: 10,
   lesson: {
-    intro:
-      '"Bölünmüş / Vurgu Cümleleri" konusu C1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+    intro: "\"Tahmin ve Olasılık Kipleri\" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.",
     sections: [
       {
         subtopicId: "31-1",
-        title: "Bölünmüş / Vurgu Cümleleri",
-        titleEn: "Cleft Sentences",
+        title: "Tahmin ve Olasılık Kipleri",
+        titleEn: "The lights are off; they must be asleep. He might be late.",
         paragraphs: [
-          '"Bölünmüş / Vurgu Cümleleri" başlığında Bölünmüş / Vurgu Cümleleri konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C1 seviyesinde düzenli tekrar yeterlidir.",
+          "\"Tahmin ve Olasılık Kipleri\" başlığında Tahmin ve Olasılık Kipleri konusunun önemli noktalarını adım adım görürsün.",
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
             en: "Let's practice together.",
             tr: "Birlikte pratik yapalım.",
-            note: "Bölünmüş / Vurgu Cümleleri — örnek 1",
+            note: "Tahmin ve Olasılık Kipleri — örnek 1",
           },
           {
-            en: "Topic focus: Bölünmüş / Vurgu Cümleleri",
-            tr: "Konu odağı: Bölünmüş / Vurgu Cümleleri",
+            en: "Topic focus: Tahmin ve Olasılık Kipleri",
+            tr: "Konu odağı: Tahmin ve Olasılık Kipleri",
           },
           {
-            en: "Subtopic: Bölünmüş / Vurgu Cümleleri",
-            tr: "Alt konu: Bölünmüş / Vurgu Cümleleri",
+            en: "Subtopic: Tahmin ve Olasılık Kipleri",
+            tr: "Alt konu: Tahmin ve Olasılık Kipleri",
           },
         ],
       },
@@ -39,21 +37,21 @@ export const topicContent31: TopicContent = {
       id: "31-ex-31-1-1",
       subtopicId: "31-1",
       type: "multiple_choice",
-      prompt: "\"Bölünmüş & Vurgu Cümleleri\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Tahmin ve Olasılık Kipleri\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Bölünmüş & Vurgu Cümleleri",
+        "Tahmin ve Olasılık Kipleri",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Bölünmüş & Vurgu Cümleleri\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Tahmin ve Olasılık Kipleri\" başlığı altındadır.",
     },
     {
       id: "31-ex-31-1-2",
       subtopicId: "31-1",
       type: "multiple_choice",
-      prompt: "C1 seviyesindeki \"Bölünmüş & Vurgu Cümleleri\" için doğru yaklaşım hangisidir?",
+      prompt: "B1 seviyesindeki \"Tahmin ve Olasılık Kipleri\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +65,21 @@ export const topicContent31: TopicContent = {
       id: "31-tf-31-1-1",
       subtopicId: "31-1",
       type: "true_false",
-      prompt: "\"Bölünmüş & Vurgu Cümleleri\" başlığı \"Bölünmüş & Vurgu Cümleleri\" konusunun bir parçasıdır.",
+      prompt: "\"Tahmin ve Olasılık Kipleri\" başlığı \"Tahmin ve Olasılık Kipleri\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Bölünmüş & Vurgu Cümleleri\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Tahmin ve Olasılık Kipleri\" konusu altında işlenir.",
     },
     {
       id: "31-fb-31-1-1",
       subtopicId: "31-1",
       type: "fill_blank",
-      prompt: "\"Bölünmüş & Vurgu Cümleleri\" konusu _____ seviyesine uygundur.",
-      answer: "C1",
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Tahmin ve Olasılık Kipleri\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "31-match-1",
@@ -90,12 +88,12 @@ export const topicContent31: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Cleft Sentences",
-          right: "Bölünmüş & Vurgu Cümleleri",
+          left: "Modals of Deduction & Possibility (Present)",
+          right: "Tahmin ve Olasılık Kipleri",
         },
         {
-          left: "C1 level",
-          right: "C1 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,42 +152,39 @@ export const topicContent31: TopicContent = {
       id: "quiz-31-31-1-1",
       subtopicId: "31-1",
       type: "multiple_choice",
-      prompt:
-        '"Bölünmüş / Vurgu Cümleleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Tahmin ve Olasılık Kipleri\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Bölünmüş / Vurgu Cümleleri",
-        "Tamamen farklı bir konu",
-        "Sadece kelime listesi",
+        "Tahmin ve Olasılık Kipleri",
         "Hiçbiri",
+        "Sadece kelime listesi",
+        "Tamamen farklı bir konu",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Bölünmüş / Vurgu Cümleleri" başlığı altındadır.',
+      explanation: "Bu alt konu \"Tahmin ve Olasılık Kipleri\" başlığı altındadır.",
     },
     {
       id: "quiz-31-31-1-2",
       subtopicId: "31-1",
       type: "multiple_choice",
-      prompt:
-        'C1 seviyesindeki "Bölünmüş / Vurgu Cümleleri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Tahmin ve Olasılık Kipleri\" için doğru yaklaşım hangisidir?",
       options: [
-        "Örnekleri okuyup kısa pratik yapmak",
-        "Konuyu tamamen atlamak",
         "Sadece çeviri yapmadan ezberlemek",
+        "Konuyu tamamen atlamak",
+        "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       explanation: "Örnek + kısa pratik, kalıcı öğrenmeye yardımcı olur.",
     },
     {
       id: "quiz-31-31-1-3",
       subtopicId: "31-1",
       type: "multiple_choice",
-      prompt: '"Bölünmüş / Vurgu Cümleleri" çalışırken hangisi doğrudur?',
+      prompt: "\"Tahmin ve Olasılık Kipleri\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
-        "Hiç örnek okumamak",
         "Konuyu tamamen atlamak",
+        "Hiç örnek okumamak",
         "Sadece dinleyip bırakmak",
       ],
       correctIndex: 0,
@@ -199,10 +194,16 @@ export const topicContent31: TopicContent = {
       id: "quiz-31-level",
       subtopicId: "31-1",
       type: "multiple_choice",
-      prompt: '"Bölünmüş / Vurgu Cümleleri" konusu hangi seviyeye aittir?',
-      options: ["C1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
-      correctIndex: 0,
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Tahmin ve Olasılık Kipleri\" konusu hangi seviyeye aittir?",
+      options: [
+        "Yanlış seviye",
+        "Belirsiz",
+        "Seviye yok",
+        "B1",
+      ],
+      correctIndex: 3,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
+  viewMinutes: 5,
 };

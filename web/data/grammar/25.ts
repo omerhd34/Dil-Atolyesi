@@ -2,33 +2,31 @@ import type { TopicContent } from "@/data/grammar/types";
 
 export const topicContent25: TopicContent = {
   topicId: "25",
-  viewMinutes: 10,
   lesson: {
-    intro:
-      '"Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" konusu B2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+    intro: "\"Temel Fiil Kalıpları\" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.",
     sections: [
       {
         subtopicId: "25-1",
-        title: "Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
-        titleEn: "Past Perfect Continuous & Future Perfect",
+        title: "Temel Fiil Kalıpları",
+        titleEn: "I enjoy coding. / She wants to travel abroad.",
         paragraphs: [
-          "\"Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman\" başlığında Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman konusunun önemli noktalarını adım adım görürsün.",
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B2 seviyesinde düzenli tekrar yeterlidir.",
+          "\"Temel Fiil Kalıpları\" başlığında Temel Fiil Kalıpları konusunun önemli noktalarını adım adım görürsün.",
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
             en: "Let's practice together.",
             tr: "Birlikte pratik yapalım.",
-            note: "Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman — örnek 1",
+            note: "Temel Fiil Kalıpları — örnek 1",
           },
           {
-            en: "Topic focus: Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
-            tr: "Konu odağı: Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
+            en: "Topic focus: Temel Fiil Kalıpları",
+            tr: "Konu odağı: Temel Fiil Kalıpları",
           },
           {
-            en: "Subtopic: Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
-            tr: "Alt konu: Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
+            en: "Subtopic: Temel Fiil Kalıpları",
+            tr: "Alt konu: Temel Fiil Kalıpları",
           },
         ],
       },
@@ -39,21 +37,21 @@ export const topicContent25: TopicContent = {
       id: "25-ex-25-1-1",
       subtopicId: "25-1",
       type: "multiple_choice",
-      prompt: "\"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Temel Fiil Kalıpları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman",
+        "Temel Fiil Kalıpları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Temel Fiil Kalıpları\" başlığı altındadır.",
     },
     {
       id: "25-ex-25-1-2",
       subtopicId: "25-1",
       type: "multiple_choice",
-      prompt: "B2 seviyesindeki \"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" için doğru yaklaşım hangisidir?",
+      prompt: "A2 seviyesindeki \"Temel Fiil Kalıpları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +65,21 @@ export const topicContent25: TopicContent = {
       id: "25-tf-25-1-1",
       subtopicId: "25-1",
       type: "true_false",
-      prompt: "\"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" başlığı \"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" konusunun bir parçasıdır.",
+      prompt: "\"Temel Fiil Kalıpları\" başlığı \"Temel Fiil Kalıpları\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Temel Fiil Kalıpları\" konusu altında işlenir.",
     },
     {
       id: "25-fb-25-1-1",
       subtopicId: "25-1",
       type: "fill_blank",
-      prompt: "\"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" konusu _____ seviyesine uygundur.",
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Temel Fiil Kalıpları\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "25-match-1",
@@ -90,12 +88,12 @@ export const topicContent25: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Past Perfect Continuous & Future Perfect",
-          right: "Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman",
+          left: "Basic Verb Patterns (Verb + -ing / to-infinitive)",
+          right: "Temel Fiil Kalıpları",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -154,29 +152,26 @@ export const topicContent25: TopicContent = {
       id: "quiz-25-25-1-1",
       subtopicId: "25-1",
       type: "multiple_choice",
-      prompt:
-        '"Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Temel Fiil Kalıpları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
-        "Tamamen farklı bir konu",
+        "Temel Fiil Kalıpları",
         "Sadece kelime listesi",
         "Hiçbiri",
+        "Tamamen farklı bir konu",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" başlığı altındadır.',
+      explanation: "Bu alt konu \"Temel Fiil Kalıpları\" başlığı altındadır.",
     },
     {
       id: "quiz-25-25-1-2",
       subtopicId: "25-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" için doğru yaklaşım hangisidir?',
+      prompt: "A2 seviyesindeki \"Temel Fiil Kalıpları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
-        "Konuyu tamamen atlamak",
-        "Sadece çeviri yapmadan ezberlemek",
         "Hiç alıştırma çözmemek",
+        "Sadece çeviri yapmadan ezberlemek",
+        "Konuyu tamamen atlamak",
       ],
       correctIndex: 0,
       explanation: "Örnek + kısa pratik, kalıcı öğrenmeye yardımcı olur.",
@@ -185,26 +180,30 @@ export const topicContent25: TopicContent = {
       id: "quiz-25-25-1-3",
       subtopicId: "25-1",
       type: "multiple_choice",
-      prompt:
-        '"Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" çalışırken hangisi doğrudur?',
+      prompt: "\"Temel Fiil Kalıpları\" çalışırken hangisi doğrudur?",
       options: [
-        "Anlamadığın örneği işaretleyip tekrar etmek",
-        "Hiç örnek okumamak",
         "Konuyu tamamen atlamak",
         "Sadece dinleyip bırakmak",
+        "Anlamadığın örneği işaretleyip tekrar etmek",
+        "Hiç örnek okumamak",
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       explanation: "Tekrar ve işaretleme öğrenmeyi güçlendirir.",
     },
     {
       id: "quiz-25-level",
       subtopicId: "25-1",
       type: "multiple_choice",
-      prompt:
-        '"Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" konusu hangi seviyeye aittir?',
-      options: ["B2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: "\"Temel Fiil Kalıpları\" konusu hangi seviyeye aittir?",
+      options: [
+        "A2",
+        "Yanlış seviye",
+        "Belirsiz",
+        "Seviye yok",
+      ],
       correctIndex: 0,
-      explanation: "Bu konu B2 seviyesindedir.",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
+  viewMinutes: 5,
 };

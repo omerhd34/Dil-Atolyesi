@@ -5,30 +5,30 @@ export const topicContent28: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Sıfat Cümleciklerinde Kısaltmalar" konusu B2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Süregelen Yakın Geçmiş Zaman" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "28-1",
-        title: "Sıfat Cümleciklerinde Kısaltmalar",
-        titleEn: "Relative Clauses",
+        title: "Süregelen Yakın Geçmiş Zaman",
+        titleEn: "Present Perfect Continuous",
         paragraphs: [
-          '"Sıfat Cümleciklerinde Kısaltmalar" başlığında Sıfat Cümleciklerinde Kısaltmalar konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B2 seviyesinde düzenli tekrar yeterlidir.",
+          '"Süregelen Yakın Geçmiş Zaman" başlığında Süregelen Yakın Geçmiş Zaman konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "I use this every day.",
-            tr: "Bunu her gün kullanırım.",
-            note: "Sıfat Cümleciklerinde Kısaltmalar — örnek 1",
+            en: "Let's practice together.",
+            tr: "Birlikte pratik yapalım.",
+            note: "Süregelen Yakın Geçmiş Zaman — örnek 1",
           },
           {
-            en: "Topic focus: Sıfat Cümleciklerinde Kısaltmalar",
-            tr: "Konu odağı: Sıfat Cümleciklerinde Kısaltmalar",
+            en: "Topic focus: Süregelen Yakın Geçmiş Zaman",
+            tr: "Konu odağı: Süregelen Yakın Geçmiş Zaman",
           },
           {
-            en: "Subtopic: Sıfat Cümleciklerinde Kısaltmalar",
-            tr: "Alt konu: Sıfat Cümleciklerinde Kısaltmalar",
+            en: "Subtopic: Süregelen Yakın Geçmiş Zaman",
+            tr: "Alt konu: Süregelen Yakın Geçmiş Zaman",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent28: TopicContent = {
       id: "28-ex-28-1-1",
       subtopicId: "28-1",
       type: "multiple_choice",
-      prompt: "\"Sıfat Cümleciklerinde Kısaltmalar\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Süregelen Yakın Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Sıfat Cümleciklerinde Kısaltmalar",
+        "Süregelen Yakın Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Sıfat Cümleciklerinde Kısaltmalar\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Süregelen Yakın Geçmiş Zaman\" başlığı altındadır.",
     },
     {
       id: "28-ex-28-1-2",
       subtopicId: "28-1",
       type: "multiple_choice",
-      prompt: "B2 seviyesindeki \"Sıfat Cümleciklerinde Kısaltmalar\" için doğru yaklaşım hangisidir?",
+      prompt: "B1 seviyesindeki \"Süregelen Yakın Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent28: TopicContent = {
       id: "28-tf-28-1-1",
       subtopicId: "28-1",
       type: "true_false",
-      prompt: "\"Sıfat Cümleciklerinde Kısaltmalar\" başlığı \"Sıfat Cümleciklerinde Kısaltmalar\" konusunun bir parçasıdır.",
+      prompt: "\"Süregelen Yakın Geçmiş Zaman\" başlığı \"Süregelen Yakın Geçmiş Zaman\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Sıfat Cümleciklerinde Kısaltmalar\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Süregelen Yakın Geçmiş Zaman\" konusu altında işlenir.",
     },
     {
       id: "28-fb-28-1-1",
       subtopicId: "28-1",
       type: "fill_blank",
-      prompt: "\"Sıfat Cümleciklerinde Kısaltmalar\" konusu _____ seviyesine uygundur.",
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Süregelen Yakın Geçmiş Zaman\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "28-match-1",
@@ -90,12 +90,12 @@ export const topicContent28: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Reduced Relative Clauses",
-          right: "Sıfat Cümleciklerinde Kısaltmalar",
+          left: "Present Perfect Continuous",
+          right: "Süregelen Yakın Geçmiş Zaman",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -155,23 +155,23 @@ export const topicContent28: TopicContent = {
       subtopicId: "28-1",
       type: "multiple_choice",
       prompt:
-        '"Sıfat Cümleciklerinde Kısaltmalar" alt konusu hangi ana konuya aittir?',
+        '"Süregelen Yakın Geçmiş Zaman" alt konusu hangi ana konuya aittir?',
       options: [
-        "Sıfat Cümleciklerinde Kısaltmalar",
+        "Süregelen Yakın Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "Sıfat Cümleciklerinde Kısaltmalar" başlığı altındadır.',
+        'Bu alt konu "Süregelen Yakın Geçmiş Zaman" başlığı altındadır.',
     },
     {
       id: "quiz-28-28-1-2",
       subtopicId: "28-1",
       type: "multiple_choice",
       prompt:
-        'B2 seviyesindeki "Sıfat Cümleciklerinde Kısaltmalar" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Süregelen Yakın Geçmiş Zaman" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,8 +185,7 @@ export const topicContent28: TopicContent = {
       id: "quiz-28-28-1-3",
       subtopicId: "28-1",
       type: "multiple_choice",
-      prompt:
-        '"Sıfat Cümleciklerinde Kısaltmalar" çalışırken hangisi doğrudur?',
+      prompt: '"Süregelen Yakın Geçmiş Zaman" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -200,11 +199,10 @@ export const topicContent28: TopicContent = {
       id: "quiz-28-level",
       subtopicId: "28-1",
       type: "multiple_choice",
-      prompt:
-        '"Sıfat Cümleciklerinde Kısaltmalar" konusu hangi seviyeye aittir?',
-      options: ["B2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Süregelen Yakın Geçmiş Zaman" konusu hangi seviyeye aittir?',
+      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu B2 seviyesindedir.",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
 };

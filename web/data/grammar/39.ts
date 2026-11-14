@@ -2,33 +2,31 @@ import type { TopicContent } from "@/data/grammar/types";
 
 export const topicContent39: TopicContent = {
   topicId: "39",
-  viewMinutes: 10,
   lesson: {
-    intro:
-      '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" konusu C2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+    intro: "\"Süregelen Miş'li Geçmiş Zaman\" konusu B2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.",
     sections: [
       {
         subtopicId: "39-1",
-        title: "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
-        titleEn: "Complex Modal Aspects & Unreal Past",
+        title: "Süregelen Miş'li Geçmiş Zaman",
+        titleEn: "She was exhausted because she had been working all day.",
         paragraphs: [
-          '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" başlığında Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C2 seviyesinde düzenli tekrar yeterlidir.",
+          "\"Süregelen Miş'li Geçmiş Zaman\" başlığında Süregelen Miş'li Geçmiş Zaman konusunun önemli noktalarını adım adım görürsün.",
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
             en: "Can you repeat that?",
             tr: "Tekrar eder misin?",
-            note: "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş — örnek 1",
+            note: "Süregelen Miş'li Geçmiş Zaman — örnek 1",
           },
           {
-            en: "Topic focus: Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
-            tr: "Konu odağı: Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
+            en: "Topic focus: Süregelen Miş'li Geçmiş Zaman",
+            tr: "Konu odağı: Süregelen Miş'li Geçmiş Zaman",
           },
           {
-            en: "Subtopic: Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
-            tr: "Alt konu: Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
+            en: "Subtopic: Süregelen Miş'li Geçmiş Zaman",
+            tr: "Alt konu: Süregelen Miş'li Geçmiş Zaman",
           },
         ],
       },
@@ -39,21 +37,21 @@ export const topicContent39: TopicContent = {
       id: "39-ex-39-1-1",
       subtopicId: "39-1",
       type: "multiple_choice",
-      prompt: "\"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Süregelen Miş'li Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş",
+        "Süregelen Miş'li Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Süregelen Miş'li Geçmiş Zaman\" başlığı altındadır.",
     },
     {
       id: "39-ex-39-1-2",
       subtopicId: "39-1",
       type: "multiple_choice",
-      prompt: "C2 seviyesindeki \"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" için doğru yaklaşım hangisidir?",
+      prompt: "B2 seviyesindeki \"Süregelen Miş'li Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +65,21 @@ export const topicContent39: TopicContent = {
       id: "39-tf-39-1-1",
       subtopicId: "39-1",
       type: "true_false",
-      prompt: "\"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" başlığı \"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" konusunun bir parçasıdır.",
+      prompt: "\"Süregelen Miş'li Geçmiş Zaman\" başlığı \"Süregelen Miş'li Geçmiş Zaman\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Süregelen Miş'li Geçmiş Zaman\" konusu altında işlenir.",
     },
     {
       id: "39-fb-39-1-1",
       subtopicId: "39-1",
       type: "fill_blank",
-      prompt: "\"Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş\" konusu _____ seviyesine uygundur.",
-      answer: "C2",
-      explanation: "Bu konu C2 seviyesindedir.",
+      prompt: "\"Süregelen Miş'li Geçmiş Zaman\" konusu _____ seviyesine uygundur.",
+      answer: "B2",
+      explanation: "Bu konu B2 seviyesindedir.",
     },
     {
       id: "39-match-1",
@@ -90,12 +88,12 @@ export const topicContent39: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Complex Modal Aspects & Unreal Past",
-          right: "Karmaşık Kip Görünümleri & Gerçek Dışı Geçmiş",
+          left: "Past Perfect Continuous",
+          right: "Süregelen Miş'li Geçmiş Zaman",
         },
         {
-          left: "C2 level",
-          right: "C2 seviyesi",
+          left: "B2 level",
+          right: "B2 seviyesi",
         },
         {
           left: "Practice",
@@ -154,39 +152,35 @@ export const topicContent39: TopicContent = {
       id: "quiz-39-39-1-1",
       subtopicId: "39-1",
       type: "multiple_choice",
-      prompt:
-        '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Süregelen Miş'li Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş",
         "Tamamen farklı bir konu",
-        "Sadece kelime listesi",
         "Hiçbiri",
+        "Sadece kelime listesi",
+        "Süregelen Miş'li Geçmiş Zaman",
       ],
-      correctIndex: 0,
-      explanation:
-        'Bu alt konu "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" başlığı altındadır.',
+      correctIndex: 3,
+      explanation: "Bu alt konu \"Süregelen Miş'li Geçmiş Zaman\" başlığı altındadır.",
     },
     {
       id: "quiz-39-39-1-2",
       subtopicId: "39-1",
       type: "multiple_choice",
-      prompt:
-        'C2 seviyesindeki "Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" için doğru yaklaşım hangisidir?',
+      prompt: "B2 seviyesindeki \"Süregelen Miş'li Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
-        "Örnekleri okuyup kısa pratik yapmak",
-        "Konuyu tamamen atlamak",
         "Sadece çeviri yapmadan ezberlemek",
+        "Konuyu tamamen atlamak",
+        "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       explanation: "Örnek + kısa pratik, kalıcı öğrenmeye yardımcı olur.",
     },
     {
       id: "quiz-39-39-1-3",
       subtopicId: "39-1",
       type: "multiple_choice",
-      prompt:
-        '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" çalışırken hangisi doğrudur?',
+      prompt: "\"Süregelen Miş'li Geçmiş Zaman\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -200,11 +194,16 @@ export const topicContent39: TopicContent = {
       id: "quiz-39-level",
       subtopicId: "39-1",
       type: "multiple_choice",
-      prompt:
-        '"Karmaşık Kip Görünümleri ve Gerçek Dışı Geçmiş" konusu hangi seviyeye aittir?',
-      options: ["C2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
-      correctIndex: 0,
-      explanation: "Bu konu C2 seviyesindedir.",
+      prompt: "\"Süregelen Miş'li Geçmiş Zaman\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Yanlış seviye",
+        "B2",
+        "Seviye yok",
+      ],
+      correctIndex: 2,
+      explanation: "Bu konu B2 seviyesindedir.",
     },
   ],
+  viewMinutes: 5,
 };

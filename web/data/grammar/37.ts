@@ -5,30 +5,30 @@ export const topicContent37: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler" konusu C2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Dolaylı Anlatım - Temel" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "37-1",
-        title: "Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler",
-        titleEn: "Fixed Subjunctive & Archaic Expressions",
+        title: "Dolaylı Anlatım - Temel",
+        titleEn: "Reported Speech",
         paragraphs: [
-          '"Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler" başlığında Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C2 seviyesinde düzenli tekrar yeterlidir.",
+          '"Dolaylı Anlatım - Temel" başlığında Dolaylı Anlatım - Temel konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "Let's practice together.",
-            tr: "Birlikte pratik yapalım.",
-            note: "Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler — örnek 1",
+            en: "That sounds correct.",
+            tr: "Kulağa doğru geliyor.",
+            note: "Dolaylı Anlatım - Temel — örnek 1",
           },
           {
-            en: "Topic focus: Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler",
-            tr: "Konu odağı: Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler",
+            en: "Topic focus: Dolaylı Anlatım - Temel",
+            tr: "Konu odağı: Dolaylı Anlatım - Temel",
           },
           {
-            en: "Subtopic: Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler",
-            tr: "Alt konu: Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler",
+            en: "Subtopic: Dolaylı Anlatım - Temel",
+            tr: "Alt konu: Dolaylı Anlatım - Temel",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent37: TopicContent = {
       id: "37-ex-37-1-1",
       subtopicId: "37-1",
       type: "multiple_choice",
-      prompt: "\"Kalıplaşmış İstek Kipleri & Eskimiş İfadeler\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Dolaylı Anlatım - Temel\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Kalıplaşmış İstek Kipleri & Eskimiş İfadeler",
+        "Dolaylı Anlatım - Temel",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Kalıplaşmış İstek Kipleri & Eskimiş İfadeler\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Dolaylı Anlatım - Temel\" başlığı altındadır.",
     },
     {
       id: "37-ex-37-1-2",
       subtopicId: "37-1",
       type: "multiple_choice",
-      prompt: "C2 seviyesindeki \"Kalıplaşmış İstek Kipleri & Eskimiş İfadeler\" için doğru yaklaşım hangisidir?",
+      prompt: "B1 seviyesindeki \"Dolaylı Anlatım - Temel\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent37: TopicContent = {
       id: "37-tf-37-1-1",
       subtopicId: "37-1",
       type: "true_false",
-      prompt: "\"Kalıplaşmış İstek Kipleri & Eskimiş İfadeler\" başlığı \"Kalıplaşmış İstek Kipleri & Eskimiş İfadeler\" konusunun bir parçasıdır.",
+      prompt: "\"Dolaylı Anlatım - Temel\" başlığı \"Dolaylı Anlatım - Temel\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Kalıplaşmış İstek Kipleri & Eskimiş İfadeler\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Dolaylı Anlatım - Temel\" konusu altında işlenir.",
     },
     {
       id: "37-fb-37-1-1",
       subtopicId: "37-1",
       type: "fill_blank",
-      prompt: "\"Kalıplaşmış İstek Kipleri & Eskimiş İfadeler\" konusu _____ seviyesine uygundur.",
-      answer: "C2",
-      explanation: "Bu konu C2 seviyesindedir.",
+      prompt: "\"Dolaylı Anlatım - Temel\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "37-match-1",
@@ -90,12 +90,12 @@ export const topicContent37: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Fixed Subjunctive & Archaic Expressions",
-          right: "Kalıplaşmış İstek Kipleri & Eskimiş İfadeler",
+          left: "Reported Speech",
+          right: "Dolaylı Anlatım - Temel",
         },
         {
-          left: "C2 level",
-          right: "C2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,24 +154,22 @@ export const topicContent37: TopicContent = {
       id: "quiz-37-37-1-1",
       subtopicId: "37-1",
       type: "multiple_choice",
-      prompt:
-        '"Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler" alt konusu hangi ana konuya aittir?',
+      prompt: '"Dolaylı Anlatım - Temel" alt konusu hangi ana konuya aittir?',
       options: [
-        "Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler",
+        "Dolaylı Anlatım - Temel",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler" başlığı altındadır.',
+      explanation: 'Bu alt konu "Dolaylı Anlatım - Temel" başlığı altındadır.',
     },
     {
       id: "quiz-37-37-1-2",
       subtopicId: "37-1",
       type: "multiple_choice",
       prompt:
-        'C2 seviyesindeki "Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Dolaylı Anlatım - Temel" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,8 +183,7 @@ export const topicContent37: TopicContent = {
       id: "quiz-37-37-1-3",
       subtopicId: "37-1",
       type: "multiple_choice",
-      prompt:
-        '"Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler" çalışırken hangisi doğrudur?',
+      prompt: '"Dolaylı Anlatım - Temel" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -200,11 +197,10 @@ export const topicContent37: TopicContent = {
       id: "quiz-37-level",
       subtopicId: "37-1",
       type: "multiple_choice",
-      prompt:
-        '"Kalıplaşmış İstek Kipleri ve Eskimiş İfadeler" konusu hangi seviyeye aittir?',
-      options: ["C2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Dolaylı Anlatım - Temel" konusu hangi seviyeye aittir?',
+      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu C2 seviyesindedir.",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
 };

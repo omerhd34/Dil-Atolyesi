@@ -5,30 +5,30 @@ export const topicContent29: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Dilek / Keşke Cümleleri" konusu B2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Miş\'li Geçmiş Zaman" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "29-1",
-        title: "Dilek / Keşke Cümleleri",
-        titleEn: "Wish / If Only Clauses",
+        title: "Miş'li Geçmiş Zaman",
+        titleEn: "Past Perfect Simple",
         paragraphs: [
-          '"Dilek / Keşke Cümleleri" başlığında Dilek / Keşke Cümleleri konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B2 seviyesinde düzenli tekrar yeterlidir.",
+          "\"Miş'li Geçmiş Zaman\" başlığında Miş'li Geçmiş Zaman konusunun önemli noktalarını adım adım görürsün.",
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "That sounds correct.",
-            tr: "Kulağa doğru geliyor.",
-            note: "Dilek / Keşke Cümleleri — örnek 1",
+            en: "This is a useful example.",
+            tr: "Bu faydalı bir örnek.",
+            note: "Miş'li Geçmiş Zaman — örnek 1",
           },
           {
-            en: "Topic focus: Dilek / Keşke Cümleleri",
-            tr: "Konu odağı: Dilek / Keşke Cümleleri",
+            en: "Topic focus: Miş'li Geçmiş Zaman",
+            tr: "Konu odağı: Miş'li Geçmiş Zaman",
           },
           {
-            en: "Subtopic: Dilek / Keşke Cümleleri",
-            tr: "Alt konu: Dilek / Keşke Cümleleri",
+            en: "Subtopic: Miş'li Geçmiş Zaman",
+            tr: "Alt konu: Miş'li Geçmiş Zaman",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent29: TopicContent = {
       id: "29-ex-29-1-1",
       subtopicId: "29-1",
       type: "multiple_choice",
-      prompt: "\"Dilek & Keşke Cümleleri\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Miş'li Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Dilek & Keşke Cümleleri",
+        "Miş'li Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Dilek & Keşke Cümleleri\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Miş'li Geçmiş Zaman\" başlığı altındadır.",
     },
     {
       id: "29-ex-29-1-2",
       subtopicId: "29-1",
       type: "multiple_choice",
-      prompt: "B2 seviyesindeki \"Dilek & Keşke Cümleleri\" için doğru yaklaşım hangisidir?",
+      prompt: "B1 seviyesindeki \"Miş'li Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent29: TopicContent = {
       id: "29-tf-29-1-1",
       subtopicId: "29-1",
       type: "true_false",
-      prompt: "\"Dilek & Keşke Cümleleri\" başlığı \"Dilek & Keşke Cümleleri\" konusunun bir parçasıdır.",
+      prompt: "\"Miş'li Geçmiş Zaman\" başlığı \"Miş'li Geçmiş Zaman\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Dilek & Keşke Cümleleri\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Miş'li Geçmiş Zaman\" konusu altında işlenir.",
     },
     {
       id: "29-fb-29-1-1",
       subtopicId: "29-1",
       type: "fill_blank",
-      prompt: "\"Dilek & Keşke Cümleleri\" konusu _____ seviyesine uygundur.",
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Miş'li Geçmiş Zaman\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "29-match-1",
@@ -90,12 +90,12 @@ export const topicContent29: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Wish & If Only Clauses",
-          right: "Dilek & Keşke Cümleleri",
+          left: "Past Perfect Simple",
+          right: "Miş'li Geçmiş Zaman",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,22 +154,22 @@ export const topicContent29: TopicContent = {
       id: "quiz-29-29-1-1",
       subtopicId: "29-1",
       type: "multiple_choice",
-      prompt: '"Dilek / Keşke Cümleleri" alt konusu hangi ana konuya aittir?',
+      prompt: '"Miş\'li Geçmiş Zaman" alt konusu hangi ana konuya aittir?',
       options: [
-        "Dilek / Keşke Cümleleri",
+        "Miş'li Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Dilek / Keşke Cümleleri" başlığı altındadır.',
+      explanation: 'Bu alt konu "Miş\'li Geçmiş Zaman" başlığı altındadır.',
     },
     {
       id: "quiz-29-29-1-2",
       subtopicId: "29-1",
       type: "multiple_choice",
       prompt:
-        'B2 seviyesindeki "Dilek / Keşke Cümleleri" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Miş\'li Geçmiş Zaman" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -183,7 +183,7 @@ export const topicContent29: TopicContent = {
       id: "quiz-29-29-1-3",
       subtopicId: "29-1",
       type: "multiple_choice",
-      prompt: '"Dilek / Keşke Cümleleri" çalışırken hangisi doğrudur?',
+      prompt: '"Miş\'li Geçmiş Zaman" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -197,10 +197,10 @@ export const topicContent29: TopicContent = {
       id: "quiz-29-level",
       subtopicId: "29-1",
       type: "multiple_choice",
-      prompt: '"Dilek / Keşke Cümleleri" konusu hangi seviyeye aittir?',
-      options: ["B2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Miş\'li Geçmiş Zaman" konusu hangi seviyeye aittir?',
+      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu B2 seviyesindedir.",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
 };

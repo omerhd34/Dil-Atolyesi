@@ -5,30 +5,30 @@ export const topicContent26: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Koşul Cümleleri - Tip 3 ve Karışık" konusu B2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Koşul Cümleleri - Tip 0, 1, 2" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "26-1",
-        title: "Koşul Cümleleri - Tip 3 ve Karışık",
-        titleEn: "Conditionals (Type 3 & Mixed)",
+        title: "Koşul Cümleleri - Tip 0, 1, 2",
+        titleEn: "Conditionals (Type 0, 1, 2)",
         paragraphs: [
-          '"Koşul Cümleleri - Tip 3 ve Karışık" başlığında Koşul Cümleleri - Tip 3 ve Karışık konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B2 seviyesinde düzenli tekrar yeterlidir.",
+          '"Koşul Cümleleri - Tip 0, 1, 2" başlığında Koşul Cümleleri - Tip 0, 1, 2 konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "This is a useful example.",
-            tr: "Bu faydalı bir örnek.",
-            note: "Koşul Cümleleri - Tip 3 ve Karışık — örnek 1",
+            en: "Can you repeat that?",
+            tr: "Tekrar eder misin?",
+            note: "Koşul Cümleleri - Tip 0, 1, 2 — örnek 1",
           },
           {
-            en: "Topic focus: Koşul Cümleleri - Tip 3 ve Karışık",
-            tr: "Konu odağı: Koşul Cümleleri - Tip 3 ve Karışık",
+            en: "Topic focus: Koşul Cümleleri - Tip 0, 1, 2",
+            tr: "Konu odağı: Koşul Cümleleri - Tip 0, 1, 2",
           },
           {
-            en: "Subtopic: Koşul Cümleleri - Tip 3 ve Karışık",
-            tr: "Alt konu: Koşul Cümleleri - Tip 3 ve Karışık",
+            en: "Subtopic: Koşul Cümleleri - Tip 0, 1, 2",
+            tr: "Alt konu: Koşul Cümleleri - Tip 0, 1, 2",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent26: TopicContent = {
       id: "26-ex-26-1-1",
       subtopicId: "26-1",
       type: "multiple_choice",
-      prompt: "\"Koşul Cümleleri - Tip 3 & Karışık\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Koşul Cümleleri (Tip 0, 1, 2)\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Koşul Cümleleri - Tip 3 & Karışık",
+        "Koşul Cümleleri (Tip 0, 1, 2)",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Koşul Cümleleri - Tip 3 & Karışık\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Koşul Cümleleri (Tip 0, 1, 2)\" başlığı altındadır.",
     },
     {
       id: "26-ex-26-1-2",
       subtopicId: "26-1",
       type: "multiple_choice",
-      prompt: "B2 seviyesindeki \"Koşul Cümleleri - Tip 3 & Karışık\" için doğru yaklaşım hangisidir?",
+      prompt: "B1 seviyesindeki \"Koşul Cümleleri (Tip 0, 1, 2)\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent26: TopicContent = {
       id: "26-tf-26-1-1",
       subtopicId: "26-1",
       type: "true_false",
-      prompt: "\"Koşul Cümleleri - Tip 3 & Karışık\" başlığı \"Koşul Cümleleri - Tip 3 & Karışık\" konusunun bir parçasıdır.",
+      prompt: "\"Koşul Cümleleri (Tip 0, 1, 2)\" başlığı \"Koşul Cümleleri (Tip 0, 1, 2)\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Koşul Cümleleri - Tip 3 & Karışık\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Koşul Cümleleri (Tip 0, 1, 2)\" konusu altında işlenir.",
     },
     {
       id: "26-fb-26-1-1",
       subtopicId: "26-1",
       type: "fill_blank",
-      prompt: "\"Koşul Cümleleri - Tip 3 & Karışık\" konusu _____ seviyesine uygundur.",
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Koşul Cümleleri (Tip 0, 1, 2)\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "26-match-1",
@@ -90,12 +90,12 @@ export const topicContent26: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Conditionals - Type 3 & Mixed",
-          right: "Koşul Cümleleri - Tip 3 & Karışık",
+          left: "Conditionals (Type 0, 1, 2)",
+          right: "Koşul Cümleleri (Tip 0, 1, 2)",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -155,23 +155,23 @@ export const topicContent26: TopicContent = {
       subtopicId: "26-1",
       type: "multiple_choice",
       prompt:
-        '"Koşul Cümleleri - Tip 3 ve Karışık" alt konusu hangi ana konuya aittir?',
+        '"Koşul Cümleleri - Tip 0, 1, 2" alt konusu hangi ana konuya aittir?',
       options: [
-        "Koşul Cümleleri - Tip 3 ve Karışık",
+        "Koşul Cümleleri - Tip 0, 1, 2",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "Koşul Cümleleri - Tip 3 ve Karışık" başlığı altındadır.',
+        'Bu alt konu "Koşul Cümleleri - Tip 0, 1, 2" başlığı altındadır.',
     },
     {
       id: "quiz-26-26-1-2",
       subtopicId: "26-1",
       type: "multiple_choice",
       prompt:
-        'B2 seviyesindeki "Koşul Cümleleri - Tip 3 ve Karışık" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Koşul Cümleleri - Tip 0, 1, 2" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,8 +185,7 @@ export const topicContent26: TopicContent = {
       id: "quiz-26-26-1-3",
       subtopicId: "26-1",
       type: "multiple_choice",
-      prompt:
-        '"Koşul Cümleleri - Tip 3 ve Karışık" çalışırken hangisi doğrudur?',
+      prompt: '"Koşul Cümleleri - Tip 0, 1, 2" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -200,11 +199,10 @@ export const topicContent26: TopicContent = {
       id: "quiz-26-level",
       subtopicId: "26-1",
       type: "multiple_choice",
-      prompt:
-        '"Koşul Cümleleri - Tip 3 ve Karışık" konusu hangi seviyeye aittir?',
-      options: ["B2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Koşul Cümleleri - Tip 0, 1, 2" konusu hangi seviyeye aittir?',
+      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu B2 seviyesindedir.",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
 };

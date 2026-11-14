@@ -5,30 +5,30 @@ export const topicContent14: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Gelecek Zaman" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "14-1",
-        title: "Gelecek Zaman",
-        titleEn: "Future: Will vs. Going to",
+        title: "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
+        titleEn: "Countable / Uncountable & Quantifiers",
         paragraphs: [
-          '"Gelecek Zaman" başlığında Gelecek Zaman konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
+          '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" başlığında Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "This is a useful example.",
-            tr: "Bu faydalı bir örnek.",
-            note: "Gelecek Zaman — örnek 1",
+            en: "That sounds correct.",
+            tr: "Kulağa doğru geliyor.",
+            note: "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri — örnek 1",
           },
           {
-            en: "Topic focus: Gelecek Zaman",
-            tr: "Konu odağı: Gelecek Zaman",
+            en: "Topic focus: Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
+            tr: "Konu odağı: Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
           },
           {
-            en: "Subtopic: Gelecek Zaman",
-            tr: "Alt konu: Gelecek Zaman",
+            en: "Subtopic: Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
+            tr: "Alt konu: Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent14: TopicContent = {
       id: "14-ex-14-1-1",
       subtopicId: "14-1",
       type: "multiple_choice",
-      prompt: "\"Gelecek Zaman\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Gelecek Zaman",
+        "Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Gelecek Zaman\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" başlığı altındadır.",
     },
     {
       id: "14-ex-14-1-2",
       subtopicId: "14-1",
       type: "multiple_choice",
-      prompt: "A2 seviyesindeki \"Gelecek Zaman\" için doğru yaklaşım hangisidir?",
+      prompt: "A1 seviyesindeki \"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent14: TopicContent = {
       id: "14-tf-14-1-1",
       subtopicId: "14-1",
       type: "true_false",
-      prompt: "\"Gelecek Zaman\" başlığı \"Gelecek Zaman\" konusunun bir parçasıdır.",
+      prompt: "\"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" başlığı \"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Gelecek Zaman\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" konusu altında işlenir.",
     },
     {
       id: "14-fb-14-1-1",
       subtopicId: "14-1",
       type: "fill_blank",
-      prompt: "\"Gelecek Zaman\" konusu _____ seviyesine uygundur.",
-      answer: "A2",
-      explanation: "Bu konu A2 seviyesindedir.",
+      prompt: "\"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" konusu _____ seviyesine uygundur.",
+      answer: "A1",
+      explanation: "Bu konu A1 seviyesindedir.",
     },
     {
       id: "14-match-1",
@@ -90,12 +90,12 @@ export const topicContent14: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Future: Will vs. Going to",
-          right: "Gelecek Zaman",
+          left: "Countable / Uncountable & Quantifiers",
+          right: "Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri",
         },
         {
-          left: "A2 level",
-          right: "A2 seviyesi",
+          left: "A1 level",
+          right: "A1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,22 +154,24 @@ export const topicContent14: TopicContent = {
       id: "quiz-14-14-1-1",
       subtopicId: "14-1",
       type: "multiple_choice",
-      prompt: '"Gelecek Zaman" alt konusu hangi ana konuya aittir?',
+      prompt:
+        '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" alt konusu hangi ana konuya aittir?',
       options: [
-        "Gelecek Zaman",
+        "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Gelecek Zaman" başlığı altındadır.',
+      explanation:
+        'Bu alt konu "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" başlığı altındadır.',
     },
     {
       id: "quiz-14-14-1-2",
       subtopicId: "14-1",
       type: "multiple_choice",
       prompt:
-        'A2 seviyesindeki "Gelecek Zaman" için doğru yaklaşım hangisidir?',
+        'A1 seviyesindeki "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -183,7 +185,8 @@ export const topicContent14: TopicContent = {
       id: "quiz-14-14-1-3",
       subtopicId: "14-1",
       type: "multiple_choice",
-      prompt: '"Gelecek Zaman" çalışırken hangisi doğrudur?',
+      prompt:
+        '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -197,10 +200,11 @@ export const topicContent14: TopicContent = {
       id: "quiz-14-level",
       subtopicId: "14-1",
       type: "multiple_choice",
-      prompt: '"Gelecek Zaman" konusu hangi seviyeye aittir?',
-      options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt:
+        '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" konusu hangi seviyeye aittir?',
+      options: ["A1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu A2 seviyesindedir.",
+      explanation: "Bu konu A1 seviyesindedir.",
     },
   ],
 };

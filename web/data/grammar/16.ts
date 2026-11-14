@@ -5,30 +5,30 @@ export const topicContent16: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Karşılaştırma ve En Üstünlük Dereceleri" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Di\'li Geçmiş Zaman" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "16-1",
-        title: "Karşılaştırma ve En Üstünlük Dereceleri",
-        titleEn: "Comparatives & Superlatives",
+        title: "Di'li Geçmiş Zaman",
+        titleEn: "Past Simple",
         paragraphs: [
-          '"Karşılaştırma ve En Üstünlük Dereceleri" başlığında Karşılaştırma ve En Üstünlük Dereceleri konusunun önemli noktalarını adım adım görürsün.',
+          "\"Di'li Geçmiş Zaman\" başlığında Di'li Geçmiş Zaman konusunun önemli noktalarını adım adım görürsün.",
           "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "I use this every day.",
-            tr: "Bunu her gün kullanırım.",
-            note: "Karşılaştırma ve En Üstünlük Dereceleri — örnek 1",
+            en: "I understand this topic.",
+            tr: "Bu konuyu anlıyorum.",
+            note: "Di'li Geçmiş Zaman — örnek 1",
           },
           {
-            en: "Topic focus: Karşılaştırma ve En Üstünlük Dereceleri",
-            tr: "Konu odağı: Karşılaştırma ve En Üstünlük Dereceleri",
+            en: "Topic focus: Di'li Geçmiş Zaman",
+            tr: "Konu odağı: Di'li Geçmiş Zaman",
           },
           {
-            en: "Subtopic: Karşılaştırma ve En Üstünlük Dereceleri",
-            tr: "Alt konu: Karşılaştırma ve En Üstünlük Dereceleri",
+            en: "Subtopic: Di'li Geçmiş Zaman",
+            tr: "Alt konu: Di'li Geçmiş Zaman",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent16: TopicContent = {
       id: "16-ex-16-1-1",
       subtopicId: "16-1",
       type: "multiple_choice",
-      prompt: "\"Karşılaştırma & En Üstünlük Dereceleri\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Di'li Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Karşılaştırma & En Üstünlük Dereceleri",
+        "Di'li Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Karşılaştırma & En Üstünlük Dereceleri\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Di'li Geçmiş Zaman\" başlığı altındadır.",
     },
     {
       id: "16-ex-16-1-2",
       subtopicId: "16-1",
       type: "multiple_choice",
-      prompt: "A2 seviyesindeki \"Karşılaştırma & En Üstünlük Dereceleri\" için doğru yaklaşım hangisidir?",
+      prompt: "A2 seviyesindeki \"Di'li Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,19 +67,19 @@ export const topicContent16: TopicContent = {
       id: "16-tf-16-1-1",
       subtopicId: "16-1",
       type: "true_false",
-      prompt: "\"Karşılaştırma & En Üstünlük Dereceleri\" başlığı \"Karşılaştırma & En Üstünlük Dereceleri\" konusunun bir parçasıdır.",
+      prompt: "\"Di'li Geçmiş Zaman\" başlığı \"Di'li Geçmiş Zaman\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Karşılaştırma & En Üstünlük Dereceleri\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Di'li Geçmiş Zaman\" konusu altında işlenir.",
     },
     {
       id: "16-fb-16-1-1",
       subtopicId: "16-1",
       type: "fill_blank",
-      prompt: "\"Karşılaştırma & En Üstünlük Dereceleri\" konusu _____ seviyesine uygundur.",
+      prompt: "\"Di'li Geçmiş Zaman\" konusu _____ seviyesine uygundur.",
       answer: "A2",
       explanation: "Bu konu A2 seviyesindedir.",
     },
@@ -90,8 +90,8 @@ export const topicContent16: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Comparatives & Superlatives",
-          right: "Karşılaştırma & En Üstünlük Dereceleri",
+          left: "Past Simple",
+          right: "Di'li Geçmiş Zaman",
         },
         {
           left: "A2 level",
@@ -154,24 +154,22 @@ export const topicContent16: TopicContent = {
       id: "quiz-16-16-1-1",
       subtopicId: "16-1",
       type: "multiple_choice",
-      prompt:
-        '"Karşılaştırma ve En Üstünlük Dereceleri" alt konusu hangi ana konuya aittir?',
+      prompt: '"Di\'li Geçmiş Zaman" alt konusu hangi ana konuya aittir?',
       options: [
-        "Karşılaştırma ve En Üstünlük Dereceleri",
+        "Di'li Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Karşılaştırma ve En Üstünlük Dereceleri" başlığı altındadır.',
+      explanation: 'Bu alt konu "Di\'li Geçmiş Zaman" başlığı altındadır.',
     },
     {
       id: "quiz-16-16-1-2",
       subtopicId: "16-1",
       type: "multiple_choice",
       prompt:
-        'A2 seviyesindeki "Karşılaştırma ve En Üstünlük Dereceleri" için doğru yaklaşım hangisidir?',
+        'A2 seviyesindeki "Di\'li Geçmiş Zaman" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,8 +183,7 @@ export const topicContent16: TopicContent = {
       id: "quiz-16-16-1-3",
       subtopicId: "16-1",
       type: "multiple_choice",
-      prompt:
-        '"Karşılaştırma ve En Üstünlük Dereceleri" çalışırken hangisi doğrudur?',
+      prompt: '"Di\'li Geçmiş Zaman" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -200,8 +197,7 @@ export const topicContent16: TopicContent = {
       id: "quiz-16-level",
       subtopicId: "16-1",
       type: "multiple_choice",
-      prompt:
-        '"Karşılaştırma ve En Üstünlük Dereceleri" konusu hangi seviyeye aittir?',
+      prompt: '"Di\'li Geçmiş Zaman" konusu hangi seviyeye aittir?',
       options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
       explanation: "Bu konu A2 seviyesindedir.",

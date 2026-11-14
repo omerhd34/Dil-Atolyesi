@@ -5,30 +5,30 @@ export const topicContent17: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Kipler: Zorunluluk ve Tavsiye" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "17-1",
-        title: "Kipler: Zorunluluk ve Tavsiye",
-        titleEn: "Modals: Must, Should, Have to",
+        title: "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
+        titleEn: "Past Continuous",
         paragraphs: [
-          '"Kipler: Zorunluluk ve Tavsiye" başlığında Kipler: Zorunluluk ve Tavsiye konusunun önemli noktalarını adım adım görürsün.',
+          '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" başlığında Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi konusunun önemli noktalarını adım adım görürsün.',
           "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "That sounds correct.",
-            tr: "Kulağa doğru geliyor.",
-            note: "Kipler: Zorunluluk ve Tavsiye — örnek 1",
+            en: "Let's practice together.",
+            tr: "Birlikte pratik yapalım.",
+            note: "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi — örnek 1",
           },
           {
-            en: "Topic focus: Kipler: Zorunluluk ve Tavsiye",
-            tr: "Konu odağı: Kipler: Zorunluluk ve Tavsiye",
+            en: "Topic focus: Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
+            tr: "Konu odağı: Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
           },
           {
-            en: "Subtopic: Kipler: Zorunluluk ve Tavsiye",
-            tr: "Alt konu: Kipler: Zorunluluk ve Tavsiye",
+            en: "Subtopic: Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
+            tr: "Alt konu: Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent17: TopicContent = {
       id: "17-ex-17-1-1",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: "\"Kipler: Zorunluluk & Tavsiye\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Kipler: Zorunluluk & Tavsiye",
+        "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Kipler: Zorunluluk & Tavsiye\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" başlığı altındadır.",
     },
     {
       id: "17-ex-17-1-2",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: "A2 seviyesindeki \"Kipler: Zorunluluk & Tavsiye\" için doğru yaklaşım hangisidir?",
+      prompt: "A2 seviyesindeki \"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,19 +67,19 @@ export const topicContent17: TopicContent = {
       id: "17-tf-17-1-1",
       subtopicId: "17-1",
       type: "true_false",
-      prompt: "\"Kipler: Zorunluluk & Tavsiye\" başlığı \"Kipler: Zorunluluk & Tavsiye\" konusunun bir parçasıdır.",
+      prompt: "\"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" başlığı \"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Kipler: Zorunluluk & Tavsiye\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" konusu altında işlenir.",
     },
     {
       id: "17-fb-17-1-1",
       subtopicId: "17-1",
       type: "fill_blank",
-      prompt: "\"Kipler: Zorunluluk & Tavsiye\" konusu _____ seviyesine uygundur.",
+      prompt: "\"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi\" konusu _____ seviyesine uygundur.",
       answer: "A2",
       explanation: "Bu konu A2 seviyesindedir.",
     },
@@ -90,8 +90,8 @@ export const topicContent17: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Modals: Must, Should, Have to",
-          right: "Kipler: Zorunluluk & Tavsiye",
+          left: "Past Continuous",
+          right: "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
         },
         {
           left: "A2 level",
@@ -155,23 +155,23 @@ export const topicContent17: TopicContent = {
       subtopicId: "17-1",
       type: "multiple_choice",
       prompt:
-        '"Kipler: Zorunluluk ve Tavsiye" alt konusu hangi ana konuya aittir?',
+        '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" alt konusu hangi ana konuya aittir?',
       options: [
-        "Kipler: Zorunluluk ve Tavsiye",
+        "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "Kipler: Zorunluluk ve Tavsiye" başlığı altındadır.',
+        'Bu alt konu "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" başlığı altındadır.',
     },
     {
       id: "quiz-17-17-1-2",
       subtopicId: "17-1",
       type: "multiple_choice",
       prompt:
-        'A2 seviyesindeki "Kipler: Zorunluluk ve Tavsiye" için doğru yaklaşım hangisidir?',
+        'A2 seviyesindeki "Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,7 +185,8 @@ export const topicContent17: TopicContent = {
       id: "quiz-17-17-1-3",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: '"Kipler: Zorunluluk ve Tavsiye" çalışırken hangisi doğrudur?',
+      prompt:
+        '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -199,7 +200,8 @@ export const topicContent17: TopicContent = {
       id: "quiz-17-level",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: '"Kipler: Zorunluluk ve Tavsiye" konusu hangi seviyeye aittir?',
+      prompt:
+        '"Geçmişte Süreklilik / Şimdiki Zamanın Hikayesi" konusu hangi seviyeye aittir?',
       options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
       explanation: "Bu konu A2 seviyesindedir.",

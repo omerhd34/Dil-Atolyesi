@@ -5,30 +5,30 @@ export const topicContent38: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"İleri Düzey İsimleştirme" konusu C2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" konusu B2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "38-1",
-        title: "İleri Düzey İsimleştirme",
-        titleEn: "Advanced Nominalization",
+        title: "Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
+        titleEn: "Past Perfect Continuous & Future Perfect",
         paragraphs: [
-          '"İleri Düzey İsimleştirme" başlığında İleri Düzey İsimleştirme konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C2 seviyesinde düzenli tekrar yeterlidir.",
+          "\"Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman\" başlığında Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman konusunun önemli noktalarını adım adım görürsün.",
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "This is a useful example.",
-            tr: "Bu faydalı bir örnek.",
-            note: "İleri Düzey İsimleştirme — örnek 1",
+            en: "Let's practice together.",
+            tr: "Birlikte pratik yapalım.",
+            note: "Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman — örnek 1",
           },
           {
-            en: "Topic focus: İleri Düzey İsimleştirme",
-            tr: "Konu odağı: İleri Düzey İsimleştirme",
+            en: "Topic focus: Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
+            tr: "Konu odağı: Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
           },
           {
-            en: "Subtopic: İleri Düzey İsimleştirme",
-            tr: "Alt konu: İleri Düzey İsimleştirme",
+            en: "Subtopic: Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
+            tr: "Alt konu: Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent38: TopicContent = {
       id: "38-ex-38-1-1",
       subtopicId: "38-1",
       type: "multiple_choice",
-      prompt: "\"İleri Düzey İsimleştirme\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İleri Düzey İsimleştirme",
+        "Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"İleri Düzey İsimleştirme\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" başlığı altındadır.",
     },
     {
       id: "38-ex-38-1-2",
       subtopicId: "38-1",
       type: "multiple_choice",
-      prompt: "C2 seviyesindeki \"İleri Düzey İsimleştirme\" için doğru yaklaşım hangisidir?",
+      prompt: "B2 seviyesindeki \"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent38: TopicContent = {
       id: "38-tf-38-1-1",
       subtopicId: "38-1",
       type: "true_false",
-      prompt: "\"İleri Düzey İsimleştirme\" başlığı \"İleri Düzey İsimleştirme\" konusunun bir parçasıdır.",
+      prompt: "\"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" başlığı \"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"İleri Düzey İsimleştirme\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" konusu altında işlenir.",
     },
     {
       id: "38-fb-38-1-1",
       subtopicId: "38-1",
       type: "fill_blank",
-      prompt: "\"İleri Düzey İsimleştirme\" konusu _____ seviyesine uygundur.",
-      answer: "C2",
-      explanation: "Bu konu C2 seviyesindedir.",
+      prompt: "\"Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman\" konusu _____ seviyesine uygundur.",
+      answer: "B2",
+      explanation: "Bu konu B2 seviyesindedir.",
     },
     {
       id: "38-match-1",
@@ -90,12 +90,12 @@ export const topicContent38: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Advanced Nominalization",
-          right: "İleri Düzey İsimleştirme",
+          left: "Past Perfect Continuous & Future Perfect",
+          right: "Süregelen Miş'li Geçmiş & Gelecekte Bitmiş Zaman",
         },
         {
-          left: "C2 level",
-          right: "C2 seviyesi",
+          left: "B2 level",
+          right: "B2 seviyesi",
         },
         {
           left: "Practice",
@@ -154,22 +154,24 @@ export const topicContent38: TopicContent = {
       id: "quiz-38-38-1-1",
       subtopicId: "38-1",
       type: "multiple_choice",
-      prompt: '"İleri Düzey İsimleştirme" alt konusu hangi ana konuya aittir?',
+      prompt:
+        '"Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" alt konusu hangi ana konuya aittir?',
       options: [
-        "İleri Düzey İsimleştirme",
+        "Süregelen Miş'li Geçmiş ve Gelecekte Bitmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "İleri Düzey İsimleştirme" başlığı altındadır.',
+      explanation:
+        'Bu alt konu "Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" başlığı altındadır.',
     },
     {
       id: "quiz-38-38-1-2",
       subtopicId: "38-1",
       type: "multiple_choice",
       prompt:
-        'C2 seviyesindeki "İleri Düzey İsimleştirme" için doğru yaklaşım hangisidir?',
+        'B2 seviyesindeki "Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -183,7 +185,8 @@ export const topicContent38: TopicContent = {
       id: "quiz-38-38-1-3",
       subtopicId: "38-1",
       type: "multiple_choice",
-      prompt: '"İleri Düzey İsimleştirme" çalışırken hangisi doğrudur?',
+      prompt:
+        '"Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -197,10 +200,11 @@ export const topicContent38: TopicContent = {
       id: "quiz-38-level",
       subtopicId: "38-1",
       type: "multiple_choice",
-      prompt: '"İleri Düzey İsimleştirme" konusu hangi seviyeye aittir?',
-      options: ["C2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt:
+        '"Süregelen Miş\'li Geçmiş ve Gelecekte Bitmiş Zaman" konusu hangi seviyeye aittir?',
+      options: ["B2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu C2 seviyesindedir.",
+      explanation: "Bu konu B2 seviyesindedir.",
     },
   ],
 };

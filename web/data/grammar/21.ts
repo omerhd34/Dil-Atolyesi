@@ -5,30 +5,30 @@ export const topicContent21: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Koşul Cümleleri - Tip 0, 1, 2" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Yakın Geçmiş Zaman" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "21-1",
-        title: "Koşul Cümleleri - Tip 0, 1, 2",
-        titleEn: "Conditionals (Type 0, 1, 2)",
+        title: "Yakın Geçmiş Zaman",
+        titleEn: "Present Perfect Simple",
         paragraphs: [
-          '"Koşul Cümleleri - Tip 0, 1, 2" başlığında Koşul Cümleleri - Tip 0, 1, 2 konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
+          '"Yakın Geçmiş Zaman" başlığında Yakın Geçmiş Zaman konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
             en: "Can you repeat that?",
             tr: "Tekrar eder misin?",
-            note: "Koşul Cümleleri - Tip 0, 1, 2 — örnek 1",
+            note: "Yakın Geçmiş Zaman — örnek 1",
           },
           {
-            en: "Topic focus: Koşul Cümleleri - Tip 0, 1, 2",
-            tr: "Konu odağı: Koşul Cümleleri - Tip 0, 1, 2",
+            en: "Topic focus: Yakın Geçmiş Zaman",
+            tr: "Konu odağı: Yakın Geçmiş Zaman",
           },
           {
-            en: "Subtopic: Koşul Cümleleri - Tip 0, 1, 2",
-            tr: "Alt konu: Koşul Cümleleri - Tip 0, 1, 2",
+            en: "Subtopic: Yakın Geçmiş Zaman",
+            tr: "Alt konu: Yakın Geçmiş Zaman",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent21: TopicContent = {
       id: "21-ex-21-1-1",
       subtopicId: "21-1",
       type: "multiple_choice",
-      prompt: "\"Koşul Cümleleri (Tip 0, 1, 2)\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Yakın Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Koşul Cümleleri (Tip 0, 1, 2)",
+        "Yakın Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Koşul Cümleleri (Tip 0, 1, 2)\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Yakın Geçmiş Zaman\" başlığı altındadır.",
     },
     {
       id: "21-ex-21-1-2",
       subtopicId: "21-1",
       type: "multiple_choice",
-      prompt: "B1 seviyesindeki \"Koşul Cümleleri (Tip 0, 1, 2)\" için doğru yaklaşım hangisidir?",
+      prompt: "A2 seviyesindeki \"Yakın Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent21: TopicContent = {
       id: "21-tf-21-1-1",
       subtopicId: "21-1",
       type: "true_false",
-      prompt: "\"Koşul Cümleleri (Tip 0, 1, 2)\" başlığı \"Koşul Cümleleri (Tip 0, 1, 2)\" konusunun bir parçasıdır.",
+      prompt: "\"Yakın Geçmiş Zaman\" başlığı \"Yakın Geçmiş Zaman\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Koşul Cümleleri (Tip 0, 1, 2)\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Yakın Geçmiş Zaman\" konusu altında işlenir.",
     },
     {
       id: "21-fb-21-1-1",
       subtopicId: "21-1",
       type: "fill_blank",
-      prompt: "\"Koşul Cümleleri (Tip 0, 1, 2)\" konusu _____ seviyesine uygundur.",
-      answer: "B1",
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Yakın Geçmiş Zaman\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "21-match-1",
@@ -90,12 +90,12 @@ export const topicContent21: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Conditionals (Type 0, 1, 2)",
-          right: "Koşul Cümleleri (Tip 0, 1, 2)",
+          left: "Present Perfect Simple",
+          right: "Yakın Geçmiş Zaman",
         },
         {
-          left: "B1 level",
-          right: "B1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -154,24 +154,22 @@ export const topicContent21: TopicContent = {
       id: "quiz-21-21-1-1",
       subtopicId: "21-1",
       type: "multiple_choice",
-      prompt:
-        '"Koşul Cümleleri - Tip 0, 1, 2" alt konusu hangi ana konuya aittir?',
+      prompt: '"Yakın Geçmiş Zaman" alt konusu hangi ana konuya aittir?',
       options: [
-        "Koşul Cümleleri - Tip 0, 1, 2",
+        "Yakın Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Koşul Cümleleri - Tip 0, 1, 2" başlığı altındadır.',
+      explanation: 'Bu alt konu "Yakın Geçmiş Zaman" başlığı altındadır.',
     },
     {
       id: "quiz-21-21-1-2",
       subtopicId: "21-1",
       type: "multiple_choice",
       prompt:
-        'B1 seviyesindeki "Koşul Cümleleri - Tip 0, 1, 2" için doğru yaklaşım hangisidir?',
+        'A2 seviyesindeki "Yakın Geçmiş Zaman" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,7 +183,7 @@ export const topicContent21: TopicContent = {
       id: "quiz-21-21-1-3",
       subtopicId: "21-1",
       type: "multiple_choice",
-      prompt: '"Koşul Cümleleri - Tip 0, 1, 2" çalışırken hangisi doğrudur?',
+      prompt: '"Yakın Geçmiş Zaman" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -199,10 +197,10 @@ export const topicContent21: TopicContent = {
       id: "quiz-21-level",
       subtopicId: "21-1",
       type: "multiple_choice",
-      prompt: '"Koşul Cümleleri - Tip 0, 1, 2" konusu hangi seviyeye aittir?',
-      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Yakın Geçmiş Zaman" konusu hangi seviyeye aittir?',
+      options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu B1 seviyesindedir.",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
 };

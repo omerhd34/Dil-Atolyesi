@@ -2,17 +2,15 @@ import type { TopicContent } from "@/data/grammar/types";
 
 export const topicContent5: TopicContent = {
   topicId: "5",
-  viewMinutes: 5,
   lesson: {
-    intro:
-      '"Tanımlıklar ve Çoğul İsimler" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+    intro: "\"İyelik Sıfatları, Zamirleri & -'s Eki\" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.",
     sections: [
       {
         subtopicId: "5-1",
-        title: "Tanımlıklar ve Çoğul İsimler",
-        titleEn: "Articles & Plural Nouns",
+        title: "İyelik Sıfatları, Zamirleri & -'s Eki",
+        titleEn: "My car is blue. That is Ahmet's phone. It is mine.",
         paragraphs: [
-          "**Tanımlıklar** ve **Çoğul İsimler** başlığında Tanımlıklar ve Çoğul İsimler konusunun önemli noktalarını adım adım görürsün.",
+          "\"İyelik Sıfatları, Zamirleri & -'s Eki\" başlığında İyelik Sıfatları, Zamirleri & -'s Eki konusunun önemli noktalarını adım adım görürsün.",
           "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
@@ -20,15 +18,15 @@ export const topicContent5: TopicContent = {
           {
             en: "That sounds correct.",
             tr: "Kulağa doğru geliyor.",
-            note: "Tanımlıklar ve Çoğul İsimler — örnek 1",
+            note: "İyelik Sıfatları, Zamirleri & -'s Eki — örnek 1",
           },
           {
-            en: "Topic focus: Tanımlıklar ve Çoğul İsimler",
-            tr: "Konu odağı: Tanımlıklar ve Çoğul İsimler",
+            en: "Topic focus: İyelik Sıfatları, Zamirleri & -'s Eki",
+            tr: "Konu odağı: İyelik Sıfatları, Zamirleri & -'s Eki",
           },
           {
-            en: "Subtopic: Tanımlıklar ve Çoğul İsimler",
-            tr: "Alt konu: Tanımlıklar ve Çoğul İsimler",
+            en: "Subtopic: İyelik Sıfatları, Zamirleri & -'s Eki",
+            tr: "Alt konu: İyelik Sıfatları, Zamirleri & -'s Eki",
           },
         ],
       },
@@ -39,21 +37,21 @@ export const topicContent5: TopicContent = {
       id: "5-ex-5-1-1",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: "\"Tanımlıklar & Çoğul İsimler\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"İyelik Sıfatları, Zamirleri & -'s Eki\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Tanımlıklar & Çoğul İsimler",
+        "İyelik Sıfatları, Zamirleri & -'s Eki",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Tanımlıklar & Çoğul İsimler\" başlığı altındadır.",
+      explanation: "Bu alt konu \"İyelik Sıfatları, Zamirleri & -'s Eki\" başlığı altındadır.",
     },
     {
       id: "5-ex-5-1-2",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Tanımlıklar & Çoğul İsimler\" için doğru yaklaşım hangisidir?",
+      prompt: "A1 seviyesindeki \"İyelik Sıfatları, Zamirleri & -'s Eki\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,19 +65,19 @@ export const topicContent5: TopicContent = {
       id: "5-tf-5-1-1",
       subtopicId: "5-1",
       type: "true_false",
-      prompt: "\"Tanımlıklar & Çoğul İsimler\" başlığı \"Tanımlıklar & Çoğul İsimler\" konusunun bir parçasıdır.",
+      prompt: "\"İyelik Sıfatları, Zamirleri & -'s Eki\" başlığı \"İyelik Sıfatları, Zamirleri & -'s Eki\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Tanımlıklar & Çoğul İsimler\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"İyelik Sıfatları, Zamirleri & -'s Eki\" konusu altında işlenir.",
     },
     {
       id: "5-fb-5-1-1",
       subtopicId: "5-1",
       type: "fill_blank",
-      prompt: "\"Tanımlıklar & Çoğul İsimler\" konusu _____ seviyesine uygundur.",
+      prompt: "\"İyelik Sıfatları, Zamirleri & -'s Eki\" konusu _____ seviyesine uygundur.",
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },
@@ -90,8 +88,8 @@ export const topicContent5: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Articles & Plural Nouns",
-          right: "Tanımlıklar & Çoğul İsimler",
+          left: "Possessives & Possessive 's",
+          right: "İyelik Sıfatları, Zamirleri & -'s Eki",
         },
         {
           left: "A1 level",
@@ -154,29 +152,26 @@ export const topicContent5: TopicContent = {
       id: "quiz-5-5-1-1",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt:
-        '"Tanımlıklar ve Çoğul İsimler" alt konusu hangi ana konuya aittir?',
+      prompt: "\"İyelik Sıfatları, Zamirleri & -'s Eki\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Tanımlıklar ve Çoğul İsimler",
+        "İyelik Sıfatları, Zamirleri & -'s Eki",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Tanımlıklar ve Çoğul İsimler" başlığı altındadır.',
+      explanation: "Bu alt konu \"İyelik Sıfatları, Zamirleri & -'s Eki\" başlığı altındadır.",
     },
     {
       id: "quiz-5-5-1-2",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt:
-        'A1 seviyesindeki "Tanımlıklar ve Çoğul İsimler" için doğru yaklaşım hangisidir?',
+      prompt: "A1 seviyesindeki \"İyelik Sıfatları, Zamirleri & -'s Eki\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
-        "Konuyu tamamen atlamak",
         "Sadece çeviri yapmadan ezberlemek",
         "Hiç alıştırma çözmemek",
+        "Konuyu tamamen atlamak",
       ],
       correctIndex: 0,
       explanation: "Örnek + kısa pratik, kalıcı öğrenmeye yardımcı olur.",
@@ -185,12 +180,12 @@ export const topicContent5: TopicContent = {
       id: "quiz-5-5-1-3",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: '"Tanımlıklar ve Çoğul İsimler" çalışırken hangisi doğrudur?',
+      prompt: "\"İyelik Sıfatları, Zamirleri & -'s Eki\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
-        "Hiç örnek okumamak",
         "Konuyu tamamen atlamak",
         "Sadece dinleyip bırakmak",
+        "Hiç örnek okumamak",
       ],
       correctIndex: 0,
       explanation: "Tekrar ve işaretleme öğrenmeyi güçlendirir.",
@@ -199,10 +194,16 @@ export const topicContent5: TopicContent = {
       id: "quiz-5-level",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: '"Tanımlıklar ve Çoğul İsimler" konusu hangi seviyeye aittir?',
-      options: ["A1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
-      correctIndex: 0,
+      prompt: "\"İyelik Sıfatları, Zamirleri & -'s Eki\" konusu hangi seviyeye aittir?",
+      options: [
+        "Yanlış seviye",
+        "Seviye yok",
+        "Belirsiz",
+        "A1",
+      ],
+      correctIndex: 3,
       explanation: "Bu konu A1 seviyesindedir.",
     },
   ],
+  viewMinutes: 5,
 };

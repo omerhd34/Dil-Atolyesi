@@ -5,30 +5,30 @@ export const topicContent23: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Dolaylı Anlatım - Temel" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Kipler: Zorunluluk ve Tavsiye" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "23-1",
-        title: "Dolaylı Anlatım - Temel",
-        titleEn: "Reported Speech",
+        title: "Kipler: Zorunluluk ve Tavsiye",
+        titleEn: "Modals: Must, Should, Have to",
         paragraphs: [
-          '"Dolaylı Anlatım - Temel" başlığında Dolaylı Anlatım - Temel konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
+          '"Kipler: Zorunluluk ve Tavsiye" başlığında Kipler: Zorunluluk ve Tavsiye konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
             en: "That sounds correct.",
             tr: "Kulağa doğru geliyor.",
-            note: "Dolaylı Anlatım - Temel — örnek 1",
+            note: "Kipler: Zorunluluk ve Tavsiye — örnek 1",
           },
           {
-            en: "Topic focus: Dolaylı Anlatım - Temel",
-            tr: "Konu odağı: Dolaylı Anlatım - Temel",
+            en: "Topic focus: Kipler: Zorunluluk ve Tavsiye",
+            tr: "Konu odağı: Kipler: Zorunluluk ve Tavsiye",
           },
           {
-            en: "Subtopic: Dolaylı Anlatım - Temel",
-            tr: "Alt konu: Dolaylı Anlatım - Temel",
+            en: "Subtopic: Kipler: Zorunluluk ve Tavsiye",
+            tr: "Alt konu: Kipler: Zorunluluk ve Tavsiye",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent23: TopicContent = {
       id: "23-ex-23-1-1",
       subtopicId: "23-1",
       type: "multiple_choice",
-      prompt: "\"Dolaylı Anlatım - Temel\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Kipler: Zorunluluk & Tavsiye\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Dolaylı Anlatım - Temel",
+        "Kipler: Zorunluluk & Tavsiye",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Dolaylı Anlatım - Temel\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Kipler: Zorunluluk & Tavsiye\" başlığı altındadır.",
     },
     {
       id: "23-ex-23-1-2",
       subtopicId: "23-1",
       type: "multiple_choice",
-      prompt: "B1 seviyesindeki \"Dolaylı Anlatım - Temel\" için doğru yaklaşım hangisidir?",
+      prompt: "A2 seviyesindeki \"Kipler: Zorunluluk & Tavsiye\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent23: TopicContent = {
       id: "23-tf-23-1-1",
       subtopicId: "23-1",
       type: "true_false",
-      prompt: "\"Dolaylı Anlatım - Temel\" başlığı \"Dolaylı Anlatım - Temel\" konusunun bir parçasıdır.",
+      prompt: "\"Kipler: Zorunluluk & Tavsiye\" başlığı \"Kipler: Zorunluluk & Tavsiye\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Dolaylı Anlatım - Temel\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Kipler: Zorunluluk & Tavsiye\" konusu altında işlenir.",
     },
     {
       id: "23-fb-23-1-1",
       subtopicId: "23-1",
       type: "fill_blank",
-      prompt: "\"Dolaylı Anlatım - Temel\" konusu _____ seviyesine uygundur.",
-      answer: "B1",
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Kipler: Zorunluluk & Tavsiye\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "23-match-1",
@@ -90,12 +90,12 @@ export const topicContent23: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Reported Speech",
-          right: "Dolaylı Anlatım - Temel",
+          left: "Modals: Must, Should, Have to",
+          right: "Kipler: Zorunluluk & Tavsiye",
         },
         {
-          left: "B1 level",
-          right: "B1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -154,22 +154,24 @@ export const topicContent23: TopicContent = {
       id: "quiz-23-23-1-1",
       subtopicId: "23-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Anlatım - Temel" alt konusu hangi ana konuya aittir?',
+      prompt:
+        '"Kipler: Zorunluluk ve Tavsiye" alt konusu hangi ana konuya aittir?',
       options: [
-        "Dolaylı Anlatım - Temel",
+        "Kipler: Zorunluluk ve Tavsiye",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Dolaylı Anlatım - Temel" başlığı altındadır.',
+      explanation:
+        'Bu alt konu "Kipler: Zorunluluk ve Tavsiye" başlığı altındadır.',
     },
     {
       id: "quiz-23-23-1-2",
       subtopicId: "23-1",
       type: "multiple_choice",
       prompt:
-        'B1 seviyesindeki "Dolaylı Anlatım - Temel" için doğru yaklaşım hangisidir?',
+        'A2 seviyesindeki "Kipler: Zorunluluk ve Tavsiye" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -183,7 +185,7 @@ export const topicContent23: TopicContent = {
       id: "quiz-23-23-1-3",
       subtopicId: "23-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Anlatım - Temel" çalışırken hangisi doğrudur?',
+      prompt: '"Kipler: Zorunluluk ve Tavsiye" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -197,10 +199,10 @@ export const topicContent23: TopicContent = {
       id: "quiz-23-level",
       subtopicId: "23-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Anlatım - Temel" konusu hangi seviyeye aittir?',
-      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Kipler: Zorunluluk ve Tavsiye" konusu hangi seviyeye aittir?',
+      options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu B1 seviyesindedir.",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
 };

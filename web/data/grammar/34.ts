@@ -5,30 +5,30 @@ export const topicContent34: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"İleri Düzey Söylem Belirleyiciler" konusu C1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Temel Sıfat Cümlecikleri" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "34-1",
-        title: "İleri Düzey Söylem Belirleyiciler",
-        titleEn: "Advanced Discourse Markers",
+        title: "Temel Sıfat Cümlecikleri",
+        titleEn: "Basic Relative Clauses",
         paragraphs: [
-          '"İleri Düzey Söylem Belirleyiciler" başlığında İleri Düzey Söylem Belirleyiciler konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C1 seviyesinde düzenli tekrar yeterlidir.",
+          '"Temel Sıfat Cümlecikleri" başlığında Temel Sıfat Cümlecikleri konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "I use this every day.",
-            tr: "Bunu her gün kullanırım.",
-            note: "İleri Düzey Söylem Belirleyiciler — örnek 1",
+            en: "I understand this topic.",
+            tr: "Bu konuyu anlıyorum.",
+            note: "Temel Sıfat Cümlecikleri — örnek 1",
           },
           {
-            en: "Topic focus: İleri Düzey Söylem Belirleyiciler",
-            tr: "Konu odağı: İleri Düzey Söylem Belirleyiciler",
+            en: "Topic focus: Temel Sıfat Cümlecikleri",
+            tr: "Konu odağı: Temel Sıfat Cümlecikleri",
           },
           {
-            en: "Subtopic: İleri Düzey Söylem Belirleyiciler",
-            tr: "Alt konu: İleri Düzey Söylem Belirleyiciler",
+            en: "Subtopic: Temel Sıfat Cümlecikleri",
+            tr: "Alt konu: Temel Sıfat Cümlecikleri",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent34: TopicContent = {
       id: "34-ex-34-1-1",
       subtopicId: "34-1",
       type: "multiple_choice",
-      prompt: "\"İleri Düzey Söylem Belirleyicileri\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Temel Sıfat Cümlecikleri\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İleri Düzey Söylem Belirleyicileri",
+        "Temel Sıfat Cümlecikleri",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"İleri Düzey Söylem Belirleyicileri\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Temel Sıfat Cümlecikleri\" başlığı altındadır.",
     },
     {
       id: "34-ex-34-1-2",
       subtopicId: "34-1",
       type: "multiple_choice",
-      prompt: "C1 seviyesindeki \"İleri Düzey Söylem Belirleyicileri\" için doğru yaklaşım hangisidir?",
+      prompt: "A2 seviyesindeki \"Temel Sıfat Cümlecikleri\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent34: TopicContent = {
       id: "34-tf-34-1-1",
       subtopicId: "34-1",
       type: "true_false",
-      prompt: "\"İleri Düzey Söylem Belirleyicileri\" başlığı \"İleri Düzey Söylem Belirleyicileri\" konusunun bir parçasıdır.",
+      prompt: "\"Temel Sıfat Cümlecikleri\" başlığı \"Temel Sıfat Cümlecikleri\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"İleri Düzey Söylem Belirleyicileri\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Temel Sıfat Cümlecikleri\" konusu altında işlenir.",
     },
     {
       id: "34-fb-34-1-1",
       subtopicId: "34-1",
       type: "fill_blank",
-      prompt: "\"İleri Düzey Söylem Belirleyicileri\" konusu _____ seviyesine uygundur.",
-      answer: "C1",
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Temel Sıfat Cümlecikleri\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "34-match-1",
@@ -90,12 +90,12 @@ export const topicContent34: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Advanced Discourse Markers",
-          right: "İleri Düzey Söylem Belirleyicileri",
+          left: "Basic Relative Clauses",
+          right: "Temel Sıfat Cümlecikleri",
         },
         {
-          left: "C1 level",
-          right: "C1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -154,24 +154,22 @@ export const topicContent34: TopicContent = {
       id: "quiz-34-34-1-1",
       subtopicId: "34-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Düzey Söylem Belirleyiciler" alt konusu hangi ana konuya aittir?',
+      prompt: '"Temel Sıfat Cümlecikleri" alt konusu hangi ana konuya aittir?',
       options: [
-        "İleri Düzey Söylem Belirleyiciler",
+        "Temel Sıfat Cümlecikleri",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "İleri Düzey Söylem Belirleyiciler" başlığı altındadır.',
+      explanation: 'Bu alt konu "Temel Sıfat Cümlecikleri" başlığı altındadır.',
     },
     {
       id: "quiz-34-34-1-2",
       subtopicId: "34-1",
       type: "multiple_choice",
       prompt:
-        'C1 seviyesindeki "İleri Düzey Söylem Belirleyiciler" için doğru yaklaşım hangisidir?',
+        'A2 seviyesindeki "Temel Sıfat Cümlecikleri" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,8 +183,7 @@ export const topicContent34: TopicContent = {
       id: "quiz-34-34-1-3",
       subtopicId: "34-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Düzey Söylem Belirleyiciler" çalışırken hangisi doğrudur?',
+      prompt: '"Temel Sıfat Cümlecikleri" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -200,11 +197,10 @@ export const topicContent34: TopicContent = {
       id: "quiz-34-level",
       subtopicId: "34-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Düzey Söylem Belirleyiciler" konusu hangi seviyeye aittir?',
-      options: ["C1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Temel Sıfat Cümlecikleri" konusu hangi seviyeye aittir?',
+      options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu C1 seviyesindedir.",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
 };

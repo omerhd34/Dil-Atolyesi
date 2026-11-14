@@ -5,30 +5,30 @@ export const topicContent11: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Geniş Zaman" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "11-1",
-        title: "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
-        titleEn: "Countable / Uncountable & Quantifiers",
+        title: "Geniş Zaman",
+        titleEn: "Present Simple",
         paragraphs: [
-          '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" başlığında Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri konusunun önemli noktalarını adım adım görürsün.',
+          '"Geniş Zaman" başlığında Geniş Zaman konusunun önemli noktalarını adım adım görürsün.',
           "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "That sounds correct.",
-            tr: "Kulağa doğru geliyor.",
-            note: "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri — örnek 1",
+            en: "This is a useful example.",
+            tr: "Bu faydalı bir örnek.",
+            note: "Geniş Zaman — örnek 1",
           },
           {
-            en: "Topic focus: Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
-            tr: "Konu odağı: Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
+            en: "Topic focus: Geniş Zaman",
+            tr: "Konu odağı: Geniş Zaman",
           },
           {
-            en: "Subtopic: Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
-            tr: "Alt konu: Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
+            en: "Subtopic: Geniş Zaman",
+            tr: "Alt konu: Geniş Zaman",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent11: TopicContent = {
       id: "11-ex-11-1-1",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt: "\"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Geniş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri",
+        "Geniş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Geniş Zaman\" başlığı altındadır.",
     },
     {
       id: "11-ex-11-1-2",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" için doğru yaklaşım hangisidir?",
+      prompt: "A1 seviyesindeki \"Geniş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,19 +67,19 @@ export const topicContent11: TopicContent = {
       id: "11-tf-11-1-1",
       subtopicId: "11-1",
       type: "true_false",
-      prompt: "\"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" başlığı \"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" konusunun bir parçasıdır.",
+      prompt: "\"Geniş Zaman\" başlığı \"Geniş Zaman\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Geniş Zaman\" konusu altında işlenir.",
     },
     {
       id: "11-fb-11-1-1",
       subtopicId: "11-1",
       type: "fill_blank",
-      prompt: "\"Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri\" konusu _____ seviyesine uygundur.",
+      prompt: "\"Geniş Zaman\" konusu _____ seviyesine uygundur.",
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },
@@ -90,8 +90,8 @@ export const topicContent11: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Countable / Uncountable & Quantifiers",
-          right: "Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri",
+          left: "Present Simple",
+          right: "Geniş Zaman",
         },
         {
           left: "A1 level",
@@ -154,24 +154,21 @@ export const topicContent11: TopicContent = {
       id: "quiz-11-11-1-1",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt:
-        '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" alt konusu hangi ana konuya aittir?',
+      prompt: '"Geniş Zaman" alt konusu hangi ana konuya aittir?',
       options: [
-        "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri",
+        "Geniş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" başlığı altındadır.',
+      explanation: 'Bu alt konu "Geniş Zaman" başlığı altındadır.',
     },
     {
       id: "quiz-11-11-1-2",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt:
-        'A1 seviyesindeki "Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" için doğru yaklaşım hangisidir?',
+      prompt: 'A1 seviyesindeki "Geniş Zaman" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,8 +182,7 @@ export const topicContent11: TopicContent = {
       id: "quiz-11-11-1-3",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt:
-        '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" çalışırken hangisi doğrudur?',
+      prompt: '"Geniş Zaman" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -200,8 +196,7 @@ export const topicContent11: TopicContent = {
       id: "quiz-11-level",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt:
-        '"Sayılabilen/Sayılamayan İsimler ve Miktar Belirteçleri" konusu hangi seviyeye aittir?',
+      prompt: '"Geniş Zaman" konusu hangi seviyeye aittir?',
       options: ["A1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
       explanation: "Bu konu A1 seviyesindedir.",

@@ -5,30 +5,30 @@ export const topicContent12: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Di\'li Geçmiş Zaman" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Şimdiki Zaman" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "12-1",
-        title: "Di'li Geçmiş Zaman",
-        titleEn: "Past Simple",
+        title: "Şimdiki Zaman",
+        titleEn: "Present Continuous",
         paragraphs: [
-          "\"Di'li Geçmiş Zaman\" başlığında Di'li Geçmiş Zaman konusunun önemli noktalarını adım adım görürsün.",
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
+          '"Şimdiki Zaman" başlığında Şimdiki Zaman konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "I understand this topic.",
-            tr: "Bu konuyu anlıyorum.",
-            note: "Di'li Geçmiş Zaman — örnek 1",
+            en: "Can you repeat that?",
+            tr: "Tekrar eder misin?",
+            note: "Şimdiki Zaman — örnek 1",
           },
           {
-            en: "Topic focus: Di'li Geçmiş Zaman",
-            tr: "Konu odağı: Di'li Geçmiş Zaman",
+            en: "Topic focus: Şimdiki Zaman",
+            tr: "Konu odağı: Şimdiki Zaman",
           },
           {
-            en: "Subtopic: Di'li Geçmiş Zaman",
-            tr: "Alt konu: Di'li Geçmiş Zaman",
+            en: "Subtopic: Şimdiki Zaman",
+            tr: "Alt konu: Şimdiki Zaman",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent12: TopicContent = {
       id: "12-ex-12-1-1",
       subtopicId: "12-1",
       type: "multiple_choice",
-      prompt: "\"Di'li Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Şimdiki Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Di'li Geçmiş Zaman",
+        "Şimdiki Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Di'li Geçmiş Zaman\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Şimdiki Zaman\" başlığı altındadır.",
     },
     {
       id: "12-ex-12-1-2",
       subtopicId: "12-1",
       type: "multiple_choice",
-      prompt: "A2 seviyesindeki \"Di'li Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
+      prompt: "A1 seviyesindeki \"Şimdiki Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent12: TopicContent = {
       id: "12-tf-12-1-1",
       subtopicId: "12-1",
       type: "true_false",
-      prompt: "\"Di'li Geçmiş Zaman\" başlığı \"Di'li Geçmiş Zaman\" konusunun bir parçasıdır.",
+      prompt: "\"Şimdiki Zaman\" başlığı \"Şimdiki Zaman\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Di'li Geçmiş Zaman\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Şimdiki Zaman\" konusu altında işlenir.",
     },
     {
       id: "12-fb-12-1-1",
       subtopicId: "12-1",
       type: "fill_blank",
-      prompt: "\"Di'li Geçmiş Zaman\" konusu _____ seviyesine uygundur.",
-      answer: "A2",
-      explanation: "Bu konu A2 seviyesindedir.",
+      prompt: "\"Şimdiki Zaman\" konusu _____ seviyesine uygundur.",
+      answer: "A1",
+      explanation: "Bu konu A1 seviyesindedir.",
     },
     {
       id: "12-match-1",
@@ -90,12 +90,12 @@ export const topicContent12: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Past Simple",
-          right: "Di'li Geçmiş Zaman",
+          left: "Present Continuous",
+          right: "Şimdiki Zaman",
         },
         {
-          left: "A2 level",
-          right: "A2 seviyesi",
+          left: "A1 level",
+          right: "A1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,22 +154,22 @@ export const topicContent12: TopicContent = {
       id: "quiz-12-12-1-1",
       subtopicId: "12-1",
       type: "multiple_choice",
-      prompt: '"Di\'li Geçmiş Zaman" alt konusu hangi ana konuya aittir?',
+      prompt: '"Şimdiki Zaman" alt konusu hangi ana konuya aittir?',
       options: [
-        "Di'li Geçmiş Zaman",
+        "Şimdiki Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Di\'li Geçmiş Zaman" başlığı altındadır.',
+      explanation: 'Bu alt konu "Şimdiki Zaman" başlığı altındadır.',
     },
     {
       id: "quiz-12-12-1-2",
       subtopicId: "12-1",
       type: "multiple_choice",
       prompt:
-        'A2 seviyesindeki "Di\'li Geçmiş Zaman" için doğru yaklaşım hangisidir?',
+        'A1 seviyesindeki "Şimdiki Zaman" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -183,7 +183,7 @@ export const topicContent12: TopicContent = {
       id: "quiz-12-12-1-3",
       subtopicId: "12-1",
       type: "multiple_choice",
-      prompt: '"Di\'li Geçmiş Zaman" çalışırken hangisi doğrudur?',
+      prompt: '"Şimdiki Zaman" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -197,10 +197,10 @@ export const topicContent12: TopicContent = {
       id: "quiz-12-level",
       subtopicId: "12-1",
       type: "multiple_choice",
-      prompt: '"Di\'li Geçmiş Zaman" konusu hangi seviyeye aittir?',
-      options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Şimdiki Zaman" konusu hangi seviyeye aittir?',
+      options: ["A1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu A2 seviyesindedir.",
+      explanation: "Bu konu A1 seviyesindedir.",
     },
   ],
 };

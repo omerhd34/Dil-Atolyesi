@@ -5,30 +5,30 @@ export const topicContent19: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Süregelen Yakın Geçmiş Zaman" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Karşılaştırma ve En Üstünlük Dereceleri" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "19-1",
-        title: "Süregelen Yakın Geçmiş Zaman",
-        titleEn: "Present Perfect Continuous",
+        title: "Karşılaştırma ve En Üstünlük Dereceleri",
+        titleEn: "Comparatives & Superlatives",
         paragraphs: [
-          '"Süregelen Yakın Geçmiş Zaman" başlığında Süregelen Yakın Geçmiş Zaman konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
+          '"Karşılaştırma ve En Üstünlük Dereceleri" başlığında Karşılaştırma ve En Üstünlük Dereceleri konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "Let's practice together.",
-            tr: "Birlikte pratik yapalım.",
-            note: "Süregelen Yakın Geçmiş Zaman — örnek 1",
+            en: "I use this every day.",
+            tr: "Bunu her gün kullanırım.",
+            note: "Karşılaştırma ve En Üstünlük Dereceleri — örnek 1",
           },
           {
-            en: "Topic focus: Süregelen Yakın Geçmiş Zaman",
-            tr: "Konu odağı: Süregelen Yakın Geçmiş Zaman",
+            en: "Topic focus: Karşılaştırma ve En Üstünlük Dereceleri",
+            tr: "Konu odağı: Karşılaştırma ve En Üstünlük Dereceleri",
           },
           {
-            en: "Subtopic: Süregelen Yakın Geçmiş Zaman",
-            tr: "Alt konu: Süregelen Yakın Geçmiş Zaman",
+            en: "Subtopic: Karşılaştırma ve En Üstünlük Dereceleri",
+            tr: "Alt konu: Karşılaştırma ve En Üstünlük Dereceleri",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent19: TopicContent = {
       id: "19-ex-19-1-1",
       subtopicId: "19-1",
       type: "multiple_choice",
-      prompt: "\"Süregelen Yakın Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Karşılaştırma & En Üstünlük Dereceleri\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Süregelen Yakın Geçmiş Zaman",
+        "Karşılaştırma & En Üstünlük Dereceleri",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Süregelen Yakın Geçmiş Zaman\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Karşılaştırma & En Üstünlük Dereceleri\" başlığı altındadır.",
     },
     {
       id: "19-ex-19-1-2",
       subtopicId: "19-1",
       type: "multiple_choice",
-      prompt: "B1 seviyesindeki \"Süregelen Yakın Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
+      prompt: "A2 seviyesindeki \"Karşılaştırma & En Üstünlük Dereceleri\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent19: TopicContent = {
       id: "19-tf-19-1-1",
       subtopicId: "19-1",
       type: "true_false",
-      prompt: "\"Süregelen Yakın Geçmiş Zaman\" başlığı \"Süregelen Yakın Geçmiş Zaman\" konusunun bir parçasıdır.",
+      prompt: "\"Karşılaştırma & En Üstünlük Dereceleri\" başlığı \"Karşılaştırma & En Üstünlük Dereceleri\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Süregelen Yakın Geçmiş Zaman\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Karşılaştırma & En Üstünlük Dereceleri\" konusu altında işlenir.",
     },
     {
       id: "19-fb-19-1-1",
       subtopicId: "19-1",
       type: "fill_blank",
-      prompt: "\"Süregelen Yakın Geçmiş Zaman\" konusu _____ seviyesine uygundur.",
-      answer: "B1",
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Karşılaştırma & En Üstünlük Dereceleri\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "19-match-1",
@@ -90,12 +90,12 @@ export const topicContent19: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Present Perfect Continuous",
-          right: "Süregelen Yakın Geçmiş Zaman",
+          left: "Comparatives & Superlatives",
+          right: "Karşılaştırma & En Üstünlük Dereceleri",
         },
         {
-          left: "B1 level",
-          right: "B1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -155,23 +155,23 @@ export const topicContent19: TopicContent = {
       subtopicId: "19-1",
       type: "multiple_choice",
       prompt:
-        '"Süregelen Yakın Geçmiş Zaman" alt konusu hangi ana konuya aittir?',
+        '"Karşılaştırma ve En Üstünlük Dereceleri" alt konusu hangi ana konuya aittir?',
       options: [
-        "Süregelen Yakın Geçmiş Zaman",
+        "Karşılaştırma ve En Üstünlük Dereceleri",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "Süregelen Yakın Geçmiş Zaman" başlığı altındadır.',
+        'Bu alt konu "Karşılaştırma ve En Üstünlük Dereceleri" başlığı altındadır.',
     },
     {
       id: "quiz-19-19-1-2",
       subtopicId: "19-1",
       type: "multiple_choice",
       prompt:
-        'B1 seviyesindeki "Süregelen Yakın Geçmiş Zaman" için doğru yaklaşım hangisidir?',
+        'A2 seviyesindeki "Karşılaştırma ve En Üstünlük Dereceleri" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,7 +185,8 @@ export const topicContent19: TopicContent = {
       id: "quiz-19-19-1-3",
       subtopicId: "19-1",
       type: "multiple_choice",
-      prompt: '"Süregelen Yakın Geçmiş Zaman" çalışırken hangisi doğrudur?',
+      prompt:
+        '"Karşılaştırma ve En Üstünlük Dereceleri" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -199,10 +200,11 @@ export const topicContent19: TopicContent = {
       id: "quiz-19-level",
       subtopicId: "19-1",
       type: "multiple_choice",
-      prompt: '"Süregelen Yakın Geçmiş Zaman" konusu hangi seviyeye aittir?',
-      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt:
+        '"Karşılaştırma ve En Üstünlük Dereceleri" konusu hangi seviyeye aittir?',
+      options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu B1 seviyesindedir.",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
 };

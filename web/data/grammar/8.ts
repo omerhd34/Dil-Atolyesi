@@ -2,33 +2,33 @@ import type { TopicContent } from "@/data/grammar/types";
 
 export const topicContent8: TopicContent = {
   topicId: "8",
-  viewMinutes: 10,
+  viewMinutes: 5,
   lesson: {
     intro:
-      '"Geniş Zaman" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Zaman ve Yer Edatları" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "8-1",
-        title: "Geniş Zaman",
-        titleEn: "Present Simple",
+        title: "Zaman ve Yer Edatları",
+        titleEn: "Prepositions of Time & Place",
         paragraphs: [
-          '"Geniş Zaman" başlığında Geniş Zaman konusunun önemli noktalarını adım adım görürsün.',
+          '"Zaman ve Yer Edatları" başlığında Zaman ve Yer Edatları konusunun önemli noktalarını adım adım görürsün.',
           "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "This is a useful example.",
-            tr: "Bu faydalı bir örnek.",
-            note: "Geniş Zaman — örnek 1",
+            en: "Let's practice together.",
+            tr: "Birlikte pratik yapalım.",
+            note: "Zaman ve Yer Edatları — örnek 1",
           },
           {
-            en: "Topic focus: Geniş Zaman",
-            tr: "Konu odağı: Geniş Zaman",
+            en: "Topic focus: Zaman ve Yer Edatları",
+            tr: "Konu odağı: Zaman ve Yer Edatları",
           },
           {
-            en: "Subtopic: Geniş Zaman",
-            tr: "Alt konu: Geniş Zaman",
+            en: "Subtopic: Zaman ve Yer Edatları",
+            tr: "Alt konu: Zaman ve Yer Edatları",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent8: TopicContent = {
       id: "8-ex-8-1-1",
       subtopicId: "8-1",
       type: "multiple_choice",
-      prompt: "\"Geniş Zaman\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Zaman & Yer Edatları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Geniş Zaman",
+        "Zaman & Yer Edatları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Geniş Zaman\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Zaman & Yer Edatları\" başlığı altındadır.",
     },
     {
       id: "8-ex-8-1-2",
       subtopicId: "8-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Geniş Zaman\" için doğru yaklaşım hangisidir?",
+      prompt: "A1 seviyesindeki \"Zaman & Yer Edatları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,19 +67,19 @@ export const topicContent8: TopicContent = {
       id: "8-tf-8-1-1",
       subtopicId: "8-1",
       type: "true_false",
-      prompt: "\"Geniş Zaman\" başlığı \"Geniş Zaman\" konusunun bir parçasıdır.",
+      prompt: "\"Zaman & Yer Edatları\" başlığı \"Zaman & Yer Edatları\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Geniş Zaman\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Zaman & Yer Edatları\" konusu altında işlenir.",
     },
     {
       id: "8-fb-8-1-1",
       subtopicId: "8-1",
       type: "fill_blank",
-      prompt: "\"Geniş Zaman\" konusu _____ seviyesine uygundur.",
+      prompt: "\"Zaman & Yer Edatları\" konusu _____ seviyesine uygundur.",
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },
@@ -90,8 +90,8 @@ export const topicContent8: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Present Simple",
-          right: "Geniş Zaman",
+          left: "Prepositions of Time & Place",
+          right: "Zaman & Yer Edatları",
         },
         {
           left: "A1 level",
@@ -154,21 +154,22 @@ export const topicContent8: TopicContent = {
       id: "quiz-8-8-1-1",
       subtopicId: "8-1",
       type: "multiple_choice",
-      prompt: '"Geniş Zaman" alt konusu hangi ana konuya aittir?',
+      prompt: '"Zaman ve Yer Edatları" alt konusu hangi ana konuya aittir?',
       options: [
-        "Geniş Zaman",
+        "Zaman ve Yer Edatları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Geniş Zaman" başlığı altındadır.',
+      explanation: 'Bu alt konu "Zaman ve Yer Edatları" başlığı altındadır.',
     },
     {
       id: "quiz-8-8-1-2",
       subtopicId: "8-1",
       type: "multiple_choice",
-      prompt: 'A1 seviyesindeki "Geniş Zaman" için doğru yaklaşım hangisidir?',
+      prompt:
+        'A1 seviyesindeki "Zaman ve Yer Edatları" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -182,7 +183,7 @@ export const topicContent8: TopicContent = {
       id: "quiz-8-8-1-3",
       subtopicId: "8-1",
       type: "multiple_choice",
-      prompt: '"Geniş Zaman" çalışırken hangisi doğrudur?',
+      prompt: '"Zaman ve Yer Edatları" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -196,7 +197,7 @@ export const topicContent8: TopicContent = {
       id: "quiz-8-level",
       subtopicId: "8-1",
       type: "multiple_choice",
-      prompt: '"Geniş Zaman" konusu hangi seviyeye aittir?',
+      prompt: '"Zaman ve Yer Edatları" konusu hangi seviyeye aittir?',
       options: ["A1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
       explanation: "Bu konu A1 seviyesindedir.",

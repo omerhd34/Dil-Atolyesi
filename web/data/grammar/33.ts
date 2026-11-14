@@ -2,33 +2,31 @@ import type { TopicContent } from "@/data/grammar/types";
 
 export const topicContent33: TopicContent = {
   topicId: "33",
-  viewMinutes: 10,
   lesson: {
-    intro:
-      '"İleri Düzey Ortaç / Ulaç Cümlecikleri" konusu C1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+    intro: "\"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.",
     sections: [
       {
         subtopicId: "33-1",
-        title: "İleri Düzey Ortaç / Ulaç Cümlecikleri",
-        titleEn: "Advanced Participle Clauses",
+        title: "Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)",
+        titleEn: "If I won the lottery, I would buy a house by the sea.",
         paragraphs: [
-          '"İleri Düzey Ortaç / Ulaç Cümlecikleri" başlığında İleri Düzey Ortaç / Ulaç Cümlecikleri konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C1 seviyesinde düzenli tekrar yeterlidir.",
+          "\"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" başlığında Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması) konusunun önemli noktalarını adım adım görürsün.",
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
             en: "Can you repeat that?",
             tr: "Tekrar eder misin?",
-            note: "İleri Düzey Ortaç / Ulaç Cümlecikleri — örnek 1",
+            note: "Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması) — örnek 1",
           },
           {
-            en: "Topic focus: İleri Düzey Ortaç / Ulaç Cümlecikleri",
-            tr: "Konu odağı: İleri Düzey Ortaç / Ulaç Cümlecikleri",
+            en: "Topic focus: Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)",
+            tr: "Konu odağı: Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)",
           },
           {
-            en: "Subtopic: İleri Düzey Ortaç / Ulaç Cümlecikleri",
-            tr: "Alt konu: İleri Düzey Ortaç / Ulaç Cümlecikleri",
+            en: "Subtopic: Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)",
+            tr: "Alt konu: Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)",
           },
         ],
       },
@@ -39,21 +37,21 @@ export const topicContent33: TopicContent = {
       id: "33-ex-33-1-1",
       subtopicId: "33-1",
       type: "multiple_choice",
-      prompt: "\"İleri Düzey Ortaç & Ulaç Cümlecikleri\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İleri Düzey Ortaç & Ulaç Cümlecikleri",
+        "Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"İleri Düzey Ortaç & Ulaç Cümlecikleri\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" başlığı altındadır.",
     },
     {
       id: "33-ex-33-1-2",
       subtopicId: "33-1",
       type: "multiple_choice",
-      prompt: "C1 seviyesindeki \"İleri Düzey Ortaç & Ulaç Cümlecikleri\" için doğru yaklaşım hangisidir?",
+      prompt: "B1 seviyesindeki \"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +65,21 @@ export const topicContent33: TopicContent = {
       id: "33-tf-33-1-1",
       subtopicId: "33-1",
       type: "true_false",
-      prompt: "\"İleri Düzey Ortaç & Ulaç Cümlecikleri\" başlığı \"İleri Düzey Ortaç & Ulaç Cümlecikleri\" konusunun bir parçasıdır.",
+      prompt: "\"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" başlığı \"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"İleri Düzey Ortaç & Ulaç Cümlecikleri\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" konusu altında işlenir.",
     },
     {
       id: "33-fb-33-1-1",
       subtopicId: "33-1",
       type: "fill_blank",
-      prompt: "\"İleri Düzey Ortaç & Ulaç Cümlecikleri\" konusu _____ seviyesine uygundur.",
-      answer: "C1",
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "33-match-1",
@@ -90,12 +88,12 @@ export const topicContent33: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Advanced Participle Clauses",
-          right: "İleri Düzey Ortaç & Ulaç Cümlecikleri",
+          left: "Second Conditional (Unreal Present)",
+          right: "Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)",
         },
         {
-          left: "C1 level",
-          right: "C1 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,43 +152,39 @@ export const topicContent33: TopicContent = {
       id: "quiz-33-33-1-1",
       subtopicId: "33-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Düzey Ortaç / Ulaç Cümlecikleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İleri Düzey Ortaç / Ulaç Cümlecikleri",
         "Tamamen farklı bir konu",
-        "Sadece kelime listesi",
         "Hiçbiri",
+        "Sadece kelime listesi",
+        "Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)",
       ],
-      correctIndex: 0,
-      explanation:
-        'Bu alt konu "İleri Düzey Ortaç / Ulaç Cümlecikleri" başlığı altındadır.',
+      correctIndex: 3,
+      explanation: "Bu alt konu \"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" başlığı altındadır.",
     },
     {
       id: "quiz-33-33-1-2",
       subtopicId: "33-1",
       type: "multiple_choice",
-      prompt:
-        'C1 seviyesindeki "İleri Düzey Ortaç / Ulaç Cümlecikleri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" için doğru yaklaşım hangisidir?",
       options: [
-        "Örnekleri okuyup kısa pratik yapmak",
-        "Konuyu tamamen atlamak",
         "Sadece çeviri yapmadan ezberlemek",
+        "Konuyu tamamen atlamak",
+        "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       explanation: "Örnek + kısa pratik, kalıcı öğrenmeye yardımcı olur.",
     },
     {
       id: "quiz-33-33-1-3",
       subtopicId: "33-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Düzey Ortaç / Ulaç Cümlecikleri" çalışırken hangisi doğrudur?',
+      prompt: "\"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
-        "Hiç örnek okumamak",
         "Konuyu tamamen atlamak",
+        "Hiç örnek okumamak",
         "Sadece dinleyip bırakmak",
       ],
       correctIndex: 0,
@@ -200,11 +194,16 @@ export const topicContent33: TopicContent = {
       id: "quiz-33-level",
       subtopicId: "33-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Düzey Ortaç / Ulaç Cümlecikleri" konusu hangi seviyeye aittir?',
-      options: ["C1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
-      correctIndex: 0,
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)\" konusu hangi seviyeye aittir?",
+      options: [
+        "Yanlış seviye",
+        "B1",
+        "Seviye yok",
+        "Belirsiz",
+      ],
+      correctIndex: 1,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
+  viewMinutes: 5,
 };

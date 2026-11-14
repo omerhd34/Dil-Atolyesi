@@ -5,30 +5,30 @@ export const topicContent20: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Miş\'li Geçmiş Zaman" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Gelecek Zaman" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "20-1",
-        title: "Miş'li Geçmiş Zaman",
-        titleEn: "Past Perfect Simple",
+        title: "Gelecek Zaman",
+        titleEn: "Future: Will vs. Going to",
         paragraphs: [
-          "\"Miş'li Geçmiş Zaman\" başlığında Miş'li Geçmiş Zaman konusunun önemli noktalarını adım adım görürsün.",
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
+          '"Gelecek Zaman" başlığında Gelecek Zaman konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A2 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
             en: "This is a useful example.",
             tr: "Bu faydalı bir örnek.",
-            note: "Miş'li Geçmiş Zaman — örnek 1",
+            note: "Gelecek Zaman — örnek 1",
           },
           {
-            en: "Topic focus: Miş'li Geçmiş Zaman",
-            tr: "Konu odağı: Miş'li Geçmiş Zaman",
+            en: "Topic focus: Gelecek Zaman",
+            tr: "Konu odağı: Gelecek Zaman",
           },
           {
-            en: "Subtopic: Miş'li Geçmiş Zaman",
-            tr: "Alt konu: Miş'li Geçmiş Zaman",
+            en: "Subtopic: Gelecek Zaman",
+            tr: "Alt konu: Gelecek Zaman",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent20: TopicContent = {
       id: "20-ex-20-1-1",
       subtopicId: "20-1",
       type: "multiple_choice",
-      prompt: "\"Miş'li Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Gelecek Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Miş'li Geçmiş Zaman",
+        "Gelecek Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Miş'li Geçmiş Zaman\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Gelecek Zaman\" başlığı altındadır.",
     },
     {
       id: "20-ex-20-1-2",
       subtopicId: "20-1",
       type: "multiple_choice",
-      prompt: "B1 seviyesindeki \"Miş'li Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
+      prompt: "A2 seviyesindeki \"Gelecek Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent20: TopicContent = {
       id: "20-tf-20-1-1",
       subtopicId: "20-1",
       type: "true_false",
-      prompt: "\"Miş'li Geçmiş Zaman\" başlığı \"Miş'li Geçmiş Zaman\" konusunun bir parçasıdır.",
+      prompt: "\"Gelecek Zaman\" başlığı \"Gelecek Zaman\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Miş'li Geçmiş Zaman\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Gelecek Zaman\" konusu altında işlenir.",
     },
     {
       id: "20-fb-20-1-1",
       subtopicId: "20-1",
       type: "fill_blank",
-      prompt: "\"Miş'li Geçmiş Zaman\" konusu _____ seviyesine uygundur.",
-      answer: "B1",
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Gelecek Zaman\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "20-match-1",
@@ -90,12 +90,12 @@ export const topicContent20: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Past Perfect Simple",
-          right: "Miş'li Geçmiş Zaman",
+          left: "Future: Will vs. Going to",
+          right: "Gelecek Zaman",
         },
         {
-          left: "B1 level",
-          right: "B1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -154,22 +154,22 @@ export const topicContent20: TopicContent = {
       id: "quiz-20-20-1-1",
       subtopicId: "20-1",
       type: "multiple_choice",
-      prompt: '"Miş\'li Geçmiş Zaman" alt konusu hangi ana konuya aittir?',
+      prompt: '"Gelecek Zaman" alt konusu hangi ana konuya aittir?',
       options: [
-        "Miş'li Geçmiş Zaman",
+        "Gelecek Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Miş\'li Geçmiş Zaman" başlığı altındadır.',
+      explanation: 'Bu alt konu "Gelecek Zaman" başlığı altındadır.',
     },
     {
       id: "quiz-20-20-1-2",
       subtopicId: "20-1",
       type: "multiple_choice",
       prompt:
-        'B1 seviyesindeki "Miş\'li Geçmiş Zaman" için doğru yaklaşım hangisidir?',
+        'A2 seviyesindeki "Gelecek Zaman" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -183,7 +183,7 @@ export const topicContent20: TopicContent = {
       id: "quiz-20-20-1-3",
       subtopicId: "20-1",
       type: "multiple_choice",
-      prompt: '"Miş\'li Geçmiş Zaman" çalışırken hangisi doğrudur?',
+      prompt: '"Gelecek Zaman" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -197,10 +197,10 @@ export const topicContent20: TopicContent = {
       id: "quiz-20-level",
       subtopicId: "20-1",
       type: "multiple_choice",
-      prompt: '"Miş\'li Geçmiş Zaman" konusu hangi seviyeye aittir?',
-      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Gelecek Zaman" konusu hangi seviyeye aittir?',
+      options: ["A2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu B1 seviyesindedir.",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
 };

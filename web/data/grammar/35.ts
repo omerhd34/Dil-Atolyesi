@@ -5,30 +5,30 @@ export const topicContent35: TopicContent = {
   viewMinutes: 10,
   lesson: {
     intro:
-      '"Eksiltme ve Yerine Koyma" konusu C1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"Edilgen Çatı - Temel" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "35-1",
-        title: "Eksiltme ve Yerine Koyma",
-        titleEn: "Ellipsis & Substitution",
+        title: "Edilgen Çatı - Temel",
+        titleEn: "Passive Voice",
         paragraphs: [
-          '"Eksiltme ve Yerine Koyma" başlığında Eksiltme ve Yerine Koyma konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C1 seviyesinde düzenli tekrar yeterlidir.",
+          '"Edilgen Çatı - Temel" başlığında Edilgen Çatı - Temel konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "That sounds correct.",
-            tr: "Kulağa doğru geliyor.",
-            note: "Eksiltme ve Yerine Koyma — örnek 1",
+            en: "I use this every day.",
+            tr: "Bunu her gün kullanırım.",
+            note: "Edilgen Çatı - Temel — örnek 1",
           },
           {
-            en: "Topic focus: Eksiltme ve Yerine Koyma",
-            tr: "Konu odağı: Eksiltme ve Yerine Koyma",
+            en: "Topic focus: Edilgen Çatı - Temel",
+            tr: "Konu odağı: Edilgen Çatı - Temel",
           },
           {
-            en: "Subtopic: Eksiltme ve Yerine Koyma",
-            tr: "Alt konu: Eksiltme ve Yerine Koyma",
+            en: "Subtopic: Edilgen Çatı - Temel",
+            tr: "Alt konu: Edilgen Çatı - Temel",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent35: TopicContent = {
       id: "35-ex-35-1-1",
       subtopicId: "35-1",
       type: "multiple_choice",
-      prompt: "\"Eksiltme & Yerine Koyma\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"Edilgen Çatı - Temel\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Eksiltme & Yerine Koyma",
+        "Edilgen Çatı - Temel",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Eksiltme & Yerine Koyma\" başlığı altındadır.",
+      explanation: "Bu alt konu \"Edilgen Çatı - Temel\" başlığı altındadır.",
     },
     {
       id: "35-ex-35-1-2",
       subtopicId: "35-1",
       type: "multiple_choice",
-      prompt: "C1 seviyesindeki \"Eksiltme & Yerine Koyma\" için doğru yaklaşım hangisidir?",
+      prompt: "B1 seviyesindeki \"Edilgen Çatı - Temel\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,21 +67,21 @@ export const topicContent35: TopicContent = {
       id: "35-tf-35-1-1",
       subtopicId: "35-1",
       type: "true_false",
-      prompt: "\"Eksiltme & Yerine Koyma\" başlığı \"Eksiltme & Yerine Koyma\" konusunun bir parçasıdır.",
+      prompt: "\"Edilgen Çatı - Temel\" başlığı \"Edilgen Çatı - Temel\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Eksiltme & Yerine Koyma\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"Edilgen Çatı - Temel\" konusu altında işlenir.",
     },
     {
       id: "35-fb-35-1-1",
       subtopicId: "35-1",
       type: "fill_blank",
-      prompt: "\"Eksiltme & Yerine Koyma\" konusu _____ seviyesine uygundur.",
-      answer: "C1",
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Edilgen Çatı - Temel\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "35-match-1",
@@ -90,12 +90,12 @@ export const topicContent35: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Ellipsis & Substitution",
-          right: "Eksiltme & Yerine Koyma",
+          left: "Passive Voice",
+          right: "Edilgen Çatı - Temel",
         },
         {
-          left: "C1 level",
-          right: "C1 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,22 +154,22 @@ export const topicContent35: TopicContent = {
       id: "quiz-35-35-1-1",
       subtopicId: "35-1",
       type: "multiple_choice",
-      prompt: '"Eksiltme ve Yerine Koyma" alt konusu hangi ana konuya aittir?',
+      prompt: '"Edilgen Çatı - Temel" alt konusu hangi ana konuya aittir?',
       options: [
-        "Eksiltme ve Yerine Koyma",
+        "Edilgen Çatı - Temel",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Eksiltme ve Yerine Koyma" başlığı altındadır.',
+      explanation: 'Bu alt konu "Edilgen Çatı - Temel" başlığı altındadır.',
     },
     {
       id: "quiz-35-35-1-2",
       subtopicId: "35-1",
       type: "multiple_choice",
       prompt:
-        'C1 seviyesindeki "Eksiltme ve Yerine Koyma" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Edilgen Çatı - Temel" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -183,7 +183,7 @@ export const topicContent35: TopicContent = {
       id: "quiz-35-35-1-3",
       subtopicId: "35-1",
       type: "multiple_choice",
-      prompt: '"Eksiltme ve Yerine Koyma" çalışırken hangisi doğrudur?',
+      prompt: '"Edilgen Çatı - Temel" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -197,10 +197,10 @@ export const topicContent35: TopicContent = {
       id: "quiz-35-level",
       subtopicId: "35-1",
       type: "multiple_choice",
-      prompt: '"Eksiltme ve Yerine Koyma" konusu hangi seviyeye aittir?',
-      options: ["C1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: '"Edilgen Çatı - Temel" konusu hangi seviyeye aittir?',
+      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
-      explanation: "Bu konu C1 seviyesindedir.",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
 };

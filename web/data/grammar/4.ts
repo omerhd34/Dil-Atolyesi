@@ -5,30 +5,30 @@ export const topicContent4: TopicContent = {
   viewMinutes: 5,
   lesson: {
     intro:
-      '"Özne Zamirleri ve Olmak Fiili" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
+      '"İşaret ve İyelik Zamirleri/Sıfatları" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
     sections: [
       {
         subtopicId: "4-1",
-        title: "Özne Zamirleri ve Olmak Fiili",
-        titleEn: "Subject Pronouns & 'To Be'",
+        title: "İşaret ve İyelik Zamirleri/Sıfatları",
+        titleEn: "Demonstratives & Possessives",
         paragraphs: [
-          "**Özne Zamirleri** ve **Olmak Fiili** başlığında **Özne Zamirleri** ve **Olmak Fiili** konusunun önemli noktalarını adım adım görürsün.",
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. **A1 seviyesinde** düzenli tekrar yeterlidir.",
+          '"İşaret ve İyelik Zamirleri/Sıfatları" başlığında İşaret ve İyelik Zamirleri/Sıfatları konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. A1 seviyesinde düzenli tekrar yeterlidir.",
           "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
         ],
         examples: [
           {
-            en: "I use this every day.",
-            tr: "Bunu her gün kullanırım.",
-            note: "Özne Zamirleri ve Olmak Fiili — örnek 1",
+            en: "I understand this topic.",
+            tr: "Bu konuyu anlıyorum.",
+            note: "İşaret ve İyelik Zamirleri/Sıfatları — örnek 1",
           },
           {
-            en: "Topic focus: Özne Zamirleri ve Olmak Fiili",
-            tr: "Konu odağı: Özne Zamirleri ve Olmak Fiili",
+            en: "Topic focus: İşaret ve İyelik Zamirleri/Sıfatları",
+            tr: "Konu odağı: İşaret ve İyelik Zamirleri/Sıfatları",
           },
           {
-            en: "Subtopic: Özne Zamirleri ve Olmak Fiili",
-            tr: "Alt konu: Özne Zamirleri ve Olmak Fiili",
+            en: "Subtopic: İşaret ve İyelik Zamirleri/Sıfatları",
+            tr: "Alt konu: İşaret ve İyelik Zamirleri/Sıfatları",
           },
         ],
       },
@@ -39,21 +39,21 @@ export const topicContent4: TopicContent = {
       id: "4-ex-4-1-1",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: "\"Özne Zamirleri & 'To Be'\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"İşaret & İyelik Zamirleri/Sıfatları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Özne Zamirleri & 'To Be'",
+        "İşaret & İyelik Zamirleri/Sıfatları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Özne Zamirleri & 'To Be'\" başlığı altındadır.",
+      explanation: "Bu alt konu \"İşaret & İyelik Zamirleri/Sıfatları\" başlığı altındadır.",
     },
     {
       id: "4-ex-4-1-2",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Özne Zamirleri & 'To Be'\" için doğru yaklaşım hangisidir?",
+      prompt: "A1 seviyesindeki \"İşaret & İyelik Zamirleri/Sıfatları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,19 +67,19 @@ export const topicContent4: TopicContent = {
       id: "4-tf-4-1-1",
       subtopicId: "4-1",
       type: "true_false",
-      prompt: "\"Özne Zamirleri & 'To Be'\" başlığı \"Özne Zamirleri & 'To Be'\" konusunun bir parçasıdır.",
+      prompt: "\"İşaret & İyelik Zamirleri/Sıfatları\" başlığı \"İşaret & İyelik Zamirleri/Sıfatları\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Özne Zamirleri & 'To Be'\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"İşaret & İyelik Zamirleri/Sıfatları\" konusu altında işlenir.",
     },
     {
       id: "4-fb-4-1-1",
       subtopicId: "4-1",
       type: "fill_blank",
-      prompt: "\"Özne Zamirleri & 'To Be'\" konusu _____ seviyesine uygundur.",
+      prompt: "\"İşaret & İyelik Zamirleri/Sıfatları\" konusu _____ seviyesine uygundur.",
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },
@@ -90,8 +90,8 @@ export const topicContent4: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Subject Pronouns & 'To Be'",
-          right: "Özne Zamirleri & 'To Be'",
+          left: "Demonstratives & Possessives",
+          right: "İşaret & İyelik Zamirleri/Sıfatları",
         },
         {
           left: "A1 level",
@@ -155,23 +155,23 @@ export const topicContent4: TopicContent = {
       subtopicId: "4-1",
       type: "multiple_choice",
       prompt:
-        '"Özne Zamirleri ve Olmak Fiili" alt konusu hangi ana konuya aittir?',
+        '"İşaret ve İyelik Zamirleri/Sıfatları" alt konusu hangi ana konuya aittir?',
       options: [
-        "Özne Zamirleri ve Olmak Fiili",
+        "İşaret ve İyelik Zamirleri/Sıfatları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "Özne Zamirleri ve Olmak Fiili" başlığı altındadır.',
+        'Bu alt konu "İşaret ve İyelik Zamirleri/Sıfatları" başlığı altındadır.',
     },
     {
       id: "quiz-4-4-1-2",
       subtopicId: "4-1",
       type: "multiple_choice",
       prompt:
-        'A1 seviyesindeki "Özne Zamirleri ve Olmak Fiili" için doğru yaklaşım hangisidir?',
+        'A1 seviyesindeki "İşaret ve İyelik Zamirleri/Sıfatları" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -185,7 +185,8 @@ export const topicContent4: TopicContent = {
       id: "quiz-4-4-1-3",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: '"Özne Zamirleri ve Olmak Fiili" çalışırken hangisi doğrudur?',
+      prompt:
+        '"İşaret ve İyelik Zamirleri/Sıfatları" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -199,7 +200,8 @@ export const topicContent4: TopicContent = {
       id: "quiz-4-level",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: '"Özne Zamirleri ve Olmak Fiili" konusu hangi seviyeye aittir?',
+      prompt:
+        '"İşaret ve İyelik Zamirleri/Sıfatları" konusu hangi seviyeye aittir?',
       options: ["A1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
       explanation: "Bu konu A1 seviyesindedir.",
