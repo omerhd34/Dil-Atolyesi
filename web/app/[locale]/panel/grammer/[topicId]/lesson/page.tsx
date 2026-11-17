@@ -9,8 +9,12 @@ import { TopicLessonView } from "@/components/features/topics/TopicLessonView";
 import { TopicGrammarAccessGate } from "@/components/features/topics/TopicGrammarAccessGate";
 import { TopicLevelLocked } from "@/components/features/topics/TopicLevelLocked";
 import { TopicPageHeader } from "@/components/features/topics/TopicPageHeader";
-import { dashboardTopics, getDashboardTopicById } from "@/data/grammar/dashboardTopics";
+import {
+  dashboardTopics,
+  getDashboardTopicById,
+} from "@/data/grammar/dashboardTopics";
 import { getTopicContent } from "@/data/grammar";
+import type { TopicLesson } from "@/data/grammar/types";
 import { redirect } from "@/i18n/navigation";
 import {
   PASSED_LEVEL_EXAMS_COOKIE,
@@ -22,6 +26,28 @@ import { canAccessLevel, getRequiredLevelToUnlock } from "@/lib/topicAccess";
 type PageProps = {
   params: Promise<{ locale: string; topicId: string }>;
 };
+
+function getLessonNavSections(lesson: TopicLesson | undefined) {
+  if (!lesson) {
+    return [];
+  }
+
+  const hasRootBody = Boolean(
+    lesson.title ||
+    (lesson.paragraphs && lesson.paragraphs.length > 0) ||
+    (lesson.examples && lesson.examples.length > 0),
+  );
+
+  if (!hasRootBody && lesson.parts && lesson.parts.length > 0) {
+    return lesson.parts.map((part) => ({ id: part.id, title: part.title }));
+  }
+
+  if (lesson.title) {
+    return [{ id: "lesson", title: lesson.title }];
+  }
+
+  return [];
+}
 
 export function generateStaticParams() {
   return dashboardTopics.map((topic) => ({ topicId: topic.id }));
@@ -75,12 +101,7 @@ export default async function TopicLessonPage({ params }: PageProps) {
         index={index}
         activeTab="lesson"
         isExam={Boolean(topic.isExam)}
-        sections={
-          content?.lesson.sections.map((section) => ({
-            id: section.subtopicId,
-            title: section.title,
-          })) ?? []
-        }
+        sections={getLessonNavSections(content?.lesson)}
       />
       {!unlocked && requiredLevel ? (
         <TopicLevelLocked level={topic.level} requiredLevel={requiredLevel} />
@@ -91,7 +112,7 @@ export default async function TopicLessonPage({ params }: PageProps) {
           displayIndex={index}
         >
           <TopicLessonProgressTracker topicId={topic.id} />
-          <TopicLessonView lesson={content.lesson} />
+          <TopicLessonView lesson={content.lesson} intro={topic.intro} />
         </TopicGrammarAccessGate>
       ) : (
         <TopicContentMissing />
