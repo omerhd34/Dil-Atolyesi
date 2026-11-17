@@ -1,5 +1,6 @@
 export const SPEECH_VOICE_GENDER_STORAGE_KEY = "pylmor-speech-voice-gender";
-export const SPEECH_VOICE_GENDER_CHANGED_EVENT = "pylmor:speech-voice-gender-changed";
+export const SPEECH_VOICE_GENDER_CHANGED_EVENT =
+  "pylmor:speech-voice-gender-changed";
 
 export const SPEECH_VOICE_GENDERS = ["female", "male"] as const;
 
@@ -8,10 +9,10 @@ export type SpeechVoiceGender = (typeof SPEECH_VOICE_GENDERS)[number];
 export const DEFAULT_SPEECH_VOICE_GENDER: SpeechVoiceGender = "female";
 
 const FEMALE_VOICE_PATTERN =
-  /female|woman|girl|samantha|karen|victoria|zira|susan|jenny|aria|natalie|linda|heather|moira|tessa|fiona|serena|veena|hazel|emma|lisa|sarah|kate|anna|amy|julie|laura|joanna|kimberly|ivy|salli|nicole|penelope|raveena|aditi|niamh|marie|sonia|libby|mia|hannah|olivia|freya|kathy|allison|ava|jane|michelle|serena/i;
+  /female|woman|girl|samantha|karen|victoria|zira|susan|jenny|aria|natalie|linda|heather|moira|tessa|fiona|serena|veena|hazel|emma|lisa|sarah|kate|anna|amy|julie|laura|joanna|kimberly|ivy|salli|nicole|penelope|raveena|aditi|niamh|marie|sonia|libby|mia|hannah|olivia|freya|kathy|allison|ava|jane|michelle|serena|emel|yelda/i;
 
 const MALE_VOICE_PATTERN =
-  /male|man|boy|daniel|david|mark|james|george|ryan|guy|thomas|richard|alex|fred|benjamin|brian|bruce|bobby|eddie|justin|kevin|matthew|michael|liam|arthur|gordon|lee|tom|william|nathan|sean|stephen|simon|paul|colin|craig|duncan|geraint|hugh|iain|oliver|roderick|aaron|nick|jason|tony|john|peter|chris|eric|frank/i;
+  /male|man|boy|daniel|david|mark|james|george|ryan|guy|thomas|richard|alex|fred|benjamin|brian|bruce|bobby|eddie|justin|kevin|matthew|michael|liam|arthur|gordon|lee|tom|william|nathan|sean|stephen|simon|paul|colin|craig|duncan|geraint|hugh|iain|oliver|roderick|aaron|nick|jason|tony|john|peter|chris|eric|frank|tolga|ahmet/i;
 
 function canUseStorage(): boolean {
   return typeof window !== "undefined";
@@ -23,8 +24,9 @@ function isSpeechVoiceGender(value: string): value is SpeechVoiceGender {
 
 export function classifySpeechVoiceGender(
   voiceName: string,
+  voiceUri = "",
 ): SpeechVoiceGender | null {
-  const name = voiceName.toLowerCase();
+  const name = `${voiceName} ${voiceUri}`.toLowerCase();
   if (FEMALE_VOICE_PATTERN.test(name)) {
     return "female";
   }
@@ -34,8 +36,15 @@ export function classifySpeechVoiceGender(
   return null;
 }
 
+function voiceMatchesLocalePrefix(
+  voice: SpeechSynthesisVoice,
+  localePrefix: string,
+): boolean {
+  return voice.lang.toLowerCase().startsWith(localePrefix.toLowerCase());
+}
+
 function isEnglishVoice(voice: SpeechSynthesisVoice): boolean {
-  return voice.lang.toLowerCase().startsWith("en");
+  return voiceMatchesLocalePrefix(voice, "en");
 }
 
 function voiceQualityScore(voice: SpeechSynthesisVoice): number {
@@ -53,33 +62,94 @@ function voiceQualityScore(voice: SpeechSynthesisVoice): number {
   return score;
 }
 
-export function pickEnglishSpeechVoice(
+function localePreferenceScore(
+  voice: SpeechSynthesisVoice,
+  lang: string,
+): number {
+  const target = lang.trim().toLowerCase();
+  const voiceLang = voice.lang.toLowerCase();
+  if (voiceLang === target) {
+    return 3;
+  }
+  const base = localePrefixFromLang(lang);
+  if (voiceLang.startsWith(`${base}-`)) {
+    return 2;
+  }
+  if (voiceLang.startsWith(base)) {
+    return 1;
+  }
+  return 0;
+}
+
+function compareVoices(
+  a: { voice: SpeechSynthesisVoice; quality: number },
+  b: { voice: SpeechSynthesisVoice; quality: number },
+  lang: string,
+): number {
+  const qualityDiff = b.quality - a.quality;
+  if (qualityDiff !== 0) {
+    return qualityDiff;
+  }
+  return (
+    localePreferenceScore(b.voice, lang) - localePreferenceScore(a.voice, lang)
+  );
+}
+
+function localePrefixFromLang(lang: string): string {
+  const normalized = lang.trim().toLowerCase();
+  if (!normalized) {
+    return "en";
+  }
+  const base = normalized.split("-")[0];
+  return base || "en";
+}
+
+export function pickSpeechVoiceForLang(
   voices: SpeechSynthesisVoice[],
+  lang: string,
   gender: SpeechVoiceGender,
 ): SpeechSynthesisVoice | null {
-  const english = voices.filter(isEnglishVoice);
-  if (english.length === 0) {
+  const localePrefix = localePrefixFromLang(lang);
+  const forLocale = voices.filter((voice) =>
+    voiceMatchesLocalePrefix(voice, localePrefix),
+  );
+  if (forLocale.length === 0) {
     return null;
   }
 
-  const matching = english
-    .map((voice) => ({
-      voice,
-      classified: classifySpeechVoiceGender(voice.name),
-      quality: voiceQualityScore(voice),
-    }))
+  const scored = forLocale.map((voice) => ({
+    voice,
+    classified: classifySpeechVoiceGender(voice.name, voice.voiceURI),
+    quality: voiceQualityScore(voice),
+  }));
+
+  const matching = scored
     .filter((entry) => entry.classified === gender)
-    .sort((a, b) => b.quality - a.quality);
+    .sort((a, b) => compareVoices(a, b, lang));
 
   if (matching.length > 0) {
     return matching[0]?.voice ?? null;
   }
 
-  const fallback = english
-    .map((voice) => ({ voice, quality: voiceQualityScore(voice) }))
-    .sort((a, b) => b.quality - a.quality);
+  const oppositeGender: SpeechVoiceGender =
+    gender === "female" ? "male" : "female";
+  const withoutOpposite = scored
+    .filter((entry) => entry.classified !== oppositeGender)
+    .sort((a, b) => compareVoices(a, b, lang));
 
+  if (withoutOpposite.length > 0) {
+    return withoutOpposite[0]?.voice ?? null;
+  }
+
+  const fallback = [...scored].sort((a, b) => compareVoices(a, b, lang));
   return fallback[0]?.voice ?? null;
+}
+
+export function pickEnglishSpeechVoice(
+  voices: SpeechSynthesisVoice[],
+  gender: SpeechVoiceGender,
+): SpeechSynthesisVoice | null {
+  return pickSpeechVoiceForLang(voices, "en", gender);
 }
 
 export function getSpeechVoiceGender(): SpeechVoiceGender {
