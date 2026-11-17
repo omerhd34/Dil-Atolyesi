@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent54: TopicContent = {
   topicId: "54",
   viewMinutes: 10,
+  quizIntro:
+    "Ödünleme devriklik ve stylistic fronting ayrımına dikkat et. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent54: TopicContent = {
         title: "Ödünleme Devrikliği (Concessive Inversion)",
         titleEn: "Concessive Inversion",
         paragraphs: [
-          "**Concessive inversion**, «-e rağmen / her ne kadar» anlamını edebi ve resmi bir tonda vermek için sıfat, zarf veya fiili cümle başına alır; ardından **as + özne + yüklemi** gelir. Kalıp: **Adj/Adv/V + as + subject + verb**.",
-          "Bu yapı günlük **although / even though** cümlelerinin daha vurgulu biçimidir. **Rich as he was, he lived humbly.** (= Although he was rich…) Okuyucunun dikkatini önce özelliğe, sonra beklenmedik sonuca çeker.",
-          "Sıfat ve zarfla en yaygındır; fiille **Try as he might** gibi kalıplar da sık görülür. Bu inversion C2 yazı ve konuşmasında üslup farkı yaratır; aşırı kullanım yapay durur.",
+          "**\\Concessive inversion\\**, **-e rağmen / her ne kadar** anlamını edebi ve resmi bir tonda vermek için sıfat, zarf veya fiili cümle başına alır; ardından **as + özne + yüklemi** gelir. Kalıp: **Adj/Adv/V + as + subject + verb**.",
+          "Bu yapı günlük **\\although / even though\\** cümlelerinin daha vurgulu biçimidir. **\\Rich as he was, he lived humbly.\\** **\\= Although he was rich…\\** Okuyucunun dikkatini önce özelliğe, sonra beklenmedik sonuca çeker.",
+          "Sıfat ve zarfla en yaygındır; fiille **\\Try as he might\\** gibi kalıplar da sık görülür. Bu inversion C2 yazı ve konuşmasında üslup farkı yaratır; aşırı kullanım yapay durur.",
         ],
         examplesTitle: "Concessive inversion",
         examplesLayout: "columns",
@@ -50,9 +52,9 @@ export const topicContent54: TopicContent = {
         title: "Try / Much / Object + as Kalıpları",
         titleEn: "Fixed Concessive Patterns",
         paragraphs: [
-          "**Try as + özne + might/may**, çabaya rağmen başarısızlığı dramatize eder. **Search as they might**, sonuç yoksa **they found nothing** ile tamamlanır. Bu kalıp hukuki ve edebi metinlerde sık görülür.",
-          "**Much as** güçlü duygu veya takdir ifade eder; ardından zıt düşünce gelir. **Much as I regret the decision, it was necessary.** Duygu öne çıkar, sonra mantıksal çelişki sunulur.",
-          "**Object + as + özne + verb** daha nadir ama C2 düzeyinde değerlidir: **Doctor though he is**, he avoids surgery. (= Although he is a doctor…) Burada **though** bazen **as** yerine geçer; anlam ödünlemedir.",
+          "**Try as + özne + might/may**, çabaya rağmen başarısızlığı dramatize eder. **\\Search as they might\\**, sonuç yoksa **\\they found nothing\\** ile tamamlanır. Bu kalıp hukuki ve edebi metinlerde sık görülür.",
+          "**\\Much as\\** güçlü duygu veya takdir ifade eder; ardından zıt düşünce gelir. **\\Much as I regret the decision, it was necessary.\\** Duygu öne çıkar, sonra mantıksal çelişki sunulur.",
+          "**Object + as + özne + verb** daha nadir ama C2 düzeyinde değerlidir: **\\Doctor though he is\\**, he avoids surgery. **\\= Although he is a doctor…\\** Burada **\\though\\** bazen **\\as\\** yerine geçer; anlam ödünlemedir.",
         ],
         examplesTitle: "Sabit kalıplar",
         examplesLayout: "columns",
@@ -90,9 +92,9 @@ export const topicContent54: TopicContent = {
         title: "Üslupsal Öne Çıkarma (Stylistic Fronting)",
         titleEn: "Stylistic Fronting",
         paragraphs: [
-          "**Stylistic fronting**, nesneyi veya yer-zarf öbeğini vurgu için cümle başına taşır. Özne-fiil sırası korunur veya yardımcı fiille devrik yapı oluşur. **This proposal I cannot accept.** (= I cannot accept this proposal) Ton daha kesin ve retoriktir.",
-          "Yer ifadeleri öne alındığında mekân vurgulanır: **Into the valley rode the knights.** Edebî ve anlatı yazısında sık; iş e-postalarında sınırlı kullan.",
-          "Öne çıkarma ile concessive inversion karıştırılmasın: concessive'de **as** zorunludur; stylistic fronting'de bağlaç yoktur, yalnızca dizilim değişir.",
+          "**\\Stylistic fronting\\**, nesneyi veya yer-zarf öbeğini vurgu için cümle başına taşır. Özne-fiil sırası korunur veya yardımcı fiille devrik yapı oluşur. **\\This proposal I cannot accept.\\** **\\= I cannot accept this proposal\\** Ton daha kesin ve retoriktir.",
+          "Yer ifadeleri öne alındığında mekân vurgulanır: **\\Into the valley rode the knights.\\** Edebî ve anlatı yazısında sık; iş e-postalarında sınırlı kullan.",
+          "Öne çıkarma ile concessive inversion karıştırılmasın: concessive'de **\\as\\** zorunludur; stylistic fronting'de bağlaç yoktur, yalnızca dizilim değişir.",
         ],
         examplesTitle: "Fronting örnekleri",
         examplesLayout: "columns",
@@ -134,9 +136,9 @@ export const topicContent54: TopicContent = {
         title: "So / Such + Be + Özne",
         titleEn: "So / Such + Be + Subject",
         paragraphs: [
-          "**So + sıfat + be + özne** ve **Such + (a) + isim + be + özne** yapıları güçlü vurgu veya şaşkınlık bildirir. **So great was the loss that the firm closed.** **Such was the demand that supplies ran out.**",
-          "Bu kalıplar edebî ve gazetecilik dilinde önemlidir; günlük konuşmada nadir. **So + adj + were + they** çoğul özneyle uyumludur.",
-          "Anlam çoğu zaman «o kadar … ki» şeklindedir; sonuç yan cümlesi **that** ile tamamlanabilir. Yapı concessive değil, vurgu ve sonuç ilişkisidir.",
+          "**So + sıfat + be + özne** ve **Such + (a) + isim + be + özne** yapıları güçlü vurgu veya şaşkınlık bildirir. **\\So great was the loss that the firm closed.\\** **\\Such was the demand that supplies ran out.\\**",
+          "Bu kalıplar edebî ve gazetecilik dilinde önemlidir; günlük konuşmada nadir. **\\So + adj + were + they\\** çoğul özneyle uyumludur.",
+          "Anlam çoğu zaman **o kadar … ki** şeklindedir; sonuç yan cümlesi **\\that\\** ile tamamlanabilir. Yapı concessive değil, vurgu ve sonuç ilişkisidir.",
         ],
         examplesTitle: "So / Such vurgusu",
         examplesLayout: "columns",
@@ -176,8 +178,8 @@ export const topicContent54: TopicContent = {
         titleEn: "Register & Restraint",
         paragraphs: [
           "Concessive inversion ve stylistic fronting üslup yükseltir; her paragrafta kullanmak metni ağırlaştırır. Akademik özet, konuşma metni veya rapor girişinde bir–iki cümle yeterli dramatik etki verir.",
-          "İş yazışmasında **although** nötr kalır; **Rich as the market is** yalnızca bilinçli retorik amaçla tercih edilir. Sözlü sunumda **Try as we might** dinleyicide empati uyandırır.",
-          "Devrik yapı kurarken yardımcı fiilin öznenin hemen ardından geldiğinden emin ol; **Never I have** yanlış, **Never have I** doğrudur. Sesli tekrar, doğal vurguyu oturtmanın en iyi yoludur.",
+          "İş yazışmasında **\\although\\** nötr kalır; **\\Rich as the market is\\** yalnızca bilinçli retorik amaçla tercih edilir. Sözlü sunumda **\\Try as we might\\** dinleyicide empati uyandırır.",
+          "Devrik yapı kurarken yardımcı fiilin öznenin hemen ardından geldiğinden emin ol; **\\Never I have\\** yanlış, **\\Never have I\\** doğrudur. Sesli tekrar, doğal vurguyu oturtmanın en iyi yoludur.",
         ],
         examplesTitle: "Ton karşılaştırması",
         examplesLayout: "columns",

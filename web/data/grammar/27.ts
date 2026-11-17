@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent27: TopicContent = {
   topicId: "27",
   viewMinutes: 9,
+  quizIntro:
+    "\\As ... as\\, \\too\\ ve \\enough\\ yapılarının anlamı ve kelime sırası ölçülür.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent27: TopicContent = {
         title: "Used to — Geçmiş Alışkanlık ve Durum",
         titleEn: "Used to",
         paragraphs: [
-          "**Used to + V1** geçmişte vardı ama artık olmayan alışkanlıkları ve uzun süreli durumları anlatır. Kalıp: **özne + used to + yalın fiil**. **I used to live in Ankara.** (Artık orada yaşamıyorum.)",
-          "Olumlu, olumsuz ve soruda çekim **did** ile yapılır; **use** değişmez: **I didn't use to like coffee.** **Did you use to play tennis?** Dikkat: yazımda **use** (used to / use to), **did** gelince **use** without **d**.",
-          "Present perfect veya past simple ile karıştırma: **I used to smoke** = eskiden içerdim (genel alışkanlık bitti). **I smoked yesterday** = dün içtim (tek olay).",
+          "**\\Used to + V1\\** geçmişte vardı ama artık olmayan alışkanlıkları ve uzun süreli durumları anlatır. Kalıp: **özne + used to + yalın fiil**. **\\I used to live in Ankara.\\** (Artık orada yaşamıyorum.)",
+          "Olumlu, olumsuz ve soruda çekim **\\did\\** ile yapılır; **\\use\\** değişmez: **\\I didn't use to like coffee.\\** **\\Did you use to play tennis?\\** Dikkat: yazımda **\\use\\** **\\used to / use to\\**, **\\did\\** gelince **\\use\\** without **d**.",
+          "Present perfect veya past simple ile karıştırma: **\\I used to smoke\\** = eskiden içerdim (genel alışkanlık bitti). **\\I smoked yesterday\\** = dün içtim **\\tek olay\\**.",
         ],
         examplesTitle: "Used to örnekleri",
         examplesLayout: "columns",
@@ -53,9 +55,9 @@ export const topicContent27: TopicContent = {
         title: "Would — Tekrarlanan Geçmiş Eylemler",
         titleEn: "Would for Past Habits",
         paragraphs: [
-          "**Would + V1** geçmişte düzenli tekrarlanan **eylemleri** nostaljik veya hikâye anlatımında ifade eder: **Every summer we would visit our grandparents.**",
-          "Genelde hikâye ve anı bağlamında kullanılır; zaman ifadesi (**when I was a child**, **every Sunday**) sık görülür. **Used to** hem eylem hem durum için kullanılır; **would** daha çok eylem içindir.",
-          "**Would** ile soru/olumsuz yapılmaz; bu işler **used to** ile yapılır. **I wouldn't use to...** diye bir kalıp yoktur; **I didn't use to...** doğrudur.",
+          "**Would + V1** geçmişte düzenli tekrarlanan **\\eylemleri\\** nostaljik veya hikâye anlatımında ifade eder: **\\Every summer we would visit our grandparents.\\**",
+          "Genelde hikâye ve anı bağlamında kullanılır; zaman ifadesi (**\\when I was a child\\**, **\\every Sunday\\**) sık görülür. **\\Used to\\** hem eylem hem durum için kullanılır; **\\would\\** daha çok eylem içindir.",
+          "**\\Would\\** ile soru/olumsuz yapılmaz; bu işler **\\used to\\** ile yapılır. **\\I wouldn't use to...\\** diye bir kalıp yoktur; **\\I didn't use to...\\** doğrudur.",
         ],
         examplesTitle: "Would örnekleri",
         examplesLayout: "columns",
@@ -94,9 +96,9 @@ export const topicContent27: TopicContent = {
         title: "Would Kullanılmayan Durum Fiilleri",
         titleEn: "State Verbs",
         paragraphs: [
-          "**Be, have (sahip olmak), live, know, like, love, hate, believe, understand** gibi **durum fiilleri** ile geçmiş alışkanlık/durum anlatırken **would** değil **used to** kullanılır.",
-          "Yanlış: *I would live in Istanbul.* Doğru: **I used to live in Istanbul.** Yanlış: *She would have a cat.* Doğru: **She used to have a cat.**",
-          "**Would** yalnızca tekrarlayan **aktiviteler** için güvenlidir: **would visit, would play, would wake up early**.",
+          "**\\Be, have (sahip olmak), live, know, like, love, hate, believe, understand\\** gibi **\\durum fiilleri\\** ile geçmiş alışkanlık/durum anlatırken **\\would\\** değil **\\used to\\** kullanılır.",
+          "Yanlış: *\\I would live in Istanbul.\\* Doğru: **\\I used to live in Istanbul.\\** Yanlış: *\\She would have a cat.\\* Doğru: **\\She used to have a cat.\\**",
+          "**\\Would\\** yalnızca tekrarlayan **\\aktiviteler\\** için güvenlidir: **\\would visit, would play, would wake up early\\**.",
         ],
         examplesTitle: "Used to vs would",
         examplesLayout: "columns",
@@ -140,9 +142,9 @@ export const topicContent27: TopicContent = {
         title: "Olumsuz ve Soru",
         titleEn: "Negative & Questions",
         paragraphs: [
-          "Olumsuz: **didn't use to + V1** (değil *didn't used to*). **I didn't use to drink tea.** Soru: **Did + özne + use to + V1?** **Did they use to work together?**",
-          "Kısa cevap: **Yes, I did. / No, I didn't.** **Used to** kısmını kısa cevapta tekrar etme.",
-          "**Used to** sadece geçmiş içindir; şimdiki alışkanlık için **usually, often** veya present simple kullan: **I usually walk to work.** (*I use to* yoktur — modal değildir)",
+          "Olumsuz: **\\didn't use to + V1\\** (değil *\\didn't used to\\*). **\\I didn't use to drink tea.\\** Soru: **Did + özne + use to + V1?** **\\Did they use to work together?\\**",
+          "Kısa cevap: **\\Yes, I did. / No, I didn't.\\** **\\Used to\\** kısmını kısa cevapta tekrar etme.",
+          "**\\Used to\\** sadece geçmiş içindir; şimdiki alışkanlık için **\\usually, often\\** veya present simple kullan: **\\I usually walk to work.\\** (*\\I use to\\* yoktur — modal değildir)",
         ],
         examplesTitle: "Soru ve olumsuz",
         examplesLayout: "columns",
@@ -162,9 +164,9 @@ export const topicContent27: TopicContent = {
         title: "Used to ve Would Birlikte",
         titleEn: "Using Both Naturally",
         paragraphs: [
-          "Uzun anı anlatımında ikisi bir arada kullanılabilir: **When I was a child, I used to live on a farm. Every morning I would feed the animals.** **Used to** genel durum, **would** tekrarlayan sahne.",
-          "**Be used to** ve **get used to** farklı yapılardır (+ **-ing** / to V-ing): **alışkın olmak**. Bu dersteki **used to** = **eskiden ... yapardım** anlamıdır; karıştırma.",
-          "Özet: durum → **used to**; tekrarlayan eylem → **used to** veya **would**; soru/olumsuz → yalnız **used to**.",
+          "Uzun anı anlatımında ikisi bir arada kullanılabilir: **\\When I was a child, I used to live on a farm. Every morning I would feed the animals.\\** **\\Used to\\** genel durum, **\\would\\** tekrarlayan sahne.",
+          "**\\Be used to\\** ve **\\get used to\\** farklı yapılardır **\\+ **-ing** / to V-ing\\**: **alışkın olmak**. Bu dersteki **\\used to\\** = **eskiden ... yapardım** anlamıdır; karıştırma.",
+          "Özet: durum → **\\used to\\**; tekrarlayan eylem → **\\used to\\** veya **\\would\\**; soru/olumsuz → yalnız **\\used to\\**.",
         ],
         examplesTitle: "Paragraf örneği",
         examplesLayout: "columns",

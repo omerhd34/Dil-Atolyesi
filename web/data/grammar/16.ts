@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent16: TopicContent = {
   topicId: "16",
   viewMinutes: 10,
+  quizIntro:
+    "Sorular evet-hayır ve Wh sorularını, \\to be\\ ve \\Present Simple\\ ile kurduğun yapıları ölçer. Yardımcı fiilin öznenin önüne geçmesine dikkat et.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent16: TopicContent = {
         title: "Was / Were",
         titleEn: "Past Simple: was / were",
         paragraphs: [
-          "**Past Simple** geçmişte **bitmiş** olayları anlatır. **To be** fiilinin geçmiş biçimleri **was** ve **were**dir. **I / he / she / it** ile **was**; **you / we / they** ile **were** kullanılır.",
-          "Olumlu kalıp: **özne + was/were + tamamlayıcı**. **She was tired.** **They were at school.** Olumsuz: **was not (wasn't) / were not (weren't)**. Soru: **Was he late? Were you happy?**",
-          "**Was / were** isim cümlelerinde (durum, yer, meslek) çok yaygındır. Eylem cümlelerinde asıl fiil geçmiş zamandır; **was/were** yalnız **to be** içindir. **I was a student in 2020.** **We were in Ankara last summer.**",
+          "**\\Past Simple\\** geçmişte **bitmiş** olayları anlatır. **\\To be\\** fiilinin geçmiş biçimleri **\\was\\** ve **\\were\\**dir. **\\I / he / she / it\\** ile **\\was\\**; **\\you / we / they\\** ile **\\were\\** kullanılır.",
+          "Olumlu kalıp: **özne + was/were + tamamlayıcı**. **\\She was tired.\\** **\\They were at school.\\** Olumsuz: **\\was not (wasn't) / were not (weren't)\\**. Soru: **\\Was he late? Were you happy?\\**",
+          "**\\Was\\** ve **\\were\\** isim cümlelerinde durum, yer ve meslek için sık kullanılır. Eylem cümlelerinde asıl fiil geçmiş zamandır; **\\was\\** ve **\\were\\** yalnızca **\\to be\\** içindir. **\\I was a student in 2020.\\** **\\We were in Ankara last summer.\\**",
         ],
         examplesTitle: "Was / were",
         examplesLayout: "columns",
@@ -27,7 +29,11 @@ export const topicContent16: TopicContent = {
           { en: "They were late.", tr: "Geç kaldılar.", note: "they → were" },
           { en: "He wasn't at work.", tr: "İşte değildi.", note: "wasn't" },
           { en: "Were you tired?", tr: "Yorgun muydun?", note: "soru" },
-          { en: "Yes, I was. / No, I wasn't.", tr: "Evet. / Hayır.", note: "kısa cevap" },
+          {
+            en: "Yes, I was. / No, I wasn't.",
+            tr: "Evet. / Hayır.",
+            note: "kısa cevap",
+          },
         ],
       },
       {
@@ -35,9 +41,9 @@ export const topicContent16: TopicContent = {
         title: "Düzenli Fiiller: -ed",
         titleEn: "Regular Verbs: -ed",
         paragraphs: [
-          "Düzenli fiillerin geçmişi **fiil + -ed** ile yapılır: **walk → walked**, **play → played**, **help → helped**. Tüm öznelerde aynı geçmiş biçim kullanılır: **I walked. She walked.**",
-          "Yazım kuralları: Sessiz + **-e** ile bitenlerde sadece **-d**: **live → lived**. **-y** öncesinde ünsüz varsa **y → i + ed**: **study → studied**. **-y** öncesinde ünlü varsa **-ed**: **play → played**.",
-          "Kısa fiillerde son sesli ünlü + tek ünsüz ise ünsüz iki kez yazılır: **stop → stopped**, **plan → planned**. Sonuçta **-ed** telaffuzda **/t/, /d/ veya /ɪd/** olabilir; yazım her zaman **-ed**dir.",
+          "Düzenli fiillerin geçmişi **fiil + -ed** ile yapılır: **\\walk → walked\\**, **\\play → played\\**, **\\help → helped\\**. Tüm öznelerde aynı geçmiş biçim kullanılır: **\\I walked. She walked.\\**",
+          "Yazım kuralları: Sessiz + **-e** ile bitenlerde sadece **-d**: **\\live → lived\\**. **-y** öncesinde ünsüz varsa **\\y → i + ed\\**: **\\study → studied\\**. **-y** öncesinde ünlü varsa **\\-ed\\**: **\\play → played\\**.",
+          "Kısa fiillerde son sesli ünlü + tek ünsüz ise ünsüz iki kez yazılır: **\\stop → stopped\\**, **\\plan → planned\\**. Sonuçta **\\-ed\\** telaffuzda **/t/, /d/ veya /ɪd/** olabilir; yazım her zaman **\\-ed\\**dir.",
         ],
         examplesTitle: "Düzenli -ed",
         examplesLayout: "columns",
@@ -46,13 +52,21 @@ export const topicContent16: TopicContent = {
         examples: [
           { en: "work → worked", tr: "I worked yesterday.", note: "normal" },
           { en: "watch → watched", tr: "She watched a film.", note: "-ch" },
-          { en: "study → studied", tr: "We studied English.", note: "consonant + y" },
+          {
+            en: "study → studied",
+            tr: "We studied English.",
+            note: "consonant + y",
+          },
           { en: "play → played", tr: "He played tennis.", note: "vowel + y" },
           { en: "stop → stopped", tr: "The bus stopped.", note: "çift ünsüz" },
           { en: "live → lived", tr: "They lived here.", note: "-e → -d" },
           { en: "clean → cleaned", tr: "I cleaned my room.", note: "normal" },
           { en: "finish → finished", tr: "She finished early.", note: "-sh" },
-          { en: "rain → rained", tr: "It rained all day.", note: "it → was optional" },
+          {
+            en: "rain → rained",
+            tr: "It rained all day.",
+            note: "it → was optional",
+          },
         ],
       },
       {
@@ -60,9 +74,9 @@ export const topicContent16: TopicContent = {
         title: "Düzensiz Fiiller: V2",
         titleEn: "Irregular Verbs (V2)",
         paragraphs: [
-          "Düzensiz fiillerde geçmiş biçim **-ed almaz**; ayrı bir **V2** formu vardır. **go → went**, **see → saw**, **buy → bought**, **have → had**, **do → did** en sık karşılaşılanlardandır.",
-          "Ezber stratejisi: fiilleri **V1 – V2 – V3** üçlüsü olarak öğren. Past Simple için yalnız **V2** gerekir: **I went home.** **She saw him.** Bazı düzensizler biçim değiştirmez: **cut → cut**, **put → put**.",
-          "Düzensizlik derecesi değişir: **think → thought** (tam değişim), **bring → brought** (ortak -ought). Sık kullanılan listeyi tekrar tekrar okumak ve örnek cümle kurmak kalıcı öğrenmeyi sağlar.",
+          "Düzensiz fiillerde geçmiş biçim **\\-ed almaz\\**; ayrı bir **\\V2\\** formu vardır. **\\go → went\\**, **\\see → saw\\**, **\\buy → bought\\**, **\\have → had\\**, **\\do → did\\** en sık karşılaşılanlardandır.",
+          "Ezber stratejisi: fiilleri **V1 – V2 – V3** üçlüsü olarak öğren. Past Simple için yalnız **\\V2\\** gerekir: **\\I went home.\\** **\\She saw him.\\** Bazı düzensizler biçim değiştirmez: **\\cut → cut\\**, **\\put → put\\**.",
+          "Düzensizlik derecesi değişir: **\\think → thought\\** (tam değişim), **\\bring → brought\\** **\\ortak -ought\\**. Sık kullanılan listeyi tekrar tekrar okumak ve örnek cümle kurmak kalıcı öğrenmeyi sağlar.",
         ],
         examplesTitle: "Düzensiz V2",
         examplesLayout: "columns",
@@ -85,9 +99,9 @@ export const topicContent16: TopicContent = {
         title: "Did / Didn't — Soru ve Olumsuz",
         titleEn: "Questions & Negatives with did",
         paragraphs: [
-          "Eylem cümlelerinde (to be dışı) olumsuz ve soru için **did / didn't** yardımcı fiili kullanılır. **Did** tüm öznelerle aynıdır. Olumsuz: **özne + didn't + V1**. **I didn't go.** **She didn't call.**",
-          "Soru: **Did + özne + V1?** **Did you enjoy it?** **Did they arrive?** Kısa cevap: **Yes, I did. / No, she didn't.** **Did** kullanıldığında asıl fiil **yalın (V1)** kalır: ~~Did she went?~~ → **Did she go?**",
-          "**Was/were** ile karıştırma: durum/yer için **wasn't / weren't**; eylem için **didn't + V1**. **He wasn't happy** (duygu) ≠ **He didn't eat** (eylem). Olumlu geçmişte yardımcı fiil yoktur; yalnız **V2**: **I saw it.**",
+          "Eylem cümlelerinde (to be dışı) olumsuz ve soru için **\\did / didn't\\** yardımcı fiili kullanılır. **\\Did\\** tüm öznelerle aynıdır. Olumsuz: **özne + didn't + V1**. **\\I didn't go.\\** **\\She didn't call.\\**",
+          "Soru: **Did + özne + yalın fiil?** Örnek: **\\Did you enjoy it?\\** **\\Did they arrive?\\** Kısa cevap: **\\Yes, I did.\\** veya **\\No, she didn't.\\** **\\Did\\** varken asıl fiil **\\V1\\** kalır; ~~Did she went?~~ yanlıştır, doğrusu **\\Did she go?\\**",
+          "**\\Was\\** ve **\\were\\** ile karıştırma: durum için **\\wasn't\\** ve **\\weren't\\**; eylem için **\\didn't\\** artı yalın fiil. **\\He wasn't happy.\\** duygu; **\\He didn't eat.\\** eylem. Olumlu geçmişte yardımcı fiil yoktur; doğrudan **\\V2\\** kullanılır: **\\I saw it.\\**",
         ],
         examplesTitle: "Did / didn't",
         examplesLayout: "columns",
@@ -108,11 +122,11 @@ export const topicContent16: TopicContent = {
       {
         id: "16-5",
         title: "Zaman İfadeleri",
-        titleEn: "yesterday, last…, ago",
+        titleEn: "yesterday, last week, ago",
         paragraphs: [
-          "Past Simple cümleleri genelde **geçmiş zaman ifadeleri** ile gelir. **yesterday** (dün), **the day before yesterday** (evvelsi gün), **last night / week / month / year** (geçen …) doğrudan geçmişi işaret eder.",
-          "**… ago** bir süreyi **şimdiden geriye** sayar: **two hours ago**, **three years ago**, **a week ago**. **Ago** her zaman sürenin **sonunda** gelir; Türkçede **önce** karşılığı: **five minutes ago** = beş dakika önce.",
-          "**In + yıl** gelecek içindir; geçmişte **in 2019** = 2019'da (belirli yıl). **Last Monday** = geçen pazartesi (tek olay). Bu ifadeler Present Perfect ile karışabilir; **belirli bitmiş zaman** → Past Simple: **I met him yesterday.**",
+          "Past Simple cümleleri genelde **geçmiş zaman ifadeleri** ile gelir. **\\yesterday\\** (dün), **\\the day before yesterday\\** (evvelsi gün), **\\last night / week / month / year\\** (geçen  ve benzeri) doğrudan geçmişi işaret eder.",
+          "**\\ ve benzeri ago\\** bir süreyi **şimdiden geriye** sayar: **\\two hours ago\\**, **\\three years ago\\**, **\\a week ago\\**. **\\Ago\\** her zaman sürenin **\\sonunda\\** gelir; Türkçede **önce** karşılığı: **\\five minutes ago\\** = beş dakika önce.",
+          "**In + yıl** gelecek içindir; geçmişte **\\in 2019\\** = 2019'da (belirli yıl). **\\Last Monday\\** = geçen pazartesi **\\tek olay\\**. Bu ifadeler Present Perfect ile karışabilir; **belirli bitmiş zaman** → Past Simple: **\\I met him yesterday.\\**",
         ],
         examplesTitle: "Zaman ifadeleri",
         examplesLayout: "columns",
@@ -124,7 +138,11 @@ export const topicContent16: TopicContent = {
           { en: "She moved last year.", tr: "Geçen yıl taşındı." },
           { en: "He left two days ago.", tr: "İki gün önce ayrıldı." },
           { en: "They called an hour ago.", tr: "Bir saat önce aradılar." },
-          { en: "I was born in 2005.", tr: "2005'te doğdum.", note: "in + yıl" },
+          {
+            en: "I was born in 2005.",
+            tr: "2005'te doğdum.",
+            note: "in + yıl",
+          },
           { en: "It rained last night.", tr: "Dün gece yağmur yağdı." },
           { en: "We talked a long time ago.", tr: "Uzun zaman önce konuştuk." },
           { en: "Did you finish last week?", tr: "Geçen hafta bitirdin mi?" },
@@ -357,7 +375,12 @@ export const topicContent16: TopicContent = {
       subtopicId: "16-1",
       type: "multiple_choice",
       prompt: "Hangisi doğrudur?",
-      options: ["We was tired.", "We were tired.", "We are tired.", "We is tired."],
+      options: [
+        "We was tired.",
+        "We were tired.",
+        "We are tired.",
+        "We is tired.",
+      ],
       correctIndex: 1,
       explanation: "We → were.",
     },
@@ -384,7 +407,12 @@ export const topicContent16: TopicContent = {
       subtopicId: "16-4",
       type: "multiple_choice",
       prompt: "Olumsuz cümle hangisidir?",
-      options: ["She didn't went.", "She not go.", "She didn't go.", "She doesn't went."],
+      options: [
+        "She didn't went.",
+        "She not go.",
+        "She didn't go.",
+        "She doesn't went.",
+      ],
       correctIndex: 2,
       explanation: "didn't + V1.",
     },

@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent11: TopicContent = {
   topicId: "11",
   viewMinutes: 10,
+  quizIntro:
+    "Alıştırma geniş zaman olumlu çekimi, \\do\\ ve \\does\\ ile soru–olumsuz ve sıklık zarflarını ölçer. Üçüncü tekil şahısta fiile \\-s\\ eklenip eklenmediğine dikkat et.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent11: TopicContent = {
         title: "Geniş Zaman Nedir?",
         titleEn: "What Is the Present Simple?",
         paragraphs: [
-          "**Geniş zaman (Present Simple)** alışkanlıkları, düzenli tekrarlanan eylemleri, genel gerçekleri ve kalıcı durumları anlatır. Türkçede fiil çoğu zaman **-r / -ır** ekleriyle çekimlenir; İngilizcede ise çoğu özne için fiil **yalın halde (base form)** kalır, yalnız **he, she, it** (3. tekil şahıs) için sonuna **-s** veya **-es** eklenir.",
-          "Bu zamanı sıklıkla **always, usually, often, sometimes, never** gibi **sıklık zarfları** ve **every day, on Mondays, in the morning** gibi zaman ifadeleriyle birlikte kullanırsın. **Şu an** konuşulan tek bir anı değil, **genel bir düzeni** vurgular: **I work in an office.** **She drinks tea every morning.**",
-          "Geniş zamanı günlük rutinini anlatırken, hobilerinden bahsederken veya bilimsel / genel doğruları söylerken kullanırsın. Sonraki bölümlerde **-s/-es** ekini, **do/does** ile soru ve olumsuzu, ardından sıklık zarflarının yerini öğreneceksin.",
+          "**Geniş zaman (\\Present Simple\\)** alışkanlıkları, düzenli tekrarlanan eylemleri, genel gerçekleri ve kalıcı durumları anlatır. Türkçede fiil çoğu zaman **-r / -ır** ekleriyle çekimlenir; İngilizcede ise çoğu özne için fiil **yalın halde (\\base form\\)** kalır, yalnız **\\he, she, it\\** (3. tekil şahıs) için sonuna **-s** veya **\\-es\\** eklenir.",
+          "Bu zamanı sıklıkla **\\always, usually, often, sometimes, never\\** gibi **sıklık zarfları** ve **\\every day, on Mondays, in the morning\\** gibi zaman ifadeleriyle birlikte kullanırsın. **Şu an** konuşulan tek bir anı değil, **genel bir düzeni** vurgular: **\\I work in an office.\\** **\\She drinks tea every morning.\\**",
+          "Geniş zamanı günlük rutinini anlatırken, hobilerinden bahsederken veya bilimsel / genel doğruları söylerken kullanırsın. Sonraki bölümlerde **\\-s/-es\\** ekini, **do/does** ile soru ve olumsuzu, ardından sıklık zarflarının yerini öğreneceksin.",
         ],
         examplesTitle: "Kullanım örnekleri",
         examplesLayout: "columns",
@@ -58,9 +60,9 @@ export const topicContent11: TopicContent = {
         title: "Olumlu Cümleler: -s ve -es",
         titleEn: "Affirmative — Third Person -s / -es",
         paragraphs: [
-          "Olumlu geniş zamanda kalıp: **özne + fiil (yalın / -s)**. **I, you, we, they** ile fiil **değişmez**: **I eat. You eat. We eat.** **He, she, it** ile fiilin sonuna **-s** gelir: **He eats. She eats. It eats.**",
-          "Fiil **-sh, -ch, -ss, -x, -o** ile bitiyorsa **-es** eklenir: **watch → watches**, **go → goes**, **fix → fixes**. Fiil **sessiz + y** ile bitiyorsa **y → i + es**: **study → studies**, **carry → carries**. **Ünlü + y** ise sadece **-s**: **play → plays**, **enjoy → enjoys**.",
-          "**have** 3. tekil şahusta **has** olur (**He has a car.**). **do** → **does**. Bu iki fiili sık kullanacağın için ayrı ezberlemek iyi bir yatırımdır.",
+          "Olumlu geniş zamanda kalıp: **özne + fiil (yalın / -s)**. **\\I, you, we, they\\** ile fiil **değişmez**: **\\I eat. You eat. We eat.\\** **\\He, she, it\\** ile fiilin sonuna **-s** gelir: **\\He eats. She eats. It eats.\\**",
+          "Fiil **\\-sh, -ch, -ss, -x, -o\\** ile bitiyorsa **\\-es\\** eklenir: **\\watch → watches\\**, **\\go → goes\\**, **\\fix → fixes\\**. Fiil **\\sessiz + y\\** ile bitiyorsa **\\y → i + es\\**: **\\study → studies\\**, **\\carry → carries\\**. **Ünlü + y** ise sadece **-s**: **\\play → plays\\**, **\\enjoy → enjoys\\**.",
+          "**\\have\\** 3. tekil şahusta **\\has\\** olur (\\**He has a car.**\\). **\\do\\** → **\\does\\**. Bu iki fiili sık kullanacağın için ayrı ezberlemek iyi bir yatırımdır.",
         ],
         examplesTitle: "3. tekil çekim",
         examplesLayout: "columns",
@@ -91,9 +93,9 @@ export const topicContent11: TopicContent = {
         title: "Soru ve Olumsuz: do / does",
         titleEn: "Questions & Negatives with do / does",
         paragraphs: [
-          "Geniş zamanda olumsuz ve soru için **yardımcı fiil (auxiliary) do / does** kullanılır; **to be** (am/is/are) gibi değildir. **I, you, we, they** ile **do**; **he, she, it** ile **does** gelir. Olumsuz: **özne + do/does + not + yalın fiil** → **I do not (don't) like coffee.** **She does not (doesn't) smoke.**",
-          "Soruda **do/does** cümlenin başına (veya özneden önce) gelir; **asıl fiil yalın kalır**: **Do you speak English?** **Does he work on Sundays?** Kısa cevap: **Yes, I do. / No, she doesn't.**",
-          "Dikkat: **does** kullanıldığında asıl fiile **asla -s eklenmez**. Yanlış: ~~Does she works?~~ Doğru: **Does she work?** Aynı kural olumsuzda da geçerlidir: **He doesn't works** değil **He doesn't work.**",
+          "Geniş zamanda olumsuz ve soru için **yardımcı fiil (auxiliary) do / does** kullanılır; **\\to be\\** (am/is/are) gibi değildir. **\\I, you, we, they\\** ile **\\do\\**; **\\he, she, it\\** ile **\\does\\** gelir. Olumsuz: **özne + do/does + not + yalın fiil** → **\\I do not (don't) like coffee.\\** **\\She does not (doesn't) smoke.\\**",
+          "Soruda **do/does** cümlenin başına (veya özneden önce) gelir; **asıl fiil yalın kalır**: **\\Do you speak English?\\** **\\Does he work on Sundays?\\** Kısa cevap: **\\Yes, I do. / No, she doesn't.\\**",
+          "Dikkat: **\\does\\** kullanıldığında asıl fiile **asla -s eklenmez**. Yanlış örnek: **\\Does she works?\\** Doğru: **\\Does she work?\\** Aynı kural olumsuzda da geçerlidir: **\\He doesn't work.\\** doğru, **\\He doesn't works.\\** yanlış.",
         ],
         examplesTitle: "do / does örnekleri",
         examplesLayout: "columns",
@@ -124,9 +126,9 @@ export const topicContent11: TopicContent = {
         title: "Sıklık Zarfları",
         titleEn: "Frequency Adverbs",
         paragraphs: [
-          "**Sıklık zarfları (frequency adverbs)** eylemin ne kadar sık yapıldığını gösterir: **always** (her zaman), **usually** (genelde), **often** (sık sık), **sometimes** (bazen), **hardly ever** (neredeyse hiç), **never** (hiçbir zaman).",
-          "Bu zarflar genelde **asıl fiilin hemen önüne** gelir: **I always brush my teeth.** **She usually walks to school.** Olumsuzda da aynı yer: **We don't often go out.** **He doesn't always agree.**",
-          "**To be** ile kullanıldığında sıklık zarfı **am/is/are**'den sonra gelir: **I am always tired.** **She is usually on time.** Geniş zaman + **to be** birlikte kullanıldığında bu sıra farkına dikkat et.",
+          "**Sıklık zarfları (\\frequency adverbs\\)** eylemin ne kadar sık yapıldığını gösterir: **\\always\\** (\\her zaman\\), **\\usually\\** (\\genelde\\), **\\often\\** (sık sık), **\\sometimes\\** (\\bazen\\), **\\hardly ever\\** (neredeyse hiç), **\\never\\** (hiçbir zaman).",
+          "Bu zarflar genelde **asıl fiilin hemen önüne** gelir: **\\I always brush my teeth.\\** **\\She usually walks to school.\\** Olumsuzda da aynı yer: **\\We don't often go out.\\** **\\He doesn't always agree.\\**",
+          "**\\To be\\** ile kullanıldığında sıklık zarfı **am/is/are**'den sonra gelir: **\\I am always tired.\\** **\\She is usually on time.\\** Geniş zaman + **\\to be\\** birlikte kullanıldığında bu sıra farkına dikkat et.",
         ],
         examplesTitle: "Sıklık zarfları",
         examplesLayout: "columns",
@@ -167,9 +169,9 @@ export const topicContent11: TopicContent = {
         title: "Zaman İfadeleri",
         titleEn: "Time Expressions",
         paragraphs: [
-          "Geniş zamanı **zaman ifadeleri** ile desteklemek cümleyi netleştirir. **every day / week / month / year**, **once a week**, **twice a day**, **on Mondays**, **in the morning / afternoon / evening**, **at night** çok yaygındır.",
-          "**on + gün** (on Saturday), **in + bölüm of day** (in the morning), **at + saat veya at night** kalıplarını ezberle. **every** ile tekrar vurgulanır: **I go to the gym every Tuesday.**",
-          "Bu ifadeler genelde cümlenin **sonunda** veya **başında** durur; anlam değişmez: **On Sundays I rest.** = **I rest on Sundays.** Sıklık zarfı ve zaman ifadesini bir arada kullanabilirsin: **I usually study in the evening.**",
+          "Geniş zamanı **\\zaman ifadeleri\\** ile desteklemek cümleyi netleştirir. **\\every day / week / month / year\\**, **\\once a week\\**, **\\twice a day\\**, **\\on Mondays\\**, **\\in the morning / afternoon / evening\\**, **\\at night\\** çok yaygındır.",
+          "**on + gün** (\\on Saturday\\), **in + bölüm of day** (\\in the morning\\), **\\at + saat veya at night\\** kalıplarını ezberle. **\\every\\** ile tekrar vurgulanır: **\\I go to the gym every Tuesday.\\**",
+          "Bu ifadeler genelde cümlenin **\\sonunda\\** veya **başında** durur; anlam değişmez: **\\On Sundays I rest.\\** = **\\I rest on Sundays.\\** Sıklık zarfı ve zaman ifadesini bir arada kullanabilirsin: **\\I usually study in the evening.\\**",
         ],
         examplesTitle: "Zaman ifadeleri",
         examplesLayout: "columns",

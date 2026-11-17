@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent17: TopicContent = {
   topicId: "17",
   viewMinutes: 9,
+  quizIntro:
+    "Emir cümleleri, \\Don't\\ ile olumsuz emirler ve nesne zamirlerinin doğru yeri bu quizi tanımlar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent17: TopicContent = {
         title: "Past Continuous Biçimi",
         titleEn: "Form: was / were + V-ing",
         paragraphs: [
-          "**Past Continuous (süreklilik geçmişi)**, geçmişte **belirli bir anda devam eden** eylemi anlatır. Türkçede çoğu zaman **-iyordu** ekiyle ifade edilir: *Yağmur yağıyordu.*",
-          "Yapı: **özne + was / were + fiil-ing**. **I / he / she / it** ile **was**; **you / we / they** ile **were** kullanılır. Örnek: **I was studying.** **They were playing.**",
-          "Fiile **-ing** eklerken **Present Continuous** ile aynı kurallar geçerlidir: **run → running**, **sit → sitting**, **make → making**. **Was / were** fiilin hemen önünde durur.",
+          "**\\Past Continuous\\** geçmişte **belirli bir anda süren** eylemi anlatır. Yapı **\\was\\** veya **\\were\\** artı fiilin **\\-ing\\** biçimidir. Örnek: **\\It was raining.\\**",
+          "Yapı: **özne + was / were + fiil-ing**. **\\I / he / she / it\\** ile **\\was\\**; **\\you / we / they\\** ile **\\were\\** kullanılır. Örnek: **\\I was studying.\\** **\\They were playing.\\**",
+          "Fiile **\\-ing\\** eklerken **\\Present Continuous\\** ile aynı kurallar geçerlidir: **\\run → running\\**, **\\sit → sitting\\**, **\\make → making\\**. **\\Was / were\\** fiilin hemen önünde durur.",
         ],
         examplesTitle: "Olumlu yapı",
         examplesLayout: "columns",
@@ -44,9 +46,9 @@ export const topicContent17: TopicContent = {
         title: "Olumsuz ve Soru",
         titleEn: "Negative & Questions",
         paragraphs: [
-          "Olumsuzda **was / were** ile **not** birleşir: **was not → wasn't**, **were not → weren't**. Kalıp: **özne + wasn't / weren't + fiil-ing**. **He wasn't listening.**",
-          "Soru için **was / were** öznenin önüne alınır: **Was she working?** **Were they waiting?** Kısa cevap: **Yes, I was. / No, they weren't.**",
-          "Past Continuous sorularında genellikle **ne yapıyordun?** anlamı vardır. Zaman belirteci (**at 8 PM**, **yesterday morning**) cümleyi netleştirir.",
+          "Olumsuzda **\\was / were\\** ile **\\not\\** birleşir: **\\was not → wasn't\\**, **\\were not → weren't\\**. Kalıp: **özne + wasn't / weren't + fiil-ing**. **\\He wasn't listening.\\**",
+          "Soru için **\\was / were\\** öznenin önüne alınır: **\\Was she working?\\** **\\Were they waiting?\\** Kısa cevap: **\\Yes, I was. / No, they weren't.\\**",
+          "Past Continuous sorularında genellikle **ne yapıyordun?** anlamı vardır. Zaman belirteci (**\\at 8 PM\\**, **\\yesterday morning\\**) cümleyi netleştirir.",
         ],
         examplesTitle: "Olumsuz ve soru",
         examplesLayout: "columns",
@@ -72,9 +74,9 @@ export const topicContent17: TopicContent = {
         title: "When ve While",
         titleEn: "When & While",
         paragraphs: [
-          "**When** ve **while** bağlacı, uzun süren bir eylemle kısa / ani bir olayı birleştirir. Kural: **when** çoğunlukla **Past Simple** (kısa olay), **while** çoğunlukla **Past Continuous** (devam eden olay) ile gelir.",
-          "Klasik kalıp: **I was doing X when Y happened.** — *X yapıyordum, Y oldu.* Örnek: **I was cooking when the phone rang.**",
-          "**While I was studying, my brother was playing games.** gibi cümlelerde iki uzun eylem aynı anda sürer. **While** cümlesinin başında veya ortasında kullanılabilir.",
+          "**\\When\\** ve **\\while\\** bağlacı, uzun süren bir eylemle kısa / ani bir olayı birleştirir. Kural: **\\when\\** çoğunlukla **\\Past Simple\\** (kısa olay), **\\while\\** çoğunlukla **\\Past Continuous\\** **\\devam eden olay\\** ile gelir.",
+          "Klasik kalıp: **\\I was doing X when Y happened.\\** — *X yapıyordum, Y oldu.* Örnek: **\\I was cooking when the phone rang.\\**",
+          "**\\While I was studying, my brother was playing games.\\** gibi cümlelerde iki uzun eylem aynı anda sürer. **\\While\\** cümlesinin başında veya ortasında kullanılabilir.",
         ],
         examplesTitle: "When / while örnekleri",
         examplesLayout: "columns",
@@ -112,9 +114,9 @@ export const topicContent17: TopicContent = {
         title: "Arka Plan ve Paralel Eylemler",
         titleEn: "Background & Parallel Actions",
         paragraphs: [
-          "Hikaye anlatırken Past Continuous **sahne kurar**, Past Simple **olayı ilerletir**. Önce ortam: **The sun was shining. Birds were singing.** Sonra ana olay: **Suddenly, a car stopped.**",
-          "Aynı geçmiş anda **iki veya daha fazla** süren eylem varsa ikisi de Past Continuous olabilir: **He was cooking and I was setting the table.**",
-          "Past Continuous tek başına da kullanılır: dün saat 8'de ne yaptığını anlatırken **At 8 PM I was watching a film.** doğaldır. Bu kullanımda **when** şart değildir.",
+          "Hikaye anlatırken Past Continuous **\\sahne kurar\\**, Past Simple **olayı ilerletir**. Önce ortam: **\\The sun was shining. Birds were singing.\\** Sonra ana olay: **\\Suddenly, a car stopped.\\**",
+          "Aynı geçmiş anda **\\iki veya daha fazla\\** süren eylem varsa ikisi de Past Continuous olabilir: **\\He was cooking and I was setting the table.\\**",
+          "Past Continuous tek başına da kullanılır: dün saat 8'de ne yaptığını anlatırken **\\At 8 PM I was watching a film.\\** doğaldır. Bu kullanımda **\\when\\** şart değildir.",
         ],
         examplesTitle: "Hikaye ve paralel",
         examplesLayout: "columns",
@@ -144,9 +146,9 @@ export const topicContent17: TopicContent = {
         title: "Past Simple ile Fark",
         titleEn: "Past Continuous vs Past Simple",
         paragraphs: [
-          "**Past Simple** bitmiş, tek seferlik olayı anlatır: **I called her yesterday.** **Past Continuous** süren, yarım kalmış veya ortam olayını anlatır: **I was calling her when the line cut off.**",
-          "Zaman ifadeleri ipucu verir: **at that moment**, **at 7 o'clock**, **all morning** → sıklıkla Past Continuous. **Yesterday**, **last night**, **two days ago** → çoğu zaman Past Simple (tamamlanmış).",
-          "Karışıklığı önlemek için sor: *O anda devam ediyor muydu?* Evet ise **was/were + -ing**; tek olay ise **V2 / düzensiz geçmiş**.",
+          "**\\Past Simple\\** bitmiş, tek seferlik olayı anlatır: **\\I called her yesterday.\\** **\\Past Continuous\\** süren, yarım kalmış veya ortam olayını anlatır: **\\I was calling her when the line cut off.\\**",
+          "Zaman ifadeleri ipucu verir: **\\at that moment\\**, **\\at 7 o'clock\\**, **\\all morning\\** → sıklıkla Past Continuous. **\\Yesterday\\**, **\\last night\\**, **\\two days ago\\** → çoğu zaman Past Simple (tamamlanmış).",
+          "Karışıklığı önlemek için sor: *\\O anda devam ediyor muydu?\\* Evet ise **was/were + -ing**; tek olay ise **V2 / düzensiz geçmiş**.",
         ],
         examplesTitle: "İki zamanı kıyasla",
         examplesLayout: "columns",

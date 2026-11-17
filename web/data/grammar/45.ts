@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent45: TopicContent = {
   topicId: "45",
   viewMinutes: 10,
+  quizIntro:
+    "Participle kısaltmalarında etken **\\V-ing\\**, edilgen **\\V3\\** kullanımını; **\\who\\** ve **\\which\\** düşürme ile **\\the first to\\** kalıbını uygula.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent45: TopicContent = {
         title: "Etken: V-ing kısaltması",
         titleEn: "Active Reduction — -ing",
         paragraphs: [
-          "Tam sıfat cümleciği: **The boy who is standing by the gate is my brother.** Kısaltma: **ilgi zamiri + to be** düşer, etken fiil **-ing** olur: **The boy standing by the gate is my brother.** Bu yapı **şu an** veya **genel** eylemi tanımlar.",
-          "Kalıp: **isim + V-ing + geri kalan cümle**. **People living in cities** ... **Anyone wanting more information** ... **The woman talking on the phone** ... Aktif sıfat cümlesi **özne** konumundaki ismi niteler.",
-          "Kısaltma yalnızca **aynı özne** ilişkisi net olduğunda kullanılır. İlgi zamiri **özne** rolündeyken etken **-ing** gelir; özne ile fiil arasındaki ilişki koparsa anlam bozulur (son bölüm).",
+          "Tam sıfat cümleciği: **\\The boy who is standing by the gate is my brother.\\** Kısaltma: **\\ilgi zamiri + to be\\** düşer, etken fiil **\\-ing\\** olur: **\\The boy standing by the gate is my brother.\\** Bu yapı **şu an** veya **genel** eylemi tanımlar.",
+          "Kalıp: **isim + V-ing + geri kalan cümle**. **\\People living in cities\\** ... **\\Anyone wanting more information\\** ... **\\The woman talking on the phone\\** ... Aktif sıfat cümlesi **özne** konumundaki ismi niteler.",
+          "Kısaltma yalnızca **aynı özne** ilişkisi net olduğunda kullanılır. İlgi zamiri **özne** rolündeyken etken **\\-ing\\** gelir; özne ile fiil arasındaki ilişki koparsa anlam bozulur (son bölüm).",
         ],
         examplesTitle: "Etken V-ing örnekleri",
         examplesLayout: "columns",
@@ -51,9 +53,9 @@ export const topicContent45: TopicContent = {
         title: "Edilgen: V3 kısaltması",
         titleEn: "Passive Reduction — past participle",
         paragraphs: [
-          "Edilgen sıfat cümleciği: **The book which was written in 1920** → **The book written in 1920**. **who/which/that + was/were** düşer; yalnızca **V3 (past participle)** kalır.",
-          "Bu yapı **edilgen anlam** taşır: kitap yazılmış, pencereler kırılmış, karar alınmış. **Being + V3** bazen süregelen edilgen için kullanılır: **The bridge being repaired** (nadir; çoğu zaman **under repair** gibi ifadeler tercih edilir).",
-          "**V3** sıfat gibi ismin hemen önünde durur: **items made in Turkey**, **a letter addressed to the manager**. Türkçede genelde sıfat fiil **-miş** hissi verir.",
+          "Edilgen sıfat cümleciği: **\\The book which was written in 1920\\** için **\\The book written in 1920\\**. **who veya which veya that + was veya were** düşer; yalnızca **V3 (past participle)** kalır.",
+          "Bu yapı **\\edilgen anlam\\** taşır: kitap yazılmış, pencereler kırılmış, karar alınmış. **Being + V3** bazen süregelen edilgen için kullanılır: **\\The bridge being repaired\\** (nadir; çoğu zaman **\\under repair\\** gibi ifadeler tercih edilir).",
+          "**\\V3\\** sıfat gibi ismin hemen önünde durur: **\\items made in Turkey\\**, **\\a letter addressed to the manager\\**. Türkçede genelde sıfat fiil **-miş** hissi verir.",
         ],
         examplesTitle: "Edilgen V3 örnekleri",
         examplesLayout: "columns",
@@ -91,9 +93,9 @@ export const topicContent45: TopicContent = {
         title: "who / which / that ne zaman düşer?",
         titleEn: "Dropping the Relative Pronoun",
         paragraphs: [
-          "İlgi zamiri **özne** ise **genelde kalır**: **The man who called you** → ~~The man called you~~ (yanlış; **called** farklı özneye bağlanır). **Özne** konumunda **who is → -ing** kısaltması kullan.",
-          "İlgi zamiri **nesne** ise **düşürülebilir**: **The book (that) I bought** = **The book I bought.** **The person (whom) we met** → **The person we met.** Bu «sıfat cümlecikli nesne» yapısıdır; **-ing/V3 kısaltması değildir**.",
-          "Tanımlayan (**defining**) cümleciklerde **that** hem insan hem nesne için kullanılır ve nesne olunca sık düşer. Tanımlamayan cümlelerde ilgi zamiri **düşürülmez**.",
+          "İlgi zamiri **özne** ise **genelde kalır**: **\\The man who called you\\** için ~~The man called you~~ (yanlış; **\\called\\** farklı özneye bağlanır). **Özne** konumunda **\\who is için -ing\\** kısaltması kullan.",
+          "İlgi zamiri **nesne** ise **düşürülebilir**: **\\The book (that) I bought\\** = **\\The book I bought.\\** **\\The person (whom) we met\\** için **\\The person we met.\\** Bu sıfat cümlecikli nesne yapısıdır; **-ing veya V3 kısaltması değildir**.",
+          "Tanımlayan (**\\defining\\**) cümleciklerde **\\that\\** hem insan hem nesne için kullanılır ve nesne olunca sık düşer. Tanımlamayan cümlelerde ilgi zamiri **düşürülmez**.",
         ],
         examplesTitle: "Özne vs nesne",
         examplesLayout: "columns",
@@ -132,9 +134,9 @@ export const topicContent45: TopicContent = {
         title: "first / last / only / superlative + to",
         titleEn: "Reduced Clauses with to-infinitive",
         paragraphs: [
-          "**the first, the last, the only, the next, the best/worst/highest** + **isim** + **to + V1** sıfat cümleciklerinin kısaltılmış biçimidir. Tam hali: **the only person who can help** → **the only person to help** / **to help us** (nesne bağlama göre).",
-          "Standart kalıp: **the first woman to win the prize**, **the last country to join**, **the only way to succeed**. **To** burada «eylemi yapan» anlamında sıfat cümlesinin yerini alır; **-ing** ile karıştırma.",
-          "Olumsuz: **the first not to agree**. **To be + V3** edilgen: **the first product to be launched online**. Bu yapı haber ve akademik metinlerde çok sık görülür.",
+          "**\\the first, the last, the only, the next, the best veya worst veya highest\\** + **isim** + **to + V1** sıfat cümleciklerinin kısaltılmış biçimidir. Tam hali: **\\the only person who can help\\** için **\\the only person to help\\** veya **\\to help us\\** (nesne bağlama göre).",
+          "Standart kalıp: **\\the first woman to win the prize\\**, **\\the last country to join\\**, **\\the only way to succeed\\**. **\\To\\** burada eylemi yapan anlamında sıfat cümlesinin yerini alır; **\\-ing\\** ile karıştırma.",
+          "Olumsuz: **\\the first not to agree\\**. **\\To be + V3\\** edilgen: **\\the first product to be launched online\\**. Bu yapı haber ve akademik metinlerde çok sık görülür.",
         ],
         examplesTitle: "to-infinitive kısaltma",
         examplesLayout: "columns",
@@ -172,9 +174,9 @@ export const topicContent45: TopicContent = {
         title: "Dangling participle uyarısı",
         titleEn: "Avoiding Dangling Participles",
         paragraphs: [
-          "**Dangling participle (sarkan ortaç)** hatası, **-ing/V3** ifadesinin öznesi ile ana cümlenin öznesinin **farklı** olduğu durumda oluşur. Yanlış: **Walking to school, the rain started.** (Yağmur yürümüyor.) Doğru: **Walking to school, I got wet** / **When I was walking...**",
-          "Kısaltmadan önce sor: **Kim yürüyor / kim yazılmış?** İsim öbeğindeki **-ing** hemen önceki ismin eylemini tanımlamalıdır. **Written in haste, the report contained errors.** (Rapor yazılmış — uyumlu.)",
-          "Yazıda netlik için bazen tam sıfat cümleciği veya **who/which** ile cümle kurmak daha güvenlidir. Konuşmada bağlam hatayı maskeler; sınav ve akademik yazıda özne uyumunu kontrol et.",
+          "**Dangling participle (sarkan ortaç)** hatası, **\\-ing veya V3\\** ifadesinin öznesi ile ana cümlenin öznesinin **farklı** olduğu durumda oluşur. Yanlış: **\\Walking to school, the rain started.\\** (Yağmur yürümüyor.) Doğru: **\\Walking to school, I got wet\\** veya **\\When I was walking ve benzeri\\**",
+          "Kısaltmadan önce sor: **Kim yürüyor veya kim yazılmış?** İsim öbeğindeki **\\-ing\\** hemen önceki ismin eylemini tanımlamalıdır. **\\Written in haste, the report contained errors.\\** (Rapor yazılmış; uyumlu.)",
+          "Yazıda netlik için bazen tam sıfat cümleciği veya **who veya which** ile cümle kurmak daha güvenlidir. Konuşmada bağlam hatayı maskeler; sınav ve akademik yazıda özne uyumunu kontrol et.",
         ],
         examplesTitle: "Doğru / yanlış",
         examplesLayout: "columns",
@@ -267,7 +269,8 @@ export const topicContent45: TopicContent = {
       id: "45-fb-3",
       subtopicId: "45-3",
       type: "fill_blank",
-      prompt: "The house _____ I grew up is still there. (nesne — opsiyonel ilgi zamiri)",
+      prompt:
+        "The house _____ I grew up is still there. (nesne — opsiyonel ilgi zamiri)",
       answer: "that",
       acceptedAnswers: ["which", ""],
       explanation: "Nesne konumunda that/which düşürülebilir.",
@@ -351,7 +354,8 @@ export const topicContent45: TopicContent = {
       id: "45-tf-5",
       subtopicId: "45-5",
       type: "true_false",
-      prompt: "Dangling participle ana ve yan cümle öznesi uyumsuzluğundan doğar.",
+      prompt:
+        "Dangling participle ana ve yan cümle öznesi uyumsuzluğundan doğar.",
       options: ["Doğru", "Yanlış"],
       correctIndex: 0,
       explanation: "Özne eşleşmesi şart.",

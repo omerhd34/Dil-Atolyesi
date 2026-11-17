@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent14: TopicContent = {
   topicId: "14",
   viewMinutes: 10,
+  quizIntro:
+    "Sorular sayılabilir ve sayılamayan isimlerle \\some, any, many, much, a lot of\\ seçimini test eder. İsim türüne önce bak.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent14: TopicContent = {
         title: "Sayılabilir ve Sayılamayan İsimler",
         titleEn: "Countable & Uncountable Nouns",
         paragraphs: [
-          "**Sayılabilir isimler (countable)** tek tek sayılabilir; **a/an** ve **çoğul** alırlar: **a book, two books**, **an egg, three eggs**. **Sayılamayan isimler (uncountable)** genelde tek biçimde kalır; **a/an** olmadan kullanılır: **water, rice, money, information, advice**.",
-          "Sayılamayanlar çoğul **-s** almaz: ~~waters~~ (bağlam özel değilse), ~~moneys~~. Miktar için **some water, a glass of water, a piece of advice** gibi ölçü birimleri kullanılır.",
-          "Bazı kelimeler her iki grupta da olabilir (bağlama göre): **coffee** (içecek, sayılamaz) vs **two coffees** (iki fincan kahve, sayılabilir). A1'de temel listeyi ezberlemek yeterlidir.",
+          "**Sayılabilir isimler (\\countable\\)** tek tek sayılabilir; **a/an** ve **çoğul** alırlar: **\\a book, two books\\**, **\\an egg, three eggs\\**. **Sayılamayan isimler (\\uncountable\\)** genelde tek biçimde kalır; **a/an** olmadan kullanılır: **\\water, rice, money, information, advice\\**.",
+          "Sayılamayanlar çoğul **-s** almaz: ~~waters~~ (bağlam özel değilse), ~~moneys~~. Miktar için **\\some water, a glass of water, a piece of advice\\** gibi ölçü birimleri kullanılır.",
+          "Bazı kelimeler her iki grupta da olabilir (bağlama göre): **\\coffee\\** (içecek, sayılamaz) vs **\\two coffees\\** (iki fincan kahve, sayılabilir). A1'de temel listeyi ezberlemek yeterlidir.",
         ],
         examplesTitle: "İsim türleri",
         examplesLayout: "columns",
@@ -35,9 +37,9 @@ export const topicContent14: TopicContent = {
         title: "some ve any",
         titleEn: "some and any",
         paragraphs: [
-          "**some** olumlu cümlelerde ve **kibar teklif / rica** sorularında kullanılır: **I have some friends.** **Would you like some tea?** **Can I have some water?**",
-          "**any** olumsuz ve genel sorularda yaygındır: **I don't have any money.** **Are there any apples?** **Do you have any questions?** Olumlu cümlede **any** = **herhangi bir** anlamına da gelebilir: **You can choose any colour.**",
-          "Sayılamayan isimlerle **some/any** doğrudan gelir (çoğul -s yok): **some rice, any bread**. Sayılabilir çoğulla: **some books, any cars**.",
+          "**\\some\\** olumlu cümlelerde ve **\\kibar teklif / rica\\** sorularında kullanılır: **\\I have some friends.\\** **\\Would you like some tea?\\** **\\Can I have some water?\\**",
+          "**\\any\\** olumsuz ve genel sorularda yaygındır: **\\I don't have any money.\\** **\\Are there any apples?\\** **\\Do you have any questions?\\** Olumlu cümlede **\\any\\** = **\\herhangi bir\\** anlamına da gelebilir: **\\You can choose any colour.\\**",
+          "Sayılamayan isimlerle **some/any** doğrudan gelir (çoğul -s yok): **\\some rice, any bread\\**. Sayılabilir çoğulla: **\\some books, any cars\\**.",
         ],
         examplesTitle: "some / any",
         examplesLayout: "columns",
@@ -68,8 +70,8 @@ export const topicContent14: TopicContent = {
         title: "many ve much",
         titleEn: "many and much",
         paragraphs: [
-          "**many** sayılabilir **çoğul** isimlerle: **many books, many people, many cars**. Soru ve olumsuzda sık: **How many chairs?** **There aren't many students.**",
-          "**much** sayılamayan isimlerle: **much water, much time, much homework**. Olumsuz ve soruda yaygın: **I don't drink much coffee.** **How much sugar?** Olumlu cümlede **much** tek başına az kullanılır; yerine **a lot of** tercih edilir: **I have a lot of work.**",
+          "**\\many\\** sayılabilir **çoğul** isimlerle: **\\many books, many people, many cars\\**. Soru ve olumsuzda sık: **\\How many chairs?\\** **\\There aren't many students.\\**",
+          "**\\much\\** sayılamayan isimlerle: **\\much water, much time, much homework\\**. Olumsuz ve soruda yaygın: **\\I don't drink much coffee.\\** **\\How much sugar?\\** Olumlu cümlede **\\much\\** tek başına az kullanılır; yerine **\\a lot of\\** tercih edilir: **\\I have a lot of work.\\**",
           "**How many + çoğul isim?** / **How much + sayılamayan?** — ikisi de miktar sorar; isim türüne dikkat.",
         ],
         examplesTitle: "many / much",
@@ -100,9 +102,9 @@ export const topicContent14: TopicContent = {
         title: "a lot of / lots of",
         titleEn: "a lot of / lots of",
         paragraphs: [
-          "**a lot of** (ve konuşmada **lots of**) hem sayılabilir hem sayılamayan isimlerle **olumlu** cümlelerde kullanılır: **a lot of books, a lot of water**. **Many** ve **much** yerine günlük dilde sık tercih edilir.",
-          "Cümle içi: **She has a lot of friends.** **We drink a lot of tea.** Olumsuzda da kullanılabilir ama **many/much** veya **not much/many** daha doğal olabilir: **I don't have a lot of time.**",
-          "**A lot** tek başına zarf olarak da gelir: **Thanks a lot.** (Çok teşekkürler.) Bu kullanım isimle karıştırma.",
+          "**\\a lot of\\** (ve konuşmada **\\lots of\\**) hem sayılabilir hem sayılamayan isimlerle **olumlu** cümlelerde kullanılır: **\\a lot of books, a lot of water\\**. **\\Many\\** ve **\\much\\** yerine günlük dilde sık tercih edilir.",
+          "Cümle içi: **\\She has a lot of friends.\\** **\\We drink a lot of tea.\\** Olumsuzda da kullanılabilir ama **many/much** veya **\\not much/many\\** daha doğal olabilir: **\\I don't have a lot of time.\\**",
+          "**\\A lot\\** tek başına zarf olarak da gelir: **\\Thanks a lot.\\** (Çok teşekkürler.) Bu kullanım isimle karıştırma.",
         ],
         examplesTitle: "a lot of",
         examplesLayout: "columns",
@@ -132,9 +134,9 @@ export const topicContent14: TopicContent = {
         title: "There is / are ile Miktar",
         titleEn: "there is/are & Quantifiers",
         paragraphs: [
-          "Miktar bildirirken **There is** sayılamayan veya tekil ile, **There are** çoğul sayılabilir ile kullanılır: **There is some juice.** **There are many bottles.** **Is there any bread?** **Are there any chairs?**",
-          "**A few** (birkaç) sayılabilir için, **a little** (biraz) sayılamayan için: **a few eggs, a little milk**. **Few / little** olumsuz ton taşır (az, yetersiz); A2'de detaylanır.",
-          "Özet: sayılabilir çoğul → **many, a few, some, a lot of**; sayılamayan → **much, a little, some, a lot of**; soru/olumsuz → **any**.",
+          "Miktar bildirirken **\\There is\\** sayılamayan veya tekil ile, **\\There are\\** çoğul sayılabilir ile kullanılır: **\\There is some juice.\\** **\\There are many bottles.\\** **\\Is there any bread?\\** **\\Are there any chairs?\\**",
+          "**\\A few\\** (birkaç) sayılabilir için, **\\a little\\** (\\biraz\\) sayılamayan için: **\\a few eggs, a little milk\\**. **\\Few / little\\** olumsuz ton taşır (\\az, yetersiz\\); A2'de detaylanır.",
+          "Özet: sayılabilir çoğul → **\\many, a few, some, a lot of\\**; sayılamayan → **\\much, a little, some, a lot of\\**; soru/olumsuz → **\\any\\**.",
         ],
         examplesTitle: "There is/are örnekleri",
         examplesLayout: "columns",

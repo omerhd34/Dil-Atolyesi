@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent20: TopicContent = {
   topicId: "20",
   viewMinutes: 9,
+  quizIntro:
+    "\\Would like\\ ile kibar sipariş ve teklif kalıplarına odaklan; isim türüne göre miktar ifadesini kontrol et.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent20: TopicContent = {
         title: "Will — Tahmin ve Anlık Karar",
         titleEn: "Will — Predictions & Spontaneous Decisions",
         paragraphs: [
-          "**Will** gelecekte olacağını düşündüğümüz olaylar ve **konuşma anında verilen kararlar** için kullanılır. Yapı: **will + V1 (yalın fiil)**. Tüm öznelerde **will** aynıdır: **I will call you.** **They will help.**",
-          "Tahminlerde **I think, probably, maybe** gibi ifadelerle birlikte görülür: **I think it will rain.** **She will probably arrive late.** Kanıta dayalı gözlem de olabilir: **That bag looks heavy. I will help you.** (ani karar)",
-          "Olumsuz: **won't (will not) + V1**. Soru: **Will + özne + V1?** **Will you be free tomorrow?** **Will** resmi yazıda ve söz vermelerde de sık kullanılır: **I will send the report.**",
+          "**\\Will\\** gelecekte olacağını düşündüğümüz olaylar ve **konuşma anında verilen kararlar** için kullanılır. Yapı: **will + V1 (yalın fiil)**. Tüm öznelerde **\\will\\** aynıdır: **\\I will call you.\\** **\\They will help.\\**",
+          "Tahminlerde **\\I think, probably, maybe\\** gibi ifadelerle birlikte görülür: **\\I think it will rain.\\** **\\She will probably arrive late.\\** Kanıta dayalı gözlem de olabilir: **\\That bag looks heavy. I will help you.\\** **\\ani karar\\**",
+          "Olumsuz: **won't (will not) + V1**. Soru: **Will + özne + V1?** **\\Will you be free tomorrow?\\** **\\Will\\** resmi yazıda ve söz vermelerde de sık kullanılır: **\\I will send the report.\\**",
         ],
         examplesTitle: "Will kullanımı",
         examplesLayout: "columns",
@@ -59,9 +61,9 @@ export const topicContent20: TopicContent = {
         title: "Be Going To — Niyet ve Plan",
         titleEn: "Be Going To — Intentions & Plans",
         paragraphs: [
-          "**Be going to + V1** önceden düşünülmüş **niyet, plan veya hazırlık** bildirir. Türkçede **-eceğim, planlıyorum** hissi taşır. Yapı: **am/is/are + going to + fiil**: **I am going to study tonight.**",
-          "Güçlü kanıtla desteklenen tahminlerde de **going to** kullanılır: **Look at those clouds. It is going to rain.** (yağmur belirtileri var). Bu, salt tahmin olan **will**den farklıdır: önce gözlem, sonra **going to**.",
-          "Olumsuz: **isn't / aren't going to**. Soru: **Are you going to travel?** Konuşmada **gonna** kısaltması duyulabilir; yazıda **going to** tercih edilir.",
+          "**\\Be going to + V1\\** önceden düşünülmüş **niyet, plan veya hazırlık** bildirir. Türkçede **-eceğim, planlıyorum** hissi taşır. Yapı: **am/is/are + going to + fiil**: **\\I am going to study tonight.\\**",
+          "Güçlü kanıtla desteklenen tahminlerde de **\\going to\\** kullanılır: **\\Look at those clouds. It is going to rain.\\** (yağmur belirtileri var). Bu, salt tahmin olan **\\will\\**den farklıdır: önce gözlem, sonra **\\going to\\**.",
+          "Olumsuz: **\\isn't / aren't going to\\**. Soru: **\\Are you going to travel?\\** Konuşmada **\\gonna\\** kısaltması duyulabilir; yazıda **\\going to\\** tercih edilir.",
         ],
         examplesTitle: "Going to",
         examplesLayout: "columns",
@@ -116,9 +118,9 @@ export const topicContent20: TopicContent = {
         title: "Present Continuous — Kesin Planlar",
         titleEn: "Present Continuous for Fixed Plans",
         paragraphs: [
-          "Yakın gelecekte **kesinleşmiş düzenlenmiş planlar** için **Present Continuous** kullanılır. Yapı: **am/is/are + V-ing**. **I am meeting Tom at six.** Burada eylem şu an olmuyor; **randevu / takvim planı** var.",
-          "Bu kullanım genelde **yakın gelecek** içindir: **We are flying to Izmir on Friday.** **She is starting a new job next month.** Zaman ifadesi çoğu zaman cümlede yer alır.",
-          "**Going to** daha çok kişisel niyet; **Present Continuous plan** takvime bağlı randevu gibidir. İkisi de geçmişten farklıdır; **will** ise çoğu zaman anlık veya belirsiz gelecektir.",
+          "Yakın gelecekte **kesinleşmiş düzenlenmiş planlar** için **\\Present Continuous\\** kullanılır. Yapı: **am/is/are + V-ing**. **\\I am meeting Tom at six.\\** Burada eylem şu an olmuyor; **randevu / takvim planı** var.",
+          "Bu kullanım genelde **yakın gelecek** içindir: **\\We are flying to Izmir on Friday.\\** **\\She is starting a new job next month.\\** Zaman ifadesi çoğu zaman cümlede yer alır.",
+          "**\\Going to\\** daha çok kişisel niyet; **\\Present Continuous plan\\** takvime bağlı randevu gibidir. İkisi de geçmişten farklıdır; **\\will\\** ise çoğu zaman anlık veya belirsiz gelecektir.",
         ],
         examplesTitle: "Plan için -ing",
         examplesLayout: "columns",
@@ -176,9 +178,9 @@ export const topicContent20: TopicContent = {
         title: "Will vs Going to vs Plan",
         titleEn: "Contrast & Practice",
         paragraphs: [
-          "**Will**: ani karar ve genel tahmin — **The phone is ringing. I will answer it.** **Going to**: önceden düşünülmüş plan veya güçlü kanıt — **I am going to start a diet.** **Present Continuous**: düzenlenmiş randevu — **I am having lunch with Sara on Tuesday.**",
-          "Aynı gelecek farklı kalıplarla ifade edilebilir; **niyet gücü** değişir: **I think I will study.** (şimdi karar verdim) vs **I am going to study tonight.** (plan zaten vardı).",
-          "Soru cevaplarken bağlama dikkat et: **What are your plans?** → **I am visiting my parents.** **Can you help?** → **Sure, I will help.** Alıştırmalarla bu üç yapıyı yan yana görmek seçimi kolaylaştırır.",
+          "**\\Will\\**: ani karar ve genel tahmin — **\\The phone is ringing. I will answer it.\\** **\\Going to\\**: önceden düşünülmüş plan veya güçlü kanıt — **\\I am going to start a diet.\\** **\\Present Continuous\\**: düzenlenmiş randevu — **\\I am having lunch with Sara on Tuesday.\\**",
+          "Aynı gelecek farklı kalıplarla ifade edilebilir; **niyet gücü** değişir: **\\I think I will study.\\** (şimdi karar verdim) vs **\\I am going to study tonight.\\** (plan zaten vardı).",
+          "Soru cevaplarken bağlama dikkat et: **\\What are your plans?\\** → **\\I am visiting my parents.\\** **\\Can you help?\\** → **\\Sure, I will help.\\** Alıştırmalarla bu üç yapıyı yan yana görmek seçimi kolaylaştırır.",
         ],
         examplesTitle: "Karşılaştırma",
         examplesLayout: "columns",

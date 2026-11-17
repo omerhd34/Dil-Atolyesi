@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent12: TopicContent = {
   topicId: "12",
   viewMinutes: 10,
+  quizIntro:
+    "Sorular \\am, is, are + V-ing\\ yapısı, yazım kuralları ve geniş zamanla karşılaştırmayı kapsar. \\Now\\ ve \\every day\\ ipuçlarına bak.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent12: TopicContent = {
         title: "Şimdiki Zaman Nedir?",
         titleEn: "What Is the Present Continuous?",
         paragraphs: [
-          "**Şimdiki zaman (Present Continuous)** şu anda, konuşma anında veya geçici olarak devam eden eylemleri anlatır. Kalıp: **özne + am / is / are + fiil-ing**. **I am eating.** **She is reading.** **They are waiting.**",
-          "Geniş zamandan farklı olarak **tek bir anı veya kısa süreli durumu** vurgular. **Listen!** **Look!** **now, at the moment, right now, today (bu gün)** gibi ifadelerle sık görülür. Geçici planlar için de kullanılır: **I am staying with friends this week.**",
-          "Türkçede **-iyor** ekine yakın bir his verir; ancak İngilizcede mutlaka **to be + -ing** birlikte kullanılır. Bu yapı **state verbs** (like, know, want gibi) ile genelde kullanılmaz — ayrımı ilerleyen bölümde göreceksin.",
+          "**Şimdiki zaman (\\Present Continuous\\)** şu anda, konuşma anında veya geçici olarak devam eden eylemleri anlatır. Kalıp: **özne + am / is / are + fiil-ing**. **\\I am eating.\\** **\\She is reading.\\** **\\They are waiting.\\**",
+          "Geniş zamandan farklı olarak **tek bir anı veya kısa süreli durumu** vurgular. **\\Listen!\\** **\\Look!\\** **now, at the moment, right now, today (bu gün)** gibi ifadelerle sık görülür. Geçici planlar için de kullanılır: **\\I am staying with friends this week.\\**",
+          "Türkçede **\\-iyor\\** ekine yakın bir his verir; ancak İngilizcede mutlaka **\\to be + -ing\\** birlikte kullanılır. Bu yapı **\\state verbs\\** (\\like, know, want gibi\\) ile genelde kullanılmaz — ayrımı ilerleyen bölümde göreceksin.",
         ],
         examplesTitle: "Şimdiki zaman örnekleri",
         examplesLayout: "columns",
@@ -50,9 +52,9 @@ export const topicContent12: TopicContent = {
         title: "-ing Yazımı",
         titleEn: "Spelling -ing Forms",
         paragraphs: [
-          "Çoğu fiile **-ing** doğrudan eklenir: **play → playing**, **read → reading**. Fiil **sessiz + e** ile bitiyorsa **e düşer**: **make → making**, **write → writing**, **dance → dancing**.",
-          "**Tek heceli** fiillerde son harf **ünsüz**, vurgu sonda ise harf **çoğalır**: **run → running**, **sit → sitting**, **stop → stopping**. **-ie** ile biten fiillerde **ie → y**: **lie → lying**, **die → dying**.",
-          "Yazımı yanlış yapmak okuma ve yazıda düşündürür; önce **e** kuralını, sonra **çift harf** kuralını pratik et. **go → going** (e yok, çift harf yok), **swim → swimming** (çift m).",
+          "Çoğu fiile **\\-ing\\** doğrudan eklenir: **\\play → playing\\**, **\\read → reading\\**. Fiil **\\sessiz + e\\** ile bitiyorsa **e düşer**: **\\make → making\\**, **\\write → writing\\**, **\\dance → dancing\\**.",
+          "**\\Tek heceli\\** fiillerde son harf **ünsüz**, vurgu sonda ise harf **çoğalır**: **\\run → running\\**, **\\sit → sitting\\**, **\\stop → stopping\\**. **\\-ie\\** ile biten fiillerde **\\ie → y\\**: **\\lie → lying\\**, **\\die → dying\\**.",
+          "Yazımı yanlış yapmak okuma ve yazıda düşündürür; önce **e** kuralını, sonra **çift harf** kuralını pratik et. **\\go → going\\** (e yok, çift harf yok), **\\swim → swimming\\** (çift m).",
         ],
         examplesTitle: "Yazım kuralları",
         examplesLayout: "columns",
@@ -75,9 +77,9 @@ export const topicContent12: TopicContent = {
         title: "Olumsuz ve Soru",
         titleEn: "Negative & Questions",
         paragraphs: [
-          "Olumsuz: **am/is/are + not + V-ing**. **I am not (I'm not) working.** **She is not (isn't) talking.** **They are not (aren't) listening.** Kısaltmalar günlük dilde çok yaygındır.",
-          "Soru: **Am/Is/Are + özne + V-ing?** **Are you listening?** **Is he coming?** Kısa cevap: **Yes, I am. / No, she isn't.** — tekrar **-ing** fiili kullanmazsın.",
-          "Wh- sorularında soru kelimesi başta gelir, sonra **am/is/are**: **What are you eating?** **Where is she going?** **Why are they laughing?**",
+          "Olumsuz: **am/is/are + not + V-ing**. **\\I am not (I'm not) working.\\** **\\She is not (isn't) talking.\\** **\\They are not (aren't) listening.\\** Kısaltmalar günlük dilde çok yaygındır.",
+          "Soru: **Am/Is/Are + özne + V-ing?** **\\Are you listening?\\** **\\Is he coming?\\** Kısa cevap: **\\Yes, I am. / No, she isn't.\\** — tekrar **\\-ing\\** fiili kullanmazsın.",
+          "Wh- sorularında soru kelimesi başta gelir, sonra **am/is/are**: **\\What are you eating?\\** **\\Where is she going?\\** **\\Why are they laughing?\\**",
         ],
         examplesTitle: "Olumsuz ve soru",
         examplesLayout: "columns",
@@ -100,9 +102,9 @@ export const topicContent12: TopicContent = {
         title: "Geniş Zaman ile Karşılaştırma",
         titleEn: "Present Continuous vs Present Simple",
         paragraphs: [
-          "**Geniş zaman**: alışkanlık, düzen, genel gerçek. **Şimdiki zaman**: şu an / geçici durum / bu dönemde. **I work in a bank.** (meslek) vs **I am working from home today.** (bugün geçici).",
-          "Bazı fiiller **durum (state)** fiilidir; şimdiki zamanda nadiren kullanılır: **know, understand, like, love, hate, want, need, believe, remember**. Doğal: **I like music.** Yanlış: ~~I am liking music.~~ **Düşün / be + ing** istisnası: **I am thinking about it.** (düşünme süreci).",
-          "Karşılaştırma egzersizlerinde zaman ifadesine bak: **every day** → geniş zaman; **now / at the moment** → şimdiki zaman. İkisi bir cümlede karşılaştırılabilir: **She usually walks, but today she is taking the bus.**",
+          "**Geniş zaman**: alışkanlık, düzen, genel gerçek. **Şimdiki zaman**: şu an / geçici durum / bu dönemde. **\\I work in a bank.\\** (\\meslek\\) vs **\\I am working from home today.\\** (bugün geçici).",
+          "Bazı fiiller **durum fiili (\\state verb\\)** dir; şimdiki zamanda nadiren kullanılır: **\\know, understand, like, love, hate, want, need, believe, remember\\**. Doğal: **\\I like music.\\** Yanlış: **\\I am liking music.\\** İstisna: **\\I am thinking about it.\\** düşünme sürecini anlatır.",
+          "Karşılaştırma egzersizlerinde zaman ifadesine bak: **\\every day\\** → geniş zaman; **\\now / at the moment\\** → şimdiki zaman. İkisi bir cümlede karşılaştırılabilir: **\\She usually walks, but today she is taking the bus.\\**",
         ],
         examplesTitle: "İki zaman yan yana",
         examplesLayout: "columns",
@@ -156,9 +158,9 @@ export const topicContent12: TopicContent = {
         title: "Yakın Gelecek Planları",
         titleEn: "Future Plans (Near Future)",
         paragraphs: [
-          "A1–A2 seviyesinde şimdiki zaman bazen **yakın gelecek planlar** için de kullanılır: **I am meeting John tomorrow.** **We are flying to Paris next week.** Burada kesin karar veya düzenlenmiş plan vardır.",
-          "Bu kullanımı **will** ile karıştırma: şimdiki zaman planı **zaten yapılmış** veya **belli** bir etkinlik için tercih edilir. **She is starting her new job on Monday.**",
-          "Zaman ifadeleri (**tomorrow, next week, tonight**) cümle sonunda veya başında olabilir. Anlam hâlâ “şimdiki zaman formu + gelecek zaman anlamı”dır; form **am/is/are + V-ing** kalır.",
+          "A1–A2 seviyesinde şimdiki zaman bazen **yakın gelecek planlar** için de kullanılır: **\\I am meeting John tomorrow.\\** **\\We are flying to Paris next week.\\** Burada kesin karar veya düzenlenmiş plan vardır.",
+          "Bu kullanımı **\\will\\** ile karıştırma: şimdiki zaman planı **zaten yapılmış** veya **\\belli\\** bir etkinlik için tercih edilir. **\\She is starting her new job on Monday.\\**",
+          "Zaman ifadeleri (\\**tomorrow, next week, tonight**\\) cümle sonunda veya başında olabilir. Anlam hâlâ “şimdiki zaman formu + gelecek zaman anlamı”dır; form **am/is/are + V-ing** kalır.",
         ],
         examplesTitle: "Plan örnekleri",
         examplesLayout: "columns",

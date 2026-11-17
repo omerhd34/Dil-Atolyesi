@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent7: TopicContent = {
   topicId: "7",
   viewMinutes: 8,
+  quizIntro:
+    "Alıştırma \\There is\\ ve \\There are\\ ile tekil–çoğul, olumlu–olumsuz ve soru kalıplarını ölçer. Hem isme hem yere göre fiil seç.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent7: TopicContent = {
         title: "There is ve There are",
         titleEn: "There is / There are",
         paragraphs: [
-          "İngilizcede bir yerde **bir şeyin varlığını** bildirmek için **there is** ve **there are** kullanılır; Türkçedeki **var** kalıbına yakın düşünülebilir. **There is** tekil isimle, **there are** çoğul isimle gelir.",
-          "Kalıp: **There is/are + (a/an) + isim + yer ifadesi**. Önce varlık, sonra yer söylenir: **There is a cat on the sofa.** **There are two chairs in the room.** **There** burada «orada» anlamı taşır; özne değildir.",
-          "Tekil–çoğul seçimi **hemen sonraki isme** bakarak yapılır: **There is a book and two pens** ifadesinde fiil tekil kalabilir (ilk isim tekil), ama A1 düzeyinde basit kural yeterlidir: **one thing → there is**, **more than one → there are**.",
+          "İngilizcede bir yerde **bir şeyin varlığını** bildirmek için **\\there is\\** ve **\\there are\\** kullanılır; Türkçedeki **\\var\\** kalıbına yakın düşünülebilir. **\\There is\\** tekil isimle, **\\there are\\** çoğul isimle gelir.",
+          "Kalıp: **There is/are + (a/an) + isim + yer ifadesi**. Önce varlık, sonra yer söylenir: **\\There is a cat on the sofa.\\** **\\There are two chairs in the room.\\** **\\There\\** burada yani **orada** anlamı taşır; özne değildir.",
+          "Tekil–çoğul seçimi **\\hemen sonraki isme\\** bakarak yapılır: **\\There is a book and two pens\\** ifadesinde fiil tekil kalabilir (\\ilk isim tekil\\), ama A1 düzeyinde basit kural yeterlidir: **\\one thing → there is\\**, **\\more than one → there are\\**.",
         ],
         examplesTitle: "Olumlu varlık bildirme",
         examplesLayout: "columns",
@@ -52,9 +54,9 @@ export const topicContent7: TopicContent = {
         title: "Olumsuz: isn't / aren't",
         titleEn: "There isn't / There aren't",
         paragraphs: [
-          "Olumsuz cümlede **is** → **is not / isn't**, **are** → **are not / aren't** olur. Kalıp: **There isn't + tekil isim** veya **There aren't + çoğul isim**.",
-          "**There isn't a pen in my bag.** = Çantamda kalem yok. **There aren't any chairs here.** = Burada sandalye yok. Olumsuzda çoğu zaman **any** kullanılır (bir sonraki bölümde pekiştiririz).",
-          "Kısaltmalar günlük konuşmada çok yaygındır: **there's not** (= there isn't) daha az kullanılır; A1'de **there isn't / there aren't** yeterlidir.",
+          "Olumsuz cümlede **\\is\\** → **\\is not / isn't\\**, **\\are\\** → **\\are not / aren't\\** olur. Kalıp: **There isn't + tekil isim** veya **There aren't + çoğul isim**.",
+          "**\\There isn't a pen in my bag.\\** = Çantamda kalem yok. **\\There aren't any chairs here.\\** = Burada sandalye yok. Olumsuzda çoğu zaman **\\any\\** kullanılır (bir sonraki bölümde pekiştiririz).",
+          "Kısaltmalar günlük konuşmada çok yaygındır: **\\there's not\\** (\\= there isn't\\) daha az kullanılır; A1'de **\\there isn't / there aren't\\** yeterlidir.",
         ],
         examplesTitle: "Olumsuz örnekler",
         examplesLayout: "columns",
@@ -89,9 +91,9 @@ export const topicContent7: TopicContent = {
         title: "Sorular ve Kısa Cevaplar",
         titleEn: "Questions & Short Answers",
         paragraphs: [
-          "Soru kurmak için **be** fiili **there**'ın önüne alınır: **Is there + tekil?** **Are there + çoğul?** Örnek: **Is there a bank near here?** **Are there any windows?**",
-          "Kısa cevaplar: **Yes, there is. / No, there isn't.** ve **Yes, there are. / No, there aren't.** Cevapta tamamlayıcıyı tekrar etmene gerek yoktur.",
-          "Varlık soruları yer ve eşya aramak için sık kullanılır: **Is there Wi‑Fi in the hotel?** **Are there lessons on Sunday?** Soru tonu cümle sonunda yükselir.",
+          "Soru kurmak için **\\be\\** fiili **\\there\\**'ın önüne alınır: **\\Is there + tekil?\\** **Are there + çoğul?** Örnek: **\\Is there a bank near here?\\** **\\Are there any windows?\\**",
+          "Kısa cevaplar: **\\Yes, there is. / No, there isn't.\\** ve **\\Yes, there are. / No, there aren't.\\** Cevapta tamamlayıcıyı tekrar etmene gerek yoktur.",
+          "Varlık soruları yer ve eşya aramak için sık kullanılır: **\\Is there Wi‑Fi in the hotel?\\** **\\Are there lessons on Sunday?\\** Soru tonu cümle sonunda yükselir.",
         ],
         examplesTitle: "Soru ve kısa cevaplar",
         examplesLayout: "columns",
@@ -132,9 +134,9 @@ export const topicContent7: TopicContent = {
         title: "a / an / some / any",
         titleEn: "a, an, some & any with there is/are",
         paragraphs: [
-          "Tekil sayılabilir isimlerde **a / an** kullanılır: **There is a dog.** Ünlü sesiyle başlayan isimlerde **an**: **There is an apple.** Çoğul veya sayılamayan isimlerde olumlu cümlede sık **some** görülür: **There are some chairs.**",
-          "**Any** genelde olumsuz ve sorularda gelir: **There aren't any tickets.** **Are there any questions?** Olumlu genel cümlelerde **some** daha doğaldır; **any** olumlu da olabilir ama A1'de kalıp ezberi yeterlidir.",
-          "**There is some water** (sayılamayan, olumlu) ile **There isn't any sugar** (olumsuz) çifti günlük İngilizcede sık karşılaşılır. Varlık + miktar birlikte düşünülür.",
+          "Tekil sayılabilir isimlerde **\\a / an\\** kullanılır: **\\There is a dog.\\** Ünlü sesiyle başlayan isimlerde **\\an\\**: **\\There is an apple.\\** Çoğul veya sayılamayan isimlerde olumlu cümlede sık **\\some\\** görülür: **\\There are some chairs.\\**",
+          "**\\Any\\** genelde olumsuz ve sorularda gelir: **\\There aren't any tickets.\\** **\\Are there any questions?\\** Olumlu genel cümlelerde **\\some\\** daha doğaldır; **\\any\\** olumlu da olabilir ama A1'de kalıp ezberi yeterlidir.",
+          "**\\There is some water\\** (sayılamayan, olumlu) ile **\\There isn't any sugar\\** (olumsuz) çifti günlük İngilizcede sık karşılaşılır. Varlık + miktar birlikte düşünülür.",
         ],
         examplesTitle: "a, an, some, any örnekleri",
         examplesLayout: "columns",

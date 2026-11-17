@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent37: TopicContent = {
   topicId: "37",
   viewMinutes: 10,
+  quizIntro:
+    "Dolaylı anlatımda **\\say\\** ve **\\tell\\** ayrımını, zaman kaymasını ve soru cümlelerinde **\\if\\** veya **\\whether\\** kullanımını hatırla.",
   lesson: {
     parts: [
       {
@@ -11,8 +13,8 @@ export const topicContent37: TopicContent = {
         titleEn: "What Is Reported Speech?",
         paragraphs: [
           '**Dolaylı anlatım (reported speech / indirect speech)** başkasının sözünü kendi cümlenle aktarmaktır. Doğrudan: **She said, "I am tired."** Dolaylı: **She said (that) she was tired.** Tırnak işareti kalkar; zamirler ve zamanlar çoğu zaman kayar.',
-          "Aktarım fiili (**said, told, asked**) geçmişteyse **zaman kayması (backshift)** uygulanır: **am/is → was**, **do → did**, **will → would**, **can → could**. Aktarım hâlâ geçerliyse kayma isteğe bağlıdır.",
-          "Bu derste **düz cümleler (statements)** ve **sorular (questions)**; bir sonraki aşamada emirler ve ileri fiiller gelir.",
+          "Aktarım fiili (**\\said, told, asked\\**) geçmişteyse **zaman kayması (\\backshift\\)** uygulanır: **\\am veya is için was\\**, **\\do için did\\**, **\\will için would\\**, **\\can için could\\**. Aktarım hâlâ geçerliyse kayma isteğe bağlıdır.",
+          "Bu derste **düz cümleler (\\statements\\)** ve **\\sorular (questions)\\**; bir sonraki aşamada emirler ve ileri fiiller gelir.",
         ],
         examplesTitle: "Doğrudan vs dolaylı",
         examplesLayout: "columns",
@@ -46,9 +48,9 @@ export const topicContent37: TopicContent = {
         title: "say ve tell",
         titleEn: "say vs tell",
         paragraphs: [
-          "**say** sonrasında **doğrudan kişi (nesne) gelmez**: **She said (that) she was busy.** Yanlış: ~~She said me~~. **say something to someone**: **He said hello to me.**",
-          "**tell** sonrasında **nesne zorunludur** (kime söylendiği): **She told me (that) she was busy.** **tell someone something**: **He told us the news.**",
-          "Sık kalıplar: **tell the truth, tell a story, tell someone about...** Soru aktarırken genelde **asked** kullanılır; **tell** nadiren soru için.",
+          "**\\say\\** sonrasında **doğrudan kişi (nesne) gelmez**: **\\She said (that) she was busy.\\** Yanlış: ~~She said me~~. **\\say something to someone\\**: **\\He said hello to me.\\**",
+          "**\\tell\\** sonrasında **\\nesne zorunludur\\** (kime söylendiği): **\\She told me (that) she was busy.\\** **\\tell someone something\\**: **\\He told us the news.\\**",
+          "Sık kalıplar: **\\tell the truth, tell a story, tell someone about ve benzeri\\** Soru aktarırken genelde **\\asked\\** kullanılır; **\\tell\\** nadiren soru için.",
         ],
         examplesTitle: "say / tell",
         examplesLayout: "columns",
@@ -85,9 +87,9 @@ export const topicContent37: TopicContent = {
         title: "Zaman Kayması (Backshift)",
         titleEn: "Tense Backshift",
         paragraphs: [
-          "Sık kaymalar: **Present Simple → Past Simple** (*I like coffee* → *he liked coffee*). **Present Continuous → Past Continuous**. **Past Simple → Past Perfect** (*I saw her* → *he said he had seen her*). **Present Perfect → Past Perfect**.",
-          "**will → would**, **can → could**, **may → might**, **must → had to** (zamanan bağlı). **am/is/are → was/were**.",
-          "Kayma **şart değil**: Aktarılan bilgi hâlâ doğruysa geniş zaman kalabilir: **He said he lives in Ankara.** (hâlâ orada yaşıyor) Sınavlarda genelde backshift beklenir.",
+          "Sık kaymalar: **\\Present Simple için Past Simple\\** (*\\I like coffee\\* için *\\he liked coffee\\*). **\\Present Continuous için Past Continuous\\**. **\\Past Simple için Past Perfect\\** (\\*I saw her* için *he said he had seen her*\\). **\\Present Perfect için Past Perfect\\**.",
+          "**\\will için would\\**, **\\can için could\\**, **\\may için might\\**, **\\must için had to\\** (zamanan bağlı). **\\am veya is veya are için was veya were\\**.",
+          "Kayma **şart değil**: Aktarılan bilgi hâlâ doğruysa geniş zaman kalabilir: **\\He said he lives in Ankara.\\** (hâlâ orada yaşıyor) Sınavlarda genelde backshift beklenir.",
         ],
         examplesTitle: "Backshift tablosu",
         examplesLayout: "columns",
@@ -111,9 +113,9 @@ export const topicContent37: TopicContent = {
         title: "Düz Cümleleri Aktarma",
         titleEn: "Reporting Statements",
         paragraphs: [
-          "Kalıp: **Özne + said/told + (that) + dolaylı cümle**. **That** çoğu zaman düşürülebilir: **He said (that) he was tired.**",
-          "**Zaman ve yer zarfları** değişir: **today → that day**, **tomorrow → the next day**, **here → there**, **this → that**, **now → then**, **ago → before**.",
-          "**Tell** ile: **She told me (that)...** **Say** ile yalnızca içerik: **She said (that)...**",
+          "Kalıp: **Özne + said veya told + (that) + dolaylı cümle**. **\\That\\** çoğu zaman düşürülebilir: **\\He said (that) he was tired.\\**",
+          "**Zaman ve yer zarfları** değişir: **\\today için that day\\**, **\\tomorrow için the next day\\**, **\\here için there\\**, **\\this için that\\**, **\\now için then\\**, **\\ago için before\\**.",
+          "**\\Tell\\** ile: **\\She told me (that) ve benzeri\\** **\\Say\\** ile yalnızca içerik: **\\She said (that) ve benzeri\\**",
         ],
         examplesTitle: "Statement örnekleri",
         examplesLayout: "columns",
@@ -153,7 +155,7 @@ export const topicContent37: TopicContent = {
         paragraphs: [
           '**Yes/No soruları:** Soru kelime düzeni kalkar; normal cümle sırası + **if** veya **whether**: **"Are you ready?"** → **He asked if I was ready.** / **He asked whether I was ready.**',
           '**Wh- soruları:** Soru kelimesi (**what, where, when, why, how**) kalır; yine düz cümle sırası: **"Where do you live?"** → **She asked where I lived.** **Asla** ~~asked where did I live~~.',
-          "**Asked + object** yaygındır: **He asked me if...** **She asked him where...** Aktarım fiili **asked**; **said** soru için kullanılmaz.",
+          "**\\Asked + object\\** yaygındır: **\\He asked me if ve benzeri\\** **\\She asked him where ve benzeri\\** Aktarım fiili **\\asked\\**; **\\said\\** soru için kullanılmaz.",
         ],
         examplesTitle: "Soru aktarımı",
         examplesLayout: "columns",

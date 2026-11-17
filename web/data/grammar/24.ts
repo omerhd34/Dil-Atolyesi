@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent24: TopicContent = {
   topicId: "24",
   viewMinutes: 9,
+  quizIntro:
+    "Durum zarfları: \\-ly\\ türevleri, \\well\\ istisnası ve zarfın cümle içindeki yeri ölçülür.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent24: TopicContent = {
         title: "Yapı: some-, any-, no-, every-",
         titleEn: "Forming Indefinite Pronouns",
         paragraphs: [
-          "Belgisiz zamirler **some-, any-, no-, every-** ön ekleri ile **-one / -body**, **-thing**, **-where** son eklerinden oluşur. Kişi: **someone / somebody**; şey: **something**; yer: **somewhere**.",
-          "**-one** ve **-body** aynı anlamdadır; **someone** biraz daha resmi yazıda tercih edilir. **-thing** nesneleri, **-where** yerleri belirsiz şekilde ifade eder.",
-          "Tabloyu ezberlemek yerine örnek cümlelerle kullan: **Someone called you.** **I need something to drink.** **Let's go somewhere quiet.**",
+          "Belgisiz zamirler **\\some-, any-, no-, every-\\** ön ekleri ile **\\-one / -body\\**, **\\-thing\\**, **\\-where\\** son eklerinden oluşur. Kişi: **\\someone / somebody\\**; şey: **\\something\\**; yer: **\\somewhere\\**.",
+          "**\\-one\\** ve **\\-body\\** aynı anlamdadır; **\\someone\\** biraz daha resmi yazıda tercih edilir. **\\-thing\\** nesneleri, **\\-where\\** yerleri belirsiz şekilde ifade eder.",
+          "Tabloyu ezberlemek yerine örnek cümlelerle kullan: **\\Someone called you.\\** **\\I need something to drink.\\** **\\Let's go somewhere quiet.\\**",
         ],
         examplesTitle: "Önek + ek tablosu",
         examplesLayout: "columns",
@@ -49,9 +51,9 @@ export const topicContent24: TopicContent = {
         title: "Olumlu Cümlelerde some-",
         titleEn: "Some- in Affirmatives",
         paragraphs: [
-          "Olumlu bildirim cümlelerinde genelde **some-** kullanılır: **I have something for you.** **She met someone interesting.** Özel teklif veya rica içeren sorularda da **some-** görülebilir: **Would you like something to drink?**",
-          "**Some-** Türkçede «birisi, bir şey, bir yer» gibi belirsiz ama var olan bir şeyi işaret eder. Kesin isim yoktur; bağlam ne olduğunu açıklar.",
-          "Yazım: **no one** ve **nobody** ikisi de doğru; **no one** iki kelime olarak da yaygındır. **Everyone** tek kelimedir.",
+          "Olumlu bildirim cümlelerinde genelde **\\some-\\** kullanılır: **\\I have something for you.\\** **\\She met someone interesting.\\** Özel teklif veya rica içeren sorularda da **\\some-\\** görülebilir: **\\Would you like something to drink?\\**",
+          "**\\Some-\\** Türkçede birisi, bir şey, bir yer gibi belirsiz ama var olan bir şeyi işaret eder. Kesin isim yoktur; bağlam ne olduğunu açıklar.",
+          "Yazım: **\\no one\\** ve **\\nobody\\** ikisi de doğru; **\\no one\\** iki kelime olarak da yaygındır. **\\Everyone\\** tek kelimedir.",
         ],
         examplesTitle: "Olumlu örnekler",
         examplesLayout: "columns",
@@ -78,9 +80,9 @@ export const topicContent24: TopicContent = {
         title: "Olumsuz ve Sorularda any-",
         titleEn: "Any- in Negatives & Questions",
         paragraphs: [
-          "Genel sorularda ve olumsuzlarda **any-** kullanılır: **Is anyone home?** **I don't know anyone here.** **We didn't go anywhere.**",
-          "Olumsuzda **some-** değil **any-** (veya **no-**) tercih edilir. **I don't have anything.** doğrudur; **I don't have something** bu bağlamda yanlıştır.",
-          "**Any** ayrıca «hangi ... olursa» anlamında olumlu cümlede de bulunabilir: **You can choose any seat.** Bu B1’e yakın bir kullanım; A2’de temel kural soru/olumsuz = **any-**.",
+          "Genel sorularda ve olumsuzlarda **\\any-\\** kullanılır: **\\Is anyone home?\\** **\\I don't know anyone here.\\** **\\We didn't go anywhere.\\**",
+          "Olumsuzda **\\some-\\** değil **\\any-\\** veya **\\no-\\** tercih edilir. **\\I don't have anything.\\** doğrudur; **\\I don't have something\\** bu bağlamda yanlıştır.",
+          "**\\Any\\** ayrıca hangi ... olursa anlamında olumlu cümlede de bulunabilir: **\\You can choose any seat.\\** Bu B1’e yakın bir kullanım; A2’de temel kural soru/olumsuz = **\\any-\\**.",
         ],
         examplesTitle: "Any- örnekleri",
         examplesLayout: "columns",
@@ -107,9 +109,9 @@ export const topicContent24: TopicContent = {
         title: "No- ve Every-",
         titleEn: "No- and Every-",
         paragraphs: [
-          "**No- / nobody / nothing / nowhere** olumlu bir cümle yazılır ama anlam olumsuzdur: **Nobody came.** = Kimse gelmedi. **I have nothing to say.** = Söyleyecek hiçbir şeyim yok.",
-          "**Every-** tamamını kapsar: **everyone** (herkes), **everything** (her şey), **everywhere** (her yer). **Every** ile **everyone** karıştırma: **every student** (her öğrenci — sıfat) vs **everyone** (zamir).",
-          "Aynı cümlede çift olumsuzluk yapma: **I don't know nobody** yanlıştır; **I don't know anybody** veya **I know nobody** doğrudur.",
+          "**\\No- / nobody / nothing / nowhere\\** olumlu bir cümle yazılır ama anlam olumsuzdur: **\\Nobody came.\\** = Kimse gelmedi. **\\I have nothing to say.\\** = Söyleyecek hiçbir şeyim yok.",
+          "**\\Every-\\** tamamını kapsar: **\\everyone\\** **\\herkes\\**, **\\everything\\** (her şey), **\\everywhere\\** **\\her yer\\**. **\\Every\\** ile **\\everyone\\** karıştırma: **\\every student\\** (her öğrenci — sıfat) vs **\\everyone\\** (zamir).",
+          "Aynı cümlede çift olumsuzluk yapma: **\\I don't know nobody\\** yanlıştır; **\\I don't know anybody\\** veya **\\I know nobody\\** doğrudur.",
         ],
         examplesTitle: "No- ve every-",
         examplesLayout: "columns",
@@ -129,9 +131,9 @@ export const topicContent24: TopicContent = {
         title: "Tekil Fiil ve İpuçları",
         titleEn: "Singular Verbs",
         paragraphs: [
-          "**Someone, everyone, nobody, everything** vb. zamirler her zaman **tekil fiil** alır: **Everyone is here.** (değil *are*) **Something was wrong.** **Nobody wants** to leave.",
-          "«Onlar» gibi çoğul düşünme; gramer tekil sayılır. **Everybody has** finished. **Everything looks** good.",
-          "Pratik: Cümleyi kurduktan sonra fiilin **is / has / was** mı yoksa **are / have / were** mu olduğuna bak; belgisiz zamirlerde neredeyse her zaman tekil çekim doğrudur.",
+          "**\\Someone, everyone, nobody, everything\\** vb. zamirler her zaman **tekil fiil** alır: **\\Everyone is here.\\** (değil *\\are\\*) **\\Something was wrong.\\** **\\Nobody wants\\** to leave.",
+          "Onlar gibi çoğul düşünme; gramer tekil sayılır. **\\Everybody has\\** finished. **\\Everything looks\\** good.",
+          "Pratik: Cümleyi kurduktan sonra fiilin **\\is / has / was\\** mı yoksa **\\are / have / were\\** mu olduğuna bak; belgisiz zamirlerde neredeyse her zaman tekil çekim doğrudur.",
         ],
         examplesTitle: "Tekil fiil örnekleri",
         examplesLayout: "columns",

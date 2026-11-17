@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent53: TopicContent = {
   topicId: "53",
   viewMinutes: 10,
+  quizIntro:
+    "Eksiltme, **\\so / not\\** ve **\\one / ones\\** kalıplarını pekiştiren sorular seni bekliyor. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent53: TopicContent = {
         title: "Eksiltme (Ellipsis)",
         titleEn: "Ellipsis",
         paragraphs: [
-          "**Ellipsis**, bağlam zaten net olduğunda tekrarlanması gereksiz sözcükleri düşürerek metni akıcı ve ekonomik kılar. Özne, yardımcı fiil veya tamamlayıcı ögeyi çıkarmak anlamı bozmaz; okur veya dinleyici önceki cümleden tamamlar.",
-          "Koordinasyon içinde en sık görülen biçim **gapping**tir: ortak öge bir kez söylenir, ikinci yan cümlede boşluk bırakılır. **She ordered tea and he coffee.** (= he ordered coffee) Günlük konuşmada **I can swim and she can too** yerine yardımcı fiil tekrarı da eksiltilir.",
-          "Soru ve yanıt turlarında **sluicing** yaygındır: tüm bir yan cümle düşer, yalnızca **wh-** ögesi kalır. **Someone called, but I do not know who.** (= who called) C1 metinlerinde bu yapılar hem yazılı hem sözlü tutarlılığı güçlendirir.",
+          "**\\Ellipsis\\**, bağlam zaten net olduğunda tekrarlanması gereksiz sözcükleri düşürerek metni akıcı ve ekonomik kılar. Özne, yardımcı fiil veya tamamlayıcı ögeyi çıkarmak anlamı bozmaz; okur veya dinleyici önceki cümleden tamamlar.",
+          "Koordinasyon içinde en sık görülen biçim **\\gapping\\**tir: ortak öge bir kez söylenir, ikinci yan cümlede boşluk bırakılır. **\\She ordered tea and he coffee.\\** **\\= he ordered coffee\\** Günlük konuşmada **\\I can swim and she can too\\** yerine yardımcı fiil tekrarı da eksiltilir.",
+          "Soru ve yanıt turlarında **\\sluicing\\** yaygındır: tüm bir yan cümle düşer, yalnızca **\\wh-\\** ögesi kalır. **\\Someone called, but I do not know who.\\** **\\= who called\\** C1 metinlerinde bu yapılar hem yazılı hem sözlü tutarlılığı güçlendirir.",
         ],
         examplesTitle: "Eksiltme örnekleri",
         examplesLayout: "columns",
@@ -56,9 +58,9 @@ export const topicContent53: TopicContent = {
         title: "So ve Not ile Yerine Koyma",
         titleEn: "So / Not Substitution",
         paragraphs: [
-          "**So** ve **not**, önceki bir yan cümleyi veya tam bir düşünceyi yeniden yazmadan özetler. **I think so.** (= I think that is true) **I hope not.** (= I hope that will not happen) Bu kalıplar özellikle kısa yanıtlarda ve diyalogda doğallık katar.",
-          "Olumlu yanıtta **so** kullanılır; olumsuzda **not** doğrudan gelir, **so not** değil. **Are they coming? — I believe so. / I believe not.** (veya **I do not believe so.**) Bazı fiillerde (**say, tell, appear**) yalnızca **so** yaygındır; **not** için tam cümle tercih edilir.",
-          "**So do I / Nor do I** yapıları da yerine koymanın devamıdır: **She loves opera, and so do I.** **He never complained, nor did his colleagues.**",
+          "**\\So\\** ve **\\not\\**, önceki bir yan cümleyi veya tam bir düşünceyi yeniden yazmadan özetler. **\\I think so.\\** **\\= I think that is true\\** **\\I hope not.\\** **\\= I hope that will not happen\\** Bu kalıplar özellikle kısa yanıtlarda ve diyalogda doğallık katar.",
+          "Olumlu yanıtta **\\so\\** kullanılır; olumsuzda **\\not\\** doğrudan gelir, **\\so not\\** değil. Örnek: **\\Are they coming? — I believe so. / I believe not.\\** Olumsuzda bazen tam cümle de kurulur: **\\I do not believe so.\\** **\\say, tell, appear\\** gibi fiillerde yalnızca **\\so\\** yaygındır; **\\not\\** için tam cümle tercih edilir.",
+          "**\\So do I / Nor do I\\** yapıları da yerine koymanın devamıdır: **\\She loves opera, and so do I.\\** **\\He never complained, nor did his colleagues.\\**",
         ],
         examplesTitle: "So / not kalıpları",
         examplesLayout: "columns",
@@ -98,9 +100,9 @@ export const topicContent53: TopicContent = {
         title: "One, Ones ve Do So",
         titleEn: "One / Ones & Do So",
         paragraphs: [
-          "Tekrarlanan sayılabilir isimlerin yerine **one** (tekil) ve **ones** (çoğul) kullanılır. **I need a pen. Do you have one?** **These shoes are cheaper than the ones in the window.** Sıfat varsa **one** öncesine gelir: **the red one, the expensive ones**.",
-          "**Do so** resmi yazıda bir eylemi yerine koyar: **The board approved the plan and did so unanimously.** Günlük dilde çoğu zaman **do it** tercih edilir; akademik metinde **do so** daha nötr ve kesin bir ton verir.",
-          "**Such** ve **so** ile birleşen kalıplar da substitution ailesindendir: **If you need help, do so immediately.** Burada **do so** = seek help immediately.",
+          "Tekrarlanan sayılabilir isimlerin yerine **\\one\\** (tekil) ve **\\ones\\** (çoğul) kullanılır. **\\I need a pen. Do you have one?\\** **\\These shoes are cheaper than the ones in the window.\\** Sıfat varsa **\\one\\** öncesine gelir: **\\the red one, the expensive ones\\**.",
+          "**\\Do so\\** resmi yazıda bir eylemi yerine koyar: **\\The board approved the plan and did so unanimously.\\** Günlük dilde çoğu zaman **\\do it\\** tercih edilir; akademik metinde **\\do so\\** daha nötr ve kesin bir ton verir.",
+          "**\\Such\\** ve **\\so\\** ile birleşen kalıplar da substitution ailesindendir: **\\If you need help, do so immediately.\\** Burada **\\do so\\** = seek help immediately.",
         ],
         examplesTitle: "One / do so",
         examplesLayout: "columns",
@@ -139,9 +141,9 @@ export const topicContent53: TopicContent = {
         title: "İleri Düzey Söylem Belirleyicileri",
         titleEn: "Advanced Discourse Markers",
         paragraphs: [
-          "Söylem belirleyicileri, cümleler ve paragraflar arasında mantıksal ilişkiyi işaret eder. C1 düzeyinde **notwithstanding**, **nonetheless**, **albeit**, **hence** ve **thereby** gibi bağlaçlar hem yazılı hem kurumsal İngilizcede sık görülür.",
-          "**Notwithstanding** (+ isim/isim öbeği veya **-ing**) «-e rağmen» anlamında; çoğu zaman cümle başında: **Notwithstanding the delays, we met the deadline.** **Albeit** «her ne kadar» anlamında, kısa bir ödünleme ifade eder: **The plan succeeded, albeit at great cost.**",
-          "**Hence** sonuç, **thereby** ise eylemin sonucu olarak ortaya çıkan durumu bağlar: **The data were incomplete; hence the revision.** **They streamlined the process, thereby cutting costs.**",
+          "Söylem belirleyicileri, cümleler ve paragraflar arasında mantıksal ilişkiyi işaret eder. C1 düzeyinde **\\notwithstanding\\**, **\\nonetheless\\**, **\\albeit\\**, **\\hence\\** ve **\\thereby\\** gibi bağlaçlar hem yazılı hem kurumsal İngilizcede sık görülür.",
+          "**\\Notwithstanding\\** (+ isim/isim öbeği veya **\\-ing\\**) **-e rağmen** anlamında; çoğu zaman cümle başında: **\\Notwithstanding the delays, we met the deadline.\\** **\\Albeit\\** **her ne kadar** anlamında, kısa bir ödünleme ifade eder: **\\The plan succeeded, albeit at great cost.\\**",
+          "**\\Hence\\** sonuç, **\\thereby\\** ise eylemin sonucu olarak ortaya çıkan durumu bağlar: **\\The data were incomplete; hence the revision.\\** **\\They streamlined the process, thereby cutting costs.\\**",
         ],
         examplesTitle: "Belirleyici örnekleri",
         examplesLayout: "columns",
@@ -180,8 +182,8 @@ export const topicContent53: TopicContent = {
         titleEn: "Cohesion in Text & Dialogue",
         paragraphs: [
           "Eksiltme ve yerine koyma bir arada kullanıldığında metin tekrardan arınır ve okuyucu akışta kalır. Kötü ellipsis bağlam belirsizse anlamı bulanıklaştırır; her düşürülen ögenin önceki cümleden kolayca çıkarılabildiğinden emin ol.",
-          "Resmi yazıda **do so** ve **notwithstanding**; günlük diyalogda **so / not** ve **one** daha doğaldır. Aynı paragrafta hem konuşma diline yakın hem akademik işaretler karıştırıldığında ton tutarsız görünebilir.",
-          "Pratik strateji: Taslağı yaz, gereksiz tekrarları **one / so / do so** ile değiştir, ardından bağlaçları (**hence, thereby**) ile sonuçları netleştir. Her cümleyi tek başına okuyarak eksiltmenin anlamı koruduğunu kontrol et.",
+          "Resmi yazıda **\\do so\\** ve **\\notwithstanding\\**; günlük diyalogda **\\so / not\\** ve **\\one\\** daha doğaldır. Aynı paragrafta hem konuşma diline yakın hem akademik işaretler karıştırıldığında ton tutarsız görünebilir.",
+          "Pratik strateji: Taslağı yaz, gereksiz tekrarları **\\one / so / do so\\** ile değiştir, ardından bağlaçları (**\\hence, thereby\\**) ile sonuçları netleştir. Her cümleyi tek başına okuyarak eksiltmenin anlamı koruduğunu kontrol et.",
         ],
         examplesTitle: "Bütünleşik örnek",
         examplesLayout: "list",

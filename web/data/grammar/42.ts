@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent42: TopicContent = {
   topicId: "42",
   viewMinutes: 9,
+  quizIntro:
+    "**\\I wish\\** ve **\\If only\\** ile şimdiki gerçek dışı, geçmiş pişmanlık ve başkasının davranışı için doğru zamanı seç; **\\wish I would\\** tuzaklarına dikkat et.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent42: TopicContent = {
         title: "wish + Past Simple (şimdiki gerçek dışı)",
         titleEn: "wish + Past Simple — Present Unreal",
         paragraphs: [
-          "**I wish** ve güçlü vurgulu **If only** «keşke» anlamı taşır. **Şimdiki** bir durumun farklı olmasını istediğinde ardından **Past Simple** gelir; bu **tip 2** koşulla aynı «gerçek dışı şimdi» mantığıdır.",
-          "Kalıp: **I wish + özne + Past Simple**. **Be** fiilinde tüm özneler için **were** tercih edilir (özellikle yazı dilinde): **I wish I were taller.** Konuşmada *was* duyulabilir ama sınavda **were** güvenlidir.",
-          "Olumsuzluk past simple ile kurulur: **I wish I didn't have to work tomorrow.** **I wish** ile **would** kendi isteğimiz için kullanılmaz (aşağıdaki bölüme bak); şimdiki durum için **Past Simple** yeterlidir.",
+          "**\\I wish\\** ve güçlü vurgulu **\\If only\\** keşke anlamı taşır. **Şimdiki** bir durumun farklı olmasını istediğinde ardından **\\Past Simple\\** gelir; bu **\\tip 2\\** koşulla aynı gerçek dışı şimdi mantığıdır.",
+          "Kalıp: **I wish + özne + Past Simple**. **\\Be\\** fiilinde tüm özneler için **\\were\\** tercih edilir (özellikle yazı dilinde): **\\I wish I were taller.\\** Konuşmada *\\was\\* duyulabilir ama sınavda **\\were\\** güvenlidir.",
+          "Olumsuzluk past simple ile kurulur: **\\I wish I didn't have to work tomorrow.\\** **\\I wish\\** ile **\\would\\** kendi isteğimiz için kullanılmaz (aşağıdaki bölüme bak); şimdiki durum için **\\Past Simple\\** yeterlidir.",
         ],
         examplesTitle: "Şimdiki dilek",
         examplesLayout: "columns",
@@ -44,9 +46,9 @@ export const topicContent42: TopicContent = {
         title: "wish + Past Perfect (geçmiş pişmanlık)",
         titleEn: "wish + Past Perfect",
         paragraphs: [
-          "Geçmişte yapılan veya yapılmayan bir şey için **pişmanlık** anlatırken **I wish + Past Perfect (had + V3)** kullanılır. Bu yapı **third conditional** ile yakın anlamlıdır fakat **if** olmadan doğrudan duygu vurgular.",
-          "**I wish I hadn't said that.** = Keşke bunu söylemeseydim. **If only I had listened!** aynı zamanı kullanır ve daha dramatik ton taşır.",
-          "Soru ve olumsuz: **Do you wish you had gone?** / **I wish I hadn't spent so much.** Geçmişe dönük dilekte **would** kullanılmaz; zaman **had V3**'te kalır.",
+          "Geçmişte yapılan veya yapılmayan bir şey için **pişmanlık** anlatırken **\\I wish + Past Perfect (had + V3)\\** kullanılır. Bu yapı **\\third conditional\\** ile yakın anlamlıdır fakat **\\if\\** olmadan doğrudan duygu vurgular.",
+          "**\\I wish I hadn't said that.\\** = Keşke bunu söylemeseydim. **\\If only I had listened!\\** aynı zamanı kullanır ve daha dramatik ton taşır.",
+          "Soru ve olumsuz: **\\Do you wish you had gone?\\** veya **\\I wish I hadn't spent so much.\\** Geçmişe dönük dilekte **\\would\\** kullanılmaz; zaman **\\had V3\\**'te kalır.",
         ],
         examplesTitle: "Geçmiş pişmanlık",
         examplesLayout: "columns",
@@ -76,9 +78,9 @@ export const topicContent42: TopicContent = {
         title: "wish + would (başkasının davranışı)",
         titleEn: "wish + would — Others' Behaviour",
         paragraphs: [
-          "Başka bir kişinin veya durumun **değişmesini** istediğinde — özellikle can sıkıcı, tekrarlayan davranışlar — **I wish + özne + would + V1** kullanılır. **I wish you would stop interrupting.**",
-          "**Kritik kural:** **I wish I would…** kendi eylemimiz için **yanlıştır**. Kendi durumumuz için Past Simple veya yapısal değişiklik gerekir: **I wish I could drive** (yetenek), **I wish I knew** (bilgi). **Would** burada «senin yapmanı istiyorum» anlamındadır.",
-          "**It** ile doğa / durum: **I wish it would stop raining.** Hava veya makine gibi «iradesi olmayan» özne kabul edilir. **If only** de **would** ile kullanılabilir: **If only he would listen!**",
+          "Başka bir kişinin veya durumun **değişmesini** istediğinde; özellikle can sıkıcı, tekrarlayan davranışlar; **I wish + özne + would + V1** kullanılır. **\\I wish you would stop interrupting.\\**",
+          "**Kritik kural:** **\\I wish I would\\** ile kendi eylemini anlatmak **yanlıştır**. Kendi durumun için **\\Past Simple\\** veya yapı değişikliği gerekir: **\\I wish I could drive\\** yetenek, **\\I wish I knew\\** bilgi içindir. **\\Would\\** burada başkasının yapmasını istediğini gösterir.",
+          "**\\It\\** ile doğa veya durum: **\\I wish it would stop raining.\\** Hava veya makine gibi iradesi olmayan özne kabul edilir. **\\If only\\** de **\\would\\** ile kullanılabilir: **\\If only he would listen!\\**",
         ],
         examplesTitle: "would ile dilek",
         examplesLayout: "columns",
@@ -108,9 +110,9 @@ export const topicContent42: TopicContent = {
         title: "If only",
         titleEn: "If only",
         paragraphs: [
-          "**If only** **wish** ile aynı üç zaman yapısını kullanır; ton daha **güçlü**, duygusal veya hayıflanma vurguludur. Cümle başında veya sonunda olabilir.",
-          "Şimdi: **If only I had a car.** Geçmiş: **If only I hadn't been late.** Davranış: **If only you would help!** Virgül genelde başta kullanıldığında gelir: **If only I knew, I would tell you.** (burada ikinci kısım koşul cümlesi gibi genişletilmiştir).",
-          "Konuşmada tek başına **If only!** veya **If only I had…** eksiltilmiş cümleler yaygındır. Yazıda tam cümle tercih edilir.",
+          "**\\If only\\** **\\wish\\** ile aynı üç zaman yapısını kullanır; ton daha **güçlü**, duygusal veya hayıflanma vurguludur. Cümle başında veya sonunda olabilir.",
+          "Şimdi: **\\If only I had a car.\\** Geçmiş: **\\If only I hadn't been late.\\** Davranış: **\\If only you would help!\\** Virgül genelde başta kullanıldığında gelir: **\\If only I knew, I would tell you.\\** (burada ikinci kısım koşul cümlesi gibi genişletilmiştir).",
+          "Konuşmada tek başına **\\If only!\\** veya **\\If only I had\\** ile başlayan kısa cümleler sık duyulur. Yazıda tam cümle tercih edilir.",
         ],
         examplesTitle: "If only örnekleri",
         examplesLayout: "columns",
@@ -140,9 +142,9 @@ export const topicContent42: TopicContent = {
         title: "Sık hatalar ve wish + could",
         titleEn: "Common Mistakes",
         paragraphs: [
-          "**I wish I would have money** yanlış; doğrusu **I wish I had money** veya **I wish I had more money.** Geçmiş için **I wish I would have gone** değil → **I wish I had gone.**",
-          "Yetenek veya imkân için **wish + could**: **I wish I could fly.** Bu, şimdiki gerçek dışı yetenektir; **would** değil **could** seçilir. **I wish I could have helped** geçmişte yapamadığımız yardım için kullanılır.",
-          "**Hope** ile karıştırma: **I hope you will come** gerçekçi beklenti; **I wish you would come** değişmesi zor veya hayali durum. Anlam ve kip farklıdır.",
+          "**\\I wish I would have money\\** yanlıştır; doğrusu **\\I wish I had money\\** veya **\\I wish I had more money.\\** Geçmişte pişmanlık için **\\I wish I would have gone\\** değil, **\\I wish I had gone.\\**",
+          "Yetenek veya imkân için **\\wish + could\\**: **\\I wish I could fly.\\** Bu, şimdiki gerçek dışı yetenektir; **\\would\\** değil **\\could\\** seçilir. **\\I wish I could have helped\\** geçmişte yapamadığımız yardım için kullanılır.",
+          "**\\Hope\\** ile karıştırma: **\\I hope you will come\\** gerçekçi beklenti; **\\I wish you would come\\** değişmesi zor veya hayali durum. Anlam ve kip farklıdır.",
         ],
         examplesTitle: "Doğru / yanlış",
         examplesLayout: "columns",

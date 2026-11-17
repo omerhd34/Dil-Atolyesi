@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent55: TopicContent = {
   topicId: "55",
   viewMinutes: 10,
+  quizIntro:
+    "Geçmişte gelecek anlatan **\\was to\\** ve **\\was about to\\** yapılarını sorularla pekiştiriyorsun. Başarılar.",
   lesson: {
     parts: [
       {
@@ -11,8 +13,8 @@ export const topicContent55: TopicContent = {
         titleEn: "It's Time + Past",
         paragraphs: [
           "**It is (high / about) time + özne + past simple**, yapılması gecikmiş veya artık kaçınılmaz eylemi ifade eder. Kip geçmiş görünse de zaman çoğu zaman şimdiki veya yakın gelecektir.",
-          "**High time** daha güçlü uyarı taşır: **It is high time we addressed climate policy.** **About time** hafif şikayet veya rahatlama: **It is about time they replied.**",
-          "Amerikan İngilizcesinde bazen **It's time that he leaves** görülür; BrE ve sınav İngilizcesinde **addressed / left** biçimi standart kabul edilir.",
+          "**\\High time\\** daha güçlü uyarı taşır: **\\It is high time we addressed climate policy.\\** **\\About time\\** hafif şikayet veya rahatlama: **\\It is about time they replied.\\**",
+          "Amerikan İngilizcesinde bazen **\\It's time that he leaves\\** görülür; BrE ve sınav İngilizcesinde **\\addressed / left\\** biçimi standart kabul edilir.",
         ],
         examplesTitle: "Time kalıpları",
         examplesLayout: "columns",
@@ -52,9 +54,9 @@ export const topicContent55: TopicContent = {
         title: "Would Rather ve As If / As Though",
         titleEn: "Would Rather & As If",
         paragraphs: [
-          "**Would rather + özne + past simple**, tercih ve hafif pişmanlık bildirir: **I would rather you waited.** Konuşan şimdi konuşur; tercih edilen eylem gerçek dışı veya henüz gerçekleşmemiştir.",
-          "**As if / as though** sonrası da gerçek dışı geçmiş kullanılır: **He acts as if he owned the place.** (= ama sahip değil) **She looked as though she had seen a ghost.**",
-          "Resmi yazıda **as though** biraz daha yaygındır; anlam aynıdır. **As if** konuşmada daha sık duyulur.",
+          "**Would rather + özne + past simple**, tercih ve hafif pişmanlık bildirir: **\\I would rather you waited.\\** Konuşan şimdi konuşur; tercih edilen eylem gerçek dışı veya henüz gerçekleşmemiştir.",
+          "**\\As if / as though\\** sonrası da gerçek dışı geçmiş kullanılır: **\\He acts as if he owned the place.\\** (= ama sahip değil) **\\She looked as though she had seen a ghost.\\**",
+          "Resmi yazıda **\\as though\\** biraz daha yaygındır; anlam aynıdır. **\\As if\\** konuşmada daha sık duyulur.",
         ],
         examplesTitle: "Rather / as if",
         examplesLayout: "columns",
@@ -93,9 +95,9 @@ export const topicContent55: TopicContent = {
         title: "Suppose, Wish ve İlişkili Kalıplar",
         titleEn: "Suppose & Wish",
         paragraphs: [
-          "**Suppose / supposing (that)** koşul kurar; sonuç kısmında geçmiş kipler gerçek dışılık katar: **Suppose they refused — what would you do?**",
-          "**I wish + past simple** şimdiki pişmanlık; **I wish + past perfect** geçmiş pişmanlık: **I wish I had studied harder.** **It's time** ile birlikte düşünüldüğünde zaman katmanları netleşir.",
-          "**If only** duygusal vurgu ekler: **If only they had listened.** C2 metinlerinde bu kalıplar tonu kişisel veya eleştirel yapar.",
+          "**\\Suppose / supposing (that)\\** koşul kurar; sonuç kısmında geçmiş kipler gerçek dışılık katar: **\\Suppose they refused — what would you do?\\**",
+          "**\\I wish + past simple\\** şimdiki pişmanlık; **\\I wish + past perfect\\** geçmiş pişmanlık: **\\I wish I had studied harder.\\** **\\It's time\\** ile birlikte düşünüldüğünde zaman katmanları netleşir.",
+          "**\\If only\\** duygusal vurgu ekler: **\\If only they had listened.\\** C2 metinlerinde bu kalıplar tonu kişisel veya eleştirel yapar.",
         ],
         examplesTitle: "Suppose / wish",
         examplesLayout: "columns",
@@ -133,9 +135,9 @@ export const topicContent55: TopicContent = {
         title: "Future in the Past: Was / Were to",
         titleEn: "Was to Have Been",
         paragraphs: [
-          "**Was / were to + V1**, geçmişten bakıldığında planlanan gelecek eylemi anlatır: **The treaty was to be signed in April.** Plan gerçekleşmiş veya gerçekleşmemiş olabilir; bağlam karar verdirir.",
-          "**Was to have been + V3**, planlanmış ama gerçekleşmemiş eylemi vurgular: **The treaty was to have been signed in Geneva.** Bu kalıp sınav ve hukuki metinlerde kritik ayrımdır.",
-          "**Were to** resmi koşulda da kullanılır; burada odak geçmiş planlama ve hayal kırıklığıdır.",
+          "**\\Was / were to + V1\\**, geçmişten bakıldığında planlanan gelecek eylemi anlatır: **\\The treaty was to be signed in April.\\** Plan gerçekleşmiş veya gerçekleşmemiş olabilir; bağlam karar verdirir.",
+          "**\\Was to have been + V3\\**, planlanmış ama gerçekleşmemiş eylemi vurgular: **\\The treaty was to have been signed in Geneva.\\** Bu kalıp sınav ve hukuki metinlerde kritik ayrımdır.",
+          "**\\Were to\\** resmi koşulda da kullanılır; burada odak geçmiş planlama ve hayal kırıklığıdır.",
         ],
         examplesTitle: "Was to",
         examplesLayout: "columns",
@@ -173,9 +175,9 @@ export const topicContent55: TopicContent = {
         title: "On the Verge of ve Yakın Gelecek Nüansları",
         titleEn: "Verge, About to",
         paragraphs: [
-          "**Was on the point / verge of + -ing**, geçmişte bir eylemin hemen eşiğinde olunmuşluğu anlatır; çoğu zaman eylem kesilir veya değişir: **She was on the verge of resigning when they promoted her.**",
-          "**Was about to + V1** daha nötr «-mek üzereydi» anlamı verir: **The train was about to leave.** **Was to** planı, **was about to** anlık eşiği vurgular.",
-          "Unreal past ile birleştirildiğinde zaman kayması güçlenir: **It was high time we were leaving** (konuşma, nadiren yazılı). Öğrenciler için net ayrım: **time** = gecikme + past; **was to have been** = başarısız plan.",
+          "**\\Was on the point / verge of + -ing\\**, geçmişte bir eylemin hemen eşiğinde olunmuşluğu anlatır; çoğu zaman eylem kesilir veya değişir: **\\She was on the verge of resigning when they promoted her.\\**",
+          "**\\Was about to + V1\\** daha nötr **-mek üzereydi** anlamı verir: **\\The train was about to leave.\\** **\\Was to\\** planı, **\\was about to\\** anlık eşiği vurgular.",
+          "Unreal past ile birleştirildiğinde zaman kayması güçlenir: **\\It was high time we were leaving\\** (konuşma, nadiren yazılı). Öğrenciler için net ayrım: **\\time\\** = gecikme + past; **\\was to have been\\** = başarısız plan.",
         ],
         examplesTitle: "Eşik ve plan",
         examplesLayout: "columns",

@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent31: TopicContent = {
   topicId: "31",
   viewMinutes: 10,
+  quizIntro:
+    "Bu sınavda şimdiki zamanda çıkarım kiplerini test ediyorsun: **\\must\\**, **\\can't\\**, **\\may, might, could\\** ve **\\must be + V-ing\\**. Eldeki ipuçlarına göre en güçlü veya en zayıf olasılığı seç.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent31: TopicContent = {
         title: "Must — Güçlü Çıkarım",
         titleEn: "Must (Deduction)",
         paragraphs: [
-          "Şimdiki zamanda **kanıta dayalı güçlü çıkarım** için **must** kullanılır (zorunluluk anlamı değil, **eminim ki** anlamı). Yapı: **must + V1** veya durum için **must be + sıfat/isim**.",
-          "**The lights are off; they must be asleep.** (Işıklar kapalı; uyuyor olmalılar — eminim.)",
-          "**He must know the answer.** Olumsuz çıkarımda must kullanılmaz; imkansızlık için **can't** gelir.",
+          "Şu andaki ipuçlarına dayanarak **çok emin olduğun** tahminlerde **\\must\\** kullanırsın. Bu, kural bildiren zorunluk **\\must\\**'ünden ayrıdır; anlamı **eminim ki** tarafındadır.",
+          "Kalıp: **\\must + V1\\** veya **\\must be\\** artı sıfat ya da isim. Örnek: **\\The lights are off; they must be asleep.\\** Işıklar kapalı; uyuyor olmalılar.",
+          "Olumsuz çıkarımda **\\must\\** kullanılmaz; imkansızlık için **\\can't\\** gelir: **\\He must know the answer.\\** güçlü tahmin, **\\He can't know that.\\** ise mantıksal red.",
         ],
         examplesTitle: "must çıkarımı",
         examplesLayout: "columns",
@@ -30,9 +32,9 @@ export const topicContent31: TopicContent = {
         title: "Can't — Mantıksal İmkansızlık",
         titleEn: "Can't (Deduction)",
         paragraphs: [
-          "Şu anki duruma bakarak **imkansız / olamaz** sonucu için **can't** (veya resmi **cannot**) kullanılır: **must**'un zıttı.",
-          "**He can't be at home; his car isn't here.** (Evde olamaz; arabası burada değil.)",
-          "Yapı: **can't + V1** veya **can't be + sıfat/isim**. Geçmiş çıkarım (must have) bu derste değil; burada yalnızca **şimdiki** çıkarım.",
+          "Şu anki duruma bakarak **imkansız veya olamaz** sonucu için **\\can't\\** (\\veya resmi **cannot**\\) kullanılır: **\\must\\**'un zıttı.",
+          "**\\He can't be at home; his car isn't here.\\** (Evde olamaz; arabası burada değil.)",
+          "Yapı: **can't + V1** veya **can't be + sıfat veya isim**. Geçmiş çıkarım (\\must have\\) bu derste değil; burada yalnızca **şimdiki** çıkarım.",
         ],
         examplesTitle: "can't çıkarımı",
         examplesLayout: "columns",
@@ -50,9 +52,9 @@ export const topicContent31: TopicContent = {
         title: "May, Might, Could — Olasılık",
         titleEn: "May / Might / Could",
         paragraphs: [
-          "**Daha zayıf çıkarım ve olasılık** için **may, might, could** kullanılır. Hepsi **belki, -ebilir** anlamına yakındır; **might** genelde **may**'den biraz daha belirsizdir.",
-          "**He might be late.** / **She may be at work.** / **It could rain later.**",
-          "Olumsuz: **might not / may not** (olası değil); **couldn't** bu bağlamda genelde **imkansız** değil **olası değil** için nadir kullanılır — imkansızlık için **can't** tercih edilir.",
+          "**Daha zayıf çıkarım ve olasılık** için **\\may, might, could\\** kullanılır. Hepsi **\\belki, -ebilir\\** anlamına yakındır; **\\might\\** genelde **\\may\\**'den biraz daha belirsizdir.",
+          "**\\He might be late.\\** veya **\\She may be at work.\\** veya **\\It could rain later.\\**",
+          "Olumsuz: **\\might not veya may not\\** (olası değil); **\\couldn't\\** bu bağlamda genelde **imkansız** değil **olası değil** için nadir kullanılır; imkansızlık için **\\can't\\** tercih edilir.",
         ],
         examplesTitle: "olasılık örnekleri",
         examplesLayout: "columns",
@@ -70,10 +72,10 @@ export const topicContent31: TopicContent = {
         title: "Must Be + -ing",
         titleEn: "Must Be + -ing",
         paragraphs: [
-          "Şu anda **devam eden bir eylem** hakkında güçlü çıkarım: **must be + V-ing**.",
-          "**Listen! That must be James singing.** (Şu an şarkı söyleyen James olmalı.)",
-          "Karşıtı: **can't be + V-ing** → **She can't be working; it's Sunday.**",
-          "May/might be + -ing düşük olasılık: **He might be sleeping.**",
+          "Şu anda **\\devam eden bir eylem\\** hakkında güçlü çıkarım: **\\must be + V-ing\\**.",
+          "**\\Listen! That must be James singing.\\** (Şu an şarkı söyleyen James olmalı.)",
+          "Buna karşılık **\\can't be + V-ing\\** kullanırsın; örnek: **\\She can't be working; it's Sunday.\\**",
+          "May veya might be + -ing düşük olasılık: **\\He might be sleeping.\\**",
         ],
         examplesTitle: "süregelen çıkarım",
         examplesLayout: "columns",
@@ -94,8 +96,8 @@ export const topicContent31: TopicContent = {
         title: "Eminlik Ölçeği",
         titleEn: "Certainty Scale",
         paragraphs: [
-          "En güçlü olumlu çıkarım → **must**; en güçlü olumsuz → **can't**; ortada **may / might / could**.",
-          "Zorunluluk must'i ile karıştırma: **You must wear a seatbelt.** (kural) ≠ **You must be tired.** (çıkarım).",
+          "En güçlü olumlu çıkarım için **\\must\\**; en güçlü olumsuz için **\\can't\\**; ortada **\\may veya might veya could\\**.",
+          "Zorunluluk **\\must\\**'ü ile çıkarım **\\must\\**'ünü karıştırma: **\\You must wear a seatbelt.\\** kural bildirir; **\\You must be tired.\\** ise yorgun olduğunu tahmin eder.",
           "Bağlam ipuçlarını (ışık, ses, saat, mantık) cümlede göstermek çıkarımı güçlendirir.",
         ],
         examplesTitle: "ölçek örnekleri",
@@ -271,7 +273,7 @@ export const topicContent31: TopicContent = {
         "50 olmalıydı",
       ],
       correctIndex: 1,
-      explanation: "can't = … olamaz (çıkarım).",
+      explanation: "can't burada olamaz anlamında çıkarım kipidir.",
     },
     {
       id: "quiz-31-3",

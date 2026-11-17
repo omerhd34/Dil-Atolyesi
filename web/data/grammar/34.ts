@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent34: TopicContent = {
   topicId: "34",
   viewMinutes: 10,
+  quizIntro:
+    "Tanımlayıcı ve tanımlamayan ilgi cümleciklerini, **\\who, which, that, whose\\** seçimini ve gerektiğinde ilgi zamirini düşürmeyi kontrol et.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent34: TopicContent = {
         title: "Tanımlayan: who, which, that",
         titleEn: "Defining — who, which, that",
         paragraphs: [
-          "**Tanımlayan sıfat cümlecikleri (defining relative clauses)** ismi **belirsizden belirliye** çevirir; hangi kişi veya nesneden bahsettiğin **bu cümlecik olmadan anlaşılmaz**. İlgi zamirleri: **who** (kişi), **which** (hayvan/şey), **that** (kişi veya şey — tanımlayanda çok yaygın).",
-          "Kalıp: **isim + who/which/that + özne/fiil...** veya **isim + who/which/that + nesne...** Virgül **kullanılmaz**; cümlecik isme bitişiktir: **The man who lives next door is a doctor.** **The book that I bought is interesting.**",
-          "**Who** yalnızca kişiler için; **which** hayvan ve nesneler için; **that** ikisinde de tanımlayanda doğaldır. Resmi yazıda **which** tercih edilebilir; konuşmada **that** sık duyulur.",
+          "**Tanımlayan sıfat cümlecikleri (\\defining relative clauses\\)** ismi **\\belirsizden belirliye\\** çevirir; hangi kişi veya nesneden bahsettiğin **bu cümlecik olmadan anlaşılmaz**. İlgi zamirleri: **\\who\\** (kişi), **\\which\\** (hayvan veya şey), **\\that\\** (kişi veya şey; tanımlayanda çok yaygın).",
+          "Kalıp: **isim + who veya which veya that + özne veya fiil ve benzeri** veya **isim + who veya which veya that + nesne ve benzeri** Virgül **kullanılmaz**; cümlecik isme bitişiktir: **\\The man who lives next door is a doctor.\\** **\\The book that I bought is interesting.\\**",
+          "**\\Who\\** yalnızca kişiler için; **\\which\\** hayvan ve nesneler için; **\\that\\** ikisinde de tanımlayanda doğaldır. Resmi yazıda **\\which\\** tercih edilebilir; konuşmada **\\that\\** sık duyulur.",
         ],
         examplesTitle: "who / which / that",
         examplesLayout: "columns",
@@ -66,9 +68,9 @@ export const topicContent34: TopicContent = {
         title: "whose, where, when",
         titleEn: "whose, where, when",
         paragraphs: [
-          "**Whose** **aitlik** bildirir (hem insan hem şey): **The student whose project won is here.** **The house whose roof is red is for sale.** **Whose** = **-in/-ın/-ün**; soru anlamında da tanıdık: **whose book**.",
-          "**Where** **yer** için kullanılır: **the place where, the city where, the room where**. **When** **zaman** için: **the day when, the year when, the moment when**. Her ikisi de tanımlayan veya tanımlamayan cümlecikte olabilir.",
-          "Bazen **where/when** yerine **that** veya **which** + ön edat mümkündür: **the reason why** (= **the reason for which**). Günlük dilde **where** yer için en pratik seçimdir.",
+          "**\\Whose\\** **\\aitlik\\** bildirir (hem insan hem şey): **\\The student whose project won is here.\\** **\\The house whose roof is red is for sale.\\** **\\Whose\\** = **-in veya -ın veya -ün**; soru anlamında da tanıdık: **\\whose book\\**.",
+          "**\\Where\\** **\\yer\\** için kullanılır: **\\the place where, the city where, the room where\\**. **\\When\\** **\\zaman\\** için: **\\the day when, the year when, the moment when\\**. Her ikisi de tanımlayan veya tanımlamayan cümlecikte olabilir.",
+          "Bazen **where veya when** yerine **\\that\\** veya **\\which\\** + ön edat mümkündür: **\\the reason why\\** (= **\\the reason for which\\**). Günlük dilde **\\where\\** yer için en pratik seçimdir.",
         ],
         examplesTitle: "whose, where, when",
         examplesLayout: "columns",
@@ -127,9 +129,9 @@ export const topicContent34: TopicContent = {
         title: "Tanımlamayan ve Virgüller",
         titleEn: "Non-defining Clauses & Commas",
         paragraphs: [
-          "**Tanımlamayan (non-defining) cümlecikler** ek bilgi verir; **isim zaten bellidir**, cümleciği çıkarsan ana anlam bozulmaz. **Virgülle** isimden ayrılır: **My brother, who lives in Ankara, is visiting.**",
-          "Bu yapıda **who, which, whose, where, when** kullanılır; ton daha açıklayıcı ve bazen resmidir. İki virgül arasında kalan bölüm yan bilgidir. **My car, which is old, still runs well.** — Arabanın sana ait olduğu ve tek olduğu varsayılır.",
-          "Tanımlayan ile karıştırma: **My sister who lives in Izmir** (birden fazla kız kardeşin var, İzmir'dekini kastediyorsun) / **My sister, who lives in Izmir, ...** (tek kız kardeş, İzmir bilgi). Virgül anlamı tamamen değiştirir.",
+          "**Tanımlamayan (non-defining) cümlecikler** ek bilgi verir; **\\isim zaten bellidir\\**, cümleciği çıkarsan ana anlam bozulmaz. **Virgülle** isimden ayrılır: **\\My brother, who lives in Ankara, is visiting.\\**",
+          "Bu yapıda **\\who, which, whose, where, when\\** kullanılır; ton daha açıklayıcı ve bazen resmidir. İki virgül arasında kalan bölüm yan bilgidir. **\\My car, which is old, still runs well.\\**; Arabanın sana ait olduğu ve tek olduğu varsayılır.",
+          "Tanımlayan ile karıştırma: **\\My sister who lives in Izmir\\** (birden fazla kız kardeşin var, İzmir'dekini kastediyorsun) veya **\\My sister, who lives in Izmir, ...\\** (tek kız kardeş, İzmir bilgi). Virgül anlamı tamamen değiştirir.",
         ],
         examplesTitle: "Non-defining örnekler",
         examplesLayout: "columns",
@@ -183,9 +185,9 @@ export const topicContent34: TopicContent = {
         title: "Non-defining'de that Kullanılmaz",
         titleEn: "No *that* in Non-defining Clauses",
         paragraphs: [
-          "**Tanımlamayan** cümleciklerde **that kullanılmaz**. Yanlış: ~~My car, that is red,~~ Doğru: **My car, which is red, is fast.** Kişide **who**, şeyde **which** seç.",
-          "**What** ve **which** karışıklığı: **which** ilgi zamiri (isimden sonra); **what** = **the thing that** (bağımsız): **What you said is true.** Tanımlamayan içinde yalnızca **which/who/whose**.",
-          "Tanımlayanda **that** serbesttir; tanımlamayanda **which** zorunlu alternatiftir. Sınav ve formal yazıda bu kural keskindir; konuşmada bazen duyulsa da yazı dilinde kaçın.",
+          "**Tanımlamayan** cümleciklerde **that kullanılmaz**. Yanlış: ~~My car, that is red,~~ Doğru: **\\My car, which is red, is fast.\\** Kişide **\\who\\**, şeyde **\\which\\** seç.",
+          "**\\What\\** ve **\\which\\** karışıklığı: **\\which\\** ilgi zamiri (\\isimden sonra\\); **\\what\\** = **\\the thing that\\** (bağımsız): **\\What you said is true.\\** Tanımlamayan içinde yalnızca **which veya who veya whose**.",
+          "Tanımlayanda **\\that\\** serbesttir; tanımlamayanda **\\which\\** zorunlu alternatiftir. Sınav ve formal yazıda bu kural keskindir; konuşmada bazen duyulsa da yazı dilinde kaçın.",
         ],
         examplesTitle: "that yasak / doğru biçim",
         examplesLayout: "columns",
@@ -239,9 +241,9 @@ export const topicContent34: TopicContent = {
         title: "Nesne İlgi Zamirini Düşürme",
         titleEn: "Omitting Object Relative Pronouns",
         paragraphs: [
-          "İlgi zamiri cümlede **nesne** görevindeyse **tanımlayan** cümlecikte **çoğu zaman düşürülür**. **The book (that) I read** = **The book that I read.** Özne konumunda düşürme **olmaz**: **The man who called** (~~The man called~~ yanlış anlam).",
-          "Düşürme yalnızca **tanımlayan** cümleciklerde yaygındır. **Tanımlamayanda** zamir **kalır** ve **virgüller** durur: **My car, which I bought last year, ...** — **which** silinmez.",
-          "**Who** nesne olunca düşer veya **that** ile değiştirilir; **whom** resmi yazıda kalır: **The person whom I met** → konuşmada **The person I met** / **who I met**. **To whom** çok formaldir.",
+          "İlgi zamiri cümlede **nesne** görevindeyse **tanımlayan** cümlecikte **çoğu zaman düşürülür**. **\\The book (that) I read\\** = **\\The book that I read.\\** Özne konumunda düşürme **\\olmaz\\**: **\\The man who called\\** (~~The man called~~ yanlış anlam).",
+          "Düşürme yalnızca **tanımlayan** cümleciklerde yaygındır. **Tanımlamayanda** zamir **kalır** ve **virgüller** durur: **\\My car, which I bought last year, ...\\**; **\\which\\** silinmez.",
+          "**\\Who\\** nesne olunca düşer veya **\\that\\** ile değiştirilir; **\\whom\\** resmi yazıda kalır: **\\The person whom I met\\** için konuşmada **\\The person I met\\** veya **\\who I met\\**. **\\To whom\\** çok formaldir.",
         ],
         examplesTitle: "Düşürme örnekleri",
         examplesLayout: "columns",
@@ -338,12 +340,7 @@ export const topicContent34: TopicContent = {
       subtopicId: "34-3",
       type: "multiple_choice",
       prompt: "Non-defining cümlecik nasıl ayrılır?",
-      options: [
-        "Noktalı virgül",
-        "Virgül",
-        "İki nokta",
-        "Tire",
-      ],
+      options: ["Noktalı virgül", "Virgül", "İki nokta", "Tire"],
       correctIndex: 1,
       explanation: "Non-defining → virgüller.",
     },

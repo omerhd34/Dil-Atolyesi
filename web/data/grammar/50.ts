@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent50: TopicContent = {
   topicId: "50",
   viewMinutes: 10,
+  quizIntro:
+    "Mandative subjunctive tetikleyicilerini ve **\\V1\\** kalıbını sorularla kontrol ediyorsun. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent50: TopicContent = {
         title: "Mandative Subjunctive Nedir?",
         titleEn: "What Is the Mandative Subjunctive?",
         paragraphs: [
-          "**Mandative subjunctive (istek / zorunluluk kipi)**, birisinin yapılması **gerektiğini, istendiğini veya önerildiğini** bildiren yan cümlelerde fiilin **yalın V1** biçiminin kullanılmasıdır. Özne **he / she / they** olsa bile **be** kalır, **-s** eklenmez: **They demanded that he be present.**",
-          "Bu yapı **indirect command, suggestion, necessity** bağlamında çalışır. Türkçede genelde “bulunması gerekir, yapılsın” çevirisi uygundur. Resmi İngilizce (özellikle ABD) ve akademik metinlerde standarttır.",
-          "İngiliz İngilizcesinde aynı anlam için sıklıkla **should + V1** görülür: **They demanded that he should be present.** İki biçim de doğrudur; mandative subjunctive daha kısa ve resmidir.",
+          "**\\Mandative subjunctive (istek / zorunluluk kipi)\\**, birisinin yapılması **gerektiğini, istendiğini veya önerildiğini** bildiren yan cümlelerde fiilin **yalın V1** biçiminin kullanılmasıdır. Özne **\\he / she / they\\** olsa bile **\\be\\** kalır, **-s** eklenmez: **\\They demanded that he be present.\\**",
+          "Bu yapı **\\indirect command, suggestion, necessity\\** bağlamında çalışır. Türkçede genelde **bulunması gerekir, yapılsın** çevirisi uygundur. Resmi İngilizce (özellikle ABD) ve akademik metinlerde standarttır.",
+          "İngiliz İngilizcesinde aynı anlam için sıklıkla **should + V1** görülür: **\\They demanded that he should be present.\\** İki biçim de doğrudur; mandative subjunctive daha kısa ve resmidir.",
         ],
         examplesTitle: "V1 kullanımı",
         examplesLayout: "columns",
@@ -42,9 +44,9 @@ export const topicContent50: TopicContent = {
         title: "Tetikleyen Fiiller ve İsimler",
         titleEn: "Triggering Verbs & Nouns",
         paragraphs: [
-          "Yaygın fiiller: **demand, insist, require, request, recommend, suggest, propose, urge, order, command, ask (that)**. Kalıp: **verb + that + özne + V1**. **She suggested that he apply early.**",
-          "İsimler: **demand, requirement, request, recommendation, suggestion, proposal, order** + **that** yan cümlesi. **His demand that she resign shocked everyone.**",
-          "Bu fiillerden sonra **-ing** veya **to V1** genelde doğrudan nesne alır; **that** yan cümlesi üçüncü şahıs emir/istektir. **He recommended leaving early** (genel öneri) vs **He recommended that she leave early** (ona özel).",
+          "Yaygın fiiller: **\\demand, insist, require, request, recommend, suggest, propose, urge, order, command, ask (that)\\**. Kalıp: **verb + that + özne + V1**. **\\She suggested that he apply early.\\**",
+          "İsimler: **\\demand, requirement, request, recommendation, suggestion, proposal, order\\** + **\\that\\** yan cümlesi. **\\His demand that she resign shocked everyone.\\**",
+          "Bu fiillerden sonra **\\-ing\\** veya **\\to V1\\** genelde doğrudan nesne alır; **\\that\\** yan cümlesi üçüncü şahıs emir/istektir. **\\He recommended leaving early\\** (genel öneri) vs **\\He recommended that she leave early\\** (ona özel).",
         ],
         examplesTitle: "Fiil + that + V1",
         examplesLayout: "columns",
@@ -74,9 +76,9 @@ export const topicContent50: TopicContent = {
         title: "Sıfat Kalıpları: essential / vital that",
         titleEn: "Adjective + that",
         paragraphs: [
-          "**It is / was + essential, vital, imperative, crucial, important, necessary, advisable, desirable + that + özne + V1**. **It is imperative that every citizen vote.**",
-          "Bu kalıplar politika, sağlık ve kurumsal duyurularda sık görülür. **Important** bazen **should** ile birlikte de kullanılır; mandative biçim daha net zorunluluk verir.",
-          "**Necessary that** ile **It is necessary for him to go** farklıdır: ilki resmi subjunctive yan cümle, ikincisi **for + özne + to V1** yapısıdır.",
+          "**It is / was + essential, vital, imperative, crucial, important, necessary, advisable, desirable + that + özne + V1**. **\\It is imperative that every citizen vote.\\**",
+          "Bu kalıplar politika, sağlık ve kurumsal duyurularda sık görülür. **\\Important\\** bazen **\\should\\** ile birlikte de kullanılır; mandative biçim daha net zorunluluk verir.",
+          "**\\Necessary that\\** ile **\\It is necessary for him to go\\** farklıdır: ilki resmi subjunctive yan cümle, ikincisi **for + özne + to V1** yapısıdır.",
         ],
         examplesTitle: "It is essential that",
         examplesLayout: "columns",
@@ -106,9 +108,9 @@ export const topicContent50: TopicContent = {
         title: "Olumsuz, Edilgen ve was/were",
         titleEn: "Negative, Passive & be",
         paragraphs: [
-          "Olumsuz: **not + V1** — **They insisted that he not leave.** (does not değil.) **AmE** baskındır; **BrE** bazen **should not** kullanır.",
-          "Edilgen: **be + V3** — **It is required that the form be completed.** **Be** yine yalın halde kalır.",
-          "**I were** halk ifadesi **wish / hypothetical** için kullanılır; mandative'te **be** standarttır: **It is essential that he be on time.** **Was** kullanılmaz.",
+          "Olumsuz: **not + V1** — **\\They insisted that he not leave.\\** (does not değil.) **\\AmE\\** baskındır; **\\BrE\\** bazen **\\should not\\** kullanır.",
+          "Edilgen: **be + V3** — **\\It is required that the form be completed.\\** **\\Be\\** yine yalın halde kalır.",
+          "**\\I were\\** halk ifadesi **\\wish / hypothetical\\** için kullanılır; mandative'te **\\be\\** standarttır: **\\It is essential that he be on time.\\** **\\Was\\** kullanılmaz.",
         ],
         examplesTitle: "Olumsuz ve edilgen",
         examplesLayout: "columns",
@@ -138,9 +140,9 @@ export const topicContent50: TopicContent = {
         title: "BrE should & Sık Hatalar",
         titleEn: "Should & Common Mistakes",
         paragraphs: [
-          "BrE: **It is essential that he should attend.** AmE'de **should** atılabilir: **It is essential that he attend.** Sınavlarda her iki biçim geçerli sayılabilir; metin tutarlılığına dikkat.",
-          "Yaygın hatalar: **demands that he is** ❌ → **demands that he be** ✅; **suggests that she goes** ❌ → **suggests that she go** ✅. **That** sonrası **will/would** subjunctive değildir.",
-          "Konuşmada bazı fiiller **to V1** ile gevşer: **I suggest going** — resmi yazıda **that + V1** tercih et.",
+          "BrE: **\\It is essential that he should attend.\\** AmE'de **\\should\\** atılabilir: **\\It is essential that he attend.\\** Sınavlarda her iki biçim geçerli sayılabilir; metin tutarlılığına dikkat.",
+          "Yaygın hatalar: **\\demands that he is\\** ❌ → **\\demands that he be\\** ✅; **\\suggests that she goes\\** ❌ → **\\suggests that she go\\** ✅. **\\That\\** sonrası **will/would** subjunctive değildir.",
+          "Konuşmada bazı fiiller **\\to V1\\** ile gevşer: **\\I suggest going\\** — resmi yazıda **that + V1** tercih et.",
         ],
         examplesTitle: "Should ve doğru form",
         examplesLayout: "columns",

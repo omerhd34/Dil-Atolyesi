@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent52: TopicContent = {
   topicId: "52",
   viewMinutes: 10,
+  quizIntro:
+    "Mesafe koyma ve hedging ifadelerini bağlamda seçmeye odaklan. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,10 @@ export const topicContent52: TopicContent = {
         title: "is said / believed / alleged + to",
         titleEn: "Passive Reporting Structures",
         paragraphs: [
-          "**Mesafe koyma (distancing)** bilgiyi kaynak olarak sunmadan, «söyleniyor / iddia ediliyor» tonu verir. Kalıp: **özne + is said / believed / reported / alleged / thought + to + V1** (şimdiki) veya **to have + V3** (geçmiş): **He is said to live abroad.** **He is alleged to have stolen the funds.**",
-          "Aktif karşılık: **People say that he lives abroad.** → **He is said to live abroad.** **That-clause** edilgen formu: **It is said that he lives abroad.** İkisi anlamca eşdeğerdir; akademik özetlerde **to have V3** geçmiş iddiayı netleştirir.",
-          "**Claimed, understood, expected, known** aynı ailedendir. Soru ve olumsuz: **The deal is not expected to close soon.**",
+          "**Mesafe koyma** (**\\distancing\\**), bilgiyi kaynak göstermeden **söyleniyor / iddia ediliyor** tonu verir. Kalıp: **özne + is said / believed / reported / alleged / thought + to + V1** şimdiki zaman için, **\\to have + V3\\** geçmiş iddia için.",
+          "Örnek: **\\He is said to live abroad.\\** **\\He is alleged to have stolen the funds.\\**",
+          "Aktif karşılık: **\\People say that he lives abroad.\\** → **\\He is said to live abroad.\\** **\\That-clause\\** edilgen formu: **\\It is said that he lives abroad.\\** İkisi anlamca eşdeğerdir; akademik özetlerde **\\to have V3\\** geçmiş iddiayı netleştirir.",
+          "**\\Claimed, understood, expected, known\\** aynı ailedendir. Soru ve olumsuz: **\\The deal is not expected to close soon.\\**",
         ],
         examplesTitle: "said / believed / alleged",
         examplesLayout: "columns",
@@ -53,9 +56,9 @@ export const topicContent52: TopicContent = {
         title: "It is widely acknowledged that…",
         titleEn: "Formal It-clauses",
         paragraphs: [
-          "**It + passive reporting + that + cümle** yapısı resmi ve akademik tondadır: **It is widely acknowledged that climate change is accelerating.** **It has been agreed that…** **It was announced that…**",
-          "Bu kalıplar yazarın kişisel görüşünü gizler; «genel kabul» veya «resmi bildiri» hissi verir. **Widely, generally, commonly, frequently** gibi zarflar vurguyu güçlendirir.",
-          "Türkçeye çevirirken pasif ve «bilinmektedir / kabul edilmektedir» çerçevesini koru. **It is acknowledged** sıkça **that** ile tamamlanır; *acknowledged to* nadirdir.",
+          "**It + passive reporting + that + cümle** yapısı resmi ve akademik tondadır: **\\It is widely acknowledged that climate change is accelerating.\\** **\\It has been agreed that…\\** **\\It was announced that…\\**",
+          "Bu kalıplar yazarın kişisel görüşünü gizler; **genel kabul** veya **resmi bildiri** hissi verir. **\\Widely, generally, commonly, frequently\\** gibi zarflar vurguyu güçlendirir.",
+          "Türkçeye çevirirken pasif ve **bilinmektedir / kabul edilmektedir** çerçevesini koru. **\\It is acknowledged\\** sıkça **\\that\\** ile tamamlanır; *\\acknowledged to\\* nadirdir.",
         ],
         examplesTitle: "It is … that",
         examplesLayout: "columns",
@@ -93,9 +96,9 @@ export const topicContent52: TopicContent = {
         title: "seem / appear / tend to",
         titleEn: "Seem, Appear & Tend",
         paragraphs: [
-          "**Seem** ve **appear** «görünüşe göre» anlatır; kesinlik iddia etmez. **She seems tired.** **He appears to agree.** **There seems to be a problem.** **Appear to have + V3**: **He appears to have misunderstood.**",
-          "**Tend to** alışılmış eğilim bildirir: **Prices tend to rise in winter.** **Patients tend to recover faster with rest.** Hedging için güçlü araçtır; mutlak genelleme yerine eğilim vurgular.",
-          "**Seem / appear + that** mümkündür: **It seems that they have left.** Konuşmada **seem like** de görülür. **Appear** biraz daha formaldir.",
+          "**\\Seem\\** ve **\\appear\\** **görünüşe göre** anlatır; kesinlik iddia etmez. **\\She seems tired.\\** **\\He appears to agree.\\** **\\There seems to be a problem.\\** **\\Appear to have + V3\\**: **\\He appears to have misunderstood.\\**",
+          "**\\Tend to\\** alışılmış eğilim bildirir: **\\Prices tend to rise in winter.\\** **\\Patients tend to recover faster with rest.\\** Hedging için güçlü araçtır; mutlak genelleme yerine eğilim vurgular.",
+          "**\\Seem / appear + that\\** mümkündür: **\\It seems that they have left.\\** Konuşmada **\\seem like\\** de görülür. **\\Appear\\** biraz daha formaldir.",
         ],
         examplesTitle: "seem / appear / tend",
         examplesLayout: "columns",
@@ -134,9 +137,9 @@ export const topicContent52: TopicContent = {
         title: "arguably, presumably ve hedging zarfları",
         titleEn: "Hedging Adverbs",
         paragraphs: [
-          "**Hedging** ifadenin kesinliğini düşürür, muhataba alan bırakır. **Arguably** «tartışılabilir şekilde, muhtemelen en …»: **This is arguably the best version.** **Presumably** «galiba, öyle olduğu varsayılarak»: **Presumably, they received the email.**",
-          "Diğerleri: **possibly, probably, apparently, conceivably, somewhat, rather, fairly, to some extent, in general, on the whole, it would seem**. **Clearly / obviously** hedging değildir; iddiayı güçlendirir.",
-          "Sınav ve yazıda aşırı **arguably** ile her cümleyi zayıflatma; stratejik kullan. **Apparently** duyuma dayalı mesafe katar: **Apparently, the deal is off.**",
+          "**\\Hedging\\** ifadenin kesinliğini düşürür, muhataba alan bırakır. **\\Arguably\\** **tartışılabilir şekilde, muhtemelen en …**: **\\This is arguably the best version.\\** **\\Presumably\\** **galiba, öyle olduğu varsayılarak**: **\\Presumably, they received the email.\\**",
+          "Diğerleri: **\\possibly, probably, apparently, conceivably, somewhat, rather, fairly, to some extent, in general, on the whole, it would seem\\**. **\\Clearly / obviously\\** hedging değildir; iddiayı güçlendirir.",
+          "Sınav ve yazıda aşırı **\\arguably\\** ile her cümleyi zayıflatma; stratejik kullan. **\\Apparently\\** duyuma dayalı mesafe katar: **\\Apparently, the deal is off.\\**",
         ],
         examplesTitle: "Hedging zarfları",
         examplesLayout: "columns",
@@ -174,9 +177,9 @@ export const topicContent52: TopicContent = {
         title: "Akademik ton ipuçları",
         titleEn: "Academic Tone Tips",
         paragraphs: [
-          "Akademik yazıda **I think** yerine **It appears that / The evidence suggests that** kullan. Kişisel görüşü **seem, tend, may, might, could** ile yumuşat. **Always / never** yerine **often / rarely / tend to** tercih et.",
-          "Kaynak mesafesi: **X is reported to…** veya **According to X (2019), …** ile birleştir. **Alleged** hukuk ve medyada iddia tonu taşır; akademide dikkatli seç.",
-          "Cümle çeşitliliği: **It is acknowledged…**, **There seems to be…**, **This may indicate…** dönüşümlü kullan. Aynı paragrafta hem distancing hem hedging ile ton tutarlı kalır.",
+          "Akademik yazıda **\\I think\\** yerine **\\It appears that / The evidence suggests that\\** kullan. Kişisel görüşü **\\seem, tend, may, might, could\\** ile yumuşat. **\\Always / never\\** yerine **\\often / rarely / tend to\\** tercih et.",
+          "Kaynak mesafesi: **\\X is reported to…\\** veya **\\According to X (2019), …\\** ile birleştir. **\\Alleged\\** hukuk ve medyada iddia tonu taşır; akademide dikkatli seç.",
+          "Cümle çeşitliliği: **\\It is acknowledged…\\**, **\\There seems to be…\\**, **\\This may indicate…\\** dönüşümlü kullan. Aynı paragrafta hem distancing hem hedging ile ton tutarlı kalır.",
         ],
         examplesTitle: "Güçlü / zayıf ton",
         examplesLayout: "columns",
@@ -416,12 +419,7 @@ export const topicContent52: TopicContent = {
       subtopicId: "52-1",
       type: "multiple_choice",
       prompt: "The suspect is alleged _____ the evidence.",
-      options: [
-        "to destroy",
-        "to have destroyed",
-        "destroying",
-        "destroyed",
-      ],
+      options: ["to destroy", "to have destroyed", "destroying", "destroyed"],
       correctIndex: 1,
       explanation: "Past allegation → to have V3.",
     },

@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent13: TopicContent = {
   topicId: "13",
   viewMinutes: 8,
+  quizIntro:
+    "Alıştırma \\can\\ ve \\can't\\ ile yetenek, izin ve rica kalıplarını ölçer. Tüm öznelerde fiil yalın kalır; \\to be\\ ile karıştırma.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent13: TopicContent = {
         title: "can — Yetenek",
         titleEn: "can — Ability",
         paragraphs: [
-          "**can** modal fiilidir; **yapabilmek / -ebilmek** anlamı verir. Tüm öznelerle **aynı kalır** — **s** eki yoktur: **I can swim.** **She can swim.** **They can swim.** Fiilden önce gelir; asıl fiil **yalın** kalır.",
-          "Olumsuz: **can + not → cannot / can't**. **He can't drive.** Soru: **Can + özne + yalın fiil?** **Can you help me?** Kısa cevap: **Yes, I can. / No, I can't.**",
-          "Türkçede yetenek bazen geniş zamanla verilir (**Yüzebilirim.**); İngilizcede **can** hem şu anki yeteneği hem genel beceriyi ifade eder: **I can speak a little English.**",
+          "**\\can\\** modal fiilidir; **yapabilmek / -ebilmek** anlamı verir. Tüm öznelerle **aynı kalır** — **s** eki yoktur: **\\I can swim.\\** **\\She can swim.\\** **\\They can swim.\\** Fiilden önce gelir; asıl fiil **yalın** kalır.",
+          "Olumsuz: **\\can + not → cannot / can't\\**. **\\He can't drive.\\** Soru: **Can + özne + yalın fiil?** **\\Can you help me?\\** Kısa cevap: **\\Yes, I can. / No, I can't.\\**",
+          "Türkçede yetenek bazen geniş zamanla verilir (**Yüzebilirim.**); İngilizcede **\\can\\** hem şu anki yeteneği hem genel beceriyi ifade eder: **\\I can speak a little English.\\**",
         ],
         examplesTitle: "Yetenek örnekleri",
         examplesLayout: "columns",
@@ -42,9 +44,9 @@ export const topicContent13: TopicContent = {
         title: "can — İzin",
         titleEn: "can — Permission",
         paragraphs: [
-          "Günlük İngilizcede **can** sıkça **izin istemek / vermek** için kullanılır. Resmî ortamda **may** de vardır; A1 seviyesinde **can** yeterlidir.",
-          "**Can I leave early?** (Erken çıkabilir miyim?) **You can sit here.** (Burada oturabilirsin.) Olumsuz izin: **You can't park here.** (Buraya park edemezsin.)",
-          "İzin cümlelerinde tonlama ve bağlam önemlidir; **Can I...?** kibar bir istektir. **Could I...?** daha kibar alternatiftir (ileri seviye).",
+          "Günlük İngilizcede **\\can\\** sıkça **\\izin istemek / vermek\\** için kullanılır. Resmî ortamda **\\may\\** de vardır; A1 seviyesinde **\\can\\** yeterlidir.",
+          "**\\Can I leave early?\\** (Erken çıkabilir miyim?) **\\You can sit here.\\** (\\Burada oturabilirsin.\\) Olumsuz izin: **\\You can't park here.\\** (\\Buraya park edemezsin.\\)",
+          "İzin cümlelerinde tonlama ve bağlam önemlidir; **\\Can I...?\\** kibar bir istektir. **\\Could I...?\\** daha kibar alternatiftir (\\ileri seviye\\).",
         ],
         examplesTitle: "İzin örnekleri",
         examplesLayout: "columns",
@@ -79,9 +81,9 @@ export const topicContent13: TopicContent = {
         title: "can — Rica ve Teklif",
         titleEn: "can — Requests & Offers",
         paragraphs: [
-          "**Can you...?** ile kibar **rica** yapılır: **Can you help me?** **Can you pass the salt?** Bu yapı emir gibi değil, istek tonu taşır.",
-          "**I can...** ile **teklif** sunulur: **I can carry your bag.** (Çantanı taşıyabilirim.) **We can call a taxi.** Karşı taraf **Can you...?** dediğinde genelde **Sure. / Of course.** ile cevap verilir.",
-          "**can't** burada fiziksel imkânsızlık veya engel anlamına da gelebilir: **I can't come tomorrow.** (Yarın gelemem.) — yetenek değil, durum kısıtı.",
+          "**\\Can you...?\\** ile kibar **\\rica\\** yapılır: **\\Can you help me?\\** **\\Can you pass the salt?\\** Bu yapı emir gibi değil, istek tonu taşır.",
+          "**\\I can...\\** ile **\\teklif\\** sunulur: **\\I can carry your bag.\\** (Çantanı taşıyabilirim.) **\\We can call a taxi.\\** Karşı taraf **\\Can you...?\\** dediğinde genelde **\\Sure. / Of course.\\** ile cevap verilir.",
+          "**\\can't\\** burada fiziksel imkânsızlık veya engel anlamına da gelebilir: **\\I can't come tomorrow.\\** (Yarın gelemem.) — yetenek değil, durum kısıtı.",
         ],
         examplesTitle: "Rica ve teklif",
         examplesLayout: "columns",
@@ -114,9 +116,9 @@ export const topicContent13: TopicContent = {
         title: "can't ve Soru Kalıpları",
         titleEn: "can't & Question Patterns",
         paragraphs: [
-          "**can't** = **cannot**; konuşmada çok yaygındır. Yazıda resmî metinlerde bazen **cannot** tercih edilir. **Can** ile **to be** karıştırma: ~~I can am tired.~~ **I am tired.**",
-          "Soru kelimesi + **can**: **What can you do?** **Where can I park?** **Who can fix this?** **How can I help?** Cevapta yine **can** veya **can't** kullanılır.",
-          "**can** geçmiş veya gelecek için tek başına yeterli değildir (ileri seviyede **could, will be able to** öğrenilir). A1'de **can** şimdiki / genel yetenek ve izin için odaklan.",
+          "**\\can't\\** = **\\cannot\\**; konuşmada çok yaygındır. Yazıda resmî metinlerde bazen **\\cannot\\** tercih edilir. **\\Can\\** ile **\\to be\\** karıştırma: ~~I can am tired.~~ **\\I am tired.\\**",
+          "Soru kelimesi + **\\can\\**: **\\What can you do?\\** **\\Where can I park?\\** **\\Who can fix this?\\** **\\How can I help?\\** Cevapta yine **\\can\\** veya **\\can't\\** kullanılır.",
+          "**\\can\\** geçmiş veya gelecek için tek başına yeterli değildir (ileri seviyede **\\could, will be able to\\** öğrenilir). A1'de **\\can\\** şimdiki / genel yetenek ve izin için odaklan.",
         ],
         examplesTitle: "Soru kalıpları",
         examplesLayout: "columns",

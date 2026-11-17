@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent19: TopicContent = {
   topicId: "19",
   viewMinutes: 10,
+  quizIntro:
+    "\\Can\\ ve \\can't\\ ile yetenek, izin ve rica anlamları bu alıştırmada sınanıyor.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent19: TopicContent = {
         title: "Karşılaştırma: Kısa Sıfatlar",
         titleEn: "Comparatives: Short Adjectives",
         paragraphs: [
-          "**Karşılaştırma (comparative)**, iki şeyi **-den daha** biçiminde kıyaslar. Kısa sıfatlar (çoğu zaman tek veya iki hece) **-er** alır: **tall → taller**, **old → older**.",
-          "Cümlede **than** ile birlikte kullanılır: **Ankara is smaller than Istanbul.** Kalıp: **A + is + comparative + than + B**.",
-          "Son harf sessiz, öncesinde tek ünlü varsa son harf ikiye katlanır: **big → bigger**, **hot → hotter**. **-y** ile bitenlerde **-y → -ier**: **happy → happier**.",
+          "**Karşılaştırma** (**\\comparative\\**) iki şeyi **\\than\\** ile kıyaslar. Kısa sıfatlar çoğu zaman **\\-er\\** alır: **\\tall → taller\\**, **\\old → older\\**.",
+          "Cümlede **\\than\\** ile birlikte kullanılır: **\\Ankara is smaller than Istanbul.\\** Kalıp: **\\A + is + comparative + than + B\\**.",
+          "Son harf sessiz, öncesinde tek ünlü varsa son harf ikiye katlanır: **\\big → bigger\\**, **\\hot → hotter\\**. **-y** ile bitenlerde **\\-y → -ier\\**: **\\happy → happier\\**.",
         ],
         examplesTitle: "-er biçimleri",
         examplesLayout: "columns",
@@ -36,9 +38,9 @@ export const topicContent19: TopicContent = {
         title: "Uzun Sıfatlar: more / most",
         titleEn: "Long Adjectives",
         paragraphs: [
-          "Üç veya daha fazla heceli (veya **-ing / -ed** ile biten) sıfatlarda **-er** yerine **more** kullanılır: **more interesting than**, **more expensive than**.",
-          "**En üstünlük (superlative)** için **the most**: **the most interesting city**. Kısa sıfatlarda **the + -est**: **the tallest building**.",
-          "**Less / the least** azlık bildirir: **less crowded than**, **the least expensive option**. Bu seviyede **more/most** ile **-er/-est** ayrımını sağlam kurmak yeterlidir.",
+          "Üç veya daha fazla heceli sıfatlarda, ayrıca **\\-ing\\** veya **\\-ed\\** ile bitenlerde **\\-er\\** yerine **\\more\\** kullanılır: **\\more interesting than\\**, **\\more expensive than\\**.",
+          "**En üstünlük** (**\\superlative\\**) için uzun sıfatlarda **\\the most\\**: **\\the most interesting city\\**. Kısa sıfatlarda **\\the tallest\\** gibi **\\-est\\** biçimi gelir.",
+          "**\\Less / the least\\** azlık bildirir: **\\less crowded than\\**, **\\the least expensive option\\**. Bu seviyede **more/most** ile **\\-er/-est\\** ayrımını sağlam kurmak yeterlidir.",
         ],
         examplesTitle: "more / most",
         examplesLayout: "columns",
@@ -68,9 +70,9 @@ export const topicContent19: TopicContent = {
         title: "Düzensiz: good ve bad",
         titleEn: "Irregular: good & bad",
         paragraphs: [
-          "**Good** ve **bad** düzensizdir; **-er / -est** veya **more** almaz. **good → better → the best**, **bad → worse → the worst**.",
-          "**This meal is better than yesterday's.** **It was the worst film I've seen.** Karşılaştırma yine **than**, superlative yine **the** ile gelir.",
-          "**Well** (iyi — zarf) karşılaştırmada **better** olur: **She speaks better than me.** **Best** hem sıfat hem zarf süperlative biçimidir.",
+          "**\\Good\\** ve **\\bad\\** düzensizdir; **\\-er / -est\\** veya **\\more\\** almaz. **\\good → better → the best\\**, **\\bad → worse → the worst\\**.",
+          "**\\This meal is better than yesterday's.\\** **\\It was the worst film I've seen.\\** Karşılaştırma yine **\\than\\**, superlative yine **\\the\\** ile gelir.",
+          "**\\Well\\** /iyi — zarf/ karşılaştırmada **\\better\\** olur: **\\She speaks better than me.\\** **\\Best\\** hem sıfat hem zarf süperlative biçimidir.",
         ],
         examplesTitle: "good / bad zinciri",
         examplesLayout: "columns",
@@ -90,9 +92,9 @@ export const topicContent19: TopicContent = {
         title: "Superlative ve than",
         titleEn: "Superlatives & than",
         paragraphs: [
-          "**Superlative** üç veya daha fazla şey içinden **en …** olanı seçer. Kısa sıfat: **the + -est** → **the oldest**. Uzun sıfat: **the most + sıfat** → **the most popular**.",
-          "Superlative genelde **the** gerektirir çünkü belirli bir grubun birincisini işaret eder: **the biggest city in Turkey**. **In / of** ile grup belirtilir.",
-          "**Than** yalnızca karşılaştırmada kullanılır; superlative'te **than** yoktur. **She is older than her brother.** vs **She is the oldest in the class.**",
+          "**\\Superlative\\** üç veya daha fazla şey içinden **\\en  ve benzeri\\** olanı seçer. Kısa sıfat: **the + -est** → **\\the oldest\\**. Uzun sıfat: **the most + sıfat** → **\\the most popular\\**.",
+          "Superlative genelde **\\the\\** gerektirir çünkü belirli bir grubun birincisini işaret eder: **\\the biggest city in Turkey\\**. **\\In / of\\** ile grup belirtilir.",
+          "**\\Than\\** yalnızca karşılaştırmada kullanılır; superlative'te **\\than\\** yoktur. **\\She is older than her brother.\\** vs **\\She is the oldest in the class.\\**",
         ],
         examplesTitle: "En üstünlük örnekleri",
         examplesLayout: "columns",
@@ -119,9 +121,9 @@ export const topicContent19: TopicContent = {
         title: "as … as ve İki Hece Kuralı",
         titleEn: "as … as & Two-Syllable Rule",
         paragraphs: [
-          "Eşitlik için **as + sıfat/zarf + as**: **He is as tall as his father.** Olumsuz: **not as … as** = **kadar … değil**: **This isn't as easy as I thought.**",
-          "İki heceli sıfatlarda hem **-er** hem **more** mümkün olabilir: **clever → cleverer / more clever**; **quiet → quieter / more quiet**. İngilizcede kısa **-er** biçimi sık duyulur.",
-          "**Far → farther/further**, **old → older/elder** gibi eş anlamlı biçimler vardır; A2 seviyesinde **good/bad** düzensizlerini ve temel **-er / more** ayrımını önceliklendir.",
+          "Eşitlik için **as + sıfat/zarf + as**: **\\He is as tall as his father.\\** Olumsuz: **\\not as  ve benzeri as\\** = **kadar  ve benzeri değil**: **\\This isn't as easy as I thought.\\**",
+          "İki heceli sıfatlarda hem **\\-er\\** hem **\\more\\** mümkün olabilir: **\\clever → cleverer / more clever\\**; **\\quiet → quieter / more quiet\\**. İngilizcede kısa **\\-er\\** biçimi sık duyulur.",
+          "**\\Far → farther/further\\**, **\\old → older/elder\\** gibi eş anlamlı biçimler vardır; A2 seviyesinde **good/bad** düzensizlerini ve temel **\\-er / more\\** ayrımını önceliklendir.",
         ],
         examplesTitle: "Eşitlik ve ara örnekler",
         examplesLayout: "columns",

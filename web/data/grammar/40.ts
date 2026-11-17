@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent40: TopicContent = {
   topicId: "40",
   viewMinutes: 10,
+  quizIntro:
+    "Geçmişe yönelik **\\perfect modal\\** yapılarını ayır: **\\must have\\**, **\\can't have\\**, **\\might have\\**, **\\should have\\**, **\\needn't have\\**.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent40: TopicContent = {
         title: "must have / can't have",
         titleEn: "must have / can't have",
         paragraphs: [
-          "**Perfect modals (past)** geçmiş olaylar hakkında **bugünkü kanıta dayalı çıkarım** yapar. Kalıp: **modal + have + V3**. **Must have** güçlü eminlik: **He must have left early.** (Erken gitmiş olmalı — izler bunu gösteriyor.)",
-          "**Can't have** (ve formal **cannot have**) geçmişte **imkansız / çok düşük ihtimal**: **She can't have forgotten — she wrote it down.** **Mustn't have** bu anlamda kullanılmaz; yasak için değil, çıkarım için **can't have** seç.",
-          "Türkçede **-mış olmalı / olamaz** karşılığı. Kanıt şimdi; yorum geçmişe gider. **May/might have** daha zayıf ihtimal için ayrı bölümde.",
+          "**\\Perfect modals (past)\\** geçmiş olaylar hakkında **bugünkü kanıta dayalı çıkarım** yapar. Kalıp: **modal + have + V3**. **\\Must have\\** güçlü eminlik: **\\He must have left early.\\** (Erken gitmiş olmalı; izler bunu gösteriyor.)",
+          "**\\Can't have\\** (\\ve formal **cannot have**\\) geçmişte **imkansız veya çok düşük ihtimal**: **\\She can't have forgotten; she wrote it down.\\** **\\Mustn't have\\** bu anlamda kullanılmaz; yasak için değil, çıkarım için **\\can't have\\** seç.",
+          "Türkçede **-mış olmalı veya olamaz** karşılığı. Kanıt şimdi; yorum geçmişe gider. **\\May veya might have\\** daha zayıf ihtimal için ayrı bölümde.",
         ],
         examplesTitle: "must / can't have",
         examplesLayout: "columns",
@@ -66,9 +68,9 @@ export const topicContent40: TopicContent = {
         title: "might have / could have",
         titleEn: "might have / could have",
         paragraphs: [
-          "**Might have** ve **could have** geçmişte **olası ama kesin olmayan** durumlar için kullanılır. **He might have taken the wrong bus.** **She could have forgotten the keys.** İkisi yakın; **could** bazen **yapılabilirdi (ama yapılmadı)** anlamı da taşır.",
-          "**Could have + V3** = **...abilirdi (fırsat vardı, olmadı)**: **We could have won the match.** (Kazanabilirdik — kazanmadık.) **Might** daha belirsiz ihtimaldir.",
-          "Olumsuz: **might not have / could not have**. **Couldn't have** güçlü red (**can't have** ile benzer): **He couldn't have done it alone.**",
+          "**\\Might have\\** ve **\\could have\\** geçmişte **olası ama kesin olmayan** durumlar için kullanılır. **\\He might have taken the wrong bus.\\** **\\She could have forgotten the keys.\\** İkisi yakın; **\\could\\** bazen **yapılabilirdi (ama yapılmadı)** anlamı da taşır.",
+          "**\\Could have + V3\\** = ** ve benzeriabilirdi (fırsat vardı, olmadı)**: **\\We could have won the match.\\** (Kazanabilirdik; kazanmadık.) **\\Might\\** daha belirsiz ihtimaldir.",
+          "Olumsuz: **\\might not have veya could not have\\**. **\\Couldn't have\\** güçlü red (\\**can't have** ile benzer\\): **\\He couldn't have done it alone.\\**",
         ],
         examplesTitle: "might / could have",
         examplesLayout: "columns",
@@ -127,9 +129,9 @@ export const topicContent40: TopicContent = {
         title: "should have / shouldn't have",
         titleEn: "should have / shouldn't have",
         paragraphs: [
-          "**Should have + V3** geçmişte **yapılması gerekirken yapılmayan** veya **doğru yapılmış** eylem için **eleştiri / pişmanlık / onay**: **You should have studied harder.** **You should have called me!**",
-          "**Shouldn't have** **yapılmaması gerekirken yapılan** için: **You shouldn't have eaten so much.** **He shouldn't have shouted.** Duygu tonu: sitem, nasihat, pişmanlık.",
-          "**Ought to have** daha formal aynı anlam; konuşmada **should have** baskın.",
+          "**\\Should have + V3\\** geçmişte **yapılması gerekirken yapılmayan** veya **doğru yapılmış** eylem için **eleştiri veya pişmanlık veya onay**: **\\You should have studied harder.\\** **\\You should have called me!\\**",
+          "**\\Shouldn't have\\** **yapılmaması gerekirken yapılan** için: **\\You shouldn't have eaten so much.\\** **\\He shouldn't have shouted.\\** Duygu tonu: sitem, nasihat, pişmanlık.",
+          "**\\Ought to have\\** daha formal aynı anlam; konuşmada **\\should have\\** baskın.",
         ],
         examplesTitle: "should(n't) have",
         examplesLayout: "columns",
@@ -183,9 +185,9 @@ export const topicContent40: TopicContent = {
         title: "needn't have",
         titleEn: "needn't have",
         paragraphs: [
-          "**Needn't have + V3** = **yapmana gerek yoktu (yaptın ama gereksizdi)**. **You needn't have brought food — we had plenty.** Yani eylem **gerçekleşti**, sonradan **gereksiz** olduğu anlaşıldı.",
-          "**Didn't need to + V1** farkı: **yapmaya gerek yoktu ve belki yapmadın**. **I didn't need to get up early, so I slept in.** (Kalkmadım.) **I needn't have got up early, but I did.** (Kalktım — boşunaydı.)",
-          "Türkçede ** ...maya gerek yoktu (yapmışsın)** ile **...maya gerek yoktu (yapmamışsın)** ayrımına dikkat. Sınavlarda bu nüans sık sorulur.",
+          "**\\Needn't have + V3\\** = **yapmana gerek yoktu (yaptın ama gereksizdi)**. **\\You needn't have brought food; we had plenty.\\** Yani eylem **gerçekleşti**, sonradan **\\gereksiz\\** olduğu anlaşıldı.",
+          "**\\Didn't need to + V1\\** farkı: **yapmaya gerek yoktu ve belki yapmadın**. **\\I didn't need to get up early, so I slept in.\\** (Kalkmadım.) **\\I needn't have got up early, but I did.\\** (Kalktım; boşunaydı.)",
+          "Türkçede ** ...maya gerek yoktu (yapmışsın)** ile ** ve benzerimaya gerek yoktu (yapmamışsın)** ayrımına dikkat. Sınavlarda bu nüans sık sorulur.",
         ],
         examplesTitle: "needn't have vs didn't need to",
         examplesLayout: "columns",
@@ -239,9 +241,9 @@ export const topicContent40: TopicContent = {
         title: "Karşılaştırmalı Pratik",
         titleEn: "Contrast Practice",
         paragraphs: [
-          "Aynı durum farklı modallarla **farklı ton** taşır: **He must have stolen it** (emin suçlama çıkarımı) / **He might have stolen it** (ihtimal) / **He shouldn't have stolen it** (ahlaki eleştiri — yaptı).",
-          "**Can't have** = mantıken olmaz. **Should have** = olması iyiydi. **Needn't have** = yaptın, boşunaydı. Tablo kurarak ezberlemek konuşmada hız kazandırır.",
-          "Resmi yazıda tam biçim; konuşmada **must've, could've, should've** kısaltmaları yaygındır. **Have** asla **has** olmaz — perfect modal her zaman **have + V3**.",
+          "Aynı durum farklı modallarla **farklı ton** taşır: **\\He must have stolen it\\** (emin suçlama çıkarımı) veya **\\He might have stolen it\\** (\\ihtimal\\) veya **\\He shouldn't have stolen it\\** (ahlaki eleştiri; yaptı).",
+          "**\\Can't have\\** = mantıken olmaz. **\\Should have\\** = olması iyiydi. **\\Needn't have\\** = yaptın, boşunaydı. Tablo kurarak ezberlemek konuşmada hız kazandırır.",
+          "Resmi yazıda tam biçim; konuşmada **\\must've, could've, should've\\** kısaltmaları yaygındır. **\\Have\\** asla **\\has\\** olmaz; perfect modal her zaman **have + V3**.",
         ],
         examplesTitle: "Kontrast örnekleri",
         examplesLayout: "columns",
@@ -470,12 +472,7 @@ export const topicContent40: TopicContent = {
       subtopicId: "40-1",
       type: "multiple_choice",
       prompt: "He _____ at home; I saw him downtown.",
-      options: [
-        "can't have been",
-        "must have been",
-        "should be",
-        "might be",
-      ],
+      options: ["can't have been", "must have been", "should be", "might be"],
       correctIndex: 0,
       explanation: "Çelişen kanıt → can't have been.",
     },

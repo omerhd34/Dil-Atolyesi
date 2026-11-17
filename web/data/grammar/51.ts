@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent51: TopicContent = {
   topicId: "51",
   viewMinutes: 10,
+  quizIntro:
+    "Ortaç cümleciklerinde özne uyumu ve perfect formlar öne çıkıyor. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent51: TopicContent = {
         title: "V-ing: zaman ve sebep",
         titleEn: "Present Participle — Time & Reason",
         paragraphs: [
-          "**Ortaç cümlecikleri** ana cümleyi **zaman, sebep, sonuç veya eş zamanlılık** ile bağlar. **V-ing** etken ortaçtır: **Feeling tired, I went to bed early.** (Yorgun hissettiğim için…) **Turning the corner, we saw the sea.** (Köşeyi dönerken…)",
-          "Bu yapılar **because / when / as** ile kurulan yan cümlelerin kısaltmasıdır. **As I felt tired, I went to bed** → **Feeling tired, I went to bed.** Özne **her iki cümlede aynı** olmalıdır.",
-          "Konum: çoğu zaman **cümle başında**, virgülle ana cümleden ayrılır. Sonuç vurgusu: **The train was cancelled, leaving hundreds stranded.**",
+          "**Ortaç cümlecikleri** ana cümleyi **zaman, sebep, sonuç veya eş zamanlılık** ile bağlar. **\\V-ing\\** etken ortaçtır: **\\Feeling tired, I went to bed early.\\** (Yorgun hissettiğim için…) **\\Turning the corner, we saw the sea.\\** (Köşeyi dönerken…)",
+          "Bu yapılar **\\because / when / as\\** ile kurulan yan cümlelerin kısaltmasıdır. **\\As I felt tired, I went to bed\\** → **\\Feeling tired, I went to bed.\\** Özne **her iki cümlede aynı** olmalıdır.",
+          "Konum: çoğu zaman **cümle başında**, virgülle ana cümleden ayrılır. Sonuç vurgusu: **\\The train was cancelled, leaving hundreds stranded.\\**",
         ],
         examplesTitle: "V-ing ortaç örnekleri",
         examplesLayout: "columns",
@@ -54,9 +56,9 @@ export const topicContent51: TopicContent = {
         title: "V3 edilgen ortaçlar",
         titleEn: "Past Participle Clauses",
         paragraphs: [
-          "**V3 (past participle)** edilgen veya tamamlanmış durumu niteler: **Defeated again, the team trained harder.** (Yenilmiş olarak / yenildikten sonra) **Built in the 1800s, the house is protected.**",
-          "Tam cümle karşılığı: **Because it was built in the 1800s…** / **When it was defeated…** Edilgen ortaçta özne yine ana cümlenin öznesiyle uyumlu olmalıdır.",
-          "**Given / Provided / Compared** gibi sabit V3 kalıpları yaygındır: **Given the cost, we cancelled.** **Compared with last year, sales rose.**",
+          "**V3 (past participle)** edilgen veya tamamlanmış durumu niteler: **\\Defeated again, the team trained harder.\\** (Yenilmiş olarak / yenildikten sonra) **\\Built in the 1800s, the house is protected.\\**",
+          "Tam cümle karşılığı: **\\Because it was built in the 1800s…\\** / **\\When it was defeated…\\** Edilgen ortaçta özne yine ana cümlenin öznesiyle uyumlu olmalıdır.",
+          "**\\Given / Provided / Compared\\** gibi sabit V3 kalıpları yaygındır: **\\Given the cost, we cancelled.\\** **\\Compared with last year, sales rose.\\**",
         ],
         examplesTitle: "V3 örnekleri",
         examplesLayout: "columns",
@@ -95,9 +97,9 @@ export const topicContent51: TopicContent = {
         title: "Having + V3 / Having been + V3",
         titleEn: "Perfect Participles",
         paragraphs: [
-          "**Having + V3** eylemin ana cümleden **önce** bittiğini vurgular: **Having finished the essay, she went out.** (Önce bitirdi, sonra çıktı.) Sade **V-ing** bazen aynı anlamı verir; perfect ortaç sırayı netleştirir.",
-          "**Having been + V3** edilgen perfect ortaçtır: **Having been warned twice, he ignored the rules anyway.** (İki kez uyarıldıktan sonra yine de…) **Having been elected, she gave a speech.**",
-          "Olumsuz: **Not having received the email, I didn't reply.** Formal yazı ve akademik metinlerde perfect ortaçlar yoğun kullanılır.",
+          "**Having + V3** eylemin ana cümleden **önce** bittiğini vurgular: **\\Having finished the essay, she went out.\\** (Önce bitirdi, sonra çıktı.) Sade **\\V-ing\\** bazen aynı anlamı verir; perfect ortaç sırayı netleştirir.",
+          "**\\Having been + V3\\** edilgen perfect ortaçtır: **\\Having been warned twice, he ignored the rules anyway.\\** (İki kez uyarıldıktan sonra yine de…) **\\Having been elected, she gave a speech.\\**",
+          "Olumsuz: **\\Not having received the email, I didn't reply.\\** Formal yazı ve akademik metinlerde perfect ortaçlar yoğun kullanılır.",
         ],
         examplesTitle: "Perfect ortaçlar",
         examplesLayout: "columns",
@@ -135,9 +137,9 @@ export const topicContent51: TopicContent = {
         title: "Nominative absolute (kısa)",
         titleEn: "Nominative Absolute",
         paragraphs: [
-          "**Nominative absolute** yapısında ortaç ifadesinin **kendi öznesi** vardır; ana cümlenin öznesinden **farklı** olabilir. Kalıp: **isim + V-ing/V3**, virgül, ana cümle: **The weather being fine, we went hiking.**",
-          "Bu yapı resmi ve edebi tondadır. Günlük dilde **with** kullanılır: **With the weather fine, we went hiking.** **Him waiting outside, I finished the call.**",
-          "Tarih ve durum bildirimi: **The meeting over, everyone left.** **All things considered, the plan worked.** Bu kalıplar ana cümle öznesiyle karışmaz; dangling riski burada **yoktur** çünkü özne açıkça verilmiştir.",
+          "**\\Nominative absolute\\** yapısında ortaç ifadesinin **kendi öznesi** vardır; ana cümlenin öznesinden **farklı** olabilir. Kalıp: **isim + V-ing/V3**, virgül, ana cümle: **\\The weather being fine, we went hiking.\\**",
+          "Bu yapı resmi ve edebi tondadır. Günlük dilde **\\with\\** kullanılır: **\\With the weather fine, we went hiking.\\** **\\Him waiting outside, I finished the call.\\**",
+          "Tarih ve durum bildirimi: **\\The meeting over, everyone left.\\** **\\All things considered, the plan worked.\\** Bu kalıplar ana cümle öznesiyle karışmaz; dangling riski burada **yoktur** çünkü özne açıkça verilmiştir.",
         ],
         examplesTitle: "Nominative absolute",
         examplesLayout: "columns",
@@ -176,8 +178,8 @@ export const topicContent51: TopicContent = {
         title: "Dangling participle hataları",
         titleEn: "Dangling Participle Mistakes",
         paragraphs: [
-          "Ortaç ifadesinin öznesi belirsiz veya yanlışsa **dangling participle** oluşur: **Walking to work, the rain soaked my shoes.** (Yağmur yürümüyor.) Doğrusu: **Walking to work, I got soaked.**",
-          "**Having been repaired, I drove the car.** (Ben tamir edilmedim.) → **The car having been repaired, I drove it.** veya **After the car was repaired, I drove it.** Nominative absolute burada çözüm olabilir.",
+          "Ortaç ifadesinin öznesi belirsiz veya yanlışsa **\\dangling participle\\** oluşur: **\\Walking to work, the rain soaked my shoes.\\** (Yağmur yürümüyor.) Doğrusu: **\\Walking to work, I got soaked.\\**",
+          "**\\Having been repaired, I drove the car.\\** **\\Ben tamir edilmedim.\\** → **\\The car having been repaired, I drove it.\\** veya **\\After the car was repaired, I drove it.\\** Nominative absolute burada çözüm olabilir.",
           "Kontrol listesi: (1) Kim eylemi yapıyor? (2) Ana cümlenin öznesiyle aynı mı? (3) Değilse **isim + ortaç** veya tam yan cümle kullan.",
         ],
         examplesTitle: "Düzeltme örnekleri",

@@ -5,16 +5,18 @@ export const topicContent10: TopicContent = {
   viewMinutes: 10,
   quizQuestionCount: 15,
   quizFillBlankCount: 15,
+  quizIntro:
+    "Quiz emir cümleleri, \\please\\, \\Let's\\ ve nesne zamirlerini kapsar. Özne yazılmayan fiille başlayan yapıya odaklan.",
   lesson: {
-parts: [
-{
+    parts: [
+      {
         id: "10-1",
         title: "Olumlu Emirler (Yap!)",
         titleEn: "Positive Imperatives",
         paragraphs: [
-          "İngilizcede birine doğrudan talimat vermek için **olumlu emir (imperative)** kullanırsın. Cümle **yalın fiille** başlar; **you** öznesi yazılmaz. Bu yapı Türkçedeki kısa **Yap! / Dinle!** kalıplarına benzer.",
-          "Fiil her zaman **birinci hâlde (yalın)** kalır: **Listen.**, **Stand up.**, **Come here.** Birden fazla kelimeden oluşan komutlarda da fiil başta durur: **Open your book.**, **Look at the board.**",
-          "Sınıfta, trafikte ve günlük iletişimde bu kalıp çok yaygındır. Emir tonunu yumuşatmak için **please** ekleyebilirsin; temel olumlu emirde sadece fiil + gerekirse nesne veya zarf yeterlidir.",
+          "İngilizcede birine doğrudan talimat vermek için **olumlu emir (\\imperative\\)** kullanırsın. Cümle **yalın fiille** başlar; **\\you\\** öznesi yazılmaz. Bu yapı Türkçedeki kısa **\\Yap! / Dinle!\\** kalıplarına benzer.",
+          "Fiil her zaman **birinci hâlde (yalın)** kalır: **\\Listen.\\**, **\\Stand up.\\**, **\\Come here.\\** Birden fazla kelimeden oluşan komutlarda da fiil başta durur: **\\Open your book.\\**, **\\Look at the board.\\**",
+          "Sınıfta, trafikte ve günlük iletişimde bu kalıp çok yaygındır. Emir tonunu yumuşatmak için **\\please\\** ekleyebilirsin; temel olumlu emirde sadece fiil + gerekirse nesne veya zarf yeterlidir.",
         ],
         examplesTitle: "Temel komutlar",
         examplesLayout: "columns",
@@ -31,14 +33,14 @@ parts: [
           { en: "Write your name.", tr: "Adını yaz." },
         ],
       },
-{
+      {
         id: "10-2",
         title: "Olumsuz Emirler (Yapma!)",
         titleEn: "Negative Imperatives",
         paragraphs: [
-          "Birine bir şeyi **yapmamasını** söylemek için **olumsuz emir** kurarsın. Kalıp: **Don't + yalın fiil**. **Don't** kelimesi **do not** kısaltmasıdır; yalnızca emir ve geniş zamanda olumsuzluk için kullanılır.",
-          "Örnekler: **Don't speak.**, **Don't run.**, **Don't touch.** Fiilden sonra nesne de gelebilir: **Don't open the window.** **Don't be late.** gibi cümlelerde **be + sıfat** yapısı da emir olarak kullanılır.",
-          "Olumlu emir gibi özne yazılmaz; **You don't speak.** bir emir değil, geniş zaman cümlesidir. Olumsuz emirde tonun net ve kısa olması doğaldır; kibarlık için yine **please** eklenebilir.",
+          "Birine bir şeyi **yapmamasını** söylemek için **olumsuz emir** kurarsın. Kalıp: **Don't + yalın fiil**. **\\Don't\\** kelimesi **\\do not\\** kısaltmasıdır; yalnızca emir ve geniş zamanda olumsuzluk için kullanılır.",
+          "Örnekler: **\\Don't speak.\\**, **\\Don't run.\\**, **\\Don't touch.\\** Fiilden sonra nesne de gelebilir: **\\Don't open the window.\\** **\\Don't be late.\\** gibi cümlelerde **be + sıfat** yapısı da emir olarak kullanılır.",
+          "Olumlu emir gibi özne yazılmaz; **\\You don't speak.\\** bir emir değil, geniş zaman cümlesidir. Olumsuz emirde tonun net ve kısa olması doğaldır; kibarlık için yine **\\please\\** eklenebilir.",
         ],
         examplesTitle: "Olumsuz komutlar",
         examplesLayout: "columns",
@@ -55,14 +57,14 @@ parts: [
           { en: "Don't worry.", tr: "Endişelenme." },
         ],
       },
-{
+      {
         id: "10-3",
         title: "Nezaket Eklemek: Please",
         titleEn: "Using 'Please'",
         paragraphs: [
-          "Emir cümlesi bağlama göre sert veya doğrudan duyulabilir. **Please** (lütfen) ekleyince aynı yapı **kibar bir rica** olur. **Please** cümlenin **başında**, **ortasında** veya **sonunda** kullanılabilir; anlam değişmez.",
-          "**Please sit down.** ve **Sit down, please.** aynı mesajı verir. **Help me, please.** gibi cümlelerde **please** sıklıkla sonda durur. Virgülle ayrılması yazıda doğaldır.",
-          "**Please** yalnızca emirle değil, **Can you...?** gibi sorularla da birlikte kullanılır; bu derste odak noktası emir + **please** birleşimidir. Resmi ve günlük İngilizcede nazik istek için vazgeçilmez bir kelimedir.",
+          "Emir cümlesi bağlama göre sert veya doğrudan duyulabilir. **\\Please\\** (lütfen) ekleyince aynı yapı **\\kibar bir rica\\** olur. **\\Please\\** cümlenin **başında**, **ortasında** veya **\\sonunda\\** kullanılabilir; anlam değişmez.",
+          "**\\Please sit down.\\** ve **\\Sit down, please.\\** aynı mesajı verir. **\\Help me, please.\\** gibi cümlelerde **\\please\\** sıklıkla sonda durur. Virgülle ayrılması yazıda doğaldır.",
+          "**\\Please\\** yalnızca emirle değil, **\\Can you...?\\** gibi sorularla da birlikte kullanılır; bu derste odak noktası emir + **\\please\\** birleşimidir. Resmi ve günlük İngilizcede nazik istek için vazgeçilmez bir kelimedir.",
         ],
         examplesTitle: "Kibar rica",
         examplesLayout: "columns",
@@ -77,14 +79,14 @@ parts: [
           { en: "Come here, please.", tr: "Buraya gel, lütfen." },
         ],
       },
-{
+      {
         id: "10-4",
         title: "Birlikte Yapalım: Let's",
         titleEn: "Suggestions with 'Let's'",
         paragraphs: [
-          "Tek başına emir vermek yerine **birlikte yapmayı önermek** için **Let's** kullanırsın. **Let's**, **Let us** (bırak bize / hadi biz ...) kalıbının günlük kısaltmasıdır. Karşı tarafı eyleme **ortak** davet eder.",
-          "Kalıp: **Let's + yalın fiil**: **Let's go!**, **Let's study.**, **Let's take a break.** Olumsuz öneri için **Let's not + fiil** kullanılır: **Let's not be late.** (Bu seviyede olumlu örnekler yeterlidir.)",
-          "**Let's** ile **Listen!** (tek kişilik emir) arasındaki farkı bil: **Let's** konuşanı da içeren bir gruptur. Arkadaşlarla plan yaparken **Let's ...** cümleleri çok doğal duyulur.",
+          "Tek başına emir vermek yerine **birlikte yapmayı önermek** için **\\Let's\\** kullanırsın. **\\Let's\\**, **\\Let us\\** kalıbının günlük kısaltmasıdır; hadi birlikte anlamı taşır. Karşı tarafı eyleme **ortak** davet eder.",
+          "Kalıp: **Let's + yalın fiil**: **\\Let's go!\\**, **\\Let's study.\\**, **\\Let's take a break.\\** Olumsuz öneri için **\\Let's not + fiil\\** kullanılır: **\\Let's not be late.\\** (Bu seviyede olumlu örnekler yeterlidir.)",
+          "**\\Let's\\** ile **\\Listen!\\** arasındaki farkı bil: **\\Listen!\\** tek kişiye emir, **\\Let's\\** konuşanı da içeren gruptur. Arkadaşlarla plan yaparken **\\Let's go.\\** gibi cümleler çok doğal duyulur.",
         ],
         examplesTitle: "Hadi yapalım",
         examplesLayout: "columns",
@@ -101,14 +103,14 @@ parts: [
           { en: "Let's take a break.", tr: "Hadi mola verelim." },
         ],
       },
-{
+      {
         id: "10-5",
         title: "Sınıf ve Sınav Talimatları",
         titleEn: "Classroom Instructions",
         paragraphs: [
-          "İngilizce derslerinde ve sınavlarda **talimat cümleleri (instructions)** sürekli tekrarlanır. Hepsi emir kalıbındadır: fiille başlar, özne yoktur. Bu kalıpları tanıdığında soru kitapçığında ne yapman gerektiğini saniyeler içinde anlarsın.",
-          "**Read the text.**, **Fill in the blanks.**, **Choose the correct answer.** gibi ifadeler aynı yapıyı paylaşır: **yalın fiil + nesne**. Bazen iki fiil bağlanır: **Listen and repeat.**",
-          "Bu platformdaki alıştırmalarda da benzer İngilizce talimatlar görürsün. **Match the words.** eşleştirme, **Circle the correct word.** işaretleme, **Complete the sentence.** tamamlama istemektedir. Emirleri Türkçe anlamlarıyla eşleştirmek pratiği hızlandırır.",
+          "İngilizce derslerinde ve sınavlarda **talimat cümleleri (\\instructions\\)** sürekli tekrarlanır. Hepsi emir kalıbındadır: fiille başlar, özne yoktur. Bu kalıpları tanıdığında soru kitapçığında ne yapman gerektiğini saniyeler içinde anlarsın.",
+          "**\\Read the text.\\**, **\\Fill in the blanks.\\**, **\\Choose the correct answer.\\** gibi ifadeler aynı yapıyı paylaşır: **yalın fiil + nesne**. Bazen iki fiil bağlanır: **\\Listen and repeat.\\**",
+          "Bu platformdaki alıştırmalarda da benzer İngilizce talimatlar görürsün. **\\Match the words.\\** eşleştirme, **\\Circle the correct word.\\** işaretleme, **\\Complete the sentence.\\** tamamlama istemektedir. Emirleri Türkçe anlamlarıyla eşleştirmek pratiği hızlandırır.",
         ],
         examplesTitle: "Sık talimatlar",
         examplesLayout: "columns",
@@ -133,9 +135,9 @@ parts: [
         title: "Nesne Zamirleri",
         titleEn: "Object Pronouns",
         paragraphs: [
-          "Cümlenin **öznesi** eylemi yapan kişidir (**I, you, he, she...**). **Nesne zamirleri (object pronouns)** ise eylemden **etkilenen** veya fiilin **yöneldiği** kişi ve nesneleri gösterir: **me, you, him, her, it, us, them**.",
-          "Her özne zamiri için bir nesne zamiri vardır: **I → me**, **he → him**, **she → her**, **we → us**, **they → them**. **You** hem özne hem nesne için aynı kalır. **It** de her iki rolde aynıdır.",
-          "Türkçede **beni, onu, bize** gibi ekler zorunludur; İngilizcede ise nesne zamiri fiilin veya edatın hemen **sonrasında** durur. **Call me.** (Beni ara.) — burada **me** özne **I** değildir; aranan kişiyi gösterir.",
+          "Cümlenin **öznesi** eylemi yapan kişidir: **\\I, you, he, she\\** ve benzeri. **Nesne zamirleri (\\object pronouns\\)** ise eylemden **etkilenen** veya fiilin **yöneldiği** kişi ve nesneleri gösterir: **\\me, you, him, her, it, us, them\\**.",
+          "Her özne zamiri için bir nesne zamiri vardır: **\\I → me\\**, **\\he → him\\**, **\\she → her\\**, **\\we → us\\**, **\\they → them\\**. **\\You\\** hem özne hem nesne için aynı kalır. **\\It\\** de her iki rolde aynıdır.",
+          "Türkçede **beni, onu, bize** gibi ekler zorunludur; İngilizcede nesne zamiri fiilin veya edatın hemen **sonrasında** durur. **\\Call me.\\** yani beni ara — burada **\\me\\** özne **\\I\\** değildir; aranan kişiyi gösterir.",
         ],
         examplesTitle: "Özne ve nesne zamirleri",
         examplesLayout: "columns",
@@ -156,9 +158,9 @@ parts: [
         title: "Fiil ve Edattan Sonra Nesne Zamiri",
         titleEn: "Object Pronouns After Verbs & Prepositions",
         paragraphs: [
-          "Nesne zamiri çoğunlukla **fiilin hemen ardından** gelir. Özne zamirini burada kullanamazsın: **Call him.** doğru, **Call he.** yanlıştır. **Help us.**, **Tell them.** aynı kalıptadır.",
-          "Bazı fiillerden sonra **edat (preposition)** gelir; nesne zamiri edattan **sonra** durur. **Listen to me.**, **Look at her.**, **Talk to us.** Edatı atlarsan cümle hatalı veya eksik olur.",
-          "**Give** gibi fiillerde nesne sırası önemlidir: **Give it to her.** önce şey (**it**), sonra alıcı (**her**). Emir cümlelerinde de aynı kural geçerlidir: **Show me.**, **Send them the file.** (ileri seviyede). Bu derste fiil + nesne ve edat + nesne kalıplarını pekiştirmen yeterlidir.",
+          "Nesne zamiri çoğunlukla **fiilin hemen ardından** gelir. Özne zamirini burada kullanamazsın: **\\Call him.\\** doğru, **\\Call he.\\** yanlıştır. **\\Help us.\\**, **\\Tell them.\\** aynı kalıptadır.",
+          "Bazı fiillerden sonra **\\edat (preposition)\\** gelir; nesne zamiri edattan **\\sonra\\** durur. **\\Listen to me.\\**, **\\Look at her.\\**, **\\Talk to us.\\** Edatı atlarsan cümle hatalı veya eksik olur.",
+          "**\\Give\\** gibi fiillerde nesne sırası önemlidir: **\\Give it to her.\\** önce şey (**\\it\\**), sonra alıcı (**\\her\\**). Emir cümlelerinde de aynı kural geçerlidir: **\\Show me.\\** Bu derste fiil artı nesne ve edat artı nesne kalıplarını pekiştirmen yeterlidir.",
         ],
         examplesTitle: "Fiil ve edat + nesne zamiri",
         examplesLayout: "columns",
@@ -173,7 +175,7 @@ parts: [
           { en: "Tell them.", tr: "Onlara söyle.", note: "fiil + them" },
         ],
       },
-    ]
+    ],
   },
   exercises: [
     {
@@ -761,12 +763,7 @@ parts: [
       subtopicId: "10-6",
       type: "multiple_choice",
       prompt: "Hangisi nesne zamiri kullanımı açısından yanlıştır?",
-      options: [
-        "Help me.",
-        "Tell them.",
-        "I see she.",
-        "Call us.",
-      ],
+      options: ["Help me.", "Tell them.", "I see she.", "Call us."],
       correctIndex: 2,
       explanation: "Doğrusu I see her. Özne she, nesne her olmalıdır.",
     },
@@ -794,12 +791,7 @@ parts: [
       type: "multiple_choice",
       prompt: '"Beni dinle." cümlesinin İngilizce karşılığı nedir?',
       hint: "Listen fiili to edatı ister.",
-      options: [
-        "Listen me.",
-        "Listen to me.",
-        "Listen I.",
-        "To listen me.",
-      ],
+      options: ["Listen me.", "Listen to me.", "Listen I.", "To listen me."],
       correctIndex: 1,
       explanation: "Listen to me. = Beni dinle. Edat to zorunludur.",
     },
@@ -1193,7 +1185,8 @@ parts: [
       id: "10-quiz-16",
       subtopicId: "10-6",
       type: "multiple_choice",
-      prompt: "Cümlede 'Bana yardım et, lütfen.' ifadesi için hangi nesne zamiri gerekir?",
+      prompt:
+        "Cümlede 'Bana yardım et, lütfen.' ifadesi için hangi nesne zamiri gerekir?",
       hint: "Help ... , please.",
       options: ["I", "me", "my", "we"],
       correctIndex: 1,
@@ -1211,19 +1204,15 @@ parts: [
         "Yeri",
       ],
       correctIndex: 2,
-      explanation: "her nesne zamiri; alıcıyı (kadın) gösterir. it = verilen şey.",
+      explanation:
+        "her nesne zamiri; alıcıyı (kadın) gösterir. it = verilen şey.",
     },
     {
       id: "10-quiz-18",
       subtopicId: "10-7",
       type: "multiple_choice",
       prompt: "Hangisi doğru edat + nesne zamiri kullanımıdır?",
-      options: [
-        "Look at she.",
-        "Look at her.",
-        "Look she.",
-        "At look her.",
-      ],
+      options: ["Look at she.", "Look at her.", "Look she.", "At look her."],
       correctIndex: 1,
       explanation: "Look at her. = Ona bak. Edattan sonra her kullanılır.",
     },

@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent25: TopicContent = {
   topicId: "25",
   viewMinutes: 10,
+  quizIntro:
+    "Geniş zaman ile şimdiki zaman seçimi ve durum fiillerinin sürekli zaman alıp almadığı sorularda test edilir.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent25: TopicContent = {
         title: "Fiil + -ing (Gerund)",
         titleEn: "Verb + -ing",
         paragraphs: [
-          "Bazı fiillerden hemen sonra **ikinci fiil -ing** alır (gerund): **enjoy, finish, mind, suggest, avoid, keep, miss, practise, consider, deny, feel like, give up, be busy, look forward to** (to burada edat; **to V-ing**).",
-          "Kalıp: **Fiil + V-ing**. **I enjoy swimming.** **She finished reading.** **Do you mind waiting?** İkinci eylem aslında bir isim gibi davranır.",
-          "Ezber listesi uzar; en sık duyduklarınla başla. Yanlış *I enjoy to swim* deme; **enjoy** sonrası **-ing** gelir.",
+          "Bazı fiillerden hemen sonra **ikinci fiil -ing** alır **\\gerund\\**: **\\enjoy, finish, mind, suggest, avoid, keep, miss, practise, consider, deny, feel like, give up, be busy, look forward to\\** /to burada edat; **to V-ing**/.",
+          "Kalıp: **Fiil + V-ing**. **\\I enjoy swimming.\\** **\\She finished reading.\\** **\\Do you mind waiting?\\** İkinci eylem aslında bir isim gibi davranır.",
+          "Ezber listesi uzar; en sık duyduklarınla başla. Yanlış *\\I enjoy to swim\\* deme; **\\enjoy\\** sonrası **\\-ing\\** gelir.",
         ],
         examplesTitle: "V-ing alan fiiller",
         examplesLayout: "columns",
@@ -42,9 +44,9 @@ export const topicContent25: TopicContent = {
         title: "Fiil + to + V1 (Infinitive)",
         titleEn: "Verb + to-infinitive",
         paragraphs: [
-          "Başka bir grup fiil sonrasında **to + yalın fiil** gelir: **want, need, decide, plan, hope, learn, agree, refuse, promise, expect, afford, offer, would like, seem, appear**.",
-          "Kalıp: **Fiil + to + V1**. **I want to travel.** **She decided to study medicine.** **We hope to see you.**",
-          "**Need** bağlama göre **need to do** veya **need doing** (B1) olabilir; A2’de **need to** yeterli: **I need to rest.**",
+          "Başka bir grup fiil sonrasında **to + yalın fiil** gelir: **\\want, need, decide, plan, hope, learn, agree, refuse, promise, expect, afford, offer, would like, seem, appear\\**.",
+          "Kalıp: **Fiil + to + V1**. **\\I want to travel.\\** **\\She decided to study medicine.\\** **\\We hope to see you.\\**",
+          "**\\Need\\** bağlama göre **\\need to do\\** veya **\\need doing\\** **\\B1\\** olabilir; A2’de **\\need to\\** yeterli: **\\I need to rest.\\**",
         ],
         examplesTitle: "To-infinitive örnekleri",
         examplesLayout: "columns",
@@ -70,9 +72,9 @@ export const topicContent25: TopicContent = {
         title: "Her İki Kalıp: like, love, hate…",
         titleEn: "Both Patterns",
         paragraphs: [
-          "**Like, love, hate, prefer, start, begin, continue** hem **-ing** hem **to + V1** ile kullanılabilir. Çoğu zaman anlam çok yakındır; konuşmada ikisi de doğaldır.",
-          "İnce fark (ileri seviye): **I like swimming** (genel zevk) vs **I like to swim in the morning** (alışkanlık/alternatif). A2’de aynı anlamda kabul et.",
-          "**Start / begin / continue** sonrası ikisi de yaygın: **It started raining.** = **It started to rain.**",
+          "**\\Like, love, hate, prefer, start, begin, continue\\** hem **\\-ing\\** hem **to + V1** ile kullanılabilir. Çoğu zaman anlam çok yakındır; konuşmada ikisi de doğaldır.",
+          "İnce fark **\\ileri seviye\\**: **\\I like swimming\\** **\\genel zevk\\** vs **\\I like to swim in the morning\\** (alışkanlık/alternatif). A2’de aynı anlamda kabul et.",
+          "**\\Start / begin / continue\\** sonrası ikisi de yaygın: **\\It started raining.\\** = **\\It started to rain.\\**",
         ],
         examplesTitle: "İkili kullanım",
         examplesLayout: "columns",
@@ -103,9 +105,9 @@ export const topicContent25: TopicContent = {
         title: "Yaygın Hatalar",
         titleEn: "Common Mistakes",
         paragraphs: [
-          "Fiil sonrası rastgele **-ing** veya **to** seçme en sık hatadır. **want**, **decide**, **plan** → **to**; **enjoy**, **finish**, **mind** → **-ing**.",
-          "**Look forward to** içindeki **to** edattır; sonrası **-ing**: **I look forward to hearing from you.** (*to hear* değil)",
-          "İkinci fiilden önce özne koyma: **I want he to go** yanlış; **I want him to go** (nesne + to — ileri konu). Bu derste tek fiil + ikinci kalıba odaklan.",
+          "Fiil sonrası rastgele **\\-ing\\** veya **\\to\\** seçme en sık hatadır. **\\want\\**, **\\decide\\**, **plan** → **\\to\\**; **\\enjoy\\**, **\\finish\\**, **\\mind\\** → **\\-ing\\**.",
+          "**\\Look forward to\\** içindeki **\\to\\** edattır; sonrası **\\-ing\\**: **\\I look forward to hearing from you.\\** (*\\to hear\\* değil)",
+          "İkinci fiilden önce özne koyma: **\\I want he to go\\** yanlış; **\\I want him to go\\** /nesne + to — ileri konu/. Bu derste tek fiil + ikinci kalıba odaklan.",
         ],
         examplesTitle: "Doğru / yanlış",
         examplesLayout: "columns",
@@ -131,7 +133,7 @@ export const topicContent25: TopicContent = {
         title: "Hızlı Ezber Listesi",
         titleEn: "Pattern Summary",
         paragraphs: [
-          "**-ing**: enjoy, finish, mind, suggest, avoid, practise, miss, consider, give up, feel like, look forward to **+ -ing**.",
+          "**\\-ing\\**: enjoy, finish, mind, suggest, avoid, practise, miss, consider, give up, feel like, look forward to **\\+ -ing\\**.",
           "**to + V1**: want, need, decide, plan, hope, learn, agree, refuse, promise, offer, would like, expect.",
           "**İkisi**: like, love, hate, prefer, start, begin, continue. Şüphede kalırsan sözlük veya alıştırmada tekrar et; zamanla kulak alışır.",
         ],

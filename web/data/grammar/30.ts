@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent30: TopicContent = {
   topicId: "30",
   viewMinutes: 9,
+  quizIntro:
+    "Gelecek anlatımı: \\will\\, \\be going to\\ ve randevu için \\Present Continuous\\ seçimine dikkat et.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent30: TopicContent = {
         title: "As ... As (Eşitlik Karşılaştırması)",
         titleEn: "As ... As",
         paragraphs: [
-          "İki şeyin **aynı derecede** olduğunu söylemek için **as + sıfat/zarf + as** kalıbı kullanılır: **She is as tall as her brother.**",
-          "Olumsuzda **not as ... as** veya **not so ... as** (daha az / kadar … değil): **This phone isn't as expensive as yours.**",
-          "Karşılaştırmadan önce **much, a lot, a little, nearly, almost** gibi zarflar eklenebilir: **He is not nearly as fast as you.**",
+          "İki şeyin **aynı derecede** olduğunu söylemek için **as + sıfat/zarf + as** kalıbı kullanılır: **\\She is as tall as her brother.\\**",
+          "Olumsuzda **\\not as ... as\\** veya **\\not so ... as\\** (daha az / kadar  ve benzeri değil): **\\This phone isn't as expensive as yours.\\**",
+          "Karşılaştırmadan önce **\\much, a lot, a little, nearly, almost\\** gibi zarflar eklenebilir: **\\He is not nearly as fast as you.\\**",
         ],
         examplesTitle: "as ... as örnekleri",
         examplesLayout: "columns",
@@ -40,10 +42,10 @@ export const topicContent30: TopicContent = {
         title: "Too (Fazla, Aşırı)",
         titleEn: "Too",
         paragraphs: [
-          "**Too** sıfat veya zarftan **hemen önce** gelir ve **gereğinden fazla / aşırı** anlamı verir; çoğu zaman olumsuz bir sonuç ima eder.",
-          "Kalıp: **too + sıfat/zarf** → **The soup is too hot.** (Çorba çok sıcak — içilemez.)",
-          "**Too much / too many** isimle kullanılır: **too much sugar, too many people.**",
-          "**Too** + mastar: **It's too late to start.** **too ... to** = … olduğu için …-emez: **He was too tired to drive.**",
+          "**\\Too\\** sıfat veya zarftan **hemen önce** gelir ve **gereğinden fazla / aşırı** anlamı verir; çoğu zaman olumsuz bir sonuç ima eder.",
+          "Kalıp: **too + sıfat/zarf** → **\\The soup is too hot.\\** (Çorba çok sıcak — içilemez.)",
+          "**\\Too much / too many\\** isimle kullanılır: **\\too much sugar, too many people.\\**",
+          "**\\Too\\** + mastar: **\\It's too late to start.\\** **\\too ... to\\** =  ve benzeri olduğu için  ve benzeri-emez: **\\He was too tired to drive.\\**",
         ],
         examplesTitle: "too örnekleri",
         examplesLayout: "columns",
@@ -64,10 +66,10 @@ export const topicContent30: TopicContent = {
         title: "Enough (Yeterli)",
         titleEn: "Enough",
         paragraphs: [
-          "**Enough** **yeterli** anlamına gelir. **İsimden önce** gelir: **enough money, enough time.**",
-          "**Sıfat veya zarftan sonra** gelir: **old enough, quickly enough.** Yanlış: *enough old* → doğru: **old enough**.",
-          "**Enough ... to** yapısı: **He is old enough to drive.** **not ... enough to**: **The room isn't big enough for ten people.**",
-          "**Enough** olumsuzda yetersizlik bildirir: **We don't have enough chairs.**",
+          "**\\Enough\\** **\\yeterli\\** anlamına gelir. **İsimden önce** gelir: **\\enough money, enough time.\\**",
+          "**Sıfat veya zarftan sonra** gelir: **\\old enough, quickly enough.\\** Yanlış: *\\enough old\\* → doğru: **\\old enough\\**.",
+          "**\\Enough ... to\\** yapısı: **\\He is old enough to drive.\\** **\\not ... enough to\\**: **\\The room isn't big enough for ten people.\\**",
+          "**\\Enough\\** olumsuzda yetersizlik bildirir: **\\We don't have enough chairs.\\**",
         ],
         examplesTitle: "enough örnekleri",
         examplesLayout: "columns",
@@ -91,9 +93,9 @@ export const topicContent30: TopicContent = {
         title: "Too ile Enough Karşılaştırması",
         titleEn: "Too vs Enough",
         paragraphs: [
-          "**Too** = limitin **üstünde** (fazla, sorunlu); **enough** = ihtiyaç için **yeterli** veya **yetersiz** (not enough).",
-          "Aynı cümlede ikisi farklı anlam taşır: **The coffee is too hot but there's enough sugar.**",
-          "**Very** sadece dereceyi artırır, olumsuz sonuç vurgusu taşımaz: **very hot** ≠ **too hot** (içilebilir / içilemez farkı).",
+          "**\\Too\\** = limitin **üstünde** **\\fazla, sorunlu\\**; **\\enough\\** = ihtiyaç için **\\yeterli\\** veya **\\yetersiz\\** **\\not enough\\**.",
+          "Aynı cümlede ikisi farklı anlam taşır: **\\The coffee is too hot but there's enough sugar.\\**",
+          "**\\Very\\** sadece dereceyi artırır, olumsuz sonuç vurgusu taşımaz: **\\very hot\\** ≠ **\\too hot\\** (içilebilir / içilemez farkı).",
         ],
         examplesTitle: "too / enough / very",
         examplesLayout: "columns",
@@ -111,9 +113,9 @@ export const topicContent30: TopicContent = {
         title: "Günlük İfadeler",
         titleEn: "Everyday Patterns",
         paragraphs: [
-          "Ürün ve hizmet değerlendirmelerinde üç yapı sık geçer: **as good as**, **not fast enough**, **too expensive**.",
-          "**As ... as** karşılaştırma sorularında: **Is it as reliable as the old model?**",
-          "Tavsiye: **If it's too loud, turn it down.** **Make sure you have enough time.**",
+          "Ürün ve hizmet değerlendirmelerinde üç yapı sık geçer: **\\as good as\\**, **\\not fast enough\\**, **\\too expensive\\**.",
+          "**\\As ... as\\** karşılaştırma sorularında: **\\Is it as reliable as the old model?\\**",
+          "Tavsiye: **\\If it's too loud, turn it down.\\** **\\Make sure you have enough time.\\**",
         ],
         examplesTitle: "Pratik cümleler",
         examplesLayout: "columns",

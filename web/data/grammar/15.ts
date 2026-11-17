@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent15: TopicContent = {
   topicId: "15",
   viewMinutes: 9,
+  quizIntro:
+    "Quiz \\and, but, or, because, so\\ bağlaçlarıyla cümle birleştirmeyi ölçer. Her bağlacın anlam ilişkisini soruda ayırt et.",
   lesson: {
     parts: [
       {
@@ -10,23 +12,53 @@ export const topicContent15: TopicContent = {
         title: "And — Ekleme",
         titleEn: "And — Adding Ideas",
         paragraphs: [
-          "**And** iki fikri veya eylemi **birleştirir**; Türkçede çoğu zaman **ve** anlamına gelir. Benzer şeyleri, ardışık adımları veya birlikte gerçekleşen durumları tek bir cümlede bağlamak için kullanırsın: **I like tea and coffee.**",
-          "Kelime düzeyinde **and** isimleri, sıfatları ve fiilleri bağlayabilir: **a pen and a notebook**, **tall and strong**, **walk and talk**. Cümle düzeyinde iki bağımsız cümleyi bağlarken virgül kullanımı yaygındır: **She studied hard, and she passed the exam.**",
-          "**And** sadece olumlu ekleme yapar; zıtlık veya seçenek bildirmez. Kısa listelerde **and** son öğeden önce gelir (İngilizce listelerde Oxford virgülü isteğe bağlıdır; A1–A2 düzeyinde **bread, butter and cheese** yeterlidir).",
+          "**\\And\\** iki fikri veya eylemi **birleştirir**; Türkçede çoğu zaman **\\ve\\** anlamına gelir. Benzer şeyleri, ardışık adımları veya birlikte gerçekleşen durumları tek bir cümlede bağlamak için kullanırsın: **\\I like tea and coffee.\\**",
+          "Kelime düzeyinde **\\and\\** isimleri, sıfatları ve fiilleri bağlayabilir: **\\a pen and a notebook\\**, **\\tall and strong\\**, **\\walk and talk\\**. Cümle düzeyinde iki bağımsız cümleyi bağlarken virgül kullanımı yaygındır: **\\She studied hard, and she passed the exam.\\**",
+          "**\\And\\** sadece olumlu ekleme yapar; zıtlık veya seçenek bildirmez. Kısa listelerde **\\and\\** son öğeden önce gelir (İngilizce listelerde Oxford virgülü isteğe bağlıdır; A1–A2 düzeyinde **\\bread, butter and cheese\\** yeterlidir).",
         ],
         examplesTitle: "And örnekleri",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: { en: "İngilizce", tr: "Türkçe" },
         examples: [
-          { en: "Tom and Anna are friends.", tr: "Tom ve Anna arkadaş.", note: "isim + isim" },
-          { en: "I speak Turkish and English.", tr: "Türkçe ve İngilizce konuşurum.", note: "dil" },
-          { en: "She is smart and kind.", tr: "O zeki ve nazik.", note: "sıfat" },
-          { en: "We cooked and ate together.", tr: "Birlikte yemek yaptık ve yedik.", note: "fiil" },
-          { en: "I woke up, and I made coffee.", tr: "Uyandım ve kahve yaptım.", note: "iki cümle" },
-          { en: "There is a book and a pen on the desk.", tr: "Masada bir kitap ve bir kalem var." },
-          { en: "He plays football and basketball.", tr: "Futbol ve basketbol oynar." },
-          { en: "Monday, Tuesday and Wednesday", tr: "Pazartesi, salı ve çarşamba", note: "liste" },
+          {
+            en: "Tom and Anna are friends.",
+            tr: "Tom ve Anna arkadaş.",
+            note: "isim + isim",
+          },
+          {
+            en: "I speak Turkish and English.",
+            tr: "Türkçe ve İngilizce konuşurum.",
+            note: "dil",
+          },
+          {
+            en: "She is smart and kind.",
+            tr: "O zeki ve nazik.",
+            note: "sıfat",
+          },
+          {
+            en: "We cooked and ate together.",
+            tr: "Birlikte yemek yaptık ve yedik.",
+            note: "fiil",
+          },
+          {
+            en: "I woke up, and I made coffee.",
+            tr: "Uyandım ve kahve yaptım.",
+            note: "iki cümle",
+          },
+          {
+            en: "There is a book and a pen on the desk.",
+            tr: "Masada bir kitap ve bir kalem var.",
+          },
+          {
+            en: "He plays football and basketball.",
+            tr: "Futbol ve basketbol oynar.",
+          },
+          {
+            en: "Monday, Tuesday and Wednesday",
+            tr: "Pazartesi, salı ve çarşamba",
+            note: "liste",
+          },
         ],
       },
       {
@@ -34,23 +66,42 @@ export const topicContent15: TopicContent = {
         title: "But — Zıtlık",
         titleEn: "But — Contrast",
         paragraphs: [
-          "**But** iki fikir arasında **zıtlık veya beklenmedik sonuç** kurar; Türkçede **ama, fakat, ancak** karşılığıdır. İkinci kısım birinciyi dengelemez veya ona ters düşer: **I am tired, but I can't sleep.**",
-          "Cümle düzeyinde **but** virgülden sonra gelir: **The film was long, but it was good.** Kelime düzeyinde daha az yaygındır; çoğunlukla tam cümleler veya ifade öbekleri arasında kullanılır.",
-          "**But** ile **and** karıştırılmamalıdır: **and** ekleme yapar, **but** karşıtlık. **She is young but experienced.** cümlesinde iki sıfat zıt görünse de aslında **dengeleme** anlamı vardır — İngilizcede doğal bir kullanımdır.",
+          "**\\But\\** iki fikir arasında **zıtlık veya beklenmedik sonuç** kurar; Türkçede **\\ama, fakat, ancak\\** karşılığıdır. İkinci kısım birinciyi dengelemez veya ona ters düşer: **\\I am tired, but I can't sleep.\\**",
+          "Cümle düzeyinde **\\but\\** virgülden sonra gelir: **\\The film was long, but it was good.\\** Kelime düzeyinde daha az yaygındır; çoğunlukla tam cümleler veya ifade öbekleri arasında kullanılır.",
+          "**\\But\\** ile **\\and\\** karıştırılmamalıdır: **\\and\\** ekleme yapar, **\\but\\** karşıtlık. **\\She is young but experienced.\\** cümlesinde iki sıfat zıt görünse de aslında **\\dengeleme\\** anlamı vardır — İngilizcede doğal bir kullanımdır.",
         ],
         examplesTitle: "But örnekleri",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: { en: "İngilizce", tr: "Türkçe" },
         examples: [
-          { en: "I like him, but he is busy.", tr: "Onu severim ama o meşgul." },
-          { en: "It was cheap, but it broke quickly.", tr: "Ucuzdu ama hemen kırıldı." },
+          {
+            en: "I like him, but he is busy.",
+            tr: "Onu severim ama o meşgul.",
+          },
+          {
+            en: "It was cheap, but it broke quickly.",
+            tr: "Ucuzdu ama hemen kırıldı.",
+          },
           { en: "She is small but strong.", tr: "O küçük ama güçlü." },
           { en: "We tried, but we failed.", tr: "Denedik ama başaramadık." },
-          { en: "He wants to go, but he has no money.", tr: "Gitmek istiyor ama parası yok." },
-          { en: "The weather is bad, but we are happy.", tr: "Hava kötü ama mutluyuz." },
-          { en: "I called, but nobody answered.", tr: "Aradım ama kimse açmadı." },
-          { en: "Simple but effective.", tr: "Basit ama etkili.", note: "kısa ifade" },
+          {
+            en: "He wants to go, but he has no money.",
+            tr: "Gitmek istiyor ama parası yok.",
+          },
+          {
+            en: "The weather is bad, but we are happy.",
+            tr: "Hava kötü ama mutluyuz.",
+          },
+          {
+            en: "I called, but nobody answered.",
+            tr: "Aradım ama kimse açmadı.",
+          },
+          {
+            en: "Simple but effective.",
+            tr: "Basit ama etkili.",
+            note: "kısa ifade",
+          },
         ],
       },
       {
@@ -58,9 +109,9 @@ export const topicContent15: TopicContent = {
         title: "Or — Seçenek",
         titleEn: "Or — Alternatives",
         paragraphs: [
-          "**Or** **seçenek, alternatif veya olasılık** sunar; Türkçede **veya, ya da** anlamına gelir. İki seçenekten biri geçerlidir: **Do you want tea or coffee?** Sorularda **or** çoğu zaman **ya … ya …** hissi verir.",
-          "Olumsuz cümlelerde **or** yerine **and** kullanılır çünkü iki şey de yapılmamıştır: **I don't like cats and dogs.** = hem kediyi hem köpeği sevmem. Olumlu seçenekte **or**: **You can sit here or there.**",
-          "Cümle düzeyinde **or** iki eylem arasında seçenek kurar: **We can stay home or go out.** **Either … or …** kalıbı ileri düzeyde vardır; A1–A2 için temel **or** yeterlidir.",
+          "**\\Or\\** **seçenek, alternatif veya olasılık** sunar; Türkçede **veya, ya da** anlamına gelir. İki seçenekten biri geçerlidir: **\\Do you want tea or coffee?\\** Sorularda **\\or\\** çoğu zaman **ya birini ya diğerini** hissi verir.",
+          "Olumsuz cümlelerde **\\or\\** yerine **\\and\\** kullanılır çünkü iki şey de yapılmamıştır: **\\I don't like cats and dogs.\\** = hem kediyi hem köpeği sevmem. Olumlu seçenekte **\\or\\**: **\\You can sit here or there.\\**",
+          "Cümle düzeyinde **\\or\\** iki eylem arasında seçenek kurar: **\\We can stay home or go out.\\** **\\Either\\** ile **\\or\\** birlikte kullanılan kalıp ileri düzeyde vardır; A1–A2 için temel **\\or\\** yeterlidir.",
         ],
         examplesTitle: "Or örnekleri",
         examplesLayout: "columns",
@@ -70,11 +121,24 @@ export const topicContent15: TopicContent = {
           { en: "Tea or coffee?", tr: "Çay mı kahve mi?", note: "kısa soru" },
           { en: "Is it Monday or Tuesday?", tr: "Pazartesi mi salı mı?" },
           { en: "Call me or send a message.", tr: "Beni ara veya mesaj at." },
-          { en: "You can walk or take the bus.", tr: "Yürüyebilir veya otobüse binebilirsin." },
+          {
+            en: "You can walk or take the bus.",
+            tr: "Yürüyebilir veya otobüse binebilirsin.",
+          },
           { en: "Red or blue?", tr: "Kırmızı mı mavi mi?" },
-          { en: "Study now or fail later.", tr: "Şimdi çalış ya da sonra kal.", note: "uyarı" },
-          { en: "He is a teacher or a doctor.", tr: "O öğretmen ya da doktor." },
-          { en: "We will meet at six or seven.", tr: "Altıda ya da yedide buluşuruz." },
+          {
+            en: "Study now or fail later.",
+            tr: "Şimdi çalış ya da sonra kal.",
+            note: "uyarı",
+          },
+          {
+            en: "He is a teacher or a doctor.",
+            tr: "O öğretmen ya da doktor.",
+          },
+          {
+            en: "We will meet at six or seven.",
+            tr: "Altıda ya da yedide buluşuruz.",
+          },
         ],
       },
       {
@@ -82,23 +146,48 @@ export const topicContent15: TopicContent = {
         title: "Because — Sebep",
         titleEn: "Because — Reason",
         paragraphs: [
-          "**Because** **neden, sebep** bildirir; Türkçede **çünkü, -dığı için** karşılığıdır. Cevap verirken veya açıklama yaparken kullanılır: **I stayed home because I was sick.** Sebep genelde **because** sonrasında gelir.",
-          "**Because** ile başlayan yan cümle (clause) ana cümleden önce veya sonra olabilir. Önce gelirse virgül kullanılır: **Because it was raining, we cancelled the picnic.** Sonra gelirse virgül isteğe bağlıdır: **We cancelled the picnic because it was raining.**",
-          "Günlük konuşmada kısa cevaplarda sadece **because** ile başlayan ifade de yeterlidir: **Why are you late? — Because I missed the bus.** Resmi yazıda **since / as** da sebep bildirir; A1–A2 için **because** yeterlidir.",
+          "**\\Because\\** **\\neden, sebep\\** bildirir; Türkçede **çünkü, -dığı için** karşılığıdır. Cevap verirken veya açıklama yaparken kullanılır: **\\I stayed home because I was sick.\\** Sebep genelde **\\because\\** sonrasında gelir.",
+          "**\\Because\\** ile başlayan yan cümle (\\clause\\) ana cümleden önce veya sonra olabilir. Önce gelirse virgül kullanılır: **\\Because it was raining, we cancelled the picnic.\\** Sonra gelirse virgül isteğe bağlıdır: **\\We cancelled the picnic because it was raining.\\**",
+          "Günlük konuşmada kısa cevaplarda sadece **\\because\\** ile başlayan ifade de yeterlidir: **\\Why are you late? — Because I missed the bus.\\** Resmi yazıda **\\since / as\\** da sebep bildirir; A1–A2 için **\\because\\** yeterlidir.",
         ],
         examplesTitle: "Because örnekleri",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: { en: "İngilizce", tr: "Türkçe" },
         examples: [
-          { en: "I am happy because you called.", tr: "Aradığın için mutluyum." },
-          { en: "She cried because she was sad.", tr: "Üzgün olduğu için ağladı." },
-          { en: "Because I was tired, I went to bed early.", tr: "Yorgun olduğum için erken yattım." },
-          { en: "We can't go out because it is snowing.", tr: "Kar yağdığı için dışarı çıkamıyoruz." },
-          { en: "He failed because he didn't study.", tr: "Çalışmadığı için kaldı." },
-          { en: "They left because the film ended.", tr: "Film bittiği için ayrıldılar." },
-          { en: "I like Istanbul because it is lively.", tr: "İstanbul'u canlı olduğu için seviyorum." },
-          { en: "Why? Because I said so.", tr: "Neden? Çünkü öyle dedim.", note: "konuşma" },
+          {
+            en: "I am happy because you called.",
+            tr: "Aradığın için mutluyum.",
+          },
+          {
+            en: "She cried because she was sad.",
+            tr: "Üzgün olduğu için ağladı.",
+          },
+          {
+            en: "Because I was tired, I went to bed early.",
+            tr: "Yorgun olduğum için erken yattım.",
+          },
+          {
+            en: "We can't go out because it is snowing.",
+            tr: "Kar yağdığı için dışarı çıkamıyoruz.",
+          },
+          {
+            en: "He failed because he didn't study.",
+            tr: "Çalışmadığı için kaldı.",
+          },
+          {
+            en: "They left because the film ended.",
+            tr: "Film bittiği için ayrıldılar.",
+          },
+          {
+            en: "I like Istanbul because it is lively.",
+            tr: "İstanbul'u canlı olduğu için seviyorum.",
+          },
+          {
+            en: "Why? Because I said so.",
+            tr: "Neden? Çünkü öyle dedim.",
+            note: "konuşma",
+          },
         ],
       },
       {
@@ -106,9 +195,9 @@ export const topicContent15: TopicContent = {
         title: "So — Sonuç",
         titleEn: "So — Result",
         paragraphs: [
-          "**So** **sonuç veya mantıksal çıkarım** bildirir; Türkçede **bu yüzden, o yüzden, dolayısıyla** karşılığıdır. Bir durumun doğal sonucunu bağlar: **It was cold, so I wore a coat.**",
-          "**Because** sebebi, **so** sonucu vurgular. Aynı mantığı tek cümlede iki bağlaçla kurmaktan kaçın: ~~Because I was tired, so I slept.~~ Doğru: **I was tired, so I slept.** veya **Because I was tired, I slept.**",
-          "Konuşmada **so** sık kullanılır ve tonu akıcı kılar. **So** cümle başında da gelebilir: **So, what do you think?** Bu kullanım **sonuç** değil **geçiş** anlamı taşır; temel sebep-sonuç kalıbını önce pekiştir.",
+          "**\\So\\** **sonuç veya mantıksal çıkarım** bildirir; Türkçede **bu yüzden, o yüzden, dolayısıyla** karşılığıdır. Bir durumun doğal sonucunu bağlar: **\\It was cold, so I wore a coat.\\**",
+          "**\\Because\\** sebebi, **\\so\\** sonucu vurgular. Aynı mantığı tek cümlede iki bağlaçla kurmaktan kaçın: ~~Because I was tired, so I slept.~~ Doğru: **\\I was tired, so I slept.\\** veya **\\Because I was tired, I slept.\\**",
+          "Konuşmada **\\so\\** sık kullanılır ve tonu akıcı kılar. **\\So\\** cümle başında da gelebilir: **\\So, what do you think?\\** Bu kullanım **sonuç** değil **geçiş** anlamı taşır; temel sebep-sonuç kalıbını önce pekiştir.",
         ],
         examplesTitle: "So örnekleri",
         examplesLayout: "columns",
@@ -116,12 +205,27 @@ export const topicContent15: TopicContent = {
         exampleHeaders: { en: "İngilizce", tr: "Türkçe" },
         examples: [
           { en: "I was hungry, so I ate.", tr: "Açtım, bu yüzden yedim." },
-          { en: "It was late, so we went home.", tr: "Geç olmuştu, eve gittik." },
-          { en: "She didn't call, so I worried.", tr: "Aramadı, endişelendim." },
-          { en: "The shop was closed, so we left.", tr: "Dükkan kapalıydı, ayrıldık." },
+          {
+            en: "It was late, so we went home.",
+            tr: "Geç olmuştu, eve gittik.",
+          },
+          {
+            en: "She didn't call, so I worried.",
+            tr: "Aramadı, endişelendim.",
+          },
+          {
+            en: "The shop was closed, so we left.",
+            tr: "Dükkan kapalıydı, ayrıldık.",
+          },
           { en: "He studied hard, so he passed.", tr: "Çok çalıştı, geçti." },
-          { en: "There was no bus, so we walked.", tr: "Otobüs yoktu, yürüdük." },
-          { en: "I forgot my key, so I couldn't enter.", tr: "Anahtarımı unuttum, giremedim." },
+          {
+            en: "There was no bus, so we walked.",
+            tr: "Otobüs yoktu, yürüdük.",
+          },
+          {
+            en: "I forgot my key, so I couldn't enter.",
+            tr: "Anahtarımı unuttum, giremedim.",
+          },
           { en: "You are tired, so rest.", tr: "Yorgunsun, dinlen." },
         ],
       },
@@ -130,9 +234,9 @@ export const topicContent15: TopicContent = {
         title: "Noktalama ve Sıra",
         titleEn: "Punctuation & Word Order",
         paragraphs: [
-          "İki **bağımsız cümleyi** **and, but, so** ile bağlarken genelde virgül kullanılır: **I finished my work, and I went out.** Tek özne veya tek yüklemli yapılarda virgül gerekmez: **She sings and dances.**",
-          "**Because** ile başlayan yan cümle cümlenin başındaysa virgül konur: **Because it rained, the match stopped.** **Because** sonradan gelirse virgül çoğu zaman atlanır (kısa cümlelerde).",
-          "Bağlaç seçimi **anlam ilişkisine** bağlıdır: ekleme → **and**, zıtlık → **but**, seçenek → **or**, sebep → **because**, sonuç → **so**. Uzun hikâyelerde bu beş bağlaç cümleleri birleştirerek akıcı anlatım kurar.",
+          "İki **bağımsız cümleyi** **\\and, but, so\\** ile bağlarken genelde virgül kullanılır: **\\I finished my work, and I went out.\\** Tek özne veya tek yüklemli yapılarda virgül gerekmez: **\\She sings and dances.\\**",
+          "**\\Because\\** ile başlayan yan cümle cümlenin başındaysa virgül konur: **\\Because it rained, the match stopped.\\** **\\Because\\** sonradan gelirse virgül çoğu zaman atlanır (kısa cümlelerde).",
+          "Bağlaç seçimi **anlam ilişkisine** bağlıdır: ekleme → **\\and\\**, zıtlık → **\\but\\**, seçenek → **\\or\\**, sebep → **\\because\\**, sonuç → **\\so\\**. Uzun hikâyelerde bu beş bağlaç cümleleri birleştirerek akıcı anlatım kurar.",
         ],
         examplesTitle: "Birleşik cümleler",
         examplesLayout: "columns",
@@ -301,7 +405,8 @@ export const topicContent15: TopicContent = {
       id: "15-tf-2",
       subtopicId: "15-4",
       type: "true_false",
-      prompt: "'Because' ile başlayan cümle virgül ile ana cümleye bağlanabilir.",
+      prompt:
+        "'Because' ile başlayan cümle virgül ile ana cümleye bağlanabilir.",
       options: ["Doğru", "Yanlış"],
       correctIndex: 0,
       explanation: "Because it rained, we stayed.",
@@ -319,7 +424,8 @@ export const topicContent15: TopicContent = {
       id: "15-tf-4",
       subtopicId: "15-5",
       type: "true_false",
-      prompt: "'So' ve 'because' aynı cümlede sık ve doğru şekilde birlikte kullanılır.",
+      prompt:
+        "'So' ve 'because' aynı cümlede sık ve doğru şekilde birlikte kullanılır.",
       options: ["Doğru", "Yanlış"],
       correctIndex: 1,
       explanation: "Genelde ya because ya so yeterlidir.",
@@ -407,7 +513,8 @@ export const topicContent15: TopicContent = {
       id: "quiz-15-1",
       subtopicId: "15-1",
       type: "multiple_choice",
-      prompt: '"Bread, cheese and olives" cümlesindeki bağlaç hangi işlevdedir?',
+      prompt:
+        '"Bread, cheese and olives" cümlesindeki bağlaç hangi işlevdedir?',
       options: ["Zıtlık", "Ekleme", "Sebep", "Sonuç"],
       correctIndex: 1,
       explanation: "And liste ve ekleme yapar.",

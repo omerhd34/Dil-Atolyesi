@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent8: TopicContent = {
   topicId: "8",
   viewMinutes: 8,
+  quizIntro:
+    "Sorular zaman edatları \\at, in, on\\ ile konum edatlarını karıştırır. Olay mı yer mi, nokta mı yüzey mi olduğunu soruda oku.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent8: TopicContent = {
         title: "Zaman Edatları: at, in, on",
         titleEn: "Prepositions of Time — at, in, on",
         paragraphs: [
-          "İngilizcede bir olayın **ne zaman** olduğunu söylerken üç temel zaman edatı kullanılır: **at**, **in** ve **on**. Hangisini seçeceğin, zamanı **nokta**, **dönem** veya **gün/tarih** olarak mı düşündüğüne bağlıdır.",
-          "**at** en dar zaman dilimleri için gelir: **saat** (**at 5 o'clock**), **gece** (**at night**), belirli anlar (**at noon**, **at midnight**). İngiliz İngilizcesinde hafta sonu için **at the weekend** de yaygındır; Amerikan İngilizcesinde çoğu zaman **on the weekend** denir.",
-          "**in** daha geniş aralıklar için kullanılır: **aylar** (**in March**), **yıllar** (**in 2025**), **mevsimler** (**in summer**) ve günün **bölümleri** (**in the morning**, **in the afternoon**, **in the evening**). **on** ise **gün adları** (**on Monday**) ve **tarihler** (**on 14 November**) ile gelir.",
+          "İngilizcede bir olayın **\\ne zaman\\** olduğunu söylerken üç temel zaman edatı kullanılır: **\\at\\**, **\\in\\** ve **\\on\\**. Hangisini seçeceğin, zamanı **\\nokta\\**, **dönem** veya **gün/tarih** olarak mı düşündüğüne bağlıdır.",
+          "**\\at\\** en dar zaman dilimleri için gelir: **\\saat\\** (**\\at 5 o'clock\\**), **\\gece\\** (**\\at night\\**), belirli anlar (**\\at noon\\**, **\\at midnight\\**). İngiliz İngilizcesinde hafta sonu için **\\at the weekend\\** de yaygındır; Amerikan İngilizcesinde çoğu zaman **\\on the weekend\\** denir.",
+          "**\\in\\** daha geniş aralıklar için kullanılır: **\\aylar\\** (**\\in March\\**), **yıllar** (**\\in 2025\\**), **\\mevsimler\\** (**\\in summer\\**) ve günün **bölümleri** (**\\in the morning\\**, **\\in the afternoon\\**, **\\in the evening\\**). **\\on\\** ise **gün adları** (**\\on Monday\\**) ve **\\tarihler\\** (**\\on 14 November\\**) ile gelir.",
         ],
         examplesTitle: "Zaman edatı örnekleri",
         examplesLayout: "columns",
@@ -35,9 +37,9 @@ export const topicContent8: TopicContent = {
         title: "Yer Edatları: in, on, at",
         titleEn: "Prepositions of Place — in, on, at",
         paragraphs: [
-          "Yer bildirirken de **in**, **on** ve **at** üçlüsü karşına çıkar; ancak zaman edatlarından farklı mantıkla çalışırlar. **in** genelde **sınırları olan, içine girilen** yerler için kullanılır: **oda**, **şehir**, **ülke** (**in the kitchen**, **in Istanbul**).",
-          "**on** bir yüzeyin **üstünde** veya bir çizginin **boyunca** durmayı anlatır: **masanın üstü** (**on the table**), **sokak** (**on Main Street**), **kat** (**on the second floor**). Nesne yüzeyle temas halindeyse **on** doğal seçimdir.",
-          "**at** belirli bir **nokta** veya **adres / kurum** vurgular: **okul**, **ev**, **durak** (**at school**, **at home**, **at the bus stop**). Türkçede her üç edat da çoğu zaman **-de/-da** ile karşılanır; doğru İngilizce seçimi için yerin **içi mi, üstü mü, nokta mı** olduğunu ayırt etmek gerekir.",
+          "Yer bildirirken de **\\in\\**, **\\on\\** ve **\\at\\** üçlüsü karşına çıkar; ancak zaman edatlarından farklı mantıkla çalışırlar. **\\in\\** genelde **sınırları olan, içine girilen** yerler için kullanılır: **\\oda\\**, **şehir**, **ülke** (**\\in the kitchen\\**, **\\in Istanbul\\**).",
+          "**\\on\\** bir yüzeyin **üstünde** veya bir çizginin **\\boyunca\\** durmayı anlatır: **masanın üstü** (**\\on the table\\**), **\\sokak\\** (**\\on Main Street\\**), **\\kat\\** (\\**on the second floor**\\). Nesne yüzeyle temas halindeyse **\\on\\** doğal seçimdir.",
+          "**\\at\\** belirli bir **\\nokta\\** veya **\\adres / kurum\\** vurgular: **\\okul\\**, **\\ev\\**, **\\durak\\** (**\\at school\\**, **\\at home\\**, **\\at the bus stop\\**). Türkçede her üç edat da çoğu zaman **\\-de/-da\\** ile karşılanır; doğru İngilizce seçimi için yerin **içi mi, üstü mü, nokta mı** olduğunu ayırt etmek gerekir.",
         ],
         examplesTitle: "Yer edatı örnekleri",
         examplesLayout: "columns",
@@ -61,12 +63,12 @@ export const topicContent8: TopicContent = {
       },
       {
         id: "8-3",
-        title: "Konum: under, next to, between…",
-        titleEn: "Position — under, next to, between…",
+        title: "Konum: under, next to, between ve benzeri",
+        titleEn: "Position — under, next to, between, and more",
         paragraphs: [
           "Bir nesnenin başka bir nesneye **göre nerede** olduğunu anlatmak için konum edatları kullanılır. Bunlar zaman veya genel yer edatlarından ayrı olarak **ilişki ve yön** vurgular.",
-          "**under** (altında), **behind** (arkasında), **in front of** (önünde) gibi edatlar üç boyutlu konumu tarif eder. **next to** (yanında) ve **between** (arasında, iki şeyin ortasında) ise nesneler arasındaki mesafeyi söyler.",
-          "Kalıp genelde **özne + fiil + edat + nesne** şeklindedir: **The cat is under the table.** **My house is next to the park.** Soru kurarken **Where is…?** ile birlikte bu yapıları kullanırsın.",
+          "**\\under\\** (altında), **\\behind\\** (arkasında), **\\in front of\\** (önünde) gibi edatlar üç boyutlu konumu tarif eder. **\\next to\\** (yanında) ve **\\between\\** (arasında, iki şeyin ortasında) ise nesneler arasındaki mesafeyi söyler.",
+          "Kalıp genelde **özne + fiil + edat + nesne** şeklindedir: **\\The cat is under the table.\\** **\\My house is next to the park.\\** Soru kurarken **\\Where is the cat?\\** gibi kalıplarla bu yapıları kullanırsın.",
         ],
         examplesTitle: "Konum edatları",
         examplesLayout: "columns",
@@ -113,9 +115,9 @@ export const topicContent8: TopicContent = {
         title: "Sabit Kalıplar ve Pratik",
         titleEn: "Fixed Phrases & Practice",
         paragraphs: [
-          "Bazı zaman ve yer ifadeleri **sabit kalıp** olarak ezberlenir; edat değiştirmek cümleyi yanlış yapar. Örneğin **at home** (evde) ve **go to school** (okula gitmek) gibi yaygın kombinasyonlar günlük konuşmada sürekli duyulur.",
-          "Zaman tarafında **today**, **tomorrow** ve **yesterday** gibi kelimelerin yanına edat gelmez: **I work on Monday** ama **I work today**. Yer tarafında **arrive in** (şehir/ülke) ile **arrive at** (küçük yer) ayrımı sık sorulur: **arrive in London**, **arrive at the airport**.",
-          "Cümle kurarken önce **zamanı**, sonra **yeri**, en son **eylemi** düşünmek doğal sıradır: **We meet at 6 o'clock on Friday at the cafe.** Kısa pratik cümlelerle **at / in / on** seçimini otomatikleştirmek A1 seviyesinin en verimli yoludur.",
+          "Bazı zaman ve yer ifadeleri **sabit kalıp** olarak ezberlenir; edat değiştirmek cümleyi yanlış yapar. Örneğin **\\at home\\** (\\evde\\) ve **\\go to school\\** (\\okula gitmek\\) gibi yaygın kombinasyonlar günlük konuşmada sürekli duyulur.",
+          "Zaman tarafında **\\today\\**, **\\tomorrow\\** ve **\\yesterday\\** gibi kelimelerin yanına edat gelmez: **\\I work on Monday\\** ama **\\I work today\\**. Yer tarafında **\\arrive in\\** (şehir/ülke) ile **\\arrive at\\** (küçük yer) ayrımı sık sorulur: **\\arrive in London\\**, **\\arrive at the airport\\**.",
+          "Cümle kurarken önce **zamanı**, sonra **\\yeri\\**, en son **\\eylemi\\** düşünmek doğal sıradır: **\\We meet at 6 o'clock on Friday at the cafe.\\** Kısa pratik cümlelerle **\\at / in / on\\** seçimini otomatikleştirmek A1 seviyesinin en verimli yoludur.",
         ],
         examplesTitle: "Sabit kalıp cümleler",
         examplesLayout: "columns",

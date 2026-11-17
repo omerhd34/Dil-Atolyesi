@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent2: TopicContent = {
   topicId: "2",
   viewMinutes: 8,
+  quizIntro:
+    "Alıştırma soruları bu dersteki özne zamirleri ve \\to be\\ çekimlerini ölçer. Olumlu, olumsuz ve soru kalıplarında doğru \\am, is, are\\ seçimine dikkat et.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,11 @@ export const topicContent2: TopicContent = {
         title: "Özne Zamirleri",
         titleEn: "Subject Pronouns",
         paragraphs: [
-          "İngilizcede cümlenin kim hakkında olduğunu söyleyen kelimelere **özne zamirleri (subject pronouns)** denir. Bunlar **I, you, he, she, it, we, they** olmak üzere yedi tanedir. Her zamirin kim için kullanıldığını bilmek, doğru fiil çekimini seçmenin ilk adımıdır.",
-          "**I** (ben) ve **you** (sen / siz) kişi ayrımı yapmadan kullanılır. **He** erkek için, **she** kadın için, **it** ise hayvan, eşya veya durum için tercih edilir. **We** (biz) konuşanı da içeren grubu, **they** (onlar) ise başka kişileri veya çoğul nesneleri işaret eder.",
-          "Türkçede tek bir **o** zamiri varken İngilizcede cinsiyet ve canlılık ayrımı vardır: kişi erkekse **he**, kadınsa **she**, hayvan veya nesne ise **it** dersin. Bu ayrımı cümle kurarken baştan netleştirmek gerekir.",
+          "İngilizcede cümlenin kim hakkında olduğunu söyleyen kelimelere **özne zamirleri** yani **\\subject pronouns\\** denir. Bunlar **\\I\\**, **\\you\\**, **\\he\\**, **\\she\\**, **\\it\\**, **\\we\\** ve **\\they\\** olmak üzere 7 tanedir. Her zamirin kim için kullanıldığını bilmek, doğru fiil çekimini seçmenin ilk adımıdır.",
+
+          "Konuşan kişi için **\\I\\**, karşındaki kişi veya kişiler için **\\you\\** kullanılır. Bu iki zamir cinsiyet ayrımı yapmaz. Konuşanı da içine alan bir grubu anlatmak için **\\we\\**, konuşanın ve karşısındakinin dışında kalan kişileri veya çoğul nesneleri anlatmak için ise **\\they\\** kullanılır.",
+
+          "Türkçede tek bir **o** zamiri varken İngilizcede cinsiyet ve canlılık ayrımı vardır: Erkek için **\\he\\**, kadın için **\\she\\**, hayvan, eşya veya durum için **\\it\\** kullanılır. Bu ayrımı cümle kurarken baştan netleştirmek gerekir.",
         ],
         examplesTitle: "Özne zamirleri",
         examplesLayout: "columns",
@@ -33,9 +37,9 @@ export const topicContent2: TopicContent = {
         title: "Olmak Fiili: Olumlu Cümleler",
         titleEn: "To Be — Affirmative",
         paragraphs: [
-          "**To be** fiili Türkçedeki **olmak / -dır / -dir** anlamına gelir. Şimdiki zamanda üç biçimi vardır: **am**, **is** ve **are**. Hangisini kullanacağın özneye bağlıdır.",
-          "**I** ile her zaman **am** gelir: **I am a student.** **He, she, it** ile **is** kullanılır: **She is happy.** **You, we, they** ile ise **are** gelir: **They are teachers.**",
-          "Temel kalıp şöyledir: **özne + am/is/are + tamamlayıcı**. Tamamlayıcı bir meslek (**a doctor**), bir sıfat (**tired**) veya bir yer (**at home**) olabilir. Bu yapı kendini tanıtmak, duygu söylemek ve konum bildirmek için günlük İngilizcenin omurgasıdır.",
+          "**\\To be\\** fiili Türkçedeki **olmak / -dır / -dir** anlamına gelir. Şimdiki durumu anlatırken üç biçimi kullanılır: **\\am\\**, **\\is\\** ve **\\are\\**. Hangisini kullanacağın özneye bağlıdır.",
+          "**\\I\\** ile her zaman **\\am\\** gelir: **\\I am a student.\\** **\\He, she, it\\** ile **\\is\\** kullanılır: **\\She is happy.\\** **\\You, we, they\\** ile ise **\\are\\** gelir: **\\They are teachers.\\**",
+          "Temel kalıp şöyledir: **özne + \\am/is/are\\ + tamamlayıcı**. Tamamlayıcı bir meslek (**\\an engineer\\**), bir sıfat (**\\tired\\**) veya bir yer (**\\at home\\**) olabilir. Bu yapı kendini tanıtmak, duygu söylemek ve konum bildirmek için günlük İngilizcenin omurgasıdır.",
         ],
         examplesTitle: "Olumlu örnekler",
         examplesLayout: "columns",
@@ -61,9 +65,9 @@ export const topicContent2: TopicContent = {
         title: "Olumsuz Cümleler",
         titleEn: "To Be — Negative",
         paragraphs: [
-          "Olumsuz cümlede **am / is / are** fiilinin hemen ardına **not** eklenir. Kalıp: **özne + am/is/are + not + tamamlayıcı**. Örneğin **I am not tired.** veya **He is not here.**",
-          "Konuşmada ve yazıda kısaltmalar çok yaygındır. **is not** → **isn't**, **are not** → **aren't** olur. **am not** için standart kısaltma **I'm not** şeklindedir; **amn't** kullanılmaz.",
-          "Olumsuzluk yalnızca **to be** üzerine biner; özne ve tamamlayıcı aynı kalır. **She is a teacher.** → **She isn't a teacher.** gibi tek değişiklik yeterlidir.",
+          "Olumsuz cümlede **\\am / is / are\\** fiilinin hemen ardına **\\not\\** eklenir. Kalıp: **özne + \\am/is/are\\ + \\not\\ + tamamlayıcı**. Örneğin **\\I am not tired\\.** veya **\\He is not here.\\**",
+          "Konuşmada ve yazıda kısaltmalar çok yaygındır. **\\is not\\** → **\\isn't\\**, **\\are not\\** → **\\aren't\\** olur. **\\am not\\** için standart kısaltma **\\I'm not\\** şeklindedir; **\\amn't\\** kullanılmaz.",
+          "Olumsuzluk yalnızca **\\to be\\** üzerine biner; özne ve tamamlayıcı aynı kalır. **\\She is a teacher.\\** → **\\She isn't a teacher.\\** gibi tek değişiklik yeterlidir.",
         ],
         examplesTitle: "Olumsuz örnekler",
         examplesLayout: "columns",
@@ -93,9 +97,9 @@ export const topicContent2: TopicContent = {
         title: "Soru Cümleleri ve Kısa Cevaplar",
         titleEn: "Questions & Short Answers",
         paragraphs: [
-          "**To be** ile soru kurmak için fiili öznenin önüne alırsın: **Am / Is / Are + özne + tamamlayıcı?** Örnek: **Are you ready?** **Is she a nurse?** **Am I late?**",
-          "Kısa cevaplarda fiil tekrar edilir. Olumlu: **Yes, I am. / Yes, she is. / Yes, they are.** Olumsuz: **No, I'm not. / No, he isn't. / No, we aren't.** Kısa cevapta tamamlayıcıyı tekrar etmene gerek yoktur.",
-          "Dikkat: Olumlu kısa cevapta **I am** kısaltılmaz (**Yes, I'm.** denmez). Olumsuzda ise **No, I'm not.** doğal ve doğrudur.",
+          "**\\To be\\** ile soru kurmak için fiili öznenin önüne alırsın: **\\Am / Is / Are\\ + özne + tamamlayıcı?** Örnek: **\\Are you ready?\\** **\\Is she a nurse?\\** **\\Am I late?\\**",
+          "Kısa cevaplarda fiil tekrar edilir. Olumlu: **\\Yes, I am./ Yes, she is. / Yes, they are.\\** Olumsuz: **\\No, I'm not. / No, he isn't. / No, we aren't.\\** Kısa cevapta tamamlayıcıyı tekrar etmene gerek yoktur.",
+          "Dikkat: Olumlu kısa cevapta **\\I am\\** kısaltılmaz (**\\Yes, I'm.\\** denmez). Olumsuzda ise **\\No, I'm not.\\** doğal ve doğrudur.",
         ],
         examplesTitle: "Soru ve kısa cevaplar",
         examplesLayout: "columns",
@@ -123,9 +127,9 @@ export const topicContent2: TopicContent = {
         title: "Kısaltmalar",
         titleEn: "Contractions",
         paragraphs: [
-          "Günlük konuşmada **to be** fiili çoğu zaman özneyle birleşerek kısaltılır. **I am** → **I'm**, **you are** → **you're**, **he is** → **he's**, **she is** → **she's**, **it is** → **it's**, **we are** → **we're**, **they are** → **they're**.",
-          "Olumsuzda da aynı mantık vardır: **isn't**, **aren't** ve **I'm not**. Bu biçimler resmi yazılardan çok sohbet, mesaj ve günlük diyaloglarda tercih edilir; anlam değişmez, yalnızca söyleyiş kısalır.",
-          "Kısaltmaları sesli tekrar etmek önemlidir çünkü dinlediğinde tek kelime gibi duyarsın. **She's a teacher** ile **She is a teacher** aynı anlama gelir; biri daha doğal konuşma tonundadır.",
+          "Günlük konuşmada **\\to be\\** fiili çoğu zaman özneyle birleşerek kısaltılır. **\\I am\\** → **\\I'm\\**, **\\you are\\** → **\\you're\\**, **\\he is\\** → **\\he's\\**, **\\she is\\** → **\\she's\\**, **\\it is\\** → **\\it's\\**, **\\we are\\** → **\\we're\\**, **\\they are\\** → **\\they're\\**.",
+          "Olumsuzda da aynı mantık vardır: **\\isn't\\**, **\\aren't\\**, **\\I'm not\\**. Bu biçimler resmi yazılardan çok sohbet, mesaj ve günlük diyaloglarda tercih edilir; anlam değişmez, yalnızca söyleyiş kısalır.",
+          "Kısaltmaları sesli tekrar etmek önemlidir çünkü dinlediğinde tek kelime gibi duyarsın. **\\She's a teacher\\** ile **\\She is a teacher\\** aynı anlama gelir; biri daha doğal konuşma tonundadır.",
         ],
         examplesTitle: "Kısaltma örnekleri",
         examplesLayout: "columns",

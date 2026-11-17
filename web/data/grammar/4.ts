@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent4: TopicContent = {
   topicId: "4",
   viewMinutes: 8,
+  quizIntro:
+    "Alıştırma \\this, that, these, those\\ ile mesafe ve tekil–çoğul seçimini test eder. İşaret sıfatı mı zamir mi olduğuna dikkat et.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent4: TopicContent = {
         title: "This ve That — Tekil, Yakın ve Uzak",
         titleEn: "This and That — Singular Near & Far",
         paragraphs: [
-          "**This** ve **that**, İngilizcede **işaret sıfatı** veya **işaret zamiri** olarak kullanılan tekil kelimelerdir. **This** **yakındaki** tekil nesne veya kişi için kullanılır (Türkçede **bu**); **that** ise **uzaktaki** tekil için kullanılır (**şu / o**). Mesafe fiziksel olabilir (**this pen** masanın üzerinde) veya konuşmacıya yakın bir zaman/mekan (**this week**).",
-          "Tekil isimlerle **işaret sıfatı** olarak gelirler: **this book** (bu kitap), **that car** (şu araba). Cümlede **to be** ile **işaret zamiri** olarak da kullanılırlar: **This is a book.** **That is my teacher.** Burada **this/that** özne gibidir ve **is** ile çekimlenir.",
-          "Karar verirken iki eksen vardır: **sayı** (tekil → this/that) ve **mesafe** (yakın → this, uzak → that). Tekil sorularda **What is this?** veya **What is that?** kalıpları çok yaygındır; cevap genelde **It is a …** veya **It's a …** ile verilir.",
+          "**\\This\\** ve **\\that\\**, İngilizcede **işaret sıfatı** veya **işaret zamiri** olarak kullanılan tekil kelimelerdir. **\\This\\** **yakındaki** tekil nesne veya kişi için kullanılır (Türkçede **\\bu\\**); **\\that\\** ise **\\uzaktaki\\** tekil için kullanılır (**şu / o**). Mesafe fiziksel olabilir (**\\this pen\\** masanın üzerinde) veya konuşmacıya yakın bir zaman/mekan (**\\this week\\**).",
+          "Tekil isimlerle **işaret sıfatı** olarak gelirler: **\\this book\\** (\\bu kitap\\), **\\that car\\** (şu araba). Cümlede **\\to be\\** ile **işaret zamiri** olarak da kullanılırlar: **\\This is a book.\\** **\\That is my teacher.\\** Burada **this/that** özne gibidir ve **\\is\\** ile çekimlenir.",
+          "Karar verirken iki eksen vardır: **sayı** (**\\this\\** ve **\\that\\** tekil; **\\these\\** ve **\\those\\** çoğul) ve **mesafe** (yakın, uzak). Tekil sorularda **\\What is this?\\** veya **\\What is that?\\** sık kullanılır; cevap genelde **\\It is a book.\\** veya **\\It's a pen.\\** gibi tam cümledir.",
         ],
         examplesTitle: "This / That örnekleri",
         examplesLayout: "columns",
@@ -66,9 +68,9 @@ export const topicContent4: TopicContent = {
         title: "These ve Those — Çoğul",
         titleEn: "These and Those — Plural",
         paragraphs: [
-          "**These** ve **those**, tekil **this** ve **that**'in çoğul karşılıklarıdır. **These** **yakındaki çoğul** nesneler için kullanılır (Türkçede **bunlar**); **those** **uzaktaki çoğul** için kullanılır (**şunlar / onlar**). Tekil çiftle aynı mantık geçerlidir; yalnızca sayı çoğula döner.",
-          "Çoğul isimlerin önünde **işaret sıfatı** olarak gelirler: **these books**, **those keys**. Tek başına **işaret zamiri** olduklarında **are** ile çekimlenir: **These are my books.** **Those are her keys.** Tekilde **is**, çoğulda **are** kullanmayı unutma.",
-          "Soru kalıpları: **What are these?** **Are those your bags?** Olumlu cevap **Yes, they are.** Olumsuz **No, they aren't.** İşaret ederek konuşurken this/these ile baş parmağını veya eli yakına, that/those ile uzağı göstermek İngilizce dinleme pratiğinde de mesafe ipucudur.",
+          "**\\These\\** ve **\\those\\**, tekil **\\this\\** ve **\\that\\**'in çoğul karşılıklarıdır. **\\These\\** **yakındaki çoğul** nesneler için kullanılır (Türkçede **\\bunlar\\**); **\\those\\** **uzaktaki çoğul** için kullanılır (**şunlar / onlar**). Tekil çiftle aynı mantık geçerlidir; yalnızca sayı çoğula döner.",
+          "Çoğul isimlerin önünde **işaret sıfatı** olarak gelirler: **\\these books\\**, **\\those keys\\**. Tek başına **işaret zamiri** olduklarında **\\are\\** ile çekimlenir: **\\These are my books.\\** **\\Those are her keys.\\** Tekilde **\\is\\**, çoğulda **\\are\\** kullanmayı unutma.",
+          "Soru kalıpları: **\\What are these?\\** **\\Are those your bags?\\** Olumlu cevap **\\Yes, they are.\\** Olumsuz **\\No, they aren't.\\** İşaret ederek konuşurken this/these ile baş parmağını veya eli yakına, that/those ile uzağı göstermek İngilizce dinleme pratiğinde de mesafe ipucudur.",
         ],
         examplesTitle: "These / Those örnekleri",
         examplesLayout: "columns",
@@ -122,9 +124,9 @@ export const topicContent4: TopicContent = {
         title: "İşaret Sıfatı ve İşaret Zamiri",
         titleEn: "Demonstrative Adjective vs Pronoun",
         paragraphs: [
-          "Aynı kelime (**this, that, these, those**) iki farklı görevde kullanılabilir. **İşaret sıfatı (demonstrative adjective)** doğrudan ismin önünde durur ve ismi niteleştirir: **this book**, **those cars**. Cümlede mutlaka **isim** vardır.",
-          "**İşaret zamiri (demonstrative pronoun)** ismin yerini alır; sonra isim gelmez: **This is my book.** (= Bu benim kitabım.) **That is expensive.** (= O pahalı.) Karşılaştırma: **This book is new.** (sıfat + isim) ile **This is a new book.** (zamir + is + tamamlayıcı).",
-          "Türkçede fark çoğu zaman tek kelimeyle verilir (**bu kitap** vs **bu benim kitabım**); İngilizcede kelime dizilimi değişir. Alıştırma yaparken cümlede **isim hemen ardından mı geliyor** diye kontrol et: geliyorsa sıfat, gelmiyorsa zamir ve genelde **is/are** vardır.",
+          "Aynı kelime (\\**this, that, these, those**\\) iki farklı görevde kullanılabilir. **İşaret sıfatı (\\demonstrative adjective\\)** doğrudan ismin önünde durur ve ismi niteleştirir: **\\this book\\**, **\\those cars\\**. Cümlede mutlaka **isim** vardır.",
+          "**İşaret zamiri (\\demonstrative pronoun\\)** ismin yerini alır; sonra isim gelmez: **\\This is my book.\\** (= Bu benim kitabım.) **\\That is expensive.\\** (= O pahalı.) Karşılaştırma: **\\This book is new.\\** (sıfat + isim) ile **\\This is a new book.\\** (zamir + is + tamamlayıcı).",
+          "Türkçede fark çoğu zaman tek kelimeyle verilir (**\\bu kitap\\** vs **bu benim kitabım**); İngilizcede kelime dizilimi değişir. Alıştırma yaparken cümlede **isim hemen ardından mı geliyor** diye kontrol et: geliyorsa sıfat, gelmiyorsa zamir ve genelde **is/are** vardır.",
         ],
         examplesTitle: "Sıfat ve zamir karşılaştırması",
         examplesLayout: "columns",
@@ -178,9 +180,9 @@ export const topicContent4: TopicContent = {
         title: "To Be ile Soru ve Cevaplar",
         titleEn: "Questions & Answers with To Be",
         paragraphs: [
-          "İşaret kelimeleri **to be** ile birlikte sık soru ve cevap üretir. Tekil soruda **Is this/that …?** kullanılır: **Is this your bag?** **Is that the station?** Çoğul soruda **Are these/those …?** gelir: **Are these your keys?**",
-          "Olumlu kısa cevap: **Yes, it is.** (this/that için) veya **Yes, they are.** (these/those için). Olumsuz: **No, it isn't.** / **No, they aren't.** Tam cevap vermek de mümkündür: **Yes, this is my bag.** Günlük konuşmada kısa biçim daha doğaldır.",
-          "**What is this/that?** sorusuna **It is a …** ile cevap verilir. **What are these/those?** sorusuna **They are …** kullanılır. **Who is this?** tanıdık kişi içindir: **This is Ahmet.** / **It's Ahmet.** Bu kalıplar tanıştırma ve nesne tanımlama diyaloglarının temelidir.",
+          "İşaret kelimeleri **\\to be\\** ile birlikte sık soru ve cevap üretir. Tekil soruda **\\Is this your bag?\\** veya **\\Is that the station?\\** kullanılır. Çoğul soruda **\\Are these your keys?\\** gelir.",
+          "Olumlu kısa cevap: **\\Yes, it is.\\** (this/that için) veya **\\Yes, they are.\\** (these/those için). Olumsuz: **\\No, it isn't.\\** ve **\\No, they aren't.\\** Tam cevap vermek de mümkündür: **\\Yes, this is my bag.\\** Günlük konuşmada kısa biçim daha doğaldır.",
+          "**\\What is this?\\** sorusuna **\\It is a phone.\\** gibi cevap verilir. **\\What are these?\\** sorusuna **\\They are apples.\\** kullanılır. **\\Who is this?\\** tanıdık kişi içindir: **\\This is Ahmet.\\** Bu kalıplar tanıştırma ve nesne tanımlama diyaloglarının temelidir.",
         ],
         examplesTitle: "Soru ve cevap kalıpları",
         examplesLayout: "columns",

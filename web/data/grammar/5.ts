@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent5: TopicContent = {
   topicId: "5",
   viewMinutes: 8,
+  quizIntro:
+    "Sorular iyelik sıfatları, zamirleri, -'s eki ve \\its\\ ile \\it's\\ ayrımını ölçer. Sıfat mı zamir mi sorusunu her cümlede kontrol et.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent5: TopicContent = {
         title: "İyelik Sıfatları",
         titleEn: "Possessive Adjectives",
         paragraphs: [
-          "**İyelik sıfatları (possessive adjectives)** bir şeyin kime ait olduğunu söyler ve **her zaman ismin hemen önünde** durur. Yedi temel form: **my, your, his, her, its, our, their**. Bunlar isim yerine geçmez; yalnızca ismi nitelendirir.",
-          "**My** (benim), **your** (senin / sizin), **our** (bizim), **their** (onların) kişi ayrımını tek kelimede toplar. **His** erkek sahibi, **her** kadın sahibi, **its** hayvan veya nesne sahibi için kullanılır. Kalıp: **iyelik sıfatı + isim** — örneğin **my book**, **her cat**.",
-          "Türkçedeki **benim kitabım** yapısında iyelik hem zamirde hem isimde tekrar edilir; İngilizcede **my + book** yeterlidir, ikinci bir ek gerekmez. **Your** hem tekil **senin** hem çoğul **sizin** anlamına gelir.",
+          "**İyelik sıfatları (\\possessive adjectives\\)** bir şeyin kime ait olduğunu söyler ve **her zaman ismin hemen önünde** durur. Yedi temel form: **\\my, your, his, her, its, our, their\\**. Bunlar isim yerine geçmez; yalnızca ismi nitelendirir.",
+          "**\\My\\** (benim), **\\your\\** (senin / sizin), **\\our\\** (bizim), **\\their\\** (onların) kişi ayrımını tek kelimede toplar. **\\His\\** erkek sahibi, **\\her\\** kadın sahibi, **\\its\\** hayvan veya nesne sahibi için kullanılır. Kalıp: **iyelik sıfatı + isim** — örneğin **\\my book\\**, **\\her cat\\**.",
+          "Türkçedeki **benim kitabım** yapısında iyelik hem zamirde hem isimde tekrar edilir; İngilizcede **\\my + book\\** yeterlidir, ikinci bir ek gerekmez. **\\Your\\** hem tekil **senin** hem çoğul **sizin** anlamına gelir.",
         ],
         examplesTitle: "İyelik sıfatları",
         examplesLayout: "columns",
@@ -34,9 +36,9 @@ export const topicContent5: TopicContent = {
         title: "İyelik Zamirleri",
         titleEn: "Possessive Pronouns",
         paragraphs: [
-          "**İyelik zamirleri (possessive pronouns)** ismin yerine geçer; cümlenin sonunda yalnız başına dururlar. Biçimler: **mine, yours, his, hers, ours, theirs**. Dikkat: **its** iyelik zamiri olarak kullanılmaz; nesne sahipliği için **its** yalnızca sıfat olarak gelir.",
-          "Karşılaştırma net olmalı: **This is my book.** (sıfat + isim) ile **This book is mine.** (zamir, isim yok) farklı yapılardır. **Hers** yalnızca kadın sahibi için kullanılır; **his** hem sıfat hem zamir olarak aynı kalır.",
-          "Sahiplik sorularında zamirler çok yaygındır: **Whose pen is this? — It's mine.** Ayrıca karşılaştırma cümlelerinde tekrarı önler: **Your room is big. Mine is small.**",
+          "**İyelik zamirleri (\\possessive pronouns\\)** ismin yerine geçer; cümlenin sonunda yalnız başına dururlar. Biçimler: **\\mine, yours, his, hers, ours, theirs\\**. Dikkat: **\\its\\** iyelik zamiri olarak kullanılmaz; nesne sahipliği için **\\its\\** yalnızca sıfat olarak gelir.",
+          "Karşılaştırma net olmalı: **\\This is my book.\\** (sıfat + isim) ile **\\This book is mine.\\** (zamir, isim yok) farklı yapılardır. **\\Hers\\** yalnızca kadın sahibi için kullanılır; **\\his\\** hem sıfat hem zamir olarak aynı kalır.",
+          "Sahiplik sorularında zamirler çok yaygındır: **\\Whose pen is this? — It's mine.\\** Ayrıca karşılaştırma cümlelerinde tekrarı önler: **\\Your room is big. Mine is small.\\**",
         ],
         examplesTitle: "Sıfat ve zamir karşılaştırması",
         examplesLayout: "columns",
@@ -68,9 +70,9 @@ export const topicContent5: TopicContent = {
         title: "İyelik Eki: 's",
         titleEn: "Possessive 's",
         paragraphs: [
-          "İnsanlar ve isimler için sahiplik çoğu zaman **-'s** ekiyle kurulur: **Ahmet's phone**, **my mother's car**. Kalıp: **isim + 's + isim**. Sesli harfle biten isimlerde telaffuz /z/ veya /s/ olabilir; yazımda hep **'s** kullanılır.",
-          "Tekil isimlere **'s** eklenir: **the teacher's desk** (öğretmenin masası). Çoğul isimlerde çoğu zaman yalnız **'** (apostrof) yeterlidir — bir sonraki bölümde bunu ayrıntılandırırız.",
-          "**Of** yapısı da mümkündür; özellikle nesneler için **the door of the room** doğal olabilir. A1 düzeyinde önce **isim + 's** kalıbına alışmak yeterlidir. **John's sister** = John'un kız kardeşi.",
+          "İnsanlar ve isimler için sahiplik çoğu zaman **-'s** ekiyle kurulur: **\\Ahmet's phone\\**, **\\my mother's car\\**. Kalıp: **isim + 's + isim**. Sesli harfle biten isimlerde telaffuz /z/ veya /s/ olabilir; yazımda hep **'s** kullanılır.",
+          "Tekil isimlere **'s** eklenir: **\\the teacher's desk\\** (öğretmenin masası). Çoğul isimlerde çoğu zaman yalnız **'** (\\apostrof\\) yeterlidir — bir sonraki bölümde bunu ayrıntılandırırız.",
+          "**\\Of\\** yapısı da mümkündür; özellikle nesneler için **\\the door of the room\\** doğal olabilir. A1 düzeyinde önce **isim + 's** kalıbına alışmak yeterlidir. **\\John's sister\\** = John'un kız kardeşi.",
         ],
         examplesTitle: "'s ile sahiplik",
         examplesLayout: "columns",
@@ -96,9 +98,9 @@ export const topicContent5: TopicContent = {
         title: "Çoğul İyelik ve its / it's",
         titleEn: "Plural Possessives & its vs it's",
         paragraphs: [
-          "**-s ile biten çoğul isimlerde** sahiplik için genelde yalnız apostrof eklenir: **the students' books** (öğrencilerin kitapları). Kalıp: **çoğul isim + ' + isim**. Tekil **-'s** ile çoğul **-'** ayrımına dikkat et.",
-          "**Its** iyelik **sıfatıdır** (onun — nesne/hayvan): **The cat licks its paw.** **It's** ise **it is** veya **it has** kısaltmasıdır: **It's cold today.** (= It is cold.) Bu iki kelime ses olarak aynı duyulabilir; yazımda anlamı belirler.",
-          "Hatırlatma: **its** iyelik **zamiri** yoktur; **The book is its.** denmez. Nesne sahipliği için **its + isim** veya **the ... of ...** kullanılır.",
+          "**-s ile biten çoğul isimlerde** sahiplik için genelde yalnız apostrof eklenir: **\\the students' books\\** (öğrencilerin kitapları). Kalıp: **çoğul isim + ' + isim**. Tekil **-'s** ile çoğul **-'** ayrımına dikkat et.",
+          "**\\Its\\** iyelik **sıfatıdır** (onun — nesne/hayvan): **\\The cat licks its paw.\\** **\\It's\\** ise **\\it is\\** veya **\\it has\\** kısaltmasıdır: **\\It's cold today.\\** (\\= It is cold.\\) Bu iki kelime ses olarak aynı duyulabilir; yazımda anlamı belirler.",
+          "Hatırlatma: **\\its\\** iyelik **zamiri** yoktur; **\\The book is its.\\** denmez. Nesne sahipliği için **its + isim** veya **\\the ... of ...\\** kullanılır.",
         ],
         examplesTitle: "Çoğul iyelik ve its / it's",
         examplesLayout: "columns",

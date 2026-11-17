@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent18: TopicContent = {
   topicId: "18",
   viewMinutes: 9,
+  quizIntro:
+    "\\Present Continuous\\ kalıbı ve \\-ing\\ yazımı ile geniş zaman arasındaki fark sorularda öne çıkar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent18: TopicContent = {
         title: "Sıfat ve Zarf Farkı",
         titleEn: "Adjectives vs Adverbs of Manner",
         paragraphs: [
-          "**Sıfatlar (adjectives)** isimleri niteler: **a tall man**, **a boring film**. **Durum zarfları (adverbs of manner)** fiilin **nasıl** yapıldığını anlatır: **She speaks quietly.**",
-          "Temel çiftler: **careful → carefully**, **quick → quickly**. Sıfat isimden önce veya **be** sonrasında durur; zarf genelde **fiilden hemen sonra** gelir.",
-          "Türkçede çoğu zaman **-ce / -ca** eki zarf verir (*güzelce konuşmak*). İngilizcede çoğu durum zarfı **-ly** ile üretilir; düzensiz kelimeler ayrıdır.",
+          "**Sıfatlar** isimleri niteler; İngilizce karşılığı **\\adjectives\\**. **Durum zarfları** ise fiilin **nasıl** yapıldığını söyler: **\\adverbs of manner\\**. Örnek: **\\a tall man\\** ve **\\She speaks quietly.\\**",
+          "Temel çiftler: **\\careful → carefully\\**, **\\quick → quickly\\**. Sıfat isimden önce veya **\\be\\** sonrasında durur; zarf genelde **\\fiilden hemen sonra\\** gelir.",
+          "Türkçede çoğu zaman **\\-ce / -ca\\** eki zarf verir (*güzelce konuşmak*). İngilizcede çoğu durum zarfı **\\-ly\\** ile üretilir; düzensiz kelimeler ayrıdır.",
         ],
         examplesTitle: "Sıfat ve zarf çifti",
         examplesLayout: "columns",
@@ -62,9 +64,9 @@ export const topicContent18: TopicContent = {
         title: "Düzenli -ly Kuralları",
         titleEn: "Regular -ly Formation",
         paragraphs: [
-          "Çoğu sıfatın sonuna **-ly** eklenir: **slow → slowly**, **nice → nicely**. Sıfat zaten **-y** ile bitiyorsa **-y → -ily**: **happy → happily**, **easy → easily**.",
-          "**-le** ile biten sıfatlarda sadece **y** eklenir: **simple → simply**, **gentle → gently**. **-ic** ile bitenlerde çoğu zaman **-ally**: **basic → basically**, **tragic → tragically**.",
-          "Yazım hatası yaygın: **truly** (truthful değil), **publicly** (publicly). Sıfat ile aynı yazılan kelimeye dikkat: sıfat **hard**, zarf da **hard** (sonraki bölüm).",
+          "Çoğu sıfatın sonuna **\\-ly\\** eklenir: **\\slow → slowly\\**, **\\nice → nicely\\**. Sıfat zaten **-y** ile bitiyorsa **\\-y → -ily\\**: **\\happy → happily\\**, **\\easy → easily\\**.",
+          "**\\-le\\** ile biten sıfatlarda sadece **y** eklenir: **\\simple → simply\\**, **\\gentle → gently\\**. **\\-ic\\** ile bitenlerde çoğu zaman **\\-ally\\**: **\\basic → basically\\**, **\\tragic → tragically\\**.",
+          "Yazım hatası yaygın: **\\truly\\** (truthful değil), **\\publicly\\** **\\publicly\\**. Sıfat ile aynı yazılan kelimeye dikkat: sıfat **\\hard\\**, zarf da **\\hard\\** (sonraki bölüm).",
         ],
         examplesTitle: "-ly dönüşümleri",
         examplesLayout: "columns",
@@ -84,9 +86,9 @@ export const topicContent18: TopicContent = {
         title: "Düzensiz Zarflar",
         titleEn: "Irregular: fast, hard, late, well",
         paragraphs: [
-          "Bazı zarflar **-ly almaz**; sıfat ile **aynı yazılır**: **fast → fast**, **hard → hard**, **late → late**, **early → early**. **He runs fast.** **She works hard.**",
-          "**Good** sıfattır; **well** onun zarfdır: **a good student**, **She speaks English well.** **Well** ayrıca sağlık için **I am well** anlamında sıfat gibi kullanılır.",
-          "**Hardly** ayrı bir kelimedir: **hardly = nadiren / neredeyse hiç**, **hard** ile karıştırma: **I hardly know him.** ≠ **I work hard.**",
+          "Bazı zarflar **\\-ly almaz\\**; sıfat ile **aynı yazılır**: **\\fast → fast\\**, **\\hard → hard\\**, **\\late → late\\**, **\\early → early\\**. **\\He runs fast.\\** **\\She works hard.\\**",
+          "**\\Good\\** sıfattır; **\\well\\** onun zarfdır: **\\a good student\\**, **\\She speaks English well.\\** **\\Well\\** ayrıca sağlık için **\\I am well\\** anlamında sıfat gibi kullanılır.",
+          "**\\Hardly\\** ayrı bir kelimedir: **hardly = nadiren / neredeyse hiç**, **\\hard\\** ile karıştırma: **\\I hardly know him.\\** ≠ **\\I work hard.\\**",
         ],
         examplesTitle: "Düzensiz örnekler",
         examplesLayout: "columns",
@@ -110,9 +112,9 @@ export const topicContent18: TopicContent = {
         title: "Cümle İçi Yeri",
         titleEn: "Position in the Sentence",
         paragraphs: [
-          "Durum zarfı çoğunlukla **ana fiilden hemen sonra** gelir: **He explained the rule clearly.** Nesne varsa: **fiil + nesne + zarf** veya **fiil + zarf + nesne** (ikisi de mümkün; kısa zarf fiilden sonra daha doğal).",
-          "**Be + sıfat** yapısında sıfat **be** sonrasında kalır; zarf fiili değiştirmez: **She is careful.** (sıfat) vs **She drives carefully.** (zarf).",
-          "Cümle başına alınan zarf vurgu ekler: **Luckily, we arrived on time.** Bu derste odak **manner (nasıl)** zarflarıdır; **luckily** gibi **cümle zarfları** ileri seviyede ayrıntılandırılır.",
+          "Durum zarfı çoğunlukla **\\ana fiilden hemen sonra\\** gelir: **\\He explained the rule clearly.\\** Nesne varsa: **fiil + nesne + zarf** veya **fiil + zarf + nesne** (ikisi de mümkün; kısa zarf fiilden sonra daha doğal).",
+          "**Be + sıfat** yapısında sıfat **\\be\\** sonrasında kalır; zarf fiili değiştirmez: **\\She is careful.\\** (sıfat) vs **\\She drives carefully.\\** **\\zarf\\**.",
+          "Cümle başına alınan zarf vurgu ekler: **\\Luckily, we arrived on time.\\** Bu derste odak **manner (nasıl)** zarflarıdır; **\\luckily\\** gibi **cümle zarfları** ileri seviyede ayrıntılandırılır.",
         ],
         examplesTitle: "Kelime dizilimi",
         examplesLayout: "columns",
@@ -139,9 +141,9 @@ export const topicContent18: TopicContent = {
         title: "Good / Well ve Sık Hatalar",
         titleEn: "Good vs Well & Common Mistakes",
         paragraphs: [
-          "**Good** yalnızca sıfattır: **good food**, **You are good at math.** Fiilden sonra **good** kullanılmaz (*He speaks good* yanlış → **well**).",
-          "**Bad** sıfat; zarfı **badly**: **a bad mistake**, **He sang badly.** **Fast / hard / late** hem sıfat hem zarf aynı biçimde.",
-          "Türkçe **iyi** hem sıfat hem zarf; İngilizcede rol ayrımı nettir. Alıştırma yaparken sor: *İsimi mi nitelliyor, fiili mi?*",
+          "**\\Good\\** yalnızca sıfattır: **\\good food\\**, **\\You are good at math.\\** Fiilden sonra **\\good\\** kullanılmaz (*\\He speaks good\\* yanlış → **\\well\\**).",
+          "**\\Bad\\** sıfat; zarfı **\\badly\\**: **\\a bad mistake\\**, **\\He sang badly.\\** **\\Fast / hard / late\\** hem sıfat hem zarf aynı biçimde.",
+          "Türkçe **\\iyi\\** hem sıfat hem zarf; İngilizcede rol ayrımı nettir. Alıştırma yaparken sor: *İsimi mi nitelliyor, fiili mi?*",
         ],
         examplesTitle: "Doğru ve yanlış",
         examplesLayout: "columns",

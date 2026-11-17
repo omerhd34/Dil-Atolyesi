@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent33: TopicContent = {
   topicId: "33",
   viewMinutes: 10,
+  quizIntro:
+    "**\\Second conditional\\** yapısını, **\\were\\** kullanımını ve **\\If I were you\\** kalıbını hatırla. Gerçek dışı şimdiki durumlar için **\\Past Simple\\** ile kurulan koşul cümlelerine odaklan.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent33: TopicContent = {
         title: "Second Conditional Yapısı",
         titleEn: "If + Past, Would + V1",
         paragraphs: [
-          "**Second conditional (Tip 2)**, **şu an gerçek olmayan** veya **düşük olasılıklı** durumları anlatır: hayal, tavsiye, varsayım.",
-          "Yapı: **If + Past Simple, would + V1** (özne cümleleri yer değiştirebilir, virgül kullanımına dikkat). **If I had money, I would travel.**",
-          "Sonuç cümlesi **would** ile; **If** ile başlayan yan cümlede **will kullanılmaz**.",
+          "**\\Second conditional (Tip 2)\\**, **şu an gerçek olmayan** veya **düşük olasılıklı** durumları anlatır: hayal, tavsiye, varsayım.",
+          "Yapı: **\\If + Past Simple, would + V1\\** (özne cümleleri yer değiştirebilir, virgül kullanımına dikkat). **\\If I had money, I would travel.\\**",
+          "Sonuç cümlesi **\\would\\** ile; **\\If\\** ile başlayan yan cümlede **will kullanılmaz**.",
         ],
         examplesTitle: "tip 2 örnekleri",
         examplesLayout: "columns",
@@ -42,8 +44,8 @@ export const topicContent33: TopicContent = {
         title: "Were Kullanımı",
         titleEn: "Were for All Subjects",
         paragraphs: [
-          "Koşul cümlesinde **I / he / she / it** için bile **were** kullanımı yaygın ve doğru kabul edilir (özellikle hayali durumlarda): **If I were rich …**",
-          "**Was** konuşmada duyulur ama sınav ve resmi yazıda **were** tercih edilir: **If he were here, he would agree.**",
+          "Koşul cümlesinde **\\I\\**, **\\he\\**, **\\she\\** veya **\\it\\** için bile **\\were\\** kullanımı yaygın ve doğru kabul edilir; özellikle hayali durumlarda: **\\If I were rich, I would travel.\\**",
+          "**\\Was\\** konuşmada duyulur ama sınav ve resmi yazıda **\\were\\** tercih edilir: **\\If he were here, he would agree.\\**",
           "Bu kullanım Tip 2'nin **gerçek dışı** anlamını güçlendirir.",
         ],
         examplesTitle: "were örnekleri",
@@ -67,9 +69,9 @@ export const topicContent33: TopicContent = {
         title: "If I Were You",
         titleEn: "Giving Advice",
         paragraphs: [
-          "**If I were you** en sık kullanılan tavsiye kalıbıdır; Türkçede **senin yerinde olsam** karşılığı.",
-          "Devamında **would** veya olumsuz **wouldn't**: **If I were you, I'd call him.** **If I were you, I wouldn't do that.**",
-          "**Was** ile de duyulur; B1 hedefinde **were** ile öğrenmek güvenlidir.",
+          "**\\If I were you\\** en sık kullanılan tavsiye kalıbıdır; Türkçede **\\senin yerinde olsam\\** karşılığı.",
+          "Devamında **\\would\\** veya olumsuz **\\wouldn't\\**: **\\If I were you, I'd call him.\\** **\\If I were you, I wouldn't do that.\\**",
+          "**\\Was\\** ile de duyulur; B1 hedefinde **\\were\\** ile öğrenmek güvenlidir.",
         ],
         examplesTitle: "tavsiye kalıpları",
         examplesLayout: "columns",
@@ -95,9 +97,9 @@ export const topicContent33: TopicContent = {
         title: "Could ve Might",
         titleEn: "Could / Might in Result",
         paragraphs: [
-          "Sonuç cümlesinde **would** yerine **could** (yapabilirdim / -ebilirdi) veya **might** (belki -erdi) kullanılabilir.",
-          "**If I had a map, I could find the way.** (yeterlilik) **If he tried harder, he might pass.** (olasılık)",
-          "**Could / might** sonucu **daha belirsiz** yapar; **would** daha net hayali sonuç verir.",
+          "Sonuç cümlesinde **\\would\\** yerine **\\could\\** (yapabilirdim veya -ebilirdi) veya **\\might\\** (\\belki -erdi\\) kullanılabilir.",
+          "**\\If I had a map, I could find the way.\\** (\\yeterlilik\\) **\\If he tried harder, he might pass.\\** (olasılık)",
+          "**\\Could veya might\\** sonucu **\\daha belirsiz\\** yapar; **\\would\\** daha net hayali sonuç verir.",
         ],
         examplesTitle: "could / might",
         examplesLayout: "columns",
@@ -119,9 +121,9 @@ export const topicContent33: TopicContent = {
         title: "Tip 1 ve Tip 2 Farkı",
         titleEn: "Type 1 vs Type 2",
         paragraphs: [
-          "**Tip 1**: gerçek veya olası gelecek — **If + Present, will + V1**. **If it rains, I will stay home.**",
-          "**Tip 2**: gerçek dışı / hayal — **If + Past, would + V1**. **If it rained tomorrow, I would stay home.** (yarıyor varsayıyoruz ama gerçekte yağmur beklenmiyor)",
-          "Zaman fiili Past olsa da anlam **şimdiki veya genel hayal** olabilir; çeviri bağlama göre **-se / -dı** modu.",
+          "**\\Tip 1\\**: gerçek veya olası gelecek; **\\If + Present, will + V1\\**. **\\If it rains, I will stay home.\\**",
+          "**\\Tip 2\\**: gerçek dışı veya hayal; **\\If + Past, would + V1\\**. **\\If it rained tomorrow, I would stay home.\\** (yarıyor varsayıyoruz ama gerçekte yağmur beklenmiyor)",
+          "Zaman fiili Past olsa da anlam **şimdiki veya genel hayal** olabilir; çeviri bağlama göre **-se veya -dı** modu.",
         ],
         examplesTitle: "karşılaştırma",
         examplesLayout: "columns",

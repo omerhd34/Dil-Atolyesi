@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent56: TopicContent = {
   topicId: "56",
   viewMinutes: 10,
+  quizIntro:
+    "İsimleştirme ve yoğun isim öbeklerinde doğru sözcük seçimini test ediyorsun. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent56: TopicContent = {
         title: "Fiil ve Sıfatları İsimleştirme",
         titleEn: "Verbal & Adjectival Nominalization",
         paragraphs: [
-          "**İsimleştirme (nominalization)**, cümledeki eylemi veya nitelemeyi soyut bir **isim** biçimine taşır. Akademik İngilizcede **decide → decision**, **implement → implementation**, **analyze → analysis** gibi dönüşümler metni daha nesnel ve kompakt kılar; okuyucunun dikkati fiilden ziyade **kavram** üzerinde yoğunlaşır.",
-          "Fiilden isim türetmede en yaygın ekler **-tion / -sion** (discuss → discussion), **-ment** (develop → development), **-ance / -ence** (perform → performance), **-al** (refuse → refusal) ve **-ure** (fail → failure) dir. Bazı fiillerde biçim değişir: **grow → growth**, **choose → choice**. Günlük dilde **-ing** biçimi de isimleştirir: **The meeting was boring** / **His reading improved**.",
-          "Sıfatlardan isim **-ness** ile türetilir: **accurate → accuracy** (alternatif: precision), **dense → density**. **-ity** ekli Latin kökenli sıfatlarda yaygındır: **possible → possibility**, **complex → complexity**. C2 düzeyinde hedef, doğru kökü seçmek ve **sayılabilir / sayılamaz** ayrımını korumaktır: **information** (sayılamaz), **findings** (çoğul sayılabilir).",
+          "**İsimleştirme**, yani **\\nominalization\\**, cümledeki eylemi veya nitelemeyi soyut bir **isim** biçimine taşır. Akademik İngilizcede **\\decide → decision\\**, **\\implement → implementation\\**, **\\analyze → analysis\\** gibi dönüşümler metni daha nesnel ve kompakt kılar. Okuyucunun dikkati fiilden ziyade **kavram** üzerinde yoğunlaşır.",
+          "Fiilden isim türetmede en yaygın ekler **\\-tion / -sion\\** **\\discuss → discussion\\**, **\\-ment\\** **\\develop → development\\**, **\\-ance / -ence\\** **\\perform → performance\\**, **\\-al\\** **\\refuse → refusal\\** ve **\\-ure\\** **\\fail → failure\\** dir. Bazı fiillerde biçim değişir: **\\grow → growth\\**, **\\choose → choice\\**. Günlük dilde **\\-ing\\** biçimi de isimleştirir: **\\The meeting was boring\\** / **\\His reading improved\\**.",
+          "Sıfatlardan isim **\\-ness\\** ile türetilir: **\\accurate → accuracy\\** **alternatif: precision**, **\\dense → density\\**. **\\-ity\\** ekli Latin kökenli sıfatlarda yaygındır: **\\possible → possibility\\**, **\\complex → complexity\\**. C2 düzeyinde hedef, doğru kökü seçmek ve **sayılabilir / sayılamaz** ayrımını korumaktır: **\\information\\** (sayılamaz), **\\findings\\** (çoğul sayılabilir).",
         ],
         examplesTitle: "Türetme örnekleri",
         examplesLayout: "columns",
@@ -68,9 +70,9 @@ export const topicContent56: TopicContent = {
         title: "Yoğun İsim Öbekleri",
         titleEn: "Dense Noun Phrases",
         paragraphs: [
-          "Sözdizimsel **yoğunluk**, tek bir isim öbeğinde çok bilgiyi toplamaktır. İngilizcede bilgi çoğu zaman **isimden önce** (pre-modifiers) birikir: sıfat zincirleri, isim + isim tamlamaları ve kısaltmalar bir arada gelir. **the rapidly evolving global technology sector** gibi öbekler, Türkçede birkaç yan cümleye denk düşebilir.",
-          "Katmanlar şöyle okunur: **belirleyici / tanımlık** (the, a) → **niteleyici sıfatlar** (rapid, global) → **zarf + sıfat** (rapidly evolving) → **kök isim** (sector) → **sonradan gelen açıklamalar** (post-modifiers; sonraki bölüm). Akademik başlıklarda ve politika belgelerinde bu yapı standarttır çünkü **tarafsızlık** yaratır: kim eylemi yaptı sorusu ikinci planda kalır.",
-          "Aşırı yoğunluk okunabilirliği düşürür. C2 yazarlar, öbeği bölerek **bir ana isim + bir relative clause** veya **apostrof tamlaması** ile denge kurar. Amacın **bilgi paketlemek** olduğunda önce isimleştir, **süreç anlatmak** gerektiğinde kısa fiil cümlesi ekle.",
+          "Sözdizimsel **yoğunluk**, tek bir isim öbeğinde çok bilgiyi toplamaktır. İngilizcede bilgi çoğu zaman **isimden önce** **\\pre-modifiers\\** birikir: sıfat zincirleri, isim + isim tamlamaları ve kısaltmalar bir arada gelir. **\\the rapidly evolving global technology sector\\** gibi öbekler, Türkçede birkaç yan cümleye denk düşebilir.",
+          "Katmanlar şöyle okunur: **belirleyici / tanımlık** **\\the, a\\** → **niteleyici sıfatlar** **\\rapid, global\\** → **zarf + sıfat** **\\rapidly evolving\\** → **kök isim** **\\sector\\** → **sonradan gelen açıklamalar** (post-modifiers; sonraki bölüm). Akademik başlıklarda ve politika belgelerinde bu yapı standarttır çünkü **tarafsızlık** yaratır: kim eylemi yaptı sorusu ikinci planda kalır.",
+          "Aşırı yoğunluk okunabilirliği düşürür. C2 yazarlar, öbeği bölerek **\\bir ana isim + bir relative clause\\** veya **apostrof tamlaması** ile denge kurar. Amacın **bilgi paketlemek** olduğunda önce isimleştir, **süreç anlatmak** gerektiğinde kısa fiil cümlesi ekle.",
         ],
         examplesTitle: "Katmanlı öbekler",
         examplesLayout: "columns",
@@ -109,9 +111,9 @@ export const topicContent56: TopicContent = {
         title: "Akademik Yeniden Yazım: Fiil → İsim",
         titleEn: "Verb-Heavy to Noun-Heavy Style",
         paragraphs: [
-          "Gündelik ve iş e-postasında fiiller doğrudur: **We decided to cut costs because sales fell.** Akademik veya kurumsal metinde aynı içerik isimleştirilerek sıkılaştırılır: **The decision to reduce expenditure stemmed from declining sales.** Bu dönüşüm **neden–sonuç** ve **özne–nesne** ilişkisini isim + edat (because of, due to, following) yapılarına taşır.",
-          "Tipik adımlar: (1) ana fiili isim yap (**analyze → analysis**), (2) yan cümleleri **prepositional phrase** veya **relative clause** yap, (3) **we/they** öznesini **the team / stakeholders** gibi soyut özneleştir. **When the company expanded, it hired staff** → **The company's expansion led to additional recruitment.**",
-          "Sınav ve makale yazımında bu stil **otorite** kurar; ancak sunum ve blogda aşırı kullanım mesafeli duyar. Her cümleyi isimleştirmek metni ağırlaştırır; **kritik bulgular** için isimleştir, **eylem çağrısı** için fiil bırak.",
+          "Gündelik ve iş e-postasında fiiller doğrudur: **\\We decided to cut costs because sales fell.\\** Akademik veya kurumsal metinde aynı içerik isimleştirilerek sıkılaştırılır: **\\The decision to reduce expenditure stemmed from declining sales.\\** Bu dönüşüm **neden–sonuç** ve **özne–nesne** ilişkisini isim + edat **\\because of, due to, following\\** yapılarına taşır.",
+          "Tipik adımlar: (1) ana fiili isim yap (**\\analyze → analysis\\**), (2) yan cümleleri **\\prepositional phrase\\** veya **\\relative clause\\** yap, (3) **we/they** öznesini **\\the team / stakeholders\\** gibi soyut özneleştir. **\\When the company expanded, it hired staff\\** → **\\The company's expansion led to additional recruitment.\\**",
+          "Sınav ve makale yazımında bu stil **otorite** kurar; ancak sunum ve blogda aşırı kullanım mesafeli duyar. Her cümleyi isimleştirmek metni ağırlaştırır; **\\kritik bulgular\\** için isimleştir, **eylem çağrısı** için fiil bırak.",
         ],
         examplesTitle: "Yeniden yazım çiftleri",
         examplesLayout: "columns",
@@ -150,9 +152,9 @@ export const topicContent56: TopicContent = {
         title: "of Tamlamaları, Postmodifier & Pratik",
         titleEn: "of-Phrases, Postmodifiers & Practice",
         paragraphs: [
-          "**of** tamlamaları İngilizcede sahiplik, içerik ve soyut ilişki kurar: **the proliferation of misinformation**, **a decline in productivity**. İlk isim kök, ikinci isim **neyi tanımladığını** belirtir. Türkçe **-nin / -in** tamlamasına yakındır ama sıra tersine dikkat: **risk of collapse** = **çökme riski** (collapse of X değil).",
-          "**Postmodifier** (sonradan gelen niteleyici) öbeği uzatır: **relative clause** (the policy **that was adopted**), **participle phrase** (the measures **introduced last year**), **prepositional phrase** (debate **on climate**) ve **appositive** (Dr Smith, **the lead author**, …). Bunlar isim öbeğinin **sağına** eklenir; önce modifiye edilen ismi bul, sonra sağa doğru oku.",
-          "Pratikte: verilen fiil cümlesini önce **ana ismi** seçerek isimleştir, ardından **of / in / on** ile bağla. **The government banned imports** → **The ban on imports**. Uzun öbekte bir **that** clause yerine **-tion** + **of** tercih edilebilir: **that they withdrew** → **their withdrawal**.",
+          "**\\of\\** tamlamaları İngilizcede sahiplik, içerik ve soyut ilişki kurar: **\\the proliferation of misinformation\\**, **\\a decline in productivity\\**. İlk isim kök, ikinci isim **neyi tanımladığını** belirtir. Türkçe **\\-nin / -in\\** tamlamasına yakındır ama sıra tersine dikkat: **\\risk of collapse\\** = **çökme riski** (collapse of X değil).",
+          "**Postmodifier**, yani **sonradan gelen niteleyici**, isim öbeğini sağdan uzatır. Türleri: **\\relative clause\\** (**\\the policy that was adopted\\**), **\\participle phrase\\** (**\\the measures introduced last year\\**), edat öbeği (debate **\\on climate\\**) ve **\\appositive\\** (**\\Dr Smith, the lead author, …\\**). Önce hangi ismin nitelendiğini bul; sonra sağa doğru oku.",
+          "Pratikte: verilen fiil cümlesini önce **ana ismi** seçerek isimleştir, ardından **\\of / in / on\\** ile bağla. **\\The government banned imports\\** → **\\The ban on imports\\**. Uzun öbekte bir **\\that\\** clause yerine **\\-tion\\** + **\\of\\** tercih edilebilir: **\\that they withdrew\\** → **\\their withdrawal\\**.",
         ],
         examplesTitle: "of ve postmodifier",
         examplesLayout: "columns",

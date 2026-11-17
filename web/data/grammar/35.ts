@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent35: TopicContent = {
   topicId: "35",
   viewMinutes: 10,
+  quizIntro:
+    "Etken ve edilgen arasındaki farkı, temel zamanlarda **\\be + V3\\** yapısını ve **\\by\\** ile işi yapanı belirtmeyi uygula.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent35: TopicContent = {
         title: "Etken ve Edilgen: Odak Nerede?",
         titleEn: "Active vs Passive",
         paragraphs: [
-          "**Edilgen çatı (passive voice)** cümlede vurguyu eylemi **yapan kişiden** alıp **yapılan işe** veya **nesneye** taşır. Etken: **Someone stole my bike.** Edilgen: **My bike was stolen.** İkinci cümlede bisikletin çalınmış olması önemlidir; hırsız kim bilinmiyor veya önemsenmiyor.",
-          "Edilgen kurmak için temel formül **be + V3 (past participle)**. **Be** fiili zamana göre çekimlenir; asıl anlam **üçüncü hal** (V3) fiilinde taşınır: **is built, was sent, will be finished, has been repaired.**",
-          "Türkçede çoğu zaman **-il / -ın / -ul** ekleriyle edilgen kurulur (**Kitap yazıldı**). İngilizcede yardımcı **be** fiili zorunludur; V3 tek başına yeterli değildir.",
+          "**Edilgen çatı (\\passive voice\\)** cümlede vurguyu eylemi **yapan kişiden** alıp **yapılan işe** veya **\\nesneye\\** taşır. Etken: **\\Someone stole my bike.\\** Edilgen: **\\My bike was stolen.\\** İkinci cümlede bisikletin çalınmış olması önemlidir; hırsız kim bilinmiyor veya önemsenmiyor.",
+          "Edilgen kurmak için temel formül **be + V3 (past participle)**. **\\Be\\** fiili zamana göre çekimlenir; asıl anlam **üçüncü hal** (\\V3\\) fiilinde taşınır: **\\is built, was sent, will be finished, has been repaired.\\**",
+          "Türkçede çoğu zaman **-il veya -ın veya -ul** ekleriyle edilgen kurulur (**Kitap yazıldı**). İngilizcede yardımcı **\\be\\** fiili zorunludur; V3 tek başına yeterli değildir.",
         ],
         examplesTitle: "Etken ↔ edilgen",
         examplesLayout: "columns",
@@ -56,9 +58,9 @@ export const topicContent35: TopicContent = {
         title: "Temel Zamanlarda Edilgen",
         titleEn: "Passive in Simple Tenses",
         paragraphs: [
-          "**Geniş zaman edilgen:** **am/is/are + V3** — **The report is written every week.** **Şimdiki zaman edilgen:** **am/is/are being + V3** — **The road is being repaired.** **Geçmiş zaman edilgen:** **was/were + V3** — **The letter was sent yesterday.**",
-          "**Gelecek zaman edilgen:** **will be + V3** veya **am/is/are going to be + V3** — **The meeting will be cancelled.** **Yakın geçmiş zaman edilgen:** **have/has been + V3** — **The package has been delivered.**",
-          "Soru ve olumsuzda **be** fiili değişir, V3 sabit kalır: **Is English taught at this school?** **The window wasn't broken.** **Have all the tickets been sold?**",
+          "**Geniş zaman edilgen:** **am veya is veya are + V3**; **\\The report is written every week.\\** **Şimdiki zaman edilgen:** **am veya is veya are being + V3**; **\\The road is being repaired.\\** **Geçmiş zaman edilgen:** **was veya were + V3**; **\\The letter was sent yesterday.\\**",
+          "**\\Gelecek zaman edilgen:\\** **\\will be + V3\\** veya **\\am veya is veya are going to be + V3\\**; **\\The meeting will be cancelled.\\** **Yakın geçmiş zaman edilgen:** **have veya has been + V3**; **\\The package has been delivered.\\**",
+          "Soru ve olumsuzda **\\be\\** fiili değişir, V3 sabit kalır: **\\Is English taught at this school?\\** **\\The window wasn't broken.\\** **\\Have all the tickets been sold?\\**",
         ],
         examplesTitle: "Zamanlara göre edilgen",
         examplesLayout: "columns",
@@ -105,9 +107,9 @@ export const topicContent35: TopicContent = {
         title: "Etkenden Edilgene Dönüşüm",
         titleEn: "Active to Passive",
         paragraphs: [
-          "Dönüşüm adımları: (1) Etken cümledeki **nesneyi** edilgen cümlenin **öznesi** yap. (2) Etken cümledeki **özneyi** isteğe bağlı **by + özne** ile sona ekle. (3) **Be + V3** ile doğru zamanı kur.",
-          "Örnek: **Tom wrote the email.** → nesne *the email* → **The email was written by Tom.** **Many students study this book.** → **This book is studied by many students.** Fiil geçişli (transitive) olmalıdır; doğrudan nesnesi olan fiiller edilgene çevrilebilir.",
-          "İki nesneli fiillerde (**give, send, tell**) ya **birinci nesne** ya **ikinci nesne** özne olabilir: **They gave me a prize.** → **I was given a prize.** / **A prize was given to me.**",
+          "Dönüşüm adımları: (1) Etken cümledeki **\\nesneyi\\** edilgen cümlenin **öznesi** yap. (2) Etken cümledeki **özneyi** isteğe bağlı **by + özne** ile sona ekle. (3) **Be + V3** ile doğru zamanı kur.",
+          "Örnek: **\\Tom wrote the email.\\** için nesne *\\the email\\* için **\\The email was written by Tom.\\** **\\Many students study this book.\\** için **\\This book is studied by many students.\\** Fiil geçişli (\\transitive\\) olmalıdır; doğrudan nesnesi olan fiiller edilgene çevrilebilir.",
+          "İki nesneli fiillerde (**\\give, send, tell\\**) ya **\\birinci nesne\\** ya **ikinci nesne** özne olabilir: **\\They gave me a prize.\\** için **\\I was given a prize.\\** veya **\\A prize was given to me.\\**",
         ],
         examplesTitle: "Dönüşüm örnekleri",
         examplesLayout: "columns",
@@ -143,9 +145,9 @@ export const topicContent35: TopicContent = {
         title: "by ile İşi Yapanı Belirtmek",
         titleEn: "Agent with by",
         paragraphs: [
-          "Eylemi yapanı (**agent**) belirtmek için **by** edatı kullanılır: **The novel was written by Orhan Pamuk.** **The song was sung by a famous artist.** **By** genelde kişi veya kurumla gelir: **by the police, by the government, by scientists.**",
-          "**By** çoğu zaman **atlanır**: özne **bilinmiyorsa**, **önemsizse** veya **genel / resmi** bir ifadeyse. **English is spoken in Canada.** (kimin konuştuğu önemli değil) **My bike was stolen.** (hırsız bilinmiyor)",
-          "Yanlış: **The book was written from the author.** Doğru: **by the author.** Ayrıca araç veya yöntem için **with, in, through** kullanılır: **The letter was written in ink.** **Contact us through the website.**",
+          "Eylemi yapanı (**\\agent\\**) belirtmek için **\\by\\** edatı kullanılır: **\\The novel was written by Orhan Pamuk.\\** **\\The song was sung by a famous artist.\\** **\\By\\** genelde kişi veya kurumla gelir: **\\by the police, by the government, by scientists.\\**",
+          "**\\By\\** çoğu zaman **atlanır**: özne **\\bilinmiyorsa\\**, **önemsizse** veya **genel veya resmi** bir ifadeyse. **\\English is spoken in Canada.\\** (kimin konuştuğu önemli değil) **\\My bike was stolen.\\** (hırsız bilinmiyor)",
+          "Yanlış: **\\The book was written from the author.\\** Doğru: **\\by the author.\\** Ayrıca araç veya yöntem için **\\with, in, through\\** kullanılır: **\\The letter was written in ink.\\** **\\Contact us through the website.\\**",
         ],
         examplesTitle: "by kullanımı",
         examplesLayout: "columns",
@@ -183,9 +185,9 @@ export const topicContent35: TopicContent = {
         title: "Ne Zaman Edilgen Kullanılır?",
         titleEn: "When to Use Passive",
         paragraphs: [
-          "**Haber ve raporlar:** **Three people were injured in the accident.** **The law was passed last month.** Nesnel ton için edilgen tercih edilir.",
-          "**Genel süreçler ve kurallar:** **Applications must be submitted by Friday.** **Smoking is not allowed here.** (Not: kipler + be + V3: **must be, can be, should be**)",
-          "**Sınav ve yazılı İngilizcede** edilgen sık çıkar. Etken cümleyi okuyup özneyi ve zamanı doğru seçmeyi alıştır: **Who does what to whom?** sorusunu sor, sonra nesneyi öne al.",
+          "**\\Haber ve raporlar:\\** **\\Three people were injured in the accident.\\** **\\The law was passed last month.\\** Nesnel ton için edilgen tercih edilir.",
+          "**Genel süreçler ve kurallar:** **\\Applications must be submitted by Friday.\\** **\\Smoking is not allowed here.\\** (\\Not: kipler + be + V3: **must be, can be, should be**\\)",
+          "**Sınav ve yazılı İngilizcede** edilgen sık çıkar. Etken cümleyi okuyup özneyi ve zamanı doğru seçmeyi alıştır: **\\Who does what to whom?\\** sorusunu sor, sonra nesneyi öne al.",
         ],
         examplesTitle: "Kullanım bağlamları",
         examplesLayout: "columns",

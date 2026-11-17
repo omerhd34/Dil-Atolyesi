@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent28: TopicContent = {
   topicId: "28",
   viewMinutes: 10,
+  quizIntro:
+    "Sayılabilir ve sayılamayan isimlerle \\too much, too many, a few, a little\\ seçimi sınanır.",
   lesson: {
     parts: [
       {
@@ -10,8 +12,8 @@ export const topicContent28: TopicContent = {
         title: "have / has been + V-ing Yapısı",
         titleEn: "Form: have / has been + V-ing",
         paragraphs: [
-          "**Present Perfect Continuous** (Süregelen Yakın Geçmiş Zaman), geçmişte başlayıp **şu ana kadar** süren veya **yakın zamanda biten** eylemleri vurgular. Kalıp: **have / has + been + fiil-ing**. **I, you, we, they** ile **have been**; **he, she, it** ile **has been** kullanılır.",
-          "Fiil **-ing** formunda kalır: **I have been studying.** **She has been working.** **been**, **be** fiilinin past participle hâlidir; süreklilik taşıyan bu zamanın imzasıdır. Kısaltmalar: **I've been**, **he's been**, **we've been**.",
+          "**\\Present Perfect Continuous\\** (Süregelen Yakın Geçmiş Zaman), geçmişte başlayıp **şu ana kadar** süren veya **yakın zamanda biten** eylemleri vurgular. Kalıp: **\\have / has + been + fiil-ing\\**. **\\I, you, we, they\\** ile **\\have been\\**; **\\he, she, it\\** ile **\\has been\\** kullanılır.",
+          "Fiil **\\-ing\\** formunda kalır: **\\I have been studying.\\** **\\She has been working.\\** **\\been\\**, **\\be\\** fiilinin past participle hâlidir; süreklilik taşıyan bu zamanın imzasıdır. Kısaltmalar: **\\I've been\\**, **\\he's been\\**, **\\we've been\\**.",
           "Bu zaman genelde **etkisi hâlâ görülen** veya **süreç odaklı** durumlar içindir. Sonuç sayısı değil, **ne kadar süredir** yapıldığı ön plandadır — örneğin yorgunluk, ıslak zemin veya devam eden proje.",
         ],
         examplesTitle: "Olumlu cümleler",
@@ -61,9 +63,9 @@ export const topicContent28: TopicContent = {
         title: "for, since, all day, lately",
         titleEn: "Time Markers: for, since, all day, lately",
         paragraphs: [
-          "Süre belirtmek için **for + süre** kullanılır: **for two hours, for a week, for ages**. Başlangıç noktası için **since + zaman anı** gelir: **since 2020, since Monday, since I was a child**. **Since** daima başlangıçtır; **for** toplam süreyi sayar.",
-          "**All day, all morning, all week** ifadeleri o gün veya dönem boyunca süren eylemi vurgular: **I have been studying all day.** **Lately** ve **recently** ise **son zamanlarda** anlamında yakın geçmiş süreci işaret eder: **Have you been feeling tired lately?**",
-          "Bu belirteçler **Present Perfect Continuous** ile doğal eşleşir çünkü zaman çizgisini **geçmişten şimdiye** uzatır. **Ago** ile kullanılmaz; geçmiş bitiş noktası için **Past Simple** tercih edilir.",
+          "Süre belirtmek için **for + süre** kullanılır: **\\for two hours, for a week, for ages\\**. Başlangıç noktası için **since + zaman anı** gelir: **\\since 2020, since Monday, since I was a child\\**. **\\Since\\** daima başlangıçtır; **\\for\\** toplam süreyi sayar.",
+          "**\\All day, all morning, all week\\** ifadeleri o gün veya dönem boyunca süren eylemi vurgular: **\\I have been studying all day.\\** **\\Lately\\** ve **\\recently\\** ise **\\son zamanlarda\\** anlamında yakın geçmiş süreci işaret eder: **\\Have you been feeling tired lately?\\**",
+          "Bu belirteçler **\\Present Perfect Continuous\\** ile doğal eşleşir çünkü zaman çizgisini **geçmişten şimdiye** uzatır. **\\Ago\\** ile kullanılmaz; geçmiş bitiş noktası için **\\Past Simple\\** tercih edilir.",
         ],
         examplesTitle: "Zaman belirteçleri",
         examplesLayout: "columns",
@@ -122,9 +124,9 @@ export const topicContent28: TopicContent = {
         title: "Present Perfect Simple ile Karşılaştırma",
         titleEn: "vs Present Perfect Simple",
         paragraphs: [
-          "**Present Perfect Simple** (**have + V3**) **sonuca veya sayıya** odaklanır: **I have read three books.** **She has finished her homework.** **Present Perfect Continuous** ise **sürece** odaklanır: **I have been reading.** **She has been doing her homework.**",
-          "Aynı fiille ikisi de kullanılabilir; nüans değişir. **How many cups of coffee have you drunk?** (sayı → Simple) / **How long have you been drinking coffee?** (süre → Continuous). **Live, work, know** gibi **durum fiilleri** genelde **Simple** ile **for/since** alır: **I have lived here since 2018.**",
-          "Yorgunluk, ıslaklık, görünür etki için Continuous doğaldır: **You look tired. — I have been running.** Bitmiş ama etkisi süren işte her iki zaman da mümkündür; konuşmada genelde Continuous süreci, Simple tamamlanmış sonucu çağrıştırır.",
+          "**\\Present Perfect Simple\\** sonuç veya sayıyı vurgular: **\\I have read three books.\\** **\\She has finished her homework.\\** **\\Present Perfect Continuous\\** ise sürece odaklanır: **\\I have been reading.\\** **\\She has been doing her homework.\\**",
+          "Aynı fiille ikisi de kullanılabilir; nüans değişir. **\\How many cups of coffee have you drunk?\\** (sayı → Simple) / **\\How long have you been drinking coffee?\\** (süre → Continuous). **\\Live, work, know\\** gibi **\\durum fiilleri\\** genelde **\\Simple\\** ile **for/since** alır: **\\I have lived here since 2018.\\**",
+          "Yorgunluk, ıslaklık, görünür etki için Continuous doğaldır: **\\You look tired. — I have been running.\\** Bitmiş ama etkisi süren işte her iki zaman da mümkündür; konuşmada genelde Continuous süreci, Simple tamamlanmış sonucu çağrıştırır.",
         ],
         examplesTitle: "Simple vs Continuous",
         examplesLayout: "columns",
@@ -183,9 +185,9 @@ export const topicContent28: TopicContent = {
         title: "Soru ve Olumsuz",
         titleEn: "Questions & Negatives",
         paragraphs: [
-          "Soruda **Have / Has** cümlenin başına gelir: **Have you been working?** **Has she been sleeping?** Kısa cevap: **Yes, I have. / No, she hasn't.** Süre sorusu: **How long have they been living here?**",
-          "Olumsuzda **not**, **been**'den sonra gelir: **I have not (haven't) been studying.** **He has not (hasn't) been paying attention.** Asıl fiil yine **-ing** kalır; **haven't studied** (Simple) ile karıştırma.",
-          "**Ever** soruda nadiren Continuous ile gelir; deneyim sorusu çoğu zaman **Present Perfect Simple**: **Have you ever been to Paris?** Yakın zamandaki süreç için **Have you been going to the gym recently?** doğaldır.",
+          "Soruda **\\Have / Has\\** cümlenin başına gelir: **\\Have you been working?\\** **\\Has she been sleeping?\\** Kısa cevap: **\\Yes, I have. / No, she hasn't.\\** Süre sorusu: **\\How long have they been living here?\\**",
+          "Olumsuzda **\\not\\**, **\\been\\**'den sonra gelir: **\\I have not (haven't) been studying.\\** **\\He has not (hasn't) been paying attention.\\** Asıl fiil yine **\\-ing\\** kalır; **\\haven't studied\\** **\\Simple\\** ile karıştırma.",
+          "**\\Ever\\** soruda nadiren Continuous ile gelir; deneyim sorusu çoğu zaman **\\Present Perfect Simple\\**: **\\Have you ever been to Paris?\\** Yakın zamandaki süreç için **\\Have you been going to the gym recently?\\** doğaldır.",
         ],
         examplesTitle: "Soru ve olumsuz",
         examplesLayout: "columns",
@@ -235,9 +237,9 @@ export const topicContent28: TopicContent = {
         title: "Kullanım: Süre ve Devam Eden Süreç",
         titleEn: "Usage: Duration & Ongoing Process",
         paragraphs: [
-          "En tipik kullanım: **şu ana kadar süren** faaliyet. **I have been studying for three hours and I'm still not done.** Geçmişte başlayıp **hâlâ devam eden** veya **yeni biten** iş için idealdir.",
-          "Yakın zamanda biten eylemin **görünür izi** varsa Continuous kullanılır: kirli eller (**I have been gardening**), pembe yanaklar, masada dağınık notlar. Karşıdaki kişi şu anki durumu görür; sen süreci açıklarsın.",
-          "Tekrarlayan geçici durumlar için **lately / recently** ile: **He has been arriving late.** Planlı gelecek veya tek anlık geçmiş olaylar için bu zaman **uygun değildir**; **will** veya **Past Simple** seç.",
+          "En tipik kullanım: **şu ana kadar süren** faaliyet. **\\I have been studying for three hours and I'm still not done.\\** Geçmişte başlayıp **\\hâlâ devam eden\\** veya **\\yeni biten\\** iş için idealdir.",
+          "Yakın zamanda biten eylemin **görünür izi** varsa Continuous kullanılır: kirli eller örneğinde **\\I have been gardening.\\** gibi süreç sürer. Karşıdaki kişi şu anki durumu görür; sen geçmişteki işi açıklarsın.",
+          "Tekrarlayan geçici durumlar için **\\lately / recently\\** ile: **\\He has been arriving late.\\** Planlı gelecek veya tek anlık geçmiş olaylar için bu zaman **uygun değildir**; **\\will\\** veya **\\Past Simple\\** seç.",
         ],
         examplesTitle: "Pratik kullanım",
         examplesLayout: "columns",
@@ -315,7 +317,7 @@ export const topicContent28: TopicContent = {
       id: "28-ex-2",
       subtopicId: "28-2",
       type: "multiple_choice",
-      prompt: "\"2018'den beri\" ifadesi hangisiyle kurulur?",
+      prompt: '"2018\'den beri" ifadesi hangisiyle kurulur?',
       options: ["for 2018", "since 2018", "since eight years", "for since"],
       correctIndex: 1,
       explanation: "Başlangıç noktası → since + yıl.",

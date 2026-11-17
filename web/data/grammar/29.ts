@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent29: TopicContent = {
   topicId: "29",
   viewMinutes: 10,
+  quizIntro:
+    "\\So\\ ile \\such\\ ayrımı ve vurgu kuran miktar kalıpları bu alıştırmada yer alır.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent29: TopicContent = {
         title: "Past Perfect: Yapı ve Anlam",
         titleEn: "Form & Meaning",
         paragraphs: [
-          "**Past Perfect Simple**, geçmişteki iki olaydan **daha önce** gerçekleşeni vurgulamak için kullanılır. Türkçede çoğu zaman **-mişti / -mıştı** (önce olmuş eylem) karşılığı düşünülür. Yapı: **had + fiilin 3. hâli (V3)**.",
-          "Tüm öznelerde yardımcı fiil **had** değişmez: **I had eaten, she had left, they had seen**. Olumsuz: **had not (hadn't) + V3**; soru: **Had + özne + V3?**",
-          "Bu zaman tek başına değil, genelde **Simple Past** ile birlikte anlatılır: önce olan eylem Past Perfect, sonra olan eylem Simple Past ile verilir.",
+          "**\\Past Perfect Simple\\**, geçmişteki iki olaydan **daha önce** gerçekleşeni vurgulamak için kullanılır. Türkçede çoğu zaman **-mişti / -mıştı** (önce olmuş eylem) karşılığı düşünülür. Yapı: **had + fiilin 3. hâli (V3)**.",
+          "Tüm öznelerde yardımcı fiil **\\had\\** değişmez: **\\I had eaten, she had left, they had seen\\**. Olumsuz: **had not (hadn't) + V3**; soru: **Had + özne + V3?**",
+          "Bu zaman tek başına değil, genelde **\\Simple Past\\** ile birlikte anlatılır: önce olan eylem Past Perfect, sonra olan eylem Simple Past ile verilir.",
         ],
         examplesTitle: "had + V3 örnekleri",
         examplesLayout: "columns",
@@ -46,9 +48,9 @@ export const topicContent29: TopicContent = {
         title: "Before, After, By the Time, When",
         titleEn: "Time Markers",
         paragraphs: [
-          "**Before** ve **after** iki cümleyi birleştirirken zaman sırasını netleştirir. **After** ile önce olan olay Past Perfect olabilir: **After I had eaten, I went out.** (= Yemek yedikten sonra dışarı çıktım.)",
-          "**By the time** … **zamanına kadar** anlamına gelir; genelde ikinci cümle Simple Past'tir: **By the time we arrived, the film had started.**",
-          "**When** bazen iki geçmiş olayı bağlar: **When I got home, my sister had already cooked dinner.** İlk olan → had + V3.",
+          "**\\Before\\** ve **\\after\\** iki cümleyi birleştirirken zaman sırasını netleştirir. **\\After\\** ile önce olan olay Past Perfect olabilir: **\\After I had eaten, I went out.\\** (= Yemek yedikten sonra dışarı çıktım.)",
+          "**\\By the time\\**  ve benzeri **zamanına kadar** anlamına gelir; genelde ikinci cümle Simple Past'tir: **\\By the time we arrived, the film had started.\\**",
+          "**\\When\\** bazen iki geçmiş olayı bağlar: **\\When I got home, my sister had already cooked dinner.\\** İlk olan → had + V3.",
         ],
         examplesTitle: "Zaman bağlaçları",
         examplesLayout: "columns",
@@ -78,10 +80,10 @@ export const topicContent29: TopicContent = {
         title: "Already, Just, Never, Yet",
         titleEn: "Adverbs with Past Perfect",
         paragraphs: [
-          "**Already** (çoktan, bile) önce tamamlanmış eylemi vurgular: **The train had already left.**",
-          "**Just** (az önce, henüz) tamamlanmış eylemi belirtir: **I had just heard the news.**",
-          "**Never** (hiç …memişti) geçmişe kadar olan deneyimi anlatır: **She had never flown before.**",
-          "**Yet** soru ve olumsuzda **henüz** anlamında Past Perfect ile kullanılır: **Had you finished yet?** / **They hadn't decided yet.**",
+          "**\\Already\\** (çoktan, bile) önce tamamlanmış eylemi vurgular: **\\The train had already left.\\**",
+          "**\\Just\\** (az önce, henüz) tamamlanmış eylemi belirtir: **\\I had just heard the news.\\**",
+          "**\\Never\\** (hiç  ve benzerimemişti) geçmişe kadar olan deneyimi anlatır: **\\She had never flown before.\\**",
+          "**\\Yet\\** soru ve olumsuzda **henüz** anlamında Past Perfect ile kullanılır: **\\Had you finished yet?\\** / **\\They hadn't decided yet.\\**",
         ],
         examplesTitle: "Zarf örnekleri",
         examplesLayout: "columns",
@@ -102,9 +104,9 @@ export const topicContent29: TopicContent = {
         title: "Past Simple ile Karıştırmayın",
         titleEn: "Past Perfect vs Past Simple",
         paragraphs: [
-          "Geçmişte **tek bir olay** veya **sıralı olaylar** anlatılıyorsa çoğu zaman **Simple Past** yeterlidir: **I arrived and bought a ticket.**",
-          "İki olaydan hangisinin **daha önce** bittiği önemliyse Past Perfect gerekir. Yanlış: *When I arrived, the train left.* (Trenin önce gittiği belli değil.) Doğru: **When I arrived, the train had left.**",
-          "Aynı cümlede ikisi birlikte kullanılır: **had + V3** = önceki eylem; **V2** = sonraki eylem.",
+          "Geçmişte **\\tek bir olay\\** veya **sıralı olaylar** anlatılıyorsa çoğu zaman **\\Simple Past\\** yeterlidir: **\\I arrived and bought a ticket.\\**",
+          "İki olaydan hangisinin **daha önce** bittiği önemliyse Past Perfect gerekir. Yanlış: *\\When I arrived, the train left.\\* (Trenin önce gittiği belli değil.) Doğru: **\\When I arrived, the train had left.\\**",
+          "Aynı cümlede ikisi birlikte kullanılır: **had + V3** = önceki eylem; **\\V2\\** = sonraki eylem.",
         ],
         examplesTitle: "Karşılaştırma",
         examplesLayout: "columns",
@@ -128,9 +130,9 @@ export const topicContent29: TopicContent = {
         title: "Sık Hatalar",
         titleEn: "Common Mistakes",
         paragraphs: [
-          "Past Perfect için **had** unutulmamalı; *I eaten* yanlıştır → **I had eaten**.",
-          "Amerikan İngilizcesinde **gotten** (V3 of get) yaygındır: **He had gotten home.** Britanya'da **got** da kullanılır.",
-          "**After** ile bazen iki Simple Past da mümkündür (özellikle hızlı sıra): **After I ate, I left.** Past Perfect daha net zaman sırası verir.",
+          "Past Perfect için **\\had\\** unutulmamalı; *\\I eaten\\* yanlıştır → **\\I had eaten\\**.",
+          "Amerikan İngilizcesinde **\\gotten\\** **\\V3 of get\\** yaygındır: **\\He had gotten home.\\** Britanya'da **\\got\\** da kullanılır.",
+          "**\\After\\** ile bazen iki Simple Past da mümkündür (özellikle hızlı sıra): **\\After I ate, I left.\\** Past Perfect daha net zaman sırası verir.",
         ],
         examplesTitle: "Doğru kullanım",
         examplesLayout: "columns",

@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent46: TopicContent = {
   topicId: "46",
   viewMinutes: 10,
+  quizIntro:
+    "Zıtlık, amaç ve sebep yapılarına dayalı sorular seni bekliyor. Bağlaç mı edat mı, cümle mi öbek mi — ayrımına odaklan. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent46: TopicContent = {
         title: "although / even though vs despite / in spite of",
         titleEn: "Contrast Clauses vs Prepositions",
         paragraphs: [
-          "Zıtlık **fiil cümlesi** ile kurulursa **although, even though, though** kullanılır: **Although it was raining, we went out.** **Even though** daha güçlü vurgu taşır. **Though** daha konuşma dilindedir.",
-          "Zıtlık **isim veya -ing** ile kurulursa **despite** veya **in spite of** gelir: **Despite the rain, we went out.** **In spite of being tired, she finished.** ~~Despite it was raining~~ yanlıştır; **despite** sonrası **cümle değil**, **isim öbeği** ister.",
-          "**Despite of** diye bir kalıp yoktur. **Despite / in spite of + the fact that + cümle** ile fiil cümlesi de eklenebilir: **Despite the fact that he was ill, he came.**",
+          "Zıtlık **fiil cümlesi** ile kurulursa **\\although, even though, though\\** kullanılır: **\\Although it was raining, we went out.\\** **\\Even though\\** daha güçlü vurgu taşır. **\\Though\\** daha konuşma dilindedir.",
+          "Zıtlık **isim veya -ing** ile kurulursa **\\despite\\** veya **\\in spite of\\** gelir: **\\Despite the rain, we went out.\\** **\\In spite of being tired, she finished.\\** ~~Despite it was raining~~ yanlıştır; **\\despite\\** sonrası **cümle değil**, **isim öbeği** ister.",
+          "**\\Despite of\\** diye bir kalıp yoktur. **Despite / in spite of + the fact that + cümle** ile fiil cümlesi de eklenebilir: **\\Despite the fact that he was ill, he came.\\**",
         ],
         examplesTitle: "Zıtlık yapıları",
         examplesLayout: "columns",
@@ -54,9 +56,9 @@ export const topicContent46: TopicContent = {
         title: "so that / in order to / so as to",
         titleEn: "Clauses and Phrases of Purpose",
         paragraphs: [
-          "**Amaç bildirmek** için **so that** bir **yan cümle** açar (özne + modal / will/can): **I left early so that I wouldn't miss the train.** **So that** sonrası **tam cümle** gelir; **would / could / can** amaç vurgusu için sık kullanılır.",
-          "**In order to** ve **so as to** **mastar (to + V1)** ile **örnek / ifade** kurar; özne ana cümleyle aynıdır: **She trained hard in order to win.** **So as to** daha formaldir. Olumsuz: **in order not to / so as not to**.",
-          "**To + V1** kısa amaç ifadesi günlük dildir: **I came to help.** **In order that + cümle** (nadir, formal): **We left early in order that we might catch the ferry.**",
+          "**Amaç bildirmek** için **\\so that\\** bir **yan cümle** açar (özne + modal / will/can): **\\I left early so that I wouldn't miss the train.\\** **\\So that\\** sonrası **tam cümle** gelir; **\\would / could / can\\** amaç vurgusu için sık kullanılır.",
+          "**\\In order to\\** ve **\\so as to\\** **mastar (to + V1)** ile **örnek / ifade** kurar; özne ana cümleyle aynıdır: **\\She trained hard in order to win.\\** **\\So as to\\** daha formaldir. Olumsuz: **\\in order not to / so as not to\\**.",
+          "**To + V1** kısa amaç ifadesi günlük dildir: **\\I came to help.\\** **In order that + cümle** **nadir, formal**: **\\We left early in order that we might catch the ferry.\\**",
         ],
         examplesTitle: "Amaç ifadeleri",
         examplesLayout: "columns",
@@ -98,9 +100,9 @@ export const topicContent46: TopicContent = {
         title: "because / since / as vs due to / owing to",
         titleEn: "Reason Clauses vs Prepositional Phrases",
         paragraphs: [
-          "**Sebep cümlesi** için **because, since, as** kullanılır. **Because** güçlü neden; **since / as** «bildiğin için / şu göz önüne alınarak» tonu: **As it was late, we went home.** Hepsi **fiil cümlesi** ister.",
-          "**Due to** ve **owing to** **isim / -ing / isim cümlesi** ile gider; sözlükte **edat** sayılırlar: **The flight was cancelled due to fog.** **Owing to bad weather, the match was postponed.** ~~Due to we were late~~ yanlış.",
-          "Günümüzde **due to** cümle başında **yüklem öncesi** kullanımı tartışmalıdır; güvenli yazımda **because of** veya **owing to + isim** tercih edilir. Sınavda: **cümle → because**; **isim → due to / owing to**.",
+          "**Sebep cümlesi** için **\\because, since, as\\** kullanılır. **\\Because\\** güçlü neden; **\\since / as\\** **bildiğin için / şu göz önüne alınarak** tonu: **\\As it was late, we went home.\\** Hepsi **fiil cümlesi** ister.",
+          "**\\Due to\\** ve **\\owing to\\** **isim / -ing / isim cümlesi** ile gider; sözlükte **\\edat\\** sayılırlar: **\\The flight was cancelled due to fog.\\** **\\Owing to bad weather, the match was postponed.\\** ~~Due to we were late~~ yanlış.",
+          "Günümüzde **\\due to\\** cümle başında **yüklem öncesi** kullanımı tartışmalıdır; güvenli yazımda **\\because of\\** veya **\\owing to + isim\\** tercih edilir. Sınavda: **cümle → because**; **\\isim → due to / owing to\\**.",
         ],
         examplesTitle: "Sebep yapıları",
         examplesLayout: "columns",
@@ -142,8 +144,8 @@ export const topicContent46: TopicContent = {
         titleEn: "Clause vs Noun / -ing — Summary",
         paragraphs: [
           "**Bağlaç + tam cümle:** although, even though, because, since, as, so that. Özne ve fiil vardır; virgül ve zaman uyumu normal yan cümle kurallarına tabidir.",
-          "**Edat + isim / -ing / isim öbeği:** despite, in spite of, due to, owing to, because of. Sonrasında **yalın fiil** gelmez; **being tired, the storm, lack of funds** gibi öbekler kullanılır.",
-          "Karışık özet: **Although tired** (kısa sıfat gibi though) kabul edilir ama **Although being tired** garip olur → **Although she was tired** veya **Despite being tired**. Aynı anlamı kurarken doğru formu seçmek B2 yazı netliği sağlar.",
+          "**Edat + isim / -ing / isim öbeği:** despite, in spite of, due to, owing to, because of. Sonrasında **yalın fiil** gelmez; **\\being tired, the storm, lack of funds\\** gibi öbekler kullanılır.",
+          "Karışık özet: **\\Although tired\\** (kısa sıfat gibi though) kabul edilir ama **\\Although being tired\\** garip olur → **\\Although she was tired\\** veya **\\Despite being tired\\**. Aynı anlamı kurarken doğru formu seçmek B2 yazı netliği sağlar.",
         ],
         examplesTitle: "Form karşılaştırması",
         examplesLayout: "columns",

@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent26: TopicContent = {
   topicId: "26",
   viewMinutes: 9,
+  quizIntro:
+    "Karşılaştırma ve en üstünlük dereceleri: \\-er, more, the most\\ ve düzensiz formlar bu quizde.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent26: TopicContent = {
         title: "Zero Conditional — Genel Gerçekler",
         titleEn: "Zero Conditional",
         paragraphs: [
-          "**Zero conditional** her zaman geçerli gerçekleri, bilimsel kuralları ve otomatik sonuçları anlatır. Yapı: **If + Present Simple, Present Simple** (veya ters sıra, virgül kuralına dikkat).",
-          "**If** yerine **when** de kullanılabilir (her zaman böyle olduğunda): **When you heat ice, it melts.** Koşul gerçekleştiğinde sonuç daima aynıdır; gelecek veya geçmiş hikâye değildir.",
-          "Türkçede genelde «-sa / -se» veya geniş zaman kalıpları karşılık gelir: **If you mix red and blue, you get purple.**",
+          "**\\Zero conditional\\** her zaman geçerli gerçekleri, bilimsel kuralları ve otomatik sonuçları anlatır. Yapı: **\\If + Present Simple, Present Simple\\** (veya ters sıra, virgül kuralına dikkat).",
+          "**\\If\\** yerine **\\when\\** de kullanılabilir (her zaman böyle olduğunda): **\\When you heat ice, it melts.\\** Koşul gerçekleştiğinde sonuç daima aynıdır; gelecek veya geçmiş hikâye değildir.",
+          "Türkçede genelde -sa / -se veya geniş zaman kalıpları karşılık gelir: **\\If you mix red and blue, you get purple.\\**",
         ],
         examplesTitle: "Zero conditional",
         examplesLayout: "columns",
@@ -52,9 +54,9 @@ export const topicContent26: TopicContent = {
         title: "First Conditional — Gerçekçi Gelecek",
         titleEn: "First Conditional",
         paragraphs: [
-          "**First conditional** gelecekte gerçekleşmesi muhtemel bir koşula bağlı sonucu ifade eder. Yapı: **If + Present Simple, will + V1** (bazen **can, may, might, should** de kullanılır).",
-          "Koşul cümleciğinde **will** kullanma: *If it will rain* yanlış; **If it rains, I will stay home.** Ana cümlede gelecek (**will**) gelir.",
-          "Bu yapı plan, uyarı ve mantıklı tahminler içindir: **If we leave now, we'll catch the train.**",
+          "**\\First conditional\\** gelecekte gerçekleşmesi muhtemel bir koşula bağlı sonucu ifade eder. Yapı: **\\If + Present Simple, will + V1\\** (bazen **\\can, may, might, should\\** de kullanılır).",
+          "Koşul cümleciğinde **\\will\\** kullanma; **\\If it will rain\\** yanlıştır. Doğrusu **\\If it rains, I will stay home.\\** Ana cümlede **\\will\\** veya benzeri bir gelecek kalıbı gelir.",
+          "Bu yapı plan, uyarı ve mantıklı tahminler içindir: **\\If we leave now, we'll catch the train.\\**",
         ],
         examplesTitle: "First conditional",
         examplesLayout: "columns",
@@ -94,9 +96,9 @@ export const topicContent26: TopicContent = {
         title: "If Cümlecikleri ve Virgül",
         titleEn: "Clause Order & Commas",
         paragraphs: [
-          "**If** cümleciği cümlenin başında veya sonunda olabilir. Baştaysa genelde virgül konur: **If it rains, I will stay home.** Sondaysa virgül genelde gerekmez: **I will stay home if it rains.**",
+          "**\\If\\** cümleciği cümlenin başında veya sonunda olabilir. Baştaysa genelde virgül konur: **\\If it rains, I will stay home.\\** Sondaysa virgül genelde gerekmez: **\\I will stay home if it rains.\\**",
           "Her iki sıra da aynı anlamı verir; vurgu hafif değişebilir. Yazıda virgül kuralına dikkat etmek okunurluğu artırır.",
-          "Soru: **What will you do if it rains?** **If** bloğu ortada da olabilir: **I will, if I have time, call you.** (ileri seviye; A2’de baş/son yeterli)",
+          "Soru: **\\What will you do if it rains?\\** **\\If\\** bloğu ortada da olabilir: **\\I will, if I have time, call you.\\** (ileri seviye; A2’de baş/son yeterli)",
         ],
         examplesTitle: "Sıra örnekleri",
         examplesLayout: "columns",
@@ -127,9 +129,9 @@ export const topicContent26: TopicContent = {
         title: "Unless ve When",
         titleEn: "Unless & When",
         paragraphs: [
-          "**Unless** = **if not** (eğer ... değilse): **Unless you hurry, you will be late.** = **If you don't hurry, you will be late.**",
-          "**When** zaman veya her seferinde koşul anlatırken **if** ile örtüşebilir: zero’da alışkanlık/gerçek, first’te gelecekte belirli an: **When I finish work, I'll call you.**",
-          "**As long as** / **provided (that)** de first conditional ile kullanılır (B1’e yakın); A2’de **unless** ve **when** yeterli.",
+          "**\\Unless\\** = **\\if not\\** (eğer ... değilse): **\\Unless you hurry, you will be late.\\** = **\\If you don't hurry, you will be late.\\**",
+          "**\\When\\** zaman veya her seferinde koşul anlatırken **\\if\\** ile örtüşebilir: zero’da alışkanlık/gerçek, first’te gelecekte belirli an: **\\When I finish work, I'll call you.\\**",
+          "**\\As long as\\** / **\\provided (that)\\** de first conditional ile kullanılır (B1’e yakın); A2’de **\\unless\\** ve **\\when\\** yeterli.",
         ],
         examplesTitle: "Unless / when",
         examplesLayout: "columns",
@@ -169,9 +171,9 @@ export const topicContent26: TopicContent = {
         title: "Zero vs First — Seçim",
         titleEn: "Choosing the Right Conditional",
         paragraphs: [
-          "Soru sor: Sonuç **her zaman** mi doğru (zero), yoksa **belirli bir gelecek duruma** mı bağlı (first)? Buz erir → zero. Yarın yağmur yağarsa evde kalırım → first.",
-          "Zaman çizgisi: Zero’da iki taraf da geniş/pratik gerçek; First’te koşul şimdiki/gelecek olasılık, sonuç **will** ile gelecek.",
-          "Karışık hata: Zero için *If you will mix...* veya First koşulunda *if it will rain*. Koşul cümleciğinde **present** kullan.",
+          "Soru sor: Sonuç **\\her zaman\\** mi doğru **\\zero\\**, yoksa **\\belirli bir gelecek duruma\\** mı bağlı **\\first\\**? Buz erir → zero. Yarın yağmur yağarsa evde kalırım → first.",
+          "Zaman çizgisi: Zero’da iki taraf da geniş/pratik gerçek; First’te koşul şimdiki/gelecek olasılık, sonuç **\\will\\** ile gelecek.",
+          "Karışık hata: Zero için *\\If you will mix...\\* veya First koşulunda *\\if it will rain\\*. Koşul cümleciğinde **\\present\\** kullan.",
         ],
         examplesTitle: "Karşılaştırma",
         examplesLayout: "columns",

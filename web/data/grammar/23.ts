@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent23: TopicContent = {
   topicId: "23",
   viewMinutes: 9,
+  quizIntro:
+    "\\Past Continuous\\ ve \\when\\ ile \\while\\ kullanımı; uzun süren eylem ile ani olay birlikte sorulur.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent23: TopicContent = {
         title: "Must — Güçlü Zorunluluk",
         titleEn: "Must — Strong Obligation",
         paragraphs: [
-          "**Must** konuşanın kendi gördüğü güçlü bir zorunluluğu veya kesin bir kuralı ifade eder. Kalıp: **özne + must + V1 (yalın fiil)**. **Must** üçüncü tekil şahısta değişmez: **He must go.**",
-          "Genelde kurallar, güvenlik uyarıları ve konuşanın içsel baskısı için kullanılır: **You must wear a seatbelt.** **I must finish this today.** Geçmişte **must** yerine çoğu zaman **had to** kullanılır; bu konuda şimdiki zamana odaklan.",
-          "**Must not (mustn't)** kesin yasak anlamına gelir — yapılmaması gereken şey. **Don't have to** ile karıştırma: **mustn't** = yasak, **don't have to** = gerek yok (sonraki bölüm).",
+          "**\\Must\\** konuşanın kendi gördüğü güçlü bir zorunluluğu veya kesin bir kuralı ifade eder. Kalıp: **özne + must + V1 (yalın fiil)**. **\\Must\\** üçüncü tekil şahısta değişmez: **\\He must go.\\**",
+          "Genelde kurallar, güvenlik uyarıları ve konuşanın içsel baskısı için kullanılır: **\\You must wear a seatbelt.\\** **\\I must finish this today.\\** Geçmişte **\\must\\** yerine çoğu zaman **\\had to\\** kullanılır; bu konuda şimdiki zamana odaklan.",
+          "**\\Must not (mustn't)\\** kesin yasak anlamına gelir — yapılmaması gereken şey. **\\Don't have to\\** ile karıştırma: **\\mustn't\\** = yasak, **\\don't have to\\** = gerek yok (sonraki bölüm).",
         ],
         examplesTitle: "Must örnekleri",
         examplesLayout: "columns",
@@ -47,9 +49,9 @@ export const topicContent23: TopicContent = {
         title: "Have to — Dış Zorunluluk",
         titleEn: "Have to — External Obligation",
         paragraphs: [
-          "**Have to** dışarıdan gelen bir zorunluluğu anlatır: iş kuralları, okul, yasa. **I / you / we / they + have to**; **he / she / it + has to** kullanılır.",
-          "Geçmiş ve soru çekiminde **do / does / did** yardımcı fiili devreye girer: **Do you have to work tomorrow?** **She didn't have to wait.** Bu yapı **must**'tan farklıdır; **must**'ta yardımcı fiil eklenmez.",
-          "Günlük konuşmada **have got to** (**'ve got to** / **'s got to**) aynı anlama gelebilir: **I've got to leave.** Resmi yazıda genelde **have to** tercih edilir.",
+          "**\\Have to\\** dışarıdan gelen bir zorunluluğu anlatır: iş kuralları, okul, yasa. **\\I / you / we / they + have to\\**; **\\he / she / it + has to\\** kullanılır.",
+          "Geçmiş ve soru çekiminde **\\do / does / did\\** yardımcı fiili devreye girer: **\\Do you have to work tomorrow?\\** **\\She didn't have to wait.\\** Bu yapı **\\must\\**'tan farklıdır; **\\must\\**'ta yardımcı fiil eklenmez.",
+          "Günlük konuşmada **\\have got to\\** (**\\'ve got to\\** / **\\'s got to\\**) aynı anlama gelebilir: **\\I've got to leave.\\** Resmi yazıda genelde **\\have to\\** tercih edilir.",
         ],
         examplesTitle: "Have to örnekleri",
         examplesLayout: "columns",
@@ -88,9 +90,9 @@ export const topicContent23: TopicContent = {
         title: "Should — Tavsiye",
         titleEn: "Should — Advice",
         paragraphs: [
-          "**Should** tavsiye, öneri veya «iyi olurdu» anlamı verir; zorunluluk kadar sert değildir. Kalıp: **özne + should + V1**. Olumsuz: **shouldn't** (**should not**).",
-          "Doktor, arkadaş veya öğretmen önerilerinde sık kullanılır: **You should drink more water.** **He shouldn't eat so much sugar.** Soru: **Should I call him?**",
-          "**Must** ile **should** farkı: **must** daha güçlü ve bazen yasal; **should** «yapman iyi olur» tonundadır. **You must stop** (zorunlu) vs **You should stop** (tavsiye).",
+          "**\\Should\\** tavsiye veya iyi olurdu anlamı verir; zorunluluk kadar sert değildir. Kalıp: **özne + should + yalın fiil**. Olumsuz: **\\shouldn't\\** yani **\\should not\\**.",
+          "Doktor, arkadaş veya öğretmen önerilerinde sık kullanılır: **\\You should drink more water.\\** **\\He shouldn't eat so much sugar.\\** Soru: **\\Should I call him?\\**",
+          "**\\Must\\** ile **\\should\\** farkı: **\\must\\** daha güçlü ve bazen yasal kuralları bildirir; **\\should\\** yumuşak tavsiye tonu taşır. **\\You must stop.\\** yasak veya şart; **\\You should stop.\\** öneri.",
         ],
         examplesTitle: "Should örnekleri",
         examplesLayout: "columns",
@@ -113,9 +115,9 @@ export const topicContent23: TopicContent = {
         title: "Mustn't ve Don't Have to",
         titleEn: "Mustn't vs Don't Have to",
         paragraphs: [
-          "Bu iki yapı Türkçede bazen karışır; anlamları tamamen farklıdır. **Mustn't** = **yapma, yasak**. **Don't have to** = **yapmak zorunda değilsin, gerek yok**.",
-          "Örnek: **You mustn't park here.** = Buraya park yasak. **You don't have to park here.** = Buraya park etmek zorunda değilsin (başka yer de olur).",
-          "**Mustn't** yalnızca **must** ile gelir. «Gerek yok» için **don't / doesn't have to** veya **needn't** (daha az yaygın) kullanılır; **mustn't** asla «gerek yok» demez.",
+          "Bu iki yapı Türkçede bazen karışır; anlamları tamamen farklıdır. **\\Mustn't\\** = **\\yapma, yasak\\**. **\\Don't have to\\** = **yapmak zorunda değilsin, gerek yok**.",
+          "Örnek: **\\You mustn't park here.\\** = Buraya park yasak. **\\You don't have to park here.\\** = Buraya park etmek zorunda değilsin (başka yer de olur).",
+          "**\\Mustn't\\** yalnızca **\\must\\** ile gelir. Gerek yok için **\\don't / doesn't have to\\** veya **\\needn't\\** (daha az yaygın) kullanılır; **\\mustn't\\** asla gerek yok demez.",
         ],
         examplesTitle: "Karşılaştırma",
         examplesLayout: "columns",
@@ -157,8 +159,8 @@ export const topicContent23: TopicContent = {
         title: "Özet ve Seçim Rehberi",
         titleEn: "Quick Reference",
         paragraphs: [
-          "**Must**: konuşanın vurguladığı güçlü kural veya zorunluluk; geçmişte genelde **had to**. **Have to**: dış kurallar; çekimde **do/does/did** kullanılır.",
-          "**Should**: tavsiye, yumuşak öneri. **Mustn't**: kesin yasak. **Don't have to**: zorunluluk yok.",
+          "**\\Must\\**: konuşanın vurguladığı güçlü kural veya zorunluluk; geçmişte genelde **\\had to\\**. **\\Have to\\**: dış kurallar; çekimde **do/does/did** kullanılır.",
+          "**\\Should\\**: tavsiye, yumuşak öneri. **\\Mustn't\\**: kesin yasak. **\\Don't have to\\**: zorunluluk yok.",
           "Sınav ve konuşmada önce anlamı sor: yasak mı, gerek yok mu, tavsiye mi, dış kural mı? Doğru kilidi seçmek için bu dört soru yeterlidir.",
         ],
         examplesTitle: "Tek cümlede fark",

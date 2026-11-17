@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent39: TopicContent = {
   topicId: "39",
   viewMinutes: 10,
+  quizIntro:
+    "**\\Past Perfect Continuous\\** formülünü ve **\\Past Perfect Simple\\** ile farkını; **\\because\\** ile sonuç kurmayı uygula.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent39: TopicContent = {
         title: "had been + V-ing Yapısı",
         titleEn: "Form: had been + V-ing",
         paragraphs: [
-          "**Past Perfect Continuous** geçmişteki **daha önceki bir andan** önce **süren** eylemi anlatır. Kalıp: **had been + fiil-ing**. Tüm öznelerde **had** aynıdır: **I had been waiting.** **She had been studying.**",
-          "Bu zaman **geçmişteki bir referans noktasından** geriye doğru süreyi sayar. Genelde **Past Simple** veya **Past Continuous** ile birlikte gelir: **When I arrived, she had been cooking for an hour.**",
-          "Kısaltma yazıda nadir: **I'd been**. Olumsuz: **hadn't been V-ing**. Soru: **Had you been working long?** **Been** + **-ing** ikilisi süreklilik vurgusunu taşır.",
+          "**\\Past Perfect Continuous\\** geçmişteki **daha önceki bir andan** önce **süren** eylemi anlatır. Kalıp: **\\had been + fiil-ing\\**. Tüm öznelerde **\\had\\** aynıdır: **\\I had been waiting.\\** **\\She had been studying.\\**",
+          "Bu zaman **geçmişteki bir referans noktasından** geriye doğru süreyi sayar. Genelde **\\Past Simple\\** veya **\\Past Continuous\\** ile birlikte gelir: **\\When I arrived, she had been cooking for an hour.\\**",
+          "Kısaltma yazıda nadir: **\\I'd been\\**. Olumsuz: **\\hadn't been V-ing\\**. Soru: **\\Had you been working long?\\** **\\Been\\** + **\\-ing\\** ikilisi süreklilik vurgusunu taşır.",
         ],
         examplesTitle: "had been V-ing",
         examplesLayout: "columns",
@@ -66,9 +68,9 @@ export const topicContent39: TopicContent = {
         title: "Geçmiş Andan Önceki Süre",
         titleEn: "Duration Before a Past Point",
         paragraphs: [
-          "Ana fikir: **Past Simple** olayından **önce** ne kadar süredir bir şey devam ediyordu. **By the time he quit, he had been smoking for twenty years.** **When the power came back, we had been sitting in the dark for hours.**",
-          "**For** ve **since** Past Perfect Continuous ile kullanılır. **Since** başlangıcı, **for** toplam süreyi verir; referans **geçmişteki bir andır**, şimdi değil.",
-          "**How long had you been...?** geçmiş süreç sorusudur. **Past Perfect Simple** ile karışınca: Simple **ne kadar sürede bitirdiğini** sayabilir; Continuous **ne kadar süredir devam ettiğini** vurgular.",
+          "Ana fikir: **\\Past Simple\\** olayından **önce** ne kadar süredir bir şey devam ediyordu. **\\By the time he quit, he had been smoking for twenty years.\\** **\\When the power came back, we had been sitting in the dark for hours.\\**",
+          "**\\For\\** ve **\\since\\** Past Perfect Continuous ile kullanılır. **\\Since\\** başlangıcı, **\\for\\** toplam süreyi verir; referans **geçmişteki bir andır**, şimdi değil.",
+          "**\\How long had you been ve benzeri?\\** geçmiş süreç sorusudur. **\\Past Perfect Simple\\** ile karışınca: Simple **ne kadar sürede bitirdiğini** sayabilir; Continuous **ne kadar süredir devam ettiğini** vurgular.",
         ],
         examplesTitle: "Süre + geçmiş nokta",
         examplesLayout: "columns",
@@ -122,9 +124,9 @@ export const topicContent39: TopicContent = {
         title: "Past Perfect Simple ile Fark",
         titleEn: "vs Past Perfect Simple",
         paragraphs: [
-          "**Past Perfect Simple** (**had + V3**) **tamamlanmış** veya **sayılabilir** sonuca odaklanır: **She had written three reports.** **Past Perfect Continuous** **sürece** odaklanır: **She had been writing reports all day.**",
-          "Durum ve kısa fiillerde Simple sık: **They had lived there for years** (Continuous da mümkün). Somut bitiş: **The road had been closed** (Simple). Uzun süren arka plan: **The road had been being repaired** (pek doğal değil) → **Workers had been repairing the road.**",
-          "Aynı cümlede ikisi birlikte: **He had been saving money, and by then he had saved enough.** Continuous birikim süreci, Simple toplam sonuç.",
+          "**\\Past Perfect Simple\\** (**had + V3**) **tamamlanmış** veya **sayılabilir** sonuca odaklanır: **\\She had written three reports.\\** **\\Past Perfect Continuous\\** **sürece** odaklanır: **\\She had been writing reports all day.\\**",
+          "Durum ve kısa fiillerde Simple sık: **\\They had lived there for years\\** (Continuous da mümkün). Somut bitiş: **\\The road had been closed\\** (\\Simple\\). Uzun süren arka plan: **\\The road had been being repaired\\** (pek doğal değil) için **\\Workers had been repairing the road.\\**",
+          "Aynı cümlede ikisi birlikte: **\\He had been saving money, and by then he had saved enough.\\** Continuous birikim süreci, Simple toplam sonuç.",
         ],
         examplesTitle: "Simple vs Continuous",
         examplesLayout: "columns",
@@ -178,9 +180,9 @@ export const topicContent39: TopicContent = {
         title: "because + Sonuç",
         titleEn: "because + Result in the Past",
         paragraphs: [
-          "Yorgunluk, öfke, ıslak kıyafet gibi **geçmişteki sonuçlar** için önceki süreç **Past Perfect Continuous** ile açıklanır: **She was exhausted because she had been working all day.**",
-          "**Because** cümlesi ana cümleden önce veya sonra gelebilir. Virgül kuralı: **Because** başta ise virgül ana cümle öncesi: **Because he had been running, he was out of breath.**",
-          "**So** sonuç cümlesinde: **He had been driving for hours, so he needed a break.** Past Simple sonuç + PPC sebep hikaye anlatımında çok doğaldır.",
+          "Yorgunluk, öfke, ıslak kıyafet gibi **geçmişteki sonuçlar** için önceki süreç **\\Past Perfect Continuous\\** ile açıklanır: **\\She was exhausted because she had been working all day.\\**",
+          "**\\Because\\** cümlesi ana cümleden önce veya sonra gelebilir. Virgül kuralı: **\\Because\\** başta ise virgül ana cümle öncesi: **\\Because he had been running, he was out of breath.\\**",
+          "**\\So\\** sonuç cümlesinde: **\\He had been driving for hours, so he needed a break.\\** Past Simple sonuç + PPC sebep hikaye anlatımında çok doğaldır.",
         ],
         examplesTitle: "Sebep — sonuç",
         examplesLayout: "columns",
@@ -234,9 +236,9 @@ export const topicContent39: TopicContent = {
         title: "Soru Kalıpları",
         titleEn: "Questions",
         paragraphs: [
-          "Soruda **Had** öne gelir: **Had you been living there long?** **What had she been doing?** **Why had they been arguing?** Kısa cevap: **Yes, I had. / No, I hadn't.** (Continuous süreç için **Yes, I had been.** nadiren).",
-          "**How long had + özne + been V-ing?** en sık süre sorusudur. **Since when had you been...?** başlangıç noktasını ister.",
-          "Rapor ve sözlü anlatımda PPC soruları geçmiş olayın **arka planını** açığa çıkarır. **Past Simple** ile zaman çizelgesi kur: **What happened? — The pipe burst. — Had it been leaking?**",
+          "Soruda **\\Had\\** öne gelir: **\\Had you been living there long?\\** **\\What had she been doing?\\** **\\Why had they been arguing?\\** Kısa cevap: **\\Yes, I had. veya No, I hadn't.\\** (Continuous süreç için **\\Yes, I had been.\\** nadiren).",
+          "**How long had + özne + been V-ing?** en sık süre sorusudur. **\\Since when had you been ve benzeri?\\** başlangıç noktasını ister.",
+          "Rapor ve sözlü anlatımda PPC soruları geçmiş olayın **arka planını** açığa çıkarır. **\\Past Simple\\** ile zaman çizelgesi kur: **\\What happened?; The pipe burst.; Had it been leaking?\\**",
         ],
         examplesTitle: "Soru örnekleri",
         examplesLayout: "columns",
@@ -457,12 +459,7 @@ export const topicContent39: TopicContent = {
       subtopicId: "39-2",
       type: "multiple_choice",
       prompt: "By the time we met, she _____ there for two years.",
-      options: [
-        "has been living",
-        "had been living",
-        "was live",
-        "had lived",
-      ],
+      options: ["has been living", "had been living", "was live", "had lived"],
       correctIndex: 1,
       explanation: "Geçmiş buluşma öncesi süreç → PPC.",
     },

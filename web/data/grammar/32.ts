@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent32: TopicContent = {
   topicId: "32",
   viewMinutes: 9,
+  quizIntro:
+    "Ana cümle olumluysa eklenti olumsuz, olumsuzsa olumlu gelir. **\\Question tags\\** kurallarını, yardımcı fiil uyumunu ve **\\aren't I?\\** gibi istisnaları uygula.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent32: TopicContent = {
         title: "Temel Kural",
         titleEn: "Basic Rule",
         paragraphs: [
-          "**Question tag (eklenti sorusu)**, ana cümlenin sonuna eklenen kısa bir sorudur; karşıdakinden onay veya tepki ister. **Olumlu cümle → olumsuz tag; olumsuz cümle → olumlu tag.**",
-          "**You live in Ankara, don't you?** **She isn't ready, is she?**",
-          "Tag, ana cümlenin **özne + yardımcı fiil** yapısını yansıtır; tag'deki özne zamir olur (you, he, they …).",
+          "**\\Question tag\\**, yani eklenti sorusu, ana cümlenin sonuna yapışan kısa bir onay sorusudur. Kural kısa: olumlu cümleye olumsuz tag, olumsuz cümleye olumlu tag gelir.",
+          "Örnekler: **\\You live in Ankara, don't you?\\** ve **\\She isn't ready, is she?\\** Karşı taraf genelde kısa **\\Yes\\** veya **\\No\\** ile cevap verir.",
+          "Tag, ana cümlenin **özne ve yardımcı fiil** düzenini tekrarlar; tag'deki özne her zaman zamirdir: **\\you, he, they\\** ve benzeri.",
         ],
         examplesTitle: "olumlu / olumsuz tag",
         examplesLayout: "columns",
@@ -36,9 +38,9 @@ export const topicContent32: TopicContent = {
         title: "Yardımcı Fiiller ve Zamanlar",
         titleEn: "Auxiliaries in Tags",
         paragraphs: [
-          "Ana cümlede **be, have, will, can, must** vb. varsa tag'de aynı yardımcı kullanılır: **She is a teacher, isn't she?**",
-          "Simple Present'te **do/does**; Simple Past'te **did** kullanılır: **You work here, don't you?** **He left early, didn't he?**",
-          "**Present Perfect**: **have/has** — **You've finished, haven't you?** **Past**: **had** — **They had eaten, hadn't they?**",
+          "Ana cümlede **\\be, have, will, can, must\\** vb. varsa tag'de aynı yardımcı kullanılır: **\\She is a teacher, isn't she?\\**",
+          "Simple Present'te **do veya does**; Simple Past'te **\\did\\** kullanılır: **\\You work here, don't you?\\** **\\He left early, didn't he?\\**",
+          "**\\Present Perfect\\**: **have veya has**; **\\You've finished, haven't you?\\** **\\Past\\**: **\\had\\**; **\\They had eaten, hadn't they?\\**",
         ],
         examplesTitle: "zamanlara göre tag",
         examplesLayout: "columns",
@@ -59,10 +61,10 @@ export const topicContent32: TopicContent = {
         title: "Özel Durumlar",
         titleEn: "Special Cases",
         paragraphs: [
-          "**I am** → tag genelde **aren't I?** (standart; *amn't I* değil): **I'm right, aren't I?**",
-          "**Let's …** → **shall we?**: **Let's go, shall we?** Emirlerde **will you? / won't you?**: **Open the window, will you?**",
-          "**There is/are** → **there** tag'de kalır: **There's a problem, isn't there?**",
-          "**Nobody / nothing** olumsuz sayılır → olumlu tag: **Nobody called, did they?** (they nötr kullanım).",
+          "**\\I am\\** için tag genelde **\\aren't I?\\** (standart; *\\amn't I\\* değil): **\\I'm right, aren't I?\\**",
+          "**\\Let's\\** ile ortak öneride tag **\\shall we?\\** gelir: **\\Let's go, shall we?\\** Emirlerde ise **\\will you?\\** veya **\\won't you?\\** kullanılır: **\\Open the window, will you?\\**",
+          "**\\There is veya are\\** için **\\there\\** tag'de kalır: **\\There's a problem, isn't there?\\**",
+          "**\\Nobody veya nothing\\** olumsuz sayılır için olumlu tag: **\\Nobody called, did they?\\** (they nötr kullanım).",
         ],
         examplesTitle: "istisnalar",
         examplesLayout: "columns",
@@ -83,9 +85,9 @@ export const topicContent32: TopicContent = {
         title: "Telaffuz ve Anlam",
         titleEn: "Intonation",
         paragraphs: [
-          "Tag **yükselen ton** (↗) ile sorulursa gerçek soru veya emin değilsin: **You're Turkish, aren't you?** (Türk müsün — bilmiyorum.)",
-          "**Alçalan ton** (↘) onay bekler; cümleye inanıyorsun: **It's a nice day, isn't it?** (Güzel gün, değil mi?)",
-          "Kısa cevap tag'deki yardımcıya göre verilir: **Yes, I do. / No, she isn't.**",
+          "Tag **yükselen ton** (↗) ile sorulursa gerçek soru veya emin değilsin: **\\You're Turkish, aren't you?\\** (Türk müsün; bilmiyorum.)",
+          "**Alçalan ton** (↘) onay bekler; cümleye inanıyorsun: **\\It's a nice day, isn't it?\\** (Güzel gün, değil mi?)",
+          "Kısa cevap tag'deki yardımcıya göre verilir: **\\Yes, I do. veya No, she isn't.\\**",
         ],
         examplesTitle: "onay sorusu",
         examplesLayout: "columns",
@@ -106,9 +108,9 @@ export const topicContent32: TopicContent = {
         title: "Sık Hatalar",
         titleEn: "Common Mistakes",
         paragraphs: [
-          "Tag'i ana cümleyle aynı işarette yapma — **You are tired, are you?** yanlış → **aren't you?**",
-          "Özne uyumu: **John is here, isn't he?** (she değil). **Everyone is ready, aren't they?**",
-          "Ana cümlede **never, hardly, seldom** olumsuz sayılır → olumlu tag: **She never talks, does she?**",
+          "Tag'i ana cümleyle aynı işarette kurma: **\\You are tired, are you?\\** yanlıştır; doğrusu **\\aren't you?\\**",
+          "Özne uyumu: **\\John is here, isn't he?\\** (she değil). **\\Everyone is ready, aren't they?\\**",
+          "Ana cümlede **\\never, hardly, seldom\\** olumsuz sayılır için olumlu tag: **\\She never talks, does she?\\**",
         ],
         examplesTitle: "doğru tag",
         examplesLayout: "columns",

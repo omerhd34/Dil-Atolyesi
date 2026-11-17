@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent38: TopicContent = {
   topicId: "38",
   viewMinutes: 9,
+  quizIntro:
+    "**\\Future Continuous\\** ve **\\Future Perfect\\** yapılarını ayırt et; **\\will be + V-ing\\** ile **\\will have + V3\\** kalıplarını doğru zamana yerleştir.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent38: TopicContent = {
         title: "Future Continuous: will be + V-ing",
         titleEn: "Future Continuous — will be + V-ing",
         paragraphs: [
-          "**Future Continuous** gelecekte **belirli bir anda devam ediyor olacak** eylemi anlatır. Kalıp: **will be + fiil-ing**. **I will be working at 9 p.m. tomorrow.** Tüm öznelerle **will be** aynıdır.",
-          "Geçici süreçler, kesilen planlar veya **ortasından yakalanmış** gelecek sahnesi için kullanılır. **This time tomorrow I will be flying to London.** Karşılaştırma: **I will work** (genel karar) / **I will be working** (o saatte süreç içinde).",
-          "Soru: **Will you be using the car tonight?** Olumsuz: **She won't be attending.** **Going to** ile karıştırma: Continuous **zaman dilimi** vurgular, **going to** niyet.",
+          "**\\Future Continuous\\** gelecekte **\\belirli bir anda devam ediyor olacak\\** eylemi anlatır. Kalıp: **\\will be + fiil-ing\\**. **\\I will be working at 9 p.m. tomorrow.\\** Tüm öznelerle **\\will be\\** aynıdır.",
+          "Geçici süreçler, kesilen planlar veya **ortasından yakalanmış** gelecek sahnesi için kullanılır. **\\This time tomorrow I will be flying to London.\\** Karşılaştırma: **\\I will work\\** (\\genel karar\\) veya **\\I will be working\\** (o saatte süreç içinde).",
+          "Soru: **\\Will you be using the car tonight?\\** Olumsuz: **\\She won't be attending.\\** **\\Going to\\** ile karıştırma: Continuous **\\zaman dilimi\\** vurgular, **\\going to\\** niyet.",
         ],
         examplesTitle: "will be V-ing",
         examplesLayout: "columns",
@@ -66,9 +68,9 @@ export const topicContent38: TopicContent = {
         title: "Future Perfect: will have + V3",
         titleEn: "Future Perfect — will have + V3",
         paragraphs: [
-          "**Future Perfect** gelecekte **belirli bir zamandan önce tamamlanmış** olacak eylemi gösterir. Kalıp: **will have + past participle (V3)**. **By June, I will have finished university.**",
-          "Odak **bitiş noktası**dır; süreç değil sonuç. **They will have built the bridge by 2030.** Olumsuz: **We won't have arrived by then.** Soru: **Will you have completed it by Friday?**",
-          "Fiilin üçüncü hali düzensiz fiillerde kritiktir: **written, gone, done**. **Will have been** (Future Perfect Continuous) bu derste ikincil; ana çift **will be V-ing** ve **will have V3**.",
+          "**\\Future Perfect\\** gelecekte **belirli bir zamandan önce tamamlanmış** olacak eylemi gösterir. Kalıp: **\\will have + past participle (V3)\\**. **\\By June, I will have finished university.\\**",
+          "Odak **bitiş noktası**dır; süreç değil sonuç. **\\They will have built the bridge by 2030.\\** Olumsuz: **\\We won't have arrived by then.\\** Soru: **\\Will you have completed it by Friday?\\**",
+          "Fiilin üçüncü hali düzensiz fiillerde kritiktir: **\\written, gone, done\\**. **\\Will have been\\** (\\Future Perfect Continuous\\) bu derste ikincil; ana çift **\\will be V-ing\\** ve **\\will have V3\\**.",
         ],
         examplesTitle: "will have V3",
         examplesLayout: "columns",
@@ -127,9 +129,9 @@ export const topicContent38: TopicContent = {
         title: "Zaman Belirteçleri",
         titleEn: "Time Markers: by, by the time, this time next...",
         paragraphs: [
-          "**By + zaman** = **o zamana kadar (dahil)**. Future Perfect ile klasik eşleşir: **by Friday, by 2026, by the end of the month**. **By then** = o ana kadar.",
-          "**By the time + cümle (Present Simple)** gelecekteki bir ana kadar tamamlanma: **By the time you wake up, I will have left.** **By the time we arrive, they will have eaten.**",
-          "**This time tomorrow / next week / next year** Future Continuous ile doğal: **This time tomorrow we will be driving south.** **In two hours** hem Continuous hem Perfect ile kullanılabilir; Perfect'te **tamamlanmış** vurgusu güçlüdür.",
+          "**\\By + zaman\\** = **\\o zamana kadar (dahil)\\**. Future Perfect ile klasik eşleşir: **\\by Friday, by 2026, by the end of the month\\**. **\\By then\\** = o ana kadar.",
+          "**By the time + cümle (\\Present Simple\\)** gelecekteki bir ana kadar tamamlanma: **\\By the time you wake up, I will have left.\\** **\\By the time we arrive, they will have eaten.\\**",
+          "**\\This time tomorrow veya next week veya next year\\** Future Continuous ile doğal: **\\This time tomorrow we will be driving south.\\** **\\In two hours\\** hem Continuous hem Perfect ile kullanılabilir; Perfect'te **tamamlanmış** vurgusu güçlüdür.",
         ],
         examplesTitle: "Belirteç örnekleri",
         examplesLayout: "columns",
@@ -183,9 +185,9 @@ export const topicContent38: TopicContent = {
         title: "Future Continuous ve Future Perfect Karşılaştırması",
         titleEn: "Contrasting the Two Futures",
         paragraphs: [
-          "**Future Continuous** = o anda **devam eden** süreç. **Future Perfect** = o ana kadar **bitmiş** iş. **At 8 p.m. I will be eating** (yemek sürüyor) / **By 8 p.m. I will have eaten** (yemek bitmiş).",
-          "Aynı zaman çizgisinde ikisi farklı perspektif sunar. Proje: **In May we will be testing the app** (süreç) / **By May we will have tested it** (test tamamlanmış).",
-          "**Will** (simple future) ani karar veya tahmin içindir; **will be V-ing** ve **will have V3** daha **zaman çizelgesi** odaklıdır. Planlama ve raporlarda bu ikili profesyonel tonda kullanılır.",
+          "**\\Future Continuous\\** = o anda **\\devam eden\\** süreç. **\\Future Perfect\\** = o ana kadar **bitmiş** iş. **\\At 8 p.m. I will be eating\\** (yemek sürüyor) veya **\\By 8 p.m. I will have eaten\\** (yemek bitmiş).",
+          "Aynı zaman çizgisinde ikisi farklı perspektif sunar. Proje: **\\In May we will be testing the app\\** (süreç) veya **\\By May we will have tested it\\** (test tamamlanmış).",
+          "**\\Will\\** (\\simple future\\) ani karar veya tahmin içindir; **\\will be V-ing\\** ve **\\will have V3\\** daha **zaman çizelgesi** odaklıdır. Planlama ve raporlarda bu ikili profesyonel tonda kullanılır.",
         ],
         examplesTitle: "Karşılaştırma",
         examplesLayout: "columns",
@@ -239,9 +241,9 @@ export const topicContent38: TopicContent = {
         title: "Birleşik Pratik Cümleler",
         titleEn: "Practice Sentences",
         paragraphs: [
-          "Günlük ve iş İngilizcesinde bu iki zaman **takvim ve beklenti** kurar. **Don't call at nine — I'll be in a meeting.** **Send the file before Friday; I'll have reviewed it by then.**",
-          "**When** ile birleşim: **When you arrive, we will be having lunch** (sen geldiğinde öğle yemeği sürmekte) / **When you arrive, we will have eaten** (yemek bitmiş olacak). Bağlama göre seçim yap.",
-          "Kısa **I'll** ve **won't** doğal konuşmada standarttır. Yazıda tam biçim veya kısaltma stile bağlıdır; anlam aynı kalır.",
+          "Günlük ve iş İngilizcesinde bu iki zaman **\\takvim ve beklenti\\** kurar. **\\Don't call at nine; I'll be in a meeting.\\** **\\Send the file before Friday; I'll have reviewed it by then.\\**",
+          "**\\When\\** ile birleşim: **\\When you arrive, we will be having lunch\\** (sen geldiğinde öğle yemeği sürmekte) veya **\\When you arrive, we will have eaten\\** (yemek bitmiş olacak). Bağlama göre seçim yap.",
+          "Kısa **\\I'll\\** ve **\\won't\\** doğal konuşmada standarttır. Yazıda tam biçim veya kısaltma stile bağlıdır; anlam aynı kalır.",
         ],
         examplesTitle: "Pratik cümleler",
         examplesLayout: "columns",
@@ -426,12 +428,7 @@ export const topicContent38: TopicContent = {
       subtopicId: "38-1",
       type: "multiple_choice",
       prompt: "Don't phone at eight — I _____ a shower.",
-      options: [
-        "will have",
-        "will be having",
-        "will has",
-        "am having",
-      ],
+      options: ["will have", "will be having", "will has", "am having"],
       correctIndex: 1,
       explanation: "O saatte süreç → will be having.",
     },
@@ -454,12 +451,7 @@ export const topicContent38: TopicContent = {
       subtopicId: "38-3",
       type: "multiple_choice",
       prompt: "By the time we land, the sun _____ set.",
-      options: [
-        "will be",
-        "will have",
-        "will being",
-        "has",
-      ],
+      options: ["will be", "will have", "will being", "has"],
       correctIndex: 1,
       explanation: "Tamamlanmış → will have set (V3 fiil cümlede).",
     },

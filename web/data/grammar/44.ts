@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent44: TopicContent = {
   topicId: "44",
   viewMinutes: 10,
+  quizIntro:
+    "Rapor fiillerinde doğru yapıyı seç: **\\deny\\** ve **\\admit + V-ing\\**, **\\advise\\** ve **\\warn + nesne + to\\**, **\\suggest\\** için **\\V-ing\\** veya **\\that\\**, **\\accuse of\\**, **\\apologize for\\**.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent44: TopicContent = {
         title: "deny ve admit + V-ing",
         titleEn: "deny / admit + -ing",
         paragraphs: [
-          "**deny** ve **admit** aktarımda sık kullanılan fiillerdir; ikisi de ardından **-ing (gerund)** alır. **deny** bir iddiayı reddeder: **He denied stealing the money.** (*Parayı çaldığını inkâr etti.*) **admit** bir şeyin doğru olduğunu kabul eder: **She admitted making a mistake.**",
-          "Doğrudan konuşmada **deny + that** mümkündür: **He denied that he had stolen the money.** Günlük ve yazılı özetlerde **V-ing** kalıbı daha kısadır. Zaman kayması aktarım fiili geçmişteyse uygulanır.",
-          "Yaygın hata: ~~deny to steal~~ veya ~~admit to do~~. Doğrusu **deny doing / admit doing**. **admit to + -ing** de (özellikle ABD) kabul edilir: **He admitted to lying.**",
+          "**\\deny\\** ve **\\admit\\** aktarımda sık kullanılan fiillerdir; ikisi de ardından **\\-ing (gerund)\\** alır. **\\deny\\** bir iddiayı reddeder: **\\He denied stealing the money.\\** (*Parayı çaldığını inkâr etti.*) **\\admit\\** bir şeyin doğru olduğunu kabul eder: **\\She admitted making a mistake.\\**",
+          "Doğrudan konuşmada **\\deny + that\\** mümkündür: **\\He denied that he had stolen the money.\\** Günlük ve yazılı özetlerde **\\V-ing\\** kalıbı daha kısadır. Zaman kayması aktarım fiili geçmişteyse uygulanır.",
+          "Yaygın hata: ~~deny to steal~~ veya ~~admit to do~~. Doğrusu **\\deny doing veya admit doing\\**. **\\admit to + -ing\\** de (özellikle ABD) kabul edilir: **\\He admitted to lying.\\**",
         ],
         examplesTitle: "deny / admit örnekleri",
         examplesLayout: "columns",
@@ -53,9 +55,9 @@ export const topicContent44: TopicContent = {
         title: "advise ve warn + nesne + to",
         titleEn: "advise / warn + object + to-infinitive",
         paragraphs: [
-          "**advise** ve **warn** tavsiye veya uyarı aktarır; kalıp: **fiil + nesne + to + V1**. **She advised me to apply early.** **The doctor warned him to rest.** **Tell** ile karıştırma: **told me to** da olur ama **advised** daha resmi ve «uzman önerisi» vurgusu taşır.",
-          "Olumsuz: **warned me not to go out.** **advised us not to sign** yet. **Warn** ayrıca **warn someone against + -ing** alır: **They warned us against investing there.**",
-          "Soru ve özet metinlerinde **that** ile dolaylı cümle: **She advised that I should apply early.** (özellikle BE) Aktarımda **should** veya **to** yapıları birbirinin yerine kullanılabilir.",
+          "**\\advise\\** ve **\\warn\\** tavsiye veya uyarı aktarır; kalıp: **fiil + nesne + to + V1**. **\\She advised me to apply early.\\** **\\The doctor warned him to rest.\\** **\\Tell\\** ile karıştırma: **\\told me to\\** da olur ama **\\advised\\** daha resmi ve uzman önerisi vurgusu taşır.",
+          "Olumsuz: **\\warned me not to go out.\\** **\\advised us not to sign\\** yet. **\\Warn\\** ayrıca **\\warn someone against + -ing\\** alır: **\\They warned us against investing there.\\**",
+          "Soru ve özet metinlerinde **\\that\\** ile dolaylı cümle: **\\She advised that I should apply early.\\** (özellikle BE) Aktarımda **\\should\\** veya **\\to\\** yapıları birbirinin yerine kullanılabilir.",
         ],
         examplesTitle: "advise / warn + to",
         examplesLayout: "columns",
@@ -96,9 +98,9 @@ export const topicContent44: TopicContent = {
         title: "suggest + V-ing veya that",
         titleEn: "suggest + -ing / that",
         paragraphs: [
-          "**suggest** «önermek» anlamında **V-ing** veya **that** cümlesi alır; **nesne + to** yapısı **yoktur**. ~~She suggested me to go~~ yanlıştır. Doğru: **She suggested going to the cinema.** / **She suggested that we (should) go to the cinema.**",
-          "Dolaylı anlatımda **suggested + -ing**: **He suggested taking a taxi.** **that** ile: **He suggested that I should wait.** **Should** çoğu zaman düşürülür (BE subjunctive alternatifi zayıf).",
-          "**Suggest** ayrıca «ima etmek, çağrıştırmak» anlamında **that + is/was** alır: **The data suggest that the trend is growing.** Bu kullanım aktarım fiili değildir; dikkatle ayır.",
+          "**\\suggest\\** önermek anlamında **\\V-ing\\** veya **\\that\\** cümlesi alır; **nesne + to** yapısı **yoktur**. ~~She suggested me to go~~ yanlıştır. Doğru: **\\She suggested going to the cinema.\\** veya **\\She suggested that we (should) go to the cinema.\\**",
+          "Dolaylı anlatımda **suggested + -ing**: **\\He suggested taking a taxi.\\** **\\that\\** ile: **\\He suggested that I should wait.\\** **\\Should\\** çoğu zaman düşürülür (BE subjunctive alternatifi zayıf).",
+          "**\\Suggest\\** ayrıca ima etmek, çağrıştırmak anlamında **that + is veya was** alır: **\\The data suggest that the trend is growing.\\** Bu kullanım aktarım fiili değildir; dikkatle ayır.",
         ],
         examplesTitle: "suggest kalıpları",
         examplesLayout: "columns",
@@ -139,9 +141,9 @@ export const topicContent44: TopicContent = {
         title: "accuse of ve apologize for",
         titleEn: "accuse / apologize + preposition",
         paragraphs: [
-          "**accuse** «suçlamak»; kalıp **accuse someone of + noun / -ing**. **They accused him of fraud.** **She was accused of stealing.** Aktarım: **He accused her of lying.** Edilgende **was accused of** yaygındır.",
-          "**apologize** (BE: apologise) «özür dilemek»; **apologize to someone for + noun / -ing**. **He apologized to me for being late.** Kısa aktarım: **She apologized for the delay.** **to** olmadan yalnızca **for** ile özür konusu yeterlidir.",
-          "**insist** ekstra: **insist on + -ing** veya **insist that** (should + V1). **She insisted on paying.** Bu gruptaki diğer fiiller gibi *said* yerine anlamı zenginleştirir.",
+          "**\\accuse\\** suçlamak; kalıp **\\accuse someone of + noun veya -ing\\**. **\\They accused him of fraud.\\** **\\She was accused of stealing.\\** Aktarım: **\\He accused her of lying.\\** Edilgende **\\was accused of\\** yaygındır.",
+          "**\\apologize\\** (\\BE: apologise\\) özür dilemek; **\\apologize to someone for + noun veya -ing\\**. **\\He apologized to me for being late.\\** Kısa aktarım: **\\She apologized for the delay.\\** **\\to\\** olmadan yalnızca **\\for\\** ile özür konusu yeterlidir.",
+          "**\\insist\\** ekstra: **\\insist on + -ing\\** veya **\\insist that\\** (should + V1). **\\She insisted on paying.\\** Bu gruptaki diğer fiiller gibi *\\said\\* yerine anlamı zenginleştirir.",
         ],
         examplesTitle: "accuse / apologize",
         examplesLayout: "columns",
@@ -182,9 +184,9 @@ export const topicContent44: TopicContent = {
         title: "say ve tell hatırlatması",
         titleEn: "say vs tell — Reminder",
         paragraphs: [
-          "İleri aktarım fiilleri çoğu zaman **that** veya kalıp nesnesiyle kullanılır; yine de **say** ve **tell** temel çerçevedir. **say**: kişi nesnesi **yok** — **She said (that) she was tired.** **tell**: **nesne zorunlu** — **She told me (that) she was tired.**",
-          "**tell** emir aktarımında **tell + sb + to + V1**: **He told us to wait.** Bu, **advised/warned us to** ile örtüşür; fiil seçimi niyet ve tonu belirler. **say** ile doğrudan **say someone to do** kullanılmaz.",
-          "Özet yazarken tekrarlayan *said* yerine anlam fiili seç: inkâr → **denied**, kabul → **admitted**, öneri → **suggested**, uyarı → **warned**. Zaman kayması ve **that** düşürme kuralları 37. konudaki gibidir.",
+          "İleri aktarım fiilleri çoğu zaman **\\that\\** veya kalıp nesnesiyle kullanılır; yine de **\\say\\** ve **\\tell\\** temel çerçevedir. **\\say\\**: kişi nesnesi **yok**; **\\She said (that) she was tired.\\** **\\tell\\**: **\\nesne zorunlu\\**; **\\She told me (that) she was tired.\\**",
+          "**\\tell\\** emir aktarımında **tell + sb + to + V1**: **\\He told us to wait.\\** Bu, **\\advised veya warned us to\\** ile örtüşür; fiil seçimi niyet ve tonu belirler. **\\say\\** ile doğrudan **\\say someone to do\\** kullanılmaz.",
+          "Özet yazarken tekrarlayan *\\said\\* yerine anlam fiili seç: inkâr için **\\denied\\**, kabul için **\\admitted\\**, öneri için **\\suggested\\**, uyarı için **\\warned\\**. Zaman kayması ve **\\that\\** düşürme kuralları 37. konudaki gibidir.",
         ],
         examplesTitle: "say / tell + aktarım fiili",
         examplesLayout: "columns",
@@ -225,9 +227,9 @@ export const topicContent44: TopicContent = {
         title: "Özet tablo ve pratik",
         titleEn: "Pattern Summary",
         paragraphs: [
-          "Aktarım fiillerini **kalıp gruplarına** ayırmak ezberi kolaylaştırır: **V-ing** grubu (**deny, admit, suggest** bir kısım), **sb + to + V1** (**advise, warn, tell**), **edat + noun/-ing** (**accuse of, apologize for, insist on**), **that** cümlesi (çoğu fiilde mümkün).",
-          "Sınavda doğru kalıbı seçmeden önce fiilin **nesne isteyip istemediğini** kontrol et: **suggest** nesne + to almaz; **warn** alır. Aktarım öznesi genelde **reporting clause**'un öznedir; dolaylı cümledeki zamirler kayar.",
-          "Alıştırmalarda doğrudan cümleyi dolaylıya çevir: **\"I didn't steal it,\" he said.** → **He denied stealing it.** Bu dönüşümü hızlandırmak B2 yazılı üretim için kritiktir.",
+          "Aktarım fiillerini **kalıp gruplarına** ayırmak ezberi kolaylaştırır: **\\V-ing\\** grubu (**\\deny, admit, suggest\\** bir kısım), **sb + to + V1** (**\\advise, warn, tell\\**), **edat + noun veya -ing** (\\**accuse of, apologize for, insist on**\\), **\\that\\** cümlesi (çoğu fiilde mümkün).",
+          "Sınavda doğru kalıbı seçmeden önce fiilin **nesne isteyip istemediğini** kontrol et: **\\suggest\\** nesne + to almaz; **\\warn\\** alır. Aktarım öznesi genelde **\\reporting clause\\**'un öznedir; dolaylı cümledeki zamirler kayar.",
+          'Alıştırmalarda doğrudan cümleyi dolaylıya çevir: **\\"I didn\'t steal it," he said.\\** için **\\He denied stealing it.\\** Bu dönüşümü hızlandırmak B2 yazılı üretim için kritiktir.',
         ],
         examplesTitle: "Dönüşüm örnekleri",
         examplesLayout: "columns",

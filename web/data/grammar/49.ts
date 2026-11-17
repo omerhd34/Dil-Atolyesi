@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent49: TopicContent = {
   topicId: "49",
   viewMinutes: 10,
+  quizIntro:
+    "It-cleft ve wh-cleft yapılarını ayırt etmeye yönelik sorular var. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent49: TopicContent = {
         title: "It-cleft: Temel Yapı",
         titleEn: "It-cleft Basics",
         paragraphs: [
-          "**Cleft sentence (bölünmüş / vurgu cümlesi)**, bilinen bir cümleyi ikiye ayırıp tek bir ögeyi spot ışığına alır. En yaygın biçim **It-cleft**: **It + be + vurgulanan öge + who/that + geri kalan**. **John solved the bug.** → **It was John who solved the bug.**",
-          "**Who** canlılar için, **that** hem canlı hem cansız için kullanılır (özellikle ABD İngilizcesinde **that** daha genel). Vurgu özne, nesne, zaman veya yer olabilir.",
-          "Türkçede genelde “… olan … idi” veya ton vurgusu ile karşılanır. It-cleft konuşmada sürpriz, düzeltme veya çelişki bildirmek için kullanılır: **It wasn't me who called you.**",
+          "**Cleft sentence (bölünmüş / vurgu cümlesi)**, bilinen bir cümleyi ikiye ayırıp tek bir ögeyi spot ışığına alır. En yaygın biçim **\\It-cleft\\**: **It + be + vurgulanan öge + who/that + geri kalan**. **\\John solved the bug.\\** → **\\It was John who solved the bug.\\**",
+          "**\\Who\\** canlılar için, **\\that\\** hem canlı hem cansız için kullanılır (özellikle ABD İngilizcesinde **\\that\\** daha genel). Vurgu özne, nesne, zaman veya yer olabilir.",
+          "Türkçede genelde **olan … idi** kalıbı veya ton vurgusu ile karşılanır. It-cleft konuşmada sürpriz, düzeltme veya çelişki bildirmek için kullanılır: **\\It wasn't me who called you.\\**",
         ],
         examplesTitle: "It was … who/that",
         examplesLayout: "columns",
@@ -42,9 +44,9 @@ export const topicContent49: TopicContent = {
         title: "It-cleft: Zaman, Yer ve Neden",
         titleEn: "It-cleft for Adverbials",
         paragraphs: [
-          "Zaman için **It was + zaman + when/that**: **It was in 2019 when we met.** Yer için **It was + yer + where/that**: **It was in Paris where they signed the treaty.**",
-          "Neden için **It was because + cümle**: **It was because she was ill that she stayed home.** **When** ve **where** yerine **that** de kabul edilir; **when/where** anlamı netleştirir.",
-          "Geçmiş vurguda **It was**; genel doğrular veya şimdiki vurguda **It is** kullanılır. Vurgulanan kısım **be** sonrası gelir; geri kalan cümle sona eklenir.",
+          "Zaman için **\\It was + zaman + when/that\\**: **\\It was in 2019 when we met.\\** Yer için **\\It was + yer + where/that\\**: **\\It was in Paris where they signed the treaty.\\**",
+          "Neden için **It was because + cümle**: **\\It was because she was ill that she stayed home.\\** **\\When\\** ve **\\where\\** yerine **\\that\\** de kabul edilir; **when/where** anlamı netleştirir.",
+          "Geçmiş vurguda **\\It was\\**; genel doğrular veya şimdiki vurguda **\\It is\\** kullanılır. Vurgulanan kısım **\\be\\** sonrası gelir; geri kalan cümle sona eklenir.",
         ],
         examplesTitle: "Zaman ve yer vurgusu",
         examplesLayout: "columns",
@@ -74,9 +76,9 @@ export const topicContent49: TopicContent = {
         title: "Wh-cleft (Pseudo-cleft)",
         titleEn: "Wh-cleft",
         paragraphs: [
-          "**Wh-cleft** (sahte bölünmüş cümle) **what / where / when / why / how** ile başlar: **What + özne + fiil + is/was + vurgu**. **I need a clear answer.** → **What I need right now is a clear answer.**",
-          "Bu yapı “sorun şu ki / ihtiyacım olan şey …” tonu verir. **What happened was that the funding stopped.** **Where we went wrong was in planning.**",
-          "**All** ile **All (that) I want is peace.** gibi kısıtlayıcı vurgu da Wh-ailesindendir. **The thing / The reason / The place** kalıpları da benzer işlev görür.",
+          "**\\Wh-cleft\\** (sahte bölünmüş cümle) **\\what / where / when / why / how\\** ile başlar: **What + özne + fiil + is/was + vurgu**. **\\I need a clear answer.\\** → **\\What I need right now is a clear answer.\\**",
+          "Bu yapı **sorun şu ki** veya **ihtiyacım olan şey** tonu verir. **\\What happened was that the funding stopped.\\** **\\Where we went wrong was in planning.\\**",
+          "**\\All\\** ile **\\All (that) I want is peace.\\** gibi kısıtlayıcı vurgu da Wh-ailesindendir. **\\The thing / The reason / The place\\** kalıpları da benzer işlev görür.",
         ],
         examplesTitle: "What … is",
         examplesLayout: "columns",
@@ -106,8 +108,8 @@ export const topicContent49: TopicContent = {
         title: "The reason why & İleri Kalıplar",
         titleEn: "Advanced Cleft Patterns",
         paragraphs: [
-          "**The reason (why) + cümle + is that + açıklama**: **The reason why he resigned is that he felt ignored.** **Why** çoğu zaman düşürülebilir.",
-          "**All (that) + cümle + is/was**: **All that matters is effort.** **It-cleft** ile birlikte kullanıldığında anlatım güçlenir: önce Wh-cleft, sonra düzeltme için It-cleft.",
+          "**The reason (why) + cümle + is that + açıklama**: **\\The reason why he resigned is that he felt ignored.\\** **\\Why\\** çoğu zaman düşürülebilir.",
+          "**All (that) + cümle + is/was**: **\\All that matters is effort.\\** **\\It-cleft\\** ile birlikte kullanıldığında anlatım güçlenir: önce Wh-cleft, sonra düzeltme için It-cleft.",
           "Konuşmada vurguyu vurgulamak için ton yükselir; yazıda cleft fazla kullanılırsa ağır durabilir — paragrafta bir–iki kez yeterlidir.",
         ],
         examplesTitle: "Reason & All kalıpları",
@@ -138,9 +140,9 @@ export const topicContent49: TopicContent = {
         title: "Ne Zaman Kullanılır?",
         titleEn: "Usage & Contrast",
         paragraphs: [
-          "It-cleft **kim / ne / ne zaman** sorusunu net cevaplar; tartışmada “asıl mesele şu” demek için idealdir. Wh-cleft **tanım ve özet** sunar: **What we need is cooperation.**",
-          "Düz cümle ile cleft aynı bilgiyi taşır; fark pragmatiktir. **She made the decision** nötr; **It was she who made the decision** otorite ve vurgu katar.",
-          "Sınav ve yazıda hangi ögenin vurgulanacağına dikkat et: **be**den sonraki kısım cevabın odağıdır. **It was on Friday that** — vurgu gün.",
+          "It-cleft **\\kim / ne / ne zaman\\** sorusunu net cevaplar; tartışmada **asıl mesele şu** demek için idealdir. Wh-cleft **tanım ve özet** sunar: **\\What we need is cooperation.\\**",
+          "Düz cümle ile cleft aynı bilgiyi taşır; fark pragmatiktir. **\\She made the decision\\** nötr; **\\It was she who made the decision\\** otorite ve vurgu katar.",
+          "Sınav ve yazıda hangi ögenin vurgulanacağına dikkat et: **\\be\\**den sonraki kısım cevabın odağıdır. **\\It was on Friday that\\** — vurgu gün.",
         ],
         examplesTitle: "Nötr vs vurgulu",
         examplesLayout: "columns",

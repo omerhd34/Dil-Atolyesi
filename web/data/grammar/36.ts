@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent36: TopicContent = {
   topicId: "36",
   viewMinutes: 10,
+  quizIntro:
+    "**\\Gerund\\** ile **\\to + V1\\** anlam farkına dikkat et; özellikle **\\stop, try, remember, forget, regret, mean\\** fiillerinde doğru biçimi seç.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent36: TopicContent = {
         title: "Gerund ve Infinitive: Temel Fark",
         titleEn: "Gerund vs Infinitive",
         paragraphs: [
-          "**Gerund** fiilin **-ing** biçimidir ve cümlede **isim** gibi davranır: **Swimming is fun.** **I enjoy reading.** **Infinitive** çoğu zaman **to + V1** kalıbıdır: **I want to learn.** **She decided to leave.**",
-          "Bazı fiillerden sonra yalnız **-ing**, bazılarından sonra yalnız **to + V1**, bazılarından sonra **ikisi de** gelebilir; **ikisi de** geldiğinde **anlam değişir** — bu dersin odak noktası budur.",
-          "**Stop, remember, forget, try, regret, mean** fiillerini gruplar halinde çalış; her çifti kendi örnekleriyle eşleştir. Bağlamı (geçmiş eylem mi, gelecek görev mi) belirlemeden doğru yapıyı seçemezsin.",
+          "**\\Gerund\\** fiilin **\\-ing\\** biçimidir ve cümlede **isim** gibi davranır: **\\Swimming is fun.\\** **\\I enjoy reading.\\** **\\Infinitive\\** çoğu zaman **to + V1** kalıbıdır: **\\I want to learn.\\** **\\She decided to leave.\\**",
+          "Bazı fiillerden sonra yalnız **\\-ing\\**, bazılarından sonra yalnız **to + V1**, bazılarından sonra **\\ikisi de\\** gelebilir; **\\ikisi de\\** geldiğinde **anlam değişir**; bu dersin odak noktası budur.",
+          "**\\Stop, remember, forget, try, regret, mean\\** fiillerini gruplar halinde çalış; her çifti kendi örnekleriyle eşleştir. Bağlamı (geçmiş eylem mi, gelecek görev mi) belirlemeden doğru yapıyı seçemezsin.",
         ],
         examplesTitle: "Temel biçimler",
         examplesLayout: "columns",
@@ -56,9 +58,9 @@ export const topicContent36: TopicContent = {
         title: "stop & try",
         titleEn: "stop & try",
         paragraphs: [
-          "**stop + -ing** = bir şeyi **yapmayı bırakmak** (eylem sona erer): **He stopped smoking.** **stop + to + V1** = başka bir şey için **durmak** (amaç): **We stopped to rest.** (Dinlenmek için durduk)",
-          "**try + -ing** = bir sorunu çözmek için **başka bir yöntem dene** (deneme): **I tried adding sugar.** (Şeker eklemeyi denedim.) **try + to + V1** = bir şeyi **başarmak için çabalamak**: **I tried to open the jar.** (Kavanozu açmaya çalıştım.)",
-          "Kısa kural: **stop doing** = artık yapma; **stop to do** = yapmak için ara ver. **try doing** = yöntem dene; **try to do** = hedefe ulaşmaya çalış.",
+          "**stop + -ing** = bir şeyi **yapmayı bırakmak** (\\eylem sona erer\\): **\\He stopped smoking.\\** **stop + to + V1** = başka bir şey için **\\durmak\\** (amaç): **\\We stopped to rest.\\** (Dinlenmek için durduk)",
+          "**try + -ing** = bir sorunu çözmek için **başka bir yöntem dene** (\\deneme\\): **\\I tried adding sugar.\\** (Şeker eklemeyi denedim.) **try + to + V1** = bir şeyi **başarmak için çabalamak**: **\\I tried to open the jar.\\** (Kavanozu açmaya çalıştım.)",
+          "Kısa kural: **\\stop doing\\** = artık yapma; **\\stop to do\\** = yapmak için ara ver. **\\try doing\\** = yöntem dene; **\\try to do\\** = hedefe ulaşmaya çalış.",
         ],
         examplesTitle: "stop / try",
         examplesLayout: "columns",
@@ -90,9 +92,9 @@ export const topicContent36: TopicContent = {
         title: "remember & forget",
         titleEn: "remember & forget",
         paragraphs: [
-          "**remember / forget + to + V1** = **yapılacak iş** (gelecek görev / plan): **Remember to lock the door.** **Don't forget to send the email.**",
-          "**remember / forget + -ing** = **geçmişte yapılan** (anı / deneyim): **I remember meeting her at the party.** **I'll never forget visiting Paris.**",
-          "Sınav ipucu: **to + V1** → «yapmayı unutma / yapacağını hatırla». **-ing** → «yaptığını hatırla / yaşadığını unutma».",
+          "**remember veya forget + to + V1** = **yapılacak iş** (gelecek görev veya plan): **\\Remember to lock the door.\\** **\\Don't forget to send the email.\\**",
+          "**remember veya forget + -ing** = **geçmişte yapılan** (anı veya deneyim): **\\I remember meeting her at the party.\\** **\\I'll never forget visiting Paris.\\**",
+          "Sınav ipucu: **to + V1** için yapmayı unutma veya yapacağını hatırla. **\\-ing\\** için yaptığını hatırla veya yaşadığını unutma.",
         ],
         examplesTitle: "remember / forget",
         examplesLayout: "columns",
@@ -128,9 +130,9 @@ export const topicContent36: TopicContent = {
         title: "regret & mean",
         titleEn: "regret & mean",
         paragraphs: [
-          "**regret + -ing** = **geçmişte yaptığına pişmanlık**: **I regret telling him the secret.** **regret + to + V1** = **kötü bir haberi iletmek** (resmi): **I regret to inform you that...**",
-          "**mean + -ing** = **anlamına gelmek** (sonuç): **Missing the bus means waiting an hour.** **mean + to + V1** = **niyet etmek**: **I didn't mean to hurt you.**",
-          "**regret to do** çoğu zaman yazılı, resmi dilde görülür. **mean to do** günlük konuşmada «kastetmek» anlamındadır.",
+          "**regret + -ing** = **geçmişte yaptığına pişmanlık**: **\\I regret telling him the secret.\\** **regret + to + V1** = **kötü bir haberi iletmek** (resmi): **\\I regret to inform you that ve benzeri\\**",
+          "**mean + -ing** = **anlamına gelmek** (sonuç): **\\Missing the bus means waiting an hour.\\** **mean + to + V1** = **\\niyet etmek\\**: **\\I didn't mean to hurt you.\\**",
+          "**\\regret to do\\** çoğu zaman yazılı, resmi dilde görülür. **\\mean to do\\** günlük konuşmada kastetmek anlamındadır.",
         ],
         examplesTitle: "regret / mean",
         examplesLayout: "columns",
@@ -170,9 +172,9 @@ export const topicContent36: TopicContent = {
         title: "Karşılaştırma ve Seçim",
         titleEn: "Choosing the Right Form",
         paragraphs: [
-          "Cümleyi okurken şu soruyu sor: **Eylem bitti mi, yoksa yapılacak / amaç mı?** Bitti ve anı anlatıyorsa çoğu zaman **-ing**: **I remember locking** (kilitledim, hatırlıyorum). Yapılacak görevse **to**: **remember to lock** (kilitlemeyi unutma).",
-          "**Stop** ve **try** için: durma **nedeni** var mı? Varsa **to** (amaç). **Try** bir çözüm yolu mu, yoksa zor bir hedef mi? Yöntem → **-ing**, hedef → **to**.",
-          "Aynı fiil, iki yapı — iki anlam. Örnekleri **yüksek sesle** çiftler halinde oku; kulak alışınca sınavda hata oranı düşer.",
+          "Cümleyi okurken şu soruyu sor: **Eylem bitti mi, yoksa yapılacak veya amaç mı?** Bitti ve anı anlatıyorsa çoğu zaman **\\-ing\\**: **\\I remember locking\\** (kilitledim, hatırlıyorum). Yapılacak görevse **\\to\\**: **\\remember to lock\\** (\\kilitlemeyi unutma\\).",
+          "**\\Stop\\** ve **\\try\\** için: durma **\\nedeni\\** var mı? Varsa **\\to\\** (amaç). **\\Try\\** bir çözüm yolu mu, yoksa zor bir hedef mi? Yöntem için **\\-ing\\**, hedef için **\\to\\**.",
+          "Aynı fiil, iki yapı; iki anlam. Örnekleri **yüksek sesle** çiftler halinde oku; kulak alışınca sınavda hata oranı düşer.",
         ],
         examplesTitle: "Çift örnekler",
         examplesLayout: "columns",

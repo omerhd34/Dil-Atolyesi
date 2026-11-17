@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent9: TopicContent = {
   topicId: "9",
   viewMinutes: 8,
+  quizIntro:
+    "Alıştırma \\have got\\ ve \\has got\\ özne uyumunu, olumsuzu ve kısa cevapları test eder. Soruda \\got\\ tekrarlanır mı diye kontrol et.",
   lesson: {
     parts: [
       {
@@ -10,16 +12,20 @@ export const topicContent9: TopicContent = {
         title: "Olumlu: have got / has got",
         titleEn: "Affirmative — have got / has got",
         paragraphs: [
-          "İngiliz İngilizcesinde sahiplik bildirmek için sık kullanılan yapı **have got** ve **has got**dır. Türkçedeki **-ım var / sahibiyim** anlamına gelir; **I, you, we, they** ile **have got**, **he, she, it** ile **has got** kullanılır.",
-          "Olumlu kalıp: **özne + have got / has got + nesne**. Örneğin **I have got a bike.** (Bisikletim var.) **She has got two brothers.** (Onun iki erkek kardeşi var.) **Got** burada fiil değil, **have** ile birlikte sahiplik anlatır.",
-          "Amerikan İngilizcesinde çoğu zaman yalnızca **have / has** yeterlidir (**I have a bike.**), ancak A1–A2 seviyesinde **have got** kalıbını öğrenmek özellikle İngiliz materyalleri ve sınavlar için önemlidir.",
+          "İngiliz İngilizcesinde sahiplik bildirmek için sık kullanılan yapı **\\have got\\** ve **\\has got\\**dır. Türkçedeki **-ım var / sahibiyim** anlamına gelir; **\\I, you, we, they\\** ile **\\have got\\**, **\\he, she, it\\** ile **\\has got\\** kullanılır.",
+          "Olumlu kalıp: **özne + have got / has got + nesne**. Örneğin **\\I have got a bike.\\** (\\Bisikletim var.\\) **\\She has got two brothers.\\** (Onun iki erkek kardeşi var.) **\\Got\\** burada fiil değil, **\\have\\** ile birlikte sahiplik anlatır.",
+          "Amerikan İngilizcesinde çoğu zaman yalnızca **\\have / has\\** yeterlidir (\\**I have a bike.**\\), ancak A1–A2 seviyesinde **\\have got\\** kalıbını öğrenmek özellikle İngiliz materyalleri ve sınavlar için önemlidir.",
         ],
         examplesTitle: "Olumlu örnekler",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: { en: "İngilizce", tr: "Türkçe" },
         examples: [
-          { en: "I have got a cat.", tr: "Bir kedim var.", note: "I → have got" },
+          {
+            en: "I have got a cat.",
+            tr: "Bir kedim var.",
+            note: "I → have got",
+          },
           {
             en: "You have got a new phone.",
             tr: "Yeni bir telefonun var.",
@@ -62,9 +68,9 @@ export const topicContent9: TopicContent = {
         title: "Olumsuz: haven't got / hasn't got",
         titleEn: "Negative — haven't got / hasn't got",
         paragraphs: [
-          "Olumsuz cümlede **have got** → **haven't got**, **has got** → **hasn't got** olur. Kalıp: **özne + haven't / hasn't got + nesne**. Örnek: **I haven't got a car.** (Arabam yok.) **He hasn't got any brothers.** (Erkek kardeşi yok.)",
-          "**any** olumsuz ve soru cümlelerinde sık kullanılır: **We haven't got any money.** Tekil sayılabilir nesnede **a/an** olmaz; çoğul veya sayılamayanla **any** doğaldır.",
-          "Olumsuzda anlam değişmez; yalnızca sahipliğin olmadığını vurgularsın. **She has got a dog.** → **She hasn't got a dog.** gibi tek yapı değişikliği yeterlidir.",
+          "Olumsuz cümlede **\\have got\\** → **\\haven't got\\**, **\\has got\\** → **\\hasn't got\\** olur. Kalıp: **özne + haven't / hasn't got + nesne**. Örnek: **\\I haven't got a car.\\** (\\Arabam yok.\\) **\\He hasn't got any brothers.\\** (Erkek kardeşi yok.)",
+          "**\\any\\** olumsuz ve soru cümlelerinde sık kullanılır: **\\We haven't got any money.\\** Tekil sayılabilir nesnede **a/an** olmaz; çoğul veya sayılamayanla **\\any\\** doğaldır.",
+          "Olumsuzda anlam değişmez; yalnızca sahipliğin olmadığını vurgularsın. **\\She has got a dog.\\** → **\\She hasn't got a dog.\\** gibi tek yapı değişikliği yeterlidir.",
         ],
         examplesTitle: "Olumsuz örnekler",
         examplesLayout: "columns",
@@ -95,9 +101,9 @@ export const topicContent9: TopicContent = {
         title: "Sorular ve Kısa Cevaplar",
         titleEn: "Questions & Short Answers",
         paragraphs: [
-          "Soru kurmak için **have / has** öznenin önüne gelir: **Have you got…?** **Has she got…?** Kalıp: **Have/Has + özne + got + nesne?** Örnek: **Have you got a pen?** **Has he got a sister?**",
-          "Kısa cevapta **got** tekrarlanmaz; yalnızca **have / has** veya **haven't / hasn't** kullanılır. Olumlu: **Yes, I have. / Yes, she has.** Olumsuz: **No, I haven't. / No, he hasn't.**",
-          "Soru sözcükleri (**What, How many**) cümle başına gelebilir: **What have you got in your bag?** **How many brothers has she got?** Günlük konuşmada ton yükselterek de soru yapılabilir.",
+          "Soru kurmak için **\\have / has\\** öznenin önüne gelir: **\\Have you got a pen?\\** **\\Has she got a sister?\\** Kalıp: **\\Have/Has + özne + got + nesne?\\**",
+          "Kısa cevapta **\\got\\** tekrarlanmaz; yalnızca **\\have / has\\** veya **\\haven't / hasn't\\** kullanılır. Olumlu: **\\Yes, I have. / Yes, she has.\\** Olumsuz: **\\No, I haven't. / No, he hasn't.\\**",
+          "Soru sözcükleri (**\\What, How many\\**) cümle başına gelebilir: **\\What have you got in your bag?\\** **\\How many brothers has she got?\\** Günlük konuşmada ton yükselterek de soru yapılabilir.",
         ],
         examplesTitle: "Soru ve kısa cevaplar",
         examplesLayout: "columns",
@@ -132,9 +138,9 @@ export const topicContent9: TopicContent = {
         title: "Kısaltmalar ve Sahiplik Kullanımı",
         titleEn: "Contractions & Ownership",
         paragraphs: [
-          "Konuşmada **have got** ve **has got** kısaltılır: **I've got**, **you've got**, **he's got**, **she's got**, **we've got**, **they's got** değil → **they've got**. Olumsuzda **haven't got**, **hasn't got** aynı kalır.",
-          "Dikkat: **he's** hem **he is** hem **he has** kısaltması olabilir; bağlamdan anlarsın. **He's got a car.** = Arabası var. **He's happy.** = Mutlu.",
-          "**have got** yalnızca **sahiplik** için değil; **aile** (**I've got two uncles**), **eşya** (**She's got a laptop**), **fiziksel özellik** (**He's got brown hair**) ve hatta **hastalık** (**I've got a cold** — hafif üşütmüşüm) için de kullanılır.",
+          "Konuşmada **\\have got\\** ve **\\has got\\** kısaltılır: **\\I've got\\**, **\\you've got\\**, **\\he's got\\**, **\\she's got\\**, **\\we've got\\**, **\\they's got\\** değil → **\\they've got\\**. Olumsuzda **\\haven't got\\**, **\\hasn't got\\** aynı kalır.",
+          "Dikkat: **\\he's\\** hem **\\he is\\** hem **\\he has\\** kısaltması olabilir; bağlamdan anlarsın. **\\He's got a car.\\** = Arabası var. **\\He's happy.\\** = Mutlu.",
+          "**\\have got\\** yalnızca **\\sahiplik\\** için değil; **\\aile\\** (\\**I've got two uncles**), **eşya** (**She's got a laptop**\\), **fiziksel özellik** (\\**He's got brown hair**\\) ve hatta **hastalık** (**\\I've got a cold\\** — hafif üşütmüşüm) için de kullanılır.",
         ],
         examplesTitle: "Kısaltma ve sahiplik",
         examplesLayout: "columns",
@@ -262,7 +268,12 @@ export const topicContent9: TopicContent = {
       subtopicId: "9-3",
       type: "multiple_choice",
       prompt: '"Have you got a pen?" sorusuna olumlu kısa cevap hangisidir?',
-      options: ["Yes, you have.", "Yes, I have.", "Yes, I've got.", "Yes, I got."],
+      options: [
+        "Yes, you have.",
+        "Yes, I have.",
+        "Yes, I've got.",
+        "Yes, I got.",
+      ],
       correctIndex: 1,
       explanation: "Kısa cevapta got tekrarlanmaz: Yes, I have.",
     },

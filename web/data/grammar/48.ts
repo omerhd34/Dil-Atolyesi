@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent48: TopicContent = {
   topicId: "48",
   viewMinutes: 10,
+  quizIntro:
+    "Koşul bağlaçlarının anlam nüanslarını sorularla pekiştiriyorsun. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent48: TopicContent = {
         title: "If'siz Devrik Koşul: Had, Were, Should",
         titleEn: "Inverted Conditionals",
         paragraphs: [
-          "Üçüncü ve ikinci koşul cümlelerinde **if** düşürülüp **yardımcı fiil + özne** başa alınabilir. Bu, resmi ve edebi bir ton verir. **If I had known** → **Had I known**; **If I were you** → **Were I you**; **If you should need help** → **Should you need help**.",
-          "**Had I known** geçmişte gerçekleşmemiş koşulu anlatır; sonuç genelde **would have + V3**: **Had I known, I would have stayed.** **Were** ile birinci tipin resmi biçimi de mümkündür: **Were the report ready, we could publish today.**",
-          "**Should** ihtimali düşük veya nazik teklif bildirir: **Should you require further information, contact us.** Bu yapılar sözleşme, mektup ve akademik metinlerde sık görülür.",
+          "Üçüncü ve ikinci koşul cümlelerinde **\\if\\** düşürülüp **yardımcı fiil + özne** başa alınabilir. Bu, resmi ve edebi bir ton verir. **\\If I had known\\** → **\\Had I known\\**; **\\If I were you\\** → **\\Were I you\\**; **\\If you should need help\\** → **\\Should you need help\\**.",
+          "**\\Had I known\\** geçmişte gerçekleşmemiş koşulu anlatır; sonuç genelde **\\would have + V3\\**: **\\Had I known, I would have stayed.\\** **\\Were\\** ile birinci tipin resmi biçimi de mümkündür: **\\Were the report ready, we could publish today.\\**",
+          "**\\Should\\** ihtimali düşük veya nazik teklif bildirir: **\\Should you require further information, contact us.\\** Bu yapılar sözleşme, mektup ve akademik metinlerde sık görülür.",
         ],
         examplesTitle: "If ile devrik karşılık",
         examplesLayout: "columns",
@@ -46,9 +48,9 @@ export const topicContent48: TopicContent = {
         title: "Provided that & On condition that",
         titleEn: "Explicit Conditions",
         paragraphs: [
-          "**Provided (that)** ve **on condition (that)** “şu koşulla ki, yalnızca … olursa” anlamı taşır; koşul yerine getirilmezse sonuç geçerli olmaz. **We will proceed provided that funding is approved.**",
-          "**Providing (that)** konuşmada **provided** ile aynı işlevi görür. Bu bağlaçlardan sonra tam cümle gelir; fiil çekimi normaldir (devrik değil).",
-          "Hukuki ve iş metinlerinde **on condition that** daha ağır ve bağlayıcı çağrışım yapar. **On condition that all parties sign, the deal takes effect.**",
+          "**\\Provided (that)\\** ve **\\on condition (that)\\** **şu koşulla ki, yalnızca böyle olursa** anlamı taşır; koşul yerine getirilmezse sonuç geçerli olmaz. **\\We will proceed provided that funding is approved.\\**",
+          "**\\Providing (that)\\** konuşmada **\\provided\\** ile aynı işlevi görür. Bu bağlaçlardan sonra tam cümle gelir; fiil çekimi normaldir (devrik değil).",
+          "Hukuki ve iş metinlerinde **\\on condition that\\** daha ağır ve bağlayıcı çağrışım yapar. **\\On condition that all parties sign, the deal takes effect.\\**",
         ],
         examplesTitle: "Açık koşul bağlaçları",
         examplesLayout: "columns",
@@ -78,9 +80,9 @@ export const topicContent48: TopicContent = {
         title: "As long as, Unless, In case, Supposing",
         titleEn: "Further Conditional Linkers",
         paragraphs: [
-          "**As long as** (so long as) “… olduğu müddetçe” demektir; koşul süreklidir: **As long as you study, you will improve.** **Unless** “eğer … değilse” = if not: **Unless you hurry, you will miss it.**",
-          "**In case** hazırlık ve önlem bildirir: **Take an umbrella in case it rains.** (Yağarsa diye.) **Supposing (that)** / **What if** varsayımsal senaryo kurar: **Supposing the plan fails, what then?**",
-          "**Given (that)** bilinen bir gerçeği koşul gibi sunar: **Given that resources are limited, we must prioritise.**",
+          "**\\As long as\\** (**\\so long as\\**) **… olduğu müddetçe** anlamına gelir; koşul süreklidir. Örnek: **\\As long as you study, you will improve.\\** **\\Unless\\** ise **eğer … değilse**, yani if not demektir: **\\Unless you hurry, you will miss it.\\**",
+          "**\\In case\\** hazırlık ve önlem bildirir: **\\Take an umbrella in case it rains.\\** (Yağarsa diye.) **\\Supposing (that)\\** / **\\What if\\** varsayımsal senaryo kurar: **\\Supposing the plan fails, what then?\\**",
+          "**\\Given (that)\\** bilinen bir gerçeği koşul gibi sunar: **\\Given that resources are limited, we must prioritise.\\**",
         ],
         examplesTitle: "Koşul nüansları",
         examplesLayout: "columns",
@@ -110,9 +112,9 @@ export const topicContent48: TopicContent = {
         title: "Anlam Farkları ve Kayıt",
         titleEn: "Register & Nuance",
         paragraphs: [
-          "**If** en nötr ve yaygın bağlaçtır. **Had/Were/Should** devriği formal yazıya aittir; günlük sohbette **If I had known** daha doğaldır.",
-          "**Provided that** ve **on condition that** iş ve hukuk dilinde **if**ten daha “şartlı anlaşma” çağrışımı yapar. **Unless** tek başına güçlü uyarı verir.",
-          "**In case** ile **if** karıştırılmamalı: **in case** önlem, **if** gerçek koşuldur. **I'll bring water in case we get thirsty** (ihtimal için) vs **I'll bring water if you ask** (istek koşulu).",
+          "**\\If\\** en nötr ve yaygın bağlaçtır. **Had/Were/Should** devriği formal yazıya aittir; günlük sohbette **\\If I had known\\** daha doğaldır.",
+          "**\\Provided that\\** ve **\\on condition that\\** iş ve hukuk dilinde **\\if\\**ten daha **şartlı anlaşma** çağrışımı yapar. **\\Unless\\** tek başına güçlü uyarı verir.",
+          "**\\In case\\** ile **\\if\\** karıştırılmamalı: **\\in case\\** önlem, **\\if\\** gerçek koşuldur. **\\I'll bring water in case we get thirsty\\** (ihtimal için) vs **\\I'll bring water if you ask\\** (istek koşulu).",
         ],
         examplesTitle: "Doğru bağlaç seçimi",
         examplesLayout: "columns",
@@ -146,9 +148,9 @@ export const topicContent48: TopicContent = {
         title: "Birleşik Kullanım ve Sık Hatalar",
         titleEn: "Practice Tips",
         paragraphs: [
-          "Devrik koşulda **if** ve **yardımcı fiil** birlikte kullanılmaz: **Had I known** ✅, **If had I known** ❌. Sonuç cümlesi devrik olmak zorunda değildir.",
-          "**Should** ile gelecek anlamı nazik resmiyetle gelir; **will** zorunlu değildir: **Should you wish to apply, submit the form.**",
-          "Çeviri yaparken Türkçede “-se / -sa” yeterlidir; İngilizcede bağlaç seçimi üslubu belirler. Üst düzey yazıda aynı paragrafta **if** yerine bir kez devrik veya **provided that** kullanmak çeşitlilik sağlar.",
+          "Devrik koşulda **\\if\\** ve **yardımcı fiil** birlikte kullanılmaz: **\\Had I known\\** ✅, **\\If had I known\\** ❌. Sonuç cümlesi devrik olmak zorunda değildir.",
+          "**\\Should\\** ile gelecek anlamı nazik resmiyetle gelir; **\\will\\** zorunlu değildir: **\\Should you wish to apply, submit the form.\\**",
+          "Çeviri yaparken Türkçede **-se / -sa** yeterlidir; İngilizcede bağlaç seçimi üslubu belirler. Üst düzey yazıda aynı paragrafta **\\if\\** yerine bir kez devrik veya **\\provided that\\** kullanmak çeşitlilik sağlar.",
         ],
         examplesTitle: "Örnek paragraf kalıpları",
         examplesLayout: "columns",

@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent3: TopicContent = {
   topicId: "3",
   viewMinutes: 8,
+  quizIntro:
+    "Sorular \\a, an, the\\ seçimi, düzenli ve düzensiz çoğul formlar ile tanımlıksız kullanımı kapsar. İlk ses kuralını ve çoğul yazımına odaklan.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,11 @@ export const topicContent3: TopicContent = {
         title: "a ve an — Belirsiz Tanımlıklar",
         titleEn: "a and an — Indefinite Articles",
         paragraphs: [
-          "İngilizcede **belirsiz tanımlık (indefinite article)** **a** ve **an** olmak üzere ikidir; Türkçedeki **bir** kelimesinin karşılığıdır ve tekil sayılabilir isimlerin önüne gelir: **a book** (bir kitap), **an apple** (bir elma). Hangisini seçeceğin kelimenin ilk **harfine** değil, ilk **sesine** bağlıdır.",
-          "**a**, ilk hecesi **ünsüz sesiyle** başlayan kelimelerden önce gelir: **a dog**, **a university**, **a European city**. **university** yazılışta ü harfiyle başlar ama telaffuz **/juː/** olduğu için ses **ünsüzdür (y)** ve **a** kullanılır.",
-          "**an**, ilk hecesi **ünlü sesiyle** başlayan kelimelerden önce gelir: **an egg**, **an office**, **an hour**. **hour** yazılışta h ile başlar ama **h sessizdir**; kelime **/aʊər/** diye okunduğu için **an hour** dersin. Kuralı pratikte şöyle özetleyebilirsin: kulağa ünsüzle başlıyorsa **a**, ünlüyle başlıyorsa **an**.",
+          "İngilizcede **belirsiz tanımlık** **\\a\\** ve **\\an\\** olmak üzere ikidir. Türkçedeki **bir** kelimesinin karşılığıdır ve tekil sayılabilir isimlerin önüne gelir: **\\a book\\**, **\\an apple\\**. Hangisini seçeceğin kelimenin **ilk harfine** değil, **ilk sesine** bağlıdır.",
+
+          "İlk sesi **ünsüz** olan kelimelerden önce **\\a\\** kullanılır: **\\a dog\\**, **\\a cat\\**, **\\a university\\**. **\\university\\** kelimesi **u** harfiyle başlasa da **/yu/** gibi okunur. İlk ses **y** olduğu ve ünsüz sayıldığı için bu kelimenin önüne **\\a\\** gelir.",
+
+          "İlk sesi **ünlü** olan kelimelerden önce ise **\\an\\** kullanılır: **\\an egg\\**, **\\an office\\**, **\\an hour\\**. **\\hour\\** kelimesi **h** ile başlasa da **h sessizdir** ve kelime **/aur/** gibi okunur. Bu yüzden **\\an hour\\** deriz. Kuralı şöyle özetleyebilirsin: kulağa ünsüzle başlıyorsa **\\a\\**, ünlüyle başlıyorsa **\\an\\**.",
         ],
         examplesTitle: "a / an örnekleri",
         examplesLayout: "columns",
@@ -51,9 +55,11 @@ export const topicContent3: TopicContent = {
         title: "the — Belirli Tanımlık",
         titleEn: "the — Definite Article",
         paragraphs: [
-          "**the**, İngilizcede **belirli tanımlık (definite article)**tır. Konuşan ve dinleyici hangi kişi, hayvan veya nesneden söz edildiğini **bildiğinde** veya bağlamdan **anlaşıldığında** kullanılır: **Open the door.** (Hangi kapı belli.) **The sun is bright.** (Güneş tek ve herkesçe bilinen bir nesnedir.)",
-          "**the** hem **tekil** hem **çoğul** isimlerle gelir: **the book / the books**, **the child / the children**. Türkçede çoğu zaman karşılığı yoktur; bazen **-ı / -i** ekine yakın bir belirlik verir: **the teacher** → öğretmen (konuşulan, bilinen kişi).",
-          "Bazı kalıplarda **the** zorunludur: **superlative** sıfatlardan önce (**the best**), bazı **coğrafi** adlardan önce (**the United States**, **the Nile**), ve daha önce bahsedilen nesneler tekrarlanınca: **I have a cat. The cat is black.** İlk kez **a cat**, ikinci kez artık bilinen olduğu için **the cat**.",
+          "İngilizcede **belirli tanımlık** yani **\\definite article\\** olarak bilinen **\\the\\**, hangi kişi, hayvan veya nesneden söz ettiğimizin hem konuşan hem de dinleyen için net olduğu durumlarda kullanılır. **\\Open the door.\\** cümlesinde hangi kapının kastedildiği bellidir. **\\The sun is bright.\\** cümlesinde ise güneş tek ve herkesçe bilinen bir nesne olduğu için **\\the\\** gelir.",
+
+          "Tekil ve çoğul isimlerin önüne aynı şekilde gelir: **\\the book\\** ve **\\the books\\**, **\\the child\\** ve **\\the children\\**. Türkçede doğrudan bir karşılığı yoktur; çoğu zaman cümlenin anlamından anlaşılır. Bazen de **-ı / -i** eki gibi bir belirlik katar: **\\the teacher\\** dediğimizde, herkesin tanıdığı ya da az önce sözü edilen öğretmenden bahsederiz.",
+
+          "Bazı durumlarda **\\the\\** kullanmak zorunludur. En üstünlük sıfatlarından önce gelir: **\\the best\\**. Bazı coğrafi adların önünde de yer alır: **\\the United States\\**, **\\the Pacific\\**. Bir nesneden ilk kez söz ederken **\\a\\**, ikinci kez söz ederken **\\the\\** kullanırız. **\\I have a cat. The cat is black.\\** cümlelerinde kedi önce yeni bir bilgi olarak tanıtılır, sonra artık bilindiği için **\\the cat\\** olur.",
         ],
         examplesTitle: "the örnekleri",
         examplesLayout: "columns",
@@ -87,9 +93,9 @@ export const topicContent3: TopicContent = {
         title: "Düzenli Çoğul: -s, -es, -ies, -ves",
         titleEn: "Regular Plurals",
         paragraphs: [
-          "İngilizcede çoğu isim çoğul yapılırken sonuna **-s** eklenir: **cat → cats**, **book → books**, **car → cars**. Telaffuz üç biçimde olabilir: **/s/**, **/z/** veya **/ɪz/**; yazım hep **-s** veya **-es** ile gösterilir.",
-          "Sessiz harften sonra **s, x, z, ch, sh** ile biten kelimelere **-es** gelir: **bus → buses**, **box → boxes**, **watch → watches**, **dish → dishes**. Bu ek genelde **/ɪz/** sesi verir.",
-          "**Y** ile biten kelimelerde ünlü harften önce gelen **y** çoğulda **-ies** olur: **city → cities**, **baby → babies**, **story → stories**. Ünsüz + **y** değişir; ünlü + **y** sadece **-s** alır: **boy → boys**, **day → days**. **-f / -fe** ile biten bazı kelimelerde **-ves** kullanılır: **knife → knives**, **wife → wives**, **leaf → leaves**.",
+          "İngilizcede çoğu isim çoğul yapılırken sonuna **-s** eklenir: **\\cat → cats\\**, **\\book → books\\**, **\\car → cars\\**. Telaffuz üç biçimde olabilir: **/s/**, **/z/** veya **/ɪz/**; yazım hep **-s** veya **\\-es\\** ile gösterilir.",
+          "Sessiz harften sonra **\\s, x, z, ch, sh\\** ile biten kelimelere **\\-es\\** gelir: **\\bus → buses\\**, **\\box → boxes\\**, **\\watch → watches\\**, **\\dish → dishes\\**. Bu ek genelde **/ɪz/** sesi verir.",
+          "**Y** ile biten kelimelerde ünlü harften önce gelen **y** çoğulda **\\-ies\\** olur: **\\city → cities\\**, **\\baby → babies\\**, **\\story → stories\\**. Ünsüz + **y** değişir; ünlü + **y** sadece **-s** alır: **\\boy → boys\\**, **\\day → days\\**. **\\-f / -fe\\** ile biten bazı kelimelerde **\\-ves\\** kullanılır: **\\knife → knives\\**, **\\wife → wives\\**, **\\leaf → leaves\\**.",
         ],
         examplesTitle: "Düzenli çoğul örnekleri",
         examplesLayout: "columns",
@@ -112,9 +118,9 @@ export const topicContent3: TopicContent = {
         title: "Düzensiz Çoğullar",
         titleEn: "Irregular Plurals",
         paragraphs: [
-          "Bazı yaygın İngilizce isimler **düzensiz çoğul (irregular plural)** biçimlere sahiptir; sonlarına **-s** eklenmez, kelime **tamamen değişir** veya kök farklılaşır. A1 seviyesinde en sık karşılaşılanları ezberlemek günlük cümleleri hızlandırır.",
-          "**child → children**, **person → people**, **man → men**, **woman → women** kişi ve insan çoğullarında çok geçer. **tooth → teeth**, **foot → feet**, **mouse → mice** vücut ve hayvan örnekleridir. Yazım farkına dikkat: **woman** tekil, **women** çoğul; telaffuz da değişir (**/ˈwɪmɪn/**).",
-          "Düzensiz çoğullar yine **the** ile kullanılabilir: **the children**, **the people**. Cümlede **are** ile çekimlenirler: **The children are happy.** **People** çoğul anlam taşır; **a person** tekil, **people** çoğuldur (resmî dilde **persons** da vardır ama A1’de **people** yeterlidir).",
+          "Bazı yaygın İngilizce isimler **düzensiz çoğul (\\irregular plural\\)** biçimlere sahiptir; sonlarına **-s** eklenmez, kelime **tamamen değişir** veya kök farklılaşır. A1 seviyesinde en sık karşılaşılanları ezberlemek günlük cümleleri hızlandırır.",
+          "**\\child → children\\**, **\\person → people\\**, **\\man → men\\**, **\\woman → women\\** kişi ve insan çoğullarında çok geçer. **\\tooth → teeth\\**, **\\foot → feet\\**, **\\mouse → mice\\** vücut ve hayvan örnekleridir. Yazım farkına dikkat: **\\woman\\** tekil, **\\women\\** çoğul; telaffuz da değişir (**/ˈwɪmɪn/**).",
+          "Düzensiz çoğullar yine **\\the\\** ile kullanılabilir: **\\the children\\**, **\\the people\\**. Cümlede **\\are\\** ile çekimlenirler: **\\The children are happy.\\** **\\People\\** çoğul anlam taşır; **\\a person\\** tekil, **\\people\\** çoğuldur (resmî dilde **\\persons\\** da vardır ama A1’de **\\people\\** yeterlidir).",
         ],
         examplesTitle: "Düzensiz çoğul örnekleri",
         examplesLayout: "columns",
@@ -140,9 +146,9 @@ export const topicContent3: TopicContent = {
         title: "Tanımlıksız Kullanım (Zero Article)",
         titleEn: "Zero Article — Basics",
         paragraphs: [
-          "Bazı durumlarda İngilizcede isimden önce **hiç tanımlık gelmez**; buna **zero article** (tanımlıksız kullanım) denir. Genel kategoriler, soyut kavramlar ve çoğu **ülke / şehir** adı böyledir: **I like coffee.**, **She lives in Turkey.**, **We study English.**",
-          "Çoğul isimler **genel anlamda** kullanıldığında da tanımlık olmayabilir: **Dogs are friendly.** (Köpekler genelde dost canlısıdır.) Belirli bir grup kastedilirse **the** gelir: **The dogs in the park are loud.**",
-          "Sayılabilir tekil isimler tek başına **genelde** **a/an** veya **the** ister; yalnız bırakmak sık hata yapılır. A1’de pratik kural: **isim + genel bilgi / dil / yemek / spor** → çoğu zaman tanımlıksız; **belirli nesne veya daha önce sözü geçen** → **the**; **ilk kez, tekil, sayılabilir** → **a/an**.",
+          "Bazı durumlarda İngilizcede isimden önce **hiç tanımlık gelmez**; buna **\\zero article\\** (tanımlıksız kullanım) denir. Genel kategoriler, soyut kavramlar ve çoğu **ülke / şehir** adı böyledir: **\\I like coffee.\\**, **\\She lives in Turkey.\\**, **\\We study English.\\**",
+          "Çoğul isimler **\\genel anlamda\\** kullanıldığında da tanımlık olmayabilir: **\\Dogs are friendly.\\** (Köpekler genelde dost canlısıdır.) Belirli bir grup kastedilirse **\\the\\** gelir: **\\The dogs in the park are loud.\\**",
+          "Sayılabilir tekil isimler tek başına **\\genelde\\** **a/an** veya **\\the\\** ister; yalnız bırakmak sık hata yapılır. A1’de pratik kural: **isim + genel bilgi / dil / yemek / spor** → çoğu zaman tanımlıksız; **belirli nesne veya daha önce sözü geçen** → **\\the\\**; **ilk kez, tekil, sayılabilir** → **a/an**.",
         ],
         examplesTitle: "Tanımlıksız örnekler",
         examplesLayout: "columns",

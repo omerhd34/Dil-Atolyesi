@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent57: TopicContent = {
   topicId: "57",
   viewMinutes: 10,
+  quizIntro:
+    "Sabit kalıplar, register ve ton uygunluğu bu quizin odağında. Başarılar.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,10 @@ export const topicContent57: TopicContent = {
         title: "Kalıplaşmış İstek Kipi İfadeleri",
         titleEn: "Fixed Subjunctive Formulas",
         paragraphs: [
-          "Modern İngilizcede **subjunctive** çoğu zaman görünmez; ancak **sabit kalıplar** arkaik **be / were** biçimini korur. Bu ifadeler tam cümle şablonudur; içindeki fiil çekimini değiştirmemek gerekir. **Be that as it may** «böyle olsa bile, yine de» anlamında geçmişi kabul edip ilerlemeyi savunur.",
-          "**Suffice it to say (that)…** uzun açıklamayı kesip tek güçlü sonuç bırakır: «Demek yeter ki…» **Far be it from me to…** kibar reddetme veya suçlama reddi: «Benim niyetim … değil asla.» **Come what may** koşulsuz kararlılık bildirir. **Lest + özne + should / base V** «…mesin diye» uyarısı taşır; formal yazıda **lest we forget** gibi kullanımlar yaygındır.",
-          "Bu kalıplar günlük sohbette nadir, **konuşma, diplomatik not, hukuk ve akademik önsöz** gibi yüksek register alanlarında duyulur. Yanlış çekim (*Be that as it is*) kalıbı bozar ve doğallığı düşürür.",
+          "Modern İngilizcede **\\subjunctive\\** çoğu zaman görünmez; ancak **sabit kalıplar** arkaik **\\be / were\\** biçimini korur. Bu ifadeler tam cümle şablonudur; içindeki fiil çekimini değiştirmemek gerekir. **\\Be that as it may\\** **böyle olsa bile, yine de** anlamında geçmişi kabul edip ilerlemeyi savunur.",
+          "**\\Suffice it to say that\\** uzun açıklamayı kesip tek güçlü sonuç bırakır; Türkçede **demek yeter ki** hissi verir. **\\Far be it from me to\\** kibar reddetme veya suçlama reddi bildirir. **\\Come what may\\** koşulsuz kararlılık anlatır.",
+          "**Lest + özne + should / base V** yapısı **…mesin diye** uyarısı taşır. Formal yazıda **\\lest we forget\\** gibi kullanımlar yaygındır.",
+          "Bu kalıplar günlük sohbette nadirdir. **Konuşma, diplomatik not, hukuk ve akademik önsöz** gibi yüksek register alanlarında sık duyulur. Yanlış çekim (**\\Be that as it is\\** gibi) kalıbı bozar.",
         ],
         examplesTitle: "Sabit kalıplar",
         examplesLayout: "columns",
@@ -52,9 +55,9 @@ export const topicContent57: TopicContent = {
         title: "Resmi ve Gündelik Register",
         titleEn: "Formal vs Informal Register",
         paragraphs: [
-          "**Register**, aynı anlamı farklı sosyal ortamlarda farklı dil araçlarıyla ifade etme biçimidir. **Gündelik** dilde kısa fiiller, **you**, kısaltmalar ve soru tonu öne çıkar: **Can you send it?** **Resmi** yazıda **passive**, **nominalization**, **would / could** ve uzun kalıplar tercih edilir: **I would be grateful if you could forward the document.**",
-          "Tek kelime seçimi tonu değiştirir: **get → obtain**, **show → demonstrate**, **ask → inquire**, **but → however**. Gündelikte **so, like, kind of** bağlaçları yaygındır; akademik metinde **therefore, moreover, notwithstanding** kullanılır. Türkçe konuşmacılar için risk: resmi metinde sohbet fiillerini doğrudan çevirmek.",
-          "Register kayması (code-switching) bilinçli yapılabilir: e-postada selamlama resmi, gövde nötr, kapanış kısa ve samimi. C2 hedefi, **muhatap + kanal + amaç** üçlüsüne göre otomatik seçim yapmaktır.",
+          "**\\Register\\**, aynı anlamı farklı sosyal ortamlarda farklı dil araçlarıyla ifade etme biçimidir. **Gündelik** dilde kısa fiiller, **\\you\\**, kısaltmalar ve soru tonu öne çıkar: **\\Can you send it?\\** **Resmi** yazıda **\\passive\\**, **\\nominalization\\**, **\\would / could\\** ve uzun kalıplar tercih edilir: **\\I would be grateful if you could forward the document.\\**",
+          "Tek kelime seçimi tonu değiştirir: **\\get → obtain\\**, **\\show → demonstrate\\**, **\\ask → inquire\\**, **\\but → however\\**. Gündelikte **\\so, like, kind of\\** bağlaçları yaygındır; akademik metinde **\\therefore, moreover, notwithstanding\\** kullanılır. Türkçe konuşmacılar için risk: resmi metinde sohbet fiillerini doğrudan çevirmek.",
+          "Register kayması **\\code-switching\\** bilinçli yapılabilir: e-postada selamlama resmi, gövde nötr, kapanış kısa ve samimi. C2 hedefi, **muhatap + kanal + amaç** üçlüsüne göre otomatik seçim yapmaktır.",
         ],
         examplesTitle: "Register karşılaştırması",
         examplesLayout: "columns",
@@ -92,9 +95,9 @@ export const topicContent57: TopicContent = {
         title: "Akademik ve Diplomatik Ton",
         titleEn: "Academic & Diplomatic Tone",
         paragraphs: [
-          "**Akademik ton** iddia + kanıt + sınırlama üçlüsüne dayanır. Kesinlik için **may, might, appears, suggests** kullanılır; dogmatik **proves, always, obviously** kaçınılır. **We** yerine **this study / the evidence** özneleştirmesi nesnellik sağlar. Sabit subjunctive kalıplar burada vurgu ve geçiş cümlesi olarak iş görür.",
-          "**Diplomatik ton** doğrudan suçlama yerine **concern, commitment, dialogue, mutual interest** çerçevesi kurar. Olumsuz mesaj **understatement** ve **passive** ile yumuşatılır: **Mistakes were made** (kimin yaptığı belirsiz). **Be that as it may** anlaşmazlığı kabul edip ortak gündeme döner.",
-          "Her iki tonda da **yüksek nezaket** = netlikten ödün vermek değildir; mesajı **yumuşak ambalaj** içinde iletmektir. Yanlış ton — örneğin diplomatik notta **Come what may** gibi sert kalıp — çatışmayı artırabilir.",
+          "**\\Akademik ton\\** iddia + kanıt + sınırlama üçlüsüne dayanır. Kesinlik için **\\may, might, appears, suggests\\** kullanılır; dogmatik **\\proves, always, obviously\\** kaçınılır. **\\We\\** yerine **\\this study / the evidence\\** özneleştirmesi nesnellik sağlar. Sabit subjunctive kalıplar burada vurgu ve geçiş cümlesi olarak iş görür.",
+          "**\\Diplomatik ton\\** doğrudan suçlama yerine **\\concern, commitment, dialogue, mutual interest\\** çerçevesi kurar. Olumsuz mesaj **\\understatement\\** ve **\\passive\\** ile yumuşatılır: **\\Mistakes were made\\** (kimin yaptığı belirsiz). **\\Be that as it may\\** anlaşmazlığı kabul edip ortak gündeme döner.",
+          "Her iki tonda da **yüksek nezaket** = netlikten ödün vermek değildir; mesajı **yumuşak ambalaj** içinde iletmektir. Yanlış ton — örneğin diplomatik notta **\\Come what may\\** gibi sert kalıp — çatışmayı artırabilir.",
         ],
         examplesTitle: "Ton örnekleri",
         examplesLayout: "columns",
@@ -134,8 +137,8 @@ export const topicContent57: TopicContent = {
         title: "İroni, Nezaket ve Register Seçimi",
         titleEn: "Irony, Politeness & Register Practice",
         paragraphs: [
-          "**İroni** söylenen ile kastedilenin tersidir; ton ve bağlam ipucu verir. **Far be it from me to…** bazen gerçek eleştiriyi **kibar örtü** altında taşır. **Suffice it to say** alaycı kısaltma da olabilir: okuyucu «daha fazlasını biliyorsun» mesajını alır. Sabit kalıpları bağlamdan koparmamak gerekir.",
-          "**Nezaket stratejileri**: **hedging** (I think, perhaps), **face-saving** (passive, we rather than you), **indirect requests** (Would you mind…). **Come what may** kararlılıkta nezaket değil kesinliktir; teşekkür mektubunda uygunsuz olur. **Lest** uyarıda korumacı nezaket: **Lest anyone misunderstand…**",
+          "**İroni** söylenen ile kastedilenin tersidir; ton ve bağlam ipucu verir. **\\Far be it from me to…\\** bazen gerçek eleştiriyi **kibar örtü** altında taşır. **\\Suffice it to say\\** alaycı kısaltma da olabilir: okuyucu **daha fazlasını biliyorsun** mesajını alır. Sabit kalıpları bağlamdan koparmamak gerekir.",
+          "**Nezaket stratejileri**: **\\hedging\\** **\\I think, perhaps\\**, **\\face-saving\\** **\\passive, we rather than you\\**, **\\indirect requests\\** **\\Would you mind…\\**. **\\Come what may\\** kararlılıkta nezaket değil kesinliktir; teşekkür mektubunda uygunsuz olur. **\\Lest\\** uyarıda korumacı nezaket: **\\Lest anyone misunderstand…\\**",
           "Register seçimi pratiği: (1) **amaç** — bilgilendir mi, ikna mi, uyarı mı? (2) **risk** — yanlış anlaşılma maliyeti yüksekse resmi + kalıp. (3) **ilişki** — üst-ast, müşteri, akademik hakem. Aynı cümleyi üç registerda yeniden yazmak C2 alıştırmasının çekirdeğidir.",
         ],
         examplesTitle: "Ton ve uygunluk",
@@ -149,7 +152,7 @@ export const topicContent57: TopicContent = {
           },
           {
             en: "Ironic understatement",
-            tr: "Suffice it to say, the «quick fix» took months.",
+            tr: "Suffice it to say, the **quick fix** took months.",
           },
           {
             en: "Formal disagreement",
@@ -199,7 +202,7 @@ export const topicContent57: TopicContent = {
       id: "57-ex-2",
       subtopicId: "57-1",
       type: "true_false",
-      prompt: "Lest yapısı «…mesin diye» uyarısı bildirebilir.",
+      prompt: "Lest yapısı **…mesin diye** uyarısı bildirebilir.",
       options: ["Doğru", "Yanlış"],
       correctIndex: 0,
       explanation: "Lest + V: önleyici amaç.",

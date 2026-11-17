@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent41: TopicContent = {
   topicId: "41",
   viewMinutes: 10,
+  quizIntro:
+    "**\\Third conditional\\** ve karışık koşul yapılarını hatırla: **\\If + Past Perfect, would have + V3\\** ile pişmanlık ve varsayım cümleleri.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent41: TopicContent = {
         title: "Üçüncü Koşul: Yapı",
         titleEn: "Third Conditional — Form",
         paragraphs: [
-          "**Üçüncü koşul (third conditional)** geçmişte **gerçekleşmemiş** bir durumu ve onun **hayali sonucunu** anlatır. Türkçede «-seydi / -miş olurdu» çağrışımı taşır; İngilizcede iki uzuv da geçmişte kalır ve **gerçek dışı**dır.",
-          "Standart kalıp: **If + özne + had + V3, özne + would/could/might + have + V3**. Koşul kısmında **Past Perfect** (had studied), sonuç kısmında **would have + V3** (would have passed) kullanılır. **If** cümleciği başta veya sonda olabilir; baştaysa virgül kullanılır.",
-          "Koşul ve sonuç yer değiştirebilir ama anlam değişmez: **I would have called you if I had known.** Bu yapı pişmanlık, eleştiri ve «ne olurdu bilmiyorum» türü varsayımlar için günlük ve akademik dilde çok yaygındır.",
+          "**Üçüncü koşul (\\third conditional\\)** geçmişte **gerçekleşmemiş** bir durumu ve onun **\\hayali sonucunu\\** anlatır. Türkçede -seydi veya -miş olurdu çağrışımı taşır; İngilizcede iki uzuv da geçmişte kalır ve **gerçek dışı**dır.",
+          "Standart kalıp: **If + özne + had + V3, özne + would veya could veya might + have + V3**. Koşul kısmında **\\Past Perfect\\** (\\had studied\\), sonuç kısmında **\\would have + V3\\** (\\would have passed\\) kullanılır. **\\If\\** cümleciği başta veya sonda olabilir; baştaysa virgül kullanılır.",
+          "Koşul ve sonuç yer değiştirebilir ama anlam değişmez: **\\I would have called you if I had known.\\** Bu yapı pişmanlık, eleştiri ve ne olurdu bilmiyorum türü varsayımlar için günlük ve akademik dilde çok yaygındır.",
         ],
         examplesTitle: "Third conditional örnekleri",
         examplesLayout: "columns",
@@ -44,9 +46,9 @@ export const topicContent41: TopicContent = {
         title: "would / could / might have",
         titleEn: "Modal Perfect in Result Clauses",
         paragraphs: [
-          "Sonuç kısmında **would have** en yaygın seçimdir: kesin veya güçlü varsayımsal sonuç. **Could have** «yapabilirdim / mümkündü» anlamı taşır; yetenek veya olanak vurgular. **Might have** daha belirsiz: «belki olurdu / olabilirdi».",
-          "Olumsuzluk: **wouldn't have**, **couldn't have**, **might not have**. Soru: **Would you have accepted if they had offered more?** Kısa cevaplarda modal tekrar edilir.",
-          "Türkçede bu ayrımı çoğu zaman aynı çeviriyle verirsin; İngilizcede ton ve kesinlik modal ile ayılır. Sınav ve yazımda sonuç fiilinin mutlaka **have + V3** olduğuna dikkat et; *would passed* yanlıştır.",
+          "Sonuç kısmında **\\would have\\** en yaygın seçimdir: kesin veya güçlü varsayımsal sonuç. **\\Could have\\** yapabilirdim veya mümkündü anlamı taşır; yetenek veya olanak vurgular. **\\Might have\\** daha belirsiz: belki olurdu veya olabilirdi.",
+          "Olumsuzluk: **\\wouldn't have\\**, **\\couldn't have\\**, **\\might not have\\**. Soru: **\\Would you have accepted if they had offered more?\\** Kısa cevaplarda modal tekrar edilir.",
+          "Türkçede bu ayrımı çoğu zaman aynı çeviriyle verirsin; İngilizcede ton ve kesinlik modal ile ayılır. Sınav ve yazımda sonuç fiilinin mutlaka **have + V3** olduğuna dikkat et; *\\would passed\\* yanlıştır.",
         ],
         examplesTitle: "Modal + have V3",
         examplesLayout: "columns",
@@ -78,9 +80,9 @@ export const topicContent41: TopicContent = {
         title: "Karışık Koşul: Geçmiş Koşul, Şimdiki Sonuç",
         titleEn: "Mixed — Past Condition, Present Result",
         paragraphs: [
-          "**Karışık koşullarda (mixed conditionals)** koşul ile sonuç **farklı zamanlara** ait olabilir. En sık görülen tip: geçmişte farklı bir seçim yapılsaydı **bugün** durum ne olurdu.",
-          "Kalıp: **If + had + V3, would/could/might + V1 (şimdiki gerçek dışı)**. Örnek: **If I had taken that job, I would be rich now.** Geçmişte işi almadın (gerçek); bugün zengin değilsin (sonuç şimdiye bağlı).",
-          "Tersi de mümkündür: koşul kısmı geçmiş perfect, sonuç kısmı **would be / would live** gibi tip 2 formunda kalır. Zaman uyumunu mantıksal olarak kontrol et: koşul gerçekten geçmişte mi kaldı, sonuç şimdiye mi yazılıyor?",
+          "**Karışık koşullarda (\\mixed conditionals\\)** koşul ile sonuç **farklı zamanlara** ait olabilir. En sık görülen tip: geçmişte farklı bir seçim yapılsaydı **bugün** durum ne olurdu.",
+          "Kalıp: **If + had + V3, would veya could veya might + V1 (şimdiki gerçek dışı)**. Örnek: **\\If I had taken that job, I would be rich now.\\** Geçmişte işi almadın (gerçek); bugün zengin değilsin (sonuç şimdiye bağlı).",
+          "Tersi de mümkündür: koşul kısmı geçmiş perfect, sonuç kısmı **\\would be veya would live\\** gibi tip 2 formunda kalır. Zaman uyumunu mantıksal olarak kontrol et: koşul gerçekten geçmişte mi kaldı, sonuç şimdiye mi yazılıyor?",
         ],
         examplesTitle: "Past → present",
         examplesLayout: "columns",
@@ -110,9 +112,9 @@ export const topicContent41: TopicContent = {
         title: "Karışık Koşul: Şimdiki Koşul, Geçmiş Sonuç",
         titleEn: "Mixed — Present Condition, Past Result",
         paragraphs: [
-          "İkinci karışık tip: **şimdiki genel durum veya özellik** geçmişteki bir olayı etkilemiş olsaydı. Kalıp: **If + Past Simple, would/could/might + have + V3**.",
-          "Örnek: **If I were braver, I would have spoken up at the meeting.** Şu an cesur değilsin (tip 2); geçmişte toplantıda konuşmadın. **Were** ile tüm öznelerde tip 2 kalıbı korunabilir.",
-          "Bu yapı karakter, alışkanlık veya süregelen durumun geçmişteki tek bir olayı nasıl değiştireceğini anlatır. Tip 3 ile karıştırma: burada koşul kısmı **had V3 değil**, çoğu zaman **Past Simple** veya **were**'dir.",
+          "İkinci karışık tip: **şimdiki genel durum veya özellik** geçmişteki bir olayı etkilemiş olsaydı. Kalıp: **If + Past Simple, would veya could veya might + have + V3**.",
+          "Örnek: **\\If I were braver, I would have spoken up at the meeting.\\** Şu an cesur değilsin (\\tip 2\\); geçmişte toplantıda konuşmadın. **\\Were\\** ile tüm öznelerde tip 2 kalıbı korunabilir.",
+          "Bu yapı karakter, alışkanlık veya süregelen durumun geçmişteki tek bir olayı nasıl değiştireceğini anlatır. Tip 3 ile karıştırma: burada koşul kısmı **had V3 değil**, çoğu zaman **\\Past Simple\\** veya **\\were\\**'dir.",
         ],
         examplesTitle: "Present → past result",
         examplesLayout: "columns",
@@ -143,9 +145,9 @@ export const topicContent41: TopicContent = {
         title: "Pişmanlık ve Alternatif İfadeler",
         titleEn: "Regret & Other Patterns",
         paragraphs: [
-          "Üçüncü koşul sıkça **I wish** veya **If only** ile aynı pişmanlık alanını paylaşır; farklı cümle iskeleti kullanılır (konu 42). Üçüncü koşulda **if** açıkça koşul kurar.",
-          "**But for / Without** bazen üçüncü koşulun kısa eşanlamlısıdır: **But for your help, I would have failed.** (= If you hadn't helped me…). **Otherwise** «aksi takdirde» anlamında sonuç cümlesiyle kullanılır.",
-          "Yazımda virgül: **If** ile başlayan yan cümlede virgül kullan. Konuşmada **If I'd known, I'd have come** gibi kısaltmalar doğaldır; yazıda resmi metinde tam biçim tercih edilebilir.",
+          "Üçüncü koşul sıkça **\\I wish\\** veya **\\If only\\** ile aynı pişmanlık alanını paylaşır; farklı cümle iskeleti kullanılır (\\konu 42\\). Üçüncü koşulda **\\if\\** açıkça koşul kurar.",
+          "**\\But for\\** ve **\\Without\\** bazen üçüncü koşulun kısa eşanlamlısıdır: **\\But for your help, I would have failed.\\** Bu, **\\If you hadn't helped me\\** ile aynı anlama gelir. **\\Otherwise\\** aksi takdirde anlamında sonuç cümlesiyle kullanılır.",
+          "Yazımda virgül: **\\If\\** ile başlayan yan cümlede virgül kullan. Konuşmada **\\If I'd known, I'd have come\\** gibi kısaltmalar doğaldır; yazıda resmi metinde tam biçim tercih edilebilir.",
         ],
         examplesTitle: "Alternatif kalıplar",
         examplesLayout: "columns",
@@ -396,7 +398,7 @@ export const topicContent41: TopicContent = {
       id: "quiz-41-2",
       subtopicId: "41-2",
       type: "multiple_choice",
-      prompt: "Hangisi «yapabilirdin» anlamına en yakındır?",
+      prompt: "Hangisi yapabilirdin anlamına en yakındır?",
       options: [
         "You must have tried.",
         "You could have tried.",

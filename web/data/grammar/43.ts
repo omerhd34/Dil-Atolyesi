@@ -3,6 +3,8 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent43: TopicContent = {
   topicId: "43",
   viewMinutes: 10,
+  quizIntro:
+    "İleri edilgen, **\\modal + passive\\**, **\\have\\** veya **\\get something done\\** ile **\\make\\** ve **\\let\\** ettirgen kalıplarını birbirine karıştırma.",
   lesson: {
     parts: [
       {
@@ -10,9 +12,9 @@ export const topicContent43: TopicContent = {
         title: "İleri edilgen: zaman ve süreklilik",
         titleEn: "Advanced Passive — Tenses",
         paragraphs: [
-          "Edilgen çatıda eylem yapan (**agent**) çoğu zaman belirtilmez; önemli olan işin kendisi veya sonucudur. **İleri düzey**de sürekli, perfect ve perfect continuous biçimler de edilgene çekilir.",
-          "Sürekli: **am/is/are + being + V3** — **The road is being repaired.** Perfect: **has/have been + V3** — **The report has been finished.** Perfect continuous: **has/have been being + V3** (nadir, çoğu zaman aktife kaçınır).",
-          "Geçmiş sürekli: **was/were being + V3** — **The house was being painted when I arrived.** Bu yapılar haber, rapor ve günlük durum anlatımında agent olmadan çok kullanılır.",
+          "Edilgen çatıda eylem yapan (**\\agent\\**) çoğu zaman belirtilmez; önemli olan işin kendisi veya sonucudur. **İleri düzey**de sürekli, perfect ve perfect continuous biçimler de edilgene çekilir.",
+          "Sürekli: **am veya is veya are + being + V3**; **\\The road is being repaired.\\** Perfect: **has veya have been + V3**; **\\The report has been finished.\\** Perfect continuous: **has veya have been being + V3** (nadir, çoğu zaman aktife kaçınır).",
+          "Geçmiş sürekli: **was veya were being + V3**; **\\The house was being painted when I arrived.\\** Bu yapılar haber, rapor ve günlük durum anlatımında agent olmadan çok kullanılır.",
         ],
         examplesTitle: "Çeşitli zamanlarda edilgen",
         examplesLayout: "columns",
@@ -43,9 +45,9 @@ export const topicContent43: TopicContent = {
         title: "Modal + passive",
         titleEn: "Modals in the Passive",
         paragraphs: [
-          "Kip fiiller edilgende **modal + be + V3** kalıbını izler. **The rules must be followed.** **This can be done online.** Geçmiş spekülasyon: **It might have been damaged.**",
-          "Sürekli modal edilgen: **should be being** çok nadirdir; çoğu zaman **should be + V3** veya aktif alternatif tercih edilir. Sınavda en sık **must / can / should / may / might + be + V3** ve **modal + have been + V3** gelir.",
-          "Soruda modal öne gelir: **Can the bill be paid in cash?** Olumsuz: **The door cannot be locked.** Agent gerekiyorsa **by** ile eklenir: **It was written by experts.**",
+          "Kip fiiller edilgende **modal + be + V3** kalıbını izler. **\\The rules must be followed.\\** **\\This can be done online.\\** Geçmiş spekülasyon: **\\It might have been damaged.\\**",
+          "Sürekli modal edilgen: **\\should be being\\** çok nadirdir; çoğu zaman **\\should be + V3\\** veya aktif alternatif tercih edilir. Sınavda en sık **must veya can veya should veya may veya might + be + V3** ve **\\modal + have been + V3\\** gelir.",
+          "Soruda modal öne gelir: **\\Can the bill be paid in cash?\\** Olumsuz: **\\The door cannot be locked.\\** Agent gerekiyorsa **\\by\\** ile eklenir: **\\It was written by experts.\\**",
         ],
         examplesTitle: "Modal passive",
         examplesLayout: "columns",
@@ -75,9 +77,9 @@ export const topicContent43: TopicContent = {
         title: "have something done",
         titleEn: "Causative — have something done",
         paragraphs: [
-          "**Have something done** bir hizmeti veya tamiratı **başkasına yaptırmak** anlamındadır. Kalıp: **have + nesne + past participle (V3)**. **I had my hair cut.** Ben kesilmedi; berber kesti.",
-          "Zaman değişir: **I'm having the car serviced.** / **She had her roof fixed last week.** **Get** ile aynı anlam mümkündür (sonraki bölüm). **Had** geçmişte veya düzenli hizmet için yaygındır.",
-          "Talihsiz olay: **I had my wallet stolen.** Burada anlam «cüzdanım çalındı» olur; bilinçli ettirgen değil, kaba deneyim ifadesidir. Bağlama göre yorumla.",
+          "**\\Have something done\\** bir hizmeti veya tamiratı **başkasına yaptırmak** anlamındadır. Kalıp: **have + nesne + past participle (V3)**. **\\I had my hair cut.\\** Ben kesilmedi; berber kesti.",
+          "Zaman değişir: **\\I'm having the car serviced.\\** veya **\\She had her roof fixed last week.\\** **\\Get\\** ile aynı anlam mümkündür (sonraki bölüm). **\\Had\\** geçmişte veya düzenli hizmet için yaygındır.",
+          "Talihsiz olay: **\\I had my wallet stolen.\\** Burada anlam cüzdanım çalındı olur; bilinçli ettirgen değil, kaba deneyim ifadesidir. Bağlama göre yorumla.",
         ],
         examplesTitle: "have + object + V3",
         examplesLayout: "columns",
@@ -108,9 +110,9 @@ export const topicContent43: TopicContent = {
         title: "get something done",
         titleEn: "get something done",
         paragraphs: [
-          "**Get something done** çoğu zaman **have something done** ile eş anlamlıdır; **get** daha **günlük ve konuşma** dilindedir. **I got the leak fixed.** **Get** bazen «sonunda hallettirmek» çabası vurgular.",
-          "Olumsuz ve soru: **I didn't get it done in time.** / **Did you get your tyres checked?** **Get** ayrıca **kendini** bir duruma sokmak için de kullanılır: **get dressed, get married** — bunlar causative değil, oturmuş ifadelerdir.",
-          "Resmi yazıda **have** tercih edilir; e-posta ve sohbette **get** doğaldır. İkisi de aynı V3 yapısını ister; *get my car repair* yanlıştır.",
+          "**\\Get something done\\** çoğu zaman **\\have something done\\** ile eş anlamlıdır; **\\get\\** daha **günlük ve konuşma** dilindedir. **\\I got the leak fixed.\\** **\\Get\\** bazen sonunda hallettirmek çabası vurgular.",
+          "Olumsuz ve soru: **\\I didn't get it done in time.\\** veya **\\Did you get your tyres checked?\\** **\\Get\\** ayrıca **\\kendini\\** bir duruma sokmak için de kullanılır: **\\get dressed, get married\\**; bunlar causative değil, oturmuş ifadelerdir.",
+          "Resmi yazıda **\\have\\** tercih edilir; e-posta ve sohbette **\\get\\** doğaldır. İkisi de aynı V3 yapısını ister; *\\get my car repair\\* yanlıştır.",
         ],
         examplesTitle: "get + object + V3",
         examplesLayout: "columns",
@@ -140,9 +142,9 @@ export const topicContent43: TopicContent = {
         title: "make, let, have, get (ettirgen)",
         titleEn: "Causative Verbs",
         paragraphs: [
-          "**Make** ve **let** «zorla / izin vererek» birini bir şey **yapmaya** iter: **make sb do**, **let sb do** (to yok). **The teacher made us rewrite the essay.** **Her parents let her stay out late.**",
-          "**Have** ve **get** birini bir şey **yaptırmak** için: **have/get sb do** (ABD ve günlük) veya **have sb doing** (süreç). **I had the assistant type the notes.** **I'll get him to call you.** (**get** + to-infinitive yaygın).",
-          "Edilgen causative: **I had my watch repaired** (nesne + V3) ile **I had the mechanic repair my watch** (kişi + V1) farklı kalıplardır. İkisi de «yaptırmak» alanına girer.",
+          "**\\Make\\** ve **\\let\\** zorla veya izin vererek birini bir şey **\\yapmaya\\** iter: **\\make sb do\\**, **\\let sb do\\** (\\to yok\\). **\\The teacher made us rewrite the essay.\\** **\\Her parents let her stay out late.\\**",
+          "**\\Have\\** ve **\\get\\** birini bir şey **yaptırmak** için: **\\have veya get sb do\\** (ABD ve günlük) veya **\\have sb doing\\** (süreç). **\\I had the assistant type the notes.\\** **\\I'll get him to call you.\\** (**\\get\\** + to-infinitive yaygın).",
+          "Edilgen causative: **\\I had my watch repaired\\** (nesne + V3) ile **\\I had the mechanic repair my watch\\** (kişi + V1) farklı kalıplardır. İkisi de yaptırmak alanına girer.",
         ],
         examplesTitle: "Causative fiiller",
         examplesLayout: "columns",
