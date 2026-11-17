@@ -825,6 +825,9 @@
   },
   "Topic": {
     "backToTopics": "Konulara dön",
+    "previousTopic": "Önceki konuya geç",
+    "nextTopic": "Sonraki konuya geç",
+    "topicAdjacentNavAria": "Komşu konular",
     "topicLabel": "{index}. KONU",
     "examLabel": "EXAM",
     "combinedExerciseLabel": "{index}. Tekrar",
