@@ -38,37 +38,41 @@ export function ThemeSetting() {
   ];
 
   return (
-    <ul className="space-y-2" role="group" aria-label={t("appearance")}>
+    <ul
+      className="grid grid-cols-2 gap-2"
+      role="group"
+      aria-label={t("appearance")}
+    >
       {options.map((option) => (
-        <li key={option.id}>
+        <li key={option.id} className="min-w-0">
           <button
             type="button"
             aria-pressed={option.selected}
             disabled={!mounted}
             onClick={() => setTheme(option.id)}
             className={cn(
-              "flex w-full cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-3 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40 disabled:cursor-not-allowed disabled:opacity-60",
+              "relative flex h-full w-full min-w-0 cursor-pointer items-center gap-2 rounded-xl border px-3 py-2.5 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40 disabled:cursor-not-allowed disabled:opacity-60",
               option.selected
                 ? "border-sky-500/45 bg-sky-500/5 dark:border-sky-400/40 dark:bg-sky-400/10"
                 : "border-border bg-background/80 hover:border-sky-500/45 hover:bg-sky-500/5 dark:bg-brand-950/40",
             )}
           >
-            <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200">
+            <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200">
               {option.icon}
             </span>
-            <span className="min-w-0 flex-1 text-sm font-medium text-brand-950 dark:text-brand-100">
+            <span className="min-w-0 flex-1 pe-5 text-sm font-medium text-brand-950 dark:text-brand-100">
               {option.title}
             </span>
             <span
               className={cn(
-                "inline-flex size-6 shrink-0 items-center justify-center rounded-full transition-colors",
+                "absolute top-1/2 right-2.5 inline-flex size-5 -translate-y-1/2 items-center justify-center rounded-full transition-colors",
                 option.selected
                   ? "bg-sky-600 text-white dark:bg-sky-500 dark:text-sky-950"
                   : "bg-brand-100 text-transparent dark:bg-brand-900",
               )}
               aria-hidden
             >
-              <Check className="size-3.5" strokeWidth={2.5} />
+              <Check className="size-3" strokeWidth={2.5} />
             </span>
           </button>
         </li>
