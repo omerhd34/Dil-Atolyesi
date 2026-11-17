@@ -1,8 +1,10 @@
 import type { DashboardTopic } from "@/data/grammar/dashboardTopics";
+import type { GrammarHeading } from "@/data/grammar/grammarHeading";
 import type {
   MultipleChoiceExercise,
   TopicContent,
   TopicExercise,
+  TopicLessonExample,
   TrueFalseExercise,
 } from "@/data/grammar/types";
 import {
@@ -305,4 +307,112 @@ export function createTopicContent(topic: DashboardTopic): TopicContent {
     exercises,
     quiz: topic.isExam ? undefined : buildQuizExercises(topic),
   };
+}
+
+function headingToDashboardTopic(heading: GrammarHeading): DashboardTopic {
+  return {
+    id: heading.id,
+    title: heading.title,
+    titleEng: heading.titleEng,
+    titleEx: heading.titleEx,
+    intro: heading.intro,
+    level: heading.level,
+    subtopics: [
+      {
+        id: `${heading.id}-1`,
+        title: heading.title,
+        titleEng: heading.titleEng,
+        titleEx: heading.titleEx,
+        progress: 0,
+      },
+    ],
+  };
+}
+
+function examplesFromTitleEx(titleEx: string): TopicLessonExample[] {
+  const trimmed = titleEx.trim();
+  if (!trimmed) {
+    return [];
+  }
+
+  const segments = trimmed
+    .split(/\s*\/\s*/)
+    .flatMap((part) => part.split(/\.\s+(?=[A-Z"'(])/))
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .map((part) => (part.endsWith(".") ? part : `${part}.`));
+
+  if (segments.length === 0) {
+    return [{ en: trimmed, tr: "Bağlamda incele.", note: "grammarHeading" }];
+  }
+
+  return segments.map((en) => ({
+    en,
+    tr: "Bağlamda incele.",
+    note: "grammarHeading",
+  }));
+}
+
+export function createTopicContentFromHeading(
+  heading: GrammarHeading,
+): TopicContent {
+  const topic = headingToDashboardTopic(heading);
+  const base = createTopicContent(topic);
+  const introParagraphs = heading.intro.trim()
+    ? [heading.intro.trim()]
+    : [
+        `"${heading.title}" (${heading.titleEng}) konusunun temel kalıplarını bu bölümde görürsün.`,
+      ];
+
+  const examples = examplesFromTitleEx(heading.titleEx);
+  if (examples.length === 0) {
+    const samples = pickSamples(heading.id, 3);
+    examples.push(
+      ...samples.map((sample, index) => ({
+        en: sample.en,
+        tr: sample.tr,
+        note: `örnek ${index + 1}`,
+      })),
+    );
+  }
+
+  return {
+    ...base,
+    topicId: heading.id,
+    viewMinutes: 10,
+    quizIntro: `${heading.title} konusunu pekiştiren quiz. Başarılar.`,
+    lesson: {
+      parts: [
+        {
+          id: `${heading.id}-1`,
+          title: heading.title,
+          titleEn: heading.titleEng,
+          paragraphs: introParagraphs,
+          ...(examples.length > 0
+            ? {
+                examplesTitle: "Örnek cümleler",
+                examplesLayout: "columns" as const,
+                examplesPerRow: 2 as const,
+                exampleHeaders: { en: "İngilizce", tr: "Türkçe" },
+                examples,
+              }
+            : {}),
+        },
+      ],
+    },
+  };
+}
+
+export function formatTopicContentModule(
+  topicId: string,
+  content: TopicContent,
+): string {
+  const exportName = `topicContent${topicId}`;
+  const serialized = tsLiteral(content, 2);
+  return [
+    `import type { TopicContent } from "@/data/grammar/types";`,
+    "",
+    `export const ${exportName}: TopicContent = ${serialized};`,
+    "",
+  ].join("\n");
 }
