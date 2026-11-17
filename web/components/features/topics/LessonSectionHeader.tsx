@@ -26,12 +26,14 @@ export function LessonSectionHeader({
   const showSpeak = speakSource.trim().length > 0;
 
   return (
-    <div className="space-y-1">
+    <div className="space-y-0">
       <div className="flex items-start justify-between gap-3">
         <Heading
           id={`heading-${id}`}
           className={cn(
             "min-w-0 flex-1",
+            secondaryTitle &&
+              (Heading === "h2" ? "leading-none" : "leading-tight"),
             Heading === "h2"
               ? "section-title"
               : "font-display text-lg font-semibold text-brand-950 dark:text-brand-100",
@@ -54,7 +56,9 @@ export function LessonSectionHeader({
         <p
           className={cn(
             "font-medium tracking-wide text-brand-500 italic dark:text-brand-400",
-            Heading === "h2" ? "text-lg" : "text-sm",
+            Heading === "h2"
+              ? "-mt-2 text-lg leading-none"
+              : "-mt-1 text-sm leading-snug",
           )}
         >
           {secondaryTitle}

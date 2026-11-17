@@ -1,7 +1,7 @@
 import type { SpeakDialogueLine } from "@/lib/speakText";
 
-const TURKISH_CHAR = /[çğıöşüÇĞİÖŞÜ]/;
 const BOLD_SEGMENT = /\*\*([^*]+)\*\*/;
+const EXPLICIT_ENGLISH = /\\([^\\]+)\\/g;
 const QUOTED_ENGLISH =
   /[''‚`]([a-zA-Z][a-zA-Z'’\-]*(?:\s+[a-zA-Z][a-zA-Z'’\-]*)*)[''‚`]/g;
 
@@ -12,28 +12,18 @@ export type LessonSpeakSegment = {
   lang: LessonSpeakLang;
 };
 
-const TURKISH_LATIN_HINT =
-  /\b(harfleri|harfi|harfler|kelime|kelimeler|ünlü|ünsüz|olarak|için|veya|ise|gibi|denir|olan|temel|önemli|oynar|kalan|dikkat|bölüm|örneğin|kelimesinde|kelimelerinde|görevi|görür|özeldir|genellikle|kullanılırken|sonunda|içinde|sesi|verebilir|farklı|yaygın|örneklerindendir|kurala|sahiptir|ancak|çoğu|zaman|tanımak|adımlarından|biridir|karşılık|gelir|duyabilirsin|örnektir|istisnaları|unutma|gruba|ayrılır|oluşur|oluşmasında|okunur|okunabilir|oluşturur|harf|harften|harflerine|devam|inceleyeceğiz)\b/i;
-
 function stripEnglishQuotes(value: string): string {
   return value.replace(/^[''‚`]|[''‚`]$/g, "").trim();
 }
 
-function isPhoneticNotation(value: string): boolean {
-  return /^\/[^/]+\/$/.test(value.trim());
+function stripPhoneticSlashes(value: string): string {
+  return value.replace(/(?<!\/)\/([^/]+)\/(?!\/)/g, "$1");
 }
 
-const TURKISH_DIGRAPH_LABELS = /^(sh|ch|th|ph|wh)$/i;
-
 function normalizeLessonTurkishSpeech(value: string): string {
-  let text = value.replace(/\/([^/]+)\//g, "$1").replace(/\s*\/\s*/g, ", ");
+  let text = stripPhoneticSlashes(value).replace(/\s*\/\s*/g, ", ");
   text = text.replace(/\b[A-Z](?:\s*,\s*[A-Z])+(?:\s+ve\s+[A-Z])?\b/g, (list) =>
     list.replace(/\s*,\s*/g, "; "),
-  );
-  text = text.replace(/\b[a-z]{1,3}(?:\s*,\s*[a-z]{1,3})+\b/g, (list) =>
-    list.split(/\s*,\s*/).every((part) => TURKISH_DIGRAPH_LABELS.test(part))
-      ? list.replace(/\s*,\s*/g, "; ")
-      : list,
   );
   return text;
 }
@@ -41,10 +31,6 @@ function normalizeLessonTurkishSpeech(value: string): string {
 function normalizeEnglishSpeech(value: string): string {
   const stripped = stripEnglishQuotes(value.trim());
   return stripped.replace(/\s*\/\s*/g, ", ");
-}
-
-function isDigitsOnly(value: string): boolean {
-  return /^\d+$/.test(value.trim());
 }
 
 function isLatinLetterNameOnly(value: string): boolean {
@@ -68,72 +54,25 @@ function isLatinLetterNameOnly(value: string): boolean {
   return false;
 }
 
-function isLikelyEnglishLatin(value: string): boolean {
-  const trimmed = stripEnglishQuotes(value.trim());
-  if (!trimmed || TURKISH_CHAR.test(trimmed)) {
-    return false;
-  }
-  if (isDigitsOnly(trimmed)) {
-    return false;
-  }
-  if (isLatinLetterNameOnly(trimmed) || isPhoneticNotation(trimmed)) {
-    return false;
-  }
-  if (TURKISH_LATIN_HINT.test(trimmed)) {
-    return false;
-  }
-  if (/^[A-Z]{2,6}$/.test(trimmed) && !TURKISH_DIGRAPH_LABELS.test(trimmed)) {
-    return true;
-  }
-  if (
-    /^[a-z][a-z'’\-]{1,}(?:\s*,\s*[a-z][a-z'’\-]*)*$/i.test(trimmed) &&
-    !isLatinLetterNameOnly(trimmed)
-  ) {
-    return true;
-  }
-  const words = trimmed.split(/\s+/).filter(Boolean);
-  if (
-    words.length > 0 &&
-    words.every((word) => /^[A-Za-z][A-Za-z'’\-]*$/.test(word))
-  ) {
-    if (words.every((word) => word.length === 1)) {
-      return false;
-    }
-    return words.length <= 6;
-  }
-  return false;
-}
-
 function expandBoldSegment(inner: string): LessonSpeakSegment[] {
   const raw = inner.trim();
   if (!raw) {
     return [];
   }
 
-  const digraphPrefix = raw.match(/^([A-Z]{2,5})\s+(.+)$/);
-  if (digraphPrefix && TURKISH_LATIN_HINT.test(digraphPrefix[2] ?? "")) {
-    return [
-      {
-        text: `${digraphPrefix[1] ?? ""} ${digraphPrefix[2]?.trim() ?? ""}`,
-        lang: "tr-TR",
-      },
-    ];
+  if (EXPLICIT_ENGLISH.test(raw)) {
+    EXPLICIT_ENGLISH.lastIndex = 0;
+    const nested: LessonSpeakSegment[] = [];
+    parseInlineSpeechMarkers(raw, nested);
+    return nested;
   }
 
-  if (
-    TURKISH_CHAR.test(raw) ||
-    isDigitsOnly(raw) ||
-    !isLikelyEnglishLatin(raw)
-  ) {
-    return [
-      {
-        text: normalizeLessonTurkishSpeech(raw),
-        lang: "tr-TR",
-      },
-    ];
-  }
-
-  return [{ text: normalizeEnglishSpeech(raw), lang: "en-US" }];
+  return [
+    {
+      text: normalizeLessonTurkishSpeech(raw),
+      lang: "tr-TR",
+    },
+  ];
 }
 
 function appendSegment(
@@ -152,7 +91,7 @@ function appendSegment(
   segments.push({ text, lang });
 }
 
-function parsePlainTextPart(
+function parseQuotedEnglishTurkishPart(
   part: string,
   segments: LessonSpeakSegment[],
 ): void {
@@ -175,6 +114,25 @@ function parsePlainTextPart(
   );
 }
 
+function parseInlineSpeechMarkers(
+  part: string,
+  segments: LessonSpeakSegment[],
+): void {
+  if (!part) {
+    return;
+  }
+
+  let lastIndex = 0;
+  for (const match of part.matchAll(EXPLICIT_ENGLISH)) {
+    const index = match.index ?? 0;
+    const before = part.slice(lastIndex, index);
+    parseQuotedEnglishTurkishPart(before, segments);
+    appendSegment(segments, normalizeEnglishSpeech(match[1] ?? ""), "en-US");
+    lastIndex = index + match[0].length;
+  }
+  parseQuotedEnglishTurkishPart(part.slice(lastIndex), segments);
+}
+
 export function parseLessonSpeakSegments(source: string): LessonSpeakSegment[] {
   const parts = source.split(BOLD_SEGMENT);
   const segments: LessonSpeakSegment[] = [];
@@ -182,7 +140,7 @@ export function parseLessonSpeakSegments(source: string): LessonSpeakSegment[] {
   for (let index = 0; index < parts.length; index += 1) {
     const part = parts[index] ?? "";
     if (index % 2 === 0) {
-      parsePlainTextPart(part, segments);
+      parseInlineSpeechMarkers(part, segments);
       continue;
     }
     for (const piece of expandBoldSegment(part)) {
@@ -224,9 +182,14 @@ export function lessonParagraphsToSpeakLines(
   return segmentsToDialogueLines(segments);
 }
 
+export function stripLessonAuthoringMarkers(text: string): string {
+  return text.replace(/\\([^\\]+)\\/g, "$1");
+}
+
 export function lessonTextToSpeech(text: string): string {
-  return text
+  return stripLessonAuthoringMarkers(text)
     .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/(?<!\/)\/([^/]+)\/(?!\/)/g, "$1")
     .replace(/\s*\/\s*/g, ", ")
     .trim();
 }
@@ -242,7 +205,6 @@ export function isTurkishLessonSpeech(lang: string): boolean {
   return lang.trim().toLowerCase().startsWith("tr");
 }
 
-/** Tek başına harf / harf listesi parçası — telaffuzu yavaşlatılır. */
 export function isTurkishLetterNameSpeechChunk(chunk: string): boolean {
   const trimmed = chunk.trim();
   if (!trimmed) {

@@ -236,11 +236,7 @@ export function LessonSpeakButton({
         className={className}
         aria-pressed={speaking}
         aria-label={
-          speaking
-            ? t("listenStop")
-            : canResume
-              ? t("listenResume")
-              : playLabel
+          speaking ? t("listenStop") : canResume ? t("listenResume") : playLabel
         }
         onClick={handlePlayPause}
       >
@@ -249,10 +245,13 @@ export function LessonSpeakButton({
     );
   }
 
+  const transportIconSize = size === "icon-sm" ? "icon-sm" : "icon-xs";
+
   return (
     <div
       className={cn(
-        "glass-button inline-flex shrink-0 items-center gap-0.5 rounded-xl p-0.5",
+        "glass-button inline-flex shrink-0 items-center gap-0 rounded-xl p-0.5",
+        transportIconSize === "icon-sm" ? "min-h-9" : "min-h-7",
         className,
       )}
       role="group"
@@ -261,43 +260,39 @@ export function LessonSpeakButton({
       <Button
         type="button"
         variant="ghost"
-        size="icon-xs"
+        size={transportIconSize}
         disabled={!playback.canStepBack}
         aria-label={t("listenSkipBack")}
         onClick={() => handleStep(-1)}
       >
         <SkipBack aria-hidden />
       </Button>
-      <span className="relative inline-flex size-7 shrink-0 items-center justify-center">
-        {speaking ? (
-          <Button
-            type="button"
-            variant="secondary"
-            size="icon-xs"
-            className="absolute inset-0"
-            aria-pressed
-            aria-label={t("listenPause")}
-            onClick={handlePause}
-          >
-            <Pause aria-hidden />
-          </Button>
-        ) : (
-          <Button
-            type="button"
-            variant={canResume ? "secondary" : "ghost"}
-            size="icon-xs"
-            className="absolute inset-0"
-            aria-label={transportPlayLabel}
-            onClick={handlePlay}
-          >
-            <Play className="ml-px" aria-hidden />
-          </Button>
-        )}
-      </span>
+      {speaking ? (
+        <Button
+          type="button"
+          variant="secondary"
+          size={transportIconSize}
+          aria-pressed
+          aria-label={t("listenPause")}
+          onClick={handlePause}
+        >
+          <Pause aria-hidden />
+        </Button>
+      ) : (
+        <Button
+          type="button"
+          variant={canResume ? "secondary" : "ghost"}
+          size={transportIconSize}
+          aria-label={transportPlayLabel}
+          onClick={handlePlay}
+        >
+          <Play aria-hidden />
+        </Button>
+      )}
       <Button
         type="button"
         variant="ghost"
-        size="icon-xs"
+        size={transportIconSize}
         disabled={!playback.canStepForward && !speaking}
         aria-label={t("listenSkipForward")}
         onClick={() => handleStep(1)}
@@ -307,7 +302,7 @@ export function LessonSpeakButton({
       <Button
         type="button"
         variant="ghost"
-        size="icon-xs"
+        size={transportIconSize}
         disabled={!playback.hasProgress}
         aria-label={t("listenReset")}
         onClick={handleReset}
