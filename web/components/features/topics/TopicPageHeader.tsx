@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { ArrowLeft, ChevronDown } from "lucide-react";
+import { ArrowLeft, ChevronDown, ChevronLeft } from "lucide-react";
 import type { CefrLevel } from "@/data/grammar/dashboardTopics";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Link } from "@/i18n/navigation";
@@ -9,6 +9,10 @@ import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
 import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
 import { TopicProgressBadge } from "@/components/features/topics/TopicProgressBadge";
 import { cn } from "@/lib/utils";
+import {
+  getAdjacentGrammarTopics,
+  getGrammarTopicPanelHref,
+} from "@/lib/topicNavigation";
 
 export type TopicSectionNavItem = {
   id: string;
@@ -45,21 +49,36 @@ export function TopicPageHeader({
   const examHref = `/panel/grammer/${topicId}/exam`;
   const showSectionNav = activeTab === "lesson" && sections.length > 0;
   const showTopicExamTab = !isExam;
+  const { previous: previousTopic } = getAdjacentGrammarTopics(topicId);
+  const previousTopicHref = previousTopic
+    ? getGrammarTopicPanelHref(previousTopic, activeTab)
+    : null;
 
   return (
     <header className="space-y-4">
       <div className="flex items-center justify-between gap-3">
-        <ButtonLink href="/panel#grammer" variant="outline" size="sm">
-          <ArrowLeft className="size-4" aria-hidden />
-          {t("backToTopics")}
-        </ButtonLink>
+        <div className="flex min-w-0 flex-wrap items-center gap-2">
+          <ButtonLink href="/panel#grammer" variant="outline" size="sm">
+            <ArrowLeft className="size-4" aria-hidden />
+            {t("backToTopics")}
+          </ButtonLink>
+          {previousTopic && previousTopicHref ? (
+            <ButtonLink
+              href={previousTopicHref}
+              variant="outline"
+              size="sm"
+              className="gap-1.5"
+              aria-label={`${t("previousTopic")}: ${previousTopic.title}`}
+            >
+              <ChevronLeft className="size-4 shrink-0" aria-hidden />
+              <span className="truncate">{t("previousTopic")}</span>
+            </ButtonLink>
+          ) : null}
+        </div>
         <TopicProgressBadge topicId={topicId} />
       </div>
 
       <div className="flex flex-wrap items-center gap-2">
-        <p className="inline-flex w-fit rounded-md bg-zinc-500/15 px-2 py-1 text-[11px] font-semibold tracking-wide text-zinc-700 uppercase dark:bg-zinc-400/15 dark:text-zinc-300">
-          {isExam ? t("examLabel") : t("topicLabel", { index })}
-        </p>
         <p
           className={cn(
             "inline-flex w-fit rounded-md px-2 py-1 text-[11px] font-semibold tracking-wide uppercase",
@@ -67,6 +86,9 @@ export function TopicPageHeader({
           )}
         >
           {level}
+        </p>
+        <p className="inline-flex w-fit rounded-md bg-zinc-500/15 px-2 py-1 text-[11px] font-semibold tracking-wide text-zinc-700 uppercase dark:bg-zinc-400/15 dark:text-zinc-300">
+          {isExam ? t("examLabel") : t("topicLabel", { index })}
         </p>
       </div>
 

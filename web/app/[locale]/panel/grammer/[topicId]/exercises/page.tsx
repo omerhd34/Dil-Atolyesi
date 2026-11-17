@@ -7,8 +7,12 @@ import { TopicContentMissing } from "@/components/features/topics/TopicContentMi
 import { TopicExercisesView } from "@/components/features/topics/TopicExercisesView";
 import { TopicGrammarAccessGate } from "@/components/features/topics/TopicGrammarAccessGate";
 import { TopicLevelLocked } from "@/components/features/topics/TopicLevelLocked";
+import { TopicAdjacentNav } from "@/components/features/topics/TopicAdjacentNav";
 import { TopicPageHeader } from "@/components/features/topics/TopicPageHeader";
-import { dashboardTopics, getDashboardTopicById } from "@/data/grammar/dashboardTopics";
+import {
+  dashboardTopics,
+  getDashboardTopicById,
+} from "@/data/grammar/dashboardTopics";
 import { getTopicContent } from "@/data/grammar";
 import { getTopicPracticeExercises } from "@/data/grammar/topicExercises";
 import {
@@ -89,6 +93,7 @@ export default async function TopicExercisesPage({ params }: PageProps) {
       ) : (
         <TopicContentMissing />
       )}
+      <TopicAdjacentNav topicId={topic.id} activeTab="exercises" />
     </div>
   );
 }

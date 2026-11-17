@@ -6,8 +6,12 @@ import { TopicContentMissing } from "@/components/features/topics/TopicContentMi
 import { TopicExamView } from "@/components/features/topics/TopicExamView";
 import { TopicGrammarAccessGate } from "@/components/features/topics/TopicGrammarAccessGate";
 import { TopicLevelLocked } from "@/components/features/topics/TopicLevelLocked";
+import { TopicAdjacentNav } from "@/components/features/topics/TopicAdjacentNav";
 import { TopicPageHeader } from "@/components/features/topics/TopicPageHeader";
-import { dashboardTopics, getDashboardTopicById } from "@/data/grammar/dashboardTopics";
+import {
+  dashboardTopics,
+  getDashboardTopicById,
+} from "@/data/grammar/dashboardTopics";
 import { getTopicContent } from "@/data/grammar";
 import {
   PASSED_LEVEL_EXAMS_COOKIE,
@@ -141,6 +145,7 @@ export default async function TopicExamPage({ params }: PageProps) {
       ) : (
         <TopicContentMissing />
       )}
+      <TopicAdjacentNav topicId={topic.id} activeTab="exam" />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import { TopicLessonProgressTracker } from "@/components/features/topics/TopicLe
 import { TopicLessonView } from "@/components/features/topics/TopicLessonView";
 import { TopicGrammarAccessGate } from "@/components/features/topics/TopicGrammarAccessGate";
 import { TopicLevelLocked } from "@/components/features/topics/TopicLevelLocked";
+import { TopicAdjacentNav } from "@/components/features/topics/TopicAdjacentNav";
 import { TopicPageHeader } from "@/components/features/topics/TopicPageHeader";
 import {
   dashboardTopics,
@@ -117,6 +118,7 @@ export default async function TopicLessonPage({ params }: PageProps) {
       ) : (
         <TopicContentMissing />
       )}
+      <TopicAdjacentNav topicId={topic.id} activeTab="lesson" />
     </div>
   );
 }
