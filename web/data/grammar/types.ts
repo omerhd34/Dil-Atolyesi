@@ -22,16 +22,6 @@ export type TopicLessonPart = {
   paragraphs: string[];
   examples?: TopicLessonExample[];
   examplesTitle?: string;
-  exampleHeaders?: TopicLessonExampleHeaders;
-};
-
-export type TopicLessonSection = {
-  subtopicId: string;
-  title: string;
-  titleEn?: string;
-  paragraphs: string[];
-  examples?: TopicLessonExample[];
-  examplesTitle?: string;
   examplesLayout?: TopicLessonExamplesLayout;
   examplesPerRow?: 2 | 3 | 4;
   examplesPerColumn?: number;
@@ -40,8 +30,16 @@ export type TopicLessonSection = {
 };
 
 export type TopicLesson = {
-  intro: string;
-  sections: TopicLessonSection[];
+  title?: string;
+  titleEn?: string;
+  paragraphs?: string[];
+  examples?: TopicLessonExample[];
+  examplesTitle?: string;
+  examplesLayout?: TopicLessonExamplesLayout;
+  examplesPerRow?: 2 | 3 | 4;
+  examplesPerColumn?: number;
+  exampleHeaders?: TopicLessonExampleHeaders;
+  parts?: TopicLessonPart[];
 };
 
 export type ExerciseType =

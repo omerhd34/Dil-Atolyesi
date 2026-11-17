@@ -1,6 +1,10 @@
-import { grammarHeadings, type GrammarHeading } from "./grammarHeading";
+import {
+  allGrammarHeadings,
+  type CefrLevel,
+  type GrammarHeading,
+} from "./grammarHeading";
 
-export type CefrLevel = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
+export type { CefrLevel };
 
 export type DashboardSubtopic = {
   id: string;
@@ -15,6 +19,7 @@ export type DashboardTopic = {
   title: string;
   titleEng: string;
   titleEx: string;
+  intro: string;
   level: CefrLevel;
   isExam?: boolean;
   subtopics: DashboardSubtopic[];
@@ -27,6 +32,7 @@ const levelExamSeeds: GrammarHeading[] = [
     title: "A1 Yeterlilik Sınavı",
     titleEng: "A1 Proficiency Exam",
     titleEx: "A1 Proficiency Exam",
+    intro: "",
   },
   {
     id: "124",
@@ -34,6 +40,7 @@ const levelExamSeeds: GrammarHeading[] = [
     title: "A2 Yeterlilik Sınavı",
     titleEng: "A2 Proficiency Exam",
     titleEx: "A2 Proficiency Exam",
+    intro: "",
   },
   {
     id: "125",
@@ -41,6 +48,7 @@ const levelExamSeeds: GrammarHeading[] = [
     title: "B1 Yeterlilik Sınavı",
     titleEng: "B1 Proficiency Exam",
     titleEx: "B1 Proficiency Exam",
+    intro: "",
   },
   {
     id: "126",
@@ -48,6 +56,7 @@ const levelExamSeeds: GrammarHeading[] = [
     title: "B2 Yeterlilik Sınavı",
     titleEng: "B2 Proficiency Exam",
     titleEx: "B2 Proficiency Exam",
+    intro: "",
   },
   {
     id: "127",
@@ -55,6 +64,7 @@ const levelExamSeeds: GrammarHeading[] = [
     title: "C1 Yeterlilik Sınavı",
     titleEng: "C1 Proficiency Exam",
     titleEx: "C1 Proficiency Exam",
+    intro: "",
   },
   {
     id: "128",
@@ -62,6 +72,7 @@ const levelExamSeeds: GrammarHeading[] = [
     title: "C2 Yeterlilik Sınavı",
     titleEng: "C2 Proficiency Exam",
     titleEx: "C2 Proficiency Exam",
+    intro: "",
   },
 ];
 
@@ -71,6 +82,7 @@ function toTopic(seed: GrammarHeading, isExam = false): DashboardTopic {
     title: seed.title,
     titleEng: seed.titleEng,
     titleEx: seed.titleEx,
+    intro: seed.intro,
     level: seed.level,
     isExam: isExam || undefined,
     subtopics: [
@@ -85,7 +97,7 @@ function toTopic(seed: GrammarHeading, isExam = false): DashboardTopic {
   };
 }
 
-const grammarTopics = grammarHeadings.map((seed) => toTopic(seed));
+const grammarTopics = allGrammarHeadings.map((seed) => toTopic(seed));
 const levelExams = levelExamSeeds.map((seed) => toTopic(seed, true));
 
 export const dashboardTopics: DashboardTopic[] = [

@@ -287,38 +287,20 @@ export function createTopicContent(topic: DashboardTopic): TopicContent {
   return {
     topicId: topic.id,
     lesson: {
-      intro: `"${topic.title}" konusu ${topic.level} seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.`,
-      sections: topic.subtopics.map((subtopic, sectionIndex) => {
-        const sample = samples[sectionIndex % samples.length];
-
-        return {
-          subtopicId: subtopic.id,
-          title: subtopic.title,
-          titleEn: subtopic.titleEx ?? topic.titleEx,
-          paragraphs: [
-            `"${subtopic.title}" başlığında ${topic.title} konusunun önemli noktalarını adım adım görürsün.`,
-            `Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. ${topic.level} seviyesinde düzenli tekrar yeterlidir.`,
-            topic.isExam
-              ? "Bu bir yeterlilik sınavı bölümüdür: önceki konuları hatırlayarak ilerlemeyi hedefle."
-              : "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
-          ],
-          examples: [
-            {
-              en: sample.en,
-              tr: sample.tr,
-              note: `${subtopic.title} — örnek ${sectionIndex + 1}`,
-            },
-            {
-              en: `Topic focus: ${topic.title}`,
-              tr: `Konu odağı: ${topic.title}`,
-            },
-            {
-              en: `Subtopic: ${subtopic.title}`,
-              tr: `Alt konu: ${subtopic.title}`,
-            },
-          ],
-        };
-      }),
+      title: topic.title,
+      titleEn: topic.titleEng || topic.titleEx,
+      paragraphs: [
+        `"${topic.title}" başlığında bu konunun önemli noktalarını adım adım görürsün.`,
+        `Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. ${topic.level} seviyesinde düzenli tekrar yeterlidir.`,
+        topic.isExam
+          ? "Bu bir yeterlilik sınavı bölümüdür: önceki konuları hatırlayarak ilerlemeyi hedefle."
+          : "Kısa not: Anlamadığın bir örneği işaretleyip alıştırmada yeniden dene.",
+      ],
+      examples: samples.map((sample, index) => ({
+        en: sample.en,
+        tr: sample.tr,
+        note: `${topic.title} — örnek ${index + 1}`,
+      })),
     },
     exercises,
     quiz: topic.isExam ? undefined : buildQuizExercises(topic),
