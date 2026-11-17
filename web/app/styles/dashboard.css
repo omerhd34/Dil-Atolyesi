@@ -1,7 +1,6 @@
 .dashboard-panel {
-  @apply rounded-[20px] border-0 backdrop-blur-[20px] backdrop-saturate-200;
+  @apply rounded-[20px] border-0 p-5 backdrop-blur-[20px] backdrop-saturate-200 sm:p-6;
   background: var(--glass);
-  padding: 14px 16px;
   box-shadow: var(--glass-panel-shadow);
 }
 
