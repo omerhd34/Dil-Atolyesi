@@ -3,11 +3,6 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent123: TopicContent = {
   topicId: "123",
   lesson: {
-    intro:
-      '"A1 Yeterlilik Sınavı" konusu A1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
-    sections: [
-      {
-        subtopicId: "123-1",
         title: "A1 Yeterlilik Sınavı",
         titleEn: "A1 Proficiency Exam",
         paragraphs: [
@@ -30,15 +25,14 @@ export const topicContent123: TopicContent = {
             tr: "Alt konu: A1 Yeterlilik Sınavı",
           },
         ],
-      },
-    ],
+      
   },
   exercises: [
     {
       id: "123-ex-123-1-1",
       subtopicId: "123-1",
       type: "multiple_choice",
-      prompt: "\"A1 Yeterlilik Sınavı\" alt konusu hangi ana konuya aittir?",
+      prompt: '"A1 Yeterlilik Sınavı" alt konusu hangi ana konuya aittir?',
       options: [
         "A1 Yeterlilik Sınavı",
         "Tamamen farklı bir konu",
@@ -46,13 +40,14 @@ export const topicContent123: TopicContent = {
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"A1 Yeterlilik Sınavı\" başlığı altındadır.",
+      explanation: 'Bu alt konu "A1 Yeterlilik Sınavı" başlığı altındadır.',
     },
     {
       id: "123-ex-123-1-2",
       subtopicId: "123-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"A1 Yeterlilik Sınavı\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "A1 Yeterlilik Sınavı" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -66,19 +61,18 @@ export const topicContent123: TopicContent = {
       id: "123-tf-123-1-1",
       subtopicId: "123-1",
       type: "true_false",
-      prompt: "\"A1 Yeterlilik Sınavı\" başlığı \"A1 Yeterlilik Sınavı\" konusunun bir parçasıdır.",
-      options: [
-        "Doğru",
-        "Yanlış",
-      ],
+      prompt:
+        '"A1 Yeterlilik Sınavı" başlığı "A1 Yeterlilik Sınavı" konusunun bir parçasıdır.',
+      options: ["Doğru", "Yanlış"],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"A1 Yeterlilik Sınavı\" konusu altında işlenir.",
+      explanation:
+        'Bu alt başlık "A1 Yeterlilik Sınavı" konusu altında işlenir.',
     },
     {
       id: "123-fb-123-1-1",
       subtopicId: "123-1",
       type: "fill_blank",
-      prompt: "\"A1 Yeterlilik Sınavı\" konusu _____ seviyesine uygundur.",
+      prompt: '"A1 Yeterlilik Sınavı" konusu _____ seviyesine uygundur.',
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },

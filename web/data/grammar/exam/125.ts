@@ -3,11 +3,6 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent125: TopicContent = {
   topicId: "125",
   lesson: {
-    intro:
-      '"B1 Yeterlilik Sınavı" konusu B1 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
-    sections: [
-      {
-        subtopicId: "125-1",
         title: "B1 Yeterlilik Sınavı",
         titleEn: "B1 Proficiency Exam",
         paragraphs: [
@@ -30,8 +25,7 @@ export const topicContent125: TopicContent = {
             tr: "Alt konu: B1 Yeterlilik Sınavı",
           },
         ],
-      },
-    ],
+      
   },
   exercises: [
     {

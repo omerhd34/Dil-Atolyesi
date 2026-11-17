@@ -2,17 +2,17 @@ import type { TopicContent } from "@/data/grammar/types";
 
 export const topicContent6: TopicContent = {
   topicId: "6",
-  viewMinutes: 5,
+  viewMinutes: 8,
   lesson: {
-    intro:
-      "Bu konuda bilgi almak için kullanılan temel soru kelimelerini öğrenirsin. **What**, **Who**, **Where**, **How**, **When**, **Why**, **Which** ve **Whose** her zaman sorunun başında durur.",
-    sections: [
+    parts: [
       {
-        subtopicId: "6-1",
+        id: "6-1",
         title: "What",
         titleEn: "Asking about things",
         paragraphs: [
-          "**What**, Türkçede **Ne?** anlamına gelir. Nesneleri, durumları ve bilgileri sormak içindir. Günlük İngilizcede en sık duyacağın soru kelimesidir.",
+          "**What**, Türkçede **Ne?** anlamına gelen temel **Wh- soru kelimesidir**. Nesneleri, durumları, meslekleri, isimleri ve genel bilgileri öğrenmek için kullanılır. Tanışma ve günlük sohbette en sık karşılaşacağın soru kelimelerinden biridir.",
+          "**To be** ile soru kurarken kalıp şudur: **What + am/is/are + özne (+ tamamlayıcı)?** Örneğin **What is your name?** veya **What is the problem?** Özne **you, we, they** ise **are** gelir: **What are those?**",
+          "**What** tek başına da kalabilir, yan kelimelerle de anlamı daralır: **What is the time?** saati, **What is your job?** mesleği sorar. Cevapta çoğu zaman tam bir bilgi cümlesi verirsin; tek kelimelik **A cat.** gibi kısa cevaplar da mümkündür.",
         ],
         examplesTitle: "What ile temel kalıplar",
         examplesLayout: "columns",
@@ -28,11 +28,13 @@ export const topicContent6: TopicContent = {
         ],
       },
       {
-        subtopicId: "6-2",
+        id: "6-2",
         title: "Who",
         titleEn: "Asking about people",
         paragraphs: [
-          "**Who**, Türkçede **Kim?** anlamına gelir. Yalnızca insanlar içindir. Birinin kim olduğunu sorduğunda cümlenin başına gelir.",
+          "**Who**, Türkçede **Kim?** anlamına gelir ve yalnızca **insanlar** hakkında soru sorar. Birinin kimliğini, rolünü veya sıradaki kişiyi öğrenmek istediğinde bu kelimeyi kullanırsın. Hayvan veya nesne için **who** değil, başka soru kelimeleri tercih edilir.",
+          "**To be** ile sıra: **Who + am/is/are + özne?** **Who are you?** (Sen kimsin?), **Who is he?** (O kim?) gibi. Özne tekil insan (**he, she, that man**) ise **is**, **you / we / they** ile **are** kullanılır.",
+          "**Who** cümlesinde genelde isim veya zamir özne olarak gelir. Cevap bir isim (**My teacher. / Ahmet.**) veya **He is my brother.** gibi tam cümle olabilir. **Who is next?** gibi kalıplar sıra ve görev sorarken de işine yarar.",
         ],
         examplesTitle: "Who ile temel kalıplar",
         examplesLayout: "columns",
@@ -48,11 +50,13 @@ export const topicContent6: TopicContent = {
         ],
       },
       {
-        subtopicId: "6-3",
+        id: "6-3",
         title: "Where",
         titleEn: "Asking about places",
         paragraphs: [
-          "**Where**, Türkçede **Nerede?** veya **Nereye?** anlamına gelir. Bir kişinin veya nesnenin yerini sorar. Nerelisin sorusunda da aynı kelimeyi kullanırsın.",
+          "**Where**, Türkçede **Nerede?** (konum) veya bağlama göre **Nereye?** (yön) anlamına gelir. Bir kişinin, hayvanın veya nesnenin **bulunduğu yeri** sormak için kullanılır. **Where are you from?** ise **Nerelisin?** diye menşe sorar.",
+          "**To be** ile yer sorusu: **Where + am/is/are + özne?** **Where is the cat?**, **Where are you?** Özne tekil (**the hospital, she, my phone**) ise **is**; **you, we, they** ile **are** gelir.",
+          "Yer sorularına cevap genelde **at / in / on** edatlarıyla başlar: **At home.**, **In the hospital.**, **On the table.** Haritada veya sınıfta bir şeyi ararken **Where is...?** kalıbını sık kullanırsın.",
         ],
         examplesTitle: "Where ile temel kalıplar",
         examplesLayout: "columns",
@@ -68,11 +72,13 @@ export const topicContent6: TopicContent = {
         ],
       },
       {
-        subtopicId: "6-4",
+        id: "6-4",
         title: "How",
         titleEn: "Asking about conditions",
         paragraphs: [
-          "**How**, Türkçede **Nasıl?** anlamına gelir. Bir durumun nasıl olduğunu sorar. Yanına gelen kelimeyle anlamı değişebilir; **How old** **yaş (kaç yaşında)**, **How much** ise **fiyat (ne kadar)** sorar.",
+          "**How**, Türkçede **Nasıl?** anlamına gelir ve çoğunlukla **durum, sağlık veya kalite** hakkında soru sorar. **How are you?** hal hatır sormak için standart bir kalıptır. Tek başına kullanıldığında duygu veya genel durumu hedefler.",
+          "**To be** ile: **How + am/is/are + özne?** **How are you?**, **How is the weather?**, **How is your family?** Özne tekil (**the weather, he**) ise **is**; **you, things, they** ile **are** kullanılır.",
+          "Yanına eklenen kelimeler anlamı değiştirir: **How old** → yaş (**How old are you?**), **How much** → fiyat (**How much is this?**). Bu derste gördüğün **How are things?** ifadesi ise **Ne haber? / İşler nasıl?** anlamındadır.",
         ],
         examplesTitle: "How ile temel kalıplar",
         examplesLayout: "columns",
@@ -92,11 +98,13 @@ export const topicContent6: TopicContent = {
         ],
       },
       {
-        subtopicId: "6-5",
+        id: "6-5",
         title: "When",
         titleEn: "Asking about time",
         paragraphs: [
-          "**When**, Türkçede **Ne zaman?** anlamına gelir. Bir olayın zamanını sorar. **Gün**, **saat** veya **yıl** öğrenmek istediğinde cümlenin başına gelir.",
+          "**When**, Türkçede **Ne zaman?** anlamına gelir. Toplantı, sınav, parti veya doğum günü gibi olayların **tarih veya saatini** öğrenmek için kullanılır. Zamanla ilgili tüm temel sorularda bu kelimeyi görürsün.",
+          "**To be** ile kalıp: **When + is/are + özne?** **When is your birthday?**, **When is the exam?** Özne **you, we, they** veya çoğul ise **are**: **When are the holidays?** **it** ve tekil isimlerle **is** gelir: **When is dinner?**",
+          "Cevapta genelde bir gün, saat veya tarih söylenir: **On Monday.**, **At 5 o'clock.**, **In March.** **When is it?** gibi genel sorular da aynı kelimeyle kurulur; bağlam neyin zamanı olduğunu netleştirir.",
         ],
         examplesTitle: "When ile temel kalıplar",
         examplesLayout: "columns",
@@ -112,11 +120,13 @@ export const topicContent6: TopicContent = {
         ],
       },
       {
-        subtopicId: "6-6",
+        id: "6-6",
         title: "Why",
         titleEn: "Asking for reasons",
         paragraphs: [
-          "**Why**, Türkçede **Neden?** veya **Niçin?** anlamına gelir. Bir durumun sebebini sorar. Cevaba çoğu zaman **Because (çünkü)** kelimesi ile başlarsın.",
+          "**Why**, Türkçede **Neden?** veya **Niçin?** anlamına gelir. Bir davranışın, duygunun veya durumun **sebebini** öğrenmek istediğinde cümlenin başına gelir. **Why are you late?** gibi kalıplar günlük hayatta çok sıktır.",
+          "**To be** ile: **Why + am/is/are + özne (+ sıfat/zarf)?** **Why are you here?**, **Why is he sad?**, **Why is it so expensive?** Özne **you, we, they** ise **are**; **he, she, it, the door** gibi tekil öznelerde **is** kullanılır.",
+          "Cevap çoğu zaman **Because...** (Çünkü...) ile başlar: **Because I missed the bus.** Sebep sorusu ile **What** veya **Who** karıştırma: **Why** neden, **What** ne, **Who** kim sorar.",
         ],
         examplesTitle: "Why ile temel kalıplar",
         examplesLayout: "columns",
@@ -132,11 +142,13 @@ export const topicContent6: TopicContent = {
         ],
       },
       {
-        subtopicId: "6-7",
+        id: "6-7",
         title: "Which",
         titleEn: "Asking for choices",
         paragraphs: [
-          "**Which**, Türkçede **Hangi?** veya **Hangisi?** anlamına gelir. Belirli seçenekler arasından birini sorduğunda kullanılır. Sıklıkla **Which one (hangisi)** kalıbını görürsün.",
+          "**Which**, Türkçede **Hangi?** veya **Hangisi?** anlamına gelir. **What** genel bilgi sorarken, **which** belirli **seçenekler arasından** birini işaret eder. İki renk, iki kitap veya iki yol arasında karar verirken bu kelimeyi kullanırsın.",
+          "**To be** ile: **Which + is/are + özne?** veya **Which + isim + is...?** **Which is your car?**, **Which color is this?** Çoğul seçeneklerde **Which are...?** veya **Which ones are...?** görülebilir.",
+          "**Which one** kalıbı **hangisi** vurgusunu güçlendirir: **Which one is better?**, **Which one do you want?** (bu örnekte **do** ile geniş zaman da vardır; **to be** ile olanları önce pekiştir). Mağaza ve restoranda seçim sorarken **which** çok işine yarar.",
         ],
         examplesTitle: "Which ile temel kalıplar",
         examplesLayout: "columns",
@@ -152,11 +164,13 @@ export const topicContent6: TopicContent = {
         ],
       },
       {
-        subtopicId: "6-8",
+        id: "6-8",
         title: "Whose",
         titleEn: "Asking about possession",
         paragraphs: [
-          "**Whose**, Türkçede **Kimin?** anlamına gelir. Bir şeyin kime ait olduğunu (sahipliğini) sorar. Sahibi sorulan ismin hemen önünde durur.",
+          "**Whose**, Türkçede **Kimin?** anlamına gelir ve **sahiplik (aidiyet)** sorar. Bir çanta, telefon veya fikir kime ait diye öğrenmek istediğinde **whose** kullanırsın. **Who** kim olduğunu, **whose** kime ait olduğunu sorar.",
+          "**To be** ile kalıp: **Whose + isim + is/are + ...?** **Whose bag is this?**, **Whose keys are they?** **Whose** her zaman sahip olunan şeyin (**bag, phone, idea**) hemen önünde durur.",
+          "Cevap genelde **isim + 's (iyelik)** veya zamirle verilir: **It's mine. / It's John's.** **Whose are these?** çoğul nesneler için kullanılır. Sınıfta kayıp eşya ararken **Whose ... is this?** cümlesi pratik bir kalıptır.",
         ],
         examplesTitle: "Whose ile temel kalıplar",
         examplesLayout: "columns",

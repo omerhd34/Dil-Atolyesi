@@ -3,11 +3,6 @@ import type { TopicContent } from "@/data/grammar/types";
 export const topicContent124: TopicContent = {
   topicId: "124",
   lesson: {
-    intro:
-      '"A2 Yeterlilik Sınavı" konusu A2 seviyesine uygundur. Aşağıdaki alt başlıklarda temel kuralları, örnekleri ve kısa notları bulursun. İçerik geçicidir; ileride zenginleştirilebilir.',
-    sections: [
-      {
-        subtopicId: "124-1",
         title: "A2 Yeterlilik Sınavı",
         titleEn: "A2 Proficiency Exam",
         paragraphs: [
@@ -30,8 +25,7 @@ export const topicContent124: TopicContent = {
             tr: "Alt konu: A2 Yeterlilik Sınavı",
           },
         ],
-      },
-    ],
+      
   },
   exercises: [
     {
