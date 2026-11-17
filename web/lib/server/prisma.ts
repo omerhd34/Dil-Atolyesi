@@ -31,6 +31,7 @@ function createPool(): Pool {
     acquireTimeout: 8_000,
     idleTimeout: 30_000,
     resetAfterUse: true,
+    allowPublicKeyRetrieval: true,
   });
 }
 
