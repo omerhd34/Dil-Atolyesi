@@ -224,7 +224,7 @@ export function MultipleChoiceExercises({
             nextVariant={current.checked ? "default" : "outline"}
             onPrevious={handlePrevious}
             onNext={handleNext}
-            trailing={
+            leading={
               canRestart ? (
                 <Button
                   type="button"

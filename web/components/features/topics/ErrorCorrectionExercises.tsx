@@ -297,7 +297,7 @@ export function ErrorCorrectionExercises({
             nextVariant={current.checked ? "default" : "outline"}
             onPrevious={handlePrevious}
             onNext={handleNext}
-            trailing={
+            leading={
               canRestart ? (
                 <Button
                   type="button"
