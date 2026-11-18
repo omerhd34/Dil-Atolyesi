@@ -13,6 +13,7 @@ type ExerciseStepNavProps = {
   onPrevious: () => void;
   onNext: () => void;
   children?: ReactNode;
+  leading?: ReactNode;
   trailing?: ReactNode;
 };
 
@@ -24,12 +25,14 @@ export function ExerciseStepNav({
   onPrevious,
   onNext,
   children,
+  leading,
   trailing,
 }: ExerciseStepNavProps) {
   const t = useTranslations("Topic");
 
   return (
     <div className="flex flex-wrap gap-2">
+      {leading}
       <Button
         type="button"
         variant="outline"

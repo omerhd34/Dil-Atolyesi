@@ -26,6 +26,7 @@ import type {
   TopicExercise,
   TopicQuizExercise,
 } from "@/data/grammar/types";
+import { examPassCopy } from "@/lib/examPassThreshold";
 import { didPassExamScore, markLevelExamPassed } from "@/lib/levelExamStorage";
 import {
   LEVEL_EXAM_PROGRESS_EVENT,
@@ -876,7 +877,11 @@ export function TopicExercisesView({
 
   if (isExam && level) {
     if (levelExamCrosswords === null || levelExamFillBlanks === null) {
-      return <p className="page-subtitle mt-0">{t("levelExamIntro")}</p>;
+      return (
+        <p className="page-subtitle mt-0">
+          {t("levelExamIntro", examPassCopy)}
+        </p>
+      );
     }
 
     if (levelExamCrosswords.length === 0 || levelExamFillBlanks.length === 0) {
@@ -905,7 +910,9 @@ export function TopicExercisesView({
     if (!levelExamSelected) {
       return (
         <div className="space-y-4">
-          <p className="page-subtitle mt-0">{t("levelExamIntro")}</p>
+          <p className="page-subtitle mt-0">
+            {t("levelExamIntro", examPassCopy)}
+          </p>
           <ExerciseTypePicker
             counts={levelExamCounts}
             completedTypes={passedLevelParts}
@@ -916,7 +923,7 @@ export function TopicExercisesView({
               listening: 0,
             }}
             title={t("levelExamChooseTitle")}
-            subtitle={t("levelExamChooseSubtitle")}
+            subtitle={t("levelExamChooseSubtitle", examPassCopy)}
             onSelect={(type) => {
               if (type !== "crossword" && type !== "fill_blank") {
                 return;
@@ -951,7 +958,9 @@ export function TopicExercisesView({
             role="status"
           >
             <h2 className="section-title">{t("levelExamPartFailedTitle")}</h2>
-            <p className="page-subtitle mt-0">{t("levelExamPartFailedBody")}</p>
+            <p className="page-subtitle mt-0">
+              {t("levelExamPartFailedBody", examPassCopy)}
+            </p>
             <div className="flex flex-wrap justify-center gap-2">
               <Button type="button" size="sm" onClick={retryCurrentLevelPart}>
                 <RotateCcw className="size-4" aria-hidden />
@@ -975,7 +984,9 @@ export function TopicExercisesView({
             role="status"
           >
             <h2 className="section-title">{t("levelExamPartPassedTitle")}</h2>
-            <p className="page-subtitle mt-0">{t("levelExamPartPassedBody")}</p>
+            <p className="page-subtitle mt-0">
+              {t("levelExamPartPassedBody", examPassCopy)}
+            </p>
             <Button type="button" size="sm" onClick={backToLevelExamPicker}>
               {t("backToTypes")}
             </Button>

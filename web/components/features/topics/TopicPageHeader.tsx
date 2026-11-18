@@ -7,6 +7,7 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Link } from "@/i18n/navigation";
 import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
 import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
+import { DashboardActionIcon } from "@/components/features/dashboard/DashboardActionIcon";
 import { TopicProgressBadge } from "@/components/features/topics/TopicProgressBadge";
 import { cn } from "@/lib/utils";
 import {
@@ -107,38 +108,41 @@ export function TopicPageHeader({
             <Link
               href={lessonHref}
               className={cn(
-                "border-b-2 px-3 py-2 text-sm font-medium transition-colors",
+                "inline-flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm font-medium transition-colors",
                 activeTab === "lesson"
                   ? "border-sky-500 text-brand-950 dark:text-brand-100"
                   : "border-transparent text-brand-500 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
               )}
               aria-current={activeTab === "lesson" ? "page" : undefined}
             >
+              <DashboardActionIcon kind="subject" />
               {t("lesson")}
             </Link>
             <Link
               href={exercisesHref}
               className={cn(
-                "border-b-2 px-3 py-2 text-sm font-medium transition-colors",
+                "inline-flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm font-medium transition-colors",
                 activeTab === "exercises"
                   ? "border-sky-500 text-brand-950 dark:text-brand-100"
                   : "border-transparent text-brand-500 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
               )}
               aria-current={activeTab === "exercises" ? "page" : undefined}
             >
+              <DashboardActionIcon kind="exercises" />
               {t("exercises")}
             </Link>
             {showTopicExamTab ? (
               <Link
                 href={examHref}
                 className={cn(
-                  "border-b-2 px-3 py-2 text-sm font-medium transition-colors",
+                  "inline-flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm font-medium transition-colors",
                   activeTab === "exam"
                     ? "border-sky-500 text-brand-950 dark:text-brand-100"
                     : "border-transparent text-brand-500 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
                 )}
                 aria-current={activeTab === "exam" ? "page" : undefined}
               >
+                <DashboardActionIcon kind="quiz" />
                 {t("topicExamTab")}
               </Link>
             ) : null}

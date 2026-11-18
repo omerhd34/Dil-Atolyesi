@@ -13,6 +13,7 @@ import { FillBlankExercises } from "@/components/features/topics/FillBlankExerci
 import { MultipleChoiceExercises } from "@/components/features/topics/MultipleChoiceExercises";
 import { ErrorCorrectionExercises } from "@/components/features/topics/ErrorCorrectionExercises";
 import { ListeningExercises } from "@/components/features/topics/ListeningExercises";
+import { LessonBoldText } from "@/components/features/topics/LessonBoldText";
 import { TopicMixedQuizExercises } from "@/components/features/topics/TopicMixedQuizExercises";
 import type {
   CrosswordExercise,
@@ -24,6 +25,7 @@ import type {
 } from "@/data/grammar/types";
 import { clearCrosswordDraft } from "@/lib/exerciseDraftStorage";
 import { totalCrosswordClueCount } from "@/lib/exerciseTypeProgress";
+import { examPassCopy } from "@/lib/examPassThreshold";
 import { didPassTopicExamScore } from "@/lib/topicExam";
 import {
   emptyTopicExamDraft,
@@ -468,9 +470,39 @@ export function TopicExamView({
         selected: number | null;
         answer: string;
         checked: boolean;
+        matchingCorrect?: boolean;
+        assignments?: Record<number, number>;
+        revealed?: boolean;
+        graded?: boolean;
       }[];
     }) => {
-      handleSessionChange("mixed", session, mixedOrderIds);
+      handleSessionChange(
+        "mixed",
+        {
+          ...session,
+          slots: session.slots.map((slot) => {
+            const matchingAssignments: Record<string, number> = {};
+            if (slot.assignments) {
+              for (const [key, value] of Object.entries(slot.assignments)) {
+                matchingAssignments[String(key)] = value;
+              }
+            }
+            return {
+              selected: slot.selected,
+              answer: slot.answer,
+              checked: slot.checked,
+              matchingCorrect: slot.matchingCorrect,
+              matchingAssignments:
+                Object.keys(matchingAssignments).length > 0
+                  ? matchingAssignments
+                  : undefined,
+              matchingRevealed: slot.revealed,
+              matchingGraded: slot.graded,
+            };
+          }),
+        },
+        mixedOrderIds,
+      );
     },
     [handleSessionChange, mixedOrderIds],
   );
@@ -665,7 +697,7 @@ export function TopicExamView({
             ),
           }}
           title={t("quizChooseTitle")}
-          subtitle={t("quizChooseSubtitle")}
+          subtitle={t("quizChooseSubtitle", examPassCopy)}
           onSelect={(type) => {
             if (
               type !== "multiple_choice" &&
@@ -708,14 +740,18 @@ export function TopicExamView({
         </Button>
       ) : (
         <p className="page-subtitle mt-0">
-          {quizIntro ?? t("quizSingleIntro")}
+          <LessonBoldText
+            text={quizIntro ?? t("quizSingleIntro", examPassCopy)}
+          />
         </p>
       )}
 
       {partOutcome === "failed" ? (
         <Alert className="border-amber-500/40 bg-amber-500/10">
           <AlertTitle>{t("topicExamFailedTitle")}</AlertTitle>
-          <AlertDescription>{t("topicExamFailedBody")}</AlertDescription>
+          <AlertDescription>
+            {t("topicExamFailedBody", examPassCopy)}
+          </AlertDescription>
         </Alert>
       ) : null}
 
@@ -726,7 +762,9 @@ export function TopicExamView({
             {allPassed ? t("topicExamPassedTitle") : t("quizPartPassedTitle")}
           </AlertTitle>
           <AlertDescription>
-            {allPassed ? t("topicExamPassedBody") : t("quizPartPassedBody")}
+            {allPassed
+              ? t("topicExamPassedBody")
+              : t("quizPartPassedBody", examPassCopy)}
           </AlertDescription>
         </Alert>
       ) : null}
@@ -814,11 +852,36 @@ export function TopicExamView({
             mixedSessionStarted &&
             partDraft &&
             partDraft.slots.length === orderedMixedQuiz.length
-              ? partDraft.slots.map((slot) => ({
-                  selected: slot.selected,
-                  answer: slot.answer,
-                  checked: slot.checked,
-                }))
+              ? partDraft.slots.map((slot) => {
+                  const assignments: Record<number, number> = {};
+                  if (slot.matchingAssignments) {
+                    for (const [key, value] of Object.entries(
+                      slot.matchingAssignments,
+                    )) {
+                      const leftIndex = Number.parseInt(key, 10);
+                      if (
+                        Number.isInteger(leftIndex) &&
+                        leftIndex >= 0 &&
+                        typeof value === "number" &&
+                        value >= 0
+                      ) {
+                        assignments[leftIndex] = value;
+                      }
+                    }
+                  }
+                  return {
+                    selected: slot.selected,
+                    answer: slot.answer,
+                    checked: slot.checked,
+                    matchingCorrect: slot.matchingCorrect,
+                    assignments:
+                      Object.keys(assignments).length > 0
+                        ? assignments
+                        : undefined,
+                    revealed: slot.matchingRevealed,
+                    graded: slot.matchingGraded,
+                  };
+                })
               : undefined
           }
           onSessionChange={handleMixedQuizSession}

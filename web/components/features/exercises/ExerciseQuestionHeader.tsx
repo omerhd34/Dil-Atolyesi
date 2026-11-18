@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import type { ExerciseHintFallbackKey } from "@/components/features/exercises/exerciseHintFallbacks";
+import { LessonBoldText } from "@/components/features/topics/LessonBoldText";
 import { cn } from "@/lib/utils";
 
 type ExerciseQuestionHeaderProps = {
@@ -36,6 +37,11 @@ export function ExerciseQuestionHeader({
 }: ExerciseQuestionHeaderProps) {
   const t = useTranslations("Exercises");
   const [open, setOpen] = useState(false);
+  const titleKey = typeof title === "string" ? title : null;
+
+  useEffect(() => {
+    setOpen(false);
+  }, [hint, number, titleKey, fallbackKey]);
 
   const hintText =
     hint?.trim() || (fallbackKey ? t(`hintFallback.${fallbackKey}`) : "");
@@ -118,7 +124,9 @@ export function ExerciseQuestionHeader({
             className="mt-0.5 size-5 shrink-0 text-orange-600 dark:text-orange-400"
             aria-hidden
           />
-          <p className="min-w-0 flex-1">{hintText}</p>
+          <div className="min-w-0 flex-1">
+            <LessonBoldText text={hintText} />
+          </div>
         </div>
       ) : null}
     </div>

@@ -109,6 +109,10 @@ function normalizeCrosswordCellInput(value: string): string {
     return "I";
   }
 
+  if (last === "'" || last === "'" || last === "ʼ") {
+    return "'";
+  }
+
   return "";
 }
 

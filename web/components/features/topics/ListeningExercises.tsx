@@ -894,32 +894,32 @@ export function ListeningExercises({
           nextVariant={current.checked ? "default" : "outline"}
           onPrevious={handlePrevious}
           onNext={handleNext}
+          leading={
+            canRestart ? (
+              <Button
+                type="button"
+                variant="outline"
+                className="gap-2"
+                onClick={() => {
+                  onRestart?.();
+                  resetAll();
+                }}
+              >
+                <RotateCcw className="size-4" aria-hidden />
+                {t("restart")}
+              </Button>
+            ) : null
+          }
           trailing={
-            <>
-              {canResetVerbBatch ? (
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={resetCurrentVerbBatch}
-                >
-                  {t("listeningVerbReset")}
-                </Button>
-              ) : null}
-              {canRestart ? (
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="gap-2"
-                  onClick={() => {
-                    onRestart?.();
-                    resetAll();
-                  }}
-                >
-                  <RotateCcw className="size-4" aria-hidden />
-                  {t("restart")}
-                </Button>
-              ) : null}
-            </>
+            canResetVerbBatch ? (
+              <Button
+                type="button"
+                variant="outline"
+                onClick={resetCurrentVerbBatch}
+              >
+                {t("listeningVerbReset")}
+              </Button>
+            ) : null
           }
         />
       </article>

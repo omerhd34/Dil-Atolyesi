@@ -2,20 +2,26 @@
 
 import { ListChecks, RotateCcw } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useEffect, useRef, type FormEvent } from "react";
+import { useCallback, useEffect, useRef, type FormEvent } from "react";
 import { ExerciseCheckButton } from "@/components/features/exercises/ExerciseCheckButton";
 import { ExerciseFinishedPanel } from "@/components/features/exercises/ExerciseFinishedPanel";
 import { ExerciseListenWordButton } from "@/components/features/exercises/ExerciseListenWordButton";
 import { ExerciseQuestionHeader } from "@/components/features/exercises/ExerciseQuestionHeader";
 import { InstantMultipleChoiceOptions } from "@/components/features/exercises/InstantMultipleChoiceOptions";
+import {
+  ListeningMatchingBlock,
+  type MatchingBlockSessionState,
+} from "@/components/features/listening/ListeningMatchingBlock";
 import { ExercisePercentBadge } from "@/components/features/topics/ExercisePercentBadge";
 import { ExerciseResultDialog } from "@/components/features/topics/ExerciseResultDialog";
 import { ExerciseStepNav } from "@/components/features/topics/ExerciseStepNav";
 import { Button } from "@/components/ui/Button";
 import type {
   FillBlankExercise,
+  MatchingExercise,
   TopicQuizExercise,
 } from "@/data/grammar/types";
+import type { ListeningMatchingQuestion } from "@/data/listenings/types";
 import { useExerciseNavigation } from "@/hooks/useExerciseNavigation";
 import {
   fillBlankSpeakText,
@@ -32,6 +38,10 @@ type MixedSlot = {
   selected: number | null;
   answer: string;
   checked: boolean;
+  matchingCorrect?: boolean;
+  assignments?: Record<number, number>;
+  revealed?: boolean;
+  graded?: boolean;
 };
 
 type TopicMixedQuizExercisesProps = {
@@ -52,7 +62,15 @@ type TopicMixedQuizExercisesProps = {
 };
 
 function createMixedSlot(): MixedSlot {
-  return { selected: null, answer: "", checked: false };
+  return {
+    selected: null,
+    answer: "",
+    checked: false,
+    matchingCorrect: false,
+    assignments: {},
+    revealed: false,
+    graded: false,
+  };
 }
 
 function normalizeAnswer(value: string) {
@@ -67,11 +85,24 @@ function isFillBlankCorrect(exercise: FillBlankExercise, value: string) {
   return accepted.includes(normalized);
 }
 
+function isChoiceExercise(
+  exercise: TopicQuizExercise,
+): exercise is TopicQuizExercise & {
+  type: "multiple_choice" | "true_false";
+  options: string[];
+  correctIndex: number;
+} {
+  return exercise.type === "multiple_choice" || exercise.type === "true_false";
+}
+
 function isSlotCorrect(exercise: TopicQuizExercise, slot: MixedSlot): boolean {
   if (!slot.checked) {
     return false;
   }
-  if (exercise.type === "multiple_choice") {
+  if (exercise.type === "matching") {
+    return slot.matchingCorrect === true;
+  }
+  if (isChoiceExercise(exercise)) {
     return slot.selected === exercise.correctIndex;
   }
   return isFillBlankCorrect(exercise, slot.answer);
@@ -88,6 +119,35 @@ function countCorrect(
     }
     return count;
   }, 0);
+}
+
+function matchingSessionFromSlot(
+  slot: MixedSlot,
+): MatchingBlockSessionState | undefined {
+  const hasProgress =
+    slot.revealed ||
+    slot.graded ||
+    (slot.assignments && Object.keys(slot.assignments).length > 0);
+  if (!hasProgress) {
+    return undefined;
+  }
+  return {
+    assignments: slot.assignments ?? {},
+    revealed: slot.revealed ?? false,
+    graded: slot.graded ?? false,
+  };
+}
+
+function toListeningQuestion(
+  exercise: MatchingExercise,
+  showHint: boolean,
+): ListeningMatchingQuestion {
+  return {
+    id: exercise.id,
+    prompt: exercise.prompt,
+    hint: showHint ? (exercise.hint ?? "") : "",
+    pairs: exercise.pairs,
+  };
 }
 
 export function TopicMixedQuizExercises({
@@ -140,6 +200,17 @@ export function TopicMixedQuizExercises({
     });
   }, [exercises, index, onSessionChange, slots]);
 
+  const syncMatchingState = useCallback(
+    (state: MatchingBlockSessionState) => {
+      updateCurrent({
+        assignments: state.assignments,
+        revealed: state.revealed,
+        graded: state.graded,
+      });
+    },
+    [updateCurrent],
+  );
+
   if (exercises.length === 0 || !current) {
     return <p className="page-subtitle mt-0">{t("noExamQuestions")}</p>;
   }
@@ -169,14 +240,95 @@ export function TopicMixedQuizExercises({
     );
   }
 
+  function handleNext() {
+    handleAdvance((answeredSlots) => {
+      onComplete?.({
+        correct: countCorrect(exercises, answeredSlots),
+        total: exercises.length,
+      });
+    });
+  }
+
+  if (exercise.type === "matching") {
+    const listeningQuestion = toListeningQuestion(exercise, showHint);
+    const matchingInitialSession = matchingSessionFromSlot(current);
+
+    return (
+      <div className="mx-auto max-w-3xl space-y-4">
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-sm text-brand-500 dark:text-brand-400">
+            {t("progress", { current: index + 1, total: exercises.length })}
+          </p>
+          {liveProgressPercent ? (
+            <ExercisePercentBadge percent={percent} />
+          ) : null}
+        </div>
+
+        <article className="dashboard-panel space-y-5 pb-5 sm:pb-6">
+          <ListeningMatchingBlock
+            key={`${exercise.id}-${index}`}
+            question={listeningQuestion}
+            titleVariant="prompt"
+            leftListen
+            showInQuestionRetry={false}
+            wrongMatchHint={t("matchWrongHint")}
+            initialSession={matchingInitialSession}
+            onSessionChange={syncMatchingState}
+            onGraded={(correctPairs, totalPairs) => {
+              updateCurrent({
+                checked: true,
+                matchingCorrect: correctPairs === totalPairs,
+                graded: true,
+              });
+              setResultOpen(true);
+            }}
+            navTrailing={
+              <ExerciseStepNav
+                canGoPrevious={canGoPrevious}
+                canGoNext={canGoNext && current.checked}
+                nextLabel={continueLabel}
+                nextVariant={current.checked ? "default" : "outline"}
+                onPrevious={handlePrevious}
+                onNext={handleNext}
+                leading={
+                  canRestart ? (
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="gap-2"
+                      onClick={() => {
+                        onRestart?.();
+                        resetSession();
+                      }}
+                    >
+                      <RotateCcw className="size-4" aria-hidden />
+                      {t("restart")}
+                    </Button>
+                  ) : null
+                }
+              />
+            }
+          />
+        </article>
+
+        <ExerciseResultDialog
+          open={resultOpen && current.checked}
+          variant={isCorrect ? "correct" : "incorrect"}
+          explanation={exercise.explanation}
+          onOpenChange={setResultOpen}
+          onContinue={handleNext}
+          continueLabel={continueLabel}
+        />
+      </div>
+    );
+  }
+
   const promptId = `${exercise.id}-prompt`;
   const hintFallbackKey =
-    exercise.type === "multiple_choice"
-      ? "topicMultipleChoice"
-      : "topicFillBlank";
+    exercise.type === "fill_blank" ? "topicFillBlank" : "topicMultipleChoice";
 
   function handleOptionSelect(optionIndex: number) {
-    if (current.checked || exercise.type !== "multiple_choice") {
+    if (current.checked || !isChoiceExercise(exercise)) {
       return;
     }
     updateCurrent({ selected: optionIndex });
@@ -198,15 +350,6 @@ export function TopicMixedQuizExercises({
     setResultOpen(true);
   }
 
-  function handleNext() {
-    handleAdvance((answered) => {
-      onComplete?.({
-        correct: countCorrect(exercises, answered),
-        total: exercises.length,
-      });
-    });
-  }
-
   function canSubmitCheck(): boolean {
     if (current.checked) {
       return false;
@@ -214,19 +357,23 @@ export function TopicMixedQuizExercises({
     if (exercise.type === "fill_blank") {
       return current.answer.trim() !== "";
     }
-    return current.selected !== null;
+    if (isChoiceExercise(exercise)) {
+      return current.selected !== null;
+    }
+    return false;
   }
 
-  const listenWord =
-    exercise.type === "multiple_choice"
-      ? multipleChoiceSpeakText(exercise)
-      : fillBlankSpeakText(exercise);
+  const listenWord = isChoiceExercise(exercise)
+    ? multipleChoiceSpeakText(exercise)
+    : exercise.type === "fill_blank"
+      ? fillBlankSpeakText(exercise)
+      : null;
 
   return (
     <div
       className={cn(
         "mx-auto space-y-4",
-        exercise.type === "multiple_choice" && exercise.options.length >= 6
+        isChoiceExercise(exercise) && exercise.options.length >= 6
           ? "max-w-3xl"
           : "max-w-2xl",
       )}
@@ -253,7 +400,7 @@ export function TopicMixedQuizExercises({
         />
 
         <form className="space-y-4" onSubmit={handleCheck}>
-          {exercise.type === "multiple_choice" ? (
+          {isChoiceExercise(exercise) ? (
             <InstantMultipleChoiceOptions
               options={exercise.options}
               correctIndex={exercise.correctIndex}
@@ -299,7 +446,7 @@ export function TopicMixedQuizExercises({
             nextVariant={current.checked ? "default" : "outline"}
             onPrevious={handlePrevious}
             onNext={handleNext}
-            trailing={
+            leading={
               canRestart ? (
                 <Button
                   type="button"
