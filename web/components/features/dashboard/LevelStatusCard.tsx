@@ -1,8 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { GraduationCap } from "lucide-react";
 import { useLevelStatus } from "@/hooks/useLevelStatus";
+import { DashboardStatIcon } from "@/components/features/dashboard/DashboardStatIcon";
 import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
 import { DashboardStatPanelHeader } from "@/components/features/dashboard/DashboardStatPanelHeader";
 import { DashboardStatProgressBar } from "@/components/features/dashboard/DashboardStatProgressBar";
@@ -27,7 +27,7 @@ export function LevelStatusCard() {
         }
       >
         <p className="dashboard-panel__label text-base">
-          <GraduationCap className="size-4" aria-hidden />
+          <DashboardStatIcon kind="levelStatus" />
           {t("levelStatus")}
         </p>
       </DashboardStatPanelHeader>

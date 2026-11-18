@@ -1,19 +1,26 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import type { LucideIcon } from "lucide-react";
 import {
-  BookA,
   BookOpen,
   ChevronRight,
   ClipboardCheck,
   Headphones,
-  Layers3,
   Mic,
   PencilLine,
   PenLine,
-  Play,
   SpellCheck2,
 } from "lucide-react";
+import {
+  DashboardActionIcon,
+  type DashboardActionKind,
+} from "@/components/features/dashboard/DashboardActionIcon";
+import { DashboardStatIcon } from "@/components/features/dashboard/DashboardStatIcon";
+import {
+  SidebarNavIcon,
+  type SidebarNavIconKind,
+} from "@/components/layout/app/SidebarNavIcon";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { useContinueActivities } from "@/hooks/useContinueActivity";
@@ -22,11 +29,18 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { resolveContinueActivityDisplay } from "@/lib/resolveContinueActivity";
 import type { ContinueActivity } from "@/lib/continueActivityStorage";
 
-function kindIcon(activity: ContinueActivity) {
+type ContinueActivityIcon =
+  | { type: "nav"; kind: SidebarNavIconKind }
+  | { type: "action"; kind: DashboardActionKind }
+  | { type: "lucide"; Icon: LucideIcon };
+
+function continueActivityIcon(
+  activity: ContinueActivity,
+): ContinueActivityIcon {
   switch (activity.kind) {
     case "vocabulary_quiz":
     case "topic_exam":
-      return ClipboardCheck;
+      return { type: "lucide", Icon: ClipboardCheck };
     case "vocabulary_exercises":
     case "topic_exercises":
     case "combined_exercise":
@@ -34,36 +48,37 @@ function kindIcon(activity: ContinueActivity) {
     case "listening_exercises":
     case "writing_exercises":
     case "speaking_exercises":
-      return PencilLine;
+      return { type: "lucide", Icon: PencilLine };
     case "vocabulary_category":
-      return Layers3;
+      return { type: "nav", kind: "vocabulary" };
     case "reading_text":
-      return BookOpen;
+      return { type: "lucide", Icon: BookOpen };
     case "listening_audio":
-      return Headphones;
+      return { type: "lucide", Icon: Headphones };
     case "writing_model":
-      return PenLine;
+      return { type: "lucide", Icon: PenLine };
     case "speaking_model":
-      return Mic;
+      return { type: "lucide", Icon: Mic };
     case "skill_hub":
       switch (activity.skill) {
         case "listening":
-          return Headphones;
+          return { type: "lucide", Icon: Headphones };
         case "writing":
-          return PenLine;
+          return { type: "lucide", Icon: PenLine };
         case "speaking":
-          return Mic;
+          return { type: "lucide", Icon: Mic };
         case "topics":
-          return SpellCheck2;
+          return { type: "lucide", Icon: SpellCheck2 };
         case "vocabulary":
-          return BookA;
+          return { type: "nav", kind: "vocabulary" };
         case "reading":
         default:
-          return BookOpen;
+          return { type: "lucide", Icon: BookOpen };
       }
     case "topic_lesson":
+      return { type: "action", kind: "subject" };
     default:
-      return BookOpen;
+      return { type: "lucide", Icon: BookOpen };
   }
 }
 
@@ -77,7 +92,7 @@ function ContinueActivityRow({
   labels: Parameters<typeof resolveContinueActivityDisplay>[1];
 }) {
   const display = resolveContinueActivityDisplay(activity, labels);
-  const Icon = kindIcon(activity);
+  const icon = continueActivityIcon(activity);
 
   return (
     <li>
@@ -95,7 +110,13 @@ function ContinueActivityRow({
           className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-(--glass-btn) text-brand-800 shadow-[inset_0_0_0_1px_var(--glass-line)] transition-colors group-hover:bg-(--glass-btn-hover) group-hover:text-sky-700 dark:text-brand-100 dark:group-hover:text-sky-200"
           aria-hidden
         >
-          <Icon className="size-4" strokeWidth={1.75} />
+          {icon.type === "nav" ? (
+            <SidebarNavIcon kind={icon.kind} />
+          ) : icon.type === "action" ? (
+            <DashboardActionIcon kind={icon.kind} />
+          ) : (
+            <icon.Icon className="size-4" strokeWidth={1.75} />
+          )}
         </span>
         <span className="min-w-0 flex-1">
           <span className="block truncate text-sm font-semibold text-brand-950 dark:text-brand-100">
@@ -151,7 +172,7 @@ export function QuickContinueCard() {
   return (
     <article className="dashboard-panel dashboard-panel--stat">
       <p className="dashboard-panel__label text-base">
-        <Play className="size-4" aria-hidden />
+        <DashboardStatIcon kind="quickContinue" />
         {t("quickContinue")}
       </p>
 

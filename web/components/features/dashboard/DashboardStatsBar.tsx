@@ -1,7 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { BookOpen, ClipboardCheck, Timer } from "lucide-react";
+import { BookOpen, ClipboardCheck } from "lucide-react";
+import { DashboardStatIcon } from "@/components/features/dashboard/DashboardStatIcon";
 import {
   useVocabularyLearnQuotaQuery,
   useVocabularyQuizQuery,
@@ -56,7 +57,7 @@ export function DashboardStatsBar() {
       <article className="dashboard-panel dashboard-panel--stat md:col-span-2 xl:col-span-1">
         <DashboardStatPanelHeader>
           <p className="dashboard-panel__label text-base">
-            <Timer className="size-4" aria-hidden />
+            <DashboardStatIcon kind="wordTimer" />
             {t("wordTimer")}
           </p>
         </DashboardStatPanelHeader>

@@ -2,7 +2,8 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { ImagePlus, Trash2, UserRound } from "lucide-react";
+import { ImagePlus, UserRound } from "lucide-react";
+import { TrashIcon } from "@/components/ui/TrashIcon";
 import { ProfileAvatar } from "@/components/features/profile/ProfileAvatar";
 import { PhoneField } from "@/components/features/settings/PhoneField";
 import { SettingsSection } from "@/components/features/settings/SettingsSection";
@@ -292,7 +293,7 @@ export function ProfileSetting() {
                     setPendingAvatar({ type: "remove" });
                   }}
                 >
-                  <Trash2 aria-hidden />
+                  <TrashIcon className="size-3.5" />
                   {t("profilePhotoRemove")}
                 </Button>
               ) : null}
