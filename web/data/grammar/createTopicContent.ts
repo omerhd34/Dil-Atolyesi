@@ -329,10 +329,28 @@ function headingToDashboardTopic(heading: GrammarHeading): DashboardTopic {
   };
 }
 
+function titleExLooksLikeSentences(titleEx: string): boolean {
+  return /[.!?]/.test(titleEx) && /\s/.test(titleEx);
+}
+
 function examplesFromTitleEx(titleEx: string): TopicLessonExample[] {
   const trimmed = titleEx.trim();
   if (!trimmed) {
     return [];
+  }
+
+  if (!titleExLooksLikeSentences(trimmed)) {
+    const tokens = trimmed
+      .split(/\s*,\s*/)
+      .map((part) => part.trim())
+      .filter(Boolean);
+    if (tokens.length > 0) {
+      return tokens.map((en) => ({
+        en,
+        tr: "Bu derste işlenir.",
+        note: "grammarHeading",
+      }));
+    }
   }
 
   const segments = trimmed
@@ -351,6 +369,22 @@ function examplesFromTitleEx(titleEx: string): TopicLessonExample[] {
     tr: "Bağlamda incele.",
     note: "grammarHeading",
   }));
+}
+
+function examplesBlockMeta(titleEx: string): {
+  examplesTitle: string;
+  exampleHeaders: { en: string; tr: string };
+} {
+  if (titleEx.trim() && !titleExLooksLikeSentences(titleEx)) {
+    return {
+      examplesTitle: "İşlenecek kalıplar",
+      exampleHeaders: { en: "İngilizce", tr: "Açıklama" },
+    };
+  }
+  return {
+    examplesTitle: "Örnek cümleler",
+    exampleHeaders: { en: "İngilizce", tr: "Türkçe" },
+  };
 }
 
 export function createTopicContentFromHeading(
@@ -376,6 +410,8 @@ export function createTopicContentFromHeading(
     );
   }
 
+  const exampleMeta = examplesBlockMeta(heading.titleEx);
+
   return {
     ...base,
     topicId: heading.id,
@@ -385,15 +421,15 @@ export function createTopicContentFromHeading(
       parts: [
         {
           id: `${heading.id}-1`,
-          title: heading.title,
-          titleEn: heading.titleEng,
+          title: heading.title.trim(),
+          titleEn: heading.titleEng.trim(),
           paragraphs: introParagraphs,
           ...(examples.length > 0
             ? {
-                examplesTitle: "Örnek cümleler",
+                examplesTitle: exampleMeta.examplesTitle,
                 examplesLayout: "columns" as const,
                 examplesPerRow: 2 as const,
-                exampleHeaders: { en: "İngilizce", tr: "Türkçe" },
+                exampleHeaders: exampleMeta.exampleHeaders,
                 examples,
               }
             : {}),
@@ -408,7 +444,7 @@ export function formatTopicContentModule(
   content: TopicContent,
 ): string {
   const exportName = `topicContent${topicId}`;
-  const serialized = tsLiteral(content, 2);
+  const serialized = tsLiteral(content, 0);
   return [
     `import type { TopicContent } from "@/data/grammar/types";`,
     "",

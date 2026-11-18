@@ -28,1054 +28,1876 @@ export const grammarHeadings: Record<CefrLevel, GrammarHeading[]> = {
       id: "1",
       level: "A1",
       title: "Alfabe & Ses Bilgisi",
-      titleEng: "Alphabet & Basic Phonics",
-      titleEx: "A, B, C — C is /k/ in cat and /s/ in city.",
+      titleEng: "Alphabet & Phonetics",
+      titleEx:
+        "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z",
       intro:
         "Doğru okuma ve heceleme İngilizce yolculuğunun ilk adımıdır. Bu derste **26 harflik** alfabeyi, harf adlarını ve kelime içindeki **ses değerlerini** öğreneceksin. **Ünlü** ve **ünsüz** ayrımı, **\\C\\**, **\\G\\**, **\\Y\\** ile değişen sesler ve **\\sh, ch, th\\** ikilileri dersin omurgasıdır. Kısa ve uzun ünlü ipuçlarıyla yeni kelimeleri daha güvenle seslendireceksin.",
     },
     {
       id: "2",
       level: "A1",
-      title: "Temel Cümle Yapısı",
-      titleEng: "Basic Sentence Structure",
-      titleEx: "The dog runs. We eat pizza. She reads books.",
+      title: "Özne Zamirleri",
+      titleEng: "Subject Pronouns",
+      titleEx: "I, You, He, She, It, We, They",
       intro:
-        "İngilizce cümlede kelimelerin yeri anlamı şekillendirir. Burada **özne**, **fiil** ve **nesne** ile standart **\\SVO\\** sırasını işleyeceksin. **Olmak** ve **eylem** cümleleri arasındaki farkı netleştirip temel **olumlu**, **olumsuz** ve **soru** iskeletlerini örneklerle pekiştireceksin. Hedef: günlük olayları kısa ve doğru sırayla kurmak.",
+        "Özne zamirleri cümlenin konusunu gösterir. İngilizcede **\\I\\**, **\\you\\**, **\\he\\**, **\\she\\**, **\\it\\**, **\\we\\** ve **\\they\\** olmak üzere yedidir; karttaki kalıpların tamamını bu derste işlersin. **\\I\\** her zaman büyük harfle yazılır; **\\you\\** tekil ve çoğul için ortaktır. **\\He\\**, **\\she\\** ve **\\it\\** kişi ya da nesne ayrımını netleştirir.",
     },
     {
       id: "3",
       level: "A1",
-      title: "Özne Zamirleri & 'To Be' Fiili",
-      titleEng: "Subject Pronouns & 'To Be'",
-      titleEx: "I am a developer. She is happy. They are here.",
+      title: "To Be – Olumlu, Olumsuz ve Soru Yapıları",
+      titleEng: "To Be – Affirmative, Negative, and Interrogative Forms",
+      titleEx: "Am, Is, Are",
       intro:
-        "Tanışma ve kısa tanımlama cümleleri bu derste. **\\I, you, he, she, it, we, they\\** özne zamirleri ile **\\to be\\** fiilinin **\\am, is, are\\** biçimlerini öğreneceksin. Olumlu, olumsuz ve soru kalıplarının yanında **\\I'm, she's, aren't\\** gibi günlük kısaltmalar var. Kendini, konumunu ve duygunu tek cümlede söylemek bu konunun sonucu.",
+        "**\\To be\\** cümlede durum, kimlik ve konum bildirir. **\\Am\\** yalnızca **\\I\\** ile; **\\is\\** tekil öznelerle; **\\are\\** çoğul öznelerle gelir. Olumsuz **\\am not / isn't / aren't\\** ve soru **\\Am I / Is she / Are they\\** yapılarını aynı derste kurup kısa cevaplarla pekiştirirsin.",
     },
     {
       id: "4",
       level: "A1",
-      title: "Tanımlıklar & Çoğul İsimler",
-      titleEng: "Articles & Plural Nouns",
-      titleEx: "a book, an apple, the sun, two dogs, three cities",
+      title: "İyelik Sıfatları",
+      titleEng: "Possessive Adjectives",
+      titleEx: "My, Your, His, Her, Its, Our, Their",
       intro:
-        "**\\a\\**, **\\an\\** ve **\\the\\** seçimi cümlenin anlamını değiştirir. Bu derste belirsiz ve belirli tanımlıkların temel kuralını ses uyumuyla birlikte ele alıyoruz. Çoğulda **\\-s\\**, **\\-es\\**, **\\-ies\\** ile **\\children, people, men\\** gibi düzensiz formlar da var. Tekil ve çoğul isimleri doğru artikülle kullanmayı hedefliyoruz.",
+        "İyelik sıfatları ismin hemen önünde durur ve kime ait olduğunu söyler. **\\My\\**, **\\Your\\**, **\\His\\**, **\\Her\\** gibi kalıpların yanı sıra **\\Its\\**, **\\Our\\**, **\\Their\\** özne zamirine göre değişir; isimle birlikte tek bir öbek oluşturur. Kendini ve çevreni tanıtırken **\\my book\\**, **\\their house\\** gibi cümleler kurarsın.",
     },
     {
       id: "5",
       level: "A1",
-      title: "İşaret Sıfatları & Zamirleri",
-      titleEng: "Demonstratives (This, That, These, Those)",
-      titleEx: "This is my laptop. Those are her keys.",
+      title: "İyelik Zamirleri",
+      titleEng: "Possessive Pronouns",
+      titleEx: "Mine, Yours, His, Hers, Ours, Theirs",
       intro:
-        "Yakın ve uzak nesneleri İngilizcede **\\this, that, these, those\\** ile gösterirsin. Kelimeler hem işaret sıfatı hem işaret zamiri olarak çalışır. Mesafe ve tekil–çoğul seçimini **\\to be\\** ile birleştirmeyi öğreneceksin. Alışveriş, tanıtma ve günlük göstermede bu dört kalıp sık kullanılır.",
+        "İyelik zamirleri isim yerine geçer; cümlede yalnız başına kullanılır. **\\Mine\\**, **\\Yours\\**, **\\His\\**, **\\Hers\\**, **\\Ours\\**, **\\Theirs\\** kalıpları **\\This is mine\\**, **\\Those are theirs\\** gibi cevaplarda görülür. İyelik sıfatlarıyla karıştırmamak için sona gelip gelmediğine dikkat edersin.",
     },
     {
       id: "6",
       level: "A1",
-      title: "Sayılar, Tarih & Saat",
-      titleEng: "Numbers, Dates & Time",
-      titleEx: "It's half past three on Monday, 15 May.",
+      title: "Tanımlıklar",
+      titleEng: "Articles",
+      titleEx: "A, An, The",
       intro:
-        "Sayı, tarih ve saat günlük iletişimin temelidir. **Temel sayılar** ve **\\first, second, third\\** gibi sıra sayıları; **\\on Monday, in May\\** ile **\\o'clock, half past\\** kalıpları bu derste. ABD ve İngiltere tarih yazımı ile **\\a.m.\\**, **\\p.m.\\** ve 24 saat ifadesinin özünü de göreceksin. Randevu ve yaş sorularına net cevap vermek hedef.",
+        "İngilizcede **\\a\\**, **\\an\\** ve **\\the\\** en sık kullanılan tanımlıklardır. **\\A\\** ve **\\an\\** belirsiz tekil isimlerde, konu ilk kez söz konusu ediliyorsa kullanılır. **\\The\\** dinleyicinin veya okuyucunun bildiği, ya da bağlamda netleşmiş isimlerin önünde yer alır. **\\An\\**, ünlü sesle başlayan kelimelerde **\\a\\** yerine tercih edilir. Günlük tanıtım ve liste cümlelerinde doğru tanımlığı seçmeyi öğrenirsin.",
     },
     {
       id: "7",
       level: "A1",
-      title: "İyelik Sıfatları, Zamirleri & -'s Eki",
-      titleEng: "Possessives & Possessive 's",
-      titleEx: "My car is blue. That is Ahmet's phone. It is mine.",
+      title: "Tekil & Çoğul İsimler",
+      titleEng: "Singular & Plural Nouns",
+      titleEx: "Singular, Plural, -s, -es, -ies, Irregular Plurals",
       intro:
-        "Kime ait olduğunu söylemek için birkaç yapı vardır. **\\my, your, his\\** gibi iyelik sıfatları ile **\\mine, yours, hers\\** zamirlerini ayırt edeceksin. Özel ve çoğul isimlerde **-'s** ve **-s'** yazım kuralları da bu konuda. Karıştırmadan sahiplik kurmak derin hedef.",
+        "İngilizcede çoğu isim çoğulda **\\-s\\** veya **\\-es\\** alır; **\\-y\\** sonu bazen **\\-ies\\** olur. Düzensiz çoğullar ezberlenir. Tekil–çoğul seçimi **\\there is/are\\**, miktar belirteçleri ve fiil uyumu için zorunludur.",
     },
     {
       id: "8",
       level: "A1",
-      title: "Sahiplik Bildirme: Have got / Has got",
-      titleEng: "Possession: Have got / Has got",
-      titleEx: "I have got two sisters. He hasn't got a car.",
+      title: "Sahiplik Bildirme",
+      titleEng: "Possession",
+      titleEx: "Have got / Has got",
       intro:
         "**\\have got\\** ve **\\has got\\** İngiliz İngilizcesinde sık duyulan sahiplik kalıplarıdır. **\\I, we, they\\** ile **\\have got\\**; **\\he, she, it\\** ile **\\has got\\** kuralını öğreneceksin. Olumsuz **\\haven't got\\**, soru ve kısa cevaplar da aynı derste. Aile, eşya ve fiziksel özellik anlatımında doğrudan kullanırsın.",
     },
     {
       id: "9",
       level: "A1",
-      title: "Temel Sıfatlar & Sıfat Sırası",
-      titleEng: "Basic Adjectives & Adjective Order",
-      titleEx: "a small blue Italian car. She is very happy.",
-      intro:
-        "Sıfatlar isimleri ve **\\to be\\** sonrasındaki tamamlayıcıları zenginleştirir. Temel **\\adjectives\\**, **\\-er / more\\** ve **\\the -est / the most\\** dereceleri bu derste. Birden fazla sıfat yan yana gelince **\\adjective order\\** kuralına uyarsın. İnsan ve nesneleri kısa, doğal tanımlarla anlatmak hedef.",
-    },
-    {
-      id: "10",
-      level: "A1",
-      title: "Zaman & Yer Edatları",
-      titleEng: "Prepositions of Time & Place",
-      titleEx: "at 5 o'clock, in Istanbul, on Monday, under the table",
-      intro:
-        "**\\at, in, on\\** hem zaman hem yer için temel edatlardır. Saat, gün, ay ve şehir örnekleriyle hangi bağlamda hangisini seçeceğini öğreneceksin. **\\under, next to, between\\** ve benzeri edatlarla konum tarifi de var. Yanlış edat seçimini bu derste sadeleştiriyoruz.",
-    },
-    {
-      id: "11",
-      level: "A1",
-      title: "Sayılabilen/Sayılamayan İsimler & Miktar Belirteçleri",
-      titleEng: "Countable / Uncountable & Quantifiers",
-      titleEx: "some water, any apples, many books, a lot of time",
-      intro:
-        "Sayılabilen ve sayılamayan isimler farklı miktar kelimeleri ister. **\\water, money, time\\** gibi tekil isimler ile **\\book, apple\\** gibi çoğullaşanlar ayrılır. **\\some, any, many, much, a lot of\\** seçimini olumlu, olumsuz ve soruya göre öğreneceksin. Market ve restoran diyaloglarında doğrudan işine yarar.",
-    },
-    {
-      id: "12",
-      level: "A1",
-      title: "How much / How many",
-      titleEng: "How much / How many",
-      titleEx: "How much water do you need? How many chairs are there?",
-      intro:
-        "Miktar sorusu isim türüne bağlıdır: sayılamayan için **\\How much\\**, sayılabilir çoğul için **\\How many\\**. Cevaplarda **\\some\\**, **\\a lot of\\**, **\\a little\\**, **\\a few\\** sık gelir. **\\There is\\** ve **\\There are\\** ile birlikte market ve restoran diyaloglarında pratik edeceksin.",
-    },
-    {
-      id: "13",
-      level: "A1",
-      title: "Varlık Bildirme: There is / There are",
-      titleEng: "There is / There are",
-      titleEx: "There is a cat on the sofa. Are there any chairs?",
+      title: "Varlık Bildirme",
+      titleEng: "Declaration of Assets",
+      titleEx: "There is / There are",
       intro:
         "Bir yerde ne olduğunu **\\There is\\** ve **\\There are\\** ile söylersin. Tekil ve çoğul isim seçimi fiili belirler. Olumsuz **\\isn't / aren't\\**, soru **\\Is there / Are there\\** ve kısa cevaplar aynı pakette. Oda, şehir veya masa üstü tarifinde doğal kalıp budur.",
     },
     {
+      id: "10",
+      level: "A1",
+      title: "Sayılabilen & Sayılamayan İsimler",
+      titleEng: "Countable & Uncountable Nouns",
+      titleEx: "Countable Nouns, Uncountable Nouns, A, An, Much, Many",
+      intro:
+        "Sayılabilen isimler sayılabilir ve **\\a/an\\** alır; sayılamayanlar genelde ölçüsüz kalır. **\\Countable Nouns\\**, **\\Uncountable Nouns\\**, **\\A\\**, **\\An\\**, **\\Much\\**, **\\Many\\** ayrımı **\\much/many\\**, **\\a few/a little\\** ve tanımlık seçimini belirler. Alışveriş ve yemek listelerinde doğru isim türünü seçersin.",
+    },
+    {
+      id: "11",
+      level: "A1",
+      title: "Miktar Belirteçleri",
+      titleEng: "Quantifiers",
+      titleEx: "Some, Any, Much, Many, A Lot Of, Lots Of",
+      intro:
+        "**\\Some\\** olumlu cümlelerde ve tekliflerde; **\\any\\** soru ve olumsuzda sık görülür. **\\Much\\** sayılamayan, **\\many\\** sayılabilen isimlerle kullanılır. **\\A lot of\\** ve **\\lots of\\** her iki grup için de doğaldır; isim türünü seçerek miktar anlatırsın.",
+    },
+    {
+      id: "12",
+      level: "A1",
+      title: "Yer Edatları",
+      titleEng: "Prepositions of Place",
+      titleEx: "In, On, At, Under, Behind, Between, Next To",
+      intro:
+        "Yer edatları ismin nerede olduğunu gösterir. **\\In\\**, **\\On\\**, **\\At\\**, **\\Under\\** gibi kalıpların yanı sıra **\\Behind\\**, **\\Between\\**, **\\Next To\\** kalıpları oda tarifi, adres ve yön bulma cümlelerinde kullanılır. **\\In\\** kapalı alan, **\\on\\** yüzey, **\\at\\** belirli nokta gibi ayrımları örneklerle ayırırsın.",
+    },
+    {
+      id: "13",
+      level: "A1",
+      title: "Zaman Edatları",
+      titleEng: "Prepositions of Time",
+      titleEx: "In, On, At, For, Since, Until, From ... To",
+      intro:
+        "Zaman edatları gün, saat, dönem ve süre ifade eder. **\\In\\**, **\\On\\**, **\\At\\**, **\\For\\** gibi kalıpların yanı sıra **\\Since\\**, **\\Until\\**, **\\From ... To\\** yapıları randevu, rutin ve geçmiş–gelecek anlatımında sık çıkar. **\\In\\** ay ve yıl, **\\on\\** gün, **\\at\\** saat eşleşmesini pekiştirirsin.",
+    },
+    {
       id: "14",
       level: "A1",
-      title: "Geniş Zaman & Sıklık Zarfları",
-      titleEng: "Present Simple & Adverbs of Frequency",
-      titleEx: "I work every day. She always drinks coffee in the morning.",
+      title: "Emir Cümleleri",
+      titleEng: "Imperatives",
+      titleEx: "Open The Door, Don't Run, Let's Go, Please",
       intro:
-        "Alışkanlık ve genel gerçekler **\\Present Simple\\** ile anlatılır. **\\always, usually, often\\** gibi sıklık zarflarının yeri ve **\\he, she, it\\** için **\\-s / -es\\** ekleri bu derste. Olumsuz ve soruda **\\do / does\\** yardımcı fiilleri de var. Günlük rutinini uçtan uca kurmak hedef.",
+        "Emir cümlelerinde özne genelde gizlidir; fiil veya **\\let's\\** doğrudan başlar. **\\Open The Door\\**, **\\Don't Run\\**, **\\Let's Go\\**, **\\Please\\** örnekleri yönerge, rica ve uyarı anlatır. **\\Don't\\** ile olumsuz emir kurmayı günlük iletişimde kullanırsın.",
     },
     {
       id: "15",
       level: "A1",
-      title: "Evet-Hayır Soruları & Kısa Cevaplar",
-      titleEng: "Yes/No Questions & Short Answers",
-      titleEx: "Do you like coffee? — Yes, I do. / No, I don't.",
+      title: "Kipler: Yapabilmek & İzin",
+      titleEng: "Modals: To be able to & Permission",
+      titleEx: "Can / Can't",
       intro:
-        "Evet–hayır soruları günlük diyalogun temelidir. **\\to be\\**, **\\have got\\**, **\\can\\** ve **\\Present Simple\\** ile kurulan **\\yes/no questions\\** yapısını öğreneceksin. Yardımcı fiil öznenin önüne geçer; **\\Yes, she is.\\** ve **\\No, he can't.\\** gibi kısa cevaplar konuşmayı hızlandırır.",
+        "**\\Can\\** yetenek ve izin sorar; **\\can't\\** yasak veya imkânsızlık bildirir. **\\Can I ...?\\** ile izin iste, **\\I can swim\\** ile yeteneğini anlat. Kısa cevaplarda **\\Yes, you can\\** veya **\\No, you can't\\** yeterlidir.",
     },
     {
       id: "16",
       level: "A1",
-      title: "Temel Soru Kelimeleri",
-      titleEng: "Basic Question Words (Wh- Questions)",
-      titleEx: "What is this? Who is that? Where are you from?",
+      title: "Geniş Zaman",
+      titleEng: "Present Simple",
+      titleEx: "Present Simple, Do, Does, V1, Always, Usually",
       intro:
-        "**Wh- soruları** bilgi toplarken en çok kullandığın kalıplardır. Bu derste **\\What, Who, Where, When, Why, How, Which\\** ve **\\Whose\\** kelimelerinin ne sorduğunu netleştirirsin. Soru kelimesinden sonra yardımcı fiil ve öznenin doğru sırasını kurarak eksiksiz sorular kurabilirsin.",
+        "Geniş zaman alışkanlık, genel gerçek ve sabit program anlatır. **\\Present Simple\\**, **\\Do\\**, **\\Does\\**, **\\V1\\**, **\\Always\\**, **\\Usually\\** ile olumlu cümlede yardımcı **\\do/does\\** soru ve olumsuzda devreye girer. Sıklık zarflarının cümledeki yeri bu zamanla birlikte öğrenilir.",
     },
     {
       id: "17",
       level: "A1",
-      title: "Emir Kipleri & Nesne Zamirleri",
-      titleEng: "Imperatives & Object Pronouns",
-      titleEx: "Listen to me. Open your book. Call him later.",
+      title: "Sıklık Zarfları",
+      titleEng: "Adverbs of Frequency",
+      titleEx: "Always, Usually, Often, Sometimes, Rarely, Never",
       intro:
-        "Emir cümleleri talimat, uyarı ve kibar rica için kısa ve etkilidir. Olumlu emirde fiil yalın başlar; olumsuzda **\\Don't\\** kullanılır. **\\Please\\** ve **\\Let's\\** ile tonu yumuşatır; **\\me, you, him, her, it, us, them\\** nesne zamirlerini fiil veya edattan sonra doğru yere koyarsın.",
+        "Sıklık zarfları eylemin ne kadar tekrarlandığını gösterir. **\\Always\\**, **\\Usually\\**, **\\Often\\**, **\\Sometimes\\**, **\\Rarely\\**, **\\Never\\** geniş zaman cümlelerinde fiilden önce veya **\\to be\\** sonrasında yer alır. **\\Never\\** ve **\\always\\** gibi uç zarfların konumu pratikte önemlidir.",
     },
     {
       id: "18",
       level: "A1",
-      title: "Şimdiki Zaman",
-      titleEng: "Present Continuous",
-      titleEx: "She is reading a book right now. We are learning English.",
+      title: "Temel Soru Kelimeleri",
+      titleEng: "Basic Question Words",
+      titleEx: "What, Who, Where, When, Why, How, Which, Whose",
       intro:
-        "**\\Present Continuous\\** konuştuğun anda veya geçici süreçte devam eden işleri anlatır. Kalıp **\\am, is, are\\** artı **\\-ing\\** fiilidir. **\\Now, right now, at the moment\\** gibi zaman ifadeleri ve geniş zamanla farkı bu derste netleşir.",
+        "Soru kelimeleri bilgi türünü seçer: **\\What\\** nesne veya iş; **\\Who\\** kişi; **\\Where\\** yer; **\\When\\** zaman; **\\Why\\** sebep; **\\How\\** yöntem. **\\Which\\** sınırlı seçenek, **\\Whose\\** sahiplik sorar. Soru cümlesinde **\\do / does\\** veya **\\am, is, are\\** yerleşimini de görürsün.",
     },
     {
       id: "19",
       level: "A1",
-      title: "Kipler: Yapabilmek & İzin (Can / Can't)",
-      titleEng: "Modals: Can / Can't",
-      titleEx: "I can swim well. Can I sit here?",
+      title: "Nesne Zamirleri",
+      titleEng: "Object Pronouns",
+      titleEx: "Me, You, Him, Her, It, Us, Them",
       intro:
-        "**\\Can\\** ve **\\can't\\** yetenek, olasılık, izin ve nazik rica bildirir. Tüm öznelerde aynı kalır; ardından fiilin yalın hali gelir. **\\I can swim.\\** **\\Can I sit here?\\** gibi günlük kalıpları güvenle kullanırsın.",
+        "Nesne zamirleri eylemin geçtiği kişi veya nesneyi isim yerine gösterir. **\\Me\\**, **\\You\\**, **\\Him\\**, **\\Her\\** gibi kalıpların yanı sıra **\\It\\**, **\\Us\\**, **\\Them\\** yedi kalıbın tamamı özne zamirleriyle eşleşir. **\\I see him\\**, **\\She calls us\\** gibi cümlelerde doğru nesne zamirini seçersin.",
     },
     {
       id: "20",
       level: "A1",
-      title: "Would like: Sipariş & Rica",
-      titleEng: "Would like: Orders & Requests",
-      titleEx: "I'd like a coffee, please. Would you like some water?",
+      title: "Sıfatlar",
+      titleEng: "Adjectives",
+      titleEx: "Big, Small, Happy, Old, New, Adjective Order",
       intro:
-        "**\\Would like\\**, **\\want\\**'a göre daha kibar istek ve teklif içindir. **\\I'd like a coffee.\\** ile sipariş verir; **\\Would you like some tea?\\** ile karşı tarafa seçenek sunarsın. Sayılabilir ve sayılamayan isimlerle doğru miktar ifadesini eşleştirirsin.",
+        "Sıfatlar ismi niteleyerek boyut, duygu veya kalite ekler. **\\Big\\**, **\\Small\\**, **\\Happy\\**, **\\Old\\**, **\\New\\**, **\\Adjective Order\\** ile tanıma ve karşılaştırma cümleleri kurarsın. Birden fazla sıfatın sırası ileri seviyede detaylanır; A1'de temel **\\big, happy, new\\** yeterlidir.",
     },
     {
       id: "21",
       level: "A1",
-      title: "Temel Bağlaçlar",
-      titleEng: "Basic Conjunctions (and, but, or, because, so)",
-      titleEx: "I stayed home because it was cold, so I watched a film.",
+      title: "Zarflar",
+      titleEng: "Adverbs",
+      titleEx: "Slowly, Quickly, Well, Badly, Adverbs",
       intro:
-        "Kısa cümleleri bağlaçlarla birleştirince anlatım daha akıcı olur. **\\And\\** ekleme, **\\but\\** zıtlık, **\\or\\** seçenek, **\\because\\** sebep, **\\so\\** sonuç bildirir. Virgül ve anlam ilişkisini doğru kurarak kendi hikayeni tek parçada anlatabilirsin.",
+        "Zarflar fiili, sıfatı veya başka zarfı niteler; çoğu **\\-ly\\** ile türetilir. **\\Slowly\\**, **\\Quickly\\**, **\\Well\\**, **\\Badly\\**, **\\Adverbs\\** eylemin nasıl yapıldığını anlatır. **\\Well\\** ve **\\badly\\** düzensiz biçimleriyle ayrıca ezberlenir.",
+    },
+    {
+      id: "22",
+      level: "A1",
+      title: "İyelik Eki",
+      titleEng: "Possessive's",
+      titleEx: "John's Car, Mary's Book, Possessive 's",
+      intro:
+        "İngilizcede **\\'s\\** eki kişi veya canlı isimlere eklenerek sahiplik kurar. **\\John's Car\\**, **\\Mary's Book\\**, **\\Possessive 's\\** örnekleri mülk ve yakınlık bildirir. Türkçedeki **-in/-nın** yapısına denk düşen kısa kalıplar üretirsin.",
+    },
+    {
+      id: "23",
+      level: "A1",
+      title: "Temel Bağlaçlar",
+      titleEng: "Basic Conjunctions",
+      titleEx: "And, But, Or, Because",
+      intro:
+        "Bağlaçlar iki fikri tek cümlede birleştirir. **\\And\\**, **\\But\\**, **\\Or\\**, **\\Because\\** ekleme, zıtlık, seçenek ve sebep ilişkisi kurar. **\\Because\\** ile nedeni sonuç cümlesine bağlamayı hedeflersin.",
+    },
+    {
+      id: "24",
+      level: "A1",
+      title: "İstek Bildirme",
+      titleEng: "Expressing Wishes",
+      titleEx: "Would Like",
+      intro:
+        "**\\Would like\\** kibar istek ve tercih bildirir; **\\want\\**ten daha yumuşaktır. Menüden seçim, davet ve plan ifadesinde **\\I'd like...\\** kalıbını kullanırsın.",
+    },
+    {
+      id: "25",
+      level: "A1",
+      title: "Temel Cümle Yapısı",
+      titleEng: "Basic Sentence Structure",
+      titleEx: "Subject, Verb, Object, SVO, Word Order",
+      intro:
+        "İngilizce temel cümle dizimi çoğunlukla **özne + fiil + nesne** şeklindedir. **\\Subject\\**, **\\Verb\\**, **\\Object\\**, **\\SVO\\**, **\\Word Order\\** öğelerinin yeri soru cümlesinde değişir. İlk cümlelerini bu iskelet üzerine kurarsın.",
+    },
+    {
+      id: "26",
+      level: "A1",
+      title: "Fiillerin Temel Biçimleri",
+      titleEng: "Basic Verb Forms",
+      titleEx: "Base Form, Past Simple, Past Participle, V1, V2, V3",
+      intro:
+        "Fiillerin **\\V1\\** (yalın), **\\V2\\** (geçmiş) ve **\\V3\\** (participle) biçimleri zaman ve edilgen için gereklidir. Düzenli fiillerde **\\-ed\\**, düzensizler listeden ezberlenir.",
     },
   ],
   A2: [
     {
-      id: "22",
-      level: "A2",
-      title: "Di'li Geçmiş Zaman (Was/Were & Fiiller)",
-      titleEng: "Past Simple (To Be & Regular/Irregular Verbs)",
-      titleEx: "We visited London last year. She was tired yesterday.",
-      intro:
-        "**\\Past Simple\\** bitmiş geçmiş olayları anlatır. İsim cümlelerinde **\\was, were\\**; eylem cümlelerinde **\\-ed\\** veya düzensiz **\\V2\\** kullanılır. Soru ve olumsuzda **\\did, didn't\\** gelir; asıl fiil yalın kalır. **\\Yesterday, last week, two days ago\\** gibi ifadeler zamanı netleştirir.",
-    },
-    {
-      id: "23",
-      level: "A2",
-      title: "Geçmişte Süreklilik Zamanı",
-      titleEng: "Past Continuous",
-      titleEx: "It was raining at 8 PM when I arrived home.",
-      intro:
-        "**\\Past Continuous\\**, geçmişte belli bir anda süren eylemi **\\was, were\\** artı **\\-ing\\** ile kurar. **\\When\\** ani olay, **\\while\\** uzun süren arka plan için kullanılır. Geçmiş hikayelerde atmosfer ve kesilen eylem bir arada akıcı anlatılır.",
-    },
-    {
-      id: "24",
-      level: "A2",
-      title: "Durum Zarfları",
-      titleEng: "Adverbs of Manner",
-      titleEx: "She speaks slowly. He drives carefully.",
-      intro:
-        "Durum zarfları eylemin **nasıl** yapıldığını söyler. Çoğu sıfattan **\\-ly\\** ile türetilir: **\\quick\\** kelimesinden **\\quickly\\**. **\\Good\\** sıfat, **\\well\\** zarf olarak kullanılır. Zarf fiilden önce, nesneden sonra veya cümle sonunda konumlanabilir.",
-    },
-    {
-      id: "25",
-      level: "A2",
-      title: "Geniş Zaman vs. Şimdiki Zaman & Durum Fiilleri",
-      titleEng: "Present Simple vs. Continuous & Stative Verbs",
-      titleEx: "I work every day. She is cooking now. I know him.",
-      intro:
-        "Rutin ve genel gerçekler için **\\Present Simple\\**, şu an devam eden işler için **\\Present Continuous\\** seçilir. **\\Know, like, believe, want\\** gibi durum fiilleri genelde sürekli zaman almaz. **\\Every day\\** ile **\\now\\** gibi zaman ipuçları doğru seçimi kolaylaştırır.",
-    },
-    {
-      id: "26",
-      level: "A2",
-      title: "Karşılaştırma & En Üstünlük Dereceleri",
-      titleEng: "Comparatives & Superlatives",
-      titleEx: "Istanbul is bigger than Ankara. It is the largest city.",
-      intro:
-        "İki şeyi kıyaslamak için karşılaştırma, gruptaki en üstü için en üstünlük derecesi kullanılır. Kısa sıfatlarda **\\-er\\** ve **\\than\\**; uzun sıfatlarda **\\more\\** ve **\\the most\\** gelir. **\\Good, better, the best\\** ile **\\bad, worse, the worst\\** düzensiz formları ezberlersin.",
-    },
-    {
       id: "27",
       level: "A2",
-      title: "Derecelendirme ve Karşılaştırma Yapıları",
-      titleEng: "As...as, Too & Enough",
-      titleEx: "This laptop isn't fast enough. It's as expensive as yours.",
+      title: "Şimdiki Zaman",
+      titleEng: "Present Continuous",
+      titleEx: "Am, Is, Are + V-ing, Now, At The Moment, Right Now",
       intro:
-        "**\\As ... as\\** eşitlik veya farkı gösterir; olumsuzda **\\not as\\** ile **kadar ... değil** anlamı kurulur. **\\Too\\** fazlalık, **\\enough\\** yeterlilik bildirir. **\\Enough\\** sıfattan sonra, isimden önce gelir; bu sıra karışıklığı önler.",
+        "**\\Present Continuous\\** konuştuğun anda veya geçici süreçte devam eden işleri anlatır. Kalıp **\\am, is, are\\** artı **\\-ing\\** fiilidir. **\\Now, right now, at the moment\\** gibi zaman ifadeleri ve geniş zamanla farkı bu derste netleşir.",
     },
     {
       id: "28",
       level: "A2",
-      title: "Too much / Too many / A few / A little",
-      titleEng: "Too much / Too many / A few / A little",
-      titleEx: "Too much sugar. Too many emails. A few friends. A little time.",
+      title: "Geniş Zaman & Şimdiki Zaman",
+      titleEng: "Present Simple vs. Present Continuous",
+      titleEx: "Present Simple, Present Continuous, Always, Now",
       intro:
-        "Miktar ifadeleri sayılabilir ve sayılamayan isimle eşleşmelidir. Sayılamayanlarla **\\too much, a little\\**; sayılabilir çoğulla **\\too many, a few\\** kullanılır. **\\Too\\** fazlalık uyarısı verir; **\\a few\\** ve **\\a little\\** olumlu cümlede küçük miktar anlatır.",
+        "Geniş zaman kalıcı veya tekrarlayan işler içindir; **\\-ing\\** yapısı şu an veya geçici süreç içindir. **\\Present Simple\\**, **\\Present Continuous\\**, **\\Always\\**, **\\Now\\** zamanları aynı özneyle karşılaştırarak doğru zamanı seçersin.",
     },
     {
       id: "29",
       level: "A2",
-      title: "So / Such",
-      titleEng: "So / Such",
-      titleEx: "It's so cold today! She is such a kind teacher.",
+      title: "Durum Fiilleri",
+      titleEng: "Stative Verbs",
+      titleEx: "Know, Like, Believe, Understand, Stative Verbs",
       intro:
-        "**\\So\\** sıfat veya zarfı güçlendirir: **\\so cold\\**. **\\Such\\** isim tamlamasının önünde gelir: **\\such a nice day\\**. **\\So many\\**, **\\so much\\** ve **\\such a lot of\\** ile günlük konuşmada vurguyu doğal kurarsın.",
+        "Durum fiilleri genelde **\\-ing\\** almaz; duygu, düşünce ve sahiplik bildirir. **\\Know\\**, **\\Like\\**, **\\Believe\\**, **\\Understand\\**, **\\Stative Verbs\\** listesindeki fiiller **\\I am knowing\\** yerine **\\I know\\** biçiminde kalır. Şimdiki zamanla çakışmaları bu derste netleşir.",
     },
     {
       id: "30",
       level: "A2",
-      title: "Gelecek Zaman (Will vs. Going to)",
-      titleEng: "Future Forms: Will, Going to & Present Continuous",
-      titleEx: "I think it will rain. / I am going to study tonight.",
+      title: "Geçmiş Zaman",
+      titleEng: "Past Simple",
+      titleEx: "Past Simple, Did, V2, Yesterday, Last Year",
       intro:
-        "Gelecek için üç yaygın kalıp vardır. Ani karar ve tahminde **\\will\\**; önceden düşünülmüş niyette **\\be going to\\**; kesin randevu ve takvimde **\\Present Continuous\\** tercih edilir. Aynı durumda niyet farkı hangi zamanı seçeceğini belirler.",
+        "Geçmiş zamanda eylem belirli bir anda bitmiş kabul edilir. **\\Past Simple\\**, **\\Did\\**, **\\V2\\**, **\\Yesterday\\**, **\\Last Year\\** ile geçmiş olay ve biyografi anlatımı yaparsın. Olumsuz ve soruda **\\did\\** + yalın fiil kuralını uygularsın.",
     },
     {
       id: "31",
       level: "A2",
-      title: "Yakın Geçmiş Zaman",
-      titleEng: "Present Perfect Simple (ever, never, just, already, yet)",
-      titleEx: "I have seen that movie before. Have you finished yet?",
+      title: "To Be Fiilinin Geçmiş Hâli",
+      titleEng: "The Past Tense of the Verb 'To Be'",
+      titleEx: "Was / Were",
       intro:
-        "Zamanı net söylemeden geçmiş deneyim veya bugüne uzanan sonuç anlatırken **\\Present Perfect Simple\\** devreye girer. **\\have / has + V3\\** kalıbını, **\\ever, never, just, already, yet\\** kelimelerinin cümle içindeki yerini ve günlük soru-cevap örneklerini bu derste dinliyorsun.",
+        "Geçmişte **\\to be\\** **\\was\\** ve **\\were\\** biçiminde çekimlenir. Tekil için **\\was\\**, çoğul ve **\\you\\** için **\\were\\** kullanılır. Geçmişte konum ve durum cümleleri bu iki kalıpla kurulur.",
     },
     {
       id: "32",
       level: "A2",
-      title: "Yakın Geçmiş ve Di'li Geçmiş Zaman Farkı",
-      titleEng: "Present Perfect vs. Past Simple (for & since)",
-      titleEx: "I have lived here since 2020. I moved here six years ago.",
+      title: "Düzenli & Düzensiz Fiiller",
+      titleEng: "Regular and Irregular Verbs",
+      titleEx: "Regular Verbs, Irregular Verbs, -ed, V2",
       intro:
-        "Olay bitti mi, yoksa hâlâ etkisini mi taşıyor? **\\Past Simple\\** ile **\\Present Perfect\\** ayrımını **\\for, since, ago\\** belirteçleri üzerinden netleştiriyorsun; hangi durumda hangi zamanın seçildiğini örnek cümlelerle duyuyorsun.",
+        "Düzenli fiillerde geçmiş **\\-ed\\** ile yazılır; düzensizlerin **\\V2\\** biçimi ezberlenir. **\\Regular Verbs\\**, **\\Irregular Verbs\\**, **\\-ed\\**, **\\V2\\** ayrımı geçmiş zaman ve perfect yapılarda temel oluşturur.",
     },
     {
       id: "33",
       level: "A2",
-      title: "Kipler: Zorunluluk, Yasak & Tavsiye",
-      titleEng: "Modals: Must, Have to, Should",
-      titleEx: "You should rest. / You mustn't park here.",
+      title: "Geçmiş Zaman İfadeleri",
+      titleEng: "Past Time Expressions",
+      titleEx: "Yesterday, Last Week, Ago, In 2020, When I Was",
       intro:
-        "Kural, iç zorunluluk, dış şart ve tavsiye farklı tonlar taşır. **\\must, have to, should\\** ile **\\mustn't\\** ve **\\don't have to\\** arasındaki anlam farkını dinleyerek hangi durumda hangi kipi seçeceğini öğreniyorsun.",
+        "Geçmiş zamanla birlikte **\\yesterday\\**, **\\last week\\**, **\\ago\\** gibi ifadeler zamanı netleştirir. **\\Yesterday\\**, **\\Last Week\\**, **\\Ago\\**, **\\In 2020\\**, **\\When I Was\\** kalıplarını geçmiş cümle sonunda veya başında doğal kullanırsın.",
     },
     {
       id: "34",
       level: "A2",
-      title: "Could (Geçmiş Yetenek) & May / Might (Olasılık)",
-      titleEng: "Could & May / Might",
-      titleEx: "I could read at four. It might rain later. May I come in?",
+      title: "Will ile Gelecek Zaman",
+      titleEng: "Future with Will",
+      titleEx: "Will, Won't, I'll, Predictions, Promises",
       intro:
-        "Geçmişte yapabildiğin işler, belirsiz olasılık ve resmi izin isteme birbirinden ayrılır. **\\could\\**, **\\may / might\\** ve **\\May I\\** kalıplarını; ayrıca çıkarım anlamındaki **\\can't\\** ile nazik **\\could\\** ricasını örneklerle ayırıyorsun.",
+        "**\\Will\\** ani karar, tahmin ve söz için kullanılır; kısalmalar **\\I'll\\**, **\\won't\\** günlük konuşmada sıktır. Gelecek zaman fiili özneden sonra gelir, ek fiil gerekmez.",
     },
     {
       id: "35",
       level: "A2",
-      title: "Belgisiz Zamirler",
-      titleEng: "Indefinite Pronouns (someone, anything, nowhere)",
-      titleEx: "Someone is at the door. I didn't buy anything.",
+      title: "Be Going To – Gelecek Planları ve Niyetleri",
+      titleEng: "Be Going To – Future Plans and Intentions",
+      titleEx: "Be Going To, Plans, Intentions, Evidence",
       intro:
-        "İsmi vermeden biri, bir şey veya bir yerden bahsetmek günlük İngilizcede çok sık gerekir. **\\someone, anything, nowhere\\** gibi belgisiz zamirleri **\\some-, any-, no-, every-\\** önekleriyle kurup olumlu, olumsuz ve soru cümlelerinde doğru seçiyorsun.",
+        "**\\Be going to\\** önceden düşünülmüş plan veya delile dayalı tahmin bildirir. **\\Be Going To\\**, **\\Plans\\**, **\\Intentions\\**, **\\Evidence\\** yapısı **\\am/is/are going to\\** + yalın fiille kurulur. **\\Will\\** ile anlam farkını örneklerle ayırırsın.",
     },
     {
       id: "36",
       level: "A2",
-      title: "Temel Fiil Kalıpları",
-      titleEng: "Basic Verb Patterns (Verb + -ing / to-infinitive)",
-      titleEx: "I enjoy coding. / She wants to travel abroad.",
+      title: "Gelecek Zaman Yapılarının Karşılaştırılması",
+      titleEng: "Future Forms",
+      titleEx: "Will, Be Going To, Present Continuous For Future",
       intro:
-        "Peş peşe iki fiil gelince ikincisi çoğu zaman **\\-ing\\** ya da **\\to + V1\\** alır; hangi fiilin hangisini istediği ezberlenir. **\\enjoy, want, suggest\\** gibi sık örnekleri ve **\\like / love / hate\\** gibi her iki yapıya da izin veren fiilleri dinliyorsun.",
+        "Geleceği anlatmak için **\\will\\**, **\\be going to\\** ve bazen şimdiki zaman kullanılır. **\\Will\\**, **\\Be Going To\\**, **\\Present Continuous For Future\\** seçimi niyet, program ve konuşma anına göre değişir. Aynı öznede üç yapıyı karşılaştırırsın.",
     },
     {
       id: "37",
       level: "A2",
-      title: "Özne/Nesne Soruları & How long / How often",
-      titleEng: "Subject/Object Questions & How long / How often",
-      titleEx:
-        "Who phoned you? How often do you go to the gym? How long have you lived here?",
+      title: "Yetenek ve İzin Bildiren Modallar",
+      titleEng: "Modals Expressing Ability and Permission",
+      titleEx: "Can / Could",
       intro:
-        "Soru kelimesi özneyse yardımcı fiil gerekmez; nesneyi soruyorsan **\\do / does\\** veya **\\did\\** devreye girer. **\\Who called?\\** ile **\\Who did you call?\\** farkını, ardından **\\How long\\** ve **\\How often\\** sorularına verilen **\\for / since\\** ve sıklık cevaplarını çalışıyorsun.",
+        "**\\Can\\** güncel yetenek ve izin; **\\could\\** geçmiş yetenek veya kibar istek için gelir. **\\Can / Could\\** modallarından sonra fiil yalın halde kalır.",
     },
     {
       id: "38",
       level: "A2",
-      title: "Yansıma Zamirleri",
-      titleEng: "Reflexive Pronouns (myself, each other)",
-      titleEx: "I hurt myself. They love each other. She did it herself.",
+      title: "Zorunluluk ve Yasak",
+      titleEng: "Obligation and Prohibition",
+      titleEx: "Must / Mustn't / Have To / Has To",
       intro:
-        "Eylem özneye dönerse yansıma zamiri, iki kişi birbirine yönelirse **\\each other\\** kullanılır. **\\myself, yourself\\** ve **\\by myself\\** kalıbını günlük cümlelerle dinleyerek doğru zamir seçimini pekiştiriyorsun.",
+        "**\\Must\\** güçlü zorunluluk veya içsel gereklilik; **\\have to\\** dış kuralı anlatır. **\\Must / Mustn't / Have To / Has To\\** ile yasak ve zorunluluk cümleleri kurarsın.",
     },
     {
       id: "39",
       level: "A2",
-      title: "Both / Either / Neither",
-      titleEng: "Both / Either / Neither",
-      titleEx:
-        "Both answers are correct. You can take either bus. Neither option works for me.",
+      title: "Zorunda Olmama",
+      titleEng: "Don't Have To",
+      titleEx: "Don't Have To / Doesn't Have To",
       intro:
-        "İki seçenekten bahsederken üç kelime iş görür: ikisi birden **\\both\\**, biri **\\either\\**, hiçbiri **\\neither\\**. **\\both of us\\**, **\\either ... or\\** ve **\\neither ... nor\\** bağlantılarını fiil uyumuyla birlikte öğreniyorsun.",
+        "**\\Don't have to\\** zorunlu olmama anlamı verir; **\\mustn't\\** ile karıştırılmamalıdır. Seçenekli görev ve kurallarda doğru modalı seçersin.",
     },
     {
       id: "40",
       level: "A2",
-      title: "Hareket Edatları",
-      titleEng: "Prepositions of Movement (into, across, through)",
-      titleEx:
-        "She walked into the room. He ran across the street. We drove through the tunnel.",
+      title: "Tavsiye",
+      titleEng: "Advice",
+      titleEx: "Should / Shouldn't",
       intro:
-        "Yer edatı nerede durduğunu, hareket edatı nereye gittiğini anlatır. **\\into, across, through, over, past\\** gibi sık edatları yol tarifi ve günlük anlatım örnekleriyle dinliyorsun.",
+        "**\\Should\\** tavsiye ve beklenti bildirir; **\\shouldn't\\** uyarı içerir. Sağlık, çalışma ve günlük öneri cümlelerinde kullanırsın.",
     },
     {
       id: "41",
       level: "A2",
-      title: "Temel Phrasal Verbs",
-      titleEng: "Basic Phrasal Verbs",
-      titleEx: "Turn off the lights. Look after the kids. Give up smoking.",
+      title: "Olasılık",
+      titleEng: "Probability",
+      titleEx: "May / Might",
       intro:
-        "Konuşma dilinde tek fiil yetmez; **\\turn off, look after, give up\\** gibi **\\phrasal verb\\** kalıpları devreye girer. Ayrılabilir yapılarda nesne zamirinin nereye oturduğunu ve en yaygın birleşik fiilleri bu derste dinliyorsun.",
+        "**\\May\\** ve **\\might\\** olasılık ve izin anlatır; **\\might\\** genelde daha düşük ihtimal taşır. Hava, sonuç ve kibar tahmin cümlelerinde yer alır.",
     },
     {
       id: "42",
       level: "A2",
-      title: "Temel Koşul Cümleleri (Tip 0 & Tip 1)",
-      titleEng: "Zero & First Conditionals",
-      titleEx: "If you heat ice, it melts. / If it rains, I will stay home.",
+      title: "Karşılaştırma Sıfatları",
+      titleEng: "Comparatives",
+      titleEx: "Bigger, Smaller, More, Less, -er Than, -ier Than",
       intro:
-        "Genel gerçekler ile muhtemel gelecek planları farklı **\\if\\** yapıları ister. **\\Zero Conditional\\** ve **\\First Conditional\\** kalıplarını, virgül kuralını ve **\\when / unless\\** alternatiflerini örnek cümlelerle öğreniyorsun.",
+        "Karşılaştırma sıfatları iki şeyi derecelendirir. **\\Bigger\\**, **\\Smaller\\**, **\\More\\**, **\\Less\\**, **\\-er Than\\**, **\\-ier Than\\** ile **\\than\\** yapısı kurulur; kısa sıfatlarda **\\-er\\**, uzunlarda **\\more\\** kullanılır.",
+    },
+    {
+      id: "43",
+      level: "A2",
+      title: "Üstünlük Sıfatları",
+      titleEng: "Superlatives",
+      titleEx: "The Biggest, The Most, -est, -iest, Superlatives",
+      intro:
+        "Üstünlük sıfatları bir grupta en üstü seçer. **\\The Biggest\\**, **\\The Most\\**, **\\-est\\**, **\\-iest\\**, **\\Superlatives\\** kalıpları **\\the\\** ile birlikte gelir. **\\-est\\** ve **\\most\\** kurallarını örneklerle pekiştirirsin.",
+    },
+    {
+      id: "44",
+      level: "A2",
+      title: "Eşitlik Karşılaştırmaları",
+      titleEng: "Comparisons of Equality",
+      titleEx: "As ... As / Not As ... As",
+      intro:
+        "Eşitlik karşılaştırmasında **\\as ... as\\** yapısı kullanılır; olumsuzda **\\not as ... as\\** yetersizlik bildirir. **\\As ... As / Not As ... As\\** iki özelliği aynı düzeyde sunar.",
+    },
+    {
+      id: "45",
+      level: "A2",
+      title: "Fazlalık ve Yeterlilik",
+      titleEng: "Excess and Sufficiency",
+      titleEx: "Too / Enough",
+      intro:
+        "**\\Too\\** aşırılık, **\\enough\\** yeterlilik gösterir; sıfat veya zarfın önünde veya sonunda konumları değişir. Şikâyet ve yeterlilik cümlelerinde ayırırsın.",
+    },
+    {
+      id: "46",
+      level: "A2",
+      title: "Durum Zarfları",
+      titleEng: "Adverbs of Manner",
+      titleEx: "Quickly, Slowly, Carefully, -ly, Adverbs Of Manner",
+      intro:
+        "Durum zarfları eylemin nasıl yapıldığını söyler. **\\Quickly\\**, **\\Slowly\\**, **\\Carefully\\**, **\\-ly\\**, **\\Adverbs Of Manner\\** çoğunlukla **\\-ly\\** ile türetilir ve fiilden sonra gelir. **\\Quickly\\**, **\\slowly\\** gibi zarflar cümleyi canlandırır.",
+    },
+    {
+      id: "47",
+      level: "A2",
+      title: "Belirsiz Zamirler",
+      titleEng: "Indefinite Pronouns",
+      titleEx:
+        "Someone, Anyone, No One, Everyone, Something, Anything, Nothing, Everything",
+      intro:
+        "Belirsiz zamirler kimseyi veya şeyi isim söylemeden gösterir. **\\Someone\\**, **\\Anyone\\**, **\\No One\\**, **\\Everyone\\** gibi kalıpların yanı sıra **\\Something\\**, **\\Anything\\**, **\\Nothing\\** olumlu, olumsuz ve soru cümlelerinde farklı biçimler alır (**\\some-\\** / **\\any-\\**).",
+    },
+    {
+      id: "48",
+      level: "A2",
+      title: "Seçim ve Birliktelik Yapıları",
+      titleEng: "Structures for Selection and Combination",
+      titleEx: "Both / Either / Neither",
+      intro:
+        "**\\Both\\** ikisini birden, **\\either\\** ikisinden biri, **\\neither\\** ikisi de olumsuz seçenekte kullanılır. **\\Both / Either / Neither\\** çoğul isim ve yardımcı fiil uyumuna dikkat edersin.",
+    },
+    {
+      id: "49",
+      level: "A2",
+      title: "İleri Miktar Belirteçleri",
+      titleEng: "Advanced Quantity Specifiers",
+      titleEx: "A Few, Few, A Little, Little, Too Much, Too Many, Enough",
+      intro:
+        "İleri miktar belirteçleri sayılabilen ve sayılamayan isimle eşleşir. **\\A Few\\**, **\\Few\\**, **\\A Little\\**, **\\Little\\** gibi kalıpların yanı sıra **\\Too Much\\**, **\\Too Many\\**, **\\Enough\\** **\\few/little\\** ve **\\a few/a little\\** anlam farkını taşır. **\\Too much\\** ve **\\too many\\** aşırılığı gösterir.",
+    },
+    {
+      id: "50",
+      level: "A2",
+      title: "Hareket Edatları",
+      titleEng: "Prepositions of Movement",
+      titleEx: "To, Into, Out Of, Across, Through, Along, Over",
+      intro:
+        "Hareket edatları yöne, geçişe ve varışa işaret eder. **\\To\\**, **\\Into\\**, **\\Out Of\\**, **\\Across\\** gibi kalıpların yanı sıra **\\Through\\**, **\\Along\\**, **\\Over\\** yön tarifi ve seyahat anlatımında kullanılır. Yer edatlarıyla karışan **\\in/into\\** ayrımına dikkat edersin.",
+    },
+    {
+      id: "51",
+      level: "A2",
+      title: "Gerund ve Mastar – Verb + -  ing / To + Verb",
+      titleEng: "Gerund ve Infinitive – Verb + -  ing / To + Verb",
+      titleEx: "Verb + -ing, Verb + To Infinitive, Like Doing, Want To",
+      intro:
+        "Bazı fiillerden sonra **\\-ing\\**, bazılarından sonra **\\to\\** gelir; anlam fiile göre değişebilir. **\\Verb + -ing\\**, **\\Verb + To Infinitive\\**, **\\Like Doing\\**, **\\Want To\\** kalıpları cümle genişletirken doğru biçimi seçmeni sağlar.",
+    },
+    {
+      id: "52",
+      level: "A2",
+      title: "Fiil Kalıpları",
+      titleEng: "Verb Patterns",
+      titleEx: "Enjoy Doing, Decide To, Stop -ing, Verb Patterns",
+      intro:
+        "Fiil kalıpları hangi yapının geleceğini sabitler. **\\Enjoy Doing\\**, **\\Decide To\\**, **\\Stop -ing\\**, **\\Verb Patterns\\** örnekleri **\\enjoy doing\\**, **\\decide to do\\** gibi blokları ezberletir.",
+    },
+    {
+      id: "53",
+      level: "A2",
+      title: "Sıfırıncı Koşul",
+      titleEng: "Zero Conditional",
+      titleEx: "If + Present, Present, Zero Conditional, General Truths",
+      intro:
+        "Sıfırıncı koşulda **\\if\\** ve ana cümle geniş zamandadır; genel doğrular ve bilimsel kurallar anlatılır. **\\If + Present\\**, **\\Present\\**, **\\Zero Conditional\\**, **\\General Truths\\** yapısı gerçek her zaman doğru sonuç verir.",
+    },
+    {
+      id: "54",
+      level: "A2",
+      title: "Birinci Koşul",
+      titleEng: "First Conditional",
+      titleEx: "If + Present, Will, First Conditional, Real Future",
+      intro:
+        "Birinci koşulda gerçek gelecek ihtimali vardır: **\\if\\** + geniş zaman, ana cümle **\\will\\**. **\\If + Present\\**, **\\Will\\**, **\\First Conditional\\**, **\\Real Future\\** plan ve uyarı cümlelerinde kullanılır.",
+    },
+    {
+      id: "55",
+      level: "A2",
+      title: "Temel İlgi Cümlecikleri",
+      titleEng: "Basic Relative Clauses",
+      titleEx: "Who, Which, That, Where, Basic Relative Clauses",
+      intro:
+        "İlgi cümlecikleri ismin hemen ardından gelir ve onu tanımlar. **\\Who\\**, **\\Which\\**, **\\That\\**, **\\Where\\**, **\\Basic Relative Clauses\\** ile **\\who\\** kişi, **\\which/that\\** nesne için seçilir. Temel tanımlayıcı ilgi cümleleri kurarsın.",
+    },
+    {
+      id: "56",
+      level: "A2",
+      title: "Dönüşlü Zamirler",
+      titleEng: "Reflexive Pronouns",
+      titleEx: "Myself, Yourself, Himself, Herself, Itself, Ourselves",
+      intro:
+        "Dönüşlü zamirler özne ve nesne aynı kişi olduğunda kullanılır. **\\Myself\\**, **\\Yourself\\**, **\\Himself\\**, **\\Herself\\**, **\\Itself\\**, **\\Ourselves\\** **\\by myself\\** gibi ifadelerle yalnız yapılan işi de vurgular.",
+    },
+    {
+      id: "57",
+      level: "A2",
+      title: "Geçmiş Alışkanlıklar",
+      titleEng: "Past Habits",
+      titleEx: "Used To",
+      intro:
+        "**\\Used to\\** geçmişte düzenli olup artık sürmeyen alışkanlıkları anlatır. Olumsuz **\\didn't use to\\** ve soru **\\Did you use to...?\\** ile pekiştirirsin.",
+    },
+    {
+      id: "58",
+      level: "A2",
+      title: "Temel Edilgen Yapı",
+      titleEng: "Basic Passive Voice",
+      titleEx: "Be + V3, Present Passive, Past Passive, By",
+      intro:
+        "Edilgende özne eylemi yapan değil, eylemden etkilenendir. **\\Be + V3\\**, **\\Present Passive\\**, **\\Past Passive\\**, **\\By\\** **\\be + V3\\** iskeletiyle kurulur; zaman **\\be\\** çekiminden anlaşılır.",
+    },
+    {
+      id: "59",
+      level: "A2",
+      title: "Soru Eklentileri",
+      titleEng: "Question Tags",
+      titleEx: "Isn't He, Aren't You, You're Late Aren't You, Tags",
+      intro:
+        "Soru ekleri kısa onay veya teyit ister; yardımcı veya **\\to be\\** çekimine göre seçilir. **\\Isn't He\\**, **\\Aren't You\\**, **\\You're Late Aren't You\\**, **\\Tags\\** kalıpları günlük konuşmada tonu yumuşatır.",
+    },
+    {
+      id: "60",
+      level: "A2",
+      title: "Katılma & Benzerlik Bildirme",
+      titleEng: "Expressing Agreement and Similarity",
+      titleEx: "So / Neither",
+      intro:
+        "**\\So\\** olumlu, **\\neither\\** olumsuz cümleye katılım bildirir. **\\So / Neither\\** kısa yanıtlarda tekrarı önler.",
+    },
+    {
+      id: "61",
+      level: "A2",
+      title: "Dolaylı Sorular",
+      titleEng: "Indirect Questions",
+      titleEx: "Could You Tell Me, What Time Is It, Indirect Questions",
+      intro:
+        "Dolaylı soruda soru kelimesi cümle içinde kalır, **\\do/does\\** kullanılmaz; cümle düzeni yüklemden sonra devam eder. **\\Could You Tell Me\\**, **\\What Time Is It\\**, **\\Indirect Questions\\** kibar bilgi isteği için kullanılır.",
     },
   ],
   B1: [
     {
-      id: "43",
-      level: "B1",
-      title: "Geçmişteki Alışkanlıklar (Used to & Would)",
-      titleEng: "Past Habits: Used to & Would",
-      titleEx: "I used to play chess every weekend when I was a child.",
-      intro:
-        "Eskiden vardı, artık yok: geçmiş alışkanlık ve durumlar **\\used to\\** ile anlatılır; tekrarlayan geçmiş eylemler bazen **\\would\\** ile kurulur. Durum fiillerinde neden yalnızca **\\used to\\** kullanıldığını ve **\\didn't use to\\** soru-olumsuz yapısını dinliyorsun.",
-    },
-    {
-      id: "44",
-      level: "B1",
-      title: "Be used to / Get used to",
-      titleEng: "Be used to / Get used to",
-      titleEx:
-        "I am used to waking up early. She is getting used to the new job.",
-      intro:
-        "**\\Be used to\\** bir şeye alışkın olduğunu, **\\get used to\\** yavaş yavaş alıştığını anlatır; geçmiş alışkanlık için kullanılan **\\used to + V1\\** ile karıştırılmamalı. Üç kalıbın yapı ve anlam farkını bu derste netleştiriyorsun.",
-    },
-    {
-      id: "45",
-      level: "B1",
-      title: "Süregelen Yakın Geçmiş Zaman",
-      titleEng: "Present Perfect Continuous",
-      titleEx: "I have been learning English for two years.",
-      intro:
-        "Ne kadar süredir bir şey yaptığını vurgulamak için **\\have / has been + V-ing\\** kullanılır. **\\Present Perfect Continuous\\** ile sonuç odaklı **\\Present Perfect Simple\\** arasındaki farkı **\\for, since, lately\\** örnekleriyle dinliyorsun.",
-    },
-    {
-      id: "46",
-      level: "B1",
-      title: "Miş'li Geçmiş Zaman",
-      titleEng: "Past Perfect Simple",
-      titleEx: "When I arrived at the station, the train had already left.",
-      intro:
-        "Geçmişteki iki olaydan hangisinin önce gerçekleştiğini **\\had + V3\\** ile net anlatmayı öğreniyorsun. **\\Before, after, by the time, when, already, just\\** gibi bağlaç ve zarflarla zaman zincirini bu derste dinliyorsun.",
-    },
-    {
-      id: "47",
-      level: "B1",
-      title: "Zaman Cümlecikleri",
-      titleEng: "Time Clauses (when, as soon as, until)",
-      titleEx:
-        "When I arrive, I'll call you. As soon as she leaves, we can start. Wait until the bus comes.",
-      intro:
-        "Olay sırasını **\\when, while, as, as soon as, until, before, after\\** ile kurulan **\\time clauses\\** yapısında dinliyorsun. Gelecek anlatan ana cümlede yan cümlede **\\Present Simple\\** kuralına özellikle dikkat edeceksin.",
-    },
-    {
-      id: "48",
-      level: "B1",
-      title: "Tahmin ve Olasılık Kipleri",
-      titleEng: "Modals of Deduction & Possibility (Present)",
-      titleEx: "The lights are off; they must be asleep. He might be late.",
-      intro:
-        "Gözleme dayalı tahminlerde **\\must\\**, **\\can't\\**, **\\may, might, could\\** arasındaki eminlik farkını bu derste dinliyorsun. Süregelen durumlar için **\\must be V-ing\\** kalıbını da örneklerle duyacaksın.",
-    },
-    {
-      id: "49",
-      level: "B1",
-      title: "Eklenti Soruları (Question Tags)",
-      titleEng: "Question Tags",
-      titleEx: "You live in Istanbul, don't you? She isn't coming, is she?",
-      intro:
-        "**\\Question tags\\** ile olumlu cümleye olumsuz, olumsuz cümleye olumlu eklenti getirme mantığını dinliyorsun. Yardımcı fiil seçimi ve **\\I am → aren't I?\\** gibi istisnalar bu derste var.",
-    },
-    {
-      id: "50",
-      level: "B1",
-      title: "So do I / Neither do I",
-      titleEng: "So do I / Neither do I",
-      titleEx:
-        "I love coffee. — So do I. / I don't like mornings. — Neither do I.",
-      intro:
-        "Aynı fikri veya durumu kısa bildirmek için **\\So + yardımcı fiil + özne\\** ve **\\Neither / Nor + yardımcı fiil + özne\\** kalıplarını örneklerle dinliyorsun.",
-    },
-    {
-      id: "51",
-      level: "B1",
-      title: "Koşul Cümleleri (Tip 2 & Tip 1-2 Karşılaştırması)",
-      titleEng: "Second Conditional (Unreal Present)",
-      titleEx: "If I won the lottery, I would buy a house by the sea.",
-      intro:
-        "Gerçek dışı şimdiki senaryolar için **\\If + Past Simple, would + V1\\** yapısını, **\\Tip 2\\** ile **\\Tip 1\\** farkını ve **\\If I were you…\\** kalıbını bu derste dinliyorsun.",
-    },
-    {
-      id: "52",
-      level: "B1",
-      title: "Sıfat Cümlecikleri (Tanımlayan & Tanımlamayan)",
-      titleEng: "Defining & Non-defining Relative Clauses",
-      titleEx:
-        "The man who lives next door is a doctor. / My car, which is old, still runs well.",
-      intro:
-        "**\\Defining\\** ve **\\non-defining\\** sıfat cümleciklerinde **\\who, which, that, whose, where, when\\** kullanımını, virgül kuralını ve ilgi zamirini düşürmeyi dinliyorsun.",
-    },
-    {
-      id: "53",
-      level: "B1",
-      title: "Edilgen Çatı (Temel Zamanlar)",
-      titleEng: "Passive Voice (Core Tenses)",
-      titleEx: "The letter was sent yesterday. English is spoken worldwide.",
-      intro:
-        "Temel zamanlarda **\\be + V3\\** ile kurulan **\\passive voice\\** yapısını, **\\by\\** edatını ve etkenden edilgene dönüşümü bu derste dinliyorsun.",
-    },
-    {
-      id: "54",
-      level: "B1",
-      title: "İsim Fiiller & Mastarlar (Anlam Değiştirenler)",
-      titleEng: "Gerunds & Infinitives",
-      titleEx: "I stopped smoking. / I stopped to smoke a cigarette.",
-      intro:
-        "**\\stop, remember, forget, try, regret, mean\\** gibi fiillerde **\\gerund\\** ile **\\to-infinitive\\** arasındaki anlam farkını örnek cümlelerle dinliyorsun.",
-    },
-    {
-      id: "55",
-      level: "B1",
-      title: "Make / Let / Allow",
-      titleEng: "Make / Let / Allow (Active Causatives)",
-      titleEx:
-        "She made me apologise. Let him go. They don't allow smoking here.",
-      intro:
-        "**\\make, let, allow\\** ile zorlama, izin ve müsaade anlatan **\\causative\\** kalıplarını bu derste dinliyorsun.",
-    },
-    {
-      id: "56",
-      level: "B1",
-      title: "-ed / -ing Sıfatları",
-      titleEng: "Participle Adjectives (bored / boring)",
-      titleEx: "The film was boring. I was bored during the meeting.",
-      intro:
-        "Duygu bildiren **\\-ed\\** sıfatları ile neden bildiren **\\-ing\\** sıfatları arasındaki farkı **\\bored / boring\\** örnekleriyle dinliyorsun.",
-    },
-    {
-      id: "57",
-      level: "B1",
-      title: "Soru Kelimesi + Infinitive",
-      titleEng: "Question Word + Infinitive",
-      titleEx: "I don't know what to do. She showed me how to use it.",
-      intro:
-        "**\\what, where, how, when, who\\** + **\\to + V1\\** kalıbını **\\I don't know where to go\\** gibi günlük örneklerle dinliyorsun.",
-    },
-    {
-      id: "58",
-      level: "B1",
-      title: "Dolaylı Anlatım (Temel Aktarım)",
-      titleEng: "Reported Speech (Statements & Questions)",
-      titleEx: "He said he was tired. She asked me where I lived.",
-      intro:
-        "Başkalarının söylediği sözleri ve sorduğu soruları kendi cümlelerinle akıcı ve doğru bir şekilde aktarmaya hazır mısın? Bu derste **\\Reported Speech\\** (Dolaylı Anlatım) yapısında zamanların bir derece geçmişe kayması (**\\tense backshift\\**) kuralını keşfedeceksin. **\\Say\\** ve **\\tell\\** fiilleri arasındaki nesne farkını, evet-hayır sorularında **\\if / whether\\** kullanımını ve zamirlerle zaman zarflarındaki dönüşümleri inceleyeceksin. Günlük konuşmaları, toplantı notlarını ve duyduğun haberleri doğal biçimde aktarabileceksin.",
-    },
-    {
-      id: "59",
-      level: "B1",
-      title: "Dolaylı Emir ve Rica",
-      titleEng: "Reported Commands & Requests",
-      titleEx: "She told me to wait. He asked me not to open the window.",
-      intro:
-        "Doğrudan emir ve ricaları dolaylı anlatımla başkasına aktarmaya hazır mısın? Bu derste **tell / ask + object + (not) to + V1** yapısıyla kurulan **\\Reported Commands & Requests\\** kalıplarını keşfedeceksin. Emirleri **\\told me to\\** ile, nazik ricaları **\\asked me to\\** ile aktarmayı ve olumsuz yönergelerde **\\not to\\** kullanımını inceleyeceksin. Patron, öğretmen veya arkadaştan duyduğun talimatları doğal biçimde başkalarına iletebileceksin.",
-    },
-    {
-      id: "60",
-      level: "B1",
-      title: "Dolaylı Sorular",
-      titleEng: "Indirect Questions (Could you tell me where...)",
-      titleEx:
-        "Could you tell me where the station is? Do you know what time it starts?",
-      intro:
-        "Soru sorarken daha kibar ve resmi bir ton kullanmaya hazır mısın? Bu derste **\\Could you tell me...\\**, **\\Do you know...\\** ve **\\I wonder...\\** gibi girişlerle başlayan **\\Indirect Questions\\** yapısını keşfedeceksin. Soru kelimesinden sonra **do/does/did** kullanmadan özne-fiil sırasına geçişi ve evet-hayır sorularında **\\if / whether\\** kullanımını inceleyeceksin. Yabancılarla ve resmi ortamlarda sorularını çok daha nazik biçimde sorabileceksin.",
-    },
-    {
-      id: "61",
-      level: "B1",
-      title: "Bağlaç ve Geçiş İfadeleri",
-      titleEng: "Linking Words (however, therefore, although)",
-      titleEx:
-        "It was late; however, we kept talking. Although it rained, we went out.",
-      intro:
-        "Cümleleri ve fikirleri mantıksal bağlarla birleştirerek anlatımını akıcı kılmaya hazır mısın? Bu derste karşıtlık bildiren **\\however, although, but, whereas\\**, neden-sonuç için **\\therefore, so, as a result\\** ve ek bilgi için **\\moreover, furthermore\\** gibi **\\linking words\\** ve geçiş ifadelerini keşfedeceksin. Virgül ve noktalı virgül kullanımıyla **\\however\\** ve **\\therefore\\** gibi bağlayıcıların cümle içindeki konumunu inceleyeceksin. Yazılı ve sözlü anlatımlarında düşünceler arasında net geçişler kurabileceksin.",
-    },
-    {
       id: "62",
       level: "B1",
-      title: "Fiil/Sıfat + Edat Kalıpları",
-      titleEng: "Dependent Prepositions (Verb/Adjective + Preposition)",
-      titleEx:
-        "It depends on the weather. I'm interested in science. She apologised for being late.",
+      title: "Yakın Geçmiş Zaman",
+      titleEng: "Present Perfect",
+      titleEx: "Have / Has + Past Participle, Ever, Never, Just",
       intro:
-        "Fiil ve sıfatlardan sonra hangi edatın geleceğini kalıplar halinde öğrenmeye hazır mısın? Bu derste **\\depend on, interested in, good at, worried about, apologise for\\** gibi **\\Dependent Prepositions\\** (fiil/sıfat + edat) eşleşmelerini keşfedeceksin. Nesne olarak **\\-ing\\** veya **to + V1** alan kalıpların edatla nasıl birlikte çalıştığını inceleyeceksin. Günlük konuşmada en sık hata yapılan edat seçimlerini doğru kullanabileceksin.",
+        "Present perfect geçmişteki olayı şimdiye bağlar; deneyim, sonuç veya yakın geçmiş vurgusu taşır. **\\Have / Has + Past Participle\\**, **\\Ever\\**, **\\Never\\**, **\\Just\\** yapıları **\\have/has + V3\\** etrafında kurulur. **\\Ever, never, just\\** gibi zarflar anlamı keskinleştirir.",
     },
     {
       id: "63",
       level: "B1",
-      title: "Phrasal Verbs (Orta Düzey)",
-      titleEng: "Intermediate Phrasal Verbs",
-      titleEx:
-        "We ran out of milk. I'll look into the problem. He came across an old photo.",
+      title: "Present Perfect Zaman İfadeleri",
+      titleEng: "Present Perfect Time Expressions",
+      titleEx: "Since, For, Already, Yet, Just, Ever, Never",
       intro:
-        "Orta düzey phrasal verb'lerle anlatımını zenginleştirmeye ve daha doğal konuşmaya hazır mısın? Bu derste **\\run out of, look into, come across, carry out, turn down\\** gibi günlük ve iş hayatında sık geçen **\\Intermediate Phrasal Verbs\\** kalıplarını keşfedeceksin. Temel seviyedekilerin ötesinde anlam çeşitliliği, ayrılamaz yapılar ve cümlede vurgulanması gereken parçacıkları inceleyeceksin. Bu kalıplarla İngilizceni bir üst seviyeye taşıyabileceksin.",
+        "Present perfect geçmişteki olayı şimdiye bağlar; deneyim, sonuç veya yakın geçmiş vurgusu taşır. **\\Since\\**, **\\For\\**, **\\Already\\**, **\\Yet\\** gibi kalıpların yanı sıra **\\Just\\**, **\\Ever\\**, **\\Never\\** yapıları **\\have/has + V3\\** etrafında kurulur. **\\Ever, never, just\\** gibi zarflar anlamı keskinleştirir.",
+    },
+    {
+      id: "64",
+      level: "B1",
+      title: "Present Perfect vs Past Simple",
+      titleEng: "Present Perfect vs Past Simple",
+      titleEx: "Have / Has + V3, Past Simple, For, Since",
+      intro:
+        "Geçmiş zaman belirli bir anda biter; present perfect sonucu bugüne taşır. **\\Have / Has + V3\\**, **\\Past Simple\\**, **\\For\\**, **\\Since\\** zaman ifadeleri hangi yapının seçileceğini gösterir. Geçmiş deneyim ve haber anlatımında ayrımı uygularsın.",
+    },
+    {
+      id: "65",
+      level: "B1",
+      title: "Yakın Geçmişte Süreklilik",
+      titleEng: "Present Perfect Continuous",
+      titleEx: "Have / Has Been + V-ing, For, Since",
+      intro:
+        "Present perfect geçmişteki olayı şimdiye bağlar; deneyim, sonuç veya yakın geçmiş vurgusu taşır. **\\Have / Has Been + V-ing\\**, **\\For\\**, **\\Since\\** yapıları **\\have/has + V3\\** etrafında kurulur. **\\Ever, never, just\\** gibi zarflar anlamı keskinleştirir.",
+    },
+    {
+      id: "66",
+      level: "B1",
+      title: "Present Perfect Simple vs Continuous",
+      titleEng: "Present Perfect Simple vs Continuous",
+      titleEx: "Have Done, Have Been Doing, How Long",
+      intro:
+        "Yakın geçmişte süren ve tamamlanan eylemler farklı perfect yapılarla anlatılır. **\\Have Done\\**, **\\Have Been Doing\\**, **\\How Long\\** seçimi sonuç mu, süreç mi vurgulandığına bağlıdır. **Present Perfect Simple ve Continuous – Karşılaştırma** karşılaştırması konuşma ve yazıda doğru zaman seçimini sağlar.",
+    },
+    {
+      id: "67",
+      level: "B1",
+      title: "Geçmişte Süreklilik",
+      titleEng: "Past Continuous",
+      titleEx: "Was / Were + V-ing, While, When",
+      intro:
+        "Past continuous geçmişte sürerken kesilen veya eşzamanlı süreçleri anlatır. **\\Was / Were + V-ing\\**, **\\While\\**, **\\When\\** **\\was/were + V-ing\\** iskeletiyle kurulur. **\\When\\** ve **\\while\\** ile past simple karşılaştırması yapılır.",
+    },
+    {
+      id: "68",
+      level: "B1",
+      title: "Past Simple vs Past Continuous",
+      titleEng: "Past Simple vs Past Continuous",
+      titleEx: "Past Simple, Past Continuous, When, While",
+      intro:
+        "Past continuous geçmişte sürerken kesilen veya eşzamanlı süreçleri anlatır. **\\Past Simple\\**, **\\Past Continuous\\**, **\\When\\**, **\\While\\** **\\was/were + V-ing\\** iskeletiyle kurulur. **\\When\\** ve **\\while\\** ile past simple karşılaştırması yapılır.",
+    },
+    {
+      id: "69",
+      level: "B1",
+      title: "Geçmişin Geçmişi",
+      titleEng: "Past Perfect",
+      titleEx: "Had + Past Participle, Before, After",
+      intro:
+        "Past perfect iki geçmiş olayı sıralar; önce tamamlanan eylem **\\had + V3\\** ile gelir. **\\Had + Past Participle\\**, **\\Before\\**, **\\After\\** bağlaçları zaman çizgisini netleştirir. Anlatı ve raporlarda önce–sonra ilişkisini kurarsın.",
+    },
+    {
+      id: "70",
+      level: "B1",
+      title: "Past Perfect vs Past Simple",
+      titleEng: "Past Perfect vs Past Simple",
+      titleEx: "Had + V3, Past Simple, By The Time",
+      intro:
+        "Past perfect iki geçmiş olayı sıralar; önce tamamlanan eylem **\\had + V3\\** ile gelir. **\\Had + V3\\**, **\\Past Simple\\**, **\\By The Time\\** bağlaçları zaman çizgisini netleştirir. Anlatı ve raporlarda önce–sonra ilişkisini kurarsın.",
+    },
+    {
+      id: "71",
+      level: "B1",
+      title: "Gelecekte Süreklilik",
+      titleEng: "Future Continuous",
+      titleEx: "Will Be + V-ing, This Time Tomorrow",
+      intro:
+        "İleri gelecek zamanlar ileri bir noktada devam eden veya tamamlanmış eylemi gösterir. **\\Will Be + V-ing\\**, **\\This Time Tomorrow\\** **\\by\\** ve **\\by the time\\** ile birlikte kullanılır. Plan ve tahmin üstü anlatımda devreye girer.",
+    },
+    {
+      id: "72",
+      level: "B1",
+      title: "İleri Gelecek Zaman Yapıları",
+      titleEng: "Advanced Future Forms",
+      titleEx: "Will Be Doing, Will Have Done, By",
+      intro:
+        "İleri Gelecek Zaman Yapıları konusunda **\\Will Be Doing\\**, **\\Will Have Done\\**, **\\By\\** yapıları B1 düzeyinde işlenir. Kuralı örnek cümlelerle görür, alıştırmalarla kalıcı hâle getirirsin.",
+    },
+    {
+      id: "73",
+      level: "B1",
+      title: "İkinci Koşul",
+      titleEng: "Second Conditional",
+      titleEx: "If + Past Simple, Would + Verb",
+      intro:
+        "İkinci koşul gerçek olmayan veya düşük ihtimalli şartı anlatır. **\\If + Past Simple\\**, **\\Would + Verb\\** yapısı **\\would\\** ile sonuç kurar. Hayal ve tavsiye cümlelerinde kullanırsın.",
+    },
+    {
+      id: "74",
+      level: "B1",
+      title: "Üçüncü Koşul",
+      titleEng: "Third Conditional",
+      titleEx: "If + Past Perfect, Would Have + V3",
+      intro:
+        "Üçüncü koşul geçmişte gerçekleşmemiş şartı ve olası sonucunu birleştirir. **\\If + Past Perfect\\**, **\\Would Have + V3\\** **\\would have + V3\\** ile pişmanlık ve eleştiri kurulur.",
+    },
+    {
+      id: "75",
+      level: "B1",
+      title: "Koşul Cümlelerinin Karşılaştırılması",
+      titleEng: "Zero, First, Second and Third Conditionals",
+      titleEx: "Zero, First, Second, Third, Conditionals",
+      intro:
+        "Üçüncü koşul geçmişte gerçekleşmemiş şartı ve olası sonucunu birleştirir. **\\Zero\\**, **\\First\\**, **\\Second\\**, **\\Third\\**, **\\Conditionals\\** **\\would have + V3\\** ile pişmanlık ve eleştiri kurulur.",
+    },
+    {
+      id: "76",
+      level: "B1",
+      title: "Koşul Bağlaçları",
+      titleEng: "Conditional Conjunctions",
+      titleEx: "Unless, As Long As, Provided That",
+      intro:
+        "Koşul cümlelerinde şart ve sonuç kipleri birbirine bağlıdır. **\\Unless\\**, **\\As Long As\\**, **\\Provided That\\** farklı zaman ve ihtimal düzeylerini temsil eder. Gerçek, düşünce ve geçmişe dönük senaryoları ayırırsın.",
+    },
+    {
+      id: "77",
+      level: "B1",
+      title: "Çıkarım Bildiren Modallar",
+      titleEng: "Modals Expressing Deduction",
+      titleEx: "Must, Can't, May, Might, Could",
+      intro:
+        "Modal fiiller yardımcı gibi çekimlenir; arkasından fiil yalın kalır. **\\Must\\**, **\\Can't\\**, **\\May\\**, **\\Might\\**, **\\Could\\** zorunluluk, olasılık, izin veya çıkarım taşır. Bağlama göre anlamı daraltırsın.",
+    },
+    {
+      id: "78",
+      level: "B1",
+      title: "Modal Perfect Yapıları",
+      titleEng: "Modal Perfect Structures",
+      titleEx: "Must Have, Can't Have, Could Have, May Have, Might Have",
+      intro:
+        "Modal fiiller yardımcı gibi çekimlenir; arkasından fiil yalın kalır. **\\Must Have\\**, **\\Can't Have\\**, **\\Could Have\\**, **\\May Have\\**, **\\Might Have\\** zorunluluk, olasılık, izin veya çıkarım taşır. Bağlama göre anlamı daraltırsın.",
+    },
+    {
+      id: "79",
+      level: "B1",
+      title: "Geçmişte Tavsiye ve Pişmanlık",
+      titleEng: "Should Have / Shouldn't Have",
+      titleEx: "Should Have, Shouldn't Have, Regret",
+      intro:
+        "Geçmişte Tavsiye ve Pişmanlık konusunda **\\Should Have\\**, **\\Shouldn't Have\\**, **\\Regret\\** yapıları B1 düzeyinde işlenir. Kuralı örnek cümlelerle görür, alıştırmalarla kalıcı hâle getirirsin.",
+    },
+    {
+      id: "80",
+      level: "B1",
+      title: "Edilgen Yapı",
+      titleEng: "Passive Voice",
+      titleEx: "Present Passive, Past Passive, Future Passive, Be + V3",
+      intro:
+        "Edilgen yapıda özne eylemden etkilenendir; **\\be + V3\\** veya modal + **\\be + V3\\** kullanılır. **\\Present Passive\\**, **\\Past Passive\\**, **\\Future Passive\\**, **\\Be + V3\\** haber, bilim ve resmî metinlerde sık görülür. Etken–edilgen dönüşümünü uygularsın.",
+    },
+    {
+      id: "81",
+      level: "B1",
+      title: "Etken ve Edilgen Yapı",
+      titleEng: "Active vs Passive Voice",
+      titleEx: "Active Voice, Passive Voice",
+      intro:
+        "Edilgen yapıda özne eylemden etkilenendir; **\\be + V3\\** veya modal + **\\be + V3\\** kullanılır. **\\Active Voice\\**, **\\Passive Voice\\** haber, bilim ve resmî metinlerde sık görülür. Etken–edilgen dönüşümünü uygularsın.",
+    },
+    {
+      id: "82",
+      level: "B1",
+      title: "Dolaylı Anlatım",
+      titleEng: "Reported Speech",
+      titleEx: "Say, Tell, Backshift, That-Clause",
+      intro:
+        "Dolaylı anlatımda zaman ve zamirler geriye kayar; **\\say/tell\\** ve **\\that\\** cümlesi temel taşıdır. **\\Say\\**, **\\Tell\\**, **\\Backshift\\**, **\\That-Clause\\** soru, emir ve öneri aktarımında fiil seçimini değiştirir.",
+    },
+    {
+      id: "83",
+      level: "B1",
+      title: "Dolaylı Sorular",
+      titleEng: "Reported Questions",
+      titleEx: "Ask, If, Whether, Wh- Words",
+      intro:
+        "Dolaylı anlatımda zaman ve zamirler geriye kayar; **\\say/tell\\** ve **\\that\\** cümlesi temel taşıdır. **\\Ask\\**, **\\If\\**, **\\Whether\\**, **\\Wh- Words\\** soru, emir ve öneri aktarımında fiil seçimini değiştirir.",
+    },
+    {
+      id: "84",
+      level: "B1",
+      title: "Dolaylı Emir ve Rica",
+      titleEng: "Reported Commands and Requests",
+      titleEx: "Tell + To Infinitive, Ask + Not To",
+      intro:
+        "Dolaylı anlatımda zaman ve zamirler geriye kayar; **\\say/tell\\** ve **\\that\\** cümlesi temel taşıdır. **\\Tell + To Infinitive\\**, **\\Ask + Not To\\** soru, emir ve öneri aktarımında fiil seçimini değiştirir.",
+    },
+    {
+      id: "85",
+      level: "B1",
+      title: "Aktarım Fiilleri",
+      titleEng: "Reporting Verbs",
+      titleEx: "Deny, Admit, Suggest, Advise, Warn, Insist",
+      intro:
+        "Aktarım Fiilleri konusunda **\\Deny\\**, **\\Admit\\**, **\\Suggest\\**, **\\Advise\\**, **\\Warn\\**, **\\Insist\\** yapıları B1 düzeyinde işlenir. Kuralı örnek cümlelerle görür, alıştırmalarla kalıcı hâle getirirsin.",
+    },
+    {
+      id: "86",
+      level: "B1",
+      title: "Tanımlayıcı İlgi Cümlecikleri",
+      titleEng: "Defining Relative Clauses",
+      titleEx: "Who, Which, That, Defining",
+      intro:
+        "İlgi cümlecikleri ismi tanımlayarak cümleyi sıkılaştırır. **\\Who\\**, **\\Which\\**, **\\That\\**, **\\Defining\\** tanımlayıcı ve tanımsız ayrımında virgül ve anlam farkı oluşur.",
+    },
+    {
+      id: "87",
+      level: "B1",
+      title: "Tanımlayıcı Olmayan İlgi Cümlecikleri",
+      titleEng: "Non-Defining Relative Clauses",
+      titleEx: "Commas, Who, Which, Non-Defining",
+      intro:
+        "İlgi cümlecikleri ismi tanımlayarak cümleyi sıkılaştırır. **\\Commas\\**, **\\Who\\**, **\\Which\\**, **\\Non-Defining\\** tanımlayıcı ve tanımsız ayrımında virgül ve anlam farkı oluşur.",
+    },
+    {
+      id: "88",
+      level: "B1",
+      title: "İlgi Zamirleri",
+      titleEng: "Relative Pronouns",
+      titleEx: "Who, Whom, Whose, Which, That",
+      intro:
+        "İlgi cümlecikleri ismi tanımlayarak cümleyi sıkılaştırır. **\\Who\\**, **\\Whom\\**, **\\Whose\\**, **\\Which\\**, **\\That\\** tanımlayıcı ve tanımsız ayrımında virgül ve anlam farkı oluşur.",
+    },
+    {
+      id: "89",
+      level: "B1",
+      title: "İleri Gerund ve Infinitive",
+      titleEng: "Advanced Gerunds and Infinitives",
+      titleEx: "Verb + -ing, Verb + To Infinitive, Enjoy Doing",
+      intro:
+        "Fiilden sonra gelen **\\-ing\\** veya **\\to\\** biçimi anlamı değiştirir. **\\Verb + -ing\\**, **\\Verb + To Infinitive\\**, **\\Enjoy Doing\\** hangi fiilin hangi yapıyı aldığını gösterir. Ezber ve örnek cümle burada belirleyicidir.",
+    },
+    {
+      id: "90",
+      level: "B1",
+      title: "Yaptırma ve İzin Yapıları",
+      titleEng: "Make / Let / Allow",
+      titleEx: "Make, Let, Allow, Be Allowed To",
+      intro:
+        "Yaptırma ve İzin Yapıları konusunda **\\Make\\**, **\\Let\\**, **\\Allow\\**, **\\Be Allowed To\\** yapıları B1 düzeyinde işlenir. Kuralı örnek cümlelerle görür, alıştırmalarla kalıcı hâle getirirsin.",
+    },
+    {
+      id: "91",
+      level: "B1",
+      title: "Alışkanlık Yapıları",
+      titleEng: "Used To / Be Used To / Get Used To",
+      titleEx: "Used To, Be Used To, Get Used To",
+      intro:
+        "Alışkanlık Yapıları konusunda **\\Used To\\**, **\\Be Used To\\**, **\\Get Used To\\** yapıları B1 düzeyinde işlenir. Kuralı örnek cümlelerle görür, alıştırmalarla kalıcı hâle getirirsin.",
+    },
+    {
+      id: "92",
+      level: "B1",
+      title: "Wish Yapıları",
+      titleEng: "Wish Structures",
+      titleEx: "Wish + Past Simple, Wish + Past Perfect",
+      intro:
+        "Dilek ve tercih yapıları gerçekle çelişen durumu veya pişmanlığı anlatır. **\\Wish + Past Simple\\**, **\\Wish + Past Perfect\\** zamir ve kip kaymasıyla kurulur. Konuşmada duygu ve nezaket katmanı ekler.",
+    },
+    {
+      id: "93",
+      level: "B1",
+      title: "Bir İşi Başkasına Yaptırma",
+      titleEng: "Causative Have / Get",
+      titleEx: "Have Something Done, Get Someone To",
+      intro:
+        "Bir İşi Başkasına Yaptırma konusunda **\\Have Something Done\\**, **\\Get Someone To\\** yapıları B1 düzeyinde işlenir. Kuralı örnek cümlelerle görür, alıştırmalarla kalıcı hâle getirirsin.",
+    },
+    {
+      id: "94",
+      level: "B1",
+      title: "Deyimsel Fiiller",
+      titleEng: "Phrasal Verbs",
+      titleEx: "Look After, Give Up, Turn On, Phrasal Verbs",
+      intro:
+        "Phrasal fiiller edat veya zarf ile birleşince yeni anlam üretir. **\\Look After\\**, **\\Give Up\\**, **\\Turn On\\**, **\\Phrasal Verbs\\** ayrılabilen ve ayrılamayan türleri fiil–nesne sırasını değiştirir. Günlük İngilizcede yüksek frekanslıdır.",
+    },
+    {
+      id: "95",
+      level: "B1",
+      title: "Ayrılabilen ve Ayrılamayan Phrasal Verbs",
+      titleEng: "Separable and Inseparable Phrasal Verbs",
+      titleEx: "Separable, Inseparable, Put On, Look Up",
+      intro:
+        "Phrasal fiiller edat veya zarf ile birleşince yeni anlam üretir. **\\Separable\\**, **\\Inseparable\\**, **\\Put On\\**, **\\Look Up\\** ayrılabilen ve ayrılamayan türleri fiil–nesne sırasını değiştirir. Günlük İngilizcede yüksek frekanslıdır.",
+    },
+    {
+      id: "96",
+      level: "B1",
+      title: "Bağlayıcı İfadeler",
+      titleEng: "Linking Words",
+      titleEx: "However, Therefore, Moreover, Furthermore",
+      intro:
+        "Bağlayıcı İfadeler konusunda **\\However\\**, **\\Therefore\\**, **\\Moreover\\**, **\\Furthermore\\** yapıları B1 düzeyinde işlenir. Kuralı örnek cümlelerle görür, alıştırmalarla kalıcı hâle getirirsin.",
+    },
+    {
+      id: "97",
+      level: "B1",
+      title: "Zıtlık Yapıları",
+      titleEng: "Contrast Structures",
+      titleEx: "Although, Despite, In Spite Of",
+      intro:
+        "Zıtlık Yapıları konusunda **\\Although\\**, **\\Despite\\**, **\\In Spite Of\\** yapıları B1 düzeyinde işlenir. Kuralı örnek cümlelerle görür, alıştırmalarla kalıcı hâle getirirsin.",
+    },
+    {
+      id: "98",
+      level: "B1",
+      title: "Derece ve Vurgu",
+      titleEng: "Degree and Emphasis",
+      titleEx: "So, Such, So That, Such That",
+      intro:
+        "Vurgulu cümleler bilgi yapısını yeniden düzenleyerek dikkat çeker. **\\So\\**, **\\Such\\**, **\\So That\\**, **\\Such That\\** **\\it is ... that\\** veya **\\what ... is\\** kalıplarıyla kurulur.",
+    },
+    {
+      id: "99",
+      level: "B1",
+      title: "Vurgulu Do / Does / Did",
+      titleEng: "Emphatic Do",
+      titleEx: "Do / Does / Did + Base Verb",
+      intro:
+        "Vurgulu cümleler bilgi yapısını yeniden düzenleyerek dikkat çeker. **\\Do / Does / Did + Base Verb\\** **\\it is ... that\\** veya **\\what ... is\\** kalıplarıyla kurulur.",
+    },
+    {
+      id: "100",
+      level: "B1",
+      title: "Soru Kelimesi + Infinitive",
+      titleEng: "Question Word + Infinitive",
+      titleEx: "What To Do, How To Use, Where To Go",
+      intro:
+        "Fiilden sonra gelen **\\-ing\\** veya **\\to\\** biçimi anlamı değiştirir. **\\What To Do\\**, **\\How To Use\\**, **\\Where To Go\\** hangi fiilin hangi yapıyı aldığını gösterir. Ezber ve örnek cümle burada belirleyicidir.",
+    },
+    {
+      id: "101",
+      level: "B1",
+      title: "-ed ve -ing Sıfatları",
+      titleEng: "Participle Adjectives",
+      titleEx: "-ed Adjectives, -ing Adjectives, Bored, Boring",
+      intro:
+        "Participle yapıları yan cümleyi kısaltır; **\\-ing\\** ve **\\V3\\** biçimleri isim veya sıfat görevi görür. **\\-ed Adjectives\\**, **\\-ing Adjectives\\**, **\\Bored\\**, **\\Boring\\** akademik ve yazılı metinlerde yoğunlaşır.",
     },
   ],
   B2: [
     {
-      id: "64",
-      level: "B2",
-      title: "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)",
-      titleEng: "Future Continuous & Future Perfect",
-      titleEx:
-        "This time tomorrow, I will be flying to Berlin. By June, I will have graduated.",
-      intro:
-        "Gelecekteki belirli bir anda devam ediyor olacak süreçleri ve belli bir tarihe kadar tamamlanmış olacak hedefleri yüksek hassasiyetle ifade etmeye hazır mısın? Bu derste **\\Future Continuous\\** (**\\will be V-ing\\**) ve **\\Future Perfect\\** (**\\will have V3\\**) zamanlarının kullanım alanlarını keşfedeceksin. **\\This time next week, by, by the time, within\\** gibi zaman belirteçleriyle geleceğin farklı kesitlerini nasıl kurgulayacağını inceleyeceksin. Kariyer planlarını, proje takvimlerini ve gelecek öngörülerini ileri düzey bir zaman hakimiyetiyle anlatabileceksin.",
-    },
-    {
-      id: "65",
-      level: "B2",
-      title: "Süregelen Bitmiş Gelecek Zaman",
-      titleEng: "Future Perfect Continuous",
-      titleEx: "By next month, I will have been working here for ten years.",
-      intro:
-        "Gelecekte belirli bir ana kadar ne kadar süredir bir eylemin devam etmiş olacağını vurgulamaya hazır mısın? Bu derste **\\will have been + V-ing\\** formülüyle kurulan **\\Future Perfect Continuous\\** zamanını ve **\\by\\** ile belirlenen gelecek referans noktasını keşfedeceksin. **\\Future Perfect\\**'in tamamlanmış sonuca odaklanması ile bu zamanın süre vurgusunu nasıl öne çıkardığını inceleyeceksin. Kariyer hedeflerini ve uzun süreli planlarını ileri düzey bir zaman hassasiyetiyle ifade edebileceksin.",
-    },
-    {
-      id: "66",
+      id: "102",
       level: "B2",
       title: "Süregelen Miş'li Geçmiş Zaman",
       titleEng: "Past Perfect Continuous",
-      titleEx: "She was exhausted because she had been working all day.",
+      titleEx: "Had Been + V-ing, All Day, Because",
       intro:
-        "Geçmişteki bir olaydan hemen önce ne kadar süredir bir eylemin devam ettiğini ve o anda yarattığı somut etkiyi vurgulamaya hazır mısın? Bu derste **\\had been + V-ing\\** formülüyle kurulan **\\Past Perfect Continuous\\** yapısını tüm incelikleriyle keşfedeceksin. Geçmişte tamamlanmış sayıya odaklanan **\\Past Perfect Simple\\** ile sürecin uzunluğunu ve arka planını öne çıkaran bu zaman arasındaki farkı inceleyeceksin. Hikaye anlatımında ve geçmiş olayların nedenlerini açıklarken sebep-sonuç bağlarını ustalıkla kurabileceksin.",
+        "Past perfect iki geçmiş olayı sıralar; önce tamamlanan eylem **\\had + V3\\** ile gelir. **\\Had Been + V-ing\\**, **\\All Day\\**, **\\Because\\** bağlaçları zaman çizgisini netleştirir. Anlatı ve raporlarda önce–sonra ilişkisini kurarsın.",
     },
     {
-      id: "67",
+      id: "103",
       level: "B2",
-      title: "Geçmişe Dönük Kipler (Perfect Modals)",
-      titleEng: "Modals in the Past (should have, must have, might have)",
-      titleEx: "You should have called me. He must have forgotten the meeting.",
+      title: "Gelecekte Tamamlanmış Eylemler",
+      titleEng: "Future Perfect",
+      titleEx: "Will Have + V3, By June, By Then",
       intro:
-        "Geçmişte yaşanmış olaylar hakkında mantıklı çıkarımlar yapmaya, pişmanlıkları veya yapıcı eleştirileri incelikle dile getirmeye hazır mısın? Bu derste **\\must have, can't have, might have, could have\\** ile geçmişe dönük olasılıkları ve **\\should have / shouldn't have + V3\\** ile kaçırılmış fırsatları keşfedeceksin. Ayrıca yapmaya gerek olmayan ama yapılmış eylemleri anlatan **\\needn't have V3\\** kalıbının ince nüansını inceleyeceksin. Geçmiş olayları değerlendirirken duygusal ve mantıksal tonunu kusursuzca ayarlayabileceksin.",
+        "İleri gelecek zamanlar ileri bir noktada devam eden veya tamamlanmış eylemi gösterir. **\\Will Have + V3\\**, **\\By June\\**, **\\By Then\\** **\\by\\** ve **\\by the time\\** ile birlikte kullanılır. Plan ve tahmin üstü anlatımda devreye girer.",
     },
     {
-      id: "68",
+      id: "104",
       level: "B2",
-      title: "Needn't have vs. Didn't need to",
-      titleEng: "Needn't have vs. Didn't need to",
-      titleEx:
-        "You needn't have bought milk — we already had some. I didn't need to wake up early; the meeting was cancelled.",
+      title: "Süregenen Bitmiş Gelecek Zaman",
+      titleEng: "Future Perfect Continuous",
+      titleEx: "Will Have Been + V-ing, For Ten Years",
       intro:
-        "Geçmişte yapılmak zorunda olunmayan veya gereksiz yere yapılmış eylemleri birbirinden ayırarak doğru tonu kullanmaya hazır mısın? Bu derste fiili yapmaya zorunluluğun olmadığını bildiren **\\didn't need to\\** ile yapıldığı halde gereksiz olduğunu vurgulayan **\\needn't have + V3\\** arasındaki kritik farkı keşfedeceksin. Olumlu ve olumsuz örneklerle **pişmanlık**, **\\rahatlama\\** ve **\\gereksiz emek\\** nüanslarını inceleyeceksin. Geçmiş olayları değerlendirirken karşındakinin gerçekten mecbur olup olmadığını net biçimde ifade edebileceksin.",
+        "İleri gelecek zamanlar ileri bir noktada devam eden veya tamamlanmış eylemi gösterir. **\\Will Have Been + V-ing\\**, **\\For Ten Years\\** **\\by\\** ve **\\by the time\\** ile birlikte kullanılır. Plan ve tahmin üstü anlatımda devreye girer.",
     },
     {
-      id: "69",
+      id: "105",
       level: "B2",
-      title: "Koşul Cümleleri (Tip 3 & Karışık Tipler)",
-      titleEng: "Third & Mixed Conditionals",
-      titleEx:
-        "If I had studied harder, I would have passed. / If I had taken that job, I would be rich now.",
+      title: "Geçmişten Bakılan Gelecek",
+      titleEng: "Future in the Past",
+      titleEx: "Was / Were To, Was Going To, Would, Was About To",
       intro:
-        "Geçmişteki gerçekleşmemiş senaryoları, keşkeleri ve zamanlar arası varsayımsal sonuçları ustalıkla ifade etmeye hazır mısın? Bu derste geçmişteki hayali durumları anlatan **\\Third Conditional\\** (**\\If + had V3, would have V3\\**) ile geçmişteki bir koşulun bugünkü sonucunu veya bugünkü genel bir durumun geçmişteki etkisini birleştiren **\\Mixed Conditionals\\** yapılarını keşfedeceksin. **\\Would have, could have, might have\\** seçimlerinin anlamı nasıl esnettiğini inceleyeceksin. Karmaşık varsayımları ve pişmanlıkları doğru zaman uyumuyla akıcı biçimde kurabileceksin.",
+        "Geçmişten bakılan gelecek **\\was going to\\**, **\\would\\** ve **\\was about to\\** ile ifade edilir. **\\Was / Were To\\**, **\\Was Going To\\**, **\\Would\\**, **\\Was About To\\** dolaylı anlatım ve geçmiş plan cümlelerinde görülür.",
     },
     {
-      id: "70",
+      id: "106",
       level: "B2",
-      title: "Dilek & Keşke Cümleleri (Wish & If Only)",
-      titleEng: "Wish & If Only Clauses",
-      titleEx: "I wish I had more free time. If only I hadn't said that.",
+      title: "Karma Koşul Cümleleri",
+      titleEng: "Mixed Conditionals",
+      titleEx: "If I Had, I Would Be, Mixed Types",
       intro:
-        "Şu anki durumlarla ilgili hayallerini, geçmişe dair pişmanlıklarını ve çevrendekilerin değişmesini istediğin davranışlarını içtenlikle dile getirmeye hazır mısın? Bu derste **\\wish\\** ve daha güçlü vurgu taşıyan **\\if only\\** kalıplarının **\\Past Simple\\**, **\\Past Perfect\\** ve **\\would\\** ile kurulan üç farklı zaman kullanımını keşfedeceksin. Neden **\\I wish I would\\** kalıbının kendi eylemlerimiz için kullanılmadığını ve **\\were\\** kullanımının inceliklerini inceleyeceksin. Duygu, sitem ve keşkelerini en doğru kiple doğal bir İngilizceyle ifade edebileceksin.",
+        "Koşul cümlelerinde şart ve sonuç kipleri birbirine bağlıdır. **\\If I Had\\**, **\\I Would Be\\**, **\\Mixed Types\\** farklı zaman ve ihtimal düzeylerini temsil eder. Gerçek, düşünce ve geçmişe dönük senaryoları ayırırsın.",
     },
     {
-      id: "71",
+      id: "107",
       level: "B2",
-      title: "Gerçek Dışı Geçmiş",
-      titleEng: "Unreal Past (It's high time, would rather, as if, suppose)",
-      titleEx:
-        "It's high time you left. I'd rather you didn't smoke here. She talks as if she knew everything.",
+      title: "İleri Koşul Yapıları",
+      titleEng: "Advanced Conditional Structures",
+      titleEx: "Unless, Provided That, Supposing, Otherwise",
       intro:
-        "Şu anki durumla gerçek veya arzu ettiğin geçmiş arasında bir köprü kuran incelikli yapıları kullanmaya hazır mısın? Bu derste **\\It's (high) time + Past Simple\\**, **would rather + özne + Past Simple**, **\\as if / as though + Past Simple\\** ve **\\suppose / supposing (that)\\** gibi **\\Unreal Past\\** kalıplarını keşfedeceksin. Gerçek olmayan ya da geç kalmış eylemler için geçmiş kiplerin neden seçildiğini ve günlük ile resmi ton farklarını inceleyeceksin. Uyarı, tercih ve hayali senaryolarda İngilizce düşünme sistemine uygun cümleler kurabileceksin.",
+        "Koşul cümlelerinde şart ve sonuç kipleri birbirine bağlıdır. **\\Unless\\**, **\\Provided That\\**, **\\Supposing\\**, **\\Otherwise\\** farklı zaman ve ihtimal düzeylerini temsil eder. Gerçek, düşünce ve geçmişe dönük senaryoları ayırırsın.",
     },
     {
-      id: "72",
+      id: "108",
       level: "B2",
-      title: "İleri Edilgen Çatı & Ettirgen Yapılar",
-      titleEng: "Advanced Passive & Causatives (have/get something done)",
-      titleEx: "I had my car repaired yesterday. The bridge is being built.",
+      title: "Devrik Koşul Cümleleri",
+      titleEng: "Inverted Conditionals",
+      titleEx: "Had I Known, Were I You, Should You Need",
       intro:
-        "Süregelen ve bitmiş zamanlarda edilgen yapılar kurmayı ve bir hizmeti veya işi başkasına yaptırmayı akıcı biçimde ifade etmeye hazır mısın? Bu derste tüm zaman kipleri ve kip fiillerle (**\\modals\\**) çekimlenen ileri edilgen yapıları ile **\\have / get something done\\** ettirgen kalıplarını keşfedeceksin. Ayrıca **\\make, let, have, get\\** fiillerinin etken ettirgen kullanımlarını ve talihsiz olayları anlatan **\\have something done\\** nüansını inceleyeceksin. Günlük işlerden kurumsal raporlara kadar eylemin odağını ustalıkla yönetebileceksin.",
+        "Koşul cümlelerinde şart ve sonuç kipleri birbirine bağlıdır. **\\Had I Known\\**, **\\Were I You\\**, **\\Should You Need\\** farklı zaman ve ihtimal düzeylerini temsil eder. Gerçek, düşünce ve geçmişe dönük senaryoları ayırırsın.",
     },
     {
-      id: "74",
+      id: "109",
       level: "B2",
-      title: "Be supposed to / Be allowed to / Ought to",
-      titleEng: "Be supposed to / Be allowed to / Ought to",
-      titleEx:
-        "You are supposed to wear a badge. Students aren't allowed to use phones. You ought to apologise.",
+      title: "İleri Wish Yapıları",
+      titleEng: "Advanced Wish Structures",
+      titleEx: "Wish + Past, Wish + Past Perfect",
       intro:
-        "Beklenti, izin ve ahlaki yükümlülükleri tek çatı altında doğru fiil kalıplarıyla ifade etmeye hazır mısın? Bu derste kurallara veya söylentilere dayanan **\\be supposed to\\**, resmi ve açık izin bildiren **\\be allowed to\\** ile içsel veya toplumsal gerekliliği taşıyan **\\ought to\\** yapılarını keşfedeceksin. **\\to be\\** çekimleri, olumsuz ve soru biçimleri ile günlük, okul ve iş ortamı örneklerini inceleyeceksin. Topluluk normlarını ve kişisel sorumlulukları birbirine karıştırmadan net cümleler kurabileceksin.",
+        "Dilek ve tercih yapıları gerçekle çelişen durumu veya pişmanlığı anlatır. **\\Wish + Past\\**, **\\Wish + Past Perfect\\** zamir ve kip kaymasıyla kurulur. Konuşmada duygu ve nezaket katmanı ekler.",
     },
     {
-      id: "75",
+      id: "110",
       level: "B2",
-      title: "İleri Dolaylı Anlatım Fiilleri",
-      titleEng: "Reporting Verbs (deny, advise, suggest, accuse)",
-      titleEx: "He denied stealing the money. She advised me to apply early.",
+      title: "Keşke Yapısı",
+      titleEng: "If Only",
+      titleEx: "If Only, Wish, Regret",
       intro:
-        "Sürekli **\\said\\** ve **\\told\\** tekrarlamak yerine konuşmanın niyetini, duygusunu ve tonunu yansıtan zengin aktarım fiillerine geçmeye hazır mısın? Bu derste **\\deny, admit, suggest, advise, warn, insist, accuse, apologize\\** gibi ileri düzey dolaylı anlatım fiillerini keşfedeceksin. Her fiilin ardından gelen **\\V-ing\\**, **\\to-infinitive\\**, **\\edat + V-ing\\** veya **\\that\\** cümleciği kalıplarını gruplandırarak inceleyeceksin. Akademik metinlerde, özetlerde ve profesyonel konuşmalarda başkalarının fikirlerini çok daha etkileyici biçimde aktarabileceksin.",
+        "Dilek ve tercih yapıları gerçekle çelişen durumu veya pişmanlığı anlatır. **\\If Only\\**, **\\Wish\\**, **\\Regret\\** zamir ve kip kaymasıyla kurulur. Konuşmada duygu ve nezaket katmanı ekler.",
     },
     {
-      id: "76",
+      id: "111",
       level: "B2",
-      title: "Sıfat Cümleciklerinde Kısaltmalar",
+      title: "Tercih Yapıları",
+      titleEng: "Would Rather / Would Prefer",
+      titleEx: "Would Rather, Would Prefer, Than",
+      intro:
+        "Dilek ve tercih yapıları gerçekle çelişen durumu veya pişmanlığı anlatır. **\\Would Rather\\**, **\\Would Prefer\\**, **\\Than\\** zamir ve kip kaymasıyla kurulur. Konuşmada duygu ve nezaket katmanı ekler.",
+    },
+    {
+      id: "112",
+      level: "B2",
+      title: "Zamanı Geldi Yapısı",
+      titleEng: "It's (High) Time",
+      titleEx: "It's Time, It's High Time, Past Simple",
+      intro:
+        "**Zamanı Geldi Yapısı** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\It's Time\\**, **\\It's High Time\\**, **\\Past Simple\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "113",
+      level: "B2",
+      title: "İleri Modal Fiiller",
+      titleEng: "Advanced Modal Verbs",
+      titleEx: "Might, Could, Ought To, Need, Dare",
+      intro:
+        "Modal fiiller yardımcı gibi çekimlenir; arkasından fiil yalın kalır. **\\Might\\**, **\\Could\\**, **\\Ought To\\**, **\\Need\\**, **\\Dare\\** zorunluluk, olasılık, izin veya çıkarım taşır. Bağlama göre anlamı daraltırsın.",
+    },
+    {
+      id: "114",
+      level: "B2",
+      title: "Needn't Have ve Didn't Need To",
+      titleEng: "Needn't Have vs Didn't Need To",
+      titleEx: "Needn't Have, Didn't Need To",
+      intro:
+        "**Needn't Have ve Didn't Need To** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Needn't Have\\**, **\\Didn't Need To\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "115",
+      level: "B2",
+      title: "İleri Modal Perfect Yapıları",
+      titleEng: "Advanced Modal Perfects",
+      titleEx: "Might Have, Could Have, Should Have, Must Have",
+      intro:
+        "Modal fiiller yardımcı gibi çekimlenir; arkasından fiil yalın kalır. **\\Might Have\\**, **\\Could Have\\**, **\\Should Have\\**, **\\Must Have\\** zorunluluk, olasılık, izin veya çıkarım taşır. Bağlama göre anlamı daraltırsın.",
+    },
+    {
+      id: "116",
+      level: "B2",
+      title: "İleri Edilgen Yapılar",
+      titleEng: "Advanced Passive Voice",
+      titleEx: "Passive Modals, Get Passive, Have Something Done",
+      intro:
+        "Edilgen yapıda özne eylemden etkilenendir; **\\be + V3\\** veya modal + **\\be + V3\\** kullanılır. **\\Passive Modals\\**, **\\Get Passive\\**, **\\Have Something Done\\** haber, bilim ve resmî metinlerde sık görülür. Etken–edilgen dönüşümünü uygularsın.",
+    },
+    {
+      id: "117",
+      level: "B2",
+      title: "Edilgen Aktarım Yapıları",
+      titleEng: "Passive Reporting Structures",
+      titleEx: "It Is Said That, He Is Said To, Is Believed To",
+      intro:
+        "Edilgen yapıda özne eylemden etkilenendir; **\\be + V3\\** veya modal + **\\be + V3\\** kullanılır. **\\It Is Said That\\**, **\\He Is Said To\\**, **\\Is Believed To\\** haber, bilim ve resmî metinlerde sık görülür. Etken–edilgen dönüşümünü uygularsın.",
+    },
+    {
+      id: "118",
+      level: "B2",
+      title: "İleri Ettirgen Yapılar",
+      titleEng: "Advanced Causative Structures",
+      titleEx: "Have / Get Something Done, Make / Let / Get",
+      intro:
+        "**İleri Ettirgen Yapılar** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Have / Get Something Done\\**, **\\Make / Let / Get\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "119",
+      level: "B2",
+      title: "İleri Dolaylı Anlatım ve Reporting Verbs",
+      titleEng: "Advanced Reported Speech",
+      titleEx: "Deny, Accuse, Apologise, Reporting Verbs",
+      intro:
+        "Dolaylı anlatımda zaman ve zamirler geriye kayar; **\\say/tell\\** ve **\\that\\** cümlesi temel taşıdır. **\\Deny\\**, **\\Accuse\\**, **\\Apologise\\**, **\\Reporting Verbs\\** soru, emir ve öneri aktarımında fiil seçimini değiştirir.",
+    },
+    {
+      id: "120",
+      level: "B2",
+      title: "Kısaltılmış İlgi Cümlecikleri",
       titleEng: "Reduced Relative Clauses",
-      titleEx:
-        "The boy standing by the gate is my brother. The book written in 1920 is rare.",
+      titleEx: "V-ing, V3, Standing, Written",
       intro:
-        "Uzun sıfat cümleciklerini sadeleştirerek İngilizce cümlelerine çok daha akıcı, yoğun ve doğal bir ritim kazandırmaya hazır mısın? Bu derste **\\who, which, that\\** ilgi zamirlerini ve **\\to be\\** fiilini düşürerek etken yapıları **\\V-ing\\**, edilgen yapıları ise **\\V3\\** biçiminde kısaltmayı keşfedeceksin. Ayrıca **\\the first, the last, the only\\** veya en üstünlük derecesi içeren ifadelerden sonra kullanılan **to + V1** kısaltmalarını inceleyeceksin. Hem makalelerde hem de konuşma dilinde gereksiz kelimelerden arınmış özlü ifadeler kurabileceksin.",
+        "İlgi cümlecikleri ismi tanımlayarak cümleyi sıkılaştırır. **\\V-ing\\**, **\\V3\\**, **\\Standing\\**, **\\Written\\** tanımlayıcı ve tanımsız ayrımında virgül ve anlam farkı oluşur.",
     },
     {
-      id: "77",
+      id: "121",
       level: "B2",
-      title: "İlgi Zamiri + Edat",
-      titleEng: "Relative Pronoun + Preposition (in which, to whom)",
-      titleEx:
-        "The house in which we grew up was sold. The manager to whom I wrote hasn't replied.",
+      title: "Participle Cümlecikleri",
+      titleEng: "Participle Clauses",
+      titleEx: "-ing Clause, V3 Clause, While Doing",
       intro:
-        "İlgi zamirlerini edatlarla birlikte zarif ve doğru konumda kullanmaya hazır mısın? Bu derste **\\in which, to whom, for which, on which\\** gibi **\\Relative Pronoun + Preposition\\** birleşimlerini hem resmi **preposition + whom/which** hem de günlük **\\preposition + that\\** (\\edat sonda\\) alternatifleriyle keşfedeceksin. **who/which/where** ile edatın başta mı sonda mı duracağını ve yazılı ile sözlü İngilizce farklarını inceleyeceksin. İlişki cümlelerini akıcı ve dilbilgisel olarak kusursuz genişletebileceksin.",
+        "Participle yapıları yan cümleyi kısaltır; **\\-ing\\** ve **\\V3\\** biçimleri isim veya sıfat görevi görür. **\\-ing Clause\\**, **\\V3 Clause\\**, **\\While Doing\\** akademik ve yazılı metinlerde yoğunlaşır.",
     },
     {
-      id: "78",
+      id: "122",
       level: "B2",
-      title: "Zıtlık, Amaç ve Sebep Cümlecikleri",
-      titleEng: "Clauses of Contrast, Purpose & Reason",
-      titleEx:
-        "Despite the heavy rain, the match continued. I left early so that I wouldn't miss it.",
+      title: "Perfect Participle Cümlecikleri",
+      titleEng: "Perfect Participle Clauses",
+      titleEx: "Having Done, Having Been, Perfect Participle",
       intro:
-        "Fikirlerin arasındaki karşıtlık, amaç ve neden-sonuç ilişkilerini üst düzey bağlaçlarla ustalıkla örmeye hazır mısın? Bu derste **\\although, even though, despite, in spite of\\** ile zıtlık; **\\so that, in order to, so as to\\** ile amaç; **\\because, since, as, due to, owing to\\** ile sebep bildiren yapıları keşfedeceksin. Hangi bağlaçtan sonra isim öbeği veya **\\V-ing\\**, hangisinden sonra tam cümle geleceğini net kurallarla inceleyeceksin. Kompozisyonlarında ve tartışmalarda argümanlarını mantıksal bir bütünlükle savunabileceksin.",
+        "Participle yapıları yan cümleyi kısaltır; **\\-ing\\** ve **\\V3\\** biçimleri isim veya sıfat görevi görür. **\\Having Done\\**, **\\Having Been\\**, **\\Perfect Participle\\** akademik ve yazılı metinlerde yoğunlaşır.",
     },
     {
-      id: "79",
+      id: "123",
       level: "B2",
-      title: "Whereas / While: Karşıtlık Bağlaçları",
-      titleEng: "Whereas / While (Contrast Conjunctions)",
-      titleEx:
-        "Whereas online sales grew, foot traffic fell. While I enjoy the city, the rent is too high.",
+      title: "İleri Gerund ve Infinitive",
+      titleEng: "Advanced Gerunds and Infinitives",
+      titleEx: "Stop Doing, Remember To Do, Perfect Infinitive",
       intro:
-        "İki durumu veya görüşü aynı cümlede karşılaştırıp dengeli bir kontrast kurmaya hazır mısın? Bu derste **\\whereas\\** ile daha resmi ve net karşıtlık, **\\while / whilst\\** ile hem zaman hem zıtlık anlamlarını taşıyan **\\contrast conjunctions\\** yapılarını keşfedeceksin. Paragraf düzeyinde **\\although\\** ile farklarını, cümle pozisyonlarını ve noktalama alışkanlıklarını inceleyeceksin. Rapor, makale ve günlük anlatımda fikirleri yan yana koyarak daha ikna edici metinler yazabileceksin.",
+        "Fiilden sonra gelen **\\-ing\\** veya **\\to\\** biçimi anlamı değiştirir. **\\Stop Doing\\**, **\\Remember To Do\\**, **\\Perfect Infinitive\\** hangi fiilin hangi yapıyı aldığını gösterir. Ezber ve örnek cümle burada belirleyicidir.",
     },
     {
-      id: "80",
+      id: "124",
       level: "B2",
-      title: "Duyu Fiilleri + V-ing / V1",
-      titleEng: "Verbs of Perception + V-ing / Bare Infinitive",
-      titleEx:
-        "I heard him leave. I saw her crossing the street. We watched them play football.",
+      title: "Karmaşık Fiil Kalıpları",
+      titleEng: "Complex Verb Patterns",
+      titleEx: "Verb + Object + To Infinitive, Verb + -ing",
       intro:
-        "Duyu fiillerinden sonra eylemin tamamını mı süregelen halini mi vurgulayacağını bilinçli seçmeye hazır mısın? Bu derste **\\see, hear, watch, feel, notice\\** gibi **\\verbs of perception\\** sonrasında **\\bare infinitive\\** (\\V1\\) ile **\\V-ing\\** arasındaki anlam farkını keşfedeceksin. Tamamlanmış eylem ile devam eden süreç vurgusu, aktif ve edilgen örnekler ile **\\make / let\\** ile benzerlikleri inceleyeceksin. Gözlem ve deneyim anlatırken dinleyicide doğru görüntüyü oluşturabileceksin.",
+        "**Karmaşık Fiil Kalıpları** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Verb + Object + To Infinitive\\**, **\\Verb + -ing\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
     },
     {
-      id: "81",
+      id: "125",
       level: "B2",
-      title: "The more... the more",
-      titleEng: "Double Comparatives (The more... the more)",
-      titleEx:
-        "The more you practise, the better you get. The harder the problem, the more rewarding the solution.",
+      title: "Bare Infinitive",
+      titleEng: "Bare Infinitive",
+      titleEx: "Make Do, Let Go, Hear Leave, Without To",
       intro:
-        "İki değişken arasındaki orantılı ilişkiyi tek kalıpla güçlü biçimde ifade etmeye hazır mısın? Bu derste **\\The + comparative, the + comparative\\** yapısıyla kurulan **\\Double Comparatives\\** kalıbını sıfat, zarf ve fiil çekimleriyle keşfedeceksin. **\\The more..., the more... / The less..., the sooner...\\** gibi yaygın kombinasyonları ve kelime sırası kurallarını inceleyeceksin. Motivasyon, tavsiye ve genellemelerde İngilizce'de doğal ve vurucu karşılaştırmalar kurabileceksin.",
+        "Fiilden sonra gelen **\\-ing\\** veya **\\to\\** biçimi anlamı değiştirir. **\\Make Do\\**, **\\Let Go\\**, **\\Hear Leave\\**, **\\Without To\\** hangi fiilin hangi yapıyı aldığını gösterir. Ezber ve örnek cümle burada belirleyicidir.",
     },
     {
-      id: "82",
+      id: "126",
       level: "B2",
-      title: "İleri Düzey Artikel Kullanımı",
-      titleEng: "Advanced Article Usage (Zero Article)",
-      titleEx:
-        "She goes to school by bus. Life is hard without education. Mount Everest is in Asia.",
+      title: "Vurgulu Cümle Yapıları",
+      titleEng: "Cleft Sentences",
+      titleEx: "It Is That, What Is, Cleft",
       intro:
-        "Belirli veya genel anlamda **\\the\\** kullanılmayan isim gruplarında sıfır artikeli doğru uygulamaya hazır mısın? Bu derste **\\zero article\\** ile işaret edilen genel kavramlar, coğrafi isimler, yiyecek, dil, spor ve soyut isimlerde **a/an** ile **\\the\\** ayrımını keşfedeceksin. **\\go to school / go to the school\\**, **\\in hospital / in the hospital\\** gibi anlamı değiştiren çiftleri inceleyeceksin. İleri düzey metinlerde artikel seçiminden kaynaklanan belirsizlikleri ortadan kaldırabileceksin.",
+        "Vurgulu cümleler bilgi yapısını yeniden düzenleyerek dikkat çeker. **\\It Is That\\**, **\\What Is\\**, **\\Cleft\\** **\\it is ... that\\** veya **\\what ... is\\** kalıplarıyla kurulur.",
     },
     {
-      id: "83",
+      id: "127",
       level: "B2",
-      title: "Belirleyiciler & İleri Miktar Belirteçleri",
-      titleEng:
-        "Determiners & Advanced Quantifiers (all, every, each, most, none)",
-      titleEx:
-        "Every student passed. Each of them has a locker. Most people agree; none of them objected.",
+      title: "Devrik Cümle Yapıları",
+      titleEng: "Inversion",
+      titleEx: "Never Have I, Rarely Do We, Inversion",
       intro:
-        "Tüm, her, çoğu ve hiçbiri gibi miktar ve kapsam bildiren belirleyicileri doğru isimle eşleştirmeye hazır mısın? Bu derste **\\all, every, each, most, none\\** ve bunların **\\of\\** ile kurulan formlarını (**\\all of, each of, none of\\**) keşfedeceksin. Tekil ve çoğul isim uyumu, **\\every\\** ile **\\each\\** ince farkı ve **\\most\\** ile **\\the most\\** ayrımını örneklerle inceleyeceksin. Toplu ifadelerde ve istatistik anlatımında hatasız belirleyici seçimi yapabileceksin.",
+        "Devrik yapıda özne ile fiil veya yardımcı yer değiştirir; vurgu ve resmî üslup sağlar. **\\Never Have I\\**, **\\Rarely Do We\\**, **\\Inversion\\** olumsuz zarfların başta kullanımıyla sık görülür.",
     },
     {
-      id: "84",
+      id: "128",
+      level: "B2",
+      title: "Olumsuz Devrik Yapılar",
+      titleEng: "Negative Inversion",
+      titleEx: "Not Only, No Sooner, Hardly When",
+      intro:
+        "Devrik yapıda özne ile fiil veya yardımcı yer değiştirir; vurgu ve resmî üslup sağlar. **\\Not Only\\**, **\\No Sooner\\**, **\\Hardly When\\** olumsuz zarfların başta kullanımıyla sık görülür.",
+    },
+    {
+      id: "129",
+      level: "B2",
+      title: "Öne Taşıma",
+      titleEng: "Fronting",
+      titleEx: "Fronting, Topicalisation, Here Comes",
+      intro:
+        "**Öne Taşıma** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Fronting\\**, **\\Topicalisation\\**, **\\Here Comes\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "130",
+      level: "B2",
+      title: "Eksiltili Yapılar",
+      titleEng: "Ellipsis",
+      titleEx: "Omission, So Do I, Auxiliary Ellipsis",
+      intro:
+        "Eksiltme ve ikame tekrarı azaltır; önceki cümledeki öğeyi zamir veya yardımcı ile çağırır. **\\Omission\\**, **\\So Do I\\**, **\\Auxiliary Ellipsis\\** akıcı konuşma ve metin bütünlüğü sağlar.",
+    },
+    {
+      id: "131",
+      level: "B2",
+      title: "İkame Yapıları",
+      titleEng: "Substitution",
+      titleEx: "Do So, One / Ones, Such, Substitution",
+      intro:
+        "Eksiltme ve ikame tekrarı azaltır; önceki cümledeki öğeyi zamir veya yardımcı ile çağırır. **\\Do So\\**, **\\One / Ones\\**, **\\Such\\**, **\\Substitution\\** akıcı konuşma ve metin bütünlüğü sağlar.",
+    },
+    {
+      id: "132",
+      level: "B2",
+      title: "İleri Soru Eklentileri",
+      titleEng: "Advanced Question Tags",
+      titleEx: "Question Tags, Aren't I, I Am Aren't I",
+      intro:
+        "**İleri Soru Eklentileri** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Question Tags\\**, **\\Aren't I\\**, **\\I Am Aren't I\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "133",
+      level: "B2",
+      title: "Karmaşık İsim Öbekleri",
+      titleEng: "Complex Noun Phrases",
+      titleEx: "Pre-Modifiers, Post-Modifiers, Noun Phrase",
+      intro:
+        "**Karmaşık İsim Öbekleri** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Pre-Modifiers\\**, **\\Post-Modifiers\\**, **\\Noun Phrase\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "134",
+      level: "B2",
+      title: "İleri Artikel Kullanımı",
+      titleEng: "Advanced Articles",
+      titleEx: "Zero Article, The, Generic, Geographical Names",
+      intro:
+        "**İleri Artikel Kullanımı** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Zero Article\\**, **\\The\\**, **\\Generic\\**, **\\Geographical Names\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "135",
+      level: "B2",
+      title: "Belirleyiciler",
+      titleEng: "Determiners",
+      titleEx: "All, Every, Each, Both, Either",
+      intro:
+        "**Belirleyiciler** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\All\\**, **\\Every\\**, **\\Each\\**, **\\Both\\**, **\\Either\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "136",
+      level: "B2",
+      title: "İleri Miktar Belirteçleri",
+      titleEng: "Advanced Quantifiers",
+      titleEx: "All Of, None Of, Most Of, Few, Little",
+      intro:
+        "**İleri Miktar Belirteçleri** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\All Of\\**, **\\None Of\\**, **\\Most Of\\**, **\\Few\\**, **\\Little\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "137",
+      level: "B2",
+      title: "İleri Edat Kullanımları",
+      titleEng: "Advanced Prepositions",
+      titleEx: "Despite, Owing To, Due To, Regarding",
+      intro:
+        "**İleri Edat Kullanımları** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Despite\\**, **\\Owing To\\**, **\\Due To\\**, **\\Regarding\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "138",
+      level: "B2",
+      title: "Bağımlı Edatlar",
+      titleEng: "Dependent Prepositions",
+      titleEx: "Depend On, Apologise For, Good At",
+      intro:
+        "**Bağımlı Edatlar** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Depend On\\**, **\\Apologise For\\**, **\\Good At\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "139",
+      level: "B2",
+      title: "Söylem Belirteçleri",
+      titleEng: "Discourse Markers",
+      titleEx: "Anyway, Besides, In Conclusion, Mind You",
+      intro:
+        "**Söylem Belirteçleri** metnin parça parça değil, bütüncül okunmasını hedefler. **\\Anyway\\**, **\\Besides\\**, **\\In Conclusion\\**, **\\Mind You\\** okuyucuyu yönlendirir veya üslup seçimini netleştirir. İleri okuma ve yazma için kritiktir.",
+    },
+    {
+      id: "140",
+      level: "B2",
+      title: "İleri Bağlayıcı İfadeler",
+      titleEng: "Advanced Linking Words",
+      titleEx: "Nevertheless, Moreover, Conversely, Hence",
+      intro:
+        "**İleri Bağlayıcı İfadeler** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Nevertheless\\**, **\\Moreover\\**, **\\Conversely\\**, **\\Hence\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "141",
+      level: "B2",
+      title: "İsimleştirme",
+      titleEng: "Nominalisation",
+      titleEx: "-tion, -ment, -ness, Verb To Noun",
+      intro:
+        "**İsimleştirme** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\-tion\\**, **\\-ment\\**, **\\-ness\\**, **\\Verb To Noun\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
+    },
+    {
+      id: "142",
       level: "B2",
       title: "Paralel Yapılar",
       titleEng: "Parallel Structures",
-      titleEx:
-        "She likes hiking, swimming, and cycling. The report was clear, concise, and well researched.",
+      titleEx: "Parallelism, Not Only But Also, Either Or",
       intro:
-        "Listenin, sıfatların ve fiil öbeklerinin aynı dilbilgisel formda dizildiği dengeli cümleler kurmaya hazır mısın? Bu derste **\\parallel structures\\** ilkesini **\\and, or, but\\** ile bağlanan ögelerde uygulamayı keşfedeceksin. Karışık türlerden (**\\V-ing\\** ile **to + V1**, sıfat ile isim) kaynaklanan **\\faulty parallelism\\** hatalarını tespit etme ve düzeltme yollarını inceleyeceksin. Yazılı İngilizcede akıcı, profesyonel ve kolay okunan paragraflar oluşturabileceksin.",
+        "**Paralel Yapılar** orta-ileri düzeyde sınav ve iş İngilizcesinde sık görülür. **\\Parallelism\\**, **\\Not Only But Also\\**, **\\Either Or\\** kalıplarını örnek metinlerde tanıyıp üretmeyi hedeflersin.",
     },
   ],
   C1: [
     {
-      id: "85",
+      id: "143",
       level: "C1",
-      title: "İleri Gelecek Yapıları",
-      titleEng:
-        "Advanced Future Expressions (be about to, be due to, be set to)",
-      titleEx:
-        "The train is about to leave. The product is due to launch in May. The deal is set to close tonight.",
+      title: "İleri Zaman ve Görünüş Yapıları",
+      titleEng: "Advanced Tense and Aspect",
+      titleEx: "Aspect, Ongoing, Completed, Habitual",
       intro:
-        "Çok yakın gelecekte, planlı biçimde veya kaçınılmaz şekilde gerçekleşecek olayları keskin zaman ifadeleriyle anlatmaya hazır mısın? Bu derste **\\be about to\\**, **\\be due to\\**, **\\be set to\\** ve benzeri **\\advanced future expressions\\** kalıplarını **\\will\\** / **\\going to\\** ile nüans farklarıyla keşfedeceksin. Pasif formlar, resmi duyuru dili ve haber metinlerindeki tipik kullanımları inceleyeceksin. Sunum, basın ve profesyonel yazışmalarda gelecek olayları özgüvenli ve doğal vurgulayabileceksin.",
+        "**İleri Zaman ve Görünüş Yapıları** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Aspect\\**, **\\Ongoing\\**, **\\Completed\\**, **\\Habitual\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "86",
+      id: "144",
       level: "C1",
-      title: "Devrik Cümleler (Olumsuz & Kısıtlayıcı Zarflar)",
-      titleEng: "Inversion with Negative & Limiting Adverbials",
-      titleEx:
-        "Seldom have I seen such a detailed analysis. Not only did he win, but he also broke the record.",
+      title: "Karmaşık Perfect Yapıları",
+      titleEng: "Complex Perfect Structures",
+      titleEx: "Complex Perfect, Layered Tenses",
       intro:
-        "İngilizce anlatımına edebi bir derinlik, güçlü bir vurgu ve resmi bir otorite kazandırmaya hazır mısın? Bu derste **\\seldom, rarely, never, hardly...when, no sooner...than, not only...but also, under no circumstances\\** gibi olumsuz veya sınırlayıcı zarflar cümle başına geldiğinde soru cümlesi düzeninde yardımcı fiil ile öznenin yer değiştirdiği **\\Inversion\\** yapısını keşfedeceksin. Basit zamanlarda **\\do / does / did\\** kullanımını ve vurgulanmak istenen ögeyi öne taşıma tekniklerini inceleyeceksin. İleri düzey yazılı ve sözlü söylemlerde dramatik ve etkileyici bir üslup yakalayabileceksin.",
+        "**Karmaşık Perfect Yapıları** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Complex Perfect\\**, **\\Layered Tenses\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "87",
+      id: "145",
       level: "C1",
-      title: "Koşul Cümlelerinde Devriklik & Alternatif Bağlaçlar",
-      titleEng: "Conditional Inversion & Alternatives to 'If'",
-      titleEx:
-        "Had I known about the delay, I would have stayed. Provided that you agree, we can start.",
+      title: "İleri Gelecek Zaman İfadeleri",
+      titleEng: "Advanced Future Expressions",
+      titleEx: "By Then, By The Time, Within",
       intro:
-        "Koşul cümlelerini klasik **\\if\\** kalıbının ötesine taşıyarak akademik, hukuki ve resmi bir esneklikle kurmaya hazır mısın? Bu derste **\\if\\** bağlacını düşürerek oluşturulan **\\Were I..., Had I..., Should you...\\** devrik koşul yapılarını ve ince ihtimal farklarını keşfedeceksin. Ayrıca **\\provided that, as long as, unless, on condition that, in case, supposing\\** gibi alternatif koşul bağlaçlarının anlam nüanslarını inceleyeceksin. Şart ifadelerini üst düzey metinlerde ve profesyonel yazışmalarda zarifçe çeşitlendirebileceksin.",
+        "**İleri Gelecek Zaman İfadeleri** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\By Then\\**, **\\By The Time\\**, **\\Within\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "88",
+      id: "146",
       level: "C1",
-      title: "Bölünmüş & Vurgu Cümleleri",
-      titleEng: "Cleft Sentences (It-clefts & Wh-clefts)",
-      titleEx:
-        "It was John who solved the bug. What I need right now is a clear answer.",
+      title: "İleri Modal Perfect Yapıları",
+      titleEng: "Advanced Modal Perfect Structures",
+      titleEx: "Could Have Been, Might Have Been",
       intro:
-        "Cümledeki belirli bir bilgiyi spot ışığı altına alarak okuyucunun veya dinleyicinin dikkatini tam istediğin noktaya çekmeye hazır mısın? Bu derste kişi, nesne, zaman veya yeri öne çıkaran **\\It-cleft\\** (**\\It is / was ... who / that\\**) ile eyleme veya duruma odaklanan **\\Wh-cleft\\** (**What + özne + fiil + is / was**) yapılarını keşfedeceksin. Ayrıca **\\All (that), The reason why, The place where\\** gibi ileri düzey vurgu kalıplarını inceleyeceksin. Tartışmalarda, sunumlarda ve yazılı analizlerde mesajının ikna gücünü en üst düzeye çıkarabileceksin.",
+        "Modal fiiller yardımcı gibi çekimlenir; arkasından fiil yalın kalır. **\\Could Have Been\\**, **\\Might Have Been\\** zorunluluk, olasılık, izin veya çıkarım taşır. Bağlama göre anlamı daraltırsın.",
     },
     {
-      id: "89",
+      id: "147",
       level: "C1",
-      title: "Vurgulayıcı Do / Did",
-      titleEng: "Emphatic Do / Did",
-      titleEx:
-        "I do like your idea. She did finish the report on time. Do tell me what happened.",
+      title: "İleri Modal Çıkarım Yapıları",
+      titleEng: "Advanced Modal Deduction",
+      titleEx: "Must Have, Can't Have, Deduction",
       intro:
-        "Şüpheyi yok etmek veya duyguyu güçlendirmek için yardımcı **\\do / does / did\\** kullanımına hakim olmaya hazır mısın? Bu derste **\\Present Simple\\** ve **\\Past Simple\\** olumlu cümlelerde özneden önce gelen **\\emphatic do / did\\** ile vurgu ve sürpriz tonunu keşfedeceksin. **\\I do agree, She did apologise\\** örnekleriyle olasılık fiilleri ve kısaltmalarla karışmamasını inceleyeceksin. Tartışma ve diyalogda ne dediğini netleştirip karşındakini ikna edecek tonu kullanabileceksin.",
+        "Modal fiiller yardımcı gibi çekimlenir; arkasından fiil yalın kalır. **\\Must Have\\**, **\\Can't Have\\**, **\\Deduction\\** zorunluluk, olasılık, izin veya çıkarım taşır. Bağlama göre anlamı daraltırsın.",
     },
     {
-      id: "90",
+      id: "148",
       level: "C1",
-      title: "İstek & Dilek Kipi (Subjunctive Mood)",
-      titleEng: "Mandative Subjunctive Mood",
-      titleEx:
-        "It is essential that he be present at the hearing. They demanded that the report be revised.",
+      title: "Devrik Koşul Yapıları",
+      titleEng: "Advanced Conditional Inversion",
+      titleEx: "Had, Were, Should, Inverted Conditional",
       intro:
-        "Resmi talepleri, önerileri, kararları ve zorunlulukları en rafine dilbilgisi kurallarıyla ifade etmeye hazır mısın? Bu derste **\\demand, insist, recommend, suggest, propose\\** fiilleri ve **\\it is essential / vital / imperative / crucial that\\** sıfat kalıplarının ardından özneye veya zamana bakılmaksızın fiilin yalın halinin (**\\V1\\**, olumsuzda **not + V1**, edilgende **be + V3**) kullanıldığı **\\Mandative Subjunctive\\** yapısını keşfedeceksin. İngiliz ve Amerikan İngilizcesindeki **\\should\\** alternatifleriyle farkını inceleyeceksin. Kurumsal ve akademik dilde kusursuz ve otoriter bir üslup yakalayabileceksin.",
+        "Koşul cümlelerinde şart ve sonuç kipleri birbirine bağlıdır. **\\Had\\**, **\\Were\\**, **\\Should\\**, **\\Inverted Conditional\\** farklı zaman ve ihtimal düzeylerini temsil eder. Gerçek, düşünce ve geçmişe dönük senaryoları ayırırsın.",
     },
     {
-      id: "91",
+      id: "149",
       level: "C1",
-      title: "İleri Düzey Ortaç & Ulaç Cümlecikleri",
+      title: "Örtük Koşul Yapıları",
+      titleEng: "Implied Conditionals",
+      titleEx: "Implied If, Otherwise, Or Else",
+      intro:
+        "Koşul cümlelerinde şart ve sonuç kipleri birbirine bağlıdır. **\\Implied If\\**, **\\Otherwise\\**, **\\Or Else\\** farklı zaman ve ihtimal düzeylerini temsil eder. Gerçek, düşünce ve geçmişe dönük senaryoları ayırırsın.",
+    },
+    {
+      id: "150",
+      level: "C1",
+      title: "İleri Subjunctive",
+      titleEng: "Advanced Subjunctive Mood",
+      titleEx: "Subjunctive, Were, Be, Mandative",
+      intro:
+        "**İleri Subjunctive** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Subjunctive\\**, **\\Were\\**, **\\Be\\**, **\\Mandative\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "151",
+      level: "C1",
+      title: "Mandative Subjunctive",
+      titleEng: "Mandative Subjunctive",
+      titleEx: "Suggest That He Be, Insist That She Go",
+      intro:
+        "**Mandative Subjunctive** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Suggest That He Be\\**, **\\Insist That She Go\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "152",
+      level: "C1",
+      title: "İleri Edilgen Yapılar",
+      titleEng: "Advanced Passive Constructions",
+      titleEx: "Advanced Passive, Impersonal Passive",
+      intro:
+        "Edilgen yapıda özne eylemden etkilenendir; **\\be + V3\\** veya modal + **\\be + V3\\** kullanılır. **\\Advanced Passive\\**, **\\Impersonal Passive\\** haber, bilim ve resmî metinlerde sık görülür. Etken–edilgen dönüşümünü uygularsın.",
+    },
+    {
+      id: "153",
+      level: "C1",
+      title: "Edilgen Infinitive ve Gerund",
+      titleEng: "Passive Infinitives and Gerunds",
+      titleEx: "To Be Done, Being Done, Passive -ing",
+      intro:
+        "Edilgen yapıda özne eylemden etkilenendir; **\\be + V3\\** veya modal + **\\be + V3\\** kullanılır. **\\To Be Done\\**, **\\Being Done\\**, **\\Passive -ing\\** haber, bilim ve resmî metinlerde sık görülür. Etken–edilgen dönüşümünü uygularsın.",
+    },
+    {
+      id: "154",
+      level: "C1",
+      title: "Perfect Edilgen Yapılar",
+      titleEng: "Perfect Passive Structures",
+      titleEx: "Has Been Done, Had Been Built",
+      intro:
+        "Edilgen yapıda özne eylemden etkilenendir; **\\be + V3\\** veya modal + **\\be + V3\\** kullanılır. **\\Has Been Done\\**, **\\Had Been Built\\** haber, bilim ve resmî metinlerde sık görülür. Etken–edilgen dönüşümünü uygularsın.",
+    },
+    {
+      id: "155",
+      level: "C1",
+      title: "Karmaşık Aktarım Yapıları",
+      titleEng: "Complex Reporting Structures",
+      titleEx: "Reported Speech, Patterns, That-Clause",
+      intro:
+        "**Karmaşık Aktarım Yapıları** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Reported Speech\\**, **\\Patterns\\**, **\\That-Clause\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "156",
+      level: "C1",
+      title: "İleri Ettirgen Yapılar",
+      titleEng: "Advanced Causative Structures",
+      titleEx: "Have Done, Get Done, Causative Patterns",
+      intro:
+        "**İleri Ettirgen Yapılar** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Have Done\\**, **\\Get Done\\**, **\\Causative Patterns\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "157",
+      level: "C1",
+      title: "İleri İlgi Cümlecikleri",
+      titleEng: "Advanced Relative Clauses",
+      titleEx: "Preposition + Whom, Quantifiers + Of Whom",
+      intro:
+        "İlgi cümlecikleri ismi tanımlayarak cümleyi sıkılaştırır. **\\Preposition + Whom\\**, **\\Quantifiers + Of Whom\\** tanımlayıcı ve tanımsız ayrımında virgül ve anlam farkı oluşur.",
+    },
+    {
+      id: "158",
+      level: "C1",
+      title: "İleri Participle Cümlecikleri",
       titleEng: "Advanced Participle Clauses",
-      titleEx: "Having completed the project, she presented it to the board.",
+      titleEx: "Participle, Absolute, Reduced",
       intro:
-        "Uzun zarf ve bağlaç yan cümleciklerini tek bir akıcı ortaç yapısında birleştirerek anlatımına yoğunluk ve edebi zarafet katmaya hazır mısın? Bu derste zaman, neden-sonuç ve koşul bildiren yan cümleleri etken yapılarda **\\V-ing\\**, edilgen yapılarda **\\V3\\** ve öncelik-sonralık ilişkisinde **Having + V3** / **\\Having been + V3\\** kalıplarıyla kısaltmayı keşfedeceksin. Öznesi ana cümleden farklı olan yapıları (**\\nominative absolute\\**) ve anlam karışıklığına yol açan **\\dangling participles\\** hatalarından kaçınma yöntemlerini inceleyeceksin. Akademik makalelerde ve ileri düzey metinlerde akıcı bir sentez gücü kazanacaksın.",
+        "Participle yapıları yan cümleyi kısaltır; **\\-ing\\** ve **\\V3\\** biçimleri isim veya sıfat görevi görür. **\\Participle\\**, **\\Absolute\\**, **\\Reduced\\** akademik ve yazılı metinlerde yoğunlaşır.",
     },
     {
-      id: "92",
+      id: "159",
       level: "C1",
-      title: "Whatever / Whoever / However",
-      titleEng: "Whatever / Whoever / However",
-      titleEx:
-        "Whatever you decide, I'll support you. Whoever arrives first gets a seat. However hard you try, some things won't change.",
+      title: "Bağımsız Participle Yapıları",
+      titleEng: "Absolute Constructions",
+      titleEx: "Weather Permitting, All Things Considered",
       intro:
-        "Ne olursa olsun, kim olursa olsun veya her ne kadar kalıplarıyla koşulsuz ve esnek anlam kurmaya hazır mısın? Bu derste **\\whatever, whoever, whichever, however\\** ile **\\-ever\\** eklisinin kurduğu **\\free relative clauses\\** yapılarını keşfedeceksin. **However + sıfat/zarf** ile zıtlık, nesne ve özne rollerindeki kelime dizilimini inceleyeceksin. Günlük konuşmadan akademik metne kadar geniş bir üslupta özgür ve güçlü cümleler kurabileceksin.",
+        "Participle yapıları yan cümleyi kısaltır; **\\-ing\\** ve **\\V3\\** biçimleri isim veya sıfat görevi görür. **\\Weather Permitting\\**, **\\All Things Considered\\** akademik ve yazılı metinlerde yoğunlaşır.",
     },
     {
-      id: "93",
+      id: "160",
       level: "C1",
-      title: "Sıfat Dereceleri & Pekiştirme",
-      titleEng:
-        "Gradable Adjectives & Intensifiers (utterly, fairly, absolutely)",
-      titleEx: "utterly exhausted, fairly good, absolutely right",
+      title: "Kısaltılmış Zarf Cümlecikleri",
+      titleEng: "Reduced Adverbial Clauses",
+      titleEx: "While Walking, If Asked, Reduced Adverbials",
       intro:
-        "Derecelendirilebilir ve mutlak sıfatların üzerine binen **\\intensifier\\** (pekiştirme) zarflarını seçerken üslubunun doğallığını ve akademik keskinliğini artırmaya hazır mısın? Bu derste **\\utterly, fairly, absolutely, quite, virtually\\** gibi yapıların **\\gradable\\** ile **\\ungradable (absolute)\\** sıfatlarla uyumunu ve anlam kaymalarını keşfedeceksin. **\\Fairly\\** ile yapılan ölçülü vurgu ile **\\absolutely\\** ve **\\utterly\\** ile kurulan tamamlayıcı güçlendirmelerin ton farklarını inceleyeceksin. İleri düzey yazı ve sözlü anlatımlarda değerlendirme ve yargıları ince derecelendirerek ifade edebileceksin.",
+        "**Kısaltılmış Zarf Cümlecikleri** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\While Walking\\**, **\\If Asked\\**, **\\Reduced Adverbials\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "94",
+      id: "161",
       level: "C1",
-      title: "Zarf Yerleşimi",
-      titleEng: "Adverb Placement",
-      titleEx:
-        "She carefully explained the issue. Only then did I realise the truth.",
+      title: "İleri Infinitive Cümlecikleri",
+      titleEng: "Advanced Infinitive Clauses",
+      titleEx: "For Her To Leave, Infinitive Clause",
       intro:
-        "Zarfların cümle içindeki konumunun anlamı, vurguyu ve resmiyeti nasıl belirlediğini bilinçli biçimde yönetmeye hazır mısın? Bu derste **\\frequency, manner, degree\\** ve **\\sentence adverbs\\** için fiil öncesi, fiil-sonrası ve cümle başı-sonu seçeneklerini ve **\\only, even, still\\** gibi ögelerin yer değiştirmeyi tetiklediği durumları keşfedeceksin. **\\Split infinitive\\** (**\\to carefully consider\\**) ile geleneksel dizilim arasındaki kayıt farklarını ve çoklu zarf sıralamasını inceleyeceksin. Karmaşık cümlelerde anlamı tam istediğin ögeye çekerek daha net ve profesyonel bir ritim kurabileceksin.",
+        "Fiilden sonra gelen **\\-ing\\** veya **\\to\\** biçimi anlamı değiştirir. **\\For Her To Leave\\**, **\\Infinitive Clause\\** hangi fiilin hangi yapıyı aldığını gösterir. Ezber ve örnek cümle burada belirleyicidir.",
     },
     {
-      id: "95",
+      id: "162",
+      level: "C1",
+      title: "Perfect Gerund ve Infinitive",
+      titleEng: "Perfect Gerund and Infinitive",
+      titleEx: "Having Done, To Have Done",
+      intro:
+        "Fiilden sonra gelen **\\-ing\\** veya **\\to\\** biçimi anlamı değiştirir. **\\Having Done\\**, **\\To Have Done\\** hangi fiilin hangi yapıyı aldığını gösterir. Ezber ve örnek cümle burada belirleyicidir.",
+    },
+    {
+      id: "163",
+      level: "C1",
+      title: "İleri Fiil Tamamlama Yapıları",
+      titleEng: "Advanced Verb Complementation",
+      titleEx: "Verb Complementation, Patterns",
+      intro:
+        "**İleri Fiil Tamamlama Yapıları** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Verb Complementation\\**, **\\Patterns\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "164",
+      level: "C1",
+      title: "İleri Devrik Yapılar",
+      titleEng: "Advanced Inversion",
+      titleEx: "Inversion, Fronting, Emphasis",
+      intro:
+        "Devrik yapıda özne ile fiil veya yardımcı yer değiştirir; vurgu ve resmî üslup sağlar. **\\Inversion\\**, **\\Fronting\\**, **\\Emphasis\\** olumsuz zarfların başta kullanımıyla sık görülür.",
+    },
+    {
+      id: "165",
+      level: "C1",
+      title: "Olumsuz Zarflardan Sonra Devrik Yapı",
+      titleEng: "Inversion After Negative Adverbials",
+      titleEx: "Never, Seldom, Hardly, Scarcely",
+      intro:
+        "Devrik yapıda özne ile fiil veya yardımcı yer değiştirir; vurgu ve resmî üslup sağlar. **\\Never\\**, **\\Seldom\\**, **\\Hardly\\**, **\\Scarcely\\** olumsuz zarfların başta kullanımıyla sık görülür.",
+    },
+    {
+      id: "166",
+      level: "C1",
+      title: "İleri Cleft ve Pseudo-Cleft Cümleleri",
+      titleEng: "Advanced Cleft and Pseudo-Cleft Sentences",
+      titleEx: "It-Cleft, Wh-Cleft, What I Need Is",
+      intro:
+        "Vurgulu cümleler bilgi yapısını yeniden düzenleyerek dikkat çeker. **\\It-Cleft\\**, **\\Wh-Cleft\\**, **\\What I Need Is\\** **\\it is ... that\\** veya **\\what ... is\\** kalıplarıyla kurulur.",
+    },
+    {
+      id: "167",
+      level: "C1",
+      title: "İleri Ellipsis ve Substitution",
+      titleEng: "Advanced Ellipsis and Substitution",
+      titleEx: "Ellipsis, Substitution, Pro-Forms",
+      intro:
+        "Eksiltme ve ikame tekrarı azaltır; önceki cümledeki öğeyi zamir veya yardımcı ile çağırır. **\\Ellipsis\\**, **\\Substitution\\**, **\\Pro-Forms\\** akıcı konuşma ve metin bütünlüğü sağlar.",
+    },
+    {
+      id: "168",
+      level: "C1",
+      title: "Dislocation",
+      titleEng: "Dislocation",
+      titleEx: "Left Dislocation, Right Dislocation, Topic",
+      intro:
+        "**Dislocation** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Left Dislocation\\**, **\\Right Dislocation\\**, **\\Topic\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "169",
+      level: "C1",
+      title: "İleri Fronting",
+      titleEng: "Advanced Fronting",
+      titleEx: "Fronting, Focus, Theme",
+      intro:
+        "**İleri Fronting** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Fronting\\**, **\\Focus\\**, **\\Theme\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "170",
+      level: "C1",
+      title: "İleri İsimleştirme",
+      titleEng: "Advanced Nominalisation",
+      titleEx: "Nominalisation, Abstract Nouns, Density",
+      intro:
+        "**İleri İsimleştirme** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Nominalisation\\**, **\\Abstract Nouns\\**, **\\Density\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "171",
       level: "C1",
       title: "İsim Cümlecikleri",
-      titleEng: "Noun Clauses (What he said surprised me)",
-      titleEx:
-        "What he said surprised me. / That she left so early worried them.",
+      titleEng: "Noun Clause Structures",
+      titleEx: "That-Clause, Wh-Clause, Whether",
       intro:
-        "Özne, nesne veya tamamlayıcı konumunda yer alan **\\noun clauses\\** ile düşünce, duyum ve yargıları tek bir cümlede bütünleştirmeye hazır mısın? Bu derste **\\what, that, whether, if\\** ve **\\wh-\\** bağlantılı **\\noun clauses\\** yapılarının ana cümle ile uyumunu ve fiil çekimini keşfedeceksin. **\\Whatever, whoever, whichever\\** ile genişletilmiş öbeklerin ve **\\anticipatory it\\** (**\\It is clear that...\\**) kalıplarının işlevini inceleyeceksin. Akademik tartışma, rapor ve günlük üst düzey anlatımlarda soyut fikirleri açık ve tutarlı biçimde bağlayabileceksin.",
+        "**İsim Cümlecikleri** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\That-Clause\\**, **\\Wh-Clause\\**, **\\Whether\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "96",
+      id: "172",
       level: "C1",
-      title: "Edilgen Infinitive/Gerund & Perfect Edilgen",
-      titleEng:
-        "Passive Infinitives/Gerunds & Perfect Passive (to be done, having been told)",
-      titleEx:
-        "The task is to be done by Friday. / Having been told the truth, she remained silent.",
+      title: "İleri Zarf Cümlecikleri",
+      titleEng: "Advanced Adverbial Clauses",
+      titleEx: "Concession, Purpose, Result Clauses",
       intro:
-        "Edilgen anlamı **\\infinitive\\** ve **\\gerund\\** öbeklerine taşıyarak eylemin kime yöneldiğini ve zaman ilişkisini incel biçimde ifade etmeye hazır mısın? Bu derste **\\to be done, being repaired, having been informed\\** gibi **\\passive infinitive / gerund\\** kalıplarını ve **\\perfect passive\\** (**\\to have been V3, having been V3\\**) yapılarını keşfedeceksin. **\\Need / want + V-ing\\**, **\\be supposed to be V3\\** ve rapor dilindeki **\\expected to be completed\\** örüntülerinin kullanımını inceleyeceksin. Kurumsal yazışma ve akademik metinlerde süreç, sorumluluk ve sonuçları sofistike bir dilbilgisiyle aktarabileceksin.",
+        "**İleri Zarf Cümlecikleri** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Concession\\**, **\\Purpose\\**, **\\Result Clauses\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "97",
+      id: "173",
       level: "C1",
-      title: "Perfect Gerund & Infinitive",
-      titleEng: "Perfect Gerund & Infinitive (I regret having said that)",
-      titleEx:
-        "I regret having said that. / He seems to have forgotten the meeting.",
+      title: "İleri Taviz Yapıları",
+      titleEng: "Advanced Concessive Structures",
+      titleEx: "Much As, However + Adj, Concession",
       intro:
-        "Eylemin ana fiilden önce mi sonra mı gerçekleştiğini **\\perfect gerund\\** ve **\\perfect infinitive\\** ile kesin sınırlarla ifade etmeye hazır mısın? Bu derste **\\regret / remember / forget / try\\** gibi fiillerde **\\V-ing\\** ile **\\perfect\\** formların (**\\having V3, to have V3\\**) anlam farklarını keşfedeceksin. **\\Appear, seem, claim, be believed\\** yapılarında **\\to have V3\\** kullanımı ile geçmişe yönelik çıkarımları inceleyeceksin. Pişmanlık, varsayım ve rapor edilen olayları üst düzey İngilizcede zaman doğruluğuyla anlatabileceksin.",
+        "**İleri Taviz Yapıları** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Much As\\**, **\\However + Adj\\**, **\\Concession\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "98",
+      id: "174",
       level: "C1",
-      title: "Mesafe Koyma & Kesinlikten Kaçınma Yapıları",
-      titleEng: "Distancing & Hedging Language",
-      titleEx:
-        "The suspect is alleged to have fled the country. It is widely believed that markets will recover.",
+      title: "İleri Bağlaçlar",
+      titleEng: "Advanced Conjunctions",
+      titleEx: "Notwithstanding, Albeit, Complex Conjunctions",
       intro:
-        "Akademik yazılarda, gazetecilik dilinde ve bilimsel tartışmalarda iddiaları nesnel bir mesafeyle sunmaya ve aşırı genellemelerden kaçınmaya hazır mısın? Bu derste **\\is alleged to, is believed to have V3, it is widely acknowledged that\\** gibi mesafe koyma (**\\distancing\\**) yapıları ile **\\appear, seem, tend to, arguably, conceivably\\** gibi kesinlikten kaçınma (**\\hedging\\**) araçlarını keşfedeceksin. Kanıtlanmamış bilgileri veya karmaşık tezleri temkinli, tarafsız ve ikna edici bir üslupla temellendirmeyi inceleyeceksin. İleri düzey akademik ve profesyonel yazışmalarda güvenilir bir yazar sesi oluşturabileceksin.",
+        "**İleri Bağlaçlar** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Notwithstanding\\**, **\\Albeit\\**, **\\Complex Conjunctions\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "99",
+      id: "175",
       level: "C1",
-      title: "Eksiltme, Yerine Koyma & Söylem Belirleyicileri",
-      titleEng: "Ellipsis, Substitution & Advanced Discourse Markers",
-      titleEx:
-        "A: Will they join us? B: I hope so. / Notwithstanding the high costs, the plan succeeded.",
+      title: "İleri Edat Öbekleri",
+      titleEng: "Advanced Prepositional Phrases",
+      titleEx: "In Terms Of, With Regard To, Prepositional Phrase",
       intro:
-        "Gereksiz kelime tekrarlarından kaçınarak ve fikirler arasında sofistike mantıksal köprüler kurarak ana dili düzeyinde bir metin bütünlüğü yakalamaya hazır mısın? Bu derste bağlamdan anlaşılan ögeleri düşürmeye dayanan **\\Ellipsis\\**, tekrarlanan isim veya tümcelerin yerine **\\one / ones, do so, so / not\\** ifadelerini getiren **\\Substitution\\** yöntemlerini ve **\\notwithstanding, nonetheless, albeit, thereby, hence\\** söylem belirleyicilerini keşfedeceksin. Paragraflar ve konuşma turları arasında pürüzsüz bir akış kurmayı inceleyeceksin. Anlatımını hem ekonomik hem de son derece tutarlı bir yapıya kavuşturabileceksin.",
+        "**İleri Edat Öbekleri** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\In Terms Of\\**, **\\With Regard To\\**, **\\Prepositional Phrase\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "100",
+      id: "176",
       level: "C1",
-      title: "Kalıp İfadeler & Collocations",
-      titleEng: "Fixed Expressions & Collocations",
-      titleEx: "take into account, bear in mind, come to terms with",
+      title: "Karmaşık Edat Kalıpları",
+      titleEng: "Complex Preposition Patterns",
+      titleEx: "In Spite Of, In View Of, Complex Prepositions",
       intro:
-        "Tek tek kelimeler yerine ana dili konuşanların kullandığı **\\fixed expressions\\** ve **\\collocations\\** ile ifadenin doğallığını ve ikna gücünü yükseltmeye hazır mısın? Bu derste **\\make a decision\\** (**\\do a decision\\** değil), **\\raise awareness, commit a crime, heavy rain\\** gibi sıkı eşdizim örüntülerini ve **\\phrasal / prepositional verbs\\** ile sabit kalıpları keşfedeceksin. **\\Formal register\\** ile **\\informal\\** ortamlarda tercih edilen alternatifleri ve yanlış çeviri tuzaklarını inceleyeceksin. Yazılı ve sözlü iletişimde takılmadan, akıcı ve yerinde kalıp kullanabileceksin.",
+        "**Karmaşık Edat Kalıpları** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\In Spite Of\\**, **\\In View Of\\**, **\\Complex Prepositions\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "101",
+      id: "177",
       level: "C1",
-      title: "Bağdaşıklık & Tutarlılık",
-      titleEng: "Cohesion & Coherence",
-      titleEx:
-        "Furthermore, the data support this claim. / In contrast, earlier studies disagreed.",
+      title: "İleri Belirleyiciler ve Miktar Belirteçleri",
+      titleEng: "Advanced Determiners and Quantifiers",
+      titleEx: "Determiners, Quantifiers, Half Of",
       intro:
-        "Paragraf ve bölümler arasında mantıksal bağ kurarak **\\cohesion\\** ile anlam bütünlüğünü (**\\coherence\\**) birlikte güçlendirmeye hazır mısın? Bu derste **\\furthermore, nevertheless, consequently, in contrast\\** gibi **\\discourse markers\\**, **\\this / these / such\\** ile **\\anaphoric reference\\** ve **\\lexical cohesion\\** (eş anlamlı ve tekrar önleyici **\\synonymy / substitution\\**) araçlarını keşfedeceksin. Konu cümlesi, gelişme ve sonuç örgüsünün okuyucuyu kaybetmeden ilerlemesini inceleyeceksin. Akademik makale, sunum ve uzun metinlerde fikirlerinin akışını profesyonel düzeyde tutarlı kılacaksın.",
+        "**İleri Belirleyiciler ve Miktar Belirteçleri** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Determiners\\**, **\\Quantifiers\\**, **\\Half Of\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
     {
-      id: "102",
+      id: "178",
+      level: "C1",
+      title: "İleri Artikel Kullanımı",
+      titleEng: "Advanced Article Usage",
+      titleEx: "The, Zero Article, Generic, Unique Reference",
+      intro:
+        "**İleri Artikel Kullanımı** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\The\\**, **\\Zero Article\\**, **\\Generic\\**, **\\Unique Reference\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "179",
+      level: "C1",
+      title: "İleri Cümle Yapıları",
+      titleEng: "Advanced Sentence Structures",
+      titleEx: "Sentence Structure, Complexity, Embedding",
+      intro:
+        "**İleri Cümle Yapıları** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Sentence Structure\\**, **\\Complexity\\**, **\\Embedding\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
+    },
+    {
+      id: "180",
+      level: "C1",
+      title: "Bağdaşıklık ve Tutarlılık",
+      titleEng: "Cohesion and Coherence",
+      titleEx: "Cohesion, Coherence, Reference, Lexical Chains",
+      intro:
+        "**Bağdaşıklık ve Tutarlılık** metnin parça parça değil, bütüncül okunmasını hedefler. **\\Cohesion\\**, **\\Coherence\\**, **\\Reference\\**, **\\Lexical Chains\\** okuyucuyu yönlendirir veya üslup seçimini netleştirir. İleri okuma ve yazma için kritiktir.",
+    },
+    {
+      id: "181",
       level: "C1",
       title: "İleri Noktalama",
       titleEng: "Advanced Punctuation",
-      titleEx:
-        "The results—unexpected as they were—proved decisive; however, further study is needed.",
+      titleEx: "Semicolon, Colon, Dash, Parentheses",
       intro:
-        "Virgülün ötesinde **\\semicolon, colon, dash, parentheses\\** ve **\\quotation marks\\** ile anlamı, duraklamayı ve vurguyu bilinçli biçimde yönlendirmeye hazır mısın? Bu derste **\\em dash\\** ile ara cümle ekleme, **\\colon\\** ile açıklama veya liste sunma, **\\semicolon\\** ile bağımsız ama bağlı cümleleri birleştirme kurallarını keşfedeceksin. **\\Restrictive vs. non-restrictive\\** virgül kullanımı, **\\sic\\**, çoklu noktalama ve akademik atıf biçimlerindeki ince ayrımları inceleyeceksin. İleri düzey yazılarda okunabilirliği ve otoriter bir biçimsel titizliği bir arada sürdürebileceksin.",
+        "**İleri Noktalama** karmaşık cümleleri sıkılaştıran ileri yapıları kapsar. **\\Semicolon\\**, **\\Colon\\**, **\\Dash\\**, **\\Parentheses\\** yazılı rapor, makale ve sınav metinlerinde karşına çıkar. Form ile anlamı birlikte seçersin.",
     },
   ],
   C2: [
     {
-      id: "73",
+      id: "182",
       level: "C2",
-      title: "Pasif Bildirme Yapıları",
-      titleEng:
-        "Passive Reporting Structures (It is said that / He is said to)",
-      titleEx:
-        "It is said that the economy will recover. He is said to be leaving the company next month.",
+      title: "Kapsamlı Gramer Hâkimiyeti",
+      titleEng: "Comprehensive Grammar Mastery",
+      titleEx: "Mastery, Integration, Accuracy",
       intro:
-        "Üçüncü şahıs kaynaklardan aktarılan bilgiyi nesnel ve sofistike bir pasif üslupla sunmaya hazır mısın? Bu derste **It is said / believed / reported that + cümle** ile **Özne + is said to + infinitive** formundaki **\\Passive Reporting Structures\\** yapılarını keşfedeceksin. Zaman uyumu (**\\to be doing, to have done\\**) ve akademik ile gazetecilik dilindeki tipik kullanımları inceleyeceksin. İleri düzey metinlerde iddia ve söylentileri doğrudan atıf yapmadan profesyonel bir mesafeyle aktarabileceksin.",
+        "**Kapsamlı Gramer Hâkimiyeti** ana dil düzeyine yakın ince ayrımları işler. **\\Mastery\\**, **\\Integration\\**, **\\Accuracy\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
     },
     {
-      id: "103",
+      id: "183",
       level: "C2",
-      title: "Üslupsal Öne Çıkarma & Ödünleme Yapıları",
-      titleEng: "Stylistic Fronting & Concessive Inversion",
-      titleEx:
-        "Rich as he was, he lived humbly. Try as he might, he couldn't convince the committee.",
+      title: "Zaman ve Görünüş İncelikleri",
+      titleEng: "Advanced Tense and Aspect Nuances",
+      titleEx: "Aspect Nuances, Narrative Time",
       intro:
-        "Söz dizimini ustalıkla esneterek karşıtlık, ödünleme ve dramatik vurgu anlamlarını edebi bir ritimle ifade etmeye hazır mısın? Bu derste sıfat, zarf veya fiil öbeklerinin cümle başına taşındığı **\\Rich as he was, Try as he might, Much as I admire\\** gibi **\\Concessive Inversion\\** kalıpları ile nesne ve yer yön öbeklerinin öne çıkarıldığı **\\Stylistic Fronting\\** yapılarını keşfedeceksin. **So + sıfat + be + özne** ve **Such + be + özne** dizilimlerinin retorik etkisini inceleyeceksin. İleri düzey yazılı ve sözlü anlatımlarda üslup zenginliğini zirveye taşıyabileceksin.",
+        "**Zaman ve Görünüş İncelikleri** ana dil düzeyine yakın ince ayrımları işler. **\\Aspect Nuances\\**, **\\Narrative Time\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
     },
     {
-      id: "104",
+      id: "184",
       level: "C2",
-      title: "Geçmişte Gelecek Nüansları",
-      titleEng:
-        "Future in the Past (was to have been V3, was on the verge of V-ing)",
-      titleEx:
-        "The ceremony was to have been held last week. / He was on the verge of resigning.",
+      title: "Modal Fiillerin İnce Anlam Farkları",
+      titleEng: "Advanced Modal Nuances",
+      titleEx: "Modal Nuance, Register, Politeness",
       intro:
-        "Geçmiş bir bakış açısından geleceğe yönelik plan, beklenen sonuç veya vazgeçilmiş niyeti **\\future in the past\\** yapılarıyla ifade etmeye hazır mısın? Bu derste **\\was / were to V\\**, gerçekleşmemiş planlar için **\\was to have been V3\\** ve ani eşik anları için **\\was on the point / verge / brink of V-ing\\** kalıplarını keşfedeceksin. **\\Was going to\\**, **\\would\\** ve **\\was about to\\** ile anlam ve kayıt farklarını inceleyeceksin. Anlatı, tarihsel özet ve ileri düzey raporlarda zaman çizgisini nüanslı ve kusursuz biçimde kurabileceksin.",
+        "Modal fiiller yardımcı gibi çekimlenir; arkasından fiil yalın kalır. **\\Modal Nuance\\**, **\\Register\\**, **\\Politeness\\** zorunluluk, olasılık, izin veya çıkarım taşır. Bağlama göre anlamı daraltırsın.",
     },
     {
-      id: "105",
+      id: "185",
       level: "C2",
-      title: "İleri Düzey İsimleştirme & Sözdizimsel Yoğunluk",
-      titleEng: "Advanced Nominalization & Syntactic Density",
-      titleEx:
-        "The rapid proliferation of AI tools necessitated an immediate overhaul of existing regulations.",
+      title: "İleri Subjunctive Yapıları",
+      titleEng: "Advanced Subjunctive Constructions",
+      titleEx: "Fixed Subjunctive, Be That As It May",
       intro:
-        "Fiil ve sıfatları soyut kavramlara ve karmaşık isim öbeklerine dönüştürerek akademik, hukuki ve kurumsal metinlere yüksek bilgi yoğunluğu kazandırmaya hazır mısın? Bu derste uzun yan cümleleri özlü isim tamlamalarıyla özetleyen **\\Advanced Nominalization\\** stratejilerini ve çok katmanlı niteleyici yapıları keşfedeceksin. Günlük konuşma dilindeki fiil ağırlıklı ifadeleri nesnel, otoriter ve sıkı bir akademik sözdizimine dönüştürme tekniklerini inceleyeceksin. Profesyonel raporlarda, makalelerde ve üst düzey sunumlarda etkileyici bir dil mimarisi kurabileceksin.",
+        "**İleri Subjunctive Yapıları** ana dil düzeyine yakın ince ayrımları işler. **\\Fixed Subjunctive\\**, **\\Be That As It May\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
     },
     {
-      id: "106",
+      id: "186",
       level: "C2",
-      title: "Kalıplaşmış İstek Kipleri & Biçem/Ton Nüansları",
-      titleEng: "Fixed Subjunctives, Register & Tone Nuances",
-      titleEx:
-        "Be that as it may, we must proceed. Suffice it to say, the outcome was far from satisfactory.",
+      title: "Karmaşık Koşul Yapıları",
+      titleEng: "Complex Conditional Structures",
+      titleEx: "Mixed, Implied, Advanced Conditionals",
       intro:
-        "İngilizcenin tarihsel kalıplarını ve muhataba, ortama veya amaca göre değişen en ince üslup nüanslarını tam bir ustalıkla yönetmeye hazır mısın? Bu derste **\\Be that as it may, Suffice it to say, Far be it from me, Come what may, Lest we forget\\** gibi yerleşik istek kiplerini ve edebi-arkaik ifadeleri keşfedeceksin. Resmi, akademik, diplomatik, nötr ve gündelik dil düzeyleri (**\\register\\**) arasındaki ince sözcük ve dilbilgisi geçişleri ile ironi, nezaket ve vurgu tonlamalarını inceleyeceksin. Her iletişim ortamında mesajının etkisini en üst düzeye çıkarabileceksin.",
+        "Koşul cümlelerinde şart ve sonuç kipleri birbirine bağlıdır. **\\Mixed\\**, **\\Implied\\**, **\\Advanced Conditionals\\** farklı zaman ve ihtimal düzeylerini temsil eder. Gerçek, düşünce ve geçmişe dönük senaryoları ayırırsın.",
     },
     {
-      id: "107",
+      id: "187",
       level: "C2",
-      title: "Edimbilimsel Anlam & İma",
-      titleEng: "Pragmatic Meaning & Implicature",
-      titleEx: "A: It's cold in here. B: I'll close the window. (implicature)",
+      title: "Üslupsal Devrik Yapılar",
+      titleEng: "Stylistic Inversion",
+      titleEx: "Stylistic Inversion, Literary Style",
       intro:
-        "Söylenenin ötesinde taşınan **\\pragmatic meaning\\** ve **\\conversational implicature\\** ile gerçek iletişim niyetini çözümlemeye hazır mısın? Bu derste **Grice'ın işbirlikçi ilke**leri (**\\quantity, quality, relation, manner\\**) ve **\\flouting / violating\\** ile oluşan ima katmanlarını keşfedeceksin. Dolaylı **\\requests\\**, **\\indirect speech acts\\** ve bağlamın anlamı nasıl belirlediğini örnek diyaloglarla inceleyeceksin. Üst düzey okuma, müzakere ve kültürlerarası iletişimde söylenmeyeni de güvenle yorumlayıp uygun karşılık verebileceksin.",
+        "Devrik yapıda özne ile fiil veya yardımcı yer değiştirir; vurgu ve resmî üslup sağlar. **\\Stylistic Inversion\\**, **\\Literary Style\\** olumsuz zarfların başta kullanımıyla sık görülür.",
     },
     {
-      id: "108",
+      id: "188",
+      level: "C2",
+      title: "Öne Taşıma ve Odaklama",
+      titleEng: "Advanced Fronting and Focus",
+      titleEx: "Focus, End-Focus, Prominence",
+      intro:
+        "**Öne Taşıma ve Odaklama** ana dil düzeyine yakın ince ayrımları işler. **\\Focus\\**, **\\End-Focus\\**, **\\Prominence\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "189",
+      level: "C2",
+      title: "İleri Vurgu Cümleleri",
+      titleEng: "Advanced Cleft Constructions",
+      titleEx: "Cleft, Pseudo-Cleft, Emphasis",
+      intro:
+        "Vurgulu cümleler bilgi yapısını yeniden düzenleyerek dikkat çeker. **\\Cleft\\**, **\\Pseudo-Cleft\\**, **\\Emphasis\\** **\\it is ... that\\** veya **\\what ... is\\** kalıplarıyla kurulur.",
+    },
+    {
+      id: "190",
+      level: "C2",
+      title: "İç İçe Geçmiş Cümlecikler",
+      titleEng: "Complex Embedded Clauses",
+      titleEx: "Embedded, Nested Clauses",
+      intro:
+        "**İç İçe Geçmiş Cümlecikler** ana dil düzeyine yakın ince ayrımları işler. **\\Embedded\\**, **\\Nested Clauses\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "191",
+      level: "C2",
+      title: "İleri Cümlecik Kısaltmaları",
+      titleEng: "Advanced Clause Reduction",
+      titleEx: "Clause Reduction, Ellipsis in Clauses",
+      intro:
+        "**İleri Cümlecik Kısaltmaları** ana dil düzeyine yakın ince ayrımları işler. **\\Clause Reduction\\**, **\\Ellipsis in Clauses\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "192",
+      level: "C2",
+      title: "Karmaşık Participle Yapıları",
+      titleEng: "Complex Participle Constructions",
+      titleEx: "Complex Participle, Stacked Modifiers",
+      intro:
+        "Participle yapıları yan cümleyi kısaltır; **\\-ing\\** ve **\\V3\\** biçimleri isim veya sıfat görevi görür. **\\Complex Participle\\**, **\\Stacked Modifiers\\** akademik ve yazılı metinlerde yoğunlaşır.",
+    },
+    {
+      id: "193",
+      level: "C2",
+      title: "İleri Bağımsız Yapılar",
+      titleEng: "Advanced Absolute Constructions",
+      titleEx: "Absolute, Independent Participial",
+      intro:
+        "**İleri Bağımsız Yapılar** ana dil düzeyine yakın ince ayrımları işler. **\\Absolute\\**, **\\Independent Participial\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "194",
+      level: "C2",
+      title: "İsimleştirme ve Fiilleştirme",
+      titleEng: "Advanced Nominalisation and Verbalisation",
+      titleEx: "Nominalisation, Verbalisation",
+      intro:
+        "**İsimleştirme ve Fiilleştirme** ana dil düzeyine yakın ince ayrımları işler. **\\Nominalisation\\**, **\\Verbalisation\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "195",
+      level: "C2",
+      title: "Karmaşık Sözdizimsel Yapılar",
+      titleEng: "Complex Syntactic Structures",
+      titleEx: "Syntax, Density, Embedded Structure",
+      intro:
+        "**Karmaşık Sözdizimsel Yapılar** ana dil düzeyine yakın ince ayrımları işler. **\\Syntax\\**, **\\Density\\**, **\\Embedded Structure\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "196",
       level: "C2",
       title: "İleri Bilgi Yapısı",
       titleEng: "Advanced Information Structure",
-      titleEx:
-        "It was the evidence that convinced the jury. / As for the budget, we need deeper cuts.",
+      titleEx: "Given, New, Topic, Focus",
       intro:
-        "Eski ve yeni bilgiyi (**\\given vs. new\\**) bilinçli sıralayarak **\\information structure\\** ile okuyucunun dikkatini yönetmeye hazır mısın? Bu derste **theme–rheme**, **\\end-focus\\** ilkesi, **\\topicalization\\** ve **\\As for / Regarding\\** gibi çerçeveleme öbeklerini keşfedeceksin. **\\Cleft sentences\\**, **\\existential there\\** ve **\\passive\\** seçiminin odak ve vurguya etkisini inceleyeceksin. Akademik ve profesyonel metinlerde karmaşık argümanları anlaşılır, hiyerarşik ve ikna edici bir akışla sunabileceksin.",
+        "**İleri Bilgi Yapısı** ana dil düzeyine yakın ince ayrımları işler. **\\Given\\**, **\\New\\**, **\\Topic\\**, **\\Focus\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
     },
     {
-      id: "109",
+      id: "197",
       level: "C2",
-      title: "İroni & Retorik Yapılar",
-      titleEng: "Irony & Rhetorical Structures",
-      titleEx: "What a brilliant idea—to cancel the launch for the third time.",
+      title: "Edimbilimsel Anlam",
+      titleEng: "Pragmatic Meaning",
+      titleEx: "Pragmatics, Context, Speaker Meaning",
       intro:
-        "Sözün tam tersini kasteden **\\irony\\** ile soru, tekrar ve karşıtlık üzerinden kurulan **\\rhetorical structures\\** ile üslubuna derinlik katmaya hazır mısın? Bu derste **\\sarcasm\\**, **\\litotes\\**, **\\hyperbole\\** ve **\\rhetorical questions\\** gibi retorik araçların ton ve bağlamla ilişkisini keşfedeceksin. **\\Antithesis\\**, **\\parallelism\\**, **\\chiasmus\\** ve vurgulu söylem kalıplarının ikna ve mizah işlevlerini inceleyeceksin. Edebiyat, medya dili ve üst düzey tartışmalarda niyeti, mizahı ve eleştiriyi ince katmanlarıyla okuyup üretebileceksin.",
+        "**Edimbilimsel Anlam** metnin parça parça değil, bütüncül okunmasını hedefler. **\\Pragmatics\\**, **\\Context\\**, **\\Speaker Meaning\\** okuyucuyu yönlendirir veya üslup seçimini netleştirir. İleri okuma ve yazma için kritiktir.",
     },
     {
-      id: "110",
+      id: "198",
       level: "C2",
-      title: "İleri Deyimsel Dil & Eşdizim Kalıpları",
-      titleEng: "Advanced Idiomatic Language & Collocational Patterns",
-      titleEx: "by and large, at the end of the day, the ball is in your court",
+      title: "İma ve Önvarsayım",
+      titleEng: "Implicature and Presupposition",
+      titleEx: "Implicature, Presupposition, Grice",
       intro:
-        "Kalıplaşmış **\\idioms\\**, deyimsel fiiller ve istatistiksel olarak birlikte gelen **\\collocational patterns\\** ile ana diline yakın bir akıcılığa ulaşmaya hazır mısın? Bu derste **\\break the ice, bite the bullet, shed light on\\** gibi deyimlerin bağlamsal anlamlarını ve **\\strong / weak collocations\\** ayrımını keşfedeceksin. Kayıt düzeyine göre **\\formal vs. informal\\** kalıp seçimi ile yanlış eşdizim hatalarından kaçınma stratejilerini inceleyeceksin. İş İngilizcesi, günlük üst düzey sohbet ve akademik diyaloglarda doğal, yerinde ve etkileyici bir dil kullanabileceksin.",
+        "**İma ve Önvarsayım** ana dil düzeyine yakın ince ayrımları işler. **\\Implicature\\**, **\\Presupposition\\**, **\\Grice\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "199",
+      level: "C2",
+      title: "Anlam Belirsizliği ve Giderilmesi",
+      titleEng: "Ambiguity and Disambiguation",
+      titleEx: "Ambiguity, Disambiguation, Scope",
+      intro:
+        "**Anlam Belirsizliği ve Giderilmesi** ana dil düzeyine yakın ince ayrımları işler. **\\Ambiguity\\**, **\\Disambiguation\\**, **\\Scope\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "200",
+      level: "C2",
+      title: "İleri Söylem Yapıları",
+      titleEng: "Advanced Discourse Structures",
+      titleEx: "Discourse, Cohesion, Turn-Taking",
+      intro:
+        "**İleri Söylem Yapıları** metnin parça parça değil, bütüncül okunmasını hedefler. **\\Discourse\\**, **\\Cohesion\\**, **\\Turn-Taking\\** okuyucuyu yönlendirir veya üslup seçimini netleştirir. İleri okuma ve yazma için kritiktir.",
+    },
+    {
+      id: "201",
+      level: "C2",
+      title: "İleri Dil Düzeyi ve Üslup",
+      titleEng: "Advanced Register and Style",
+      titleEx: "Register, Style, Formal, Informal",
+      intro:
+        "**İleri Dil Düzeyi ve Üslup** metnin parça parça değil, bütüncül okunmasını hedefler. **\\Register\\**, **\\Style\\**, **\\Formal\\**, **\\Informal\\** okuyucuyu yönlendirir veya üslup seçimini netleştirir. İleri okuma ve yazma için kritiktir.",
+    },
+    {
+      id: "202",
+      level: "C2",
+      title: "İleri Retorik Yapılar",
+      titleEng: "Advanced Rhetorical Structures",
+      titleEx: "Rhetoric, Antithesis, Parallelism",
+      intro:
+        "**İleri Retorik Yapılar** metnin parça parça değil, bütüncül okunmasını hedefler. **\\Rhetoric\\**, **\\Antithesis\\**, **\\Parallelism\\** okuyucuyu yönlendirir veya üslup seçimini netleştirir. İleri okuma ve yazma için kritiktir.",
+    },
+    {
+      id: "203",
+      level: "C2",
+      title: "İroni, Alay ve Hiciv",
+      titleEng: "Irony, Sarcasm and Satire",
+      titleEx: "Irony, Sarcasm, Satire, Tone",
+      intro:
+        "**İroni, Alay ve Hiciv** ana dil düzeyine yakın ince ayrımları işler. **\\Irony\\**, **\\Sarcasm\\**, **\\Satire\\**, **\\Tone\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "204",
+      level: "C2",
+      title: "İleri Deyimsel Dil Yapıları",
+      titleEng: "Advanced Idiomatic Language Structures",
+      titleEx: "Idioms, Fixed Expressions",
+      intro:
+        "**İleri Deyimsel Dil Yapıları** ana dil düzeyine yakın ince ayrımları işler. **\\Idioms\\**, **\\Fixed Expressions\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "205",
+      level: "C2",
+      title: "İleri Eşdizim Kalıpları",
+      titleEng: "Advanced Collocational Patterns",
+      titleEx: "Collocations, Strong, Weak",
+      intro:
+        "**İleri Eşdizim Kalıpları** ana dil düzeyine yakın ince ayrımları işler. **\\Collocations\\**, **\\Strong\\**, **\\Weak\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "206",
+      level: "C2",
+      title: "Sözcüksel ve Sözdizimsel Hassasiyet",
+      titleEng: "Lexical and Syntactic Precision",
+      titleEx: "Precision, Word Choice, Syntax",
+      intro:
+        "**Sözcüksel ve Sözdizimsel Hassasiyet** ana dil düzeyine yakın ince ayrımları işler. **\\Precision\\**, **\\Word Choice\\**, **\\Syntax\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
+    },
+    {
+      id: "207",
+      level: "C2",
+      title: "İleri Noktalama ve Üslup",
+      titleEng: "Advanced Punctuation and Style",
+      titleEx: "Punctuation, Style, Typography",
+      intro:
+        "**İleri Noktalama ve Üslup** ana dil düzeyine yakın ince ayrımları işler. **\\Punctuation\\**, **\\Style\\**, **\\Typography\\** anlamı bağlam, ton ve kültürle birlikte değerlendirmeyi öğretir. Doğruluk yerine hassasiyet ve üslup ön plandadır.",
     },
   ],
 };

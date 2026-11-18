@@ -172,7 +172,11 @@ export type ErrorCorrectionExercise = {
   speakText?: string;
 };
 
-export type TopicQuizExercise = MultipleChoiceExercise | FillBlankExercise;
+export type TopicQuizExercise =
+  | MultipleChoiceExercise
+  | TrueFalseExercise
+  | FillBlankExercise
+  | MatchingExercise;
 
 export type TopicQuizItem =
   | TopicQuizExercise
