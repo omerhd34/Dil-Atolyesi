@@ -18,6 +18,10 @@ export type TopicExamSlot = {
   englishSelected?: number | null;
   turkishSelected?: number | null;
   v2Selected?: number | null;
+  matchingCorrect?: boolean;
+  matchingAssignments?: Record<string, number>;
+  matchingRevealed?: boolean;
+  matchingGraded?: boolean;
 };
 
 export type TopicExamPartDraft = {
@@ -109,6 +113,30 @@ function normalizeSlot(value: TopicExamSlot): TopicExamSlot {
       typeof value.v2Selected === "number" && value.v2Selected >= 0
         ? value.v2Selected
         : null;
+  }
+  if (typeof value.matchingCorrect === "boolean") {
+    base.matchingCorrect = value.matchingCorrect;
+  }
+  if (
+    value.matchingAssignments &&
+    typeof value.matchingAssignments === "object" &&
+    !Array.isArray(value.matchingAssignments)
+  ) {
+    const assignments: Record<string, number> = {};
+    for (const [key, item] of Object.entries(value.matchingAssignments)) {
+      if (typeof item === "number" && Number.isInteger(item) && item >= 0) {
+        assignments[key] = item;
+      }
+    }
+    if (Object.keys(assignments).length > 0) {
+      base.matchingAssignments = assignments;
+    }
+  }
+  if (typeof value.matchingRevealed === "boolean") {
+    base.matchingRevealed = value.matchingRevealed;
+  }
+  if (typeof value.matchingGraded === "boolean") {
+    base.matchingGraded = value.matchingGraded;
   }
   return base;
 }

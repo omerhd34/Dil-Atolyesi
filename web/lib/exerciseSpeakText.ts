@@ -1,7 +1,10 @@
 import type {
   FillBlankExercise,
   MultipleChoiceExercise,
+  TrueFalseExercise,
 } from "@/data/grammar/types";
+
+type ChoicePromptExercise = MultipleChoiceExercise | TrueFalseExercise;
 
 function quotedSegments(prompt: string): string[] {
   return [...prompt.matchAll(/'([^']+)'/g)]
@@ -35,7 +38,7 @@ export function fillBlankSpeakText(exercise: FillBlankExercise): string | null {
 }
 
 export function multipleChoiceSpeakText(
-  exercise: MultipleChoiceExercise,
+  exercise: ChoicePromptExercise,
 ): string | null {
   const explicit = exercise.speakText?.trim();
   if (explicit) {
@@ -69,6 +72,10 @@ const CROSSWORD_SECOND_WORDS = [
 ] as const;
 
 export function crosswordAnswerSpeakText(answer: string): string {
+  if (answer.includes("'")) {
+    return answer.toLowerCase();
+  }
+
   const compact = answer.replace(/[^a-zA-Z]/g, "").toUpperCase();
   if (!compact) {
     return "";

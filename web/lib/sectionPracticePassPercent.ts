@@ -1,1 +1,0 @@
-export const SECTION_PRACTICE_PASS_PERCENT = 85;

@@ -12,8 +12,10 @@ import type {
   TopicContent,
   TopicExercise,
   TopicQuizExercise,
+  TopicQuizItem,
   ErrorCorrectionExercise,
   ListeningExercise,
+  TrueFalseExercise,
 } from "@/data/grammar/types";
 import { getTopicPracticeExercises } from "@/data/grammar/topicExercises";
 import {
@@ -43,8 +45,6 @@ export const TOPIC_QUIZ_FB_COUNT = 15;
 export const LEVEL_EXAM_CROSSWORD_COUNT = 1;
 export const LEVEL_EXAM_CLUE_COUNT = 20;
 export const LEVEL_EXAM_FILL_BLANK_COUNT = 20;
-
-export const TOPIC_EXAM_PASS_RATIO = 0.85;
 
 const FALLBACK_DISTRACTORS = [
   "Hiçbiri",
@@ -151,12 +151,23 @@ export function ensureExamOptionCount(
   };
 }
 
+function isTopicQuizExercise(item: TopicQuizItem): item is TopicQuizExercise {
+  return (
+    item.type === "multiple_choice" ||
+    item.type === "true_false" ||
+    item.type === "fill_blank" ||
+    item.type === "matching"
+  );
+}
+
 export function toTopicQuizExercises(
   exercises: readonly TopicExercise[],
 ): TopicQuizExercise[] {
   return exercises.filter(
     (item): item is TopicQuizExercise =>
-      item.type === "multiple_choice" || item.type === "fill_blank",
+      item.type === "multiple_choice" ||
+      item.type === "true_false" ||
+      item.type === "fill_blank",
   );
 }
 
@@ -250,9 +261,16 @@ export function topicQuizUsesMixedFormat(content: TopicContent): boolean {
     return false;
   }
   const quiz = listQuizExercises(content);
-  const hasMc = quiz.some((item) => item.type === "multiple_choice");
-  const hasFb = quiz.some((item) => item.type === "fill_blank");
-  return hasMc && hasFb;
+  const mixedTypes = [
+    "multiple_choice",
+    "fill_blank",
+    "true_false",
+    "matching",
+  ] as const;
+  const presentCount = mixedTypes.filter((type) =>
+    quiz.some((item) => item.type === type),
+  ).length;
+  return presentCount >= 2;
 }
 
 function pushUniqueQuestion(
@@ -373,9 +391,33 @@ export function resolveMixedTopicQuizPool(
     return [];
   }
 
+  const explicitQuiz = content.quiz ?? [];
+  if (explicitQuiz.length > 0) {
+    const practice = practiceMultipleChoice(content);
+    const pool = [
+      ...practice.flatMap((item) => item.options),
+      ...FALLBACK_DISTRACTORS,
+    ];
+    const optionCount =
+      content.quizOptionCount && content.quizOptionCount > 1
+        ? content.quizOptionCount
+        : TOPIC_EXAM_OPTION_COUNT;
+
+    return explicitQuiz
+      .filter(isTopicQuizExercise)
+      .map((item) =>
+        item.type === "multiple_choice"
+          ? ensureExamOptionCount(item, pool, optionCount)
+          : item,
+      );
+  }
+
   const multipleChoice = resolveTopicExamExercises(content);
   const fillBlanks = resolveTopicExamFillBlanks(content);
-  return [...multipleChoice, ...fillBlanks];
+  const trueFalse = getTopicPracticeExercises(content).filter(
+    (item): item is TrueFalseExercise => item.type === "true_false",
+  );
+  return [...multipleChoice, ...fillBlanks, ...trueFalse];
 }
 
 export function resolveMixedTopicQuiz(
@@ -515,9 +557,4 @@ export function resolveLevelExamFillBlanks(
   return createLevelExamFillBlanks(level);
 }
 
-export function didPassTopicExamScore(correct: number, total: number): boolean {
-  if (total <= 0) {
-    return false;
-  }
-  return correct / total >= TOPIC_EXAM_PASS_RATIO;
-}
+export { didPassExamScore as didPassTopicExamScore } from "@/lib/examPassThreshold";

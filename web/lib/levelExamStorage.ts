@@ -6,8 +6,6 @@ export const PASSED_LEVEL_EXAMS_COOKIE = "pylmor-passed-level-exams";
 export const PASSED_LEVEL_EXAMS_CHANGED_EVENT =
   "pylmor:passed-level-exams-changed";
 
-export const LEVEL_EXAM_PASS_RATIO = 0.75;
-
 const CEFR_LEVEL_SET = new Set<string>(CEFR_LEVEL_ORDER);
 
 function canUseDom(): boolean {
@@ -128,9 +126,4 @@ export function clearPassedLevelExams(): void {
   emitChanged();
 }
 
-export function didPassExamScore(correct: number, total: number): boolean {
-  if (total <= 0) {
-    return false;
-  }
-  return correct / total >= LEVEL_EXAM_PASS_RATIO;
-}
+export { didPassExamScore } from "@/lib/examPassThreshold";
