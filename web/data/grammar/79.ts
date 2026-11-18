@@ -6,27 +6,32 @@ export const topicContent79: TopicContent = {
     parts: [
       {
         id: "79-1",
-        title: "Whereas / While: Karşıtlık Bağlaçları",
-        titleEn: "Whereas / While (Contrast Conjunctions)",
+        title: "Geçmişte Tavsiye ve Pişmanlık",
+        titleEn: "Should Have / Shouldn't Have",
         paragraphs: [
-          "İki durumu veya görüşü aynı cümlede karşılaştırıp dengeli bir kontrast kurmaya hazır mısın? Bu derste **\\whereas\\** ile daha resmi ve net karşıtlık, **\\while / whilst\\** ile hem zaman hem zıtlık anlamlarını taşıyan **\\contrast conjunctions\\** yapılarını keşfedeceksin. Paragraf düzeyinde **\\although\\** ile farklarını, cümle pozisyonlarını ve noktalama alışkanlıklarını inceleyeceksin. Rapor, makale ve günlük anlatımda fikirleri yan yana koyarak daha ikna edici metinler yazabileceksin.",
+          "**Geçmişte Tavsiye ve Pişmanlık** konusu B1 müfredatında temel taşlardan biridir. Kartta gördüğün kalıplar arasında **\\Should Have\\**, **\\Shouldn't Have\\**, **\\Regret\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "Whereas online sales grew, foot traffic fell.",
-            tr: "Bağlamda incele.",
+            en: "Should Have",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "While I enjoy the city, the rent is too high.",
-            tr: "Bağlamda incele.",
+            en: "Shouldn't Have",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Regret",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,24 +43,21 @@ export const topicContent79: TopicContent = {
       id: "79-ex-79-1-1",
       subtopicId: "79-1",
       type: "multiple_choice",
-      prompt:
-        '"Whereas / While: Karşıtlık Bağlaçları" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Geçmişte Tavsiye ve Pişmanlık\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Whereas / While: Karşıtlık Bağlaçları",
+        "Geçmişte Tavsiye ve Pişmanlık",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Whereas / While: Karşıtlık Bağlaçları" başlığı altındadır.',
+      explanation: "Bu alt konu \"Geçmişte Tavsiye ve Pişmanlık\" başlığı altındadır.",
     },
     {
       id: "79-ex-79-1-2",
       subtopicId: "79-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Whereas / While: Karşıtlık Bağlaçları" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Geçmişte Tavsiye ve Pişmanlık\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -69,21 +71,21 @@ export const topicContent79: TopicContent = {
       id: "79-tf-79-1-1",
       subtopicId: "79-1",
       type: "true_false",
-      prompt:
-        '"Whereas / While: Karşıtlık Bağlaçları" başlığı "Whereas / While: Karşıtlık Bağlaçları" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Geçmişte Tavsiye ve Pişmanlık\" başlığı \"Geçmişte Tavsiye ve Pişmanlık\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Whereas / While: Karşıtlık Bağlaçları" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Geçmişte Tavsiye ve Pişmanlık\" konusu altında işlenir.",
     },
     {
       id: "79-fb-79-1-1",
       subtopicId: "79-1",
       type: "fill_blank",
-      prompt:
-        '"Whereas / While: Karşıtlık Bağlaçları" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Geçmişte Tavsiye ve Pişmanlık\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "79-match-1",
@@ -92,12 +94,12 @@ export const topicContent79: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Whereas / While (Contrast Conjunctions)",
-          right: "Whereas / While: Karşıtlık Bağlaçları",
+          left: "Should Have / Shouldn't Have",
+          right: "Geçmişte Tavsiye ve Pişmanlık",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -156,24 +158,21 @@ export const topicContent79: TopicContent = {
       id: "quiz-79-79-1-1",
       subtopicId: "79-1",
       type: "multiple_choice",
-      prompt:
-        '"Whereas / While: Karşıtlık Bağlaçları" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Geçmişte Tavsiye ve Pişmanlık\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
-        "Whereas / While: Karşıtlık Bağlaçları",
+        "Tamamen farklı bir konu",
+        "Geçmişte Tavsiye ve Pişmanlık",
       ],
       correctIndex: 3,
-      explanation:
-        'Bu alt konu "Whereas / While: Karşıtlık Bağlaçları" başlığı altındadır.',
+      explanation: "Bu alt konu \"Geçmişte Tavsiye ve Pişmanlık\" başlığı altındadır.",
     },
     {
       id: "quiz-79-79-1-2",
       subtopicId: "79-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Whereas / While: Karşıtlık Bağlaçları" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Geçmişte Tavsiye ve Pişmanlık\" için doğru yaklaşım hangisidir?",
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Konuyu tamamen atlamak",
@@ -187,8 +186,7 @@ export const topicContent79: TopicContent = {
       id: "quiz-79-79-1-3",
       subtopicId: "79-1",
       type: "multiple_choice",
-      prompt:
-        '"Whereas / While: Karşıtlık Bağlaçları" çalışırken hangisi doğrudur?',
+      prompt: "\"Geçmişte Tavsiye ve Pişmanlık\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -202,14 +200,17 @@ export const topicContent79: TopicContent = {
       id: "quiz-79-level",
       subtopicId: "79-1",
       type: "multiple_choice",
-      prompt:
-        '"Whereas / While: Karşıtlık Bağlaçları" konusu hangi seviyeye aittir?',
-      options: ["B2", "Belirsiz", "Yanlış seviye", "Seviye yok"],
-      correctIndex: 0,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Geçmişte Tavsiye ve Pişmanlık\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Seviye yok",
+        "Yanlış seviye",
+        "B1",
+      ],
+      correctIndex: 3,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Whereas / While: Karşıtlık Bağlaçları konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Geçmişte Tavsiye ve Pişmanlık konusunu pekiştiren quiz. Başarılar.",
 };

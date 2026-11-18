@@ -6,22 +6,22 @@ export const topicContent60: TopicContent = {
     parts: [
       {
         id: "60-1",
-        title: "Dolaylı Sorular",
-        titleEn: "Indirect Questions (Could you tell me where...)",
+        title: "Katılma & Benzerlik Bildirme",
+        titleEn: "Expressing Agreement and Similarity",
         paragraphs: [
-          "Soru sorarken daha kibar ve resmi bir ton kullanmaya hazır mısın? Bu derste **\\Could you tell me...\\**, **\\Do you know...\\** ve **\\I wonder...\\** gibi girişlerle başlayan **\\Indirect Questions\\** yapısını keşfedeceksin. Soru kelimesinden sonra **do/does/did** kullanmadan özne-fiil sırasına geçişi ve evet-hayır sorularında **\\if / whether\\** kullanımını inceleyeceksin. Yabancılarla ve resmi ortamlarda sorularını çok daha nazik biçimde sorabileceksin.",
+          "**Katılma ve Benzerlik Bildirme** konusu A2 müfredatında temel taşlardan biridir. Kartta gördüğün kalıplar arasında **\\So / Neither\\** öne çıkar. Olumlu, olumsuz ve soru formlarını A2 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "Could you tell me where the station is? Do you know what time it starts?.",
-            tr: "Bağlamda incele.",
+            en: "So / Neither",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -33,22 +33,24 @@ export const topicContent60: TopicContent = {
       id: "60-ex-60-1-1",
       subtopicId: "60-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Sorular" alt konusu hangi ana konuya aittir?',
+      prompt:
+        '"Katılma ve Benzerlik Bildirme" alt konusu hangi ana konuya aittir?',
       options: [
-        "Dolaylı Sorular",
+        "Katılma & Benzerlik Bildirme",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Dolaylı Sorular" başlığı altındadır.',
+      explanation:
+        'Bu alt konu "Katılma ve Benzerlik Bildirme" başlığı altındadır.',
     },
     {
       id: "60-ex-60-1-2",
       subtopicId: "60-1",
       type: "multiple_choice",
       prompt:
-        'B1 seviyesindeki "Dolaylı Sorular" için doğru yaklaşım hangisidir?',
+        'A2 seviyesindeki "Katılma ve Benzerlik Bildirme" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -63,18 +65,20 @@ export const topicContent60: TopicContent = {
       subtopicId: "60-1",
       type: "true_false",
       prompt:
-        '"Dolaylı Sorular" başlığı "Dolaylı Sorular" konusunun bir parçasıdır.',
+        '"Katılma ve Benzerlik Bildirme" başlığı "Katılma ve Benzerlik Bildirme" konusunun bir parçasıdır.',
       options: ["Doğru", "Yanlış"],
       correctIndex: 0,
-      explanation: 'Bu alt başlık "Dolaylı Sorular" konusu altında işlenir.',
+      explanation:
+        'Bu alt başlık "Katılma ve Benzerlik Bildirme" konusu altında işlenir.',
     },
     {
       id: "60-fb-60-1-1",
       subtopicId: "60-1",
       type: "fill_blank",
-      prompt: '"Dolaylı Sorular" konusu _____ seviyesine uygundur.',
-      answer: "B1",
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt:
+        '"Katılma ve Benzerlik Bildirme" konusu _____ seviyesine uygundur.',
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "60-match-1",
@@ -83,12 +87,12 @@ export const topicContent60: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Indirect Questions (Could you tell me where...)",
-          right: "Dolaylı Sorular",
+          left: "Expressing Agreement and Similarity",
+          right: "Katılma & Benzerlik Bildirme",
         },
         {
-          left: "B1 level",
-          right: "B1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -147,22 +151,24 @@ export const topicContent60: TopicContent = {
       id: "quiz-60-60-1-1",
       subtopicId: "60-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Sorular" alt konusu hangi ana konuya aittir?',
+      prompt:
+        '"Katılma ve Benzerlik Bildirme" alt konusu hangi ana konuya aittir?',
       options: [
-        "Dolaylı Sorular",
         "Sadece kelime listesi",
-        "Hiçbiri",
         "Tamamen farklı bir konu",
+        "Katılma & Benzerlik Bildirme",
+        "Hiçbiri",
       ],
-      correctIndex: 0,
-      explanation: 'Bu alt konu "Dolaylı Sorular" başlığı altındadır.',
+      correctIndex: 2,
+      explanation:
+        'Bu alt konu "Katılma ve Benzerlik Bildirme" başlığı altındadır.',
     },
     {
       id: "quiz-60-60-1-2",
       subtopicId: "60-1",
       type: "multiple_choice",
       prompt:
-        'B1 seviyesindeki "Dolaylı Sorular" için doğru yaklaşım hangisidir?',
+        'A2 seviyesindeki "Katılma ve Benzerlik Bildirme" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -176,7 +182,7 @@ export const topicContent60: TopicContent = {
       id: "quiz-60-60-1-3",
       subtopicId: "60-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Sorular" çalışırken hangisi doğrudur?',
+      prompt: '"Katılma ve Benzerlik Bildirme" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -190,12 +196,13 @@ export const topicContent60: TopicContent = {
       id: "quiz-60-level",
       subtopicId: "60-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Sorular" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "Seviye yok", "B1", "Belirsiz"],
-      correctIndex: 2,
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: '"Katılma ve Benzerlik Bildirme" konusu hangi seviyeye aittir?',
+      options: ["Belirsiz", "Seviye yok", "Yanlış seviye", "A2"],
+      correctIndex: 3,
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "Dolaylı Sorular konusunu pekiştiren quiz. Başarılar.",
+  quizIntro:
+    "Katılma ve Benzerlik Bildirme konusunu pekiştiren quiz. Başarılar.",
 };

@@ -6,27 +6,37 @@ export const topicContent59: TopicContent = {
     parts: [
       {
         id: "59-1",
-        title: "Dolaylı Emir ve Rica",
-        titleEn: "Reported Commands & Requests",
+        title: "Soru Eklentileri",
+        titleEn: "Question Tags",
         paragraphs: [
-          "Doğrudan emir ve ricaları dolaylı anlatımla başkasına aktarmaya hazır mısın? Bu derste **tell / ask + object + (not) to + V1** yapısıyla kurulan **\\Reported Commands & Requests\\** kalıplarını keşfedeceksin. Emirleri **\\told me to\\** ile, nazik ricaları **\\asked me to\\** ile aktarmayı ve olumsuz yönergelerde **\\not to\\** kullanımını inceleyeceksin. Patron, öğretmen veya arkadaştan duyduğun talimatları doğal biçimde başkalarına iletebileceksin.",
+          "**Soru Eklentileri** konusu A2 müfredatında temel taşlardan biridir. Kartta gördüğün kalıplar arasında **\\Isn't He\\**, **\\Aren't You\\**, **\\You're Late Aren't You\\**, **\\Tags\\** öne çıkar. Olumlu, olumsuz ve soru formlarını A2 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "She told me to wait.",
-            tr: "Bağlamda incele.",
+            en: "Isn't He",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "He asked me not to open the window.",
-            tr: "Bağlamda incele.",
+            en: "Aren't You",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "You're Late Aren't You",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Tags",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,22 +48,21 @@ export const topicContent59: TopicContent = {
       id: "59-ex-59-1-1",
       subtopicId: "59-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Emir ve Rica" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Soru Eklentileri\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Dolaylı Emir ve Rica",
+        "Soru Eklentileri",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Dolaylı Emir ve Rica" başlığı altındadır.',
+      explanation: "Bu alt konu \"Soru Eklentileri\" başlığı altındadır.",
     },
     {
       id: "59-ex-59-1-2",
       subtopicId: "59-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Dolaylı Emir ve Rica" için doğru yaklaşım hangisidir?',
+      prompt: "A2 seviyesindeki \"Soru Eklentileri\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,20 +76,21 @@ export const topicContent59: TopicContent = {
       id: "59-tf-59-1-1",
       subtopicId: "59-1",
       type: "true_false",
-      prompt:
-        '"Dolaylı Emir ve Rica" başlığı "Dolaylı Emir ve Rica" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Soru Eklentileri\" başlığı \"Soru Eklentileri\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Dolaylı Emir ve Rica" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Soru Eklentileri\" konusu altında işlenir.",
     },
     {
       id: "59-fb-59-1-1",
       subtopicId: "59-1",
       type: "fill_blank",
-      prompt: '"Dolaylı Emir ve Rica" konusu _____ seviyesine uygundur.',
-      answer: "B1",
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Soru Eklentileri\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "59-match-1",
@@ -89,12 +99,12 @@ export const topicContent59: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Reported Commands & Requests",
-          right: "Dolaylı Emir ve Rica",
+          left: "Question Tags",
+          right: "Soru Eklentileri",
         },
         {
-          left: "B1 level",
-          right: "B1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -153,22 +163,21 @@ export const topicContent59: TopicContent = {
       id: "quiz-59-59-1-1",
       subtopicId: "59-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Emir ve Rica" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Soru Eklentileri\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Hiçbiri",
-        "Dolaylı Emir ve Rica",
         "Tamamen farklı bir konu",
+        "Hiçbiri",
+        "Soru Eklentileri",
         "Sadece kelime listesi",
       ],
-      correctIndex: 1,
-      explanation: 'Bu alt konu "Dolaylı Emir ve Rica" başlığı altındadır.',
+      correctIndex: 2,
+      explanation: "Bu alt konu \"Soru Eklentileri\" başlığı altındadır.",
     },
     {
       id: "quiz-59-59-1-2",
       subtopicId: "59-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Dolaylı Emir ve Rica" için doğru yaklaşım hangisidir?',
+      prompt: "A2 seviyesindeki \"Soru Eklentileri\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -182,7 +191,7 @@ export const topicContent59: TopicContent = {
       id: "quiz-59-59-1-3",
       subtopicId: "59-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Emir ve Rica" çalışırken hangisi doğrudur?',
+      prompt: "\"Soru Eklentileri\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -196,12 +205,17 @@ export const topicContent59: TopicContent = {
       id: "quiz-59-level",
       subtopicId: "59-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Emir ve Rica" konusu hangi seviyeye aittir?',
-      options: ["Seviye yok", "B1", "Yanlış seviye", "Belirsiz"],
-      correctIndex: 1,
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Soru Eklentileri\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Seviye yok",
+        "Yanlış seviye",
+        "A2",
+      ],
+      correctIndex: 3,
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "Dolaylı Emir ve Rica konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Soru Eklentileri konusunu pekiştiren quiz. Başarılar.",
 };

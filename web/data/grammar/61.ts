@@ -6,27 +6,32 @@ export const topicContent61: TopicContent = {
     parts: [
       {
         id: "61-1",
-        title: "Bağlaç ve Geçiş İfadeleri",
-        titleEn: "Linking Words (however, therefore, although)",
+        title: "Dolaylı Sorular",
+        titleEn: "Indirect Questions",
         paragraphs: [
-          "Cümleleri ve fikirleri mantıksal bağlarla birleştirerek anlatımını akıcı kılmaya hazır mısın? Bu derste karşıtlık bildiren **\\however, although, but, whereas\\**, neden-sonuç için **\\therefore, so, as a result\\** ve ek bilgi için **\\moreover, furthermore\\** gibi **\\linking words\\** ve geçiş ifadelerini keşfedeceksin. Virgül ve noktalı virgül kullanımıyla **\\however\\** ve **\\therefore\\** gibi bağlayıcıların cümle içindeki konumunu inceleyeceksin. Yazılı ve sözlü anlatımlarında düşünceler arasında net geçişler kurabileceksin.",
+          "Dolaylı anlatımda zaman ve zamir kaymasıyla başkasının sözünü aktarırsın. Kartta gördüğün kalıplar arasında **\\Could You Tell Me\\**, **\\What Time Is It\\**, **\\Indirect Questions\\** öne çıkar. Olumlu, olumsuz ve soru formlarını A2 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "It was late; however, we kept talking.",
-            tr: "Bağlamda incele.",
+            en: "Could You Tell Me",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "Although it rained, we went out.",
-            tr: "Bağlamda incele.",
+            en: "What Time Is It",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Indirect Questions",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,23 +43,21 @@ export const topicContent61: TopicContent = {
       id: "61-ex-61-1-1",
       subtopicId: "61-1",
       type: "multiple_choice",
-      prompt: '"Bağlaç ve Geçiş İfadeleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Dolaylı Sorular\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Bağlaç ve Geçiş İfadeleri",
+        "Dolaylı Sorular",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Bağlaç ve Geçiş İfadeleri" başlığı altındadır.',
+      explanation: "Bu alt konu \"Dolaylı Sorular\" başlığı altındadır.",
     },
     {
       id: "61-ex-61-1-2",
       subtopicId: "61-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Bağlaç ve Geçiş İfadeleri" için doğru yaklaşım hangisidir?',
+      prompt: "A2 seviyesindeki \"Dolaylı Sorular\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -68,20 +71,21 @@ export const topicContent61: TopicContent = {
       id: "61-tf-61-1-1",
       subtopicId: "61-1",
       type: "true_false",
-      prompt:
-        '"Bağlaç ve Geçiş İfadeleri" başlığı "Bağlaç ve Geçiş İfadeleri" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Dolaylı Sorular\" başlığı \"Dolaylı Sorular\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Bağlaç ve Geçiş İfadeleri" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Dolaylı Sorular\" konusu altında işlenir.",
     },
     {
       id: "61-fb-61-1-1",
       subtopicId: "61-1",
       type: "fill_blank",
-      prompt: '"Bağlaç ve Geçiş İfadeleri" konusu _____ seviyesine uygundur.',
-      answer: "B1",
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Dolaylı Sorular\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "61-match-1",
@@ -90,12 +94,12 @@ export const topicContent61: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Linking Words (however, therefore, although)",
-          right: "Bağlaç ve Geçiş İfadeleri",
+          left: "Indirect Questions",
+          right: "Dolaylı Sorular",
         },
         {
-          left: "B1 level",
-          right: "B1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -154,23 +158,21 @@ export const topicContent61: TopicContent = {
       id: "quiz-61-61-1-1",
       subtopicId: "61-1",
       type: "multiple_choice",
-      prompt: '"Bağlaç ve Geçiş İfadeleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Dolaylı Sorular\" alt konusu hangi ana konuya aittir?",
       options: [
+        "Dolaylı Sorular",
         "Sadece kelime listesi",
-        "Hiçbiri",
-        "Bağlaç ve Geçiş İfadeleri",
         "Tamamen farklı bir konu",
+        "Hiçbiri",
       ],
-      correctIndex: 2,
-      explanation:
-        'Bu alt konu "Bağlaç ve Geçiş İfadeleri" başlığı altındadır.',
+      correctIndex: 0,
+      explanation: "Bu alt konu \"Dolaylı Sorular\" başlığı altındadır.",
     },
     {
       id: "quiz-61-61-1-2",
       subtopicId: "61-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Bağlaç ve Geçiş İfadeleri" için doğru yaklaşım hangisidir?',
+      prompt: "A2 seviyesindeki \"Dolaylı Sorular\" için doğru yaklaşım hangisidir?",
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Hiç alıştırma çözmemek",
@@ -184,7 +186,7 @@ export const topicContent61: TopicContent = {
       id: "quiz-61-61-1-3",
       subtopicId: "61-1",
       type: "multiple_choice",
-      prompt: '"Bağlaç ve Geçiş İfadeleri" çalışırken hangisi doğrudur?',
+      prompt: "\"Dolaylı Sorular\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -198,12 +200,17 @@ export const topicContent61: TopicContent = {
       id: "quiz-61-level",
       subtopicId: "61-1",
       type: "multiple_choice",
-      prompt: '"Bağlaç ve Geçiş İfadeleri" konusu hangi seviyeye aittir?',
-      options: ["B1", "Seviye yok", "Belirsiz", "Yanlış seviye"],
+      prompt: "\"Dolaylı Sorular\" konusu hangi seviyeye aittir?",
+      options: [
+        "A2",
+        "Belirsiz",
+        "Yanlış seviye",
+        "Seviye yok",
+      ],
       correctIndex: 0,
-      explanation: "Bu konu B1 seviyesindedir.",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "Bağlaç ve Geçiş İfadeleri konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Dolaylı Sorular konusunu pekiştiren quiz. Başarılar.",
 };

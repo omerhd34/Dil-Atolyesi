@@ -6,27 +6,32 @@ export const topicContent76: TopicContent = {
     parts: [
       {
         id: "76-1",
-        title: "Sıfat Cümleciklerinde Kısaltmalar",
-        titleEn: "Reduced Relative Clauses",
+        title: "Koşul Bağlaçları",
+        titleEn: "Conditional Conjunctions",
         paragraphs: [
-          "Uzun sıfat cümleciklerini sadeleştirerek İngilizce cümlelerine çok daha akıcı, yoğun ve doğal bir ritim kazandırmaya hazır mısın? Bu derste **\\who, which, that\\** ilgi zamirlerini ve **\\to be\\** fiilini düşürerek etken yapıları **\\V-ing\\**, edilgen yapıları ise **\\V3\\** biçiminde kısaltmayı keşfedeceksin. Ayrıca **\\the first, the last, the only\\** veya en üstünlük derecesi içeren ifadelerden sonra kullanılan **to + V1** kısaltmalarını inceleyeceksin. Hem makalelerde hem de konuşma dilinde gereksiz kelimelerden arınmış özlü ifadeler kurabileceksin.",
+          "Koşul cümlelerinde şart ve sonuç ilişkisini net kurarsın. Kartta gördüğün kalıplar arasında **\\Unless\\**, **\\As Long As\\**, **\\Provided That\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "The boy standing by the gate is my brother.",
-            tr: "Bağlamda incele.",
+            en: "Unless",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "The book written in 1920 is rare.",
-            tr: "Bağlamda incele.",
+            en: "As Long As",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Provided That",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,24 +43,21 @@ export const topicContent76: TopicContent = {
       id: "76-ex-76-1-1",
       subtopicId: "76-1",
       type: "multiple_choice",
-      prompt:
-        '"Sıfat Cümleciklerinde Kısaltmalar" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Koşul Bağlaçları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Sıfat Cümleciklerinde Kısaltmalar",
+        "Koşul Bağlaçları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Sıfat Cümleciklerinde Kısaltmalar" başlığı altındadır.',
+      explanation: "Bu alt konu \"Koşul Bağlaçları\" başlığı altındadır.",
     },
     {
       id: "76-ex-76-1-2",
       subtopicId: "76-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Sıfat Cümleciklerinde Kısaltmalar" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Koşul Bağlaçları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -69,21 +71,21 @@ export const topicContent76: TopicContent = {
       id: "76-tf-76-1-1",
       subtopicId: "76-1",
       type: "true_false",
-      prompt:
-        '"Sıfat Cümleciklerinde Kısaltmalar" başlığı "Sıfat Cümleciklerinde Kısaltmalar" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Koşul Bağlaçları\" başlığı \"Koşul Bağlaçları\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Sıfat Cümleciklerinde Kısaltmalar" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Koşul Bağlaçları\" konusu altında işlenir.",
     },
     {
       id: "76-fb-76-1-1",
       subtopicId: "76-1",
       type: "fill_blank",
-      prompt:
-        '"Sıfat Cümleciklerinde Kısaltmalar" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Koşul Bağlaçları\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "76-match-1",
@@ -92,12 +94,12 @@ export const topicContent76: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Reduced Relative Clauses",
-          right: "Sıfat Cümleciklerinde Kısaltmalar",
+          left: "Conditional Conjunctions",
+          right: "Koşul Bağlaçları",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -156,24 +158,21 @@ export const topicContent76: TopicContent = {
       id: "quiz-76-76-1-1",
       subtopicId: "76-1",
       type: "multiple_choice",
-      prompt:
-        '"Sıfat Cümleciklerinde Kısaltmalar" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Koşul Bağlaçları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Hiçbiri",
-        "Sıfat Cümleciklerinde Kısaltmalar",
-        "Tamamen farklı bir konu",
+        "Koşul Bağlaçları",
         "Sadece kelime listesi",
+        "Hiçbiri",
+        "Tamamen farklı bir konu",
       ],
-      correctIndex: 1,
-      explanation:
-        'Bu alt konu "Sıfat Cümleciklerinde Kısaltmalar" başlığı altındadır.',
+      correctIndex: 0,
+      explanation: "Bu alt konu \"Koşul Bağlaçları\" başlığı altındadır.",
     },
     {
       id: "quiz-76-76-1-2",
       subtopicId: "76-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Sıfat Cümleciklerinde Kısaltmalar" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Koşul Bağlaçları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
@@ -187,8 +186,7 @@ export const topicContent76: TopicContent = {
       id: "quiz-76-76-1-3",
       subtopicId: "76-1",
       type: "multiple_choice",
-      prompt:
-        '"Sıfat Cümleciklerinde Kısaltmalar" çalışırken hangisi doğrudur?',
+      prompt: "\"Koşul Bağlaçları\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Sadece dinleyip bırakmak",
@@ -202,14 +200,17 @@ export const topicContent76: TopicContent = {
       id: "quiz-76-level",
       subtopicId: "76-1",
       type: "multiple_choice",
-      prompt:
-        '"Sıfat Cümleciklerinde Kısaltmalar" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "B2", "Seviye yok", "Belirsiz"],
-      correctIndex: 1,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Koşul Bağlaçları\" konusu hangi seviyeye aittir?",
+      options: [
+        "B1",
+        "Seviye yok",
+        "Belirsiz",
+        "Yanlış seviye",
+      ],
+      correctIndex: 0,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Sıfat Cümleciklerinde Kısaltmalar konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Koşul Bağlaçları konusunu pekiştiren quiz. Başarılar.",
 };

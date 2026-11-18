@@ -6,27 +6,32 @@ export const topicContent97: TopicContent = {
     parts: [
       {
         id: "97-1",
-        title: "Perfect Gerund & Infinitive",
-        titleEn: "Perfect Gerund & Infinitive (I regret having said that)",
+        title: "Zıtlık Yapıları",
+        titleEn: "Contrast Structures",
         paragraphs: [
-          "Eylemin ana fiilden önce mi sonra mı gerçekleştiğini **\\perfect gerund\\** ve **\\perfect infinitive\\** ile kesin sınırlarla ifade etmeye hazır mısın? Bu derste **\\regret / remember / forget / try\\** gibi fiillerde **\\V-ing\\** ile **\\perfect\\** formların (**\\having V3, to have V3\\**) anlam farklarını keşfedeceksin. **\\Appear, seem, claim, be believed\\** yapılarında **\\to have V3\\** kullanımı ile geçmişe yönelik çıkarımları inceleyeceksin. Pişmanlık, varsayım ve rapor edilen olayları üst düzey İngilizcede zaman doğruluğuyla anlatabileceksin.",
+          "**Zıtlık Yapıları** konusu B1 müfredatında temel taşlardan biridir. Kartta gördüğün kalıplar arasında **\\Although\\**, **\\Despite\\**, **\\In Spite Of\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "I regret having said that.",
-            tr: "Bağlamda incele.",
+            en: "Although",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "He seems to have forgotten the meeting.",
-            tr: "Bağlamda incele.",
+            en: "Despite",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "In Spite Of",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,24 +43,21 @@ export const topicContent97: TopicContent = {
       id: "97-ex-97-1-1",
       subtopicId: "97-1",
       type: "multiple_choice",
-      prompt:
-        '"Perfect Gerund & Infinitive" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Zıtlık Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Perfect Gerund & Infinitive",
+        "Zıtlık Yapıları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Perfect Gerund & Infinitive" başlığı altındadır.',
+      explanation: "Bu alt konu \"Zıtlık Yapıları\" başlığı altındadır.",
     },
     {
       id: "97-ex-97-1-2",
       subtopicId: "97-1",
       type: "multiple_choice",
-      prompt:
-        'C1 seviyesindeki "Perfect Gerund & Infinitive" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Zıtlık Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -69,20 +71,21 @@ export const topicContent97: TopicContent = {
       id: "97-tf-97-1-1",
       subtopicId: "97-1",
       type: "true_false",
-      prompt:
-        '"Perfect Gerund & Infinitive" başlığı "Perfect Gerund & Infinitive" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Zıtlık Yapıları\" başlığı \"Zıtlık Yapıları\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Perfect Gerund & Infinitive" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Zıtlık Yapıları\" konusu altında işlenir.",
     },
     {
       id: "97-fb-97-1-1",
       subtopicId: "97-1",
       type: "fill_blank",
-      prompt: '"Perfect Gerund & Infinitive" konusu _____ seviyesine uygundur.',
-      answer: "C1",
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Zıtlık Yapıları\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "97-match-1",
@@ -91,12 +94,12 @@ export const topicContent97: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Perfect Gerund & Infinitive (I regret having said that)",
-          right: "Perfect Gerund & Infinitive",
+          left: "Contrast Structures",
+          right: "Zıtlık Yapıları",
         },
         {
-          left: "C1 level",
-          right: "C1 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -155,24 +158,21 @@ export const topicContent97: TopicContent = {
       id: "quiz-97-97-1-1",
       subtopicId: "97-1",
       type: "multiple_choice",
-      prompt:
-        '"Perfect Gerund & Infinitive" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Zıtlık Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
+        "Zıtlık Yapıları",
         "Sadece kelime listesi",
         "Hiçbiri",
         "Tamamen farklı bir konu",
-        "Perfect Gerund & Infinitive",
       ],
-      correctIndex: 3,
-      explanation:
-        'Bu alt konu "Perfect Gerund & Infinitive" başlığı altındadır.',
+      correctIndex: 0,
+      explanation: "Bu alt konu \"Zıtlık Yapıları\" başlığı altındadır.",
     },
     {
       id: "quiz-97-97-1-2",
       subtopicId: "97-1",
       type: "multiple_choice",
-      prompt:
-        'C1 seviyesindeki "Perfect Gerund & Infinitive" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Zıtlık Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -186,7 +186,7 @@ export const topicContent97: TopicContent = {
       id: "quiz-97-97-1-3",
       subtopicId: "97-1",
       type: "multiple_choice",
-      prompt: '"Perfect Gerund & Infinitive" çalışırken hangisi doğrudur?',
+      prompt: "\"Zıtlık Yapıları\" çalışırken hangisi doğrudur?",
       options: [
         "Konuyu tamamen atlamak",
         "Hiç örnek okumamak",
@@ -200,12 +200,17 @@ export const topicContent97: TopicContent = {
       id: "quiz-97-level",
       subtopicId: "97-1",
       type: "multiple_choice",
-      prompt: '"Perfect Gerund & Infinitive" konusu hangi seviyeye aittir?',
-      options: ["C1", "Belirsiz", "Yanlış seviye", "Seviye yok"],
-      correctIndex: 0,
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Zıtlık Yapıları\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Seviye yok",
+        "Yanlış seviye",
+        "B1",
+      ],
+      correctIndex: 3,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "Perfect Gerund & Infinitive konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Zıtlık Yapıları konusunu pekiştiren quiz. Başarılar.",
 };

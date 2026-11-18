@@ -6,27 +6,32 @@ export const topicContent72: TopicContent = {
     parts: [
       {
         id: "72-1",
-        title: "İleri Edilgen Çatı & Ettirgen Yapılar",
-        titleEn: "Advanced Passive & Causatives (have/get something done)",
+        title: "İleri Gelecek Zaman Yapıları",
+        titleEn: "Advanced Future Forms",
         paragraphs: [
-          "Süregelen ve bitmiş zamanlarda edilgen yapılar kurmayı ve bir hizmeti veya işi başkasına yaptırmayı akıcı biçimde ifade etmeye hazır mısın? Bu derste tüm zaman kipleri ve kip fiillerle (**\\modals\\**) çekimlenen ileri edilgen yapıları ile **\\have / get something done\\** ettirgen kalıplarını keşfedeceksin. Ayrıca **\\make, let, have, get\\** fiillerinin etken ettirgen kullanımlarını ve talihsiz olayları anlatan **\\have something done\\** nüansını inceleyeceksin. Günlük işlerden kurumsal raporlara kadar eylemin odağını ustalıkla yönetebileceksin.",
+          "Gelecek zamanı tahmin, plan veya programla eşleştirirsin. Kartta gördüğün kalıplar arasında **\\Will Be Doing\\**, **\\Will Have Done\\**, **\\By\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "I had my car repaired yesterday.",
-            tr: "Bağlamda incele.",
+            en: "Will Be Doing",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "The bridge is being built.",
-            tr: "Bağlamda incele.",
+            en: "Will Have Done",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "By",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,24 +43,21 @@ export const topicContent72: TopicContent = {
       id: "72-ex-72-1-1",
       subtopicId: "72-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Edilgen Çatı & Ettirgen Yapılar" alt konusu hangi ana konuya aittir?',
+      prompt: "\"İleri Gelecek Zaman Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İleri Edilgen Çatı & Ettirgen Yapılar",
+        "İleri Gelecek Zaman Yapıları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "İleri Edilgen Çatı & Ettirgen Yapılar" başlığı altındadır.',
+      explanation: "Bu alt konu \"İleri Gelecek Zaman Yapıları\" başlığı altındadır.",
     },
     {
       id: "72-ex-72-1-2",
       subtopicId: "72-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "İleri Edilgen Çatı & Ettirgen Yapılar" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"İleri Gelecek Zaman Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -69,21 +71,21 @@ export const topicContent72: TopicContent = {
       id: "72-tf-72-1-1",
       subtopicId: "72-1",
       type: "true_false",
-      prompt:
-        '"İleri Edilgen Çatı & Ettirgen Yapılar" başlığı "İleri Edilgen Çatı & Ettirgen Yapılar" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"İleri Gelecek Zaman Yapıları\" başlığı \"İleri Gelecek Zaman Yapıları\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "İleri Edilgen Çatı & Ettirgen Yapılar" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"İleri Gelecek Zaman Yapıları\" konusu altında işlenir.",
     },
     {
       id: "72-fb-72-1-1",
       subtopicId: "72-1",
       type: "fill_blank",
-      prompt:
-        '"İleri Edilgen Çatı & Ettirgen Yapılar" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"İleri Gelecek Zaman Yapıları\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "72-match-1",
@@ -92,12 +94,12 @@ export const topicContent72: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Advanced Passive & Causatives (have/get something done)",
-          right: "İleri Edilgen Çatı & Ettirgen Yapılar",
+          left: "Advanced Future Forms",
+          right: "İleri Gelecek Zaman Yapıları",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -156,24 +158,21 @@ export const topicContent72: TopicContent = {
       id: "quiz-72-72-1-1",
       subtopicId: "72-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Edilgen Çatı & Ettirgen Yapılar" alt konusu hangi ana konuya aittir?',
+      prompt: "\"İleri Gelecek Zaman Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Tamamen farklı bir konu",
+        "İleri Gelecek Zaman Yapıları",
         "Sadece kelime listesi",
+        "Tamamen farklı bir konu",
         "Hiçbiri",
-        "İleri Edilgen Çatı & Ettirgen Yapılar",
       ],
-      correctIndex: 3,
-      explanation:
-        'Bu alt konu "İleri Edilgen Çatı & Ettirgen Yapılar" başlığı altındadır.',
+      correctIndex: 0,
+      explanation: "Bu alt konu \"İleri Gelecek Zaman Yapıları\" başlığı altındadır.",
     },
     {
       id: "quiz-72-72-1-2",
       subtopicId: "72-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "İleri Edilgen Çatı & Ettirgen Yapılar" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"İleri Gelecek Zaman Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
@@ -187,8 +186,7 @@ export const topicContent72: TopicContent = {
       id: "quiz-72-72-1-3",
       subtopicId: "72-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Edilgen Çatı & Ettirgen Yapılar" çalışırken hangisi doğrudur?',
+      prompt: "\"İleri Gelecek Zaman Yapıları\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -202,14 +200,17 @@ export const topicContent72: TopicContent = {
       id: "quiz-72-level",
       subtopicId: "72-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Edilgen Çatı & Ettirgen Yapılar" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "Seviye yok", "B2", "Belirsiz"],
+      prompt: "\"İleri Gelecek Zaman Yapıları\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Seviye yok",
+        "B1",
+        "Yanlış seviye",
+      ],
       correctIndex: 2,
-      explanation: "Bu konu B2 seviyesindedir.",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "İleri Edilgen Çatı & Ettirgen Yapılar konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "İleri Gelecek Zaman Yapıları konusunu pekiştiren quiz. Başarılar.",
 };

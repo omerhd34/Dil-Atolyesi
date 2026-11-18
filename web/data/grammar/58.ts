@@ -6,27 +6,37 @@ export const topicContent58: TopicContent = {
     parts: [
       {
         id: "58-1",
-        title: "Dolaylı Anlatım (Temel Aktarım)",
-        titleEn: "Reported Speech (Statements & Questions)",
+        title: "Temel Edilgen Yapı",
+        titleEn: "Basic Passive Voice",
         paragraphs: [
-          "Başkalarının söylediği sözleri ve sorduğu soruları kendi cümlelerinle akıcı ve doğru bir şekilde aktarmaya hazır mısın? Bu derste **\\Reported Speech\\** (Dolaylı Anlatım) yapısında zamanların bir derece geçmişe kayması (**\\tense backshift\\**) kuralını keşfedeceksin. **\\Say\\** ve **\\tell\\** fiilleri arasındaki nesne farkını, evet-hayır sorularında **\\if / whether\\** kullanımını ve zamirlerle zaman zarflarındaki dönüşümleri inceleyeceksin. Günlük konuşmaları, toplantı notlarını ve duyduğun haberleri doğal biçimde aktarabileceksin.",
+          "Edilgen yapıda özne eylemi yapan değil, eylemden etkilenendir. Kartta gördüğün kalıplar arasında **\\Be + V3\\**, **\\Present Passive\\**, **\\Past Passive\\**, **\\By\\** öne çıkar. Olumlu, olumsuz ve soru formlarını A2 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "He said he was tired.",
-            tr: "Bağlamda incele.",
+            en: "Be + V3",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "She asked me where I lived.",
-            tr: "Bağlamda incele.",
+            en: "Present Passive",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Past Passive",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "By",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,24 +48,21 @@ export const topicContent58: TopicContent = {
       id: "58-ex-58-1-1",
       subtopicId: "58-1",
       type: "multiple_choice",
-      prompt:
-        '"Dolaylı Anlatım (Temel Aktarım)" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Temel Edilgen Yapı\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Dolaylı Anlatım (Temel Aktarım)",
+        "Temel Edilgen Yapı",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Dolaylı Anlatım (Temel Aktarım)" başlığı altındadır.',
+      explanation: "Bu alt konu \"Temel Edilgen Yapı\" başlığı altındadır.",
     },
     {
       id: "58-ex-58-1-2",
       subtopicId: "58-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Dolaylı Anlatım (Temel Aktarım)" için doğru yaklaşım hangisidir?',
+      prompt: "A2 seviyesindeki \"Temel Edilgen Yapı\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -69,21 +76,21 @@ export const topicContent58: TopicContent = {
       id: "58-tf-58-1-1",
       subtopicId: "58-1",
       type: "true_false",
-      prompt:
-        '"Dolaylı Anlatım (Temel Aktarım)" başlığı "Dolaylı Anlatım (Temel Aktarım)" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Temel Edilgen Yapı\" başlığı \"Temel Edilgen Yapı\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Dolaylı Anlatım (Temel Aktarım)" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Temel Edilgen Yapı\" konusu altında işlenir.",
     },
     {
       id: "58-fb-58-1-1",
       subtopicId: "58-1",
       type: "fill_blank",
-      prompt:
-        '"Dolaylı Anlatım (Temel Aktarım)" konusu _____ seviyesine uygundur.',
-      answer: "B1",
-      explanation: "Bu konu B1 seviyesindedir.",
+      prompt: "\"Temel Edilgen Yapı\" konusu _____ seviyesine uygundur.",
+      answer: "A2",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
     {
       id: "58-match-1",
@@ -92,12 +99,12 @@ export const topicContent58: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Reported Speech (Statements & Questions)",
-          right: "Dolaylı Anlatım (Temel Aktarım)",
+          left: "Basic Passive Voice",
+          right: "Temel Edilgen Yapı",
         },
         {
-          left: "B1 level",
-          right: "B1 seviyesi",
+          left: "A2 level",
+          right: "A2 seviyesi",
         },
         {
           left: "Practice",
@@ -156,24 +163,21 @@ export const topicContent58: TopicContent = {
       id: "quiz-58-58-1-1",
       subtopicId: "58-1",
       type: "multiple_choice",
-      prompt:
-        '"Dolaylı Anlatım (Temel Aktarım)" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Temel Edilgen Yapı\" alt konusu hangi ana konuya aittir?",
       options: [
+        "Temel Edilgen Yapı",
         "Sadece kelime listesi",
         "Hiçbiri",
         "Tamamen farklı bir konu",
-        "Dolaylı Anlatım (Temel Aktarım)",
       ],
-      correctIndex: 3,
-      explanation:
-        'Bu alt konu "Dolaylı Anlatım (Temel Aktarım)" başlığı altındadır.',
+      correctIndex: 0,
+      explanation: "Bu alt konu \"Temel Edilgen Yapı\" başlığı altındadır.",
     },
     {
       id: "quiz-58-58-1-2",
       subtopicId: "58-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Dolaylı Anlatım (Temel Aktarım)" için doğru yaklaşım hangisidir?',
+      prompt: "A2 seviyesindeki \"Temel Edilgen Yapı\" için doğru yaklaşım hangisidir?",
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Hiç alıştırma çözmemek",
@@ -187,7 +191,7 @@ export const topicContent58: TopicContent = {
       id: "quiz-58-58-1-3",
       subtopicId: "58-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Anlatım (Temel Aktarım)" çalışırken hangisi doğrudur?',
+      prompt: "\"Temel Edilgen Yapı\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -201,13 +205,17 @@ export const topicContent58: TopicContent = {
       id: "quiz-58-level",
       subtopicId: "58-1",
       type: "multiple_choice",
-      prompt: '"Dolaylı Anlatım (Temel Aktarım)" konusu hangi seviyeye aittir?',
-      options: ["B1", "Seviye yok", "Belirsiz", "Yanlış seviye"],
+      prompt: "\"Temel Edilgen Yapı\" konusu hangi seviyeye aittir?",
+      options: [
+        "A2",
+        "Belirsiz",
+        "Yanlış seviye",
+        "Seviye yok",
+      ],
       correctIndex: 0,
-      explanation: "Bu konu B1 seviyesindedir.",
+      explanation: "Bu konu A2 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Dolaylı Anlatım (Temel Aktarım) konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Temel Edilgen Yapı konusunu pekiştiren quiz. Başarılar.",
 };

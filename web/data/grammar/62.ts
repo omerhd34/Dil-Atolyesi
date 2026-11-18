@@ -6,32 +6,37 @@ export const topicContent62: TopicContent = {
     parts: [
       {
         id: "62-1",
-        title: "Fiil/Sıfat + Edat Kalıpları",
-        titleEn: "Dependent Prepositions (Verb/Adjective + Preposition)",
+        title: "Yakın Geçmiş Zaman",
+        titleEn: "Present Perfect",
         paragraphs: [
-          "Fiil ve sıfatlardan sonra hangi edatın geleceğini kalıplar halinde öğrenmeye hazır mısın? Bu derste **\\depend on, interested in, good at, worried about, apologise for\\** gibi **\\Dependent Prepositions\\** (fiil/sıfat + edat) eşleşmelerini keşfedeceksin. Nesne olarak **\\-ing\\** veya **to + V1** alan kalıpların edatla nasıl birlikte çalıştığını inceleyeceksin. Günlük konuşmada en sık hata yapılan edat seçimlerini doğru kullanabileceksin.",
+          "Present perfect geçmişteki olayı bugünle bağlar; sonuç veya deneyim vurgusu taşır. Kartta gördüğün kalıplar arasında **\\Have / Has + Past Participle\\**, **\\Ever\\**, **\\Never\\**, **\\Just\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "It depends on the weather.",
-            tr: "Bağlamda incele.",
+            en: "Have / Has + Past Participle",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "I'm interested in science.",
-            tr: "Bağlamda incele.",
+            en: "Ever",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "She apologised for being late.",
-            tr: "Bağlamda incele.",
+            en: "Never",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Just",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -43,24 +48,21 @@ export const topicContent62: TopicContent = {
       id: "62-ex-62-1-1",
       subtopicId: "62-1",
       type: "multiple_choice",
-      prompt:
-        '"Fiil/Sıfat + Edat Kalıpları" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Yakın Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Fiil/Sıfat + Edat Kalıpları",
+        "Yakın Geçmiş Zaman",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Fiil/Sıfat + Edat Kalıpları" başlığı altındadır.',
+      explanation: "Bu alt konu \"Yakın Geçmiş Zaman\" başlığı altındadır.",
     },
     {
       id: "62-ex-62-1-2",
       subtopicId: "62-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Fiil/Sıfat + Edat Kalıpları" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Yakın Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -74,18 +76,19 @@ export const topicContent62: TopicContent = {
       id: "62-tf-62-1-1",
       subtopicId: "62-1",
       type: "true_false",
-      prompt:
-        '"Fiil/Sıfat + Edat Kalıpları" başlığı "Fiil/Sıfat + Edat Kalıpları" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Yakın Geçmiş Zaman\" başlığı \"Yakın Geçmiş Zaman\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Fiil/Sıfat + Edat Kalıpları" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Yakın Geçmiş Zaman\" konusu altında işlenir.",
     },
     {
       id: "62-fb-62-1-1",
       subtopicId: "62-1",
       type: "fill_blank",
-      prompt: '"Fiil/Sıfat + Edat Kalıpları" konusu _____ seviyesine uygundur.',
+      prompt: "\"Yakın Geçmiş Zaman\" konusu _____ seviyesine uygundur.",
       answer: "B1",
       explanation: "Bu konu B1 seviyesindedir.",
     },
@@ -96,8 +99,8 @@ export const topicContent62: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Dependent Prepositions (Verb/Adjective + Preposition)",
-          right: "Fiil/Sıfat + Edat Kalıpları",
+          left: "Present Perfect",
+          right: "Yakın Geçmiş Zaman",
         },
         {
           left: "B1 level",
@@ -160,24 +163,21 @@ export const topicContent62: TopicContent = {
       id: "quiz-62-62-1-1",
       subtopicId: "62-1",
       type: "multiple_choice",
-      prompt:
-        '"Fiil/Sıfat + Edat Kalıpları" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Yakın Geçmiş Zaman\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Fiil/Sıfat + Edat Kalıpları",
-        "Hiçbiri",
-        "Sadece kelime listesi",
         "Tamamen farklı bir konu",
+        "Sadece kelime listesi",
+        "Hiçbiri",
+        "Yakın Geçmiş Zaman",
       ],
-      correctIndex: 0,
-      explanation:
-        'Bu alt konu "Fiil/Sıfat + Edat Kalıpları" başlığı altındadır.',
+      correctIndex: 3,
+      explanation: "Bu alt konu \"Yakın Geçmiş Zaman\" başlığı altındadır.",
     },
     {
       id: "quiz-62-62-1-2",
       subtopicId: "62-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Fiil/Sıfat + Edat Kalıpları" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Yakın Geçmiş Zaman\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -191,7 +191,7 @@ export const topicContent62: TopicContent = {
       id: "quiz-62-62-1-3",
       subtopicId: "62-1",
       type: "multiple_choice",
-      prompt: '"Fiil/Sıfat + Edat Kalıpları" çalışırken hangisi doğrudur?',
+      prompt: "\"Yakın Geçmiş Zaman\" çalışırken hangisi doğrudur?",
       options: [
         "Konuyu tamamen atlamak",
         "Hiç örnek okumamak",
@@ -205,12 +205,17 @@ export const topicContent62: TopicContent = {
       id: "quiz-62-level",
       subtopicId: "62-1",
       type: "multiple_choice",
-      prompt: '"Fiil/Sıfat + Edat Kalıpları" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "Seviye yok", "Belirsiz", "B1"],
+      prompt: "\"Yakın Geçmiş Zaman\" konusu hangi seviyeye aittir?",
+      options: [
+        "Yanlış seviye",
+        "Seviye yok",
+        "Belirsiz",
+        "B1",
+      ],
       correctIndex: 3,
       explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "Fiil/Sıfat + Edat Kalıpları konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Yakın Geçmiş Zaman konusunu pekiştiren quiz. Başarılar.",
 };

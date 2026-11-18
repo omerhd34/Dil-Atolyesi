@@ -6,32 +6,27 @@ export const topicContent92: TopicContent = {
     parts: [
       {
         id: "92-1",
-        title: "Whatever / Whoever / However",
-        titleEn: "Whatever / Whoever / However",
+        title: "Wish Yapıları",
+        titleEn: "Wish Structures",
         paragraphs: [
-          "Ne olursa olsun, kim olursa olsun veya her ne kadar kalıplarıyla koşulsuz ve esnek anlam kurmaya hazır mısın? Bu derste **\\whatever, whoever, whichever, however\\** ile **\\-ever\\** eklisinin kurduğu **\\free relative clauses\\** yapılarını keşfedeceksin. **However + sıfat/zarf** ile zıtlık, nesne ve özne rollerindeki kelime dizilimini inceleyeceksin. Günlük konuşmadan akademik metne kadar geniş bir üslupta özgür ve güçlü cümleler kurabileceksin.",
+          "**Wish Yapıları** konusu B1 müfredatında temel taşlardan biridir. Kartta gördüğün kalıplar arasında **\\Wish + Past Simple\\**, **\\Wish + Past Perfect\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "Whatever you decide, I'll support you.",
-            tr: "Bağlamda incele.",
+            en: "Wish + Past Simple",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "Whoever arrives first gets a seat.",
-            tr: "Bağlamda incele.",
-            note: "grammarHeading",
-          },
-          {
-            en: "However hard you try, some things won't change.",
-            tr: "Bağlamda incele.",
+            en: "Wish + Past Perfect",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -43,24 +38,21 @@ export const topicContent92: TopicContent = {
       id: "92-ex-92-1-1",
       subtopicId: "92-1",
       type: "multiple_choice",
-      prompt:
-        '"Whatever / Whoever / However" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Wish Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Whatever / Whoever / However",
+        "Wish Yapıları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Whatever / Whoever / However" başlığı altındadır.',
+      explanation: "Bu alt konu \"Wish Yapıları\" başlığı altındadır.",
     },
     {
       id: "92-ex-92-1-2",
       subtopicId: "92-1",
       type: "multiple_choice",
-      prompt:
-        'C1 seviyesindeki "Whatever / Whoever / However" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Wish Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -74,21 +66,21 @@ export const topicContent92: TopicContent = {
       id: "92-tf-92-1-1",
       subtopicId: "92-1",
       type: "true_false",
-      prompt:
-        '"Whatever / Whoever / However" başlığı "Whatever / Whoever / However" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Wish Yapıları\" başlığı \"Wish Yapıları\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Whatever / Whoever / However" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Wish Yapıları\" konusu altında işlenir.",
     },
     {
       id: "92-fb-92-1-1",
       subtopicId: "92-1",
       type: "fill_blank",
-      prompt:
-        '"Whatever / Whoever / However" konusu _____ seviyesine uygundur.',
-      answer: "C1",
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Wish Yapıları\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "92-match-1",
@@ -97,12 +89,12 @@ export const topicContent92: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Whatever / Whoever / However",
-          right: "Whatever / Whoever / However",
+          left: "Wish Structures",
+          right: "Wish Yapıları",
         },
         {
-          left: "C1 level",
-          right: "C1 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -161,24 +153,21 @@ export const topicContent92: TopicContent = {
       id: "quiz-92-92-1-1",
       subtopicId: "92-1",
       type: "multiple_choice",
-      prompt:
-        '"Whatever / Whoever / However" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Wish Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Whatever / Whoever / However",
+        "Wish Yapıları",
         "Sadece kelime listesi",
-        "Tamamen farklı bir konu",
         "Hiçbiri",
+        "Tamamen farklı bir konu",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Whatever / Whoever / However" başlığı altındadır.',
+      explanation: "Bu alt konu \"Wish Yapıları\" başlığı altındadır.",
     },
     {
       id: "quiz-92-92-1-2",
       subtopicId: "92-1",
       type: "multiple_choice",
-      prompt:
-        'C1 seviyesindeki "Whatever / Whoever / However" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Wish Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -192,7 +181,7 @@ export const topicContent92: TopicContent = {
       id: "quiz-92-92-1-3",
       subtopicId: "92-1",
       type: "multiple_choice",
-      prompt: '"Whatever / Whoever / However" çalışırken hangisi doğrudur?',
+      prompt: "\"Wish Yapıları\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -206,13 +195,17 @@ export const topicContent92: TopicContent = {
       id: "quiz-92-level",
       subtopicId: "92-1",
       type: "multiple_choice",
-      prompt: '"Whatever / Whoever / However" konusu hangi seviyeye aittir?',
-      options: ["Belirsiz", "Seviye yok", "Yanlış seviye", "C1"],
-      correctIndex: 3,
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Wish Yapıları\" konusu hangi seviyeye aittir?",
+      options: [
+        "B1",
+        "Belirsiz",
+        "Yanlış seviye",
+        "Seviye yok",
+      ],
+      correctIndex: 0,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Whatever / Whoever / However konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Wish Yapıları konusunu pekiştiren quiz. Başarılar.",
 };

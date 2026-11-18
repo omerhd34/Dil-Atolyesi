@@ -6,27 +6,42 @@ export const topicContent78: TopicContent = {
     parts: [
       {
         id: "78-1",
-        title: "Zıtlık, Amaç ve Sebep Cümlecikleri",
-        titleEn: "Clauses of Contrast, Purpose & Reason",
+        title: "Modal Perfect Yapıları",
+        titleEn: "Modal Perfect Structures",
         paragraphs: [
-          "Fikirlerin arasındaki karşıtlık, amaç ve neden-sonuç ilişkilerini üst düzey bağlaçlarla ustalıkla örmeye hazır mısın? Bu derste **\\although, even though, despite, in spite of\\** ile zıtlık; **\\so that, in order to, so as to\\** ile amaç; **\\because, since, as, due to, owing to\\** ile sebep bildiren yapıları keşfedeceksin. Hangi bağlaçtan sonra isim öbeği veya **\\V-ing\\**, hangisinden sonra tam cümle geleceğini net kurallarla inceleyeceksin. Kompozisyonlarında ve tartışmalarda argümanlarını mantıksal bir bütünlükle savunabileceksin.",
+          "Modal fiiller zorunluluk, olasılık, izin ve çıkarım gibi anlamları taşır. Kartta gördüğün kalıplar arasında **\\Must Have\\**, **\\Can't Have\\**, **\\Could Have\\**, **\\May Have\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "Despite the heavy rain, the match continued.",
-            tr: "Bağlamda incele.",
+            en: "Must Have",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "I left early so that I wouldn't miss it.",
-            tr: "Bağlamda incele.",
+            en: "Can't Have",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Could Have",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "May Have",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Might Have",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,24 +53,21 @@ export const topicContent78: TopicContent = {
       id: "78-ex-78-1-1",
       subtopicId: "78-1",
       type: "multiple_choice",
-      prompt:
-        '"Zıtlık, Amaç ve Sebep Cümlecikleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Modal Perfect Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Zıtlık, Amaç ve Sebep Cümlecikleri",
+        "Modal Perfect Yapıları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Zıtlık, Amaç ve Sebep Cümlecikleri" başlığı altındadır.',
+      explanation: "Bu alt konu \"Modal Perfect Yapıları\" başlığı altındadır.",
     },
     {
       id: "78-ex-78-1-2",
       subtopicId: "78-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Zıtlık, Amaç ve Sebep Cümlecikleri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Modal Perfect Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -69,21 +81,21 @@ export const topicContent78: TopicContent = {
       id: "78-tf-78-1-1",
       subtopicId: "78-1",
       type: "true_false",
-      prompt:
-        '"Zıtlık, Amaç ve Sebep Cümlecikleri" başlığı "Zıtlık, Amaç ve Sebep Cümlecikleri" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Modal Perfect Yapıları\" başlığı \"Modal Perfect Yapıları\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Zıtlık, Amaç ve Sebep Cümlecikleri" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Modal Perfect Yapıları\" konusu altında işlenir.",
     },
     {
       id: "78-fb-78-1-1",
       subtopicId: "78-1",
       type: "fill_blank",
-      prompt:
-        '"Zıtlık, Amaç ve Sebep Cümlecikleri" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Modal Perfect Yapıları\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "78-match-1",
@@ -92,12 +104,12 @@ export const topicContent78: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Clauses of Contrast, Purpose & Reason",
-          right: "Zıtlık, Amaç ve Sebep Cümlecikleri",
+          left: "Modal Perfect Structures",
+          right: "Modal Perfect Yapıları",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -156,24 +168,21 @@ export const topicContent78: TopicContent = {
       id: "quiz-78-78-1-1",
       subtopicId: "78-1",
       type: "multiple_choice",
-      prompt:
-        '"Zıtlık, Amaç ve Sebep Cümlecikleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Modal Perfect Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Sadece kelime listesi",
         "Hiçbiri",
+        "Modal Perfect Yapıları",
         "Tamamen farklı bir konu",
-        "Zıtlık, Amaç ve Sebep Cümlecikleri",
+        "Sadece kelime listesi",
       ],
-      correctIndex: 3,
-      explanation:
-        'Bu alt konu "Zıtlık, Amaç ve Sebep Cümlecikleri" başlığı altındadır.',
+      correctIndex: 1,
+      explanation: "Bu alt konu \"Modal Perfect Yapıları\" başlığı altındadır.",
     },
     {
       id: "quiz-78-78-1-2",
       subtopicId: "78-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Zıtlık, Amaç ve Sebep Cümlecikleri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Modal Perfect Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Hiç alıştırma çözmemek",
@@ -187,8 +196,7 @@ export const topicContent78: TopicContent = {
       id: "quiz-78-78-1-3",
       subtopicId: "78-1",
       type: "multiple_choice",
-      prompt:
-        '"Zıtlık, Amaç ve Sebep Cümlecikleri" çalışırken hangisi doğrudur?',
+      prompt: "\"Modal Perfect Yapıları\" çalışırken hangisi doğrudur?",
       options: [
         "Konuyu tamamen atlamak",
         "Sadece dinleyip bırakmak",
@@ -202,14 +210,17 @@ export const topicContent78: TopicContent = {
       id: "quiz-78-level",
       subtopicId: "78-1",
       type: "multiple_choice",
-      prompt:
-        '"Zıtlık, Amaç ve Sebep Cümlecikleri" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "Seviye yok", "Belirsiz", "B2"],
-      correctIndex: 3,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Modal Perfect Yapıları\" konusu hangi seviyeye aittir?",
+      options: [
+        "B1",
+        "Yanlış seviye",
+        "Belirsiz",
+        "Seviye yok",
+      ],
+      correctIndex: 0,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Zıtlık, Amaç ve Sebep Cümlecikleri konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Modal Perfect Yapıları konusunu pekiştiren quiz. Başarılar.",
 };

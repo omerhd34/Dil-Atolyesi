@@ -6,32 +6,52 @@ export const topicContent63: TopicContent = {
     parts: [
       {
         id: "63-1",
-        title: "Phrasal Verbs (Orta Düzey)",
-        titleEn: "Intermediate Phrasal Verbs",
+        title: "Present Perfect Zaman İfadeleri",
+        titleEn: "Present Perfect Time Expressions",
         paragraphs: [
-          "Orta düzey phrasal verb'lerle anlatımını zenginleştirmeye ve daha doğal konuşmaya hazır mısın? Bu derste **\\run out of, look into, come across, carry out, turn down\\** gibi günlük ve iş hayatında sık geçen **\\Intermediate Phrasal Verbs\\** kalıplarını keşfedeceksin. Temel seviyedekilerin ötesinde anlam çeşitliliği, ayrılamaz yapılar ve cümlede vurgulanması gereken parçacıkları inceleyeceksin. Bu kalıplarla İngilizceni bir üst seviyeye taşıyabileceksin.",
+          "Present perfect geçmişteki olayı bugünle bağlar; sonuç veya deneyim vurgusu taşır. Kartta gördüğün kalıplar arasında **\\Since\\**, **\\For\\**, **\\Already\\**, **\\Yet\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "We ran out of milk.",
-            tr: "Bağlamda incele.",
+            en: "Since",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "I'll look into the problem.",
-            tr: "Bağlamda incele.",
+            en: "For",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "He came across an old photo.",
-            tr: "Bağlamda incele.",
+            en: "Already",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Yet",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Just",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Ever",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Never",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -43,24 +63,21 @@ export const topicContent63: TopicContent = {
       id: "63-ex-63-1-1",
       subtopicId: "63-1",
       type: "multiple_choice",
-      prompt:
-        '"Phrasal Verbs (Orta Düzey)" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Present Perfect Zaman İfadeleri\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Phrasal Verbs (Orta Düzey)",
+        "Present Perfect Zaman İfadeleri",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Phrasal Verbs (Orta Düzey)" başlığı altındadır.',
+      explanation: "Bu alt konu \"Present Perfect Zaman İfadeleri\" başlığı altındadır.",
     },
     {
       id: "63-ex-63-1-2",
       subtopicId: "63-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Phrasal Verbs (Orta Düzey)" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Present Perfect Zaman İfadeleri\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -74,18 +91,19 @@ export const topicContent63: TopicContent = {
       id: "63-tf-63-1-1",
       subtopicId: "63-1",
       type: "true_false",
-      prompt:
-        '"Phrasal Verbs (Orta Düzey)" başlığı "Phrasal Verbs (Orta Düzey)" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Present Perfect Zaman İfadeleri\" başlığı \"Present Perfect Zaman İfadeleri\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Phrasal Verbs (Orta Düzey)" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Present Perfect Zaman İfadeleri\" konusu altında işlenir.",
     },
     {
       id: "63-fb-63-1-1",
       subtopicId: "63-1",
       type: "fill_blank",
-      prompt: '"Phrasal Verbs (Orta Düzey)" konusu _____ seviyesine uygundur.',
+      prompt: "\"Present Perfect Zaman İfadeleri\" konusu _____ seviyesine uygundur.",
       answer: "B1",
       explanation: "Bu konu B1 seviyesindedir.",
     },
@@ -96,8 +114,8 @@ export const topicContent63: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Intermediate Phrasal Verbs",
-          right: "Phrasal Verbs (Orta Düzey)",
+          left: "Present Perfect Time Expressions",
+          right: "Present Perfect Zaman İfadeleri",
         },
         {
           left: "B1 level",
@@ -160,24 +178,21 @@ export const topicContent63: TopicContent = {
       id: "quiz-63-63-1-1",
       subtopicId: "63-1",
       type: "multiple_choice",
-      prompt:
-        '"Phrasal Verbs (Orta Düzey)" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Present Perfect Zaman İfadeleri\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Phrasal Verbs (Orta Düzey)",
-        "Hiçbiri",
-        "Sadece kelime listesi",
         "Tamamen farklı bir konu",
+        "Sadece kelime listesi",
+        "Hiçbiri",
+        "Present Perfect Zaman İfadeleri",
       ],
-      correctIndex: 0,
-      explanation:
-        'Bu alt konu "Phrasal Verbs (Orta Düzey)" başlığı altındadır.',
+      correctIndex: 3,
+      explanation: "Bu alt konu \"Present Perfect Zaman İfadeleri\" başlığı altındadır.",
     },
     {
       id: "quiz-63-63-1-2",
       subtopicId: "63-1",
       type: "multiple_choice",
-      prompt:
-        'B1 seviyesindeki "Phrasal Verbs (Orta Düzey)" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Present Perfect Zaman İfadeleri\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
@@ -191,7 +206,7 @@ export const topicContent63: TopicContent = {
       id: "quiz-63-63-1-3",
       subtopicId: "63-1",
       type: "multiple_choice",
-      prompt: '"Phrasal Verbs (Orta Düzey)" çalışırken hangisi doğrudur?',
+      prompt: "\"Present Perfect Zaman İfadeleri\" çalışırken hangisi doğrudur?",
       options: [
         "Konuyu tamamen atlamak",
         "Sadece dinleyip bırakmak",
@@ -205,12 +220,17 @@ export const topicContent63: TopicContent = {
       id: "quiz-63-level",
       subtopicId: "63-1",
       type: "multiple_choice",
-      prompt: '"Phrasal Verbs (Orta Düzey)" konusu hangi seviyeye aittir?',
-      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      prompt: "\"Present Perfect Zaman İfadeleri\" konusu hangi seviyeye aittir?",
+      options: [
+        "B1",
+        "Yanlış seviye",
+        "Belirsiz",
+        "Seviye yok",
+      ],
       correctIndex: 0,
       explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "Phrasal Verbs (Orta Düzey) konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Present Perfect Zaman İfadeleri konusunu pekiştiren quiz. Başarılar.",
 };

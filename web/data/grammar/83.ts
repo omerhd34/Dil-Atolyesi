@@ -6,33 +6,37 @@ export const topicContent83: TopicContent = {
     parts: [
       {
         id: "83-1",
-        title: "Belirleyiciler & İleri Miktar Belirteçleri",
-        titleEn:
-          "Determiners & Advanced Quantifiers (all, every, each, most, none)",
+        title: "Dolaylı Sorular",
+        titleEn: "Reported Questions",
         paragraphs: [
-          "Tüm, her, çoğu ve hiçbiri gibi miktar ve kapsam bildiren belirleyicileri doğru isimle eşleştirmeye hazır mısın? Bu derste **\\all, every, each, most, none\\** ve bunların **\\of\\** ile kurulan formlarını (**\\all of, each of, none of\\**) keşfedeceksin. Tekil ve çoğul isim uyumu, **\\every\\** ile **\\each\\** ince farkı ve **\\most\\** ile **\\the most\\** ayrımını örneklerle inceleyeceksin. Toplu ifadelerde ve istatistik anlatımında hatasız belirleyici seçimi yapabileceksin.",
+          "Dolaylı anlatımda zaman ve zamir kaymasıyla başkasının sözünü aktarırsın. Kartta gördüğün kalıplar arasında **\\Ask\\**, **\\If\\**, **\\Whether\\**, **\\Wh- Words\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "Every student passed.",
-            tr: "Bağlamda incele.",
+            en: "Ask",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "Each of them has a locker.",
-            tr: "Bağlamda incele.",
+            en: "If",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "Most people agree; none of them objected.",
-            tr: "Bağlamda incele.",
+            en: "Whether",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Wh- Words",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -44,24 +48,21 @@ export const topicContent83: TopicContent = {
       id: "83-ex-83-1-1",
       subtopicId: "83-1",
       type: "multiple_choice",
-      prompt:
-        '"Belirleyiciler & İleri Miktar Belirteçleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Dolaylı Sorular\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Belirleyiciler & İleri Miktar Belirteçleri",
+        "Dolaylı Sorular",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Belirleyiciler & İleri Miktar Belirteçleri" başlığı altındadır.',
+      explanation: "Bu alt konu \"Dolaylı Sorular\" başlığı altındadır.",
     },
     {
       id: "83-ex-83-1-2",
       subtopicId: "83-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Belirleyiciler & İleri Miktar Belirteçleri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Dolaylı Sorular\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -75,21 +76,21 @@ export const topicContent83: TopicContent = {
       id: "83-tf-83-1-1",
       subtopicId: "83-1",
       type: "true_false",
-      prompt:
-        '"Belirleyiciler & İleri Miktar Belirteçleri" başlığı "Belirleyiciler & İleri Miktar Belirteçleri" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Dolaylı Sorular\" başlığı \"Dolaylı Sorular\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Belirleyiciler & İleri Miktar Belirteçleri" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Dolaylı Sorular\" konusu altında işlenir.",
     },
     {
       id: "83-fb-83-1-1",
       subtopicId: "83-1",
       type: "fill_blank",
-      prompt:
-        '"Belirleyiciler & İleri Miktar Belirteçleri" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Dolaylı Sorular\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "83-match-1",
@@ -98,12 +99,12 @@ export const topicContent83: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Determiners & Advanced Quantifiers (all, every, each, most, none)",
-          right: "Belirleyiciler & İleri Miktar Belirteçleri",
+          left: "Reported Questions",
+          right: "Dolaylı Sorular",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -162,24 +163,21 @@ export const topicContent83: TopicContent = {
       id: "quiz-83-83-1-1",
       subtopicId: "83-1",
       type: "multiple_choice",
-      prompt:
-        '"Belirleyiciler & İleri Miktar Belirteçleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Dolaylı Sorular\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Belirleyiciler & İleri Miktar Belirteçleri",
+        "Dolaylı Sorular",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Belirleyiciler & İleri Miktar Belirteçleri" başlığı altındadır.',
+      explanation: "Bu alt konu \"Dolaylı Sorular\" başlığı altındadır.",
     },
     {
       id: "quiz-83-83-1-2",
       subtopicId: "83-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Belirleyiciler & İleri Miktar Belirteçleri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Dolaylı Sorular\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -193,8 +191,7 @@ export const topicContent83: TopicContent = {
       id: "quiz-83-83-1-3",
       subtopicId: "83-1",
       type: "multiple_choice",
-      prompt:
-        '"Belirleyiciler & İleri Miktar Belirteçleri" çalışırken hangisi doğrudur?',
+      prompt: "\"Dolaylı Sorular\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -208,14 +205,17 @@ export const topicContent83: TopicContent = {
       id: "quiz-83-level",
       subtopicId: "83-1",
       type: "multiple_choice",
-      prompt:
-        '"Belirleyiciler & İleri Miktar Belirteçleri" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "B2", "Seviye yok", "Belirsiz"],
-      correctIndex: 1,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Dolaylı Sorular\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Seviye yok",
+        "B1",
+        "Yanlış seviye",
+      ],
+      correctIndex: 2,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Belirleyiciler & İleri Miktar Belirteçleri konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Dolaylı Sorular konusunu pekiştiren quiz. Başarılar.",
 };

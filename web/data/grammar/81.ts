@@ -6,27 +6,27 @@ export const topicContent81: TopicContent = {
     parts: [
       {
         id: "81-1",
-        title: "The more... the more",
-        titleEn: "Double Comparatives (The more... the more)",
+        title: "Etken ve Edilgen Yapı",
+        titleEn: "Active vs Passive Voice",
         paragraphs: [
-          "İki değişken arasındaki orantılı ilişkiyi tek kalıpla güçlü biçimde ifade etmeye hazır mısın? Bu derste **\\The + comparative, the + comparative\\** yapısıyla kurulan **\\Double Comparatives\\** kalıbını sıfat, zarf ve fiil çekimleriyle keşfedeceksin. **\\The more..., the more... / The less..., the sooner...\\** gibi yaygın kombinasyonları ve kelime sırası kurallarını inceleyeceksin. Motivasyon, tavsiye ve genellemelerde İngilizce'de doğal ve vurucu karşılaştırmalar kurabileceksin.",
+          "Edilgen yapıda özne eylemi yapan değil, eylemden etkilenendir. Kartta gördüğün kalıplar arasında **\\Active Voice\\**, **\\Passive Voice\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "The more you practise, the better you get.",
-            tr: "Bağlamda incele.",
+            en: "Active Voice",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "The harder the problem, the more rewarding the solution.",
-            tr: "Bağlamda incele.",
+            en: "Passive Voice",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,22 +38,21 @@ export const topicContent81: TopicContent = {
       id: "81-ex-81-1-1",
       subtopicId: "81-1",
       type: "multiple_choice",
-      prompt: '"The more... the more" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Etken ve Edilgen Yapı\" alt konusu hangi ana konuya aittir?",
       options: [
-        "The more... the more",
+        "Etken ve Edilgen Yapı",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "The more... the more" başlığı altındadır.',
+      explanation: "Bu alt konu \"Etken ve Edilgen Yapı\" başlığı altındadır.",
     },
     {
       id: "81-ex-81-1-2",
       subtopicId: "81-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "The more... the more" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Etken ve Edilgen Yapı\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -67,20 +66,21 @@ export const topicContent81: TopicContent = {
       id: "81-tf-81-1-1",
       subtopicId: "81-1",
       type: "true_false",
-      prompt:
-        '"The more... the more" başlığı "The more... the more" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Etken ve Edilgen Yapı\" başlığı \"Etken ve Edilgen Yapı\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "The more... the more" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Etken ve Edilgen Yapı\" konusu altında işlenir.",
     },
     {
       id: "81-fb-81-1-1",
       subtopicId: "81-1",
       type: "fill_blank",
-      prompt: '"The more... the more" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Etken ve Edilgen Yapı\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "81-match-1",
@@ -89,12 +89,12 @@ export const topicContent81: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Double Comparatives (The more... the more)",
-          right: "The more... the more",
+          left: "Active vs Passive Voice",
+          right: "Etken ve Edilgen Yapı",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -153,22 +153,21 @@ export const topicContent81: TopicContent = {
       id: "quiz-81-81-1-1",
       subtopicId: "81-1",
       type: "multiple_choice",
-      prompt: '"The more... the more" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Etken ve Edilgen Yapı\" alt konusu hangi ana konuya aittir?",
       options: [
-        "The more... the more",
-        "Sadece kelime listesi",
-        "Hiçbiri",
         "Tamamen farklı bir konu",
+        "Hiçbiri",
+        "Sadece kelime listesi",
+        "Etken ve Edilgen Yapı",
       ],
-      correctIndex: 0,
-      explanation: 'Bu alt konu "The more... the more" başlığı altındadır.',
+      correctIndex: 3,
+      explanation: "Bu alt konu \"Etken ve Edilgen Yapı\" başlığı altındadır.",
     },
     {
       id: "quiz-81-81-1-2",
       subtopicId: "81-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "The more... the more" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Etken ve Edilgen Yapı\" için doğru yaklaşım hangisidir?",
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Hiç alıştırma çözmemek",
@@ -182,7 +181,7 @@ export const topicContent81: TopicContent = {
       id: "quiz-81-81-1-3",
       subtopicId: "81-1",
       type: "multiple_choice",
-      prompt: '"The more... the more" çalışırken hangisi doğrudur?',
+      prompt: "\"Etken ve Edilgen Yapı\" çalışırken hangisi doğrudur?",
       options: [
         "Konuyu tamamen atlamak",
         "Sadece dinleyip bırakmak",
@@ -196,12 +195,17 @@ export const topicContent81: TopicContent = {
       id: "quiz-81-level",
       subtopicId: "81-1",
       type: "multiple_choice",
-      prompt: '"The more... the more" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "Seviye yok", "Belirsiz", "B2"],
-      correctIndex: 3,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Etken ve Edilgen Yapı\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Yanlış seviye",
+        "B1",
+        "Seviye yok",
+      ],
+      correctIndex: 2,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "The more... the more konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Etken ve Edilgen Yapı konusunu pekiştiren quiz. Başarılar.",
 };

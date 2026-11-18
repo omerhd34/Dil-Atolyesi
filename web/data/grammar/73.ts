@@ -6,28 +6,27 @@ export const topicContent73: TopicContent = {
     parts: [
       {
         id: "73-1",
-        title: "Pasif Bildirme Yapıları",
-        titleEn:
-          "Passive Reporting Structures (It is said that / He is said to)",
+        title: "İkinci Koşul",
+        titleEn: "Second Conditional",
         paragraphs: [
-          "Üçüncü şahıs kaynaklardan aktarılan bilgiyi nesnel ve sofistike bir pasif üslupla sunmaya hazır mısın? Bu derste **It is said / believed / reported that + cümle** ile **Özne + is said to + infinitive** formundaki **\\Passive Reporting Structures\\** yapılarını keşfedeceksin. Zaman uyumu (**\\to be doing, to have done\\**) ve akademik ile gazetecilik dilindeki tipik kullanımları inceleyeceksin. İleri düzey metinlerde iddia ve söylentileri doğrudan atıf yapmadan profesyonel bir mesafeyle aktarabileceksin.",
+          "Koşul cümlelerinde şart ve sonuç ilişkisini net kurarsın. Kartta gördüğün kalıplar arasında **\\If + Past Simple\\**, **\\Would + Verb\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "It is said that the economy will recover.",
-            tr: "Bağlamda incele.",
+            en: "If + Past Simple",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "He is said to be leaving the company next month.",
-            tr: "Bağlamda incele.",
+            en: "Would + Verb",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -39,22 +38,21 @@ export const topicContent73: TopicContent = {
       id: "73-ex-73-1-1",
       subtopicId: "73-1",
       type: "multiple_choice",
-      prompt: '"Pasif Bildirme Yapıları" alt konusu hangi ana konuya aittir?',
+      prompt: "\"İkinci Koşul\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Pasif Bildirme Yapıları",
+        "İkinci Koşul",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "Pasif Bildirme Yapıları" başlığı altındadır.',
+      explanation: "Bu alt konu \"İkinci Koşul\" başlığı altındadır.",
     },
     {
       id: "73-ex-73-1-2",
       subtopicId: "73-1",
       type: "multiple_choice",
-      prompt:
-        'C2 seviyesindeki "Pasif Bildirme Yapıları" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"İkinci Koşul\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -68,20 +66,21 @@ export const topicContent73: TopicContent = {
       id: "73-tf-73-1-1",
       subtopicId: "73-1",
       type: "true_false",
-      prompt:
-        '"Pasif Bildirme Yapıları" başlığı "Pasif Bildirme Yapıları" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"İkinci Koşul\" başlığı \"İkinci Koşul\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Pasif Bildirme Yapıları" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"İkinci Koşul\" konusu altında işlenir.",
     },
     {
       id: "73-fb-73-1-1",
       subtopicId: "73-1",
       type: "fill_blank",
-      prompt: '"Pasif Bildirme Yapıları" konusu _____ seviyesine uygundur.',
-      answer: "C2",
-      explanation: "Bu konu C2 seviyesindedir.",
+      prompt: "\"İkinci Koşul\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "73-match-1",
@@ -90,12 +89,12 @@ export const topicContent73: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Passive Reporting Structures (It is said that / He is said to)",
-          right: "Pasif Bildirme Yapıları",
+          left: "Second Conditional",
+          right: "İkinci Koşul",
         },
         {
-          left: "C2 level",
-          right: "C2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -154,22 +153,21 @@ export const topicContent73: TopicContent = {
       id: "quiz-73-73-1-1",
       subtopicId: "73-1",
       type: "multiple_choice",
-      prompt: '"Pasif Bildirme Yapıları" alt konusu hangi ana konuya aittir?',
+      prompt: "\"İkinci Koşul\" alt konusu hangi ana konuya aittir?",
       options: [
         "Sadece kelime listesi",
         "Hiçbiri",
-        "Pasif Bildirme Yapıları",
+        "İkinci Koşul",
         "Tamamen farklı bir konu",
       ],
       correctIndex: 2,
-      explanation: 'Bu alt konu "Pasif Bildirme Yapıları" başlığı altındadır.',
+      explanation: "Bu alt konu \"İkinci Koşul\" başlığı altındadır.",
     },
     {
       id: "quiz-73-73-1-2",
       subtopicId: "73-1",
       type: "multiple_choice",
-      prompt:
-        'C2 seviyesindeki "Pasif Bildirme Yapıları" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"İkinci Koşul\" için doğru yaklaşım hangisidir?",
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Konuyu tamamen atlamak",
@@ -183,7 +181,7 @@ export const topicContent73: TopicContent = {
       id: "quiz-73-73-1-3",
       subtopicId: "73-1",
       type: "multiple_choice",
-      prompt: '"Pasif Bildirme Yapıları" çalışırken hangisi doğrudur?',
+      prompt: "\"İkinci Koşul\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -197,12 +195,17 @@ export const topicContent73: TopicContent = {
       id: "quiz-73-level",
       subtopicId: "73-1",
       type: "multiple_choice",
-      prompt: '"Pasif Bildirme Yapıları" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "C2", "Seviye yok", "Belirsiz"],
+      prompt: "\"İkinci Koşul\" konusu hangi seviyeye aittir?",
+      options: [
+        "Seviye yok",
+        "B1",
+        "Yanlış seviye",
+        "Belirsiz",
+      ],
       correctIndex: 1,
-      explanation: "Bu konu C2 seviyesindedir.",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "Pasif Bildirme Yapıları konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "İkinci Koşul konusunu pekiştiren quiz. Başarılar.",
 };

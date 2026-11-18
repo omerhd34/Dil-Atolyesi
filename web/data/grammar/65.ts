@@ -6,22 +6,32 @@ export const topicContent65: TopicContent = {
     parts: [
       {
         id: "65-1",
-        title: "Süregelen Bitmiş Gelecek Zaman",
-        titleEn: "Future Perfect Continuous",
+        title: "Yakın Geçmişte Süreklilik",
+        titleEn: "Present Perfect Continuous",
         paragraphs: [
-          "Gelecekte belirli bir ana kadar ne kadar süredir bir eylemin devam etmiş olacağını vurgulamaya hazır mısın? Bu derste **\\will have been + V-ing\\** formülüyle kurulan **\\Future Perfect Continuous\\** zamanını ve **\\by\\** ile belirlenen gelecek referans noktasını keşfedeceksin. **\\Future Perfect\\**'in tamamlanmış sonuca odaklanması ile bu zamanın süre vurgusunu nasıl öne çıkardığını inceleyeceksin. Kariyer hedeflerini ve uzun süreli planlarını ileri düzey bir zaman hassasiyetiyle ifade edebileceksin.",
+          "Present perfect geçmişteki olayı bugünle bağlar; sonuç veya deneyim vurgusu taşır. Kartta gördüğün kalıplar arasında **\\Have / Has Been + V-ing\\**, **\\For\\**, **\\Since\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "By next month, I will have been working here for ten years.",
-            tr: "Bağlamda incele.",
+            en: "Have / Has Been + V-ing",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "For",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Since",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -33,24 +43,21 @@ export const topicContent65: TopicContent = {
       id: "65-ex-65-1-1",
       subtopicId: "65-1",
       type: "multiple_choice",
-      prompt:
-        '"Süregelen Bitmiş Gelecek Zaman" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Yakın Geçmişte Süreklilik\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Süregelen Bitmiş Gelecek Zaman",
+        "Yakın Geçmişte Süreklilik",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Süregelen Bitmiş Gelecek Zaman" başlığı altındadır.',
+      explanation: "Bu alt konu \"Yakın Geçmişte Süreklilik\" başlığı altındadır.",
     },
     {
       id: "65-ex-65-1-2",
       subtopicId: "65-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Süregelen Bitmiş Gelecek Zaman" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Yakın Geçmişte Süreklilik\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -64,21 +71,21 @@ export const topicContent65: TopicContent = {
       id: "65-tf-65-1-1",
       subtopicId: "65-1",
       type: "true_false",
-      prompt:
-        '"Süregelen Bitmiş Gelecek Zaman" başlığı "Süregelen Bitmiş Gelecek Zaman" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Yakın Geçmişte Süreklilik\" başlığı \"Yakın Geçmişte Süreklilik\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Süregelen Bitmiş Gelecek Zaman" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Yakın Geçmişte Süreklilik\" konusu altında işlenir.",
     },
     {
       id: "65-fb-65-1-1",
       subtopicId: "65-1",
       type: "fill_blank",
-      prompt:
-        '"Süregelen Bitmiş Gelecek Zaman" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Yakın Geçmişte Süreklilik\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "65-match-1",
@@ -87,12 +94,12 @@ export const topicContent65: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Future Perfect Continuous",
-          right: "Süregelen Bitmiş Gelecek Zaman",
+          left: "Present Perfect Continuous",
+          right: "Yakın Geçmişte Süreklilik",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -151,24 +158,21 @@ export const topicContent65: TopicContent = {
       id: "quiz-65-65-1-1",
       subtopicId: "65-1",
       type: "multiple_choice",
-      prompt:
-        '"Süregelen Bitmiş Gelecek Zaman" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Yakın Geçmişte Süreklilik\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Süregelen Bitmiş Gelecek Zaman",
+        "Tamamen farklı bir konu",
         "Hiçbiri",
         "Sadece kelime listesi",
-        "Tamamen farklı bir konu",
+        "Yakın Geçmişte Süreklilik",
       ],
-      correctIndex: 0,
-      explanation:
-        'Bu alt konu "Süregelen Bitmiş Gelecek Zaman" başlığı altındadır.',
+      correctIndex: 3,
+      explanation: "Bu alt konu \"Yakın Geçmişte Süreklilik\" başlığı altındadır.",
     },
     {
       id: "quiz-65-65-1-2",
       subtopicId: "65-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Süregelen Bitmiş Gelecek Zaman" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Yakın Geçmişte Süreklilik\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
@@ -182,7 +186,7 @@ export const topicContent65: TopicContent = {
       id: "quiz-65-65-1-3",
       subtopicId: "65-1",
       type: "multiple_choice",
-      prompt: '"Süregelen Bitmiş Gelecek Zaman" çalışırken hangisi doğrudur?',
+      prompt: "\"Yakın Geçmişte Süreklilik\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -196,13 +200,17 @@ export const topicContent65: TopicContent = {
       id: "quiz-65-level",
       subtopicId: "65-1",
       type: "multiple_choice",
-      prompt: '"Süregelen Bitmiş Gelecek Zaman" konusu hangi seviyeye aittir?',
-      options: ["Seviye yok", "B2", "Yanlış seviye", "Belirsiz"],
-      correctIndex: 1,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Yakın Geçmişte Süreklilik\" konusu hangi seviyeye aittir?",
+      options: [
+        "B1",
+        "Seviye yok",
+        "Belirsiz",
+        "Yanlış seviye",
+      ],
+      correctIndex: 0,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Süregelen Bitmiş Gelecek Zaman konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Yakın Geçmişte Süreklilik konusunu pekiştiren quiz. Başarılar.",
 };

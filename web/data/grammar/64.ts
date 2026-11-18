@@ -6,56 +6,66 @@ export const topicContent64: TopicContent = {
     parts: [
       {
         id: "64-1",
-        title: "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)",
-        titleEn: "Future Continuous & Future Perfect",
+        title: "Present Perfect vs Past Simple",
+        titleEn: "Present Perfect vs Past Simple",
         paragraphs: [
-          "Gelecekteki belirli bir anda devam ediyor olacak süreçleri ve belli bir tarihe kadar tamamlanmış olacak hedefleri yüksek hassasiyetle ifade etmeye hazır mısın? Bu derste **\\Future Continuous\\** (**\\will be V-ing\\**) ve **\\Future Perfect\\** (**\\will have V3\\**) zamanlarının kullanım alanlarını keşfedeceksin. **\\This time next week, by, by the time, within\\** gibi zaman belirteçleriyle geleceğin farklı kesitlerini nasıl kurgulayacağını inceleyeceksin. Kariyer planlarını, proje takvimlerini ve gelecek öngörülerini ileri düzey bir zaman hakimiyetiyle anlatabileceksin.",
+          "Present perfect geçmişteki olayı bugünle bağlar; sonuç veya deneyim vurgusu taşır. Kartta gördüğün kalıplar arasında **\\Have / Has + V3\\**, **\\Past Simple\\**, **\\For\\**, **\\Since\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "This time tomorrow, I will be flying to Berlin.",
-            tr: "Bağlamda incele.",
+            en: "Have / Has + V3",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "By June, I will have graduated.",
-            tr: "Bağlamda incele.",
+            en: "Past Simple",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "For",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Since",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
       },
     ],
   },
-  exercises: [
+  exercises: [ 
     {
       id: "64-ex-64-1-1",
       subtopicId: "64-1",
       type: "multiple_choice",
       prompt:
-        '"İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" alt konusu hangi ana konuya aittir?',
+        '"Present Perfect ve Past Simple" alt konusu hangi ana konuya aittir?',
       options: [
-        "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)",
+        "Present Perfect vs Past Simple",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" başlığı altındadır.',
+        'Bu alt konu "Present Perfect vs Past Simple" başlığı altındadır.',
     },
     {
       id: "64-ex-64-1-2",
       subtopicId: "64-1",
       type: "multiple_choice",
       prompt:
-        'B2 seviyesindeki "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Present Perfect vs Past Simple" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -70,20 +80,20 @@ export const topicContent64: TopicContent = {
       subtopicId: "64-1",
       type: "true_false",
       prompt:
-        '"İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" başlığı "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" konusunun bir parçasıdır.',
+        '"Present Perfect vs Past Simple" başlığı "Present Perfect vs Past Simple" konusunun bir parçasıdır.',
       options: ["Doğru", "Yanlış"],
       correctIndex: 0,
       explanation:
-        'Bu alt başlık "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" konusu altında işlenir.',
+        'Bu alt başlık "Present Perfect vs Past Simple" konusu altında işlenir.',
     },
     {
       id: "64-fb-64-1-1",
       subtopicId: "64-1",
       type: "fill_blank",
       prompt:
-        '"İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+        '"Present Perfect vs Past Simple" konusu _____ seviyesine uygundur.',
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "64-match-1",
@@ -92,12 +102,12 @@ export const topicContent64: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Future Continuous & Future Perfect",
-          right: "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)",
+          left: "Present Perfect vs Past Simple",
+          right: "Present Perfect vs Past Simple",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -157,23 +167,23 @@ export const topicContent64: TopicContent = {
       subtopicId: "64-1",
       type: "multiple_choice",
       prompt:
-        '"İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" alt konusu hangi ana konuya aittir?',
+        '"Present Perfect vs Past Simple" alt konusu hangi ana konuya aittir?',
       options: [
         "Tamamen farklı bir konu",
-        "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)",
         "Hiçbiri",
         "Sadece kelime listesi",
+        "Present Perfect vs Past Simple",
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       explanation:
-        'Bu alt konu "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" başlığı altındadır.',
+        'Bu alt konu "Present Perfect vs Past Simple" başlığı altındadır.',
     },
     {
       id: "quiz-64-64-1-2",
       subtopicId: "64-1",
       type: "multiple_choice",
       prompt:
-        'B2 seviyesindeki "İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Present Perfect vs Past Simple" için doğru yaklaşım hangisidir?',
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Konuyu tamamen atlamak",
@@ -187,8 +197,7 @@ export const topicContent64: TopicContent = {
       id: "quiz-64-64-1-3",
       subtopicId: "64-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" çalışırken hangisi doğrudur?',
+      prompt: '"Present Perfect vs Past Simple" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -202,14 +211,13 @@ export const topicContent64: TopicContent = {
       id: "quiz-64-level",
       subtopicId: "64-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Gelecek Zamanlar (Future Continuous & Future Perfect)" konusu hangi seviyeye aittir?',
-      options: ["B2", "Belirsiz", "Seviye yok", "Yanlış seviye"],
-      correctIndex: 0,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: '"Present Perfect vs Past Simple" konusu hangi seviyeye aittir?',
+      options: ["Yanlış seviye", "Seviye yok", "B1", "Belirsiz"],
+      correctIndex: 2,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
   quizIntro:
-    "İleri Gelecek Zamanlar (Future Continuous & Future Perfect) konusunu pekiştiren quiz. Başarılar.",
+    "Present Perfect vs Past Simple konusunu pekiştiren quiz. Başarılar.",
 };

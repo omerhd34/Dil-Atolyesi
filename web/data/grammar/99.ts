@@ -6,27 +6,22 @@ export const topicContent99: TopicContent = {
     parts: [
       {
         id: "99-1",
-        title: "Eksiltme, Yerine Koyma & Söylem Belirleyicileri",
-        titleEn: "Ellipsis, Substitution & Advanced Discourse Markers",
+        title: "Vurgulu Do / Does / Did",
+        titleEn: "Emphatic Do",
         paragraphs: [
-          "Gereksiz kelime tekrarlarından kaçınarak ve fikirler arasında sofistike mantıksal köprüler kurarak ana dili düzeyinde bir metin bütünlüğü yakalamaya hazır mısın? Bu derste bağlamdan anlaşılan ögeleri düşürmeye dayanan **\\Ellipsis\\**, tekrarlanan isim veya tümcelerin yerine **\\one / ones, do so, so / not\\** ifadelerini getiren **\\Substitution\\** yöntemlerini ve **\\notwithstanding, nonetheless, albeit, thereby, hence\\** söylem belirleyicilerini keşfedeceksin. Paragraflar ve konuşma turları arasında pürüzsüz bir akış kurmayı inceleyeceksin. Anlatımını hem ekonomik hem de son derece tutarlı bir yapıya kavuşturabileceksin.",
+          "**Vurgulu Do / Does / Did** konusu B1 müfredatında temel taşlardan biridir. Kartta gördüğün kalıplar arasında **\\Do / Does / Did + Base Verb\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "A: Will they join us? B: I hope so.",
-            tr: "Bağlamda incele.",
-            note: "grammarHeading",
-          },
-          {
-            en: "Notwithstanding the high costs, the plan succeeded.",
-            tr: "Bağlamda incele.",
+            en: "Do / Does / Did + Base Verb",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,24 +33,21 @@ export const topicContent99: TopicContent = {
       id: "99-ex-99-1-1",
       subtopicId: "99-1",
       type: "multiple_choice",
-      prompt:
-        '"Eksiltme, Yerine Koyma & Söylem Belirleyicileri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Vurgulu Do / Does / Did\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Eksiltme, Yerine Koyma & Söylem Belirleyicileri",
+        "Vurgulu Do / Does / Did",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Eksiltme, Yerine Koyma & Söylem Belirleyicileri" başlığı altındadır.',
+      explanation: "Bu alt konu \"Vurgulu Do / Does / Did\" başlığı altındadır.",
     },
     {
       id: "99-ex-99-1-2",
       subtopicId: "99-1",
       type: "multiple_choice",
-      prompt:
-        'C1 seviyesindeki "Eksiltme, Yerine Koyma & Söylem Belirleyicileri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Vurgulu Do / Does / Did\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -69,21 +61,21 @@ export const topicContent99: TopicContent = {
       id: "99-tf-99-1-1",
       subtopicId: "99-1",
       type: "true_false",
-      prompt:
-        '"Eksiltme, Yerine Koyma & Söylem Belirleyicileri" başlığı "Eksiltme, Yerine Koyma & Söylem Belirleyicileri" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Vurgulu Do / Does / Did\" başlığı \"Vurgulu Do / Does / Did\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Eksiltme, Yerine Koyma & Söylem Belirleyicileri" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Vurgulu Do / Does / Did\" konusu altında işlenir.",
     },
     {
       id: "99-fb-99-1-1",
       subtopicId: "99-1",
       type: "fill_blank",
-      prompt:
-        '"Eksiltme, Yerine Koyma & Söylem Belirleyicileri" konusu _____ seviyesine uygundur.',
-      answer: "C1",
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Vurgulu Do / Does / Did\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "99-match-1",
@@ -92,12 +84,12 @@ export const topicContent99: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Ellipsis, Substitution & Advanced Discourse Markers",
-          right: "Eksiltme, Yerine Koyma & Söylem Belirleyicileri",
+          left: "Emphatic Do",
+          right: "Vurgulu Do / Does / Did",
         },
         {
-          left: "C1 level",
-          right: "C1 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -156,24 +148,21 @@ export const topicContent99: TopicContent = {
       id: "quiz-99-99-1-1",
       subtopicId: "99-1",
       type: "multiple_choice",
-      prompt:
-        '"Eksiltme, Yerine Koyma & Söylem Belirleyicileri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Vurgulu Do / Does / Did\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Sadece kelime listesi",
         "Tamamen farklı bir konu",
-        "Eksiltme, Yerine Koyma & Söylem Belirleyicileri",
         "Hiçbiri",
+        "Sadece kelime listesi",
+        "Vurgulu Do / Does / Did",
       ],
-      correctIndex: 2,
-      explanation:
-        'Bu alt konu "Eksiltme, Yerine Koyma & Söylem Belirleyicileri" başlığı altındadır.',
+      correctIndex: 3,
+      explanation: "Bu alt konu \"Vurgulu Do / Does / Did\" başlığı altındadır.",
     },
     {
       id: "quiz-99-99-1-2",
       subtopicId: "99-1",
       type: "multiple_choice",
-      prompt:
-        'C1 seviyesindeki "Eksiltme, Yerine Koyma & Söylem Belirleyicileri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Vurgulu Do / Does / Did\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -187,8 +176,7 @@ export const topicContent99: TopicContent = {
       id: "quiz-99-99-1-3",
       subtopicId: "99-1",
       type: "multiple_choice",
-      prompt:
-        '"Eksiltme, Yerine Koyma & Söylem Belirleyicileri" çalışırken hangisi doğrudur?',
+      prompt: "\"Vurgulu Do / Does / Did\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -202,14 +190,17 @@ export const topicContent99: TopicContent = {
       id: "quiz-99-level",
       subtopicId: "99-1",
       type: "multiple_choice",
-      prompt:
-        '"Eksiltme, Yerine Koyma & Söylem Belirleyicileri" konusu hangi seviyeye aittir?',
-      options: ["C1", "Belirsiz", "Seviye yok", "Yanlış seviye"],
-      correctIndex: 0,
-      explanation: "Bu konu C1 seviyesindedir.",
+      prompt: "\"Vurgulu Do / Does / Did\" konusu hangi seviyeye aittir?",
+      options: [
+        "Yanlış seviye",
+        "Seviye yok",
+        "B1",
+        "Belirsiz",
+      ],
+      correctIndex: 2,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Eksiltme, Yerine Koyma & Söylem Belirleyicileri konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Vurgulu Do / Does / Did konusunu pekiştiren quiz. Başarılar.",
 };

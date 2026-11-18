@@ -6,32 +6,37 @@ export const topicContent80: TopicContent = {
     parts: [
       {
         id: "80-1",
-        title: "Duyu Fiilleri + V-ing / V1",
-        titleEn: "Verbs of Perception + V-ing / Bare Infinitive",
+        title: "Edilgen Yapı",
+        titleEn: "Passive Voice",
         paragraphs: [
-          "Duyu fiillerinden sonra eylemin tamamını mı süregelen halini mi vurgulayacağını bilinçli seçmeye hazır mısın? Bu derste **\\see, hear, watch, feel, notice\\** gibi **\\verbs of perception\\** sonrasında **\\bare infinitive\\** (\\V1\\) ile **\\V-ing\\** arasındaki anlam farkını keşfedeceksin. Tamamlanmış eylem ile devam eden süreç vurgusu, aktif ve edilgen örnekler ile **\\make / let\\** ile benzerlikleri inceleyeceksin. Gözlem ve deneyim anlatırken dinleyicide doğru görüntüyü oluşturabileceksin.",
+          "Edilgen yapıda özne eylemi yapan değil, eylemden etkilenendir. Kartta gördüğün kalıplar arasında **\\Present Passive\\**, **\\Past Passive\\**, **\\Future Passive\\**, **\\Be + V3\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "I heard him leave.",
-            tr: "Bağlamda incele.",
+            en: "Present Passive",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "I saw her crossing the street.",
-            tr: "Bağlamda incele.",
+            en: "Past Passive",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "We watched them play football.",
-            tr: "Bağlamda incele.",
+            en: "Future Passive",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Be + V3",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -43,24 +48,21 @@ export const topicContent80: TopicContent = {
       id: "80-ex-80-1-1",
       subtopicId: "80-1",
       type: "multiple_choice",
-      prompt:
-        '"Duyu Fiilleri + V-ing / V1" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Edilgen Yapı\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Duyu Fiilleri + V-ing / V1",
+        "Edilgen Yapı",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Duyu Fiilleri + V-ing / V1" başlığı altındadır.',
+      explanation: "Bu alt konu \"Edilgen Yapı\" başlığı altındadır.",
     },
     {
       id: "80-ex-80-1-2",
       subtopicId: "80-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Duyu Fiilleri + V-ing / V1" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Edilgen Yapı\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -74,20 +76,21 @@ export const topicContent80: TopicContent = {
       id: "80-tf-80-1-1",
       subtopicId: "80-1",
       type: "true_false",
-      prompt:
-        '"Duyu Fiilleri + V-ing / V1" başlığı "Duyu Fiilleri + V-ing / V1" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Edilgen Yapı\" başlığı \"Edilgen Yapı\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Duyu Fiilleri + V-ing / V1" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Edilgen Yapı\" konusu altında işlenir.",
     },
     {
       id: "80-fb-80-1-1",
       subtopicId: "80-1",
       type: "fill_blank",
-      prompt: '"Duyu Fiilleri + V-ing / V1" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Edilgen Yapı\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "80-match-1",
@@ -96,12 +99,12 @@ export const topicContent80: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Verbs of Perception + V-ing / Bare Infinitive",
-          right: "Duyu Fiilleri + V-ing / V1",
+          left: "Passive Voice",
+          right: "Edilgen Yapı",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -160,24 +163,21 @@ export const topicContent80: TopicContent = {
       id: "quiz-80-80-1-1",
       subtopicId: "80-1",
       type: "multiple_choice",
-      prompt:
-        '"Duyu Fiilleri + V-ing / V1" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Edilgen Yapı\" alt konusu hangi ana konuya aittir?",
       options: [
         "Tamamen farklı bir konu",
-        "Sadece kelime listesi",
         "Hiçbiri",
-        "Duyu Fiilleri + V-ing / V1",
+        "Sadece kelime listesi",
+        "Edilgen Yapı",
       ],
       correctIndex: 3,
-      explanation:
-        'Bu alt konu "Duyu Fiilleri + V-ing / V1" başlığı altındadır.',
+      explanation: "Bu alt konu \"Edilgen Yapı\" başlığı altındadır.",
     },
     {
       id: "quiz-80-80-1-2",
       subtopicId: "80-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Duyu Fiilleri + V-ing / V1" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Edilgen Yapı\" için doğru yaklaşım hangisidir?",
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Konuyu tamamen atlamak",
@@ -191,7 +191,7 @@ export const topicContent80: TopicContent = {
       id: "quiz-80-80-1-3",
       subtopicId: "80-1",
       type: "multiple_choice",
-      prompt: '"Duyu Fiilleri + V-ing / V1" çalışırken hangisi doğrudur?',
+      prompt: "\"Edilgen Yapı\" çalışırken hangisi doğrudur?",
       options: [
         "Konuyu tamamen atlamak",
         "Hiç örnek okumamak",
@@ -205,12 +205,17 @@ export const topicContent80: TopicContent = {
       id: "quiz-80-level",
       subtopicId: "80-1",
       type: "multiple_choice",
-      prompt: '"Duyu Fiilleri + V-ing / V1" konusu hangi seviyeye aittir?',
-      options: ["B2", "Yanlış seviye", "Belirsiz", "Seviye yok"],
-      correctIndex: 0,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Edilgen Yapı\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Seviye yok",
+        "Yanlış seviye",
+        "B1",
+      ],
+      correctIndex: 3,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "Duyu Fiilleri + V-ing / V1 konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Edilgen Yapı konusunu pekiştiren quiz. Başarılar.",
 };

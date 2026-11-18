@@ -6,22 +6,32 @@ export const topicContent66: TopicContent = {
     parts: [
       {
         id: "66-1",
-        title: "Süregelen Miş'li Geçmiş Zaman",
-        titleEn: "Past Perfect Continuous",
+        title: "Present Perfect Simple vs Continuous",
+        titleEn: "Present Perfect Simple vs Continuous",
         paragraphs: [
-          "Geçmişteki bir olaydan hemen önce ne kadar süredir bir eylemin devam ettiğini ve o anda yarattığı somut etkiyi vurgulamaya hazır mısın? Bu derste **\\had been + V-ing\\** formülüyle kurulan **\\Past Perfect Continuous\\** yapısını tüm incelikleriyle keşfedeceksin. Geçmişte tamamlanmış sayıya odaklanan **\\Past Perfect Simple\\** ile sürecin uzunluğunu ve arka planını öne çıkaran bu zaman arasındaki farkı inceleyeceksin. Hikaye anlatımında ve geçmiş olayların nedenlerini açıklarken sebep-sonuç bağlarını ustalıkla kurabileceksin.",
+          "Present perfect geçmişteki olayı bugünle bağlar; sonuç veya deneyim vurgusu taşır. Kartta gördüğün kalıplar arasında **\\Have Done\\**, **\\Have Been Doing\\**, **\\How Long\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "She was exhausted because she had been working all day.",
-            tr: "Bağlamda incele.",
+            en: "Have Done",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Have Been Doing",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "How Long",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -34,23 +44,23 @@ export const topicContent66: TopicContent = {
       subtopicId: "66-1",
       type: "multiple_choice",
       prompt:
-        '"Süregelen Miş\'li Geçmiş Zaman" alt konusu hangi ana konuya aittir?',
+        '"Present Perfect Simple vs Continuous" alt konusu hangi ana konuya aittir?',
       options: [
-        "Süregelen Miş'li Geçmiş Zaman",
+        "Present Perfect Simple vs Continuous",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "Süregelen Miş\'li Geçmiş Zaman" başlığı altındadır.',
+        'Bu alt konu "Present Perfect Simple vs Continuous" başlığı altındadır.',
     },
     {
       id: "66-ex-66-1-2",
       subtopicId: "66-1",
       type: "multiple_choice",
       prompt:
-        'B2 seviyesindeki "Süregelen Miş\'li Geçmiş Zaman" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Present Perfect Simple vs Continuous" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -65,20 +75,20 @@ export const topicContent66: TopicContent = {
       subtopicId: "66-1",
       type: "true_false",
       prompt:
-        '"Süregelen Miş\'li Geçmiş Zaman" başlığı "Süregelen Miş\'li Geçmiş Zaman" konusunun bir parçasıdır.',
+        '"Present Perfect Simple vs Continuous" başlığı "Present Perfect Simple vs Continuous" konusunun bir parçasıdır.',
       options: ["Doğru", "Yanlış"],
       correctIndex: 0,
       explanation:
-        'Bu alt başlık "Süregelen Miş\'li Geçmiş Zaman" konusu altında işlenir.',
+        'Bu alt başlık "Present Perfect Simple vs Continuous" konusu altında işlenir.',
     },
     {
       id: "66-fb-66-1-1",
       subtopicId: "66-1",
       type: "fill_blank",
       prompt:
-        '"Süregelen Miş\'li Geçmiş Zaman" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+        '"Present Perfect Simple vs Continuous" konusu _____ seviyesine uygundur.',
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "66-match-1",
@@ -87,12 +97,12 @@ export const topicContent66: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Past Perfect Continuous",
-          right: "Süregelen Miş'li Geçmiş Zaman",
+          left: "Present Perfect Simple vs Continuous",
+          right: "Present Perfect Simple vs Continuous",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -152,23 +162,23 @@ export const topicContent66: TopicContent = {
       subtopicId: "66-1",
       type: "multiple_choice",
       prompt:
-        '"Süregelen Miş\'li Geçmiş Zaman" alt konusu hangi ana konuya aittir?',
+        '"Present Perfect Simple vs Continuous" alt konusu hangi ana konuya aittir?',
       options: [
+        "Present Perfect Simple vs Continuous",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
-        "Süregelen Miş'li Geçmiş Zaman",
       ],
-      correctIndex: 3,
+      correctIndex: 0,
       explanation:
-        'Bu alt konu "Süregelen Miş\'li Geçmiş Zaman" başlığı altındadır.',
+        'Bu alt konu "Present Perfect Simple vs Continuous" başlığı altındadır.',
     },
     {
       id: "quiz-66-66-1-2",
       subtopicId: "66-1",
       type: "multiple_choice",
       prompt:
-        'B2 seviyesindeki "Süregelen Miş\'li Geçmiş Zaman" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Present Perfect Simple vs Continuous" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -182,7 +192,8 @@ export const topicContent66: TopicContent = {
       id: "quiz-66-66-1-3",
       subtopicId: "66-1",
       type: "multiple_choice",
-      prompt: '"Süregelen Miş\'li Geçmiş Zaman" çalışırken hangisi doğrudur?',
+      prompt:
+        '"Present Perfect Simple vs Continuous" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -196,13 +207,14 @@ export const topicContent66: TopicContent = {
       id: "quiz-66-level",
       subtopicId: "66-1",
       type: "multiple_choice",
-      prompt: '"Süregelen Miş\'li Geçmiş Zaman" konusu hangi seviyeye aittir?',
-      options: ["Belirsiz", "Yanlış seviye", "B2", "Seviye yok"],
-      correctIndex: 2,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt:
+        '"Present Perfect Simple vs Continuous" konusu hangi seviyeye aittir?',
+      options: ["Yanlış seviye", "Seviye yok", "Belirsiz", "B1"],
+      correctIndex: 3,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
   quizIntro:
-    "Süregelen Miş'li Geçmiş Zaman konusunu pekiştiren quiz. Başarılar.",
+    "Present Perfect Simple vs Continuous konusunu pekiştiren quiz. Başarılar.",
 };

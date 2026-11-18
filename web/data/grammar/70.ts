@@ -6,27 +6,32 @@ export const topicContent70: TopicContent = {
     parts: [
       {
         id: "70-1",
-        title: "Dilek & Keşke Cümleleri (Wish & If Only)",
-        titleEn: "Wish & If Only Clauses",
+        title: "Past Perfect vs Past Simple",
+        titleEn: "Past Perfect vs Past Simple",
         paragraphs: [
-          "Şu anki durumlarla ilgili hayallerini, geçmişe dair pişmanlıklarını ve çevrendekilerin değişmesini istediğin davranışlarını içtenlikle dile getirmeye hazır mısın? Bu derste **\\wish\\** ve daha güçlü vurgu taşıyan **\\if only\\** kalıplarının **\\Past Simple\\**, **\\Past Perfect\\** ve **\\would\\** ile kurulan üç farklı zaman kullanımını keşfedeceksin. Neden **\\I wish I would\\** kalıbının kendi eylemlerimiz için kullanılmadığını ve **\\were\\** kullanımının inceliklerini inceleyeceksin. Duygu, sitem ve keşkelerini en doğru kiple doğal bir İngilizceyle ifade edebileceksin.",
+          "Past perfect iki geçmiş olayı sıraya koyar; önce tamamlanan eylemi işaret eder. Kartta gördüğün kalıplar arasında **\\Had + V3\\**, **\\Past Simple\\**, **\\By The Time\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "I wish I had more free time.",
-            tr: "Bağlamda incele.",
+            en: "Had + V3",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "If only I hadn't said that.",
-            tr: "Bağlamda incele.",
+            en: "Past Simple",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "By The Time",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -39,23 +44,23 @@ export const topicContent70: TopicContent = {
       subtopicId: "70-1",
       type: "multiple_choice",
       prompt:
-        '"Dilek & Keşke Cümleleri (Wish & If Only)" alt konusu hangi ana konuya aittir?',
+        '"Past Perfect vs Past Simple" alt konusu hangi ana konuya aittir?',
       options: [
-        "Dilek & Keşke Cümleleri (Wish & If Only)",
+        "Past Perfect vs Past Simple",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        'Bu alt konu "Dilek & Keşke Cümleleri (Wish & If Only)" başlığı altındadır.',
+        'Bu alt konu "Past Perfect vs Past Simple" başlığı altındadır.',
     },
     {
       id: "70-ex-70-1-2",
       subtopicId: "70-1",
       type: "multiple_choice",
       prompt:
-        'B2 seviyesindeki "Dilek & Keşke Cümleleri (Wish & If Only)" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Past Perfect vs Past Simple" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -70,20 +75,19 @@ export const topicContent70: TopicContent = {
       subtopicId: "70-1",
       type: "true_false",
       prompt:
-        '"Dilek & Keşke Cümleleri (Wish & If Only)" başlığı "Dilek & Keşke Cümleleri (Wish & If Only)" konusunun bir parçasıdır.',
+        '"Past Perfect vs Past Simple" başlığı "Past Perfect vs Past Simple" konusunun bir parçasıdır.',
       options: ["Doğru", "Yanlış"],
       correctIndex: 0,
       explanation:
-        'Bu alt başlık "Dilek & Keşke Cümleleri (Wish & If Only)" konusu altında işlenir.',
+        'Bu alt başlık "Past Perfect vs Past Simple" konusu altında işlenir.',
     },
     {
       id: "70-fb-70-1-1",
       subtopicId: "70-1",
       type: "fill_blank",
-      prompt:
-        '"Dilek & Keşke Cümleleri (Wish & If Only)" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: '"Past Perfect vs Past Simple" konusu _____ seviyesine uygundur.',
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "70-match-1",
@@ -92,12 +96,12 @@ export const topicContent70: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Wish & If Only Clauses",
-          right: "Dilek & Keşke Cümleleri (Wish & If Only)",
+          left: "Past Perfect vs Past Simple",
+          right: "Past Perfect vs Past Simple",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -157,23 +161,23 @@ export const topicContent70: TopicContent = {
       subtopicId: "70-1",
       type: "multiple_choice",
       prompt:
-        '"Dilek & Keşke Cümleleri (Wish & If Only)" alt konusu hangi ana konuya aittir?',
+        '"Past Perfect vs Past Simple" alt konusu hangi ana konuya aittir?',
       options: [
-        "Dilek & Keşke Cümleleri (Wish & If Only)",
-        "Hiçbiri",
         "Sadece kelime listesi",
+        "Hiçbiri",
+        "Past Perfect vs Past Simple",
         "Tamamen farklı bir konu",
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       explanation:
-        'Bu alt konu "Dilek & Keşke Cümleleri (Wish & If Only)" başlığı altındadır.',
+        'Bu alt konu "Past Perfect vs Past Simple" başlığı altındadır.',
     },
     {
       id: "quiz-70-70-1-2",
       subtopicId: "70-1",
       type: "multiple_choice",
       prompt:
-        'B2 seviyesindeki "Dilek & Keşke Cümleleri (Wish & If Only)" için doğru yaklaşım hangisidir?',
+        'B1 seviyesindeki "Past Perfect vs Past Simple" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
@@ -187,8 +191,7 @@ export const topicContent70: TopicContent = {
       id: "quiz-70-70-1-3",
       subtopicId: "70-1",
       type: "multiple_choice",
-      prompt:
-        '"Dilek & Keşke Cümleleri (Wish & If Only)" çalışırken hangisi doğrudur?',
+      prompt: '"Past Perfect vs Past Simple" çalışırken hangisi doğrudur?',
       options: [
         "Konuyu tamamen atlamak",
         "Sadece dinleyip bırakmak",
@@ -202,14 +205,12 @@ export const topicContent70: TopicContent = {
       id: "quiz-70-level",
       subtopicId: "70-1",
       type: "multiple_choice",
-      prompt:
-        '"Dilek & Keşke Cümleleri (Wish & If Only)" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "Seviye yok", "Belirsiz", "B2"],
-      correctIndex: 3,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: '"Past Perfect vs Past Simple" konusu hangi seviyeye aittir?',
+      options: ["B1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
+      correctIndex: 0,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Dilek & Keşke Cümleleri (Wish & If Only) konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Past Perfect vs Past Simple konusunu pekiştiren quiz. Başarılar.",
 };

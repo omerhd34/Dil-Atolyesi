@@ -6,27 +6,32 @@ export const topicContent67: TopicContent = {
     parts: [
       {
         id: "67-1",
-        title: "Geçmişe Dönük Kipler (Perfect Modals)",
-        titleEn: "Modals in the Past (should have, must have, might have)",
+        title: "Geçmişte Süreklilik",
+        titleEn: "Past Continuous",
         paragraphs: [
-          "Geçmişte yaşanmış olaylar hakkında mantıklı çıkarımlar yapmaya, pişmanlıkları veya yapıcı eleştirileri incelikle dile getirmeye hazır mısın? Bu derste **\\must have, can't have, might have, could have\\** ile geçmişe dönük olasılıkları ve **\\should have / shouldn't have + V3\\** ile kaçırılmış fırsatları keşfedeceksin. Ayrıca yapmaya gerek olmayan ama yapılmış eylemleri anlatan **\\needn't have V3\\** kalıbının ince nüansını inceleyeceksin. Geçmiş olayları değerlendirirken duygusal ve mantıksal tonunu kusursuzca ayarlayabileceksin.",
+          "Geçmişte süren veya kesilen eylemleri zaman çizgisinde ayırmayı öğrenirsin. Kartta gördüğün kalıplar arasında **\\Was / Were + V-ing\\**, **\\While\\**, **\\When\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "You should have called me.",
-            tr: "Bağlamda incele.",
+            en: "Was / Were + V-ing",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "He must have forgotten the meeting.",
-            tr: "Bağlamda incele.",
+            en: "While",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "When",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,24 +43,21 @@ export const topicContent67: TopicContent = {
       id: "67-ex-67-1-1",
       subtopicId: "67-1",
       type: "multiple_choice",
-      prompt:
-        '"Geçmişe Dönük Kipler (Perfect Modals)" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Geçmişte Süreklilik\" alt konusu hangi ana konuya aittir?",
       options: [
-        "Geçmişe Dönük Kipler (Perfect Modals)",
+        "Geçmişte Süreklilik",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "Geçmişe Dönük Kipler (Perfect Modals)" başlığı altındadır.',
+      explanation: "Bu alt konu \"Geçmişte Süreklilik\" başlığı altındadır.",
     },
     {
       id: "67-ex-67-1-2",
       subtopicId: "67-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Geçmişe Dönük Kipler (Perfect Modals)" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Geçmişte Süreklilik\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -69,21 +71,21 @@ export const topicContent67: TopicContent = {
       id: "67-tf-67-1-1",
       subtopicId: "67-1",
       type: "true_false",
-      prompt:
-        '"Geçmişe Dönük Kipler (Perfect Modals)" başlığı "Geçmişe Dönük Kipler (Perfect Modals)" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Geçmişte Süreklilik\" başlığı \"Geçmişte Süreklilik\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "Geçmişe Dönük Kipler (Perfect Modals)" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Geçmişte Süreklilik\" konusu altında işlenir.",
     },
     {
       id: "67-fb-67-1-1",
       subtopicId: "67-1",
       type: "fill_blank",
-      prompt:
-        '"Geçmişe Dönük Kipler (Perfect Modals)" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Geçmişte Süreklilik\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "67-match-1",
@@ -92,12 +94,12 @@ export const topicContent67: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Modals in the Past (should have, must have, might have)",
-          right: "Geçmişe Dönük Kipler (Perfect Modals)",
+          left: "Past Continuous",
+          right: "Geçmişte Süreklilik",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -156,24 +158,21 @@ export const topicContent67: TopicContent = {
       id: "quiz-67-67-1-1",
       subtopicId: "67-1",
       type: "multiple_choice",
-      prompt:
-        '"Geçmişe Dönük Kipler (Perfect Modals)" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Geçmişte Süreklilik\" alt konusu hangi ana konuya aittir?",
       options: [
         "Tamamen farklı bir konu",
         "Hiçbiri",
-        "Geçmişe Dönük Kipler (Perfect Modals)",
         "Sadece kelime listesi",
+        "Geçmişte Süreklilik",
       ],
-      correctIndex: 2,
-      explanation:
-        'Bu alt konu "Geçmişe Dönük Kipler (Perfect Modals)" başlığı altındadır.',
+      correctIndex: 3,
+      explanation: "Bu alt konu \"Geçmişte Süreklilik\" başlığı altındadır.",
     },
     {
       id: "quiz-67-67-1-2",
       subtopicId: "67-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "Geçmişe Dönük Kipler (Perfect Modals)" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Geçmişte Süreklilik\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -187,8 +186,7 @@ export const topicContent67: TopicContent = {
       id: "quiz-67-67-1-3",
       subtopicId: "67-1",
       type: "multiple_choice",
-      prompt:
-        '"Geçmişe Dönük Kipler (Perfect Modals)" çalışırken hangisi doğrudur?',
+      prompt: "\"Geçmişte Süreklilik\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -202,14 +200,17 @@ export const topicContent67: TopicContent = {
       id: "quiz-67-level",
       subtopicId: "67-1",
       type: "multiple_choice",
-      prompt:
-        '"Geçmişe Dönük Kipler (Perfect Modals)" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "Belirsiz", "Seviye yok", "B2"],
-      correctIndex: 3,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Geçmişte Süreklilik\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Yanlış seviye",
+        "B1",
+        "Seviye yok",
+      ],
+      correctIndex: 2,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "Geçmişe Dönük Kipler (Perfect Modals) konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Geçmişte Süreklilik konusunu pekiştiren quiz. Başarılar.",
 };

@@ -6,27 +6,42 @@ export const topicContent75: TopicContent = {
     parts: [
       {
         id: "75-1",
-        title: "İleri Dolaylı Anlatım Fiilleri",
-        titleEn: "Reporting Verbs (deny, advise, suggest, accuse)",
+        title: "Koşul Cümlelerinin Karşılaştırılması",
+        titleEn: "Zero, First, Second and Third Conditionals",
         paragraphs: [
-          "Sürekli **\\said\\** ve **\\told\\** tekrarlamak yerine konuşmanın niyetini, duygusunu ve tonunu yansıtan zengin aktarım fiillerine geçmeye hazır mısın? Bu derste **\\deny, admit, suggest, advise, warn, insist, accuse, apologize\\** gibi ileri düzey dolaylı anlatım fiillerini keşfedeceksin. Her fiilin ardından gelen **\\V-ing\\**, **\\to-infinitive\\**, **\\edat + V-ing\\** veya **\\that\\** cümleciği kalıplarını gruplandırarak inceleyeceksin. Akademik metinlerde, özetlerde ve profesyonel konuşmalarda başkalarının fikirlerini çok daha etkileyici biçimde aktarabileceksin.",
+          "Koşul cümlelerinde şart ve sonuç ilişkisini net kurarsın. Kartta gördüğün kalıplar arasında **\\Zero\\**, **\\First\\**, **\\Second\\**, **\\Third\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "He denied stealing the money.",
-            tr: "Bağlamda incele.",
+            en: "Zero",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "She advised me to apply early.",
-            tr: "Bağlamda incele.",
+            en: "First",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Second",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Third",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Conditionals",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -38,24 +53,21 @@ export const topicContent75: TopicContent = {
       id: "75-ex-75-1-1",
       subtopicId: "75-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Dolaylı Anlatım Fiilleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Koşul Cümlelerinin Karşılaştırılması\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İleri Dolaylı Anlatım Fiilleri",
+        "Koşul Cümlelerinin Karşılaştırılması",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "İleri Dolaylı Anlatım Fiilleri" başlığı altındadır.',
+      explanation: "Bu alt konu \"Koşul Cümlelerinin Karşılaştırılması\" başlığı altındadır.",
     },
     {
       id: "75-ex-75-1-2",
       subtopicId: "75-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "İleri Dolaylı Anlatım Fiilleri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Koşul Cümlelerinin Karşılaştırılması\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -69,21 +81,21 @@ export const topicContent75: TopicContent = {
       id: "75-tf-75-1-1",
       subtopicId: "75-1",
       type: "true_false",
-      prompt:
-        '"İleri Dolaylı Anlatım Fiilleri" başlığı "İleri Dolaylı Anlatım Fiilleri" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"Koşul Cümlelerinin Karşılaştırılması\" başlığı \"Koşul Cümlelerinin Karşılaştırılması\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "İleri Dolaylı Anlatım Fiilleri" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"Koşul Cümlelerinin Karşılaştırılması\" konusu altında işlenir.",
     },
     {
       id: "75-fb-75-1-1",
       subtopicId: "75-1",
       type: "fill_blank",
-      prompt:
-        '"İleri Dolaylı Anlatım Fiilleri" konusu _____ seviyesine uygundur.',
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Koşul Cümlelerinin Karşılaştırılması\" konusu _____ seviyesine uygundur.",
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "75-match-1",
@@ -92,12 +104,12 @@ export const topicContent75: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Reporting Verbs (deny, advise, suggest, accuse)",
-          right: "İleri Dolaylı Anlatım Fiilleri",
+          left: "Zero, First, Second and Third Conditionals",
+          right: "Koşul Cümlelerinin Karşılaştırılması",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -156,24 +168,21 @@ export const topicContent75: TopicContent = {
       id: "quiz-75-75-1-1",
       subtopicId: "75-1",
       type: "multiple_choice",
-      prompt:
-        '"İleri Dolaylı Anlatım Fiilleri" alt konusu hangi ana konuya aittir?',
+      prompt: "\"Koşul Cümlelerinin Karşılaştırılması\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İleri Dolaylı Anlatım Fiilleri",
+        "Koşul Cümlelerinin Karşılaştırılması",
         "Hiçbiri",
         "Sadece kelime listesi",
         "Tamamen farklı bir konu",
       ],
       correctIndex: 0,
-      explanation:
-        'Bu alt konu "İleri Dolaylı Anlatım Fiilleri" başlığı altındadır.',
+      explanation: "Bu alt konu \"Koşul Cümlelerinin Karşılaştırılması\" başlığı altındadır.",
     },
     {
       id: "quiz-75-75-1-2",
       subtopicId: "75-1",
       type: "multiple_choice",
-      prompt:
-        'B2 seviyesindeki "İleri Dolaylı Anlatım Fiilleri" için doğru yaklaşım hangisidir?',
+      prompt: "B1 seviyesindeki \"Koşul Cümlelerinin Karşılaştırılması\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -187,7 +196,7 @@ export const topicContent75: TopicContent = {
       id: "quiz-75-75-1-3",
       subtopicId: "75-1",
       type: "multiple_choice",
-      prompt: '"İleri Dolaylı Anlatım Fiilleri" çalışırken hangisi doğrudur?',
+      prompt: "\"Koşul Cümlelerinin Karşılaştırılması\" çalışırken hangisi doğrudur?",
       options: [
         "Konuyu tamamen atlamak",
         "Hiç örnek okumamak",
@@ -201,13 +210,17 @@ export const topicContent75: TopicContent = {
       id: "quiz-75-level",
       subtopicId: "75-1",
       type: "multiple_choice",
-      prompt: '"İleri Dolaylı Anlatım Fiilleri" konusu hangi seviyeye aittir?',
-      options: ["Belirsiz", "Yanlış seviye", "B2", "Seviye yok"],
-      correctIndex: 2,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"Koşul Cümlelerinin Karşılaştırılması\" konusu hangi seviyeye aittir?",
+      options: [
+        "Yanlış seviye",
+        "Belirsiz",
+        "Seviye yok",
+        "B1",
+      ],
+      correctIndex: 3,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro:
-    "İleri Dolaylı Anlatım Fiilleri konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "Koşul Cümlelerinin Karşılaştırılması konusunu pekiştiren quiz. Başarılar.",
 };

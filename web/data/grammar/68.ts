@@ -6,27 +6,37 @@ export const topicContent68: TopicContent = {
     parts: [
       {
         id: "68-1",
-        title: "Needn't have vs. Didn't need to",
-        titleEn: "Needn't have vs. Didn't need to",
+        title: "Past Simple vs Past Continuous",
+        titleEn: "Past Simple vs Past Continuous",
         paragraphs: [
-          "Geçmişte yapılmak zorunda olunmayan veya gereksiz yere yapılmış eylemleri birbirinden ayırarak doğru tonu kullanmaya hazır mısın? Bu derste fiili yapmaya zorunluluğun olmadığını bildiren **\\didn't need to\\** ile yapıldığı halde gereksiz olduğunu vurgulayan **\\needn't have + V3\\** arasındaki kritik farkı keşfedeceksin. Olumlu ve olumsuz örneklerle **pişmanlık**, **\\rahatlama\\** ve **\\gereksiz emek\\** nüanslarını inceleyeceksin. Geçmiş olayları değerlendirirken karşındakinin gerçekten mecbur olup olmadığını net biçimde ifade edebileceksin.",
+          "Geçmişte süren veya kesilen eylemleri zaman çizgisinde ayırmayı öğrenirsin. Kartta gördüğün kalıplar arasında **\\Past Simple\\**, **\\Past Continuous\\**, **\\When\\**, **\\While\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "You needn't have bought milk — we already had some.",
-            tr: "Bağlamda incele.",
+            en: "Past Simple",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
           {
-            en: "I didn't need to wake up early; the meeting was cancelled.",
-            tr: "Bağlamda incele.",
+            en: "Past Continuous",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "When",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "While",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -39,23 +49,23 @@ export const topicContent68: TopicContent = {
       subtopicId: "68-1",
       type: "multiple_choice",
       prompt:
-        "\"Needn't have vs. Didn't need to\" alt konusu hangi ana konuya aittir?",
+        '"Past Simple vs Past Continuous" alt konusu hangi ana konuya aittir?',
       options: [
-        "Needn't have vs. Didn't need to",
+        "Past Simple vs Past Continuous",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
       explanation:
-        "Bu alt konu \"Needn't have vs. Didn't need to\" başlığı altındadır.",
+        'Bu alt konu "Past Simple vs Past Continuous" başlığı altındadır.',
     },
     {
       id: "68-ex-68-1-2",
       subtopicId: "68-1",
       type: "multiple_choice",
       prompt:
-        "B2 seviyesindeki \"Needn't have vs. Didn't need to\" için doğru yaklaşım hangisidir?",
+        'B1 seviyesindeki "Past Simple vs Past Continuous" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -70,20 +80,20 @@ export const topicContent68: TopicContent = {
       subtopicId: "68-1",
       type: "true_false",
       prompt:
-        "\"Needn't have vs. Didn't need to\" başlığı \"Needn't have vs. Didn't need to\" konusunun bir parçasıdır.",
+        '"Past Simple vs Past Continuous" başlığı "Past Simple vs Past Continuous" konusunun bir parçasıdır.',
       options: ["Doğru", "Yanlış"],
       correctIndex: 0,
       explanation:
-        "Bu alt başlık \"Needn't have vs. Didn't need to\" konusu altında işlenir.",
+        'Bu alt başlık "Past Simple vs Past Continuous" konusu altında işlenir.',
     },
     {
       id: "68-fb-68-1-1",
       subtopicId: "68-1",
       type: "fill_blank",
       prompt:
-        "\"Needn't have vs. Didn't need to\" konusu _____ seviyesine uygundur.",
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+        '"Past Simple vs Past Continuous" konusu _____ seviyesine uygundur.',
+      answer: "B1",
+      explanation: "Bu konu B1 seviyesindedir.",
     },
     {
       id: "68-match-1",
@@ -92,12 +102,12 @@ export const topicContent68: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Needn't have vs. Didn't need to",
-          right: "Needn't have vs. Didn't need to",
+          left: "Past Simple vs Past Continuous",
+          right: "Past Simple vs Past Continuous",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "B1 level",
+          right: "B1 seviyesi",
         },
         {
           left: "Practice",
@@ -157,23 +167,23 @@ export const topicContent68: TopicContent = {
       subtopicId: "68-1",
       type: "multiple_choice",
       prompt:
-        "\"Needn't have vs. Didn't need to\" alt konusu hangi ana konuya aittir?",
+        '"Past Simple vs Past Continuous" alt konusu hangi ana konuya aittir?',
       options: [
+        "Past Simple vs Past Continuous",
+        "Sadece kelime listesi",
         "Tamamen farklı bir konu",
         "Hiçbiri",
-        "Needn't have vs. Didn't need to",
-        "Sadece kelime listesi",
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       explanation:
-        "Bu alt konu \"Needn't have vs. Didn't need to\" başlığı altındadır.",
+        'Bu alt konu "Past Simple vs Past Continuous" başlığı altındadır.',
     },
     {
       id: "quiz-68-68-1-2",
       subtopicId: "68-1",
       type: "multiple_choice",
       prompt:
-        "B2 seviyesindeki \"Needn't have vs. Didn't need to\" için doğru yaklaşım hangisidir?",
+        'B1 seviyesindeki "Past Simple vs Past Continuous" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -187,8 +197,7 @@ export const topicContent68: TopicContent = {
       id: "quiz-68-68-1-3",
       subtopicId: "68-1",
       type: "multiple_choice",
-      prompt:
-        "\"Needn't have vs. Didn't need to\" çalışırken hangisi doğrudur?",
+      prompt: '"Past Simple vs Past Continuous" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -202,14 +211,13 @@ export const topicContent68: TopicContent = {
       id: "quiz-68-level",
       subtopicId: "68-1",
       type: "multiple_choice",
-      prompt:
-        "\"Needn't have vs. Didn't need to\" konusu hangi seviyeye aittir?",
-      options: ["B2", "Seviye yok", "Belirsiz", "Yanlış seviye"],
-      correctIndex: 0,
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: '"Past Simple vs Past Continuous" konusu hangi seviyeye aittir?',
+      options: ["Seviye yok", "B1", "Yanlış seviye", "Belirsiz"],
+      correctIndex: 1,
+      explanation: "Bu konu B1 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
   quizIntro:
-    "Needn't have vs. Didn't need to konusunu pekiştiren quiz. Başarılar.",
+    "Past Simple vs Past Continuous konusunu pekiştiren quiz. Başarılar.",
 };

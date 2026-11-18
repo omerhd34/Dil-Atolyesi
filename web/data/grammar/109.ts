@@ -6,22 +6,27 @@ export const topicContent109: TopicContent = {
     parts: [
       {
         id: "109-1",
-        title: "İroni & Retorik Yapılar",
-        titleEn: "Irony & Rhetorical Structures",
+        title: "İleri Wish Yapıları",
+        titleEn: "Advanced Wish Structures",
         paragraphs: [
-          "Sözün tam tersini kasteden **\\irony\\** ile soru, tekrar ve karşıtlık üzerinden kurulan **\\rhetorical structures\\** ile üslubuna derinlik katmaya hazır mısın? Bu derste **\\sarcasm\\**, **\\litotes\\**, **\\hyperbole\\** ve **\\rhetorical questions\\** gibi retorik araçların ton ve bağlamla ilişkisini keşfedeceksin. **\\Antithesis\\**, **\\parallelism\\**, **\\chiasmus\\** ve vurgulu söylem kalıplarının ikna ve mizah işlevlerini inceleyeceksin. Edebiyat, medya dili ve üst düzey tartışmalarda niyeti, mizahı ve eleştiriyi ince katmanlarıyla okuyup üretebileceksin.",
+          "**İleri Wish Yapıları** konusu B2 müfredatında temel taşlardan biridir. Kartta gördüğün kalıplar arasında **\\Wish + Past\\**, **\\Wish + Past Perfect\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B2 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
-        examplesTitle: "Örnek cümleler",
+        examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
         exampleHeaders: {
           en: "İngilizce",
-          tr: "Türkçe",
+          tr: "Açıklama",
         },
         examples: [
           {
-            en: "What a brilliant idea—to cancel the launch for the third time.",
-            tr: "Bağlamda incele.",
+            en: "Wish + Past",
+            tr: "Bu derste işlenir.",
+            note: "grammarHeading",
+          },
+          {
+            en: "Wish + Past Perfect",
+            tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
         ],
@@ -33,22 +38,21 @@ export const topicContent109: TopicContent = {
       id: "109-ex-109-1-1",
       subtopicId: "109-1",
       type: "multiple_choice",
-      prompt: '"İroni & Retorik Yapılar" alt konusu hangi ana konuya aittir?',
+      prompt: "\"İleri Wish Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İroni & Retorik Yapılar",
+        "İleri Wish Yapıları",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "İroni & Retorik Yapılar" başlığı altındadır.',
+      explanation: "Bu alt konu \"İleri Wish Yapıları\" başlığı altındadır.",
     },
     {
       id: "109-ex-109-1-2",
       subtopicId: "109-1",
       type: "multiple_choice",
-      prompt:
-        'C2 seviyesindeki "İroni & Retorik Yapılar" için doğru yaklaşım hangisidir?',
+      prompt: "B2 seviyesindeki \"İleri Wish Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -62,20 +66,21 @@ export const topicContent109: TopicContent = {
       id: "109-tf-109-1-1",
       subtopicId: "109-1",
       type: "true_false",
-      prompt:
-        '"İroni & Retorik Yapılar" başlığı "İroni & Retorik Yapılar" konusunun bir parçasıdır.',
-      options: ["Doğru", "Yanlış"],
+      prompt: "\"İleri Wish Yapıları\" başlığı \"İleri Wish Yapıları\" konusunun bir parçasıdır.",
+      options: [
+        "Doğru",
+        "Yanlış",
+      ],
       correctIndex: 0,
-      explanation:
-        'Bu alt başlık "İroni & Retorik Yapılar" konusu altında işlenir.',
+      explanation: "Bu alt başlık \"İleri Wish Yapıları\" konusu altında işlenir.",
     },
     {
       id: "109-fb-109-1-1",
       subtopicId: "109-1",
       type: "fill_blank",
-      prompt: '"İroni & Retorik Yapılar" konusu _____ seviyesine uygundur.',
-      answer: "C2",
-      explanation: "Bu konu C2 seviyesindedir.",
+      prompt: "\"İleri Wish Yapıları\" konusu _____ seviyesine uygundur.",
+      answer: "B2",
+      explanation: "Bu konu B2 seviyesindedir.",
     },
     {
       id: "109-match-1",
@@ -84,12 +89,12 @@ export const topicContent109: TopicContent = {
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "Irony & Rhetorical Structures",
-          right: "İroni & Retorik Yapılar",
+          left: "Advanced Wish Structures",
+          right: "İleri Wish Yapıları",
         },
         {
-          left: "C2 level",
-          right: "C2 seviyesi",
+          left: "B2 level",
+          right: "B2 seviyesi",
         },
         {
           left: "Practice",
@@ -148,22 +153,21 @@ export const topicContent109: TopicContent = {
       id: "quiz-109-109-1-1",
       subtopicId: "109-1",
       type: "multiple_choice",
-      prompt: '"İroni & Retorik Yapılar" alt konusu hangi ana konuya aittir?',
+      prompt: "\"İleri Wish Yapıları\" alt konusu hangi ana konuya aittir?",
       options: [
-        "İroni & Retorik Yapılar",
+        "İleri Wish Yapıları",
         "Sadece kelime listesi",
-        "Hiçbiri",
         "Tamamen farklı bir konu",
+        "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: 'Bu alt konu "İroni & Retorik Yapılar" başlığı altındadır.',
+      explanation: "Bu alt konu \"İleri Wish Yapıları\" başlığı altındadır.",
     },
     {
       id: "quiz-109-109-1-2",
       subtopicId: "109-1",
       type: "multiple_choice",
-      prompt:
-        'C2 seviyesindeki "İroni & Retorik Yapılar" için doğru yaklaşım hangisidir?',
+      prompt: "B2 seviyesindeki \"İleri Wish Yapıları\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
@@ -177,7 +181,7 @@ export const topicContent109: TopicContent = {
       id: "quiz-109-109-1-3",
       subtopicId: "109-1",
       type: "multiple_choice",
-      prompt: '"İroni & Retorik Yapılar" çalışırken hangisi doğrudur?',
+      prompt: "\"İleri Wish Yapıları\" çalışırken hangisi doğrudur?",
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -191,12 +195,17 @@ export const topicContent109: TopicContent = {
       id: "quiz-109-level",
       subtopicId: "109-1",
       type: "multiple_choice",
-      prompt: '"İroni & Retorik Yapılar" konusu hangi seviyeye aittir?',
-      options: ["Yanlış seviye", "Seviye yok", "C2", "Belirsiz"],
+      prompt: "\"İleri Wish Yapıları\" konusu hangi seviyeye aittir?",
+      options: [
+        "Belirsiz",
+        "Seviye yok",
+        "B2",
+        "Yanlış seviye",
+      ],
       correctIndex: 2,
-      explanation: "Bu konu C2 seviyesindedir.",
+      explanation: "Bu konu B2 seviyesindedir.",
     },
   ],
   viewMinutes: 10,
-  quizIntro: "İroni & Retorik Yapılar konusunu pekiştiren quiz. Başarılar.",
+  quizIntro: "İleri Wish Yapıları konusunu pekiştiren quiz. Başarılar.",
 };
