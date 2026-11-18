@@ -54,11 +54,71 @@
   }
 }
 
+@keyframes exercise-result-wrong-halo {
+  0% {
+    transform: scale(0.72);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes exercise-result-wrong-badge {
+  0% {
+    transform: scale(0.35);
+    opacity: 0;
+  }
+  48% {
+    transform: scale(1.14);
+    opacity: 1;
+  }
+  68% {
+    transform: scale(0.94) rotate(-5deg);
+  }
+  84% {
+    transform: scale(1.03) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes exercise-result-correct-pop {
+  0% {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes exercise-result-wrong-badge-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reading-quiz-pop,
   .reading-quiz-shake,
   .reading-quiz-feedback,
-  .reading-quiz-icon-pop {
+  .reading-quiz-icon-pop,
+  .exercise-result-wrong-halo,
+  .exercise-result-wrong-badge,
+  .exercise-result-wrong-badge-pulse,
+  .exercise-result-correct-pop {
     animation: none !important;
   }
 }

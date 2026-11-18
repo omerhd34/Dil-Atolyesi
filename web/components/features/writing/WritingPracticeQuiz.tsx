@@ -26,9 +26,9 @@ import { Fragment, type ReactNode } from "react";
 import { scrollToWritingSection } from "@/lib/writingSectionTab";
 import { cn } from "@/lib/utils";
 
-import { SECTION_PRACTICE_PASS_PERCENT } from "@/lib/sectionPracticePassPercent";
+import { EXAM_PASS_PERCENT } from "@/lib/examPassThreshold";
 
-const PRACTICE_PASS_PERCENT = SECTION_PRACTICE_PASS_PERCENT;
+const PRACTICE_PASS_PERCENT = EXAM_PASS_PERCENT;
 const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F"] as const;
 
 type McqSlot = { selected: number; revealed: boolean };

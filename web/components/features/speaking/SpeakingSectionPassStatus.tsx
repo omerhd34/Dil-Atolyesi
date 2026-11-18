@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useSpeakingSectionStatus } from "@/hooks/useSpeakingProgress";
+import { examPassCopy } from "@/lib/examPassThreshold";
 
 type SpeakingSectionPassStatusProps = {
   sectionId: string;
@@ -15,7 +16,7 @@ export function SpeakingSectionPassStatus({
 
   return (
     <p className="text-sm text-brand-600 dark:text-brand-400">
-      {complete ? t("sectionPassedHint") : t("sectionPassHint")}
+      {complete ? t("sectionPassedHint") : t("sectionPassHint", examPassCopy)}
     </p>
   );
 }

@@ -23,11 +23,11 @@ import { Separator } from "@/components/ui/separator";
 import { ExerciseQuestionHeader } from "@/components/features/exercises/ExerciseQuestionHeader";
 import type { ReadingMultipleChoiceQuestion } from "@/data/readings/types";
 import { scrollToReadingSection } from "@/lib/readingSectionTab";
-import { SECTION_PRACTICE_PASS_PERCENT } from "@/lib/sectionPracticePassPercent";
+import { EXAM_PASS_PERCENT } from "@/lib/examPassThreshold";
 import { InstantMultipleChoiceOptions } from "@/components/features/exercises/InstantMultipleChoiceOptions";
 import { cn } from "@/lib/utils";
 
-const PRACTICE_PASS_PERCENT = SECTION_PRACTICE_PASS_PERCENT;
+const PRACTICE_PASS_PERCENT = EXAM_PASS_PERCENT;
 
 type QuestionSlot = {
   selected: number;

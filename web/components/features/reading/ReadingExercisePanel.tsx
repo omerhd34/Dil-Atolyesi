@@ -18,10 +18,10 @@ import {
   flattenReadingExerciseBlock,
   type FlatReadingExercise,
 } from "@/lib/reading/flattenReadingExercises";
-import { SECTION_PRACTICE_PASS_PERCENT } from "@/lib/sectionPracticePassPercent";
+import { EXAM_PASS_PERCENT } from "@/lib/examPassThreshold";
 import { cn } from "@/lib/utils";
 
-const PASS_PERCENT = SECTION_PRACTICE_PASS_PERCENT;
+const PASS_PERCENT = EXAM_PASS_PERCENT;
 
 type ReadingExercisePanelProps = {
   block: ReadingExerciseBlock;
@@ -201,7 +201,7 @@ export function ReadingExercisePanel({
             nextVariant={current.checked ? "default" : "outline"}
             onPrevious={handlePrevious}
             onNext={handleNext}
-            trailing={
+            leading={
               canRestart ? (
                 <Button
                   type="button"

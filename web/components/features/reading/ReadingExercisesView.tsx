@@ -6,13 +6,13 @@ import type { ReadingSection } from "@/data/readings/types";
 import { useReadingSectionStatus } from "@/hooks/useReadingProgress";
 import { tryMarkReadingLevelPassed } from "@/lib/readingAccess";
 import { markReadingPracticeDone } from "@/lib/readingProgressStorage";
-import { SECTION_PRACTICE_PASS_PERCENT } from "@/lib/sectionPracticePassPercent";
+import { EXAM_PASS_PERCENT } from "@/lib/examPassThreshold";
 
 type ReadingExercisesViewProps = {
   section: ReadingSection;
 };
 
-const PRACTICE_PASS_PERCENT = SECTION_PRACTICE_PASS_PERCENT;
+const PRACTICE_PASS_PERCENT = EXAM_PASS_PERCENT;
 
 export function ReadingExercisesView({ section }: ReadingExercisesViewProps) {
   const { listened } = useReadingSectionStatus(section.id);
