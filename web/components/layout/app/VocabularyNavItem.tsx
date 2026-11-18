@@ -2,11 +2,11 @@
 
 import type { MouseEvent } from "react";
 import { useTranslations } from "next-intl";
-import { BookA } from "lucide-react";
 import {
   appNavTooltipKey,
   vocabularySubNav,
 } from "@/components/layout/app/appNavLinks";
+import { SidebarNavIcon } from "@/components/layout/app/SidebarNavIcon";
 import { Link, usePathname } from "@/i18n/navigation";
 import { usePanelHash } from "@/hooks/usePanelHash";
 import {
@@ -61,7 +61,7 @@ export function VocabularyNavItem({ onNavigate }: VocabularyNavItemProps) {
         render={<Link href={PARENT_HREF} />}
         onClick={(event) => onNavigate(event, PARENT_HREF)}
       >
-        <BookA className="size-4" strokeWidth={1.75} aria-hidden />
+        <SidebarNavIcon kind="vocabulary" />
         <span>{parentLabel}</span>
       </SidebarMenuButton>
 

@@ -22,7 +22,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { LuPanelLeftOpen, LuPanelRightOpen } from "react-icons/lu";
 import {
   SIDEBAR_COOKIE_MAX_AGE,
   SIDEBAR_COOKIE_NAME,
@@ -252,10 +251,10 @@ function Sidebar({
 function SidebarTrigger({
   className,
   onClick,
+  children,
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { toggleSidebar, state } = useSidebar();
-  const collapsed = state === "collapsed";
+  const { toggleSidebar } = useSidebar();
 
   return (
     <Button
@@ -270,11 +269,7 @@ function SidebarTrigger({
       }}
       {...props}
     >
-      {collapsed ? (
-        <LuPanelLeftOpen className="size-4.5" strokeWidth={1.75} aria-hidden />
-      ) : (
-        <LuPanelRightOpen className="size-4.5" strokeWidth={1.75} aria-hidden />
-      )}
+      {children}
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );

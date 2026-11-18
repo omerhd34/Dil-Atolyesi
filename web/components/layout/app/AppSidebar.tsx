@@ -2,13 +2,14 @@
 
 import type { MouseEvent } from "react";
 import { useTranslations } from "next-intl";
-import { LogOut, Settings } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import {
   appNavLinks,
   appNavTooltipKey,
   type AppNavLink,
 } from "@/components/layout/app/appNavLinks";
+import { SidebarNavIcon } from "@/components/layout/app/SidebarNavIcon";
+import { SidebarToggleIcon } from "@/components/layout/app/SidebarToggleIcon";
 import { BrandMark } from "@/components/brand/BrandMark";
 import { VocabularyNavItem } from "@/components/layout/app/VocabularyNavItem";
 import { NotificationsMenu } from "@/components/features/dashboard/NotificationsMenu";
@@ -62,6 +63,8 @@ const railIconButtonClassName =
 const brandMarkTileClassName =
   "inline-flex size-9 shrink-0 items-center justify-center rounded-[12px] bg-(--glass-2) text-sidebar-foreground shadow-[inset_0_0_0_1px_var(--glass-line)]";
 
+const sidebarInsetXClassName = "px-4 group-data-[collapsible=icon]:px-3.5";
+
 export function AppSidebarMobileBar() {
   const tNav = useTranslations("Nav");
   const { openMobile } = useSidebar();
@@ -80,7 +83,9 @@ export function AppSidebarMobileBar() {
       <SidebarTrigger
         aria-label={openMobile ? tNav("closeMenu") : tNav("openMenu")}
         className={triggerClassName}
-      />
+      >
+        <SidebarToggleIcon />
+      </SidebarTrigger>
     </div>
   );
 }
@@ -128,7 +133,6 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
   }
 
   function renderLink(item: AppNavLink) {
-    const Icon = item.Icon;
     const active = isActive(item.href);
     const label = t(item.labelKey);
     const tooltip = t(appNavTooltipKey(item.labelKey));
@@ -142,7 +146,11 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
           render={<Link href={item.href} />}
           onClick={(event) => handleNavClick(event, item.href)}
         >
-          <Icon className="size-4" strokeWidth={1.75} aria-hidden />
+          {"iconKind" in item ? (
+            <SidebarNavIcon kind={item.iconKind} />
+          ) : (
+            <item.Icon className="size-4" strokeWidth={1.75} aria-hidden />
+          )}
           <span>{label}</span>
         </SidebarMenuButton>
       </SidebarMenuItem>
@@ -178,11 +186,18 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
             aria-label={collapsed ? t("expandSidebar") : t("collapseSidebar")}
             title={collapsed ? t("expandSidebar") : t("collapseSidebar")}
             className={triggerClassName}
-          />
+          >
+            <SidebarToggleIcon />
+          </SidebarTrigger>
         </div>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup className="px-2 py-0 group-data-[collapsible=icon]:px-3.5 group-data-[collapsible=icon]:pt-1">
+        <SidebarGroup
+          className={cn(
+            "py-0 group-data-[collapsible=icon]:pt-1",
+            sidebarInsetXClassName,
+          )}
+        >
           <SidebarGroupContent>
             <nav aria-label={t("menu")}>
               <SidebarMenu className="gap-0.5 group-data-[collapsible=icon]:gap-px">
@@ -201,17 +216,17 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="gap-1 p-4 group-data-[collapsible=icon]:items-stretch group-data-[collapsible=icon]:px-3.5 group-data-[collapsible=icon]:pt-2 group-data-[collapsible=icon]:pb-3.5">
+      <SidebarFooter
+        className={cn(
+          "gap-1 py-4 group-data-[collapsible=icon]:items-stretch group-data-[collapsible=icon]:pt-2 group-data-[collapsible=icon]:pb-3.5",
+          sidebarInsetXClassName,
+        )}
+      >
         <SidebarSeparator className="mx-0 mb-1 bg-(--glass-line) group-data-[collapsible=icon]:mx-1" />
-        <div className="group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center">
-          <NotificationsMenu
-            variant="sidebar"
-            triggerClassName={cn(
-              "group-data-[collapsible=icon]:h-[42px] group-data-[collapsible=icon]:w-full group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:rounded-[13px] group-data-[collapsible=icon]:px-0",
-            )}
-          />
-        </div>
         <SidebarMenu className="group-data-[collapsible=icon]:gap-px">
+          <SidebarMenuItem>
+            <NotificationsMenu variant="sidebar" />
+          </SidebarMenuItem>
           <SidebarMenuItem>
             <SidebarMenuButton
               isActive={settingsActive}
@@ -220,7 +235,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
               render={<Link href="/panel/ayarlar" />}
               onClick={() => setOpenMobile(false)}
             >
-              <Settings className="size-4" strokeWidth={1.75} aria-hidden />
+              <SidebarNavIcon kind="settings" />
               <span>{t("settings")}</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -265,7 +280,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
           title={tNav("logout")}
           onClick={onLogout}
         >
-          <LogOut className="size-4" aria-hidden />
+          <SidebarNavIcon kind="logout" />
           <span className="group-data-[collapsible=icon]:hidden">
             {tNav("logout")}
           </span>
