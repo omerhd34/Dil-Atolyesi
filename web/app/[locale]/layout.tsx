@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { AppProviders } from "@/components/providers/AppProviders";
+import { ThemeInitScript } from "@/components/providers/ThemeInitScript";
 import { routing } from "@/i18n/routing";
 import {
   isSidebarOpenFromCookie,
@@ -84,6 +85,7 @@ export default async function LocaleLayout({
       className={`${urbanist.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-transparent font-sans text-foreground">
+        <ThemeInitScript />
         <NextIntlClientProvider messages={messages}>
           <Suspense fallback={null}>
             <RequestChrome>{children}</RequestChrome>

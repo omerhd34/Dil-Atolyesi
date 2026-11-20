@@ -72,7 +72,7 @@ export default async function TopicLessonPage({ params }: PageProps) {
 
   if (topic.isExam) {
     redirect({
-      href: `/panel/grammer/${topicId}/exercises`,
+      href: `/atolye/grammer/${topicId}/exercises`,
       locale,
     });
   }

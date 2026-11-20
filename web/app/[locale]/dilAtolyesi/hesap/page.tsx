@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { AuthPanel } from "@/components/features/auth/AuthPanel";
-import { AuthPanelShell } from "@/components/features/auth/AuthPanelShell";
+import { WorkshopAccountAuth } from "@/components/features/auth/WorkshopAccountAuth";
+import { WorkshopAccountShell } from "@/components/features/auth/WorkshopAccountShell";
 
 export async function generateMetadata({
   params,
@@ -12,11 +12,11 @@ export async function generateMetadata({
   const tMeta = await getTranslations({ locale, namespace: "Meta" });
 
   return {
-    title: tMeta("pageTitle", { title: t("myPanel") }),
+    title: tMeta("pageTitle", { title: t("enterWorkshop") }),
   };
 }
 
-export default async function PanelLoginPage({
+export default async function AuthAccountPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -25,8 +25,8 @@ export default async function PanelLoginPage({
   setRequestLocale(locale);
 
   return (
-    <AuthPanelShell>
-      <AuthPanel />
-    </AuthPanelShell>
+    <WorkshopAccountShell>
+      <WorkshopAccountAuth />
+    </WorkshopAccountShell>
   );
 }

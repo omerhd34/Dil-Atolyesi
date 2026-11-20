@@ -6,12 +6,10 @@ type PageProps = {
   params: Promise<{ locale: string; sectionId: string }>;
 };
 
-export default async function ReadingPracticeRedirectPage({
-  params,
-}: PageProps) {
+export default async function ReadingExamRedirectPage({ params }: PageProps) {
   const { locale, sectionId } = await params;
   redirect({
-    href: `/panel/reading/${sectionId}#reading-exercise`,
+    href: `/atolye/reading/${sectionId}#reading-exercise`,
     locale,
   });
 }

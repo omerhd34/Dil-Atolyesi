@@ -1,4 +1,5 @@
 import { redirect } from "@/i18n/navigation";
+import { AUTH_ACCOUNT_PATH } from "@/lib/appPaths";
 import { setRequestLocale } from "next-intl/server";
 
 export default async function RegisterPage({
@@ -8,5 +9,5 @@ export default async function RegisterPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  redirect({ href: "/panelLogin", locale });
+  redirect({ href: AUTH_ACCOUNT_PATH, locale });
 }

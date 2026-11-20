@@ -17,7 +17,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function PanelPage({
+export default async function WorkshopPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
