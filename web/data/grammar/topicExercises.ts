@@ -6,33 +6,35 @@ import type {
   TopicExercise,
   TrueFalseExercise,
 } from "@/data/grammar/types";
-
 export function getTopicPracticeExercises(
   content: TopicContent,
 ): TopicExercise[] {
-  if (content.exercises && content.exercises.length > 0) {
-    return [...content.exercises];
+  const merged: TopicExercise[] = [];
+
+  if (content.exercises?.length) {
+    merged.push(...content.exercises);
+  } else {
+    if (content.exercisesMultipleChoice?.length) {
+      merged.push(...content.exercisesMultipleChoice);
+    }
+    if (content.exercisesFillBlank?.length) {
+      merged.push(...content.exercisesFillBlank);
+    }
+    if (content.exercisesTrueFalse?.length) {
+      merged.push(...content.exercisesTrueFalse);
+    }
+    if (content.exercisesMatching?.length) {
+      merged.push(...content.exercisesMatching);
+    }
+    if (content.exercisesCrossword?.length) {
+      merged.push(...content.exercisesCrossword);
+    }
   }
 
-  const merged: TopicExercise[] = [];
-  if (content.exercisesMultipleChoice?.length) {
-    merged.push(...content.exercisesMultipleChoice);
-  }
-  if (content.exercisesFillBlank?.length) {
-    merged.push(...content.exercisesFillBlank);
-  }
-  if (content.exercisesTrueFalse?.length) {
-    merged.push(...content.exercisesTrueFalse);
-  }
-  if (content.exercisesMatching?.length) {
-    merged.push(...content.exercisesMatching);
-  }
-  if (content.exercisesCrossword?.length) {
-    merged.push(...content.exercisesCrossword);
-  }
   if (content.exercisesListening?.length) {
     merged.push(...content.exercisesListening);
   }
+
   return merged;
 }
 

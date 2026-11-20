@@ -171,6 +171,17 @@ export const topicContent10: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "10-listen-01",
+      subtopicId: "10-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Countable Nouns",
+      answer: "Countable Nouns",
+      acceptedAnswers: ["Countable Nouns", "countable nouns"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-10-10-1-1",

@@ -148,6 +148,17 @@ export const topicContent92: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "92-listen-01",
+      subtopicId: "92-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Wish + Past Simple",
+      answer: "Wish + Past Simple",
+      acceptedAnswers: ["Wish + Past Simple", "wish + past simple"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-92-92-1-1",

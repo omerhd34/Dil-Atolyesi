@@ -158,6 +158,17 @@ export const topicContent14: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "14-listen-01",
+      subtopicId: "14-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Open The Door",
+      answer: "Open The Door",
+      acceptedAnswers: ["Open The Door", "open the door"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-14-14-1-1",

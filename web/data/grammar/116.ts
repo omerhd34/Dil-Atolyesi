@@ -153,6 +153,17 @@ export const topicContent116: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "116-listen-01",
+      subtopicId: "116-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Passive Modals",
+      answer: "Passive Modals",
+      acceptedAnswers: ["Passive Modals", "passive modals"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-116-116-1-1",

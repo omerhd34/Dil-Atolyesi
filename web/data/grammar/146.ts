@@ -148,6 +148,17 @@ export const topicContent146: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "146-listen-01",
+      subtopicId: "146-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Could Have Been",
+      answer: "Could Have Been",
+      acceptedAnswers: ["Could Have Been", "could have been"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-146-146-1-1",

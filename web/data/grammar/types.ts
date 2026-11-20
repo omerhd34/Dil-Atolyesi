@@ -110,16 +110,28 @@ export type VerbListeningRow = {
   v3CorrectPoolIndex: number;
 };
 
+export type VerbFormMatchingExercise = {
+  id: string;
+  subtopicId: string;
+  type: "matching";
+  verbTripleForm: true;
+  verbListeningRows: VerbListeningRow[];
+  verbListeningV2Pool: string[];
+  verbListeningV3Pool: string[];
+};
+
 export type ListeningExercise = {
   id: string;
   subtopicId: string;
   type: "listening";
   prompt: string;
   speakText: string;
-  englishOptions: string[];
-  englishCorrectIndex: number;
-  turkishOptions: string[];
-  turkishCorrectIndex: number;
+  answer?: string;
+  acceptedAnswers?: string[];
+  englishOptions?: string[];
+  englishCorrectIndex?: number;
+  turkishOptions?: string[];
+  turkishCorrectIndex?: number;
   verbTripleForm?: boolean;
   verbListeningRows?: VerbListeningRow[];
   verbListeningV2Pool?: string[];
@@ -156,7 +168,8 @@ export type TopicExercise =
   | FillBlankExercise
   | CrosswordExercise
   | ListeningExercise
-  | MatchingExercise;
+  | MatchingExercise
+  | VerbFormMatchingExercise;
 
 export type ErrorCorrectionExercise = {
   id: string;
@@ -176,10 +189,11 @@ export type TopicQuizExercise =
   | MultipleChoiceExercise
   | TrueFalseExercise
   | FillBlankExercise
-  | MatchingExercise;
+  | ListeningExercise;
 
 export type TopicQuizItem =
   | TopicQuizExercise
+  | MatchingExercise
   | ErrorCorrectionExercise
   | ListeningExercise;
 

@@ -148,6 +148,17 @@ export const topicContent73: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "73-listen-01",
+      subtopicId: "73-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "If + Past Simple",
+      answer: "If + Past Simple",
+      acceptedAnswers: ["If + Past Simple", "if + past simple"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-73-73-1-1",

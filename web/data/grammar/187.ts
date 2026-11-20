@@ -148,6 +148,17 @@ export const topicContent187: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "187-listen-01",
+      subtopicId: "187-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Stylistic Inversion",
+      answer: "Stylistic Inversion",
+      acceptedAnswers: ["Stylistic Inversion", "stylistic inversion"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-187-187-1-1",

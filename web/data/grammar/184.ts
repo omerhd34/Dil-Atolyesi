@@ -153,6 +153,17 @@ export const topicContent184: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "184-listen-01",
+      subtopicId: "184-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Modal Nuance",
+      answer: "Modal Nuance",
+      acceptedAnswers: ["Modal Nuance", "modal nuance"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-184-184-1-1",

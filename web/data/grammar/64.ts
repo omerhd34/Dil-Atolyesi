@@ -161,6 +161,17 @@ export const topicContent64: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "64-listen-01",
+      subtopicId: "64-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Have / Has + V3",
+      answer: "Have / Has + V3",
+      acceptedAnswers: ["Have / Has + V3", "have / has + v3"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-64-64-1-1",

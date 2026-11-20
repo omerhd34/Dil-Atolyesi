@@ -148,6 +148,17 @@ export const topicContent84: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "84-listen-01",
+      subtopicId: "84-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Tell + To Infinitive",
+      answer: "Tell + To Infinitive",
+      acceptedAnswers: ["Tell + To Infinitive", "tell + to infinitive"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-84-84-1-1",

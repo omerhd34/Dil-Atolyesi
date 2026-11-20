@@ -148,6 +148,17 @@ export const topicContent144: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "144-listen-01",
+      subtopicId: "144-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Complex Perfect",
+      answer: "Complex Perfect",
+      acceptedAnswers: ["Complex Perfect", "complex perfect"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-144-144-1-1",

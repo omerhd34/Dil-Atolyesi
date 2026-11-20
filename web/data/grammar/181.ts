@@ -158,6 +158,17 @@ export const topicContent181: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "181-listen-01",
+      subtopicId: "181-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Semicolon",
+      answer: "Semicolon",
+      acceptedAnswers: ["Semicolon", "semicolon"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-181-181-1-1",

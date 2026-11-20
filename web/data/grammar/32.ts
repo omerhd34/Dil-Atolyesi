@@ -158,6 +158,17 @@ export const topicContent32: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "32-listen-01",
+      subtopicId: "32-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Regular Verbs",
+      answer: "Regular Verbs",
+      acceptedAnswers: ["Regular Verbs", "regular verbs"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-32-32-1-1",

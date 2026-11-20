@@ -158,6 +158,17 @@ export const topicContent62: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "62-listen-01",
+      subtopicId: "62-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Have / Has + Past Participle",
+      answer: "Have / Has + Past Participle",
+      acceptedAnswers: ["Have / Has + Past Participle", "have / has + past participle"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-62-62-1-1",

@@ -153,6 +153,17 @@ export const topicContent117: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "117-listen-01",
+      subtopicId: "117-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "It Is Said That",
+      answer: "It Is Said That",
+      acceptedAnswers: ["It Is Said That", "it is said that"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-117-117-1-1",

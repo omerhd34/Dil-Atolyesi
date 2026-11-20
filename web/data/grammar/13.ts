@@ -148,6 +148,17 @@ export const topicContent13: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "13-listen-01",
+      subtopicId: "13-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "In, On, At, For, Since, Until, From ..",
+      answer: "In, On, At, For, Since, Until, From ..",
+      acceptedAnswers: ["In, On, At, For, Since, Until, From ..", "in, on, at, for, since, until, from .."],
+    },
+  ],
   quiz: [
     {
       id: "quiz-13-13-1-1",

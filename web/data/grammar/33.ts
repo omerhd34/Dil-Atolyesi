@@ -163,6 +163,17 @@ export const topicContent33: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "33-listen-01",
+      subtopicId: "33-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Yesterday",
+      answer: "Yesterday",
+      acceptedAnswers: ["Yesterday", "yesterday"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-33-33-1-1",

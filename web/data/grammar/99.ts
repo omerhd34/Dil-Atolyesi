@@ -143,6 +143,17 @@ export const topicContent99: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "99-listen-01",
+      subtopicId: "99-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Do / Does / Did + Base Verb",
+      answer: "Do / Does / Did + Base Verb",
+      acceptedAnswers: ["Do / Does / Did + Base Verb", "do / does / did + base verb"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-99-99-1-1",

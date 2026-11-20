@@ -143,6 +143,17 @@ export const topicContent48: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "48-listen-01",
+      subtopicId: "48-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Both / Either / Neither",
+      answer: "Both / Either / Neither",
+      acceptedAnswers: ["Both / Either / Neither", "both / either / neither"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-48-48-1-1",

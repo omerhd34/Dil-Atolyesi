@@ -148,6 +148,17 @@ export const topicContent185: TopicContent = {
       ],
     },
   ],
+  exercisesListening: [
+    {
+      id: "185-listen-01",
+      subtopicId: "185-1",
+      type: "listening",
+      prompt: "Dinlediğini İngilizce olarak yaz.",
+      speakText: "Fixed Subjunctive",
+      answer: "Fixed Subjunctive",
+      acceptedAnswers: ["Fixed Subjunctive", "fixed subjunctive"],
+    },
+  ],
   quiz: [
     {
       id: "quiz-185-185-1-1",
