@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Check, UserRound } from "lucide-react";
+import { Check, LetterF, LetterM, type LucideIcon } from "lucide-react";
 import { useSpeechVoiceGender } from "@/hooks/useSpeechVoiceGender";
 import { SPEECH_VOICE_GENDERS, speakText } from "@/lib/speakText";
 import type { SpeechVoiceGender } from "@/lib/speechVoiceGender";
@@ -11,6 +11,11 @@ const GENDER_LABEL_KEYS = {
   female: "speechVoiceFemale",
   male: "speechVoiceMale",
 } as const satisfies Record<SpeechVoiceGender, string>;
+
+const GENDER_ICONS: Record<SpeechVoiceGender, LucideIcon> = {
+  female: LetterF,
+  male: LetterM,
+};
 
 type SpeechVoiceControlProps = {
   className?: string;
@@ -33,6 +38,7 @@ export function SpeechVoiceControl({ className }: SpeechVoiceControlProps) {
         {SPEECH_VOICE_GENDERS.map((option) => {
           const selected = gender === option;
           const label = t(GENDER_LABEL_KEYS[option]);
+          const GenderIcon = GENDER_ICONS[option];
           return (
             <li key={option} className="min-w-0">
               <button
@@ -44,14 +50,14 @@ export function SpeechVoiceControl({ className }: SpeechVoiceControlProps) {
                   speakText(t("speechRatePreviewSample"), "en-US");
                 }}
                 className={cn(
-                  "relative flex h-full w-full min-w-0 cursor-pointer items-center gap-2 rounded-xl border px-3 py-2.5 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40",
+                  "settings-tile-button interaction-motion group/settings-tile relative flex h-full w-full min-w-0 cursor-pointer items-center gap-2 rounded-xl border px-3 py-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40",
                   selected
                     ? "border-sky-500/45 bg-sky-500/5 dark:border-sky-400/40 dark:bg-sky-400/10"
                     : "border-border bg-background/80 hover:border-sky-500/45 hover:bg-sky-500/5 dark:bg-brand-950/40",
                 )}
               >
-                <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200">
-                  <UserRound className="size-3.5" aria-hidden />
+                <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-700 transition-colors duration-950 ease-[cubic-bezier(0.33,0,0.2,1)] group-hover/settings-tile:text-sky-700 dark:bg-brand-900 dark:text-brand-200 dark:group-hover/settings-tile:text-sky-300">
+                  <GenderIcon className="size-4" aria-hidden />
                 </span>
                 <span className="min-w-0 flex-1 pe-5 text-sm font-medium text-brand-950 dark:text-brand-100">
                   {label}
