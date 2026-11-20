@@ -7,9 +7,7 @@ type DashboardStatProgressBarProps = {
   ariaLabel: string;
   className?: string;
   fillVariant?: "default" | "warning";
-  /** Yüzde metnini çubuk içinde sağda gösterir (daha yüksek track). */
   inlinePercent?: boolean;
-  /** Çubuk içinde sağda özel etiket (inlinePercent ile birlikte kullanılmaz). */
   inlineEndLabel?: ReactNode;
 };
 

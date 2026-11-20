@@ -2,14 +2,14 @@
 
 import type { MouseEvent } from "react";
 import { useTranslations } from "next-intl";
+import { LogOut, Settings } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import {
   appNavLinks,
   appNavTooltipKey,
   type AppNavLink,
 } from "@/components/layout/app/appNavLinks";
-import { SidebarNavIcon } from "@/components/layout/app/SidebarNavIcon";
-import { SidebarToggleIcon } from "@/components/layout/app/SidebarToggleIcon";
+import { sidebarNavButtonClassName } from "@/components/layout/app/sidebarNavButton";
 import { BrandMark } from "@/components/brand/BrandMark";
 import { VocabularyNavItem } from "@/components/layout/app/VocabularyNavItem";
 import { NotificationsMenu } from "@/components/features/dashboard/NotificationsMenu";
@@ -51,17 +51,14 @@ type AppSidebarProps = {
   onLogout: () => void;
 };
 
-const menuButtonClassName =
-  "h-auto rounded-[13px] px-2.5 py-2 text-base font-medium text-sidebar-foreground/65 hover:bg-sidebar-accent hover:text-sidebar-foreground data-active:bg-sidebar-accent data-active:text-sidebar-foreground";
-
-const triggerClassName =
-  "size-8 shrink-0 rounded-[10px] border-0 bg-[var(--glass-2)] text-sidebar-foreground shadow-[inset_0_0_0_1px_var(--glass-line)] hover:bg-[var(--glass-3)] hover:text-sidebar-foreground";
-
 const railIconButtonClassName =
   "group-data-[collapsible=icon]:h-[42px] group-data-[collapsible=icon]:w-full group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:rounded-[13px] group-data-[collapsible=icon]:px-0";
 
 const brandMarkTileClassName =
   "inline-flex size-9 shrink-0 items-center justify-center rounded-[12px] bg-(--glass-2) text-sidebar-foreground shadow-[inset_0_0_0_1px_var(--glass-line)]";
+
+const sidebarBrandLabelClassName =
+  "font-display text-xl font-semibold tracking-tight transition-colors duration-[950ms] ease-[cubic-bezier(0.33,0,0.2,1)] group-hover/brand:text-sky-700 dark:group-hover/brand:text-sky-300";
 
 const sidebarInsetXClassName = "px-4 group-data-[collapsible=icon]:px-3.5";
 
@@ -73,19 +70,16 @@ export function AppSidebarMobileBar() {
     <div className="glass-panel sticky top-0 z-30 mx-3 mt-3 flex h-14 items-center justify-between rounded-2xl px-4 text-sidebar-foreground lg:hidden">
       <Link
         href="/panel"
-        className="inline-flex items-center gap-2.5 font-display text-xl font-semibold text-sidebar-foreground"
+        className="group/brand inline-flex max-w-fit items-center gap-2.5 self-start text-sidebar-foreground"
       >
         <span className={brandMarkTileClassName} aria-hidden>
           <BrandMark className="size-5" />
         </span>
-        {tNav("brand")}
+        <span className={sidebarBrandLabelClassName}>{tNav("brand")}</span>
       </Link>
       <SidebarTrigger
         aria-label={openMobile ? tNav("closeMenu") : tNav("openMenu")}
-        className={triggerClassName}
-      >
-        <SidebarToggleIcon />
-      </SidebarTrigger>
+      />
     </div>
   );
 }
@@ -133,6 +127,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
   }
 
   function renderLink(item: AppNavLink) {
+    const Icon = item.Icon;
     const active = isActive(item.href);
     const label = t(item.labelKey);
     const tooltip = t(appNavTooltipKey(item.labelKey));
@@ -142,15 +137,11 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
         <SidebarMenuButton
           isActive={active}
           tooltip={tooltip}
-          className={menuButtonClassName}
+          className={sidebarNavButtonClassName}
           render={<Link href={item.href} />}
           onClick={(event) => handleNavClick(event, item.href)}
         >
-          {"iconKind" in item ? (
-            <SidebarNavIcon kind={item.iconKind} />
-          ) : (
-            <item.Icon className="size-4" strokeWidth={1.75} aria-hidden />
-          )}
+          <Icon className="size-4" strokeWidth={1.75} aria-hidden />
           <span>{label}</span>
         </SidebarMenuButton>
       </SidebarMenuItem>
@@ -166,7 +157,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
         <div className="flex items-center justify-between gap-3 group-data-[collapsible=icon]:flex-col group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:gap-2">
           <Link
             href="/panel"
-            className="inline-flex min-w-0 items-center gap-2.5 text-sidebar-foreground"
+            className="group/brand inline-flex max-w-fit min-w-0 items-center gap-2.5 self-start text-sidebar-foreground"
             aria-label={tNav("brand")}
           >
             <span
@@ -178,29 +169,31 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
             >
               <BrandMark className="size-5 group-data-[collapsible=icon]:size-[1.35rem]" />
             </span>
-            <span className="font-display text-xl font-semibold tracking-tight group-data-[collapsible=icon]:hidden">
+            <span
+              className={cn(
+                sidebarBrandLabelClassName,
+                "group-data-[collapsible=icon]:hidden",
+              )}
+            >
               {tNav("brand")}
             </span>
           </Link>
           <SidebarTrigger
             aria-label={collapsed ? t("expandSidebar") : t("collapseSidebar")}
             title={collapsed ? t("expandSidebar") : t("collapseSidebar")}
-            className={triggerClassName}
-          >
-            <SidebarToggleIcon />
-          </SidebarTrigger>
+          />
         </div>
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className="scroll-pt-1 pt-1 group-data-[collapsible=icon]:pt-1">
         <SidebarGroup
           className={cn(
-            "py-0 group-data-[collapsible=icon]:pt-1",
+            "pb-0 pt-0 group-data-[collapsible=icon]:pt-0",
             sidebarInsetXClassName,
           )}
         >
           <SidebarGroupContent>
             <nav aria-label={t("menu")}>
-              <SidebarMenu className="gap-0.5 group-data-[collapsible=icon]:gap-px">
+              <SidebarMenu className="gap-0.5 group-data-[collapsible=icon]:gap-0.5">
                 {appNavLinks.map((item) =>
                   item.labelKey === "vocabulary" ? (
                     <VocabularyNavItem
@@ -223,7 +216,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
         )}
       >
         <SidebarSeparator className="mx-0 mb-1 bg-(--glass-line) group-data-[collapsible=icon]:mx-1" />
-        <SidebarMenu className="group-data-[collapsible=icon]:gap-px">
+        <SidebarMenu className="gap-0.5 group-data-[collapsible=icon]:gap-0.5">
           <SidebarMenuItem>
             <NotificationsMenu variant="sidebar" />
           </SidebarMenuItem>
@@ -231,11 +224,11 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
             <SidebarMenuButton
               isActive={settingsActive}
               tooltip={t("settingsTooltip")}
-              className={menuButtonClassName}
+              className={sidebarNavButtonClassName}
               render={<Link href="/panel/ayarlar" />}
               onClick={() => setOpenMobile(false)}
             >
-              <SidebarNavIcon kind="settings" />
+              <Settings className="size-4" strokeWidth={1.75} aria-hidden />
               <span>{t("settings")}</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -273,6 +266,8 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
           variant="outline"
           className={cn(
             "h-9 w-full text-base text-sidebar-foreground/80",
+            "hover:text-destructive focus-visible:text-destructive dark:hover:text-red-300 dark:focus-visible:text-red-300",
+            "[&_svg]:text-current",
             railIconButtonClassName,
           )}
           disabled={isLoggingOut}
@@ -280,7 +275,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
           title={tNav("logout")}
           onClick={onLogout}
         >
-          <SidebarNavIcon kind="logout" />
+          <LogOut className="size-4 text-current" aria-hidden />
           <span className="group-data-[collapsible=icon]:hidden">
             {tNav("logout")}
           </span>

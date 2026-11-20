@@ -39,12 +39,12 @@ export function NotificationItem({
   }
 
   return (
-    <li className="group relative">
+    <li className="group notification-list-item relative">
       <Link
         href={href}
         onClick={handleOpen}
         className={cn(
-          "flex items-center gap-3 rounded-xl px-3 py-2.5 pr-10 transition-colors",
+          "flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 pr-10",
           item.read
             ? "bg-transparent hover:bg-muted/70"
             : "bg-sky-500/10 hover:bg-sky-500/15",
@@ -79,7 +79,8 @@ export function NotificationItem({
         type="button"
         variant="ghost"
         size="icon-xs"
-        className="absolute inset-y-0 right-2 my-auto rounded-full border border-transparent text-brand-600 opacity-0 transition-colors group-hover:border-border group-hover:opacity-100 hover:border-destructive/40 hover:bg-transparent hover:text-destructive focus-visible:border-destructive/40 focus-visible:opacity-100 focus-visible:text-destructive dark:text-brand-400 dark:group-hover:border-white/20 dark:hover:border-red-300/50 dark:hover:text-red-300 dark:focus-visible:border-red-300/50 dark:focus-visible:text-red-300"
+        data-btn-motion="off"
+        className="absolute inset-y-0 right-2 my-auto rounded-full border border-transparent text-brand-600 opacity-0 group-hover:border-border group-hover:opacity-100 hover:border-destructive/40 hover:bg-transparent hover:text-destructive focus-visible:border-destructive/40 focus-visible:opacity-100 focus-visible:text-destructive dark:text-brand-400 dark:group-hover:border-white/20 dark:hover:border-red-300/50 dark:hover:text-red-300 dark:focus-visible:border-red-300/50 dark:focus-visible:text-red-300"
         aria-label={dismissLabel}
         onClick={onDismiss}
       >

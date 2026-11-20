@@ -1,13 +1,15 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { BookOpen, ClipboardCheck } from "lucide-react";
-import { DashboardStatIcon } from "@/components/features/dashboard/DashboardStatIcon";
+import { BookOpen, ClipboardCheck, Timer } from "lucide-react";
 import {
   useVocabularyLearnQuotaQuery,
   useVocabularyQuizQuery,
 } from "@/store/api";
 import { DashboardStatPanelHeader } from "@/components/features/dashboard/DashboardStatPanelHeader";
+import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
+import { cn } from "@/lib/utils";
+import { useVocabularyUiStore } from "@/store/vocabularyUiStore";
 import { DashboardStatProgressBar } from "@/components/features/dashboard/DashboardStatProgressBar";
 import { LevelStatusCard } from "@/components/features/dashboard/LevelStatusCard";
 import { QuickContinueCard } from "@/components/features/dashboard/QuickContinueCard";
@@ -45,6 +47,7 @@ export function DashboardStatsBar() {
     selected: pending,
     limit: learnLimit,
   });
+  const vocabularyLevel = useVocabularyUiStore((s) => s.selectedLevel);
 
   return (
     <section
@@ -55,9 +58,20 @@ export function DashboardStatsBar() {
       <LevelStatusCard />
 
       <article className="dashboard-panel dashboard-panel--stat md:col-span-2 xl:col-span-1">
-        <DashboardStatPanelHeader>
+        <DashboardStatPanelHeader
+          trailing={
+            <span
+              className={cn(
+                "inline-flex items-center rounded-lg px-2.5 py-1 text-sm font-semibold",
+                getCefrLevelBadgeClass(vocabularyLevel),
+              )}
+            >
+              {vocabularyLevel}
+            </span>
+          }
+        >
           <p className="dashboard-panel__label text-base">
-            <DashboardStatIcon kind="wordTimer" />
+            <Timer className="size-5" aria-hidden />
             {t("wordTimer")}
           </p>
         </DashboardStatPanelHeader>
@@ -98,18 +112,18 @@ export function DashboardStatsBar() {
             onClick={() => {
               const onPanel = pathname === "/panel" || pathname === "/";
               if (onPanel) {
-                navigatePanelSection("words");
+                navigatePanelSection("vocabulary");
                 return;
               }
               router.push("/panel#vocabulary");
             }}
           >
-            <BookOpen className="size-3.5" aria-hidden />
+            <BookOpen className="size-3.5 text-current" aria-hidden />
             {t("selectWord")}
           </Button>
           {dueCount > 0 ? (
             <ButtonLink href="/panel/vocabulary/exam" size="sm">
-              <ClipboardCheck className="size-3.5" aria-hidden />
+              <ClipboardCheck className="size-3.5 text-current" aria-hidden />
               {t("quizCardCta")}
             </ButtonLink>
           ) : null}

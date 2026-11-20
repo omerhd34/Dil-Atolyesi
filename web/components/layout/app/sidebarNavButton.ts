@@ -1,0 +1,2 @@
+export const sidebarNavButtonClassName =
+  "sidebar-nav-button h-auto w-full min-h-10 cursor-pointer items-center gap-2 rounded-[13px] px-2.5 py-2 text-base font-medium text-sidebar-foreground/80 hover:text-sky-700 focus-visible:text-sky-700 dark:hover:text-sky-300 dark:focus-visible:text-sky-300 data-active:bg-transparent data-active:font-medium data-active:text-sidebar-foreground data-active:shadow-none data-active:hover:text-sky-700 dark:data-active:hover:text-sky-300 [&_svg]:text-current focus-visible:ring-2 focus-visible:ring-ring/50";

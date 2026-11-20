@@ -21,8 +21,8 @@ export function GeneralStepCard({
   return (
     <li
       className={cn(
-        "relative flex flex-col gap-3 rounded-2xl border border-border/50 bg-background/30 p-5 shadow-sm",
-        "dark:border-border/40 dark:bg-background/20",
+        "panel-motion-card panel-motion-card--icons-static group relative flex flex-col gap-3 rounded-2xl border border-border/50 bg-background/30 p-5 shadow-sm",
+        "hover:bg-(--glass-btn-hover) dark:border-border/40 dark:bg-background/20",
         className,
       )}
     >
@@ -34,10 +34,16 @@ export function GeneralStepCard({
           {stepLabel}
         </span>
         <span
-          className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary dark:bg-primary/15"
+          className={cn(
+            "panel-motion-card-icon flex size-10 shrink-0 items-center justify-center rounded-xl",
+            "bg-brand-500/10 text-brand-600/65",
+            "group-hover:bg-sky-500/20 group-hover:text-sky-700",
+            "dark:bg-brand-400/12 dark:text-brand-400/70",
+            "dark:group-hover:bg-sky-500/28 dark:group-hover:text-sky-300",
+          )}
           aria-hidden
         >
-          <Icon className="size-4.5" strokeWidth={1.75} />
+          <Icon className="size-5 text-current" strokeWidth={1.75} />
         </span>
       </div>
       <div className="space-y-1.5">

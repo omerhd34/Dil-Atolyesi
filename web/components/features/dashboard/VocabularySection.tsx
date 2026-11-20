@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useVocabularyUiStore } from "@/store/vocabularyUiStore";
 import { useTranslations } from "next-intl";
 import { LevelLockedDialog } from "@/components/features/dashboard/LevelLockedDialog";
 import { TopicLevelFilter } from "@/components/features/dashboard/TopicLevelFilter";
@@ -22,7 +23,8 @@ import { useKnownVocabularyWordsQuery } from "@/store/api";
 
 export function VocabularySection() {
   const t = useTranslations("Dashboard");
-  const [selectedLevel, setSelectedLevel] = useState<VocabularyLevel>("A1");
+  const selectedLevel = useVocabularyUiStore((s) => s.selectedLevel);
+  const setSelectedLevel = useVocabularyUiStore((s) => s.setSelectedLevel);
   const [lockDialogOpen, setLockDialogOpen] = useState(false);
   const { data: knownWords } = useKnownVocabularyWordsQuery();
 

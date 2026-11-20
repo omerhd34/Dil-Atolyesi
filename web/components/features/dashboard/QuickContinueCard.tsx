@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import type { LucideIcon } from "lucide-react";
 import {
+  BookA,
   BookOpen,
   ChevronRight,
   ClipboardCheck,
@@ -10,18 +11,11 @@ import {
   Mic,
   PencilLine,
   PenLine,
+  Play,
   SpellCheck2,
 } from "lucide-react";
-import {
-  DashboardActionIcon,
-  type DashboardActionKind,
-} from "@/components/features/dashboard/DashboardActionIcon";
-import { DashboardStatIcon } from "@/components/features/dashboard/DashboardStatIcon";
-import {
-  SidebarNavIcon,
-  type SidebarNavIconKind,
-} from "@/components/layout/app/SidebarNavIcon";
 import { Link } from "@/i18n/navigation";
+import { DashboardStatPanelHeader } from "@/components/features/dashboard/DashboardStatPanelHeader";
 import { Button } from "@/components/ui/Button";
 import { useContinueActivities } from "@/hooks/useContinueActivity";
 import { navigatePanelHref, navigatePanelSection } from "@/hooks/usePanelHash";
@@ -29,18 +23,11 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { resolveContinueActivityDisplay } from "@/lib/resolveContinueActivity";
 import type { ContinueActivity } from "@/lib/continueActivityStorage";
 
-type ContinueActivityIcon =
-  | { type: "nav"; kind: SidebarNavIconKind }
-  | { type: "action"; kind: DashboardActionKind }
-  | { type: "lucide"; Icon: LucideIcon };
-
-function continueActivityIcon(
-  activity: ContinueActivity,
-): ContinueActivityIcon {
+function continueActivityIcon(activity: ContinueActivity): LucideIcon {
   switch (activity.kind) {
     case "vocabulary_quiz":
     case "topic_exam":
-      return { type: "lucide", Icon: ClipboardCheck };
+      return ClipboardCheck;
     case "vocabulary_exercises":
     case "topic_exercises":
     case "combined_exercise":
@@ -48,37 +35,37 @@ function continueActivityIcon(
     case "listening_exercises":
     case "writing_exercises":
     case "speaking_exercises":
-      return { type: "lucide", Icon: PencilLine };
+      return PencilLine;
     case "vocabulary_category":
-      return { type: "nav", kind: "vocabulary" };
+      return BookA;
     case "reading_text":
-      return { type: "lucide", Icon: BookOpen };
+      return BookOpen;
     case "listening_audio":
-      return { type: "lucide", Icon: Headphones };
+      return Headphones;
     case "writing_model":
-      return { type: "lucide", Icon: PenLine };
+      return PenLine;
     case "speaking_model":
-      return { type: "lucide", Icon: Mic };
+      return Mic;
     case "skill_hub":
       switch (activity.skill) {
         case "listening":
-          return { type: "lucide", Icon: Headphones };
+          return Headphones;
         case "writing":
-          return { type: "lucide", Icon: PenLine };
+          return PenLine;
         case "speaking":
-          return { type: "lucide", Icon: Mic };
+          return Mic;
         case "topics":
-          return { type: "lucide", Icon: SpellCheck2 };
+          return SpellCheck2;
         case "vocabulary":
-          return { type: "nav", kind: "vocabulary" };
+          return BookA;
         case "reading":
         default:
-          return { type: "lucide", Icon: BookOpen };
+          return BookOpen;
       }
     case "topic_lesson":
-      return { type: "action", kind: "subject" };
+      return SpellCheck2;
     default:
-      return { type: "lucide", Icon: BookOpen };
+      return BookOpen;
   }
 }
 
@@ -92,13 +79,13 @@ function ContinueActivityRow({
   labels: Parameters<typeof resolveContinueActivityDisplay>[1];
 }) {
   const display = resolveContinueActivityDisplay(activity, labels);
-  const icon = continueActivityIcon(activity);
+  const Icon = continueActivityIcon(activity);
 
   return (
-    <li>
+    <li className="notification-list-item">
       <Link
         href={activity.href}
-        className="group flex min-w-0 items-center gap-3 rounded-xl px-1 py-1.5 transition-colors hover:bg-(--glass-btn) focus-visible:bg-(--glass-btn) focus-visible:outline-none"
+        className="quick-continue-row-link group flex min-w-0 items-center gap-3 rounded-xl px-1 py-1.5 hover:bg-(--glass-btn) focus-visible:bg-(--glass-btn) focus-visible:outline-none"
         aria-label={`${goLabel}: ${display.title}`}
         onClick={(event) => {
           if (navigatePanelHref(activity.href)) {
@@ -107,19 +94,13 @@ function ContinueActivityRow({
         }}
       >
         <span
-          className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-(--glass-btn) text-brand-800 shadow-[inset_0_0_0_1px_var(--glass-line)] transition-colors group-hover:bg-(--glass-btn-hover) group-hover:text-sky-700 dark:text-brand-100 dark:group-hover:text-sky-200"
+          className="quick-continue-row-icon inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-(--glass-btn) text-brand-800 shadow-[inset_0_0_0_1px_var(--glass-line)] group-hover:bg-(--glass-btn-hover) group-hover:text-sky-700 dark:text-brand-100 dark:group-hover:text-sky-200"
           aria-hidden
         >
-          {icon.type === "nav" ? (
-            <SidebarNavIcon kind={icon.kind} />
-          ) : icon.type === "action" ? (
-            <DashboardActionIcon kind={icon.kind} />
-          ) : (
-            <icon.Icon className="size-4" strokeWidth={1.75} />
-          )}
+          <Icon className="size-4" strokeWidth={1.75} />
         </span>
         <span className="min-w-0 flex-1">
-          <span className="block truncate text-sm font-semibold text-brand-950 dark:text-brand-100">
+          <span className="quick-continue-row-title block truncate text-sm font-semibold text-brand-950 group-hover:text-sky-700 dark:text-brand-100 dark:group-hover:text-sky-300">
             {display.title}
           </span>
           <span className="mt-0.5 block text-xs text-brand-600 dark:text-brand-400">
@@ -127,7 +108,7 @@ function ContinueActivityRow({
           </span>
         </span>
         <ChevronRight
-          className="size-4 shrink-0 text-brand-400 transition-transform group-hover:translate-x-0.5 group-hover:text-brand-800 dark:text-brand-400 dark:group-hover:text-brand-100"
+          className="quick-continue-chevron size-4 shrink-0 text-brand-400 group-hover:text-brand-800 dark:text-brand-400 dark:group-hover:text-brand-100"
           aria-hidden
         />
       </Link>
@@ -171,13 +152,15 @@ export function QuickContinueCard() {
 
   return (
     <article className="dashboard-panel dashboard-panel--stat">
-      <p className="dashboard-panel__label text-base">
-        <DashboardStatIcon kind="quickContinue" />
-        {t("quickContinue")}
-      </p>
+      <DashboardStatPanelHeader>
+        <p className="dashboard-panel__label text-base">
+          <Play className="size-5" aria-hidden />
+          {t("quickContinue")}
+        </p>
+      </DashboardStatPanelHeader>
 
       {activities.length > 0 ? (
-        <ul className="mt-2 flex flex-1 flex-col justify-center gap-0.5">
+        <ul className="mt-2 flex flex-1 flex-col justify-start gap-0.5">
           {activities.map((activity) => (
             <ContinueActivityRow
               key={`${activity.kind}:${activity.href}`}

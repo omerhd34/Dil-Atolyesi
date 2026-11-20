@@ -7,6 +7,7 @@ import {
   CEFR_LEVEL_FILTER_ACTIVE_CLASS,
   CEFR_LEVEL_FILTER_IDLE_CLASS,
   CEFR_LEVEL_ORDER,
+  FILTER_CHIP_BUTTON_CLASS,
   canAccessLevel,
 } from "@/lib/topicAccess";
 import { cn } from "@/lib/utils";
@@ -44,8 +45,7 @@ export function TopicLevelFilter({
             aria-selected={selected}
             onClick={() => onChange(level)}
             className={cn(
-              "inline-flex h-8 min-w-14 cursor-pointer items-center justify-center gap-1.5 rounded-lg border px-2.5 text-[0.8rem] font-medium transition-colors",
-              "focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none",
+              FILTER_CHIP_BUTTON_CLASS,
               selected
                 ? CEFR_LEVEL_FILTER_ACTIVE_CLASS[level]
                 : CEFR_LEVEL_FILTER_IDLE_CLASS[level],

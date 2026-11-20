@@ -7,7 +7,6 @@ type DashboardStatPanelHeaderProps = {
   className?: string;
 };
 
-/** İstatistik kartlarında başlık yüksekliğini eşitlemek için (çubuk hizası). */
 export function DashboardStatPanelHeader({
   children,
   trailing,
@@ -16,7 +15,7 @@ export function DashboardStatPanelHeader({
   return (
     <div
       className={cn(
-        "flex h-9 items-center justify-between gap-3",
+        "flex h-9 shrink-0 items-center justify-between gap-3",
         className,
       )}
     >

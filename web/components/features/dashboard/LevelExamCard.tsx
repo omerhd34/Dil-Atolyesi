@@ -1,8 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Check, Lock } from "lucide-react";
-import { DashboardActionIcon } from "@/components/features/dashboard/DashboardActionIcon";
+import { Check, GraduationCap, Lock } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -46,7 +45,7 @@ export function LevelExamCard({
             variant="outline"
             className="gap-1 border-transparent bg-red-500/20 text-red-900 uppercase dark:bg-red-400/20 dark:text-red-200"
           >
-            <DashboardActionIcon kind="exam" className="size-3" />
+            <GraduationCap className="size-3" aria-hidden />
             {t("examLabel")}
           </Badge>
           {passed ? (
@@ -89,7 +88,7 @@ export function LevelExamCard({
       <CardFooter>
         {locked ? (
           <Button type="button" size="sm" disabled className="w-full">
-            <DashboardActionIcon kind="exam" />
+            <GraduationCap aria-hidden />
             {t("examCta")}
           </Button>
         ) : (
@@ -102,7 +101,7 @@ export function LevelExamCard({
               t("examRetakeCta")
             ) : (
               <>
-                <DashboardActionIcon kind="exam" />
+                <GraduationCap aria-hidden />
                 {t("examCta")}
               </>
             )}

@@ -1,12 +1,19 @@
 import type { LucideIcon } from "lucide-react";
 import {
+  BookA,
+  BookOpen,
   CalendarDays,
+  ChartColumnIncreasing,
   CircleCheck,
   ClipboardList,
+  Headphones,
+  Home,
   Library,
   ListOrdered,
+  Mic,
+  PenLine,
+  SpellCheck2,
 } from "lucide-react";
-import type { SidebarNavIconKind } from "@/components/layout/app/SidebarNavIcon";
 
 export type AppNavTooltipKey = `${AppNavLabelKey}Tooltip`;
 
@@ -30,17 +37,11 @@ export type AppNavLabelKey =
   | "exercises"
   | "progress";
 
-export type AppNavLink =
-  | {
-      href: string;
-      labelKey: AppNavLabelKey;
-      iconKind: SidebarNavIconKind;
-    }
-  | {
-      href: string;
-      labelKey: AppNavLabelKey;
-      Icon: LucideIcon;
-    };
+export type AppNavLink = {
+  href: string;
+  labelKey: AppNavLabelKey;
+  Icon: LucideIcon;
+};
 
 export const vocabularySubNav = [
   {
@@ -70,41 +71,42 @@ export const vocabularySubNav = [
 }[];
 
 export const appNavLinks: AppNavLink[] = [
-  { href: "/panel", labelKey: "home", iconKind: "home" },
+  { href: "/panel", labelKey: "home", Icon: Home },
   { href: "/panel#general", labelKey: "overview", Icon: ClipboardList },
   {
     href: "/panel#grammer",
     labelKey: "topics",
-    iconKind: "grammar",
+    Icon: SpellCheck2,
   },
   {
     href: "/panel#vocabulary",
     labelKey: "vocabulary",
-    iconKind: "vocabulary",
+    Icon: BookA,
   },
   {
     href: "/panel#reading",
     labelKey: "reading",
-    iconKind: "reading",
+    Icon: BookOpen,
   },
   {
     href: "/panel#listening",
     labelKey: "listening",
-    iconKind: "listening",
+    Icon: Headphones,
   },
   {
     href: "/panel#writing",
     labelKey: "writing",
-    iconKind: "writing",
+    Icon: PenLine,
   },
   {
     href: "/panel#speaking",
     labelKey: "speaking",
-    iconKind: "speaking",
+    Icon: Mic,
   },
+
   {
     href: "/panel#progress",
     labelKey: "progress",
-    iconKind: "progress",
+    Icon: ChartColumnIncreasing,
   },
 ];

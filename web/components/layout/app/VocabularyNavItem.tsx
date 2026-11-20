@@ -2,11 +2,11 @@
 
 import type { MouseEvent } from "react";
 import { useTranslations } from "next-intl";
+import { BookA } from "lucide-react";
 import {
   appNavTooltipKey,
   vocabularySubNav,
 } from "@/components/layout/app/appNavLinks";
-import { SidebarNavIcon } from "@/components/layout/app/SidebarNavIcon";
 import { Link, usePathname } from "@/i18n/navigation";
 import { usePanelHash } from "@/hooks/usePanelHash";
 import {
@@ -16,12 +16,10 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
+import { sidebarNavButtonClassName } from "@/components/layout/app/sidebarNavButton";
 import { cn } from "@/lib/utils";
 
 const PARENT_HREF = "/panel#vocabulary";
-
-const menuButtonClassName =
-  "h-auto rounded-[13px] px-2.5 py-2 text-base font-medium text-sidebar-foreground/65 hover:bg-sidebar-accent hover:text-sidebar-foreground data-active:bg-sidebar-accent data-active:text-sidebar-foreground";
 
 type VocabularyNavItemProps = {
   onNavigate: (event: MouseEvent<HTMLElement>, href: string) => void;
@@ -57,11 +55,11 @@ export function VocabularyNavItem({ onNavigate }: VocabularyNavItemProps) {
       <SidebarMenuButton
         isActive={sectionActive}
         tooltip={parentTooltip}
-        className={menuButtonClassName}
+        className={sidebarNavButtonClassName}
         render={<Link href={PARENT_HREF} />}
         onClick={(event) => onNavigate(event, PARENT_HREF)}
       >
-        <SidebarNavIcon kind="vocabulary" />
+        <BookA className="size-4" strokeWidth={1.75} aria-hidden />
         <span>{parentLabel}</span>
       </SidebarMenuButton>
 

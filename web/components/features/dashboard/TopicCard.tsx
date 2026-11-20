@@ -1,8 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Lock } from "lucide-react";
-import { DashboardActionIcon } from "@/components/features/dashboard/DashboardActionIcon";
+import { BookOpen, ClipboardCheck, Lock, PencilLine } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -98,15 +97,15 @@ export function TopicCard({ topic, index, locked = false }: TopicCardProps) {
           {locked ? (
             <>
               <Button type="button" variant="outline" size="sm" disabled>
-                <DashboardActionIcon kind="subject" />
+                <BookOpen className="text-current" aria-hidden />
                 {t("lesson")}
               </Button>
               <Button type="button" variant="outline" size="sm" disabled>
-                <DashboardActionIcon kind="exercises" />
+                <PencilLine className="text-current" aria-hidden />
                 {t("exercises")}
               </Button>
               <Button type="button" size="sm" disabled>
-                <DashboardActionIcon kind="quiz" />
+                <ClipboardCheck className="text-current" aria-hidden />
                 {t("topicExam")}
               </Button>
             </>
@@ -117,7 +116,7 @@ export function TopicCard({ topic, index, locked = false }: TopicCardProps) {
                 variant="outline"
                 size="sm"
               >
-                <DashboardActionIcon kind="subject" />
+                <BookOpen className="text-current" aria-hidden />
                 {t("lesson")}
               </ButtonLink>
               <ButtonLink
@@ -125,11 +124,11 @@ export function TopicCard({ topic, index, locked = false }: TopicCardProps) {
                 variant="outline"
                 size="sm"
               >
-                <DashboardActionIcon kind="exercises" />
+                <PencilLine className="text-current" aria-hidden />
                 {t("exercises")}
               </ButtonLink>
               <ButtonLink href={`/panel/grammer/${topic.id}/exam`} size="sm">
-                <DashboardActionIcon kind="quiz" />
+                <ClipboardCheck className="text-current" aria-hidden />
                 {t("topicExam")}
               </ButtonLink>
             </>

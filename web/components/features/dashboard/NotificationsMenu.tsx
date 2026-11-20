@@ -12,10 +12,7 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
-import { ChevronRight } from "lucide-react";
-import { MarkAllReadIcon } from "@/components/ui/MarkAllReadIcon";
-import { TrashIcon } from "@/components/ui/TrashIcon";
-import { SidebarNavIcon } from "@/components/layout/app/SidebarNavIcon";
+import { Bell, CheckCheck, ChevronRight, Trash2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { SidebarMenuButton, useSidebar } from "@/components/ui/sidebar";
@@ -26,16 +23,22 @@ import type {
   AppNotification,
   AppNotificationType,
 } from "@/lib/notificationsStorage";
+import { sidebarNavButtonClassName } from "@/components/layout/app/sidebarNavButton";
 import { cn } from "@/lib/utils";
 
 type NotificationFilter = "all" | AppNotificationType;
 
-const sidebarNotificationsButtonClassName =
-  "h-auto cursor-pointer rounded-[13px] px-2.5 py-2 text-base font-medium text-sidebar-foreground/65 hover:bg-sidebar-accent hover:text-sidebar-foreground data-active:bg-sidebar-accent data-active:text-sidebar-foreground";
-
 const PANEL_WIDTH = 352;
 const PANEL_GAP = 25;
 const VIEWPORT_MARGIN = 16;
+
+const notificationPanelButtonClassName =
+  "cursor-pointer rounded-md outline-none focus-visible:ring-2 focus-visible:ring-ring/50";
+
+const notificationPanelTabClassName = cn(
+  notificationPanelButtonClassName,
+  "notification-filter-tab inline-flex shrink-0 items-center gap-1.5 border-b-2 px-2.5 py-2 text-xs font-medium transition-none rounded-t-lg",
+);
 
 function isSameLocalDay(left: Date, right: Date): boolean {
   return (
@@ -232,6 +235,8 @@ export function NotificationsMenu({
     },
   ];
 
+  const isCompletelyEmpty = notifications.length === 0;
+
   function typeLabel(type: AppNotificationType): string {
     return type === "quiz_ready"
       ? t("notificationsTypeQuiz")
@@ -282,69 +287,83 @@ export function NotificationsMenu({
         "fixed z-1000 flex flex-col overflow-hidden rounded-2xl border border-border text-foreground shadow-2xl",
       )}
     >
-      <div className="flex shrink-0 items-center justify-between gap-3 border-b border-border px-4 py-3">
-        <div className="flex w-full items-center justify-between gap-3">
-          {unreadCount > 0 ? (
+      {!isCompletelyEmpty ? (
+        <div className="flex shrink-0 items-center justify-between gap-3 border-b border-border px-4 py-3">
+          <div className="flex w-full items-center justify-between gap-3">
+            {unreadCount > 0 ? (
+              <button
+                type="button"
+                className={cn(
+                  notificationPanelButtonClassName,
+                  "inline-flex gap-1 px-1 py-0.5 text-xs font-medium text-brand-600 hover:text-sky-700 dark:text-brand-400 dark:hover:text-sky-300",
+                )}
+                onClick={markAllRead}
+              >
+                <CheckCheck className="size-3.5" aria-hidden />
+                {t("notificationsMarkAllRead")}
+              </button>
+            ) : null}
             <button
               type="button"
-              className="inline-flex gap-1 cursor-pointer text-xs font-medium text-brand-600 transition-colors hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100"
-              onClick={markAllRead}
-            >
-              <MarkAllReadIcon />
-              {t("notificationsMarkAllRead")}
-            </button>
-          ) : null}
-          {notifications.length > 0 ? (
-            <button
-              type="button"
-              className="ml-auto inline-flex cursor-pointer items-center gap-1 text-xs font-medium text-brand-600 transition-colors hover:text-destructive dark:text-brand-400 dark:hover:text-red-300"
+              className={cn(
+                notificationPanelButtonClassName,
+                "ml-auto inline-flex items-center gap-1 px-1 py-0.5 text-xs font-medium text-brand-600 hover:text-destructive dark:text-brand-400 dark:hover:text-red-300",
+              )}
               onClick={dismissAll}
             >
               {t("notificationsDismissAll")}
-              <TrashIcon className="size-3.5" />
+              <Trash2 className="size-3.5" aria-hidden />
             </button>
-          ) : null}
+          </div>
         </div>
-      </div>
+      ) : null}
+
+      {!isCompletelyEmpty ? (
+        <div
+          className="flex shrink-0 gap-1 overflow-x-auto border-b border-border px-2"
+          role="tablist"
+          aria-label={t("notifications")}
+        >
+          {filters.map((item) => {
+            const active = filter === item.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                data-btn-motion="off"
+                className={cn(
+                  notificationPanelTabClassName,
+                  active
+                    ? "border-sky-600 bg-sky-500/15 font-semibold text-sky-950 dark:border-sky-400 dark:bg-sky-500/22 dark:text-sky-50"
+                    : "border-transparent text-brand-600/90 hover:bg-muted/40 hover:text-brand-800 dark:text-brand-400/90 dark:hover:bg-white/5 dark:hover:text-brand-100",
+                )}
+                onClick={() => setFilter(item.id)}
+              >
+                {item.label}
+                <span
+                  className={cn(
+                    "inline-flex min-w-5 items-center justify-center rounded-full border px-1.5 py-0.5 text-[0.65rem] font-semibold transition-none",
+                    active
+                      ? "border-sky-700/50 bg-sky-600 text-white dark:border-sky-300/60 dark:bg-sky-400 dark:text-sky-950"
+                      : "border-border bg-muted/80 text-brand-600 dark:border-white/10 dark:bg-white/5 dark:text-brand-400",
+                  )}
+                >
+                  {item.count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
 
       <div
-        className="flex shrink-0 gap-1 overflow-x-auto border-b border-border px-2"
-        role="tablist"
-        aria-label={t("notifications")}
+        className={cn(
+          "min-h-0 overflow-y-auto p-2",
+          isCompletelyEmpty ? "space-y-0" : "max-h-80 space-y-3",
+        )}
       >
-        {filters.map((item) => {
-          const active = filter === item.id;
-          return (
-            <button
-              key={item.id}
-              type="button"
-              role="tab"
-              aria-selected={active}
-              className={cn(
-                "inline-flex shrink-0 cursor-pointer items-center gap-1.5 border-b-2 px-2.5 py-2.5 text-xs font-medium transition-colors",
-                active
-                  ? "border-brand-950 text-brand-950 dark:border-brand-100 dark:text-brand-100"
-                  : "border-transparent text-brand-600 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
-              )}
-              onClick={() => setFilter(item.id)}
-            >
-              {item.label}
-              <span
-                className={cn(
-                  "inline-flex min-w-5 items-center justify-center rounded-full border px-1.5 py-0.5 text-[0.65rem] font-semibold",
-                  active
-                    ? "border-brand-950/25 bg-brand-950/8 text-brand-800 dark:border-white/30 dark:bg-white/10 dark:text-brand-100"
-                    : "border-border bg-muted text-brand-600 dark:bg-white/5 dark:text-brand-400",
-                )}
-              >
-                {item.count}
-              </span>
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="max-h-80 min-h-0 space-y-3 overflow-y-auto p-2">
         {showFeatured && featured ? (
           <NotificationFeaturedAlert
             item={featured}
@@ -357,7 +376,12 @@ export function NotificationsMenu({
         ) : null}
 
         {filtered.length === 0 && !showFeatured ? (
-          <p className="px-2 py-8 text-center text-sm text-brand-600 dark:text-brand-400">
+          <p
+            className={cn(
+              "px-2 text-center text-sm text-brand-600 dark:text-brand-400",
+              isCompletelyEmpty ? "py-4" : "py-8",
+            )}
+          >
             {t("notificationsEmpty")}
           </p>
         ) : (
@@ -371,11 +395,18 @@ export function NotificationsMenu({
       <div className="shrink-0 border-t border-border">
         <Link
           href="/panel/ayarlar#bildirimler"
+          data-btn-motion="off"
           onClick={closeMenu}
-          className="flex items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-brand-800 transition-colors hover:bg-muted/70 dark:text-brand-100 dark:hover:bg-white/5"
+          className={cn(
+            notificationPanelButtonClassName,
+            "notification-settings-link flex items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-brand-800 hover:bg-muted/70 dark:text-brand-100 dark:hover:bg-white/5",
+          )}
         >
           {t("notificationsSettings")}
-          <ChevronRight className="size-4 opacity-60" aria-hidden />
+          <ChevronRight
+            className="notification-settings-chevron size-4 opacity-60"
+            aria-hidden
+          />
         </Link>
       </div>
     </div>
@@ -386,13 +417,13 @@ export function NotificationsMenu({
       type="button"
       isActive={open}
       tooltip={isMobile ? undefined : t("notificationsTooltip")}
-      className={cn(sidebarNotificationsButtonClassName, triggerClassName)}
+      className={cn(sidebarNavButtonClassName, triggerClassName)}
       aria-label={t("notifications")}
       aria-expanded={open}
       aria-haspopup="dialog"
       onClick={toggleMenu}
     >
-      <SidebarNavIcon kind="notifications" />
+      <Bell className="size-4" strokeWidth={1.75} aria-hidden />
       <span>{t("notifications")}</span>
     </SidebarMenuButton>
   ) : (
@@ -407,7 +438,7 @@ export function NotificationsMenu({
       title={t("notifications")}
       onClick={toggleMenu}
     >
-      <SidebarNavIcon kind="notifications" className="size-5" />
+      <Bell className="size-5" strokeWidth={1.75} aria-hidden />
     </Button>
   );
 
@@ -421,7 +452,10 @@ export function NotificationsMenu({
           : "flex h-full flex-col items-center justify-center",
       )}
     >
-      <span className={cn("bar-badged", isSidebar && "is-nav flex w-full")}>
+      <span
+        className={cn("bar-badged", isSidebar && "is-nav flex w-full")}
+        {...(isSidebar ? { "data-nav-lift": "" } : {})}
+      >
         {notificationTrigger}
         {unreadCount > 0 ? (
           <>

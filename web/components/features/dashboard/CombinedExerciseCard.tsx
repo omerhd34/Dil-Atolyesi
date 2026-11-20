@@ -1,8 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Layers, Lock } from "lucide-react";
-import { DashboardActionIcon } from "@/components/features/dashboard/DashboardActionIcon";
+import { Layers, Lock, RefreshCw } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -76,7 +75,7 @@ export function CombinedExerciseCard({
       <CardFooter>
         {locked ? (
           <Button type="button" size="sm" disabled className="w-full">
-            <DashboardActionIcon kind="generalReview" />
+            <RefreshCw aria-hidden />
             {t("combinedExerciseCta")}
           </Button>
         ) : (
@@ -85,7 +84,7 @@ export function CombinedExerciseCard({
             size="sm"
             className="w-full"
           >
-            <DashboardActionIcon kind="generalReview" />
+            <RefreshCw aria-hidden />
             {t("combinedExerciseCta")}
           </ButtonLink>
         )}
