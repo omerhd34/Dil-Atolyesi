@@ -40,13 +40,13 @@ function NotificationRow({
         disabled={disabled}
         onClick={() => onCheckedChange(!checked)}
         className={cn(
-          "flex w-full cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-3 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40 disabled:cursor-not-allowed disabled:opacity-60",
+          "settings-tile-button interaction-motion group/settings-tile flex w-full cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-3 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40 disabled:cursor-not-allowed disabled:opacity-60",
           checked
             ? "border-sky-500/45 bg-sky-500/5 dark:border-sky-400/40 dark:bg-sky-400/10"
             : "border-border bg-background/80 hover:border-sky-500/45 hover:bg-sky-500/5 dark:bg-brand-950/40",
         )}
       >
-        <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200">
+        <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-700 transition-colors duration-950 ease-[cubic-bezier(0.33,0,0.2,1)] group-hover/settings-tile:text-sky-700 dark:bg-brand-900 dark:text-brand-200 dark:group-hover/settings-tile:text-sky-300">
           {icon}
         </span>
         <span className="min-w-0 flex-1 space-y-0.5">

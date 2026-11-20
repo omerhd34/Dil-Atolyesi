@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { Eye, EyeOff, KeyRound } from "lucide-react";
+import { Eye, EyeOff, KeyRound, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { SettingsSection } from "@/components/features/settings/SettingsSection";
@@ -37,7 +37,8 @@ export function ChangePasswordPanel() {
         type="button"
         tabIndex={-1}
         disabled={isLoading}
-        className="inline-flex size-8 cursor-pointer items-center justify-center rounded-md text-brand-500 transition-colors hover:bg-brand-100 hover:text-brand-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-800/20 disabled:pointer-events-none disabled:opacity-50 dark:text-brand-400 dark:hover:bg-brand-800 dark:hover:text-brand-100 dark:focus-visible:ring-brand-400/20"
+        data-btn-motion="off"
+        className="vocabulary-speak-button inline-flex size-8 cursor-pointer items-center justify-center rounded-md text-brand-500 hover:bg-brand-100 hover:text-brand-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-800/20 disabled:pointer-events-none disabled:opacity-50 dark:text-brand-400 dark:hover:bg-brand-800 dark:hover:text-brand-100 dark:focus-visible:ring-brand-400/20"
         aria-label={show ? tAuth("hidePassword") : tAuth("showPassword")}
         onClick={onToggle}
       >
@@ -182,6 +183,11 @@ export function ChangePasswordPanel() {
         ) : null}
 
         <Button type="submit" disabled={isLoading} className="w-full sm:w-auto">
+          {isLoading ? (
+            <Loader2 className="size-4 animate-spin text-current" aria-hidden />
+          ) : (
+            <KeyRound className="size-4 text-current" aria-hidden />
+          )}
           {isLoading
             ? t("passwordChangeSubmitting")
             : t("passwordChangeSubmit")}

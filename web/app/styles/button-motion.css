@@ -36,6 +36,13 @@
     transition: none;
   }
 
+  .settings-tile-button svg {
+    transform: none;
+    transition-property: color, opacity;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
   :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
       :disabled
     ):not([aria-disabled="true"]):not([data-btn-motion="off"]) {
@@ -89,7 +96,9 @@
     .vocabulary-speak-button:hover svg,
     .vocabulary-speak-button:active svg,
     .word-jump-nav-control:hover svg,
-    .word-jump-nav-control:active svg {
+    .word-jump-nav-control:active svg,
+    .settings-tile-button:hover svg,
+    .settings-tile-button:active svg {
       transform: none;
       opacity: 1;
     }
@@ -237,5 +246,37 @@
     .panel-motion-card--icons-static:active svg {
       transform: none;
     }
+  }
+
+  @keyframes phone-country-menu-enter {
+    from {
+      opacity: 0;
+      transform: translateY(-8px) scale(0.98);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .phone-country-menu {
+    transform-origin: top center;
+    animation: phone-country-menu-enter 0.95s cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .phone-country-menu {
+      animation: none;
+    }
+  }
+
+  .phone-country-menu-trigger svg:not(.phone-country-chevron) {
+    transform: none;
+    transition: none;
+  }
+
+  .phone-country-chevron {
+    transition: transform 0.95s cubic-bezier(0.33, 0, 0.2, 1);
   }
 }

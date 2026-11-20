@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { ImagePlus, Trash2, UserRound } from "lucide-react";
+import { ImagePlus, Loader2, Save, Trash2, UserRound } from "lucide-react";
 import { ProfileAvatar } from "@/components/features/profile/ProfileAvatar";
 import { PhoneField } from "@/components/features/settings/PhoneField";
 import { SettingsSection } from "@/components/features/settings/SettingsSection";
@@ -320,6 +320,11 @@ export function ProfileSetting() {
           disabled={isSaving}
           className="h-10 w-full sm:w-auto"
         >
+          {isSaving ? (
+            <Loader2 className="size-4 animate-spin text-current" aria-hidden />
+          ) : (
+            <Save className="size-4 text-current" aria-hidden />
+          )}
           {isSaving ? t("profileUpdateSubmitting") : t("profileUpdateSubmit")}
         </Button>
       </form>

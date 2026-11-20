@@ -1,3 +1,5 @@
+export const instant = false;
+
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SettingsView } from "@/components/features/settings/SettingsView";
 

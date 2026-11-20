@@ -74,9 +74,9 @@ export function ProgressResetPanel() {
                 setError(false);
                 setPendingScope(scope);
               }}
-              className="flex h-full w-full cursor-pointer items-center gap-2.5 rounded-xl border border-border bg-background/80 px-3 py-2.5 text-left transition-colors hover:border-sky-500/45 hover:bg-sky-500/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-brand-950/40"
+              className="settings-tile-button interaction-motion group/settings-tile flex h-full w-full cursor-pointer items-center gap-2.5 rounded-xl border border-border bg-background/80 px-3 py-2.5 text-left hover:border-sky-500/45 hover:bg-sky-500/5 hover:text-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-brand-950/40 dark:hover:text-sky-300"
             >
-              <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-700 dark:bg-brand-900 dark:text-brand-200">
+              <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-700 transition-colors duration-[950ms] ease-[cubic-bezier(0.33,0,0.2,1)] group-hover/settings-tile:text-sky-700 dark:bg-brand-900 dark:text-brand-200 dark:group-hover/settings-tile:text-sky-300">
                 <RotateCcw className="size-3.5" aria-hidden />
               </span>
               <span className="min-w-0 truncate text-sm font-medium text-brand-950 dark:text-brand-100">

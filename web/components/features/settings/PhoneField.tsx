@@ -187,7 +187,7 @@ export function PhoneField({
             role="listbox"
             aria-label={t("profilePhoneCountryCode")}
             style={menuStyle}
-            className="glass-panel overflow-hidden rounded-xl"
+            className="phone-country-menu glass-panel overflow-hidden rounded-xl"
           >
             <div className="border-b border-(--glass-line) p-2">
               <div className="relative">
@@ -228,8 +228,9 @@ export function PhoneField({
                               type="button"
                               role="option"
                               aria-selected={isSelected}
+                              data-btn-motion="off"
                               className={cn(
-                                "flex w-full cursor-pointer items-center gap-2 rounded-lg px-2.5 py-2 text-left text-sm transition-colors",
+                                "vocabulary-speak-button flex w-full cursor-pointer items-center gap-2 rounded-lg px-2.5 py-2 text-left text-sm",
                                 isSelected
                                   ? "bg-sky-600 text-white dark:bg-sky-500 dark:text-sky-950"
                                   : "text-brand-950 hover:bg-sky-500/10 dark:text-brand-100 dark:hover:bg-sky-400/15",
@@ -294,7 +295,8 @@ export function PhoneField({
             aria-expanded={open}
             aria-controls={listboxId}
             aria-invalid={Boolean(error) || undefined}
-            className="glass-input-control inline-flex w-22 cursor-pointer items-center justify-between gap-1 px-2.5"
+            data-btn-motion="off"
+            className="phone-country-menu-trigger vocabulary-speak-button glass-input-control inline-flex w-22 cursor-pointer items-center justify-between gap-1 px-2.5"
             onClick={() => {
               setOpen((value) => !value);
             }}
@@ -305,7 +307,7 @@ export function PhoneField({
             </span>
             <ChevronDown
               className={cn(
-                "size-4 shrink-0 text-brand-600 transition-transform dark:text-brand-400",
+                "phone-country-chevron size-4 shrink-0 text-brand-600 dark:text-brand-400",
                 open && "rotate-180",
               )}
               aria-hidden
