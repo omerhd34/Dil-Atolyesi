@@ -14,6 +14,7 @@ export const vocabularyStatusQuerySchema = z.object({
 export const vocabularyQuizTypeSchema = z.enum([
   "multiple_choice",
   "fill_blank",
+  "true_false",
   "listening",
 ]);
 

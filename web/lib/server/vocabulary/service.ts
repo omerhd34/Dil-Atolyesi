@@ -309,6 +309,7 @@ export async function getStudiedTodayVocabularyWordsForUser(
       studyStartedAt: true,
       passedMultipleChoice: true,
       passedFillBlank: true,
+      passedTrueFalse: true,
       passedListening: true,
     },
   });
@@ -342,6 +343,7 @@ export async function getStudiedTodayVocabularyWordsForUser(
     if (
       !row.passedMultipleChoice &&
       !row.passedFillBlank &&
+      !row.passedTrueFalse &&
       !row.passedListening
     ) {
       cancellableCount += 1;
@@ -454,6 +456,7 @@ export async function setVocabularyWordStatus(
       studyStartedAt: null,
       passedMultipleChoice: false,
       passedFillBlank: false,
+      passedTrueFalse: false,
       passedListening: false,
     },
     update: {
@@ -534,6 +537,7 @@ export async function cancelVocabularyStudyTimer(
       studyStartedAt: { gt: threshold },
       passedMultipleChoice: false,
       passedFillBlank: false,
+      passedTrueFalse: false,
       passedListening: false,
     },
     data: {

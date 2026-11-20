@@ -8,12 +8,15 @@ import {
   ALLOW_EARLY_VOCABULARY_QUIZ,
   VOCABULARY_QUIZ_DUE_MS,
 } from "@/lib/vocabularyLimits";
+import type { VocabularyQuizType } from "@/lib/vocabulary/generateQuizQuestions";
+import { vocabularyQuizTrueFalseAnswer } from "@/lib/vocabulary/vocabularyQuizTrueFalse";
 
-export type VocabularyQuizType = "multiple_choice" | "fill_blank" | "listening";
+export type { VocabularyQuizType };
 
 export type VocabularyQuizTypeProgress = {
   multiple_choice: boolean;
   fill_blank: boolean;
+  true_false: boolean;
   listening: boolean;
 };
 
@@ -78,10 +81,17 @@ function normalizeEnglishAnswer(value: string): string {
 }
 
 export function isVocabularyQuizAnswerCorrect(
-  word: Pick<VocabularyWord, "en" | "tr">,
+  word: Pick<VocabularyWord, "id" | "en" | "tr">,
   answer: string,
+  quizType: VocabularyQuizType,
 ): boolean {
   const normalized = normalizeComparable(answer);
+
+  if (quizType === "true_false") {
+    const expected = vocabularyQuizTrueFalseAnswer(word.id);
+    return normalized === normalizeComparable(expected);
+  }
+
   const normalizedEn = normalizeEnglishAnswer(answer);
 
   return (
@@ -94,11 +104,13 @@ export function isVocabularyQuizAnswerCorrect(
 function toPassed(row: {
   passedMultipleChoice?: boolean | null;
   passedFillBlank?: boolean | null;
+  passedTrueFalse?: boolean | null;
   passedListening?: boolean | null;
 }): VocabularyQuizTypeProgress {
   return {
     multiple_choice: Boolean(row.passedMultipleChoice),
     fill_blank: Boolean(row.passedFillBlank),
+    true_false: Boolean(row.passedTrueFalse),
     listening: Boolean(row.passedListening),
   };
 }
@@ -110,6 +122,7 @@ function countRemainingByType(
     multiple_choice: words.filter((word) => !word.passed.multiple_choice)
       .length,
     fill_blank: words.filter((word) => !word.passed.fill_blank).length,
+    true_false: words.filter((word) => !word.passed.true_false).length,
     listening: words.filter((word) => !word.passed.listening).length,
   };
 }
@@ -133,6 +146,7 @@ export async function getVocabularyQuizForUser(
       studyStartedAt: true,
       passedMultipleChoice: true,
       passedFillBlank: true,
+      passedTrueFalse: true,
       passedListening: true,
     },
   });
@@ -223,6 +237,7 @@ export async function answerVocabularyQuizQuestion(
       studyStartedAt: true,
       passedMultipleChoice: true,
       passedFillBlank: true,
+      passedTrueFalse: true,
       passedListening: true,
     },
   });
@@ -243,7 +258,7 @@ export async function answerVocabularyQuizQuestion(
     throw new AppError("Word is not due for quiz yet", 400, "NOT_DUE");
   }
 
-  const correct = isVocabularyQuizAnswerCorrect(found.word, answer);
+  const correct = isVocabularyQuizAnswerCorrect(found.word, answer, quizType);
   let passed = toPassed(existing);
   let newlyKnown = false;
   let status: "KNOWN" | "LEARNING" = "LEARNING";
@@ -263,6 +278,7 @@ export async function answerVocabularyQuizQuestion(
         status,
         passedMultipleChoice: passed.multiple_choice,
         passedFillBlank: passed.fill_blank,
+        passedTrueFalse: passed.true_false,
         passedListening: passed.listening,
       },
     });
@@ -272,7 +288,10 @@ export async function answerVocabularyQuizQuestion(
 
   return {
     correct,
-    expected: found.word.en,
+    expected:
+      quizType === "true_false"
+        ? vocabularyQuizTrueFalseAnswer(wordId)
+        : found.word.en,
     status,
     dueCount: quiz.dueCount,
     newlyKnown,
@@ -311,6 +330,7 @@ export async function completeVocabularyQuiz(
       statusSetAt: now,
       passedMultipleChoice: true,
       passedFillBlank: true,
+      passedTrueFalse: true,
       passedListening: true,
     },
   });

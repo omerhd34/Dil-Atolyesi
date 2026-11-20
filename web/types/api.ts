@@ -108,6 +108,7 @@ export type StudiedTodayVocabularyWordsPayload = {
 export type VocabularyQuizTypeProgress = {
   multiple_choice: boolean;
   fill_blank: boolean;
+  true_false: boolean;
   listening: boolean;
 };
 
@@ -133,6 +134,7 @@ export type VocabularyQuizPayload = {
   typeCounts: {
     multiple_choice: number;
     fill_blank: number;
+    true_false: number;
     listening: number;
   };
 };
@@ -140,7 +142,7 @@ export type VocabularyQuizPayload = {
 export type VocabularyQuizAnswerBody = {
   wordId: string;
   answer: string;
-  quizType: "multiple_choice" | "fill_blank" | "listening";
+  quizType: "multiple_choice" | "fill_blank" | "true_false" | "listening";
 };
 
 export type StartVocabularyStudyTimerPayload = {
