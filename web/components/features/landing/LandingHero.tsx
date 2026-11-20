@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { HiAcademicCap } from "react-icons/hi2";
+import { GraduationCap } from "lucide-react";
 import { HeroLevelPath } from "@/components/features/landing/HeroLevelPath";
 import { Badge } from "@/components/ui/Badge";
 import { buttonVariants } from "@/components/ui/Button";
@@ -43,7 +43,7 @@ export function LandingHero() {
             href="#egitim-sistemi"
             className={buttonVariants({ variant: "outline", size: "lg" })}
           >
-            <HiAcademicCap aria-hidden />
+            <GraduationCap className="size-4" strokeWidth={1.75} aria-hidden />
             {t("ctaSystem")}
           </a>
         </div>

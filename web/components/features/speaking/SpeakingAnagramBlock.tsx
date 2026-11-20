@@ -29,7 +29,6 @@ type SpeakingAnagramBlockProps = {
   onReset?: () => void;
 };
 
-/** İngilizce harf; CSS `uppercase` Türkçe yerelde i → İ yapar. */
 function displayAnagramLetter(letter: string): string {
   return letter.toLocaleUpperCase("en-US");
 }

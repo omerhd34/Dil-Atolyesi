@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { HiRectangleStack } from "react-icons/hi2";
+import { Layers } from "lucide-react";
 import { Link, useRouter } from "@/i18n/navigation";
 import { ProfileAvatar } from "@/components/features/profile/ProfileAvatar";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -56,7 +56,11 @@ export function Navbar() {
                 href={item.href}
                 className="inline-flex items-center gap-1.5 text-base font-medium text-brand-600 transition-colors hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-100"
               >
-                <Icon className="size-4 shrink-0" aria-hidden />
+                <Icon
+                  className="size-4 shrink-0"
+                  strokeWidth={1.75}
+                  aria-hidden
+                />
                 {t(item.labelKey)}
               </Link>
             );
@@ -72,7 +76,7 @@ export function Navbar() {
             />
           ) : (
             <ButtonLink href="/panelLogin" size="lg">
-              <HiRectangleStack aria-hidden />
+              <Layers className="size-4" strokeWidth={1.75} aria-hidden />
               {t("myPanel")}
             </ButtonLink>
           )}
@@ -143,7 +147,7 @@ export function Navbar() {
                 className="w-full"
                 onClick={() => setOpen(false)}
               >
-                <HiRectangleStack aria-hidden />
+                <Layers className="size-4" strokeWidth={1.75} aria-hidden />
                 {t("myPanel")}
               </ButtonLink>
             )}

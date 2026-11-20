@@ -1,20 +1,15 @@
-import type { IconType } from "react-icons";
-import {
-  HiCube,
-  HiEnvelope,
-  HiQuestionMarkCircle,
-  HiTrophy,
-} from "react-icons/hi2";
+import type { LucideIcon } from "lucide-react";
+import { Box, CircleHelp, Mail, Trophy } from "lucide-react";
 
 export const navLinks = [
-  { href: "/kazanimlar", labelKey: "benefits", Icon: HiTrophy },
-  { href: "/paketler", labelKey: "packages", Icon: HiCube },
-  { href: "/sss", labelKey: "sss", Icon: HiQuestionMarkCircle },
-  { href: "/iletisim", labelKey: "contact", Icon: HiEnvelope },
+  { href: "/kazanimlar", labelKey: "benefits", Icon: Trophy },
+  { href: "/paketler", labelKey: "packages", Icon: Box },
+  { href: "/sss", labelKey: "sss", Icon: CircleHelp },
+  { href: "/iletisim", labelKey: "contact", Icon: Mail },
 ] as const satisfies ReadonlyArray<{
   href: string;
   labelKey: string;
-  Icon: IconType;
+  Icon: LucideIcon;
 }>;
 
 export type NavLinkLabelKey = (typeof navLinks)[number]["labelKey"];

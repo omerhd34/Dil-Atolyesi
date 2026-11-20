@@ -57,7 +57,7 @@ export function InstantMultipleChoiceOptions({
             disabled={revealed}
             onClick={() => onSelect(optionIndex)}
             className={cn(
-              "flex w-full min-h-12 cursor-pointer items-center gap-3 rounded-full border px-3 py-2.5 text-left text-sm transition-colors duration-200",
+              "flex w-full min-h-12 cursor-pointer items-center gap-3 rounded-full border px-3 py-2.5 text-left text-sm",
               "disabled:cursor-default",
               showCorrect &&
                 "reading-quiz-pop border-emerald-500/50 bg-emerald-500/10 text-emerald-900 motion-safe:animate-[reading-option-pop_0.45s_ease-out] dark:text-emerald-100",
@@ -77,7 +77,7 @@ export function InstantMultipleChoiceOptions({
           >
             <span
               className={cn(
-                "inline-flex size-7 shrink-0 items-center justify-center rounded-full text-xs font-semibold",
+                "interaction-motion inline-flex size-7 shrink-0 items-center justify-center rounded-full text-xs font-semibold",
                 showCorrect && "bg-emerald-600 text-white",
                 showWrong && "bg-red-800 text-white",
                 (showCorrect || showWrong) &&

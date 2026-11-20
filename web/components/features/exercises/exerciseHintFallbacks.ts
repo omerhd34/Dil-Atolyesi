@@ -10,6 +10,7 @@ export type ExerciseHintFallbackKey =
   | "topicListening"
   | "topicCrossword"
   | "vocabularyQuizChoice"
+  | "vocabularyQuizTrueFalse"
   | "vocabularyQuizListening"
   | "vocabularyQuizFill"
   | "topicExam"
@@ -30,6 +31,8 @@ export function vocabularyQuizHintKey(type: string): ExerciseHintFallbackKey {
       return "vocabularyQuizListening";
     case "fill_blank":
       return "vocabularyQuizFill";
+    case "true_false":
+      return "vocabularyQuizTrueFalse";
     default:
       return "vocabularyQuizChoice";
   }

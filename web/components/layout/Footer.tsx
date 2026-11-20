@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import { HiChatBubbleLeftRight, HiEnvelope } from "react-icons/hi2";
+import { Mail, MessagesSquare } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
 import { navLinks } from "@/components/layout/navLinks";
@@ -47,7 +47,11 @@ export function Footer() {
                       href={item.href}
                       className="inline-flex items-center gap-2 text-sm text-brand-600 transition-colors hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-100"
                     >
-                      <Icon className="size-4 shrink-0" aria-hidden />
+                      <Icon
+                        className="size-4 shrink-0"
+                        strokeWidth={1.75}
+                        aria-hidden
+                      />
                       {tNav(item.labelKey)}
                     </Link>
                   </li>
@@ -66,8 +70,9 @@ export function Footer() {
                   href="/iletisim"
                   className="inline-flex items-center gap-2 text-sm text-brand-600 transition-colors hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-100"
                 >
-                  <HiChatBubbleLeftRight
+                  <MessagesSquare
                     className="size-4 shrink-0"
+                    strokeWidth={1.75}
                     aria-hidden
                   />
                   {t("contactLink")}
@@ -78,7 +83,11 @@ export function Footer() {
                   href={`mailto:${t("email")}`}
                   className="inline-flex items-center gap-2 text-sm text-brand-600 transition-colors hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-100"
                 >
-                  <HiEnvelope className="size-4 shrink-0" aria-hidden />
+                  <Mail
+                    className="size-4 shrink-0"
+                    strokeWidth={1.75}
+                    aria-hidden
+                  />
                   {t("email")}
                 </a>
               </li>
