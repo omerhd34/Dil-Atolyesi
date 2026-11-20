@@ -17,6 +17,10 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 import { sidebarNavButtonClassName } from "@/components/layout/app/sidebarNavButton";
+import {
+  isVocabularyNavSectionActive,
+  isVocabularySubNavItemActive,
+} from "@/lib/panelNav";
 import { cn } from "@/lib/utils";
 
 const PARENT_HREF = "/panel#vocabulary";
@@ -25,28 +29,11 @@ type VocabularyNavItemProps = {
   onNavigate: (event: MouseEvent<HTMLElement>, href: string) => void;
 };
 
-function isSubNavActive(pathname: string, hash: string, href: string): boolean {
-  const hashIndex = href.indexOf("#");
-  const path = hashIndex >= 0 ? href.slice(0, hashIndex) : href;
-  const itemHash = hashIndex >= 0 ? href.slice(hashIndex) : "";
-  const onPanel = pathname === "/panel" || pathname === "/";
-
-  if (itemHash) {
-    return onPanel && hash === itemHash;
-  }
-
-  return pathname === path || pathname.startsWith(`${path}/`);
-}
-
 export function VocabularyNavItem({ onNavigate }: VocabularyNavItemProps) {
   const t = useTranslations("AppNav");
   const pathname = usePathname();
   const panelHash = usePanelHash();
-  const sectionActive =
-    pathname.startsWith("/panel/vocabulary/") ||
-    vocabularySubNav.some((item) =>
-      isSubNavActive(pathname, panelHash, item.href),
-    );
+  const sectionActive = isVocabularyNavSectionActive(pathname, panelHash);
   const parentLabel = t("vocabulary");
   const parentTooltip = t(appNavTooltipKey("vocabulary"));
 
@@ -66,7 +53,11 @@ export function VocabularyNavItem({ onNavigate }: VocabularyNavItemProps) {
       {sectionActive ? (
         <SidebarMenuSub className="mx-3.5 mt-1 mb-1 border-l-0 px-2.5 translate-x-0 gap-0.5">
           {vocabularySubNav.map((item) => {
-            const itemActive = isSubNavActive(pathname, panelHash, item.href);
+            const itemActive = isVocabularySubNavItemActive(
+              pathname,
+              panelHash,
+              item.href,
+            );
 
             return (
               <SidebarMenuSubItem key={item.href}>

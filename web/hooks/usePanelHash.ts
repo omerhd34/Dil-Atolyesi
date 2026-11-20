@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "@/i18n/navigation";
+import { isPanelDashboardPath, resolvePanelDashboardUrl } from "@/lib/panelNav";
 
 const PANEL_HASH_EVENT = "pylmor:panel-hash";
 
@@ -12,10 +14,14 @@ export function readPanelHash(): string {
 export function navigatePanelSection(section: string): void {
   if (typeof window === "undefined") return;
 
-  const nextHash = section ? `#${section}` : "";
-  const { pathname, search } = window.location;
-  const nextUrl = `${pathname}${search}${nextHash}`;
+  const { pathname } = window.location;
+  const nextUrl = resolvePanelDashboardUrl(section);
   const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+  if (!isPanelDashboardPath(pathname) && !pathname.endsWith("/panel")) {
+    window.location.assign(nextUrl);
+    return;
+  }
 
   if (currentUrl !== nextUrl) {
     window.history.pushState(null, "", nextUrl);
@@ -38,7 +44,7 @@ export function navigatePanelHref(href: string): boolean {
   const path = href.slice(0, hashIndex) || "/panel";
   const section = href.slice(hashIndex + 1);
   const { pathname } = window.location;
-  const onPanel = pathname === "/panel" || pathname === "/";
+  const onPanel = isPanelDashboardPath(pathname) || pathname.endsWith("/panel");
 
   if (path === "/panel" && onPanel) {
     navigatePanelSection(section);
@@ -49,6 +55,7 @@ export function navigatePanelHref(href: string): boolean {
 }
 
 export function usePanelHash(): string {
+  const pathname = usePathname();
   const [hash, setHash] = useState("");
 
   useEffect(() => {
@@ -64,7 +71,7 @@ export function usePanelHash(): string {
       window.removeEventListener("popstate", sync);
       window.removeEventListener(PANEL_HASH_EVENT, sync);
     };
-  }, []);
+  }, [pathname]);
 
   return hash;
 }

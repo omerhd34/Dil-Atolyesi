@@ -58,8 +58,7 @@
 
 .sidebar-nav-button[data-active],
 .sidebar-nav-button[data-active]:not(:hover) {
-  background: transparent;
-  box-shadow: none;
+  background: var(--glass-btn-hover);
 }
 
 .sidebar-nav-button:hover:not(:disabled):not([aria-disabled="true"]),
@@ -68,6 +67,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .sidebar-nav-button[data-active]:not(:disabled):not([aria-disabled="true"]),
   .sidebar-nav-button:hover:not(:disabled):not([aria-disabled="true"]),
   .sidebar-nav-button:focus-visible:not(:disabled):not([aria-disabled="true"]) {
     filter: brightness(1.03) saturate(1.06);
@@ -77,6 +77,8 @@
       0 4px 12px -4px rgb(17 21 34 / 14%);
   }
 
+  .dark
+    .sidebar-nav-button[data-active]:not(:disabled):not([aria-disabled="true"]),
   .dark .sidebar-nav-button:hover:not(:disabled):not([aria-disabled="true"]),
   .dark
     .sidebar-nav-button:focus-visible:not(:disabled):not(

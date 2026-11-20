@@ -17,6 +17,7 @@ import { ProfileAvatar } from "@/components/features/profile/ProfileAvatar";
 import { Link, usePathname } from "@/i18n/navigation";
 import { navigatePanelSection, usePanelHash } from "@/hooks/usePanelHash";
 import { useProfileAvatarUpload } from "@/hooks/useProfileAvatarUpload";
+import { isPanelDashboardPath, isPanelNavLinkActive } from "@/lib/panelNav";
 import { cn } from "@/lib/utils";
 import type { AuthUser } from "@/store/api";
 import { useAuthStore } from "@/store/authStore";
@@ -98,31 +99,27 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
   const { pickFile, isUpdatingAvatar } = useProfileAvatarUpload();
 
   function isActive(href: string): boolean {
-    const path = hrefPath(href);
-    const hash = hrefHash(href);
-    const onPanel = pathname === "/panel" || pathname === "/";
-
-    if (hash) {
-      return onPanel && panelHash === hash;
-    }
-
-    if (path === "/panel") {
-      return onPanel && panelHash === "";
-    }
-
-    return pathname === path || pathname.startsWith(`${path}/`);
+    return isPanelNavLinkActive(pathname, panelHash, href);
   }
 
   function handleNavClick(event: MouseEvent<HTMLElement>, href: string) {
     const path = hrefPath(href);
     const hash = hrefHash(href);
-    const onPanel = pathname === "/panel" || pathname === "/";
+    const onPanel = isPanelDashboardPath(pathname);
 
     setOpenMobile(false);
 
-    if (path === "/panel" && onPanel) {
+    if (path === "/panel") {
+      if (onPanel) {
+        event.preventDefault();
+        navigatePanelSection(hash.replace(/^#/, ""));
+        return;
+      }
+      if (hash) {
+        return;
+      }
       event.preventDefault();
-      navigatePanelSection(hash.replace(/^#/, ""));
+      navigatePanelSection("");
     }
   }
 
