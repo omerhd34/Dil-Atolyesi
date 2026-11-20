@@ -185,6 +185,7 @@ model UserVocabularyWord {
   studyStartedAt       DateTime?
   passedMultipleChoice Boolean              @default(false)
   passedFillBlank      Boolean              @default(false)
+  passedTrueFalse      Boolean              @default(false)
   passedListening      Boolean              @default(false)
   createdAt            DateTime             @default(now())
   updatedAt            DateTime             @updatedAt
