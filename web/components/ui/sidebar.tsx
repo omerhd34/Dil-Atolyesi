@@ -251,7 +251,7 @@ function Sidebar({
 }
 
 const sidebarTriggerClassName =
-  "size-8 shrink-0 rounded-none border-0 bg-transparent! p-0 text-sidebar-foreground/80 shadow-none hover:bg-transparent! hover:text-sky-700 focus-visible:text-sky-700 dark:hover:text-sky-300 dark:focus-visible:text-sky-300 aria-expanded:bg-transparent! focus-visible:ring-2 [&_svg]:text-current";
+  "size-8 shrink-0 rounded-none border-0 bg-transparent! p-0 text-sidebar-foreground/80 shadow-none transition-transform duration-200 ease-out hover:scale-[1.14] hover:bg-transparent! hover:text-sky-700 focus-visible:scale-[1.14] focus-visible:text-sky-700 dark:hover:text-sky-300 dark:focus-visible:text-sky-300 motion-reduce:transition-none motion-reduce:hover:scale-100 motion-reduce:focus-visible:scale-100 aria-expanded:bg-transparent! focus-visible:ring-2 [&_svg]:origin-center [&_svg]:text-current";
 
 function SidebarTrigger({
   className,

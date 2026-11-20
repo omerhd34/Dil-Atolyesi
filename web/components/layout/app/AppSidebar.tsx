@@ -10,7 +10,7 @@ import {
   type AppNavLink,
 } from "@/components/layout/app/appNavLinks";
 import { sidebarNavButtonClassName } from "@/components/layout/app/sidebarNavButton";
-import { BrandMark } from "@/components/brand/BrandMark";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { VocabularyNavItem } from "@/components/layout/app/VocabularyNavItem";
 import { NotificationsMenu } from "@/components/features/dashboard/NotificationsMenu";
 import { ProfileAvatar } from "@/components/features/profile/ProfileAvatar";
@@ -55,9 +55,6 @@ type AppSidebarProps = {
 const railIconButtonClassName =
   "group-data-[collapsible=icon]:h-[42px] group-data-[collapsible=icon]:w-full group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:rounded-[13px] group-data-[collapsible=icon]:px-0";
 
-const brandMarkTileClassName =
-  "inline-flex size-9 shrink-0 items-center justify-center rounded-[12px] bg-(--glass-2) text-sidebar-foreground shadow-[inset_0_0_0_1px_var(--glass-line)]";
-
 const sidebarBrandLabelClassName =
   "font-display text-xl font-semibold tracking-tight transition-colors duration-[950ms] ease-[cubic-bezier(0.33,0,0.2,1)] group-hover/brand:text-sky-700 dark:group-hover/brand:text-sky-300";
 
@@ -71,12 +68,14 @@ export function AppSidebarMobileBar() {
     <div className="glass-panel sticky top-0 z-30 mx-3 mt-3 flex h-14 items-center justify-between rounded-2xl px-4 text-sidebar-foreground lg:hidden">
       <Link
         href="/panel"
-        className="group/brand inline-flex max-w-fit items-center gap-2.5 self-start text-sidebar-foreground"
+        aria-label={tNav("brand")}
+        className="group/brand inline-flex max-w-fit self-start overflow-visible text-sidebar-foreground"
       >
-        <span className={brandMarkTileClassName} aria-hidden>
-          <BrandMark className="size-5" />
-        </span>
-        <span className={sidebarBrandLabelClassName}>{tNav("brand")}</span>
+        <BrandLogo
+          label={tNav("brand")}
+          iconClassName="size-9"
+          labelClassName={sidebarBrandLabelClassName}
+        />
       </Link>
       <SidebarTrigger
         aria-label={openMobile ? tNav("closeMenu") : tNav("openMenu")}
@@ -154,26 +153,17 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
         <div className="flex items-center justify-between gap-3 group-data-[collapsible=icon]:flex-col group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:gap-2">
           <Link
             href="/panel"
-            className="group/brand inline-flex max-w-fit min-w-0 items-center gap-2.5 self-start text-sidebar-foreground"
+            className="group/brand inline-flex max-w-fit min-w-0 self-start overflow-visible text-sidebar-foreground"
             aria-label={tNav("brand")}
           >
-            <span
-              className={cn(
-                brandMarkTileClassName,
-                "group-data-[collapsible=icon]:size-10",
-              )}
-              aria-hidden
-            >
-              <BrandMark className="size-5 group-data-[collapsible=icon]:size-[1.35rem]" />
-            </span>
-            <span
-              className={cn(
+            <BrandLogo
+              label={tNav("brand")}
+              iconClassName="size-9 group-data-[collapsible=icon]:size-10"
+              labelClassName={cn(
                 sidebarBrandLabelClassName,
                 "group-data-[collapsible=icon]:hidden",
               )}
-            >
-              {tNav("brand")}
-            </span>
+            />
           </Link>
           <SidebarTrigger
             aria-label={collapsed ? t("expandSidebar") : t("collapseSidebar")}
