@@ -63,7 +63,7 @@ export function StartStudyTimerButton({
           void handleStart();
         }}
       >
-        <Timer className="size-3.5" aria-hidden />
+        <Timer className="size-3.5 text-current" aria-hidden />
         {t("startStudyTimer")}
       </Button>
       {hasError ? (

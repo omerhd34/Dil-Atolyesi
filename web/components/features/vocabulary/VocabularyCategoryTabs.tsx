@@ -32,10 +32,10 @@ export function VocabularyCategoryTabs({
           type="button"
           onClick={() => onChange(tab.id)}
           className={cn(
-            "cursor-pointer border-b-2 px-3 py-2 text-sm font-medium transition-colors",
+            "interaction-motion cursor-pointer px-3 py-2 text-base",
             activeTab === tab.id
-              ? "border-sky-500 text-brand-950 dark:text-brand-100"
-              : "border-transparent text-brand-500 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
+              ? "font-semibold text-sky-600 dark:text-sky-400"
+              : "font-medium text-brand-500 hover:text-sky-700 dark:text-brand-400 dark:hover:text-sky-300",
           )}
           aria-current={activeTab === tab.id ? "page" : undefined}
         >

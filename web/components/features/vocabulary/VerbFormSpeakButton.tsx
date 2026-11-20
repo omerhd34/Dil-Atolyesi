@@ -25,17 +25,19 @@ export function VerbFormSpeakButton({
   return (
     <button
       type="button"
+      data-btn-motion="off"
       onClick={() => speakText(spoken, "en-US")}
       className={cn(
-        "inline-flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-lg",
-        "bg-sky-500/10 text-sky-700 transition-colors hover:bg-sky-500/20",
+        "vocabulary-speak-button inline-flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-lg border-0 p-0 leading-none",
+        "bg-sky-500/10 text-sky-700 hover:bg-sky-500/20",
         "dark:bg-sky-400/15 dark:text-sky-200 dark:hover:bg-sky-400/25",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/40",
+        "[&_svg]:block [&_svg]:shrink-0 [&_svg]:text-current",
         className,
       )}
       aria-label={t("verbsSpeakForm", { form: spoken })}
     >
-      <Volume2 className="size-4" aria-hidden />
+      <Volume2 className="size-4 text-current" aria-hidden />
     </button>
   );
 }

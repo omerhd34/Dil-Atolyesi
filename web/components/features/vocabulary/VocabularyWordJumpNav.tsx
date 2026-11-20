@@ -71,7 +71,7 @@ export function VocabularyWordJumpNav({
   return (
     <nav
       className={cn(
-        "relative rounded-2xl border border-brand-200/70 bg-white/80 py-2.5 dark:border-brand-800/70 dark:bg-brand-950/40",
+        "relative rounded-2xl border border-brand-200/70 bg-white/80 py-2 dark:border-brand-800/70 dark:bg-brand-950/40",
         className,
       )}
       aria-label={t("wordJumpNavAria")}
@@ -83,25 +83,26 @@ export function VocabularyWordJumpNav({
           disabled={!canScrollLeft}
           aria-label={t("wordJumpNavPrev")}
           className={cn(
-            "inline-flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-brand-200/80 bg-white text-brand-700 shadow-sm transition-[opacity,background-color,color] dark:border-brand-700 dark:bg-brand-900 dark:text-brand-200",
-            "hover:bg-sky-500/10 hover:text-sky-800 dark:hover:bg-sky-400/15 dark:hover:text-sky-100",
+            "word-jump-nav-control inline-flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-brand-200/80 bg-white text-brand-700 shadow-sm dark:border-brand-700 dark:bg-brand-900 dark:text-brand-200",
+            "hover:bg-sky-500/10 hover:text-sky-700 dark:hover:bg-sky-400/15 dark:hover:text-sky-300",
             "disabled:cursor-default disabled:opacity-35 disabled:hover:bg-white dark:disabled:hover:bg-brand-900",
+            "[&_svg]:text-current",
           )}
         >
-          <ChevronLeft className="size-4" aria-hidden />
+          <ChevronLeft className="size-4 text-current" aria-hidden />
         </button>
 
-        <div className="relative min-w-0 flex-1 overflow-hidden">
+        <div className="relative min-w-0 flex-1 overflow-hidden min-h-11">
           <div
             className={cn(
-              "pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-linear-to-r from-white to-transparent transition-opacity dark:from-brand-950/95",
+              "interaction-motion pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-linear-to-r from-white to-transparent dark:from-brand-950/95",
               canScrollLeft ? "opacity-100" : "opacity-0",
             )}
             aria-hidden
           />
           <div
             className={cn(
-              "pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-linear-to-l from-white to-transparent transition-opacity dark:from-brand-950/95",
+              "interaction-motion pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-linear-to-l from-white to-transparent dark:from-brand-950/95",
               canScrollRight ? "opacity-100" : "opacity-0",
             )}
             aria-hidden
@@ -109,14 +110,14 @@ export function VocabularyWordJumpNav({
 
           <ul
             ref={scrollerRef}
-            className="flex snap-x snap-mandatory flex-nowrap gap-1.5 overflow-x-auto scroll-smooth px-1 py-0.5 scrollbar-none [&::-webkit-scrollbar]:hidden"
+            className="flex min-h-11 snap-x snap-mandatory flex-nowrap items-center gap-1.5 overflow-x-auto overflow-y-visible scroll-smooth px-1 py-0 scrollbar-none [&::-webkit-scrollbar]:hidden"
           >
             {words.map((word, index) => (
               <li key={word.id} className="shrink-0 snap-start">
                 <button
                   type="button"
                   onClick={() => scrollToVocabularyWord(word.id)}
-                  className="inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-brand-100 px-2.5 py-1.5 text-xs font-medium whitespace-nowrap text-brand-800 transition-colors hover:bg-sky-500/15 hover:text-sky-800 dark:bg-brand-900 dark:text-brand-200 dark:hover:bg-sky-400/20 dark:hover:text-sky-100"
+                  className="word-jump-nav-chip inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-brand-100 px-2.5 py-2 text-xs font-medium whitespace-nowrap text-brand-800 hover:bg-sky-500/15 hover:text-sky-700 dark:bg-brand-900 dark:text-brand-200 dark:hover:bg-sky-400/20 dark:hover:text-sky-300"
                   aria-controls={getVocabularyWordElementId(word.id)}
                 >
                   <span className="tabular-nums text-brand-500 dark:text-brand-400">
@@ -135,12 +136,13 @@ export function VocabularyWordJumpNav({
           disabled={!canScrollRight}
           aria-label={t("wordJumpNavNext")}
           className={cn(
-            "inline-flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-brand-200/80 bg-white text-brand-700 shadow-sm transition-[opacity,background-color,color] dark:border-brand-700 dark:bg-brand-900 dark:text-brand-200",
-            "hover:bg-sky-500/10 hover:text-sky-800 dark:hover:bg-sky-400/15 dark:hover:text-sky-100",
+            "word-jump-nav-control inline-flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full border border-brand-200/80 bg-white text-brand-700 shadow-sm dark:border-brand-700 dark:bg-brand-900 dark:text-brand-200",
+            "hover:bg-sky-500/10 hover:text-sky-700 dark:hover:bg-sky-400/15 dark:hover:text-sky-300",
             "disabled:cursor-default disabled:opacity-35 disabled:hover:bg-white dark:disabled:hover:bg-brand-900",
+            "[&_svg]:text-current",
           )}
         >
-          <ChevronRight className="size-4" aria-hidden />
+          <ChevronRight className="size-4 text-current" aria-hidden />
         </button>
       </div>
     </nav>

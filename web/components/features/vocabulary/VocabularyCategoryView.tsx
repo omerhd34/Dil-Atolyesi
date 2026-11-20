@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import type { VocabularyWord } from "@/data/vocabulary";
@@ -22,6 +22,7 @@ import {
 import { generateVocabularyExercises } from "@/lib/vocabulary/generateExercises";
 import { vocabularyExerciseProgressKey } from "@/lib/vocabularySectionProgress";
 import { useKnownVocabularyWordsQuery } from "@/store/api";
+import { useVocabularyUiStore } from "@/store/vocabularyUiStore";
 
 type VocabularyCategoryViewProps = {
   categoryId: string;
@@ -62,6 +63,14 @@ export function VocabularyCategoryView({
   );
 
   const level = getVocabularyCategoryLevel(categoryId);
+  const setSelectedLevel = useVocabularyUiStore((s) => s.setSelectedLevel);
+
+  useEffect(() => {
+    if (level) {
+      setSelectedLevel(level);
+    }
+  }, [level, setSelectedLevel]);
+
   const levelUnlocked = level
     ? canAccessVocabularyLevel(level, knownWordIds)
     : false;
@@ -76,11 +85,7 @@ export function VocabularyCategoryView({
   );
 
   if (isLoading && !knownWords) {
-    return (
-      <p className="page-subtitle mt-0">
-        {t("statusLoading")}
-      </p>
-    );
+    return <p className="page-subtitle mt-0">{t("statusLoading")}</p>;
   }
 
   if (isError && !knownWords) {

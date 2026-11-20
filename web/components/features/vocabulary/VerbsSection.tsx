@@ -26,6 +26,11 @@ import {
   type VerbTableSortKey,
 } from "@/lib/vocabulary/sortVerbs";
 import { vocabularyExerciseProgressKey } from "@/lib/vocabularySectionProgress";
+import {
+  CEFR_LEVEL_FILTER_ACTIVE_CLASS,
+  FILTER_CHIP_BUTTON_CLASS,
+  VERB_LIST_FILTER_INACTIVE_CLASS,
+} from "@/lib/topicAccess";
 import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
@@ -57,7 +62,9 @@ export function VerbsSection() {
     return {
       multiple_choice: crypto.randomUUID(),
       fill_blank: crypto.randomUUID(),
+      matching: crypto.randomUUID(),
       listening: crypto.randomUUID(),
+      true_false: crypto.randomUUID(),
       crossword: crypto.randomUUID(),
     };
   }
@@ -176,25 +183,30 @@ export function VerbsSection() {
       {tab === "words" ? (
         <div className="space-y-4">
           <nav
+            role="tablist"
             aria-label={t("verbsFilterAria")}
             className="flex flex-wrap gap-2"
           >
-            {filterOptions.map((option) => (
-              <button
-                key={option.id}
-                type="button"
-                onClick={() => handleFilterChange(option.id)}
-                className={cn(
-                  "cursor-pointer rounded-full border px-3 py-1.5 text-sm font-medium transition-colors",
-                  listFilter === option.id
-                    ? "border-sky-500 bg-sky-500/10 text-sky-700 dark:text-sky-200"
-                    : "border-border text-muted-foreground hover:border-sky-400/60 hover:text-foreground",
-                )}
-                aria-current={listFilter === option.id ? "true" : undefined}
-              >
-                {option.label}
-              </button>
-            ))}
+            {filterOptions.map((option) => {
+              const active = listFilter === option.id;
+              return (
+                <button
+                  key={option.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => handleFilterChange(option.id)}
+                  className={cn(
+                    FILTER_CHIP_BUTTON_CLASS,
+                    active
+                      ? CEFR_LEVEL_FILTER_ACTIVE_CLASS.A1
+                      : VERB_LIST_FILTER_INACTIVE_CLASS,
+                  )}
+                >
+                  {option.label}
+                </button>
+              );
+            })}
           </nav>
 
           <div
@@ -205,13 +217,19 @@ export function VerbsSection() {
             )}
           >
             <p
-              className={cn(listFilter !== "irregular" && "invisible")}
+              className={cn(
+                "interaction-motion",
+                listFilter !== "irregular" && "pointer-events-none opacity-0",
+              )}
               aria-hidden={listFilter !== "irregular"}
             >
               {t("verbsIrregularHint")}
             </p>
             <p
-              className={cn(listFilter === "irregular" && "invisible")}
+              className={cn(
+                "interaction-motion",
+                listFilter === "irregular" && "pointer-events-none opacity-0",
+              )}
               aria-hidden={listFilter === "irregular"}
             >
               {t("verbsRegularHint")}
@@ -233,6 +251,9 @@ export function VerbsSection() {
           exercises={exercises}
           showHints={false}
           onExerciseSessionStart={refreshExerciseSet}
+          typeDescOverrides={{
+            matching: t("verbsFormMatchingDesc"),
+          }}
         />
       )}
     </section>

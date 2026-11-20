@@ -18,13 +18,13 @@ import { cn } from "@/lib/utils";
 
 function VerbFormCell({ form, muted }: { form: string; muted?: boolean }) {
   return (
-    <div className="flex items-center justify-between gap-2">
+    <div className="flex items-center gap-2">
+      <VerbFormSpeakButton form={form} />
       <span
         className={cn("min-w-0", muted ? "text-muted-foreground" : undefined)}
       >
         {form}
       </span>
-      <VerbFormSpeakButton form={form} />
     </div>
   );
 }
@@ -39,8 +39,8 @@ type VerbsTableProps = {
 };
 
 const headerButtonClassName = cn(
-  "inline-flex cursor-pointer items-center gap-1.5 rounded-md px-1 py-0.5 text-left font-semibold",
-  "text-foreground transition-colors hover:text-sky-700 dark:hover:text-sky-200",
+  "interaction-motion inline-flex cursor-pointer items-center gap-1.5 rounded-md px-1 py-0.5 text-left font-semibold",
+  "text-foreground hover:text-sky-700 dark:hover:text-sky-200",
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/40",
 );
 
@@ -175,7 +175,7 @@ export function VerbsTable({
           {verbs.map((verb) => (
             <tr
               key={verb.id}
-              className="border-b border-border/80 last:border-0"
+              className="interaction-motion border-b border-border/80 last:border-0 hover:bg-muted/35"
             >
               <td className="px-4 py-2.5 font-medium text-brand-950 dark:text-brand-50">
                 <VerbFormCell form={verb.infinitive} />

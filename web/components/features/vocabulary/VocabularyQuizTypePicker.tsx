@@ -1,7 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { CircleHelp, Headphones, TextCursorInput } from "lucide-react";
+import {
+  CircleHelp,
+  Headphones,
+  TextCursorInput,
+  ToggleRight,
+} from "lucide-react";
 import type { VocabularyQuizType } from "@/lib/vocabulary/generateQuizQuestions";
 import { cn } from "@/lib/utils";
 
@@ -15,10 +20,12 @@ const TYPE_ITEMS: {
   titleKey:
     | "quizTypeMultipleChoice"
     | "quizTypeFillBlank"
+    | "quizTypeTrueFalse"
     | "quizTypeListening";
   descKey:
     | "quizTypeMultipleChoiceDesc"
     | "quizTypeFillBlankDesc"
+    | "quizTypeTrueFalseDesc"
     | "quizTypeListeningDesc";
   Icon: typeof CircleHelp;
 }[] = [
@@ -33,6 +40,12 @@ const TYPE_ITEMS: {
     titleKey: "quizTypeFillBlank",
     descKey: "quizTypeFillBlankDesc",
     Icon: TextCursorInput,
+  },
+  {
+    type: "true_false",
+    titleKey: "quizTypeTrueFalse",
+    descKey: "quizTypeTrueFalseDesc",
+    Icon: ToggleRight,
   },
   {
     type: "listening",
@@ -51,12 +64,8 @@ export function VocabularyQuizTypePicker({
   return (
     <div className="w-full space-y-4">
       <div className="space-y-1">
-        <h2 className="section-title">
-          {t("quizChooseTypeTitle")}
-        </h2>
-        <p className="page-subtitle mt-0">
-          {t("quizChooseTypeSubtitle")}
-        </p>
+        <h2 className="section-title">{t("quizChooseTypeTitle")}</h2>
+        <p className="page-subtitle mt-0">{t("quizChooseTypeSubtitle")}</p>
       </div>
 
       <ul

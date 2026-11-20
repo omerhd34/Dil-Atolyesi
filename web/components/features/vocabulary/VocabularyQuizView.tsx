@@ -51,13 +51,8 @@ export function VocabularyQuizView() {
   }, []);
 
   useEffect(() => {
-    if (index === 0) {
-      return;
-    }
-    if (question?.type === "listening" && question.speakText && !checked) {
-      speakText(question.speakText);
-    }
-  }, [question, checked, index]);
+    stopSpeaking();
+  }, [index, question?.id]);
 
   useEffect(() => {
     if (!wordKey || finished) {

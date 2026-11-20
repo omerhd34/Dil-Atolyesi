@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { ClipboardCheck } from "lucide-react";
+import { ClipboardCheck, Plus } from "lucide-react";
 import {
   StudiedTodayWords,
   type StudiedTodayListWord,
@@ -183,6 +183,7 @@ export function StudiedTodaySection() {
         <div className="rounded-2xl border border-dashed border-brand-300/80 px-4 py-8 text-center dark:border-brand-700">
           <p className="page-subtitle mt-0">{t("studiedTodayEmpty")}</p>
           <ButtonLink href="/panel#vocabulary" size="sm" className="mt-4">
+            <Plus className="size-3.5" aria-hidden />
             {t("studiedTodayAddWords")}
           </ButtonLink>
         </div>
