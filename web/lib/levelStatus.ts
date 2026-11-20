@@ -32,6 +32,22 @@ export type LevelStatus = {
   complete: boolean;
 };
 
+export const LEVEL_SKILL_KEYS = [
+  "grammar",
+  "vocabulary",
+  "reading",
+  "listening",
+  "writing",
+  "speaking",
+] as const;
+
+export type LevelSkillKey = (typeof LEVEL_SKILL_KEYS)[number];
+
+export type LevelSkillProgress = {
+  key: LevelSkillKey;
+  percent: number;
+};
+
 function averagePercents(values: number[]): number {
   if (values.length === 0) {
     return 0;
@@ -173,4 +189,16 @@ export function getLevelStatus(
     percent,
     complete: percent >= 100,
   };
+}
+
+export function getLevelSkillProgress(
+  level: CefrLevel,
+  passedExams: readonly CefrLevel[] = [],
+  knownWordIds: ReadonlySet<string> = new Set(),
+): LevelSkillProgress[] {
+  const percents = levelSkillPercents(level, passedExams, knownWordIds);
+  return LEVEL_SKILL_KEYS.map((key, index) => ({
+    key,
+    percent: percents[index] ?? 0,
+  }));
 }

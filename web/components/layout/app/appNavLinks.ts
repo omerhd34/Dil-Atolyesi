@@ -5,7 +5,7 @@ import {
   CalendarDays,
   ChartColumnIncreasing,
   CircleCheck,
-  ClipboardList,
+  CircleHelp,
   Headphones,
   Home,
   Languages,
@@ -25,7 +25,6 @@ export function appNavTooltipKey(labelKey: AppNavLabelKey): AppNavTooltipKey {
 
 export type AppNavLabelKey =
   | "home"
-  | "overview"
   | "topics"
   | "vocabulary"
   | "vocabularyStudiedToday"
@@ -39,7 +38,8 @@ export type AppNavLabelKey =
   | "speaking"
   | "reading"
   | "exercises"
-  | "progress";
+  | "progress"
+  | "help";
 
 export type AppNavLink = {
   href: string;
@@ -86,7 +86,6 @@ export const vocabularySubNav = [
 
 export const appNavLinks: AppNavLink[] = [
   { href: "/panel", labelKey: "home", Icon: Home },
-  { href: "/panel#general", labelKey: "overview", Icon: ClipboardList },
   {
     href: "/panel#grammer",
     labelKey: "topics",
@@ -122,5 +121,10 @@ export const appNavLinks: AppNavLink[] = [
     href: "/panel#progress",
     labelKey: "progress",
     Icon: ChartColumnIncreasing,
+  },
+  {
+    href: "/panel#help",
+    labelKey: "help",
+    Icon: CircleHelp,
   },
 ];

@@ -6,14 +6,19 @@ import { useLevelStatus } from "@/hooks/useLevelStatus";
 import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
 import { DashboardStatPanelHeader } from "@/components/features/dashboard/DashboardStatPanelHeader";
 import { DashboardStatProgressBar } from "@/components/features/dashboard/DashboardStatProgressBar";
+import { LevelStatusSkillBreakdown } from "@/components/features/dashboard/LevelStatusSkillBreakdown";
 import { cn } from "@/lib/utils";
 
-export function LevelStatusCard() {
+type LevelStatusCardProps = {
+  className?: string;
+};
+
+export function LevelStatusCard({ className }: LevelStatusCardProps = {}) {
   const t = useTranslations("Dashboard");
-  const { level, percent, complete } = useLevelStatus();
+  const { level, percent, complete, skills } = useLevelStatus();
 
   return (
-    <article className="dashboard-panel dashboard-panel--stat">
+    <article className={cn("dashboard-panel dashboard-panel--stat", className)}>
       <DashboardStatPanelHeader
         trailing={
           <span
@@ -44,6 +49,8 @@ export function LevelStatusCard() {
           ? t("levelStatusComplete", { level })
           : t("levelStatusHint", { level })}
       </p>
+
+      <LevelStatusSkillBreakdown skills={skills} />
     </article>
   );
 }

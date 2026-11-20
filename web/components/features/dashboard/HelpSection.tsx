@@ -15,8 +15,8 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { GeneralRuleItem } from "@/components/features/dashboard/GeneralRuleItem";
-import { GeneralStepCard } from "@/components/features/dashboard/GeneralStepCard";
+import { HelpRuleItem } from "@/components/features/dashboard/HelpRuleItem";
+import { HelpStepCard } from "@/components/features/dashboard/HelpStepCard";
 import {
   Card,
   CardContent,
@@ -66,7 +66,7 @@ const STEP_ICONS = {
   progress: TrendingUp,
 } as const;
 
-export function GeneralSection() {
+export function HelpSection() {
   const t = useTranslations("Dashboard");
 
   const messageValues = {
@@ -77,15 +77,15 @@ export function GeneralSection() {
 
   return (
     <section
-      id="general"
-      aria-labelledby="general-heading"
-      className="space-y-6"
+      id="help"
+      aria-labelledby="help-heading"
+      className="space-y-6 scroll-mt-6"
     >
       <div>
-        <h1 id="general-heading" className="page-title">
-          {t("generalTitle")}
+        <h1 id="help-heading" className="page-title">
+          {t("helpTitle")}
         </h1>
-        <p className="page-subtitle">{t("generalSubtitle")}</p>
+        <p className="page-subtitle">{t("helpSubtitle")}</p>
       </div>
 
       <div className="flex flex-col gap-6">
@@ -98,16 +98,16 @@ export function GeneralSection() {
               <ScrollText className="size-5" strokeWidth={1.75} />
             </span>
             <div className="min-w-0 space-y-1">
-              <CardTitle className="text-lg">{t("generalRulesTitle")}</CardTitle>
-              <CardDescription>{t("generalRulesSubtitle")}</CardDescription>
+              <CardTitle className="text-lg">{t("helpRulesTitle")}</CardTitle>
+              <CardDescription>{t("helpRulesSubtitle")}</CardDescription>
             </div>
           </CardHeader>
           <CardContent>
             <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
               {RULE_KEYS.map((key) => (
-                <GeneralRuleItem key={key} icon={RULE_ICONS[key]}>
-                  {t(`generalRules.${key}`, messageValues)}
-                </GeneralRuleItem>
+                <HelpRuleItem key={key} icon={RULE_ICONS[key]}>
+                  {t(`helpRules.${key}`, messageValues)}
+                </HelpRuleItem>
               ))}
             </ul>
           </CardContent>
@@ -122,19 +122,19 @@ export function GeneralSection() {
               <ListOrdered className="size-5" strokeWidth={1.75} />
             </span>
             <div className="min-w-0 space-y-1">
-              <CardTitle className="text-lg">{t("generalStepsTitle")}</CardTitle>
-              <CardDescription>{t("generalStepsSubtitle")}</CardDescription>
+              <CardTitle className="text-lg">{t("helpStepsTitle")}</CardTitle>
+              <CardDescription>{t("helpStepsSubtitle")}</CardDescription>
             </div>
           </CardHeader>
           <CardContent>
             <ol className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
               {STEP_KEYS.map((key, index) => (
-                <GeneralStepCard
+                <HelpStepCard
                   key={key}
                   index={index + 1}
                   icon={STEP_ICONS[key]}
-                  title={t(`generalSteps.${key}.title`)}
-                  body={t(`generalSteps.${key}.body`, messageValues)}
+                  title={t(`helpSteps.${key}.title`)}
+                  body={t(`helpSteps.${key}.body`, messageValues)}
                 />
               ))}
             </ol>

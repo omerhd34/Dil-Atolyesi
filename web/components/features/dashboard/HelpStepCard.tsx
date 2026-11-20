@@ -1,7 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type GeneralStepCardProps = {
+type HelpStepCardProps = {
   index: number;
   title: string;
   body: string;
@@ -9,13 +9,13 @@ type GeneralStepCardProps = {
   className?: string;
 };
 
-export function GeneralStepCard({
+export function HelpStepCard({
   index,
   title,
   body,
   icon: Icon,
   className,
-}: GeneralStepCardProps) {
+}: HelpStepCardProps) {
   const stepLabel = String(index).padStart(2, "0");
 
   return (

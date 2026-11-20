@@ -16,12 +16,12 @@ import {
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { DashboardStatPanelHeader } from "@/components/features/dashboard/DashboardStatPanelHeader";
-import { Button } from "@/components/ui/Button";
 import { useContinueActivities } from "@/hooks/useContinueActivity";
-import { navigatePanelHref, navigatePanelSection } from "@/hooks/usePanelHash";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { quickContinueActivitiesForDisplay } from "@/lib/quickContinueActivities";
+import { navigatePanelHref } from "@/hooks/usePanelHash";
 import { resolveContinueActivityDisplay } from "@/lib/resolveContinueActivity";
 import type { ContinueActivity } from "@/lib/continueActivityStorage";
+import { cn } from "@/lib/utils";
 
 function continueActivityIcon(activity: ContinueActivity): LucideIcon {
   switch (activity.kind) {
@@ -118,12 +118,15 @@ function ContinueActivityRow({
   );
 }
 
-export function QuickContinueCard() {
+type QuickContinueCardProps = {
+  className?: string;
+};
+
+export function QuickContinueCard({ className }: QuickContinueCardProps = {}) {
   const t = useTranslations("Dashboard");
   const tNav = useTranslations("AppNav");
-  const activities = useContinueActivities();
-  const pathname = usePathname();
-  const router = useRouter();
+  const storedActivities = useContinueActivities();
+  const activities = quickContinueActivitiesForDisplay(storedActivities);
 
   const labels = {
     vocabularyQuiz: t("quickContinueKindQuiz"),
@@ -154,7 +157,7 @@ export function QuickContinueCard() {
   };
 
   return (
-    <article className="dashboard-panel dashboard-panel--stat">
+    <article className={cn("dashboard-panel dashboard-panel--stat", className)}>
       <DashboardStatPanelHeader>
         <p className="dashboard-panel__label text-base">
           <Play className="size-5" aria-hidden />
@@ -162,41 +165,16 @@ export function QuickContinueCard() {
         </p>
       </DashboardStatPanelHeader>
 
-      {activities.length > 0 ? (
-        <ul className="mt-2 flex flex-1 flex-col justify-start gap-0.5">
-          {activities.map((activity) => (
-            <ContinueActivityRow
-              key={`${activity.kind}:${activity.href}`}
-              activity={activity}
-              goLabel={t("quickContinueGo")}
-              labels={labels}
-            />
-          ))}
-        </ul>
-      ) : (
-        <>
-          <p className="mt-3 text-sm text-brand-600 dark:text-brand-400">
-            {t("quickContinueEmpty")}
-          </p>
-          <div className="mt-auto pt-3">
-            <Button
-              type="button"
-              size="sm"
-              variant="outline"
-              onClick={() => {
-                const onPanel = pathname === "/panel" || pathname === "/";
-                if (onPanel) {
-                  navigatePanelSection("kelimeler");
-                  return;
-                }
-                router.push("/panel#vocabulary");
-              }}
-            >
-              {t("quickContinueExplore")}
-            </Button>
-          </div>
-        </>
-      )}
+      <ul className="mt-2 flex flex-1 flex-col justify-start gap-0.5">
+        {activities.map((activity, index) => (
+          <ContinueActivityRow
+            key={`${activity.kind}:${activity.href}:${activity.skill ?? index}`}
+            activity={activity}
+            goLabel={t("quickContinueGo")}
+            labels={labels}
+          />
+        ))}
+      </ul>
     </article>
   );
 }

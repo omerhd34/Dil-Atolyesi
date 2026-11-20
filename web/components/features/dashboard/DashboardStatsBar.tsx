@@ -13,16 +13,13 @@ import { useVocabularyUiStore } from "@/store/vocabularyUiStore";
 import { DashboardStatProgressBar } from "@/components/features/dashboard/DashboardStatProgressBar";
 import { LevelStatusCard } from "@/components/features/dashboard/LevelStatusCard";
 import { QuickContinueCard } from "@/components/features/dashboard/QuickContinueCard";
-import {
-  StartStudyTimerButton,
-  useStudyCycleOpen,
-} from "@/components/features/vocabulary/StartStudyTimerButton";
+import { StartStudyTimerButton } from "@/components/features/vocabulary/StartStudyTimerButton";
+import { WordTimerCardDetails } from "@/components/features/dashboard/WordTimerCardDetails";
 import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { navigatePanelSection } from "@/hooks/usePanelHash";
 import { useCountdown } from "@/hooks/useCountdown";
-import { formatDurationHms } from "@/lib/formatDuration";
 import {
   BYPASS_LEARN_WORD_LOCK,
   LEARN_WORD_PERIOD_LIMIT,
@@ -39,8 +36,6 @@ export function DashboardStatsBar() {
   const learnLimit =
     quota?.learnLimit ?? quota?.dailyLearnLimit ?? LEARN_WORD_PERIOD_LIMIT;
   const remainingMs = useCountdown(quota?.lockedUntil);
-  const { open: cycleOpen, ready: cycleKnown } = useStudyCycleOpen();
-  const startBlocked = cycleKnown && cycleOpen && pending > 0;
   const isLocked =
     !BYPASS_LEARN_WORD_LOCK && Boolean(quota?.lockedUntil) && remainingMs > 0;
   const quotaLabel = t("wordTimerQuota", {
@@ -52,12 +47,12 @@ export function DashboardStatsBar() {
   return (
     <section
       aria-label={t("statsAria")}
-      className="grid items-stretch gap-3 md:grid-cols-2 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]"
+      className="grid items-start gap-3 md:grid-cols-2 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]"
     >
-      <QuickContinueCard />
-      <LevelStatusCard />
+      <QuickContinueCard className="h-auto" />
+      <LevelStatusCard className="h-auto" />
 
-      <article className="dashboard-panel dashboard-panel--stat md:col-span-2 xl:col-span-1">
+      <article className="dashboard-panel dashboard-panel--stat h-auto md:col-span-2 xl:col-span-1">
         <DashboardStatPanelHeader
           trailing={
             <span
@@ -89,22 +84,17 @@ export function DashboardStatsBar() {
             </>
           }
         />
-        <div className="mt-2 space-y-1">
-          {isLocked ? (
-            <p className="font-mono text-xs font-semibold text-amber-800 tabular-nums dark:text-amber-200">
-              {t("wordTimerRemaining", {
-                time: formatDurationHms(remainingMs),
-              })}
-            </p>
-          ) : null}
-          {startBlocked ? (
-            <p className="text-xs text-brand-600 dark:text-brand-400">
-              {t("studyTimerBlockedShort")}
-            </p>
-          ) : null}
-        </div>
-        <div className="mt-auto flex flex-wrap items-center gap-2 pt-3">
-          <StartStudyTimerButton />
+        <WordTimerCardDetails />
+        <div className="flex flex-wrap items-center justify-between gap-2 pt-3">
+          <div className="flex flex-wrap items-center gap-2">
+            <StartStudyTimerButton />
+            {dueCount > 0 ? (
+              <ButtonLink href="/panel/vocabulary/exam" size="sm">
+                <ClipboardCheck className="size-3.5 text-current" aria-hidden />
+                {t("quizCardCta")}
+              </ButtonLink>
+            ) : null}
+          </div>
           <Button
             type="button"
             variant="outline"
@@ -121,12 +111,6 @@ export function DashboardStatsBar() {
             <BookOpen className="size-3.5 text-current" aria-hidden />
             {t("selectWord")}
           </Button>
-          {dueCount > 0 ? (
-            <ButtonLink href="/panel/vocabulary/exam" size="sm">
-              <ClipboardCheck className="size-3.5 text-current" aria-hidden />
-              {t("quizCardCta")}
-            </ButtonLink>
-          ) : null}
         </div>
       </article>
     </section>

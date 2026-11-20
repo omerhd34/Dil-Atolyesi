@@ -4,7 +4,12 @@ import { useEffect, useMemo, useState } from "react";
 import { EXERCISE_DRAFT_EVENT } from "@/lib/exerciseDraftStorage";
 import { LEVEL_EXAM_PROGRESS_EVENT } from "@/lib/levelExamProgressStorage";
 import { PASSED_LEVEL_EXAMS_CHANGED_EVENT } from "@/lib/levelExamStorage";
-import { getLevelStatus, type LevelStatus } from "@/lib/levelStatus";
+import {
+  getLevelSkillProgress,
+  getLevelStatus,
+  type LevelSkillProgress,
+  type LevelStatus,
+} from "@/lib/levelStatus";
 import { LISTENING_PROGRESS_EVENT } from "@/lib/listeningProgressStorage";
 import { READING_PROGRESS_EVENT } from "@/lib/readingProgressStorage";
 import { SPEAKING_PROGRESS_EVENT } from "@/lib/speakingProgressStorage";
@@ -15,26 +20,39 @@ import { VOCABULARY_ACTIVITY_EVENT } from "@/lib/vocabularyActivityStorage";
 import { usePassedLevelExams } from "@/hooks/usePassedLevelExams";
 import { useKnownVocabularyWordsQuery } from "@/store/api";
 
-export type { LevelStatus } from "@/lib/levelStatus";
+export type { LevelSkillProgress, LevelStatus } from "@/lib/levelStatus";
 export {
   computeLevelCompletionPercent,
+  getLevelSkillProgress,
   getLevelStatus,
 } from "@/lib/levelStatus";
 
-export function useLevelStatus(): LevelStatus {
+export type LevelStatusWithSkills = LevelStatus & {
+  skills: LevelSkillProgress[];
+};
+
+export function useLevelStatus(): LevelStatusWithSkills {
   const passedExams = usePassedLevelExams();
   const { data: knownWords } = useKnownVocabularyWordsQuery();
   const knownWordIds = useMemo(
     () => new Set((knownWords?.words ?? []).map((word) => word.id)),
     [knownWords],
   );
-  const [status, setStatus] = useState<LevelStatus>(() =>
-    getLevelStatus(passedExams, knownWordIds),
-  );
+  const [status, setStatus] = useState<LevelStatusWithSkills>(() => {
+    const base = getLevelStatus(passedExams, knownWordIds);
+    return {
+      ...base,
+      skills: getLevelSkillProgress(base.level, passedExams, knownWordIds),
+    };
+  });
 
   useEffect(() => {
     function refresh() {
-      setStatus(getLevelStatus(passedExams, knownWordIds));
+      const base = getLevelStatus(passedExams, knownWordIds);
+      setStatus({
+        ...base,
+        skills: getLevelSkillProgress(base.level, passedExams, knownWordIds),
+      });
     }
 
     refresh();

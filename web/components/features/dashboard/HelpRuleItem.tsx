@@ -1,17 +1,17 @@
 import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type GeneralRuleItemProps = {
+type HelpRuleItemProps = {
   icon: LucideIcon;
   children: string;
   className?: string;
 };
 
-export function GeneralRuleItem({
+export function HelpRuleItem({
   icon: Icon,
   children,
   className,
-}: GeneralRuleItemProps) {
+}: HelpRuleItemProps) {
   return (
     <li
       className={cn(
