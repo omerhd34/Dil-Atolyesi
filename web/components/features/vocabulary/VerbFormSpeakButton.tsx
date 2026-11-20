@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 type VerbFormSpeakButtonProps = {
   form: string;
   className?: string;
+  lang?: string;
 };
 
 function toSpokenForm(form: string): string {
@@ -18,6 +19,7 @@ function toSpokenForm(form: string): string {
 export function VerbFormSpeakButton({
   form,
   className,
+  lang = "en-US",
 }: VerbFormSpeakButtonProps) {
   const t = useTranslations("Vocabulary");
   const spoken = toSpokenForm(form);
@@ -26,7 +28,7 @@ export function VerbFormSpeakButton({
     <button
       type="button"
       data-btn-motion="off"
-      onClick={() => speakText(spoken, "en-US")}
+      onClick={() => speakText(spoken, lang)}
       className={cn(
         "vocabulary-speak-button inline-flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-lg border-0 p-0 leading-none",
         "bg-sky-500/10 text-sky-700 hover:bg-sky-500/20",

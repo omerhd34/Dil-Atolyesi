@@ -20,8 +20,12 @@ import {
   type VerbExerciseSessionSeeds,
 } from "@/lib/vocabulary/generateVerbExercises";
 import type { ExerciseType } from "@/data/grammar/types";
+import { VerbsAlphabetFilter } from "@/components/features/vocabulary/VerbsAlphabetFilter";
 import {
   applyVerbTableSort,
+  collectVerbInitialLetters,
+  filterVerbsByInitialLetter,
+  parseVerbLetterFilter,
   type VerbListFilter,
   type VerbTableSortKey,
 } from "@/lib/vocabulary/sortVerbs";
@@ -49,6 +53,8 @@ export function VerbsSection() {
     filterParam === "regular" || filterParam === "irregular"
       ? filterParam
       : "all";
+
+  const letterFilter = parseVerbLetterFilter(searchParams.get("letter"));
 
   const [sortKey, setSortKey] = useState<VerbTableSortKey>("default");
   const [infinitiveDescending, setInfinitiveDescending] = useState(false);
@@ -126,6 +132,13 @@ export function VerbsSection() {
     );
   }
 
+  function buildVerbsListUrl(params: URLSearchParams): string {
+    const query = params.toString();
+    return query
+      ? `/panel/vocabulary/verbs?${query}`
+      : "/panel/vocabulary/verbs";
+  }
+
   function handleFilterChange(next: VerbListFilter) {
     if (next === listFilter) {
       return;
@@ -141,14 +154,30 @@ export function VerbsSection() {
       params.set("tab", "exercises");
     }
 
-    const query = params.toString();
-    router.replace(
-      query ? `/panel/vocabulary/verbs?${query}` : "/panel/vocabulary/verbs",
-      { scroll: false },
-    );
+    router.replace(buildVerbsListUrl(params), { scroll: false });
   }
 
-  const listVerbs = useMemo(() => {
+  function handleLetterChange(next: string | null) {
+    const resolved =
+      next && letterFilter === next.toUpperCase()
+        ? null
+        : (next?.toUpperCase() ?? null);
+
+    if (resolved === letterFilter) {
+      return;
+    }
+
+    const params = new URLSearchParams(searchParams.toString());
+    if (resolved) {
+      params.set("letter", resolved);
+    } else {
+      params.delete("letter");
+    }
+
+    router.replace(buildVerbsListUrl(params), { scroll: false });
+  }
+
+  const sortedVerbsBeforeLetter = useMemo(() => {
     const source =
       listFilter === "regular"
         ? regularVerbs
@@ -162,6 +191,25 @@ export function VerbsSection() {
       infinitiveDescending,
     );
   }, [listFilter, sortKey, infinitiveDescending]);
+
+  const availableLetters = useMemo(
+    () => collectVerbInitialLetters(sortedVerbsBeforeLetter),
+    [sortedVerbsBeforeLetter],
+  );
+
+  useEffect(() => {
+    if (!letterFilter || availableLetters.has(letterFilter)) {
+      return;
+    }
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete("letter");
+    router.replace(buildVerbsListUrl(params), { scroll: false });
+  }, [availableLetters, letterFilter, router, searchParams]);
+
+  const listVerbs = useMemo(
+    () => filterVerbsByInitialLetter(sortedVerbsBeforeLetter, letterFilter),
+    [sortedVerbsBeforeLetter, letterFilter],
+  );
 
   const filterOptions: { id: VerbListFilter; label: string }[] = [
     { id: "all", label: t("verbsFilterAll") },
@@ -182,32 +230,41 @@ export function VerbsSection() {
 
       {tab === "words" ? (
         <div className="space-y-4">
-          <nav
-            role="tablist"
-            aria-label={t("verbsFilterAria")}
-            className="flex flex-wrap gap-2"
-          >
-            {filterOptions.map((option) => {
-              const active = listFilter === option.id;
-              return (
-                <button
-                  key={option.id}
-                  type="button"
-                  role="tab"
-                  aria-selected={active}
-                  onClick={() => handleFilterChange(option.id)}
-                  className={cn(
-                    FILTER_CHIP_BUTTON_CLASS,
-                    active
-                      ? CEFR_LEVEL_FILTER_ACTIVE_CLASS.A1
-                      : VERB_LIST_FILTER_INACTIVE_CLASS,
-                  )}
-                >
-                  {option.label}
-                </button>
-              );
-            })}
-          </nav>
+          <div className="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-2">
+            <nav
+              role="tablist"
+              aria-label={t("verbsFilterAria")}
+              className="flex shrink-0 flex-wrap items-center gap-2"
+            >
+              {filterOptions.map((option) => {
+                const active = listFilter === option.id;
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={active}
+                    onClick={() => handleFilterChange(option.id)}
+                    className={cn(
+                      FILTER_CHIP_BUTTON_CLASS,
+                      active
+                        ? CEFR_LEVEL_FILTER_ACTIVE_CLASS.A1
+                        : VERB_LIST_FILTER_INACTIVE_CLASS,
+                    )}
+                  >
+                    {option.label}
+                  </button>
+                );
+              })}
+            </nav>
+
+            <VerbsAlphabetFilter
+              activeLetter={letterFilter}
+              availableLetters={availableLetters}
+              onLetterChange={handleLetterChange}
+              className="ml-auto min-w-0 justify-end"
+            />
+          </div>
 
           <div
             className={cn(
