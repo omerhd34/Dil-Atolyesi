@@ -3,10 +3,11 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Mail, MessagesSquare } from "lucide-react";
-import { BrandLogo } from "@/components/brand/BrandLogo";
+import { BrandHomeLink } from "@/components/brand/BrandHomeLink";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
-import { navLinks } from "@/components/layout/navLinks";
+import { MarketingNavLink } from "@/components/layout/MarketingNavLink";
+import { marketingNavItemKey, navLinks } from "@/components/layout/navLinks";
 import { useAuthStore } from "@/store/authStore";
 
 export function Footer() {
@@ -24,17 +25,12 @@ export function Footer() {
       <Container size={user ? "app" : "page"} className="py-14 sm:py-16">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="max-w-sm space-y-4">
-            <Link
-              href="/"
-              aria-label={tNav("brand")}
-              className="group/brand inline-flex font-display text-xl font-semibold tracking-tight text-brand-800 dark:text-brand-400"
-            >
-              <BrandLogo
-                label={tNav("brand")}
-                iconClassName="size-8"
-                labelClassName="font-display text-xl font-semibold tracking-tight"
-              />
-            </Link>
+            <BrandHomeLink
+              label={tNav("brand")}
+              className="font-display text-xl font-semibold tracking-tight text-brand-800 dark:text-brand-400"
+              iconClassName="size-8"
+              labelClassName="font-display text-xl font-semibold tracking-tight"
+            />
             <p className="text-sm leading-relaxed text-brand-600 dark:text-brand-400">
               {t("tagline")}
             </p>
@@ -48,18 +44,21 @@ export function Footer() {
               {navLinks.map((item) => {
                 const Icon = item.Icon;
                 return (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="inline-flex items-center gap-2 text-sm text-brand-600 transition-colors hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-100"
+                  <li key={marketingNavItemKey(item)}>
+                    <MarketingNavLink
+                      sectionId={
+                        item.kind === "section" ? item.sectionId : undefined
+                      }
+                      href={item.kind === "route" ? item.href : undefined}
+                      className="inline-flex items-center gap-2 text-sm text-brand-600 hover:text-sky-700 dark:text-brand-400 dark:hover:text-sky-300"
                     >
                       <Icon
-                        className="size-4 shrink-0"
+                        className="size-4 shrink-0 text-current"
                         strokeWidth={1.75}
                         aria-hidden
                       />
                       {tNav(item.labelKey)}
-                    </Link>
+                    </MarketingNavLink>
                   </li>
                 );
               })}
@@ -72,17 +71,17 @@ export function Footer() {
             </p>
             <ul className="space-y-3">
               <li>
-                <Link
+                <MarketingNavLink
                   href="/iletisim"
-                  className="inline-flex items-center gap-2 text-sm text-brand-600 transition-colors hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-100"
+                  className="inline-flex items-center gap-2 text-sm text-brand-600 hover:text-sky-700 dark:text-brand-400 dark:hover:text-sky-300"
                 >
                   <MessagesSquare
-                    className="size-4 shrink-0"
+                    className="size-4 shrink-0 text-current"
                     strokeWidth={1.75}
                     aria-hidden
                   />
                   {t("contactLink")}
-                </Link>
+                </MarketingNavLink>
               </li>
               <li>
                 <a

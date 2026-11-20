@@ -62,18 +62,18 @@ export function UserMenu({ user, isLoggingOut, onLogout }: UserMenuProps) {
   const menuLinks: MenuLink[] = [
     {
       key: "myProfile",
-      href: "/panel",
+      href: "/atolye",
       icon: UserRound,
       shortcut: ["⌘", "⇧", "P"],
     },
     {
       key: "accountSettings",
-      href: "/panel/ayarlar",
+      href: "/atolye/ayarlar",
       icon: Settings,
       shortcut: ["⌘", ","],
     },
     { key: "billing", href: "/packages", icon: CreditCard },
-    { key: "helpCenter", href: "/sss", icon: HelpCircle },
+    { key: "helpCenter", href: "/#sss", icon: HelpCircle },
     {
       key: "whatsNew",
       href: "/#announcements",
