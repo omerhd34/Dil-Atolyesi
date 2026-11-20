@@ -15,17 +15,20 @@ import type { AuthMode } from "@/components/features/auth/auth-types";
 import { useRouter } from "@/i18n/navigation";
 import { getApiErrorCode } from "@/lib/apiClient";
 import { migrateLocalStorageKey } from "@/lib/clientStorageKeys";
+import { AUTH_ACCOUNT_PATH } from "@/lib/appPaths";
 import { createLoginSchema, createRegisterSchema } from "@/lib/authValidation";
 import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/store/authStore";
 
 export type { AuthMode };
 
-type AuthPanelProps = {
+type WorkshopAccountAuthProps = {
   initialMode?: AuthMode;
 };
 
-export function AuthPanel({ initialMode = "giris" }: AuthPanelProps) {
+export function WorkshopAccountAuth({
+  initialMode = "giris",
+}: WorkshopAccountAuthProps) {
   const t = useTranslations("Auth");
   const tNav = useTranslations("Nav");
   const router = useRouter();
@@ -68,7 +71,7 @@ export function AuthPanel({ initialMode = "giris" }: AuthPanelProps) {
 
   useEffect(() => {
     if (authStatus === "authenticated" && authUser) {
-      router.replace("/panel");
+      router.replace("/atolye");
       return;
     }
 
@@ -85,7 +88,7 @@ export function AuthPanel({ initialMode = "giris" }: AuthPanelProps) {
       setMode("kayit");
     }
     if (window.location.search) {
-      router.replace("/panelLogin");
+      router.replace(AUTH_ACCOUNT_PATH);
     }
   }, [authStatus, authUser, router]);
 
@@ -148,7 +151,7 @@ export function AuthPanel({ initialMode = "giris" }: AuthPanelProps) {
       }
 
       await login(parsed.data);
-      router.push("/panel");
+      router.push("/atolye");
     } catch (error) {
       const code = getApiErrorCode(error);
       if (code === "EMAIL_NOT_VERIFIED") {
@@ -244,7 +247,7 @@ export function AuthPanel({ initialMode = "giris" }: AuthPanelProps) {
         />
 
         <div className="auth-forms">
-          <div className="auth-panel auth-panel-login">
+          <div className="auth-split-pane auth-split-login">
             <form
               className="split-form login-form"
               onSubmit={onLoginSubmit}
@@ -316,7 +319,7 @@ export function AuthPanel({ initialMode = "giris" }: AuthPanelProps) {
             </form>
           </div>
 
-          <div className="auth-panel auth-panel-register">
+          <div className="auth-split-pane auth-split-register">
             {submittedEmail ? (
               <div className="split-form" role="status">
                 <div className="split-form-head">
@@ -429,7 +432,7 @@ export function AuthPanel({ initialMode = "giris" }: AuthPanelProps) {
             )}
           </div>
 
-          <div className="auth-panel auth-panel-reset">
+          <div className="auth-split-pane auth-split-reset">
             <form
               className="split-form reset-form"
               onSubmit={onForgotSubmit}

@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 
-type AuthPanelShellProps = {
+type WorkshopAccountShellProps = {
   children: ReactNode;
 };
 
-export function AuthPanelShell({ children }: AuthPanelShellProps) {
+export function WorkshopAccountShell({ children }: WorkshopAccountShellProps) {
   return (
     <div className="auth-shell">
       <div className="auth-shell-main">{children}</div>

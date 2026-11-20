@@ -1,7 +1,7 @@
 "use client";
 
 import { KeyRound, LogIn, UserPlus } from "lucide-react";
-import { BrandLogo } from "@/components/brand/BrandLogo";
+import { BrandHomeLink } from "@/components/brand/BrandHomeLink";
 import type { AuthMode } from "@/components/features/auth/auth-types";
 
 type AuthOverlayCopy = {
@@ -52,8 +52,8 @@ export function AuthOverlay({ brand, copy, onSwitch }: AuthOverlayProps) {
     <div className="auth-overlay">
       <div className="auth-overlay-bg" />
 
-      <div className="auth-overlay-panel auth-overlay-left">
-        <BrandLogo
+      <div className="auth-overlay-pane auth-overlay-left">
+        <BrandHomeLink
           label={brand}
           className="mb-5.5 flex justify-center"
           iconClassName="size-11"
@@ -77,8 +77,8 @@ export function AuthOverlay({ brand, copy, onSwitch }: AuthOverlayProps) {
         />
       </div>
 
-      <div className="auth-overlay-panel auth-overlay-right">
-        <BrandLogo
+      <div className="auth-overlay-pane auth-overlay-right">
+        <BrandHomeLink
           label={brand}
           className="mb-5.5 flex justify-center"
           iconClassName="size-11"
@@ -102,8 +102,8 @@ export function AuthOverlay({ brand, copy, onSwitch }: AuthOverlayProps) {
         />
       </div>
 
-      <div className="auth-overlay-panel auth-overlay-reset">
-        <BrandLogo
+      <div className="auth-overlay-pane auth-overlay-reset">
+        <BrandHomeLink
           label={brand}
           className="mb-5.5 flex justify-center"
           iconClassName="size-11"

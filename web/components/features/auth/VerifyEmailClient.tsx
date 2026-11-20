@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
+import { AUTH_ACCOUNT_PATH } from "@/lib/appPaths";
 import { useAuthStore } from "@/store/authStore";
 
 type VerifyEmailClientProps = {
@@ -22,7 +23,7 @@ export function VerifyEmailClient({ token }: VerifyEmailClientProps) {
 
   useEffect(() => {
     if (existingUser) {
-      router.replace("/panel");
+      router.replace("/atolye");
     }
   }, [existingUser, router]);
 
@@ -41,7 +42,7 @@ export function VerifyEmailClient({ token }: VerifyEmailClientProps) {
       try {
         await verifyEmail({ token });
         setDone(true);
-        router.replace("/panel");
+        router.replace("/atolye");
       } catch {
         startedTokens.delete(token);
         setError(t("verifyInvalid"));
@@ -57,10 +58,10 @@ export function VerifyEmailClient({ token }: VerifyEmailClientProps) {
         </p>
         <p className="page-subtitle mt-0">
           <Link
-            href="/panelLogin"
+            href={AUTH_ACCOUNT_PATH}
             className="font-medium text-brand-800 underline-offset-2 hover:underline dark:text-brand-400"
           >
-            {t("myPanel")}
+            {t("enterWorkshop")}
           </Link>
         </p>
       </div>
