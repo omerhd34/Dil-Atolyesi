@@ -15,6 +15,7 @@ import {
 import type { DashboardTopic } from "@/data/grammar/dashboardTopics";
 import { useTopicProgress } from "@/hooks/useTopicProgress";
 import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
+import { EnglishUiHint } from "@/components/ui/EnglishUiHint";
 import { cn } from "@/lib/utils";
 
 type TopicCardProps = {
@@ -93,44 +94,68 @@ export function TopicCard({ topic, index, locked = false }: TopicCardProps) {
           </div>
         </CardHeader>
 
-        <CardFooter className="mt-auto grid grid-cols-1 gap-2 sm:grid-cols-3">
+        <CardFooter className="mt-auto grid grid-cols-1 items-start gap-x-2 gap-y-1 sm:grid-cols-3">
           {locked ? (
             <>
-              <Button type="button" variant="outline" size="sm" disabled>
-                <BookOpen className="text-current" aria-hidden />
-                {t("lesson")}
-              </Button>
-              <Button type="button" variant="outline" size="sm" disabled>
-                <PencilLine className="text-current" aria-hidden />
-                {t("exercises")}
-              </Button>
-              <Button type="button" size="sm" disabled>
-                <ClipboardCheck className="text-current" aria-hidden />
-                {t("topicExam")}
-              </Button>
+              <EnglishUiHint hint={t("lessonHint")} wrapperClassName="w-full">
+                <Button type="button" variant="outline" size="sm" disabled>
+                  <BookOpen className="text-current" aria-hidden />
+                  {t("lesson")}
+                </Button>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={t("exercisesHint")}
+                wrapperClassName="w-full"
+              >
+                <Button type="button" variant="outline" size="sm" disabled>
+                  <PencilLine className="text-current" aria-hidden />
+                  {t("exercises")}
+                </Button>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={t("topicExamHint")}
+                wrapperClassName="w-full"
+              >
+                <Button type="button" size="sm" disabled>
+                  <ClipboardCheck className="text-current" aria-hidden />
+                  {t("topicExam")}
+                </Button>
+              </EnglishUiHint>
             </>
           ) : (
             <>
-              <ButtonLink
-                href={`/panel/grammer/${topic.id}/lesson`}
-                variant="outline"
-                size="sm"
+              <EnglishUiHint hint={t("lessonHint")} wrapperClassName="w-full">
+                <ButtonLink
+                  href={`/panel/grammer/${topic.id}/lesson`}
+                  variant="outline"
+                  size="sm"
+                >
+                  <BookOpen className="text-current" aria-hidden />
+                  {t("lesson")}
+                </ButtonLink>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={t("exercisesHint")}
+                wrapperClassName="w-full"
               >
-                <BookOpen className="text-current" aria-hidden />
-                {t("lesson")}
-              </ButtonLink>
-              <ButtonLink
-                href={`/panel/grammer/${topic.id}/exercises`}
-                variant="outline"
-                size="sm"
+                <ButtonLink
+                  href={`/panel/grammer/${topic.id}/exercises`}
+                  variant="outline"
+                  size="sm"
+                >
+                  <PencilLine className="text-current" aria-hidden />
+                  {t("exercises")}
+                </ButtonLink>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={t("topicExamHint")}
+                wrapperClassName="w-full"
               >
-                <PencilLine className="text-current" aria-hidden />
-                {t("exercises")}
-              </ButtonLink>
-              <ButtonLink href={`/panel/grammer/${topic.id}/exam`} size="sm">
-                <ClipboardCheck className="text-current" aria-hidden />
-                {t("topicExam")}
-              </ButtonLink>
+                <ButtonLink href={`/panel/grammer/${topic.id}/exam`} size="sm">
+                  <ClipboardCheck className="text-current" aria-hidden />
+                  {t("topicExam")}
+                </ButtonLink>
+              </EnglishUiHint>
             </>
           )}
         </CardFooter>

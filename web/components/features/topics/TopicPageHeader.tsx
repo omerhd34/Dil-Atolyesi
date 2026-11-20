@@ -15,6 +15,7 @@ import { Link } from "@/i18n/navigation";
 import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
 import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
 import { TopicProgressBadge } from "@/components/features/topics/TopicProgressBadge";
+import { EnglishUiHint } from "@/components/ui/EnglishUiHint";
 import { cn } from "@/lib/utils";
 import {
   getAdjacentGrammarTopics,
@@ -110,47 +111,56 @@ export function TopicPageHeader({
 
       {!isExam ? (
         <div className="space-y-3 border-b border-border">
-          <nav aria-label={t("tabsAria")} className="flex gap-1">
-            <Link
-              href={lessonHref}
-              className={cn(
-                "inline-flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm font-medium transition-colors",
-                activeTab === "lesson"
-                  ? "border-sky-500 text-brand-950 dark:text-brand-100"
-                  : "border-transparent text-brand-500 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
-              )}
-              aria-current={activeTab === "lesson" ? "page" : undefined}
-            >
-              <BookOpen className="size-4" aria-hidden />
-              {t("lesson")}
-            </Link>
-            <Link
-              href={exercisesHref}
-              className={cn(
-                "inline-flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm font-medium transition-colors",
-                activeTab === "exercises"
-                  ? "border-sky-500 text-brand-950 dark:text-brand-100"
-                  : "border-transparent text-brand-500 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
-              )}
-              aria-current={activeTab === "exercises" ? "page" : undefined}
-            >
-              <PencilLine className="size-4" aria-hidden />
-              {t("exercises")}
-            </Link>
-            {showTopicExamTab ? (
+          <nav
+            aria-label={t("tabsAria")}
+            className="flex flex-wrap items-start gap-x-1 gap-y-0"
+          >
+            <EnglishUiHint hint={t("lessonHint")}>
               <Link
-                href={examHref}
+                href={lessonHref}
                 className={cn(
                   "inline-flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm font-medium transition-colors",
-                  activeTab === "exam"
+                  activeTab === "lesson"
                     ? "border-sky-500 text-brand-950 dark:text-brand-100"
                     : "border-transparent text-brand-500 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
                 )}
-                aria-current={activeTab === "exam" ? "page" : undefined}
+                aria-current={activeTab === "lesson" ? "page" : undefined}
               >
-                <ClipboardCheck className="size-4" aria-hidden />
-                {t("topicExamTab")}
+                <BookOpen className="size-4" aria-hidden />
+                {t("lesson")}
               </Link>
+            </EnglishUiHint>
+            <EnglishUiHint hint={t("exercisesHint")}>
+              <Link
+                href={exercisesHref}
+                className={cn(
+                  "inline-flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm font-medium transition-colors",
+                  activeTab === "exercises"
+                    ? "border-sky-500 text-brand-950 dark:text-brand-100"
+                    : "border-transparent text-brand-500 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
+                )}
+                aria-current={activeTab === "exercises" ? "page" : undefined}
+              >
+                <PencilLine className="size-4" aria-hidden />
+                {t("exercises")}
+              </Link>
+            </EnglishUiHint>
+            {showTopicExamTab ? (
+              <EnglishUiHint hint={t("topicExamTabHint")}>
+                <Link
+                  href={examHref}
+                  className={cn(
+                    "inline-flex items-center gap-1.5 border-b-2 px-3 py-2 text-sm font-medium transition-colors",
+                    activeTab === "exam"
+                      ? "border-sky-500 text-brand-950 dark:text-brand-100"
+                      : "border-transparent text-brand-500 hover:text-brand-950 dark:text-brand-400 dark:hover:text-brand-100",
+                  )}
+                  aria-current={activeTab === "exam" ? "page" : undefined}
+                >
+                  <ClipboardCheck className="size-4" aria-hidden />
+                  {t("topicExamTab")}
+                </Link>
+              </EnglishUiHint>
             ) : null}
           </nav>
 

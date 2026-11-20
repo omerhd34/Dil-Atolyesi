@@ -15,6 +15,7 @@ import {
 import type { DashboardTopic } from "@/data/grammar/dashboardTopics";
 import { useLevelExamPercent } from "@/hooks/useLevelExamPercent";
 import { getNextLevel } from "@/lib/topicAccess";
+import { EnglishUiHint } from "@/components/ui/EnglishUiHint";
 import { cn } from "@/lib/utils";
 
 type LevelExamCardProps = {
@@ -87,25 +88,31 @@ export function LevelExamCard({
 
       <CardFooter>
         {locked ? (
-          <Button type="button" size="sm" disabled className="w-full">
-            <GraduationCap aria-hidden />
-            {t("examCta")}
-          </Button>
-        ) : (
+          <EnglishUiHint hint={t("examCtaHint")} wrapperClassName="w-full">
+            <Button type="button" size="sm" disabled className="w-full">
+              <GraduationCap aria-hidden />
+              {t("examCta")}
+            </Button>
+          </EnglishUiHint>
+        ) : passed ? (
           <ButtonLink
             href={`/panel/grammer/${topic.id}/exercises`}
             size="sm"
             className="w-full"
           >
-            {passed ? (
-              t("examRetakeCta")
-            ) : (
-              <>
-                <GraduationCap aria-hidden />
-                {t("examCta")}
-              </>
-            )}
+            {t("examRetakeCta")}
           </ButtonLink>
+        ) : (
+          <EnglishUiHint hint={t("examCtaHint")} wrapperClassName="w-full">
+            <ButtonLink
+              href={`/panel/grammer/${topic.id}/exercises`}
+              size="sm"
+              className="w-full"
+            >
+              <GraduationCap aria-hidden />
+              {t("examCta")}
+            </ButtonLink>
+          </EnglishUiHint>
         )}
       </CardFooter>
     </Card>

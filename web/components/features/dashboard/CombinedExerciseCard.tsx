@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/Card";
 import type { CombinedExercise } from "@/data/combinedExercises";
 import { useCombinedExerciseProgress } from "@/hooks/useCombinedExerciseProgress";
+import { EnglishUiHint } from "@/components/ui/EnglishUiHint";
 import { cn } from "@/lib/utils";
 
 type CombinedExerciseCardProps = {
@@ -74,19 +75,29 @@ export function CombinedExerciseCard({
 
       <CardFooter>
         {locked ? (
-          <Button type="button" size="sm" disabled className="w-full">
-            <RefreshCw aria-hidden />
-            {t("combinedExerciseCta")}
-          </Button>
-        ) : (
-          <ButtonLink
-            href={`/panel/grammer/combined/${combined.id}`}
-            size="sm"
-            className="w-full"
+          <EnglishUiHint
+            hint={t("combinedExerciseCtaHint")}
+            wrapperClassName="w-full"
           >
-            <RefreshCw aria-hidden />
-            {t("combinedExerciseCta")}
-          </ButtonLink>
+            <Button type="button" size="sm" disabled className="w-full">
+              <RefreshCw aria-hidden />
+              {t("combinedExerciseCta")}
+            </Button>
+          </EnglishUiHint>
+        ) : (
+          <EnglishUiHint
+            hint={t("combinedExerciseCtaHint")}
+            wrapperClassName="w-full"
+          >
+            <ButtonLink
+              href={`/panel/grammer/combined/${combined.id}`}
+              size="sm"
+              className="w-full"
+            >
+              <RefreshCw aria-hidden />
+              {t("combinedExerciseCta")}
+            </ButtonLink>
+          </EnglishUiHint>
         )}
       </CardFooter>
     </Card>
