@@ -16,7 +16,7 @@ import {
 import { useAuthStore } from "@/store/authStore";
 import type { AuthUser } from "@/types/api";
 
-const LEGACY_COLLAPSE_KEY = "pylmor-sidebar-collapsed";
+import { migrateLocalStorageKey } from "@/lib/clientStorageKeys";
 
 type AppShellProps = {
   user: AuthUser;
@@ -31,7 +31,9 @@ export function AppShell({ user, sidebarOpen, children }: AppShellProps) {
 
   useEffect(() => {
     try {
-      const stored = window.localStorage.getItem(LEGACY_COLLAPSE_KEY);
+      const stored = window.localStorage.getItem(
+        migrateLocalStorageKey("sidebar-collapsed"),
+      );
       if (stored === null) {
         return;
       }
@@ -45,7 +47,9 @@ export function AppShell({ user, sidebarOpen, children }: AppShellProps) {
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${open}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
       }
 
-      window.localStorage.removeItem(LEGACY_COLLAPSE_KEY);
+      window.localStorage.removeItem(
+        migrateLocalStorageKey("sidebar-collapsed"),
+      );
     } catch {}
   }, []);
 

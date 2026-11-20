@@ -1,4 +1,9 @@
-export const SESSION_HINT_COOKIE = "pylmor_user";
+import { CLIENT_STORAGE_PREFIX } from "@/lib/brand";
+
+export const SESSION_HINT_COOKIE = `${CLIENT_STORAGE_PREFIX}_user`;
+
+/** Eski küçük harf cookie adı. */
+export const LEGACY_SESSION_HINT_COOKIES = ["dilatolyesi_user"] as const;
 export const SESSION_HINT_MAX_AGE = 60 * 60 * 24 * 7;
 
 export type SessionHint = {
@@ -15,7 +20,9 @@ export function serializeSessionHint(user: SessionHint): string {
   });
 }
 
-export function parseSessionHint(value: string | undefined): SessionHint | null {
+export function parseSessionHint(
+  value: string | undefined,
+): SessionHint | null {
   if (!value) {
     return null;
   }
@@ -52,5 +59,24 @@ export function writeSessionHint(user: SessionHint): void {
 }
 
 export function clearSessionHint(): void {
-  document.cookie = `${SESSION_HINT_COOKIE}=; Path=/; Max-Age=0; SameSite=Lax`;
+  const names = [SESSION_HINT_COOKIE, ...LEGACY_SESSION_HINT_COOKIES];
+  for (const name of names) {
+    document.cookie = `${name}=; Path=/; Max-Age=0; SameSite=Lax`;
+  }
+}
+
+export function parseSessionHintFromCookies(
+  get: (name: string) => string | undefined,
+): SessionHint | null {
+  const candidates = [get(SESSION_HINT_COOKIE)];
+  for (const legacy of LEGACY_SESSION_HINT_COOKIES) {
+    candidates.push(get(legacy));
+  }
+  for (const value of candidates) {
+    const parsed = parseSessionHint(value);
+    if (parsed) {
+      return parsed;
+    }
+  }
+  return null;
 }

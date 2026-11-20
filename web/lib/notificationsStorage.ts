@@ -1,3 +1,8 @@
+import {
+  clientStorageEvent,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
+
 export type AppNotificationType = "quiz_ready" | "learn_missed_day";
 
 export type AppNotification = {
@@ -10,9 +15,11 @@ export type AppNotification = {
   read: boolean;
 };
 
-const STORAGE_KEY = "pylmor-notifications";
-const DISMISSED_KEY = "pylmor-notifications-dismissed";
-export const NOTIFICATIONS_CHANGED_EVENT = "pylmor:notifications-changed";
+const NOTIFICATIONS_SUFFIX = "notifications";
+const NOTIFICATIONS_DISMISSED_SUFFIX = "notifications-dismissed";
+export const NOTIFICATIONS_CHANGED_EVENT = clientStorageEvent(
+  "notifications-changed",
+);
 
 const NOTIFICATION_HREF_BY_TYPE: Record<AppNotificationType, string> = {
   quiz_ready: "/panel/vocabulary/today-worked",
@@ -50,7 +57,9 @@ export function readNotifications(): AppNotification[] {
   }
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(NOTIFICATIONS_SUFFIX),
+    );
     if (!raw) {
       return [];
     }
@@ -84,7 +93,10 @@ export function writeNotifications(notifications: AppNotification[]): void {
   if (!canUseStorage()) {
     return;
   }
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(notifications));
+  window.localStorage.setItem(
+    migrateLocalStorageKey(NOTIFICATIONS_SUFFIX),
+    JSON.stringify(notifications),
+  );
   emitNotificationsChanged();
 }
 
@@ -94,7 +106,9 @@ function readDismissedIds(): string[] {
   }
 
   try {
-    const raw = window.localStorage.getItem(DISMISSED_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(NOTIFICATIONS_DISMISSED_SUFFIX),
+    );
     if (!raw) {
       return [];
     }
@@ -117,7 +131,10 @@ function rememberDismissedIds(idsToRemember: readonly string[]): void {
     (item) => !idsToRemember.includes(item),
   );
   ids.push(...idsToRemember);
-  window.localStorage.setItem(DISMISSED_KEY, JSON.stringify(ids.slice(-200)));
+  window.localStorage.setItem(
+    migrateLocalStorageKey(NOTIFICATIONS_DISMISSED_SUFFIX),
+    JSON.stringify(ids.slice(-200)),
+  );
 }
 
 function rememberDismissedId(id: string): void {

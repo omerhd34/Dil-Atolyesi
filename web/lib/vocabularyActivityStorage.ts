@@ -1,6 +1,12 @@
-export const VOCABULARY_ACTIVITY_EVENT = "pylmor:vocabulary-activity";
+import {
+  clientStorageEvent,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
 
-const STORAGE_KEY = "pylmor-vocabulary-activity";
+const STORAGE_SUFFIX = "vocabulary-activity";
+export const VOCABULARY_ACTIVITY_EVENT = clientStorageEvent(
+  "vocabulary-activity",
+);
 
 type VocabularyActivityMap = Record<string, string[]>;
 
@@ -21,7 +27,9 @@ function readAll(): VocabularyActivityMap {
   }
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+    );
     if (!raw) {
       return {};
     }
@@ -53,9 +61,12 @@ function writeAll(map: VocabularyActivityMap): void {
     return;
   }
   if (Object.keys(map).length === 0) {
-    window.localStorage.removeItem(STORAGE_KEY);
+    window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
   } else {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+    window.localStorage.setItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+      JSON.stringify(map),
+    );
   }
   emitChanged();
 }
@@ -104,6 +115,6 @@ export function clearVocabularyActivityStorage(): void {
   if (!canUseDom()) {
     return;
   }
-  window.localStorage.removeItem(STORAGE_KEY);
+  window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
   emitChanged();
 }

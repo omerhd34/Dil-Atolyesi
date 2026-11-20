@@ -14,9 +14,20 @@ export {
   type SpeechVoiceGender,
 } from "@/lib/speechVoiceGender";
 
-export const SPEECH_RATE_STORAGE_KEY = "pylmor-speech-rate";
-export const SPEECH_RATE_CHANGED_EVENT = "pylmor:speech-rate-changed";
-export const SPEECH_PLAYBACK_CHANGED_EVENT = "pylmor:speech-playback-changed";
+import {
+  clientStorageEvent,
+  clientStorageKey,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
+
+const SPEECH_RATE_SUFFIX = "speech-rate";
+export const SPEECH_RATE_STORAGE_KEY = clientStorageKey(SPEECH_RATE_SUFFIX);
+export const SPEECH_RATE_CHANGED_EVENT = clientStorageEvent(
+  "speech-rate-changed",
+);
+export const SPEECH_PLAYBACK_CHANGED_EVENT = clientStorageEvent(
+  "speech-playback-changed",
+);
 
 export const DEFAULT_SPEECH_RATE = 1;
 
@@ -63,7 +74,9 @@ export function getSpeechRate(): number {
   }
 
   try {
-    const raw = window.localStorage.getItem(SPEECH_RATE_STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(SPEECH_RATE_SUFFIX),
+    );
     if (!raw) {
       return DEFAULT_SPEECH_RATE;
     }
@@ -76,7 +89,10 @@ export function getSpeechRate(): number {
       return DEFAULT_SPEECH_RATE;
     }
     if (resolved !== parsed) {
-      window.localStorage.setItem(SPEECH_RATE_STORAGE_KEY, String(resolved));
+      window.localStorage.setItem(
+        migrateLocalStorageKey(SPEECH_RATE_SUFFIX),
+        String(resolved),
+      );
     }
     return resolved;
   } catch {
@@ -89,7 +105,10 @@ export function setSpeechRate(rate: number): void {
     return;
   }
 
-  window.localStorage.setItem(SPEECH_RATE_STORAGE_KEY, String(rate));
+  window.localStorage.setItem(
+    migrateLocalStorageKey(SPEECH_RATE_SUFFIX),
+    String(rate),
+  );
   window.dispatchEvent(
     new CustomEvent(SPEECH_RATE_CHANGED_EVENT, { detail: { rate } }),
   );

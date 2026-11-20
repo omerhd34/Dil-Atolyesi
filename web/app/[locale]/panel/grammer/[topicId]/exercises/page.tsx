@@ -16,8 +16,9 @@ import {
 import { getTopicContent } from "@/data/grammar";
 import { getTopicPracticeExercises } from "@/data/grammar/topicExercises";
 import {
+  LEGACY_PASSED_LEVEL_EXAMS_COOKIES,
   PASSED_LEVEL_EXAMS_COOKIE,
-  parsePassedLevelExams,
+  readPassedLevelExamsFromCookieValues,
 } from "@/lib/levelExamStorage";
 import { canAccessLevel, getRequiredLevelToUnlock } from "@/lib/topicAccess";
 
@@ -32,10 +33,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { locale, topicId } = await params;
   const t = await getTranslations({ locale, namespace: "Topic" });
+  const tMeta = await getTranslations({ locale, namespace: "Meta" });
   const topic = getDashboardTopicById(topicId);
 
   return {
-    title: topic ? t("documentTitle", { title: topic.title }) : t("exercises"),
+    title: topic
+      ? t("documentTitle", { title: topic.title })
+      : tMeta("pageTitle", { title: t("exercises") }),
   };
 }
 
@@ -57,8 +61,11 @@ export default async function TopicExercisesPage({ params }: PageProps) {
     : regularTopics.findIndex((item) => item.id === topicId) + 1;
 
   const cookieStore = await cookies();
-  const passedExams = parsePassedLevelExams(
+  const passedExams = readPassedLevelExamsFromCookieValues(
     cookieStore.get(PASSED_LEVEL_EXAMS_COOKIE)?.value,
+    ...LEGACY_PASSED_LEVEL_EXAMS_COOKIES.map(
+      (name) => cookieStore.get(name)?.value,
+    ),
   );
   const unlocked = canAccessLevel(topic.level, passedExams);
   const requiredLevel = getRequiredLevelToUnlock(topic.level);

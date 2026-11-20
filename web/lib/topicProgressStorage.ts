@@ -1,8 +1,14 @@
 import { getTopicContent } from "@/data/grammar";
 import type { ExerciseType } from "@/data/grammar/types";
+import {
+  clientStorageEvent,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
 
-const STORAGE_KEY = "pylmor-topic-progress";
-export const TOPIC_PROGRESS_CHANGED_EVENT = "pylmor:topic-progress-changed";
+const STORAGE_SUFFIX = "topic-progress";
+export const TOPIC_PROGRESS_CHANGED_EVENT = clientStorageEvent(
+  "topic-progress-changed",
+);
 
 const DEFAULT_LESSON_VIEW_MINUTES = 3;
 
@@ -43,7 +49,9 @@ function readAll(): TopicProgressMap {
   }
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+    );
     if (!raw) {
       return {};
     }
@@ -61,7 +69,10 @@ function writeAll(map: TopicProgressMap): void {
   if (!canUseDom()) {
     return;
   }
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+  window.localStorage.setItem(
+    migrateLocalStorageKey(STORAGE_SUFFIX),
+    JSON.stringify(map),
+  );
   emitChanged();
 }
 
@@ -243,6 +254,6 @@ export function clearTopicProgressStorage(): void {
   if (!canUseDom()) {
     return;
   }
-  window.localStorage.removeItem(STORAGE_KEY);
+  window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
   emitChanged();
 }

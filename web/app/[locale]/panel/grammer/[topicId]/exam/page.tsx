@@ -14,8 +14,9 @@ import {
 } from "@/data/grammar/dashboardTopics";
 import { getTopicContent } from "@/data/grammar";
 import {
+  LEGACY_PASSED_LEVEL_EXAMS_COOKIES,
   PASSED_LEVEL_EXAMS_COOKIE,
-  parsePassedLevelExams,
+  readPassedLevelExamsFromCookieValues,
 } from "@/lib/levelExamStorage";
 import {
   resolveMixedTopicQuiz,
@@ -43,12 +44,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { locale, topicId } = await params;
   const t = await getTranslations({ locale, namespace: "Topic" });
+  const tMeta = await getTranslations({ locale, namespace: "Meta" });
   const topic = getDashboardTopicById(topicId);
 
   return {
     title: topic
       ? t("examMetaTitle", { title: topic.title })
-      : t("topicExamTab"),
+      : tMeta("pageTitle", { title: t("topicExamTab") }),
   };
 }
 
@@ -68,8 +70,11 @@ export default async function TopicExamPage({ params }: PageProps) {
   const index = regularTopics.findIndex((item) => item.id === topicId) + 1;
 
   const cookieStore = await cookies();
-  const passedExams = parsePassedLevelExams(
+  const passedExams = readPassedLevelExamsFromCookieValues(
     cookieStore.get(PASSED_LEVEL_EXAMS_COOKIE)?.value,
+    ...LEGACY_PASSED_LEVEL_EXAMS_COOKIES.map(
+      (name) => cookieStore.get(name)?.value,
+    ),
   );
   const unlocked = canAccessLevel(topic.level, passedExams);
   const requiredLevel = getRequiredLevelToUnlock(topic.level);

@@ -1,9 +1,15 @@
 import type { CefrLevel } from "@/data/grammar/dashboardTopics";
+import {
+  clientStorageEvent,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
 import { readPassedLevelExams } from "@/lib/levelExamStorage";
 import { getLevelExamParts, type LevelExamPart } from "@/lib/topicExam";
 
-const STORAGE_KEY = "pylmor-level-exam-progress";
-export const LEVEL_EXAM_PROGRESS_EVENT = "pylmor:level-exam-progress";
+const STORAGE_SUFFIX = "level-exam-progress";
+export const LEVEL_EXAM_PROGRESS_EVENT = clientStorageEvent(
+  "level-exam-progress",
+);
 
 type LevelExamPartProgress = {
   percent: number;
@@ -74,7 +80,9 @@ function readAll(): LevelExamProgressMap {
     return {};
   }
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+    );
     if (!raw) {
       return {};
     }
@@ -100,9 +108,12 @@ function writeAll(map: LevelExamProgressMap): void {
     return;
   }
   if (Object.keys(map).length === 0) {
-    window.localStorage.removeItem(STORAGE_KEY);
+    window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
   } else {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+    window.localStorage.setItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+      JSON.stringify(map),
+    );
   }
   emitChanged();
 }
@@ -162,7 +173,7 @@ export function clearLevelExamProgress(): void {
   if (!canUseDom()) {
     return;
   }
-  window.localStorage.removeItem(STORAGE_KEY);
+  window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
   emitChanged();
 }
 

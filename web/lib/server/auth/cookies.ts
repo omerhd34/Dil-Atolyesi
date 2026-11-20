@@ -1,5 +1,6 @@
 import type { NextResponse } from "next/server";
 import {
+  LEGACY_SESSION_HINT_COOKIES,
   serializeSessionHint,
   SESSION_HINT_COOKIE,
   SESSION_HINT_MAX_AGE,
@@ -12,7 +13,10 @@ export const REFRESH_COOKIE_NAME = "refreshToken";
 const COOKIE_PATH = "/api/v1/auth";
 const MAX_AGE_SECONDS = 7 * 24 * 60 * 60;
 
-export function setRefreshCookie(response: NextResponse, refreshToken: string): void {
+export function setRefreshCookie(
+  response: NextResponse,
+  refreshToken: string,
+): void {
   const env = getServerEnv();
 
   response.cookies.set(REFRESH_COOKIE_NAME, refreshToken, {
@@ -54,11 +58,16 @@ export function setSessionHintCookie(
 export function clearSessionHintCookie(response: NextResponse): void {
   const env = getServerEnv();
 
-  response.cookies.set(SESSION_HINT_COOKIE, "", {
+  const clearOpts = {
     httpOnly: false,
     secure: env.COOKIE_SECURE,
-    sameSite: "lax",
+    sameSite: "lax" as const,
     path: "/",
     maxAge: 0,
-  });
+  };
+
+  response.cookies.set(SESSION_HINT_COOKIE, "", clearOpts);
+  for (const legacy of LEGACY_SESSION_HINT_COOKIES) {
+    response.cookies.set(legacy, "", clearOpts);
+  }
 }

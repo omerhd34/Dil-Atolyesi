@@ -5,8 +5,15 @@ export type LastVocabularyQuizResult = {
   finishedAt: string;
 };
 
-const STORAGE_KEY = "pylmor-last-vocabulary-quiz";
-export const QUIZ_RESULT_CHANGED_EVENT = "pylmor:quiz-result-changed";
+import {
+  clientStorageEvent,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
+
+const STORAGE_SUFFIX = "last-vocabulary-quiz";
+export const QUIZ_RESULT_CHANGED_EVENT = clientStorageEvent(
+  "quiz-result-changed",
+);
 
 function canUseStorage(): boolean {
   return typeof window !== "undefined";
@@ -40,7 +47,9 @@ export function readLastVocabularyQuizResult(): LastVocabularyQuizResult | null 
   }
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+    );
     if (!raw) {
       return null;
     }
@@ -57,7 +66,10 @@ export function writeLastVocabularyQuizResult(
   if (!canUseStorage()) {
     return;
   }
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(result));
+  window.localStorage.setItem(
+    migrateLocalStorageKey(STORAGE_SUFFIX),
+    JSON.stringify(result),
+  );
   emitChanged();
 }
 
@@ -65,6 +77,6 @@ export function clearLastVocabularyQuizResult(): void {
   if (!canUseStorage()) {
     return;
   }
-  window.localStorage.removeItem(STORAGE_KEY);
+  window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
   emitChanged();
 }

@@ -1,3 +1,7 @@
+import {
+  clientStorageEvent,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
 import { isVocabularyReferenceId } from "@/lib/vocabularyReferenceRoutes";
 
 export type ContinueActivityKind =
@@ -43,10 +47,11 @@ export type ContinueActivity = {
   updatedAt: string;
 };
 
-const STORAGE_KEY = "pylmor-continue-activity";
-export const CONTINUE_ACTIVITY_CHANGED_EVENT =
-  "pylmor:continue-activity-changed";
-export const CONTINUE_ACTIVITY_LIMIT = 2;
+const STORAGE_SUFFIX = "continue-activity";
+export const CONTINUE_ACTIVITY_CHANGED_EVENT = clientStorageEvent(
+  "continue-activity-changed",
+);
+export const CONTINUE_ACTIVITY_LIMIT = 4;
 
 const CONTINUE_ACTIVITY_KINDS: readonly ContinueActivityKind[] = [
   "vocabulary_category",
@@ -314,9 +319,12 @@ function writeAll(activities: ContinueActivity[]): void {
     return;
   }
   if (activities.length === 0) {
-    window.localStorage.removeItem(STORAGE_KEY);
+    window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
   } else {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(activities));
+    window.localStorage.setItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+      JSON.stringify(activities),
+    );
   }
   emitChanged();
 }
@@ -327,7 +335,9 @@ export function readContinueActivities(): ContinueActivity[] {
   }
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+    );
     if (!raw) {
       return [];
     }

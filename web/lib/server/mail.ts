@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { BRAND_NAME } from "@/lib/brand";
 import { getMailEnv } from "@/lib/server/env";
 
 type SendMailInput = {
@@ -35,11 +36,11 @@ export function buildVerificationEmail(params: {
   verifyUrl: string;
 }): { subject: string; html: string; text: string } {
   const greeting = params.name ? `Merhaba ${params.name},` : "Merhaba,";
-  const subject = "Pylmor hesabını doğrula";
+  const subject = `${BRAND_NAME} hesabını doğrula`;
   const text = [
     greeting,
     "",
-    "Pylmor hesabını etkinleştirmek için aşağıdaki bağlantıya tıkla. Hesabın açılacak ve otomatik giriş yapılacak:",
+    `${BRAND_NAME} hesabını etkinleştirmek için aşağıdaki bağlantıya tıkla. Hesabın açılacak ve otomatik giriş yapılacak:`,
     params.verifyUrl,
     "",
     "Bu bağlantı 24 saat geçerlidir. Sen kayıt olmadıysan bu e-postayı yok sayabilirsin.",
@@ -54,7 +55,7 @@ export function buildVerificationEmail(params: {
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background:#eef2f8;border-radius:16px;padding:32px;">
             <tr>
               <td>
-                <p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#303d59;">Pylmor</p>
+                <p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#303d59;">${BRAND_NAME}</p>
                 <h1 style="margin:0 0 16px;font-size:22px;line-height:1.3;">Hesabını doğrula</h1>
                 <p style="margin:0 0 12px;font-size:15px;line-height:1.5;">${greeting}</p>
                 <p style="margin:0 0 24px;font-size:15px;line-height:1.5;">

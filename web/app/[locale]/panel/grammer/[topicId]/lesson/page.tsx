@@ -18,8 +18,9 @@ import { getTopicContent } from "@/data/grammar";
 import type { TopicLesson } from "@/data/grammar/types";
 import { redirect } from "@/i18n/navigation";
 import {
+  LEGACY_PASSED_LEVEL_EXAMS_COOKIES,
   PASSED_LEVEL_EXAMS_COOKIE,
-  parsePassedLevelExams,
+  readPassedLevelExamsFromCookieValues,
 } from "@/lib/levelExamStorage";
 import { buildTopicPageMetadata } from "@/lib/server/topicPageMetadata";
 import { canAccessLevel, getRequiredLevelToUnlock } from "@/lib/topicAccess";
@@ -85,8 +86,11 @@ export default async function TopicLessonPage({ params }: PageProps) {
     : regularTopics.findIndex((item) => item.id === topicId) + 1;
 
   const cookieStore = await cookies();
-  const passedExams = parsePassedLevelExams(
+  const passedExams = readPassedLevelExamsFromCookieValues(
     cookieStore.get(PASSED_LEVEL_EXAMS_COOKIE)?.value,
+    ...LEGACY_PASSED_LEVEL_EXAMS_COOKIES.map(
+      (name) => cookieStore.get(name)?.value,
+    ),
   );
   const unlocked = canAccessLevel(topic.level, passedExams);
   const requiredLevel = getRequiredLevelToUnlock(topic.level);

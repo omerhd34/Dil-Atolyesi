@@ -15,8 +15,9 @@ import {
   getCombinedExerciseQuestions,
 } from "@/data/combinedExercises";
 import {
+  LEGACY_PASSED_LEVEL_EXAMS_COOKIES,
   PASSED_LEVEL_EXAMS_COOKIE,
-  parsePassedLevelExams,
+  readPassedLevelExamsFromCookieValues,
 } from "@/lib/levelExamStorage";
 import { buildCombinedPageMetadata } from "@/lib/server/topicPageMetadata";
 import { canAccessLevel, getRequiredLevelToUnlock } from "@/lib/topicAccess";
@@ -48,8 +49,11 @@ export default async function CombinedExercisePage({ params }: PageProps) {
 
   const exercises = getCombinedExerciseQuestions(combined);
   const cookieStore = await cookies();
-  const passedExams = parsePassedLevelExams(
+  const passedExams = readPassedLevelExamsFromCookieValues(
     cookieStore.get(PASSED_LEVEL_EXAMS_COOKIE)?.value,
+    ...LEGACY_PASSED_LEVEL_EXAMS_COOKIES.map(
+      (name) => cookieStore.get(name)?.value,
+    ),
   );
   const unlocked = canAccessLevel(combined.level, passedExams);
   const requiredLevel = getRequiredLevelToUnlock(combined.level);

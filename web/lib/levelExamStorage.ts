@@ -1,15 +1,40 @@
 import type { CefrLevel } from "@/data/grammar/dashboardTopics";
+import {
+  clientStorageEvent,
+  clientStorageKey,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
 import { CEFR_LEVEL_ORDER } from "@/lib/topicAccess";
 
-const STORAGE_KEY = "pylmor-passed-level-exams";
-export const PASSED_LEVEL_EXAMS_COOKIE = "pylmor-passed-level-exams";
-export const PASSED_LEVEL_EXAMS_CHANGED_EVENT =
-  "pylmor:passed-level-exams-changed";
+const STORAGE_SUFFIX = "passed-level-exams";
+export const PASSED_LEVEL_EXAMS_COOKIE = clientStorageKey(STORAGE_SUFFIX);
+export const LEGACY_PASSED_LEVEL_EXAMS_COOKIES = [
+  "dilatolyesi-passed-level-exams",
+] as const;
+export const PASSED_LEVEL_EXAMS_CHANGED_EVENT = clientStorageEvent(
+  "passed-level-exams-changed",
+);
 
 const CEFR_LEVEL_SET = new Set<string>(CEFR_LEVEL_ORDER);
 
 function canUseDom(): boolean {
   return typeof window !== "undefined";
+}
+
+function storageKey(): string {
+  return migrateLocalStorageKey(STORAGE_SUFFIX);
+}
+
+export function readPassedLevelExamsFromCookieValues(
+  ...rawValues: Array<string | undefined>
+): CefrLevel[] {
+  for (const raw of rawValues) {
+    const parsed = parsePassedLevelExams(raw);
+    if (parsed.length > 0) {
+      return parsed;
+    }
+  }
+  return [];
 }
 
 function isCefrLevel(value: unknown): value is CefrLevel {
@@ -60,6 +85,9 @@ function syncCookie(levels: readonly CefrLevel[]): void {
   const value = encodeURIComponent(JSON.stringify(levels));
   const maxAge = 60 * 60 * 24 * 365;
   document.cookie = `${PASSED_LEVEL_EXAMS_COOKIE}=${value}; path=/; max-age=${maxAge}; samesite=lax`;
+  for (const legacy of LEGACY_PASSED_LEVEL_EXAMS_COOKIES) {
+    document.cookie = `${legacy}=; path=/; max-age=0; samesite=lax`;
+  }
 }
 
 function readFromCookie(): CefrLevel[] {
@@ -67,17 +95,19 @@ function readFromCookie(): CefrLevel[] {
     return [];
   }
 
-  const match = document.cookie
-    .split("; ")
-    .find((part) => part.startsWith(`${PASSED_LEVEL_EXAMS_COOKIE}=`));
-
-  if (!match) {
-    return [];
+  const cookieParts = document.cookie.split("; ");
+  const names = [
+    PASSED_LEVEL_EXAMS_COOKIE,
+    ...LEGACY_PASSED_LEVEL_EXAMS_COOKIES,
+  ];
+  for (const name of names) {
+    const match = cookieParts.find((part) => part.startsWith(`${name}=`));
+    if (match) {
+      return parsePassedLevelExams(match.slice(name.length + 1));
+    }
   }
 
-  return parsePassedLevelExams(
-    match.slice(PASSED_LEVEL_EXAMS_COOKIE.length + 1),
-  );
+  return [];
 }
 
 export function readPassedLevelExams(): CefrLevel[] {
@@ -86,7 +116,7 @@ export function readPassedLevelExams(): CefrLevel[] {
   }
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(storageKey());
     if (raw !== null) {
       return parsePassedLevelExams(raw);
     }
@@ -101,7 +131,7 @@ export function writePassedLevelExams(levels: readonly CefrLevel[]): void {
   }
 
   const unique = normalizeLevels([...levels]);
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(unique));
+  window.localStorage.setItem(storageKey(), JSON.stringify(unique));
   syncCookie(unique);
   emitChanged();
 }
@@ -121,8 +151,13 @@ export function clearPassedLevelExams(): void {
     return;
   }
 
-  window.localStorage.removeItem(STORAGE_KEY);
-  document.cookie = `${PASSED_LEVEL_EXAMS_COOKIE}=; path=/; max-age=0; samesite=lax`;
+  window.localStorage.removeItem(storageKey());
+  for (const name of [
+    PASSED_LEVEL_EXAMS_COOKIE,
+    ...LEGACY_PASSED_LEVEL_EXAMS_COOKIES,
+  ]) {
+    document.cookie = `${name}=; path=/; max-age=0; samesite=lax`;
+  }
   emitChanged();
 }
 

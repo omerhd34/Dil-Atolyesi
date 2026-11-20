@@ -14,6 +14,7 @@ import { AuthTabs } from "@/components/features/auth/AuthTabs";
 import type { AuthMode } from "@/components/features/auth/auth-types";
 import { useRouter } from "@/i18n/navigation";
 import { getApiErrorCode } from "@/lib/apiClient";
+import { migrateLocalStorageKey } from "@/lib/clientStorageKeys";
 import { createLoginSchema, createRegisterSchema } from "@/lib/authValidation";
 import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/store/authStore";
@@ -71,7 +72,9 @@ export function AuthPanel({ initialMode = "giris" }: AuthPanelProps) {
       return;
     }
 
-    const remembered = window.localStorage.getItem("pylmor-remember-email");
+    const remembered = window.localStorage.getItem(
+      migrateLocalStorageKey("remember-email"),
+    );
     if (remembered) {
       setEmail(remembered);
       setRememberMe(true);
@@ -137,10 +140,11 @@ export function AuthPanel({ initialMode = "giris" }: AuthPanelProps) {
     setFieldErrors({});
 
     try {
+      const rememberKey = migrateLocalStorageKey("remember-email");
       if (rememberMe) {
-        window.localStorage.setItem("pylmor-remember-email", parsed.data.email);
+        window.localStorage.setItem(rememberKey, parsed.data.email);
       } else {
-        window.localStorage.removeItem("pylmor-remember-email");
+        window.localStorage.removeItem(rememberKey);
       }
 
       await login(parsed.data);

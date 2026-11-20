@@ -1,7 +1,12 @@
 import { isTopicExamPassed } from "@/lib/topicProgressStorage";
 
-const STORAGE_KEY = "pylmor-topic-exam-drafts";
-export const TOPIC_EXAM_DRAFT_EVENT = "pylmor:topic-exam-draft";
+import {
+  clientStorageEvent,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
+
+const STORAGE_SUFFIX = "topic-exam-drafts";
+export const TOPIC_EXAM_DRAFT_EVENT = clientStorageEvent("topic-exam-draft");
 
 export type TopicQuizPart =
   | "multiple_choice"
@@ -256,7 +261,9 @@ function readAll(): TopicExamDraftMap {
   }
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+    );
     if (!raw) {
       return {};
     }
@@ -283,9 +290,12 @@ function writeAll(map: TopicExamDraftMap): void {
     return;
   }
   if (Object.keys(map).length === 0) {
-    window.localStorage.removeItem(STORAGE_KEY);
+    window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
   } else {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+    window.localStorage.setItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+      JSON.stringify(map),
+    );
   }
   emitChanged();
 }
@@ -325,7 +335,7 @@ export function clearTopicExamDrafts(): void {
   if (!canUseDom()) {
     return;
   }
-  window.localStorage.removeItem(STORAGE_KEY);
+  window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
   emitChanged();
 }
 

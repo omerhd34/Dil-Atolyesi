@@ -1,7 +1,11 @@
 import type { ExerciseType } from "@/data/grammar/types";
+import {
+  clientStorageEvent,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
 
-const STORAGE_KEY = "pylmor-exercise-drafts";
-export const EXERCISE_DRAFT_EVENT = "pylmor:exercise-draft";
+const STORAGE_SUFFIX = "exercise-drafts";
+export const EXERCISE_DRAFT_EVENT = clientStorageEvent("exercise-draft");
 
 const EXERCISE_TYPES: readonly ExerciseType[] = [
   "multiple_choice",
@@ -279,7 +283,9 @@ function readStore(): ExerciseDraftStore {
   }
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+    );
     if (!raw) {
       return emptyStore();
     }
@@ -372,12 +378,15 @@ function writeStore(store: ExerciseDraftStore): void {
     Object.keys(store.sessions).length === 0 &&
     Object.keys(store.sessionOrders).length === 0
   ) {
-    window.localStorage.removeItem(STORAGE_KEY);
+    window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
     emitChanged();
     return;
   }
 
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+  window.localStorage.setItem(
+    migrateLocalStorageKey(STORAGE_SUFFIX),
+    JSON.stringify(store),
+  );
   emitChanged();
 }
 
@@ -512,5 +521,5 @@ export function clearExerciseDraftStorage(): void {
   if (!canUseDom()) {
     return;
   }
-  window.localStorage.removeItem(STORAGE_KEY);
+  window.localStorage.removeItem(migrateLocalStorageKey(STORAGE_SUFFIX));
 }

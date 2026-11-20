@@ -4,9 +4,15 @@ export type NotificationPreferences = {
   browserPush: boolean;
 };
 
-const STORAGE_KEY = "pylmor-notification-preferences";
-export const NOTIFICATION_PREFERENCES_CHANGED_EVENT =
-  "pylmor:notification-preferences-changed";
+import {
+  clientStorageEvent,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
+
+const STORAGE_SUFFIX = "notification-preferences";
+export const NOTIFICATION_PREFERENCES_CHANGED_EVENT = clientStorageEvent(
+  "notification-preferences-changed",
+);
 
 export const DEFAULT_NOTIFICATION_PREFERENCES: NotificationPreferences = {
   quizReady: true,
@@ -49,7 +55,9 @@ export function readNotificationPreferences(): NotificationPreferences {
   }
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(STORAGE_SUFFIX),
+    );
     if (!raw) {
       return DEFAULT_NOTIFICATION_PREFERENCES;
     }
@@ -83,7 +91,10 @@ export function writeNotificationPreferences(
   if (!canUseStorage()) {
     return;
   }
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(preferences));
+  window.localStorage.setItem(
+    migrateLocalStorageKey(STORAGE_SUFFIX),
+    JSON.stringify(preferences),
+  );
   emitChanged(preferences);
 }
 

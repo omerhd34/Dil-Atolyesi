@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "@/i18n/navigation";
 import { isPanelDashboardPath, resolvePanelDashboardUrl } from "@/lib/panelNav";
 
-const PANEL_HASH_EVENT = "pylmor:panel-hash";
+import { PANEL_HASH_EVENT } from "@/lib/clientStorageKeys";
 
 export function readPanelHash(): string {
   if (typeof window === "undefined") return "";

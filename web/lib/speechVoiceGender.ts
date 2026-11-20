@@ -1,6 +1,16 @@
-export const SPEECH_VOICE_GENDER_STORAGE_KEY = "pylmor-speech-voice-gender";
-export const SPEECH_VOICE_GENDER_CHANGED_EVENT =
-  "pylmor:speech-voice-gender-changed";
+import {
+  clientStorageEvent,
+  clientStorageKey,
+  migrateLocalStorageKey,
+} from "@/lib/clientStorageKeys";
+
+const SPEECH_VOICE_GENDER_SUFFIX = "speech-voice-gender";
+export const SPEECH_VOICE_GENDER_STORAGE_KEY = clientStorageKey(
+  SPEECH_VOICE_GENDER_SUFFIX,
+);
+export const SPEECH_VOICE_GENDER_CHANGED_EVENT = clientStorageEvent(
+  "speech-voice-gender-changed",
+);
 
 export const SPEECH_VOICE_GENDERS = ["female", "male"] as const;
 
@@ -158,7 +168,9 @@ export function getSpeechVoiceGender(): SpeechVoiceGender {
   }
 
   try {
-    const raw = window.localStorage.getItem(SPEECH_VOICE_GENDER_STORAGE_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(SPEECH_VOICE_GENDER_SUFFIX),
+    );
     if (!raw || !isSpeechVoiceGender(raw)) {
       return DEFAULT_SPEECH_VOICE_GENDER;
     }
@@ -173,7 +185,10 @@ export function setSpeechVoiceGender(gender: SpeechVoiceGender): void {
     return;
   }
 
-  window.localStorage.setItem(SPEECH_VOICE_GENDER_STORAGE_KEY, gender);
+  window.localStorage.setItem(
+    migrateLocalStorageKey(SPEECH_VOICE_GENDER_SUFFIX),
+    gender,
+  );
   window.dispatchEvent(
     new CustomEvent(SPEECH_VOICE_GENDER_CHANGED_EVENT, { detail: { gender } }),
   );

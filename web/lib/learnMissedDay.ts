@@ -1,5 +1,6 @@
-import { LEARN_WORD_LOCK_MS } from "@/lib/vocabularyLimits";
+import { migrateLocalStorageKey } from "@/lib/clientStorageKeys";
 import { readNotifications } from "@/lib/notificationsStorage";
+import { LEARN_WORD_LOCK_MS } from "@/lib/vocabularyLimits";
 
 export type LearnMissedDayInput = {
   nowMs: number;
@@ -14,7 +15,7 @@ export type LearnMissedDayNotice = {
   anchorMs: number;
 };
 
-const LAST_NOTIFIED_KEY = "pylmor-learn-missed-last-notified-at";
+const LAST_NOTIFIED_SUFFIX = "learn-missed-last-notified-at";
 
 function canUseStorage(): boolean {
   return typeof window !== "undefined";
@@ -35,7 +36,9 @@ export function getLastLearnMissedNotifiedAt(): number | null {
   }
 
   try {
-    const raw = window.localStorage.getItem(LAST_NOTIFIED_KEY);
+    const raw = window.localStorage.getItem(
+      migrateLocalStorageKey(LAST_NOTIFIED_SUFFIX),
+    );
     if (!raw) {
       return null;
     }
@@ -50,7 +53,10 @@ export function markLearnMissedNotified(atMs: number): void {
   if (!canUseStorage()) {
     return;
   }
-  window.localStorage.setItem(LAST_NOTIFIED_KEY, new Date(atMs).toISOString());
+  window.localStorage.setItem(
+    migrateLocalStorageKey(LAST_NOTIFIED_SUFFIX),
+    new Date(atMs).toISOString(),
+  );
 }
 
 export function wasLearnMissedNotifiedRecently(nowMs: number): boolean {
