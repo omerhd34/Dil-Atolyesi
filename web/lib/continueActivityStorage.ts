@@ -1,6 +1,10 @@
+import { isVocabularyReferenceId } from "@/lib/vocabularyReferenceRoutes";
+
 export type ContinueActivityKind =
   | "vocabulary_category"
   | "vocabulary_exercises"
+  | "vocabulary_reference"
+  | "vocabulary_reference_exercises"
   | "vocabulary_quiz"
   | "topic_lesson"
   | "topic_exercises"
@@ -27,6 +31,7 @@ export type ContinueActivitySkill =
 export type ContinueActivity = {
   kind: ContinueActivityKind;
   href: string;
+  vocabularyRefId?: string;
   topicId?: string;
   categoryId?: string;
   combinedId?: string;
@@ -46,6 +51,8 @@ export const CONTINUE_ACTIVITY_LIMIT = 2;
 const CONTINUE_ACTIVITY_KINDS: readonly ContinueActivityKind[] = [
   "vocabulary_category",
   "vocabulary_exercises",
+  "vocabulary_reference",
+  "vocabulary_reference_exercises",
   "vocabulary_quiz",
   "topic_lesson",
   "topic_exercises",
@@ -108,6 +115,8 @@ export function activitySkill(
   switch (activity.kind) {
     case "vocabulary_category":
     case "vocabulary_exercises":
+    case "vocabulary_reference":
+    case "vocabulary_reference_exercises":
     case "vocabulary_quiz":
       return "vocabulary";
     case "topic_lesson":
@@ -135,6 +144,7 @@ export function continueActivitySectionKey(
     ContinueActivity,
     | "kind"
     | "href"
+    | "vocabularyRefId"
     | "topicId"
     | "categoryId"
     | "combinedId"
@@ -173,6 +183,13 @@ export function continueActivitySectionKey(
       activity.kind === "speaking_exercises")
   ) {
     return `speaking:${activity.speakingId}`;
+  }
+  if (
+    activity.vocabularyRefId &&
+    (activity.kind === "vocabulary_reference" ||
+      activity.kind === "vocabulary_reference_exercises")
+  ) {
+    return `vocabulary-ref:${activity.vocabularyRefId}:${activity.href}`;
   }
   if (
     activity.categoryId &&
@@ -218,11 +235,29 @@ function normalizeActivity(value: unknown): ContinueActivity | null {
     updatedAt: record.updatedAt,
   };
 
+  if (
+    typeof record.vocabularyRefId === "string" &&
+    record.vocabularyRefId.length > 0
+  ) {
+    activity.vocabularyRefId = record.vocabularyRefId;
+  }
   if (typeof record.topicId === "string" && record.topicId.length > 0) {
     activity.topicId = record.topicId;
   }
   if (typeof record.categoryId === "string" && record.categoryId.length > 0) {
     activity.categoryId = record.categoryId;
+    if (
+      (kind === "vocabulary_category" || kind === "vocabulary_exercises") &&
+      isVocabularyReferenceId(record.categoryId)
+    ) {
+      activity.vocabularyRefId = record.categoryId;
+      delete activity.categoryId;
+      kind =
+        kind === "vocabulary_exercises"
+          ? "vocabulary_reference_exercises"
+          : "vocabulary_reference";
+      activity.kind = kind;
+    }
   }
   if (typeof record.combinedId === "string" && record.combinedId.length > 0) {
     activity.combinedId = record.combinedId;

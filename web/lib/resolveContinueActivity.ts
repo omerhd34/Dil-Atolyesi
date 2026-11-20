@@ -4,12 +4,14 @@ import { getListeningSectionById } from "@/data/listenings";
 import { getReadingSectionById } from "@/data/readings";
 import { getWritingSectionById } from "@/data/writings";
 import { getVocabularyCategoryById } from "@/data/vocabulary";
+import { isVocabularyReferenceId } from "@/lib/vocabularyReferenceRoutes";
 import { getSpeakingSectionById } from "@/lib/speakingContent";
 import type {
   ContinueActivity,
   ContinueActivityKind,
   ContinueActivitySkill,
 } from "@/lib/continueActivityStorage";
+import { activitySkill } from "@/lib/continueActivityStorage";
 import { LISTENING_SECTION_ANCHORS } from "@/lib/listeningSectionTab";
 import {
   isReadingPracticeHash,
@@ -17,13 +19,6 @@ import {
 } from "@/lib/readingSectionTab";
 import { SPEAKING_SECTION_ANCHORS } from "@/lib/speakingSectionTab";
 import { WRITING_SECTION_ANCHORS } from "@/lib/writingSectionTab";
-
-const VOCABULARY_STATIC_SEGMENTS = new Set([
-  "exam",
-  "today-worked",
-  "known-words",
-  "verbs",
-]);
 
 const PANEL_HUB_BY_HASH: Record<string, ContinueActivitySkill> = {
   grammer: "topics",
@@ -108,23 +103,38 @@ export function parseContinueActivityFromPath(
 
   const vocabularyMatch = path.match(/^\/panel\/vocabulary\/([^/]+)$/);
   if (vocabularyMatch) {
-    const categoryId = vocabularyMatch[1];
-    if (!VOCABULARY_STATIC_SEGMENTS.has(categoryId)) {
-      const params = new URLSearchParams(
-        search.startsWith("?") ? search.slice(1) : search,
-      );
-      const tab = params.get("tab");
-      const isExercises = tab === "exercises";
-      const href = isExercises
-        ? `/panel/vocabulary/${categoryId}?tab=exercises`
-        : `/panel/vocabulary/${categoryId}`;
+    const segment = vocabularyMatch[1];
+    const params = new URLSearchParams(
+      search.startsWith("?") ? search.slice(1) : search,
+    );
+    const query = params.toString();
 
+    if (isVocabularyReferenceId(segment)) {
+      const href = query
+        ? `/panel/vocabulary/${segment}?${query}`
+        : `/panel/vocabulary/${segment}`;
+      const isVerbExercises =
+        segment === "verbs" && params.get("tab") === "exercises";
       return {
-        kind: isExercises ? "vocabulary_exercises" : "vocabulary_category",
+        kind: isVerbExercises
+          ? "vocabulary_reference_exercises"
+          : "vocabulary_reference",
         href,
-        categoryId,
+        vocabularyRefId: segment,
       };
     }
+
+    const tab = params.get("tab");
+    const isExercises = tab === "exercises";
+    const href = isExercises
+      ? `/panel/vocabulary/${segment}?tab=exercises`
+      : `/panel/vocabulary/${segment}`;
+
+    return {
+      kind: isExercises ? "vocabulary_exercises" : "vocabulary_category",
+      href,
+      categoryId: segment,
+    };
   }
 
   const combinedMatch = path.match(/^\/panel\/grammer\/combined\/([^/]+)$/);
@@ -247,35 +257,34 @@ export type ContinueActivityDisplay = {
   kindLabel: string;
 };
 
+type VocabularyReferenceTitles = Record<
+  | "today-worked"
+  | "known-words"
+  | "verbs"
+  | "false-friends"
+  | "phrasal-verbs"
+  | "prepositions",
+  string
+>;
+
+type SkillHubInnerTitles = Record<ContinueActivitySkill, string>;
+
 type ContinueActivityLabels = {
   vocabularyQuiz: string;
-  vocabularyCategory: string;
-  vocabularyExercises: string;
-  topicLesson: string;
-  topicExercises: string;
-  topicExam: string;
-  exam: string;
+  vocabularyReferenceTitles: VocabularyReferenceTitles;
   combinedExercise: string;
-  readingText: string;
-  readingExercises: string;
-  listeningAudio: string;
-  listeningExercises: string;
-  writingModel: string;
-  writingExercises: string;
-  speakingModel: string;
-  speakingExercises: string;
-  sectionKind: string;
   skillReading: string;
   skillListening: string;
   skillWriting: string;
   skillSpeaking: string;
   skillTopics: string;
   skillVocabulary: string;
+  skillHubInnerTitles: SkillHubInnerTitles;
   fallbackTitle: string;
 };
 
-function skillHubTitle(
-  skill: ContinueActivitySkill | undefined,
+function mainSectionLabel(
+  skill: ContinueActivitySkill | null,
   labels: ContinueActivityLabels,
 ): string {
   switch (skill) {
@@ -296,16 +305,42 @@ function skillHubTitle(
   }
 }
 
+function skillHubInnerTitle(
+  skill: ContinueActivitySkill | undefined,
+  labels: ContinueActivityLabels,
+): string {
+  if (!skill) {
+    return labels.fallbackTitle;
+  }
+  return labels.skillHubInnerTitles[skill] ?? labels.fallbackTitle;
+}
+
 export function resolveContinueActivityDisplay(
   activity: ContinueActivity,
   labels: ContinueActivityLabels,
 ): ContinueActivityDisplay {
+  const sectionLabel = mainSectionLabel(activitySkill(activity), labels);
+
   switch (activity.kind) {
     case "vocabulary_quiz":
       return {
         title: labels.vocabularyQuiz,
-        kindLabel: labels.exam,
+        kindLabel: sectionLabel,
       };
+    case "vocabulary_reference":
+    case "vocabulary_reference_exercises": {
+      const refId = activity.vocabularyRefId;
+      const title =
+        refId && refId in labels.vocabularyReferenceTitles
+          ? labels.vocabularyReferenceTitles[
+              refId as keyof VocabularyReferenceTitles
+            ]
+          : labels.fallbackTitle;
+      return {
+        title,
+        kindLabel: sectionLabel,
+      };
+    }
     case "vocabulary_category":
     case "vocabulary_exercises": {
       const category = activity.categoryId
@@ -313,10 +348,7 @@ export function resolveContinueActivityDisplay(
         : undefined;
       return {
         title: category?.title ?? labels.fallbackTitle,
-        kindLabel:
-          activity.kind === "vocabulary_exercises"
-            ? labels.vocabularyExercises
-            : labels.vocabularyCategory,
+        kindLabel: sectionLabel,
       };
     }
     case "topic_lesson":
@@ -325,15 +357,9 @@ export function resolveContinueActivityDisplay(
       const topic = activity.topicId
         ? getDashboardTopicById(activity.topicId)
         : undefined;
-      const kindLabel =
-        activity.kind === "topic_lesson"
-          ? labels.topicLesson
-          : activity.kind === "topic_exercises"
-            ? labels.topicExercises
-            : labels.topicExam;
       return {
         title: topic?.title ?? labels.fallbackTitle,
-        kindLabel,
+        kindLabel: sectionLabel,
       };
     }
     case "combined_exercise": {
@@ -344,7 +370,7 @@ export function resolveContinueActivityDisplay(
         title: combined
           ? `${combined.level} · ${labels.combinedExercise}`
           : labels.combinedExercise,
-        kindLabel: labels.combinedExercise,
+        kindLabel: sectionLabel,
       };
     }
     case "reading_text":
@@ -354,10 +380,7 @@ export function resolveContinueActivityDisplay(
         : null;
       return {
         title: section?.title ?? labels.fallbackTitle,
-        kindLabel:
-          activity.kind === "reading_exercises"
-            ? labels.readingExercises
-            : labels.readingText,
+        kindLabel: sectionLabel,
       };
     }
     case "listening_audio":
@@ -367,10 +390,7 @@ export function resolveContinueActivityDisplay(
         : null;
       return {
         title: section?.title ?? labels.fallbackTitle,
-        kindLabel:
-          activity.kind === "listening_exercises"
-            ? labels.listeningExercises
-            : labels.listeningAudio,
+        kindLabel: sectionLabel,
       };
     }
     case "writing_model":
@@ -380,10 +400,7 @@ export function resolveContinueActivityDisplay(
         : null;
       return {
         title: section?.title ?? labels.fallbackTitle,
-        kindLabel:
-          activity.kind === "writing_exercises"
-            ? labels.writingExercises
-            : labels.writingModel,
+        kindLabel: sectionLabel,
       };
     }
     case "speaking_model":
@@ -393,16 +410,13 @@ export function resolveContinueActivityDisplay(
         : null;
       return {
         title: section?.title ?? labels.fallbackTitle,
-        kindLabel:
-          activity.kind === "speaking_exercises"
-            ? labels.speakingExercises
-            : labels.speakingModel,
+        kindLabel: sectionLabel,
       };
     }
     case "skill_hub":
       return {
-        title: skillHubTitle(activity.skill, labels),
-        kindLabel: labels.sectionKind,
+        title: skillHubInnerTitle(activity.skill, labels),
+        kindLabel: sectionLabel,
       };
   }
 }

@@ -37,6 +37,8 @@ function continueActivityIcon(activity: ContinueActivity): LucideIcon {
     case "speaking_exercises":
       return PencilLine;
     case "vocabulary_category":
+    case "vocabulary_reference":
+    case "vocabulary_reference_exercises":
       return BookA;
     case "reading_text":
       return BookOpen;
@@ -125,28 +127,29 @@ export function QuickContinueCard() {
 
   const labels = {
     vocabularyQuiz: t("quickContinueKindQuiz"),
-    vocabularyCategory: t("quickContinueKindCategory"),
-    vocabularyExercises: t("quickContinueKindCategoryExercises"),
-    topicLesson: t("quickContinueKindLesson"),
-    topicExercises: t("quickContinueKindExercises"),
-    topicExam: t("quickContinueKindTopicExam"),
-    exam: t("quickContinueKindExam"),
-    combinedExercise: t("quickContinueKindCombined"),
-    readingText: t("quickContinueKindReadingText"),
-    readingExercises: t("quickContinueKindReadingExercises"),
-    listeningAudio: t("quickContinueKindListeningAudio"),
-    listeningExercises: t("quickContinueKindListeningExercises"),
-    writingModel: t("quickContinueKindWritingModel"),
-    writingExercises: t("quickContinueKindWritingExercises"),
-    speakingModel: t("quickContinueKindSpeakingModel"),
-    speakingExercises: t("quickContinueKindSpeakingExercises"),
-    sectionKind: t("quickContinueKindSection"),
+    vocabularyReferenceTitles: {
+      "today-worked": tNav("vocabularyStudiedToday"),
+      "known-words": tNav("vocabularyKnown"),
+      verbs: tNav("vocabularyVerbs"),
+      "false-friends": tNav("vocabularyFalseFriends"),
+      "phrasal-verbs": tNav("vocabularyPhrasalVerbs"),
+      prepositions: tNav("vocabularyPrepositions"),
+    },
+    combinedExercise: t("combinedExerciseTitle"),
     skillReading: tNav("reading"),
     skillListening: tNav("listening"),
     skillWriting: tNav("writing"),
     skillSpeaking: tNav("speaking"),
     skillTopics: tNav("topics"),
     skillVocabulary: tNav("vocabulary"),
+    skillHubInnerTitles: {
+      vocabulary: t("vocabularyTitle"),
+      topics: t("topicsTitle"),
+      reading: t("skillReadingTitle"),
+      listening: t("skillListeningTitle"),
+      writing: t("skillWritingTitle"),
+      speaking: t("skillSpeakingTitle"),
+    },
     fallbackTitle: t("quickContinueFallback"),
   };
 
