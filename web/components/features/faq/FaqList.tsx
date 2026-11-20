@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
+import { FAQ_KEYS } from "@/components/features/faq/faqKeys";
 import { FaqItem } from "@/components/features/faq/FaqItem";
-
-const FAQ_KEYS = ["what", "level", "ai", "free", "pace", "contact"] as const;
 
 export function FaqList() {
   const t = useTranslations("Faq");

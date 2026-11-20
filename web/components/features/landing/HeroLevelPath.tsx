@@ -1,34 +1,63 @@
-const LEVELS = ["0", "A1", "A2", "B1", "B2", "C1", "C2"] as const;
+import { ChevronRight } from "lucide-react";
+import type { ReactNode } from "react";
+
+const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 
 type HeroLevelPathProps = {
   label: string;
-  caption: string;
+  caption: ReactNode;
 };
+
+const levelPillBase =
+  "inline-flex shrink-0 items-center justify-center rounded-full border px-3 py-2 font-display text-sm font-semibold tracking-tight sm:px-4 sm:py-2.5 sm:text-base lg:text-lg";
 
 export function HeroLevelPath({ label, caption }: HeroLevelPathProps) {
   return (
-    <div className="border-t border-border/70 pt-7">
-      <p className="text-xs font-semibold tracking-[0.16em] text-brand-800/70 uppercase dark:text-brand-400/70">
+    <div className="space-y-6">
+      <p className="text-sm font-semibold tracking-[0.18em] text-brand-800/80 uppercase dark:text-brand-400/85">
         {label}
       </p>
 
-      <ol className="mt-4 flex w-full flex-wrap items-center gap-y-3 sm:flex-nowrap">
-        {LEVELS.map((level, index) => (
-          <li key={level} className="contents">
-            <span className="shrink-0 font-display text-xl font-semibold tracking-tight text-brand-950 sm:text-3xl lg:text-4xl dark:text-brand-100">
-              {level}
-            </span>
-            {index < LEVELS.length - 1 ? (
+      <ol
+        aria-label={label}
+        className="flex w-full max-w-full flex-nowrap items-center justify-center gap-1 overflow-x-auto overscroll-x-contain [-ms-overflow-style:none] scrollbar-none sm:gap-1.5 [&::-webkit-scrollbar]:hidden"
+      >
+        {LEVELS.flatMap((level, index) => {
+          const pill = (
+            <li key={level}>
               <span
-                aria-hidden="true"
-                className="mx-2 hidden h-px min-w-4 flex-1 bg-brand-400/70 sm:mx-3 sm:block lg:mx-4 dark:bg-brand-600"
+                className={
+                  index === 0
+                    ? `${levelPillBase} border-sky-500/35 bg-sky-500/12 text-sky-800 shadow-[inset_0_0_0_1px_rgb(255_255_255/35%)] dark:border-sky-400/35 dark:bg-sky-500/18 dark:text-sky-200`
+                    : `${levelPillBase} border-border/80 bg-surface/70 text-brand-900 dark:bg-brand-950/40 dark:text-brand-100`
+                }
+              >
+                {level}
+              </span>
+            </li>
+          );
+
+          if (index === 0) {
+            return [pill];
+          }
+
+          return [
+            <li
+              key={`${level}-sep`}
+              aria-hidden="true"
+              className="flex shrink-0 items-center justify-center px-0.5 sm:px-1"
+            >
+              <ChevronRight
+                className="size-4 text-brand-500/70 sm:size-4 dark:text-brand-400/75"
+                strokeWidth={2.25}
               />
-            ) : null}
-          </li>
-        ))}
+            </li>,
+            pill,
+          ];
+        })}
       </ol>
 
-      <p className="mt-4 max-w-4xl text-sm leading-6 text-brand-600 dark:text-brand-400">
+      <p className="text-sm leading-6 text-brand-600 sm:text-base sm:leading-7 dark:text-brand-400">
         {caption}
       </p>
     </div>

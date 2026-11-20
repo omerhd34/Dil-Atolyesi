@@ -1,42 +1,47 @@
+import { BookOpen, Bot, Gauge, TrendingUp } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { EducationStep } from "@/components/features/landing/EducationStep";
-import { Container } from "@/components/ui/Container";
+import { EducationStepCard } from "@/components/features/landing/EducationStepCard";
+import { LandingReveal } from "@/components/features/landing/LandingReveal";
+import { LandingSectionFrame } from "@/components/features/landing/LandingSectionFrame";
+import { LandingSectionIntro } from "@/components/features/landing/LandingSectionIntro";
 
-const STEP_KEYS = ["level", "lessons", "practice", "progress"] as const;
+const STEPS = [
+  { key: "level", Icon: Gauge },
+  { key: "lessons", Icon: BookOpen },
+  { key: "practice", Icon: Bot },
+  { key: "progress", Icon: TrendingUp },
+] as const satisfies ReadonlyArray<{
+  key: string;
+  Icon: LucideIcon;
+}>;
 
 export function LandingEducationSystem() {
   const t = useTranslations("EducationSystem");
+  const headingId = "education-system-heading";
 
   return (
-    <section
-      id="egitim-sistemi"
-      aria-labelledby="education-system-heading"
-      className="scroll-mt-20 border-t border-border"
-    >
-      <Container className="py-16 sm:py-20">
-        <div className="max-w-3xl space-y-3">
-          <h2
-            id="education-system-heading"
-            className="page-title"
-          >
-            {t("title")}
-          </h2>
-          <p className="text-base leading-7 text-brand-600 dark:text-brand-400">
-            {t("subtitle")}
-          </p>
-        </div>
+    <LandingSectionFrame id="egitim-sistemi" headingId={headingId}>
+      <LandingSectionIntro
+        headingId={headingId}
+        title={t("title")}
+        description={t("subtitle")}
+      />
 
-        <ol className="mt-10">
-          {STEP_KEYS.map((key, index) => (
-            <EducationStep
-              key={key}
-              index={index + 1}
-              title={t(`steps.${key}.title`)}
-              body={t(`steps.${key}.body`)}
-            />
-          ))}
-        </ol>
-      </Container>
-    </section>
+      <ul className="mt-12 grid list-none gap-5 sm:grid-cols-2 lg:gap-6">
+        {STEPS.map(({ key, Icon }, index) => (
+          <li key={key}>
+            <LandingReveal delayMs={index * 100} className="h-full">
+              <EducationStepCard
+                index={index + 1}
+                title={t(`steps.${key}.title`)}
+                body={t(`steps.${key}.body`)}
+                Icon={Icon}
+              />
+            </LandingReveal>
+          </li>
+        ))}
+      </ul>
+    </LandingSectionFrame>
   );
 }
