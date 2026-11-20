@@ -22,6 +22,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { PanelLeftOpen, PanelRightOpen } from "lucide-react";
 import {
   SIDEBAR_COOKIE_MAX_AGE,
   SIDEBAR_COOKIE_NAME,
@@ -248,28 +249,45 @@ function Sidebar({
   );
 }
 
+const sidebarTriggerClassName =
+  "size-8 shrink-0 rounded-none border-0 bg-transparent! p-0 text-sidebar-foreground/80 shadow-none hover:bg-transparent! hover:text-sky-700 focus-visible:text-sky-700 dark:hover:text-sky-300 dark:focus-visible:text-sky-300 aria-expanded:bg-transparent! focus-visible:ring-2 [&_svg]:text-current";
+
 function SidebarTrigger({
   className,
   onClick,
-  children,
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { toggleSidebar } = useSidebar();
+  const { toggleSidebar, state, isMobile, openMobile } = useSidebar();
+  const collapsed = state === "collapsed";
+  const showExpand = isMobile ? !openMobile : collapsed;
 
   return (
     <Button
       data-sidebar="trigger"
       data-slot="sidebar-trigger"
+      data-btn-motion="off"
       variant="ghost"
       size="icon-sm"
-      className={cn(className)}
+      className={cn(sidebarTriggerClassName, className)}
       onClick={(event) => {
         onClick?.(event);
         toggleSidebar();
       }}
       {...props}
     >
-      {children}
+      {showExpand ? (
+        <PanelLeftOpen
+          className="size-4.5 text-current"
+          strokeWidth={1.75}
+          aria-hidden
+        />
+      ) : (
+        <PanelRightOpen
+          className="size-4.5 text-current"
+          strokeWidth={1.75}
+          aria-hidden
+        />
+      )}
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );
@@ -475,13 +493,13 @@ function SidebarMenuItem({ className, ...props }: React.ComponentProps<"li">) {
 }
 
 const sidebarMenuButtonVariants = cva(
-  "peer/menu-button group/menu-button flex w-full items-center gap-2 overflow-hidden rounded-[13px] p-2 text-left text-sm ring-sidebar-ring outline-hidden transition-[width,height,padding,border-radius] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:h-[42px]! group-data-[collapsible=icon]:w-full! group-data-[collapsible=icon]:justify-center! group-data-[collapsible=icon]:gap-0! group-data-[collapsible=icon]:p-0! group-data-[collapsible=icon]:[&>span]:hidden hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-open:hover:bg-sidebar-accent data-open:hover:text-sidebar-accent-foreground data-active:bg-sidebar-accent data-active:font-medium data-active:text-sidebar-accent-foreground [&_svg]:size-4 [&_svg]:shrink-0 [&>span:last-child]:truncate",
+  "peer/menu-button group/menu-button flex w-full items-center gap-2 overflow-hidden rounded-[13px] p-2 text-left text-sm ring-sidebar-ring outline-hidden transition-[width,height,padding,border-radius,background-color,color,transform,opacity,box-shadow] duration-950 ease-[cubic-bezier(0.33,0,0.2,1)] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:h-[42px]! group-data-[collapsible=icon]:w-full! group-data-[collapsible=icon]:justify-center! group-data-[collapsible=icon]:gap-0! group-data-[collapsible=icon]:p-0! group-data-[collapsible=icon]:[&>span]:hidden focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0 [&>span:last-child]:truncate",
   {
     variants: {
       variant: {
-        default: "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+        default: "",
         outline:
-          "bg-background shadow-[0_0_0_1px_var(--sidebar-border)] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_var(--sidebar-accent)]",
+          "bg-background shadow-[0_0_0_1px_var(--sidebar-border)] hover:shadow-[0_0_0_1px_var(--sidebar-accent)]",
       },
       size: {
         default: "h-8 text-sm",

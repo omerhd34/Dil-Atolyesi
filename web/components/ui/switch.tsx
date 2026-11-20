@@ -32,6 +32,7 @@ function Switch({
       role="switch"
       aria-checked={isChecked}
       disabled={disabled}
+      data-btn-motion="off"
       data-slot="switch"
       data-size={size}
       data-checked={isChecked ? "" : undefined}

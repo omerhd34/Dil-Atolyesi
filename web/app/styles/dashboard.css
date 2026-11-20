@@ -5,7 +5,7 @@
 }
 
 .dashboard-panel--stat {
-  @apply flex h-full flex-col;
+  @apply flex h-full flex-col pt-3;
 }
 
 .dashboard-panel__label {

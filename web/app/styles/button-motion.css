@@ -1,0 +1,241 @@
+@layer components {
+  .interaction-motion {
+    transition-property:
+      background-color, border-color, color, box-shadow, transform, filter,
+      opacity;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  .dialog-close-button {
+    transition-property: background-color, color, opacity;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  .dialog-close-button svg {
+    transition-property: color, opacity;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+    transform: none;
+  }
+
+  .vocabulary-speak-button {
+    transition-property: background-color, border-color;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  .vocabulary-speak-button svg {
+    transform: none;
+    transition: none;
+  }
+
+  .word-jump-nav-control svg {
+    transform: none;
+    transition: none;
+  }
+
+  :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
+      :disabled
+    ):not([aria-disabled="true"]):not([data-btn-motion="off"]) {
+    transition-property:
+      background-color, border-color, box-shadow, color, filter, transform,
+      opacity;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
+      :disabled
+    ):not([aria-disabled="true"]):not([data-btn-motion="off"])
+    svg {
+    transition-property: transform, opacity, color;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
+        :disabled
+      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):hover {
+      transform: translateY(-4px);
+    }
+
+    :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
+        :disabled
+      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):hover
+      svg {
+      transform: translateX(3px);
+      opacity: 0.9;
+    }
+
+    :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
+        :disabled
+      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):active {
+      transform: translateY(1px);
+      transition-duration: 0.45s;
+    }
+
+    :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
+        :disabled
+      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):active
+      svg {
+      transform: translateX(0);
+      opacity: 1;
+      transition-duration: 0.38s;
+    }
+
+    .vocabulary-speak-button:hover svg,
+    .vocabulary-speak-button:active svg,
+    .word-jump-nav-control:hover svg,
+    .word-jump-nav-control:active svg {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  [role="button"]:not([aria-disabled="true"]):not([data-btn-motion="off"]) {
+    transition-property:
+      background-color, border-color, box-shadow, color, filter, transform,
+      opacity;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    [role="button"]:not([aria-disabled="true"]):not(
+        [data-btn-motion="off"]
+      ):hover {
+      transform: translateY(-4px);
+    }
+
+    [role="button"]:not([aria-disabled="true"]):not(
+        [data-btn-motion="off"]
+      ):active {
+      transform: translateY(1px);
+      transition-duration: 0.45s;
+    }
+  }
+
+  .bar-badged.is-nav[data-nav-lift]:has([data-slot="sidebar-menu-button"]:hover)
+    [data-slot="sidebar-menu-button"],
+  .bar-badged.is-nav[data-nav-lift]:has(
+      [data-slot="sidebar-menu-button"]:focus-visible
+    )
+    [data-slot="sidebar-menu-button"] {
+    transform: none;
+  }
+
+  .notification-filter-tab,
+  .notification-filter-tab:hover,
+  .notification-filter-tab:active,
+  .notification-filter-tab * {
+    transition: none;
+    transform: none;
+  }
+
+  .notification-list-item,
+  .quick-continue-row-link,
+  .quick-continue-row-link .quick-continue-row-icon,
+  .quick-continue-row-link .quick-continue-row-title,
+  .quick-continue-row-link .quick-continue-chevron {
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  .notification-list-item {
+    transition-property: transform;
+    transition-duration: 0.95s;
+  }
+
+  .quick-continue-row-link,
+  .quick-continue-row-link .quick-continue-row-icon,
+  .quick-continue-row-link .quick-continue-row-title,
+  .quick-continue-row-link .quick-continue-chevron {
+    transition-duration: 0.95s;
+  }
+
+  .quick-continue-row-link {
+    transition-property: background-color, color;
+  }
+
+  .quick-continue-row-link .quick-continue-row-icon,
+  .quick-continue-row-link .quick-continue-row-title,
+  .quick-continue-row-link .quick-continue-chevron {
+    transition-property: transform, background-color, color, box-shadow;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .notification-list-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .notification-list-item:hover svg {
+      transform: none;
+    }
+
+    .notification-settings-link .notification-settings-chevron {
+      transition-property: transform;
+      transition-duration: 0.95s;
+      transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+    }
+
+    .notification-settings-link:hover .notification-settings-chevron {
+      transform: translateX(3px);
+    }
+
+    .notification-list-item:hover .quick-continue-chevron {
+      transform: translateX(3px);
+    }
+  }
+
+  .panel-motion-card {
+    transition-property:
+      transform, background-color, border-color, box-shadow, color;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  .panel-motion-card svg {
+    transition-property: transform, opacity, color;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  .panel-motion-card-icon {
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .panel-motion-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .panel-motion-card:hover svg {
+      transform: translateX(3px);
+      opacity: 0.9;
+    }
+
+    .panel-motion-card--icons-static:hover svg {
+      transform: none;
+      opacity: 1;
+    }
+
+    .panel-motion-card:active {
+      transform: translateY(1px);
+      transition-duration: 0.45s;
+    }
+
+    .panel-motion-card:active svg {
+      transform: translateX(0);
+      opacity: 1;
+      transition-duration: 0.38s;
+    }
+
+    .panel-motion-card--icons-static:active svg {
+      transform: none;
+    }
+  }
+}

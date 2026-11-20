@@ -40,6 +40,23 @@
   font-size: 0.75rem;
 }
 
+.bar-badged.is-nav[data-nav-lift] {
+  transition-property: transform;
+  transition-duration: 0.95s;
+  transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bar-badged.is-nav[data-nav-lift]:has(
+      [data-slot="sidebar-menu-button"]:hover
+    ),
+  .bar-badged.is-nav[data-nav-lift]:has(
+      [data-slot="sidebar-menu-button"]:focus-visible
+    ) {
+    transform: translateY(-4px);
+  }
+}
+
 .bar-badged.is-nav .bar-badge.is-wide {
   min-width: 2.15rem;
   padding-inline: 0.45rem;

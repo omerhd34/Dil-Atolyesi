@@ -15,6 +15,8 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   return (
     <Link
+      data-slot="button"
+      data-btn-motion={variant === "link" ? "off" : undefined}
       className={cn(
         buttonVariants({ variant, size }),
         "cursor-pointer",

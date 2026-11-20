@@ -3,14 +3,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonBase =
-  "group/button inline-flex shrink-0 cursor-pointer items-center justify-center rounded-[13px] border-0 font-medium leading-none whitespace-nowrap transition-[background-color,box-shadow,transform,color] duration-150 outline-none select-none focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4";
+  "group/button inline-flex shrink-0 cursor-pointer items-center justify-center rounded-[13px] border-0 font-medium leading-none whitespace-nowrap outline-none select-none focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4";
 
 const buttonVariants = cva(buttonBase, {
   variants: {
     variant: {
-      default: "glass-button text-[15px] text-foreground",
-      outline: "glass-button text-[15px] text-foreground",
-      secondary: "glass-button text-[15px] text-foreground",
+      default:
+        "glass-button text-[15px] text-foreground hover:text-sky-700 dark:hover:text-sky-300",
+      outline:
+        "glass-button text-[15px] text-foreground hover:text-sky-700 dark:hover:text-sky-300",
+      secondary:
+        "glass-button text-[15px] text-foreground hover:text-sky-700 dark:hover:text-sky-300",
       ghost:
         "bg-transparent text-[15px] text-foreground shadow-none hover:bg-[var(--glass-btn)] aria-expanded:bg-[var(--glass-btn)]",
       destructive:
@@ -47,6 +50,7 @@ function Button({
   return (
     <ButtonPrimitive
       data-slot="button"
+      data-btn-motion={variant === "link" ? "off" : undefined}
       className={cn(buttonVariants({ variant, size }), className)}
       {...props}
     />

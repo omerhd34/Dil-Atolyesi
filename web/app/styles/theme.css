@@ -202,7 +202,7 @@
 }
 
 @theme inline {
-  --cursor-not-allowed: url("/cursors/not-allowed.svg") 16 16, not-allowed;
+  --cursor-not-allowed: not-allowed;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
