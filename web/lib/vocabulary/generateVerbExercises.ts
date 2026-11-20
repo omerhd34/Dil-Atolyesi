@@ -6,6 +6,8 @@ import type {
   ListeningExercise,
   MultipleChoiceExercise,
   TopicExercise,
+  TrueFalseExercise,
+  VerbFormMatchingExercise,
   VerbListeningRow,
 } from "@/data/grammar/types";
 import {
@@ -25,7 +27,9 @@ export const VERB_LISTENING_EXERCISE_LIMIT = 5;
 export type VerbExerciseSessionSeeds = {
   multiple_choice: string;
   fill_blank: string;
+  matching: string;
   listening: string;
+  true_false: string;
   crossword: string;
 };
 
@@ -50,15 +54,25 @@ function normalizeCrosswordAnswer(value: string): string {
 }
 
 function limitVerbExercises<
-  T extends MultipleChoiceExercise | FillBlankExercise | ListeningExercise,
+  T extends
+    | MultipleChoiceExercise
+    | FillBlankExercise
+    | VerbFormMatchingExercise
+    | ListeningExercise
+    | TrueFalseExercise,
 >(
   items: T[],
   categoryId: string,
-  exerciseKind: "multiple_choice" | "fill_blank" | "listening",
+  exerciseKind:
+    | "multiple_choice"
+    | "fill_blank"
+    | "matching"
+    | "listening"
+    | "true_false",
   sessionSeed: string,
 ): T[] {
   const limit =
-    exerciseKind === "listening"
+    exerciseKind === "matching"
       ? VERB_LISTENING_EXERCISE_LIMIT
       : VERB_EXERCISE_QUESTION_LIMIT;
 
@@ -95,7 +109,6 @@ function pickFormDistractors(
   return pool.slice(0, count);
 }
 
-/** Yanlış ama öğrencinin deneyebileceği -ed / yazım varyantları (put → putted, puted, putd). */
 function generateMorphologicalDistractors(
   infinitive: string,
   correct: string,
@@ -353,10 +366,10 @@ function pickInfinitiveDistractors(
   ).slice(0, count);
 }
 
-function buildVerbBatchListeningItem(
+function buildVerbFormMatchingItem(
   batch: EnglishVerb[],
   categoryId: string,
-): ListeningExercise {
+): VerbFormMatchingExercise {
   const batchKey = batch.map((verb) => verb.id).join("-");
   const v2Pool = shuffleSeeded(
     batch.map((verb) => primaryForm(verb.pastSimple)),
@@ -380,34 +393,60 @@ function buildVerbBatchListeningItem(
   });
 
   return {
-    id: `verb-listen-batch-${categoryId}-${batchKey}`,
+    id: `verb-match-batch-${categoryId}-${batchKey}`,
     subtopicId: categoryId,
-    type: "listening",
+    type: "matching",
     verbTripleForm: true,
     verbListeningRows: rows,
     verbListeningV2Pool: v2Pool,
     verbListeningV3Pool: v3Pool,
-    prompt: "",
-    speakText: "",
-    englishOptions: v3Pool,
-    englishCorrectIndex: 0,
-    turkishOptions: batch.map((verb) => verb.infinitive),
-    turkishCorrectIndex: 0,
-    v2Options: v2Pool,
-    v2CorrectIndex: 0,
   };
 }
 
-function generateVerbListeningExercises(
+function generateVerbTripleListeningExercises(
   verbs: EnglishVerb[],
   categoryId: string,
 ): ListeningExercise[] {
+  return verbs.map((verb) => ({
+    id: `verb-listen-${categoryId}-${verb.id}`,
+    subtopicId: categoryId,
+    type: "listening",
+    prompt: "Dinlediğin fiili İngilizce olarak yaz (V1).",
+    speakText: verb.infinitive,
+    answer: verb.infinitive,
+    acceptedAnswers: acceptedForms(verb.infinitive),
+  }));
+}
+
+function generateVerbTrueFalseExercises(
+  verbs: EnglishVerb[],
+  categoryId: string,
+): TrueFalseExercise[] {
+  return verbs.map((verb) => {
+    const flip = verb.id.length % 2 === 1;
+    const statedRegular = flip ? !verb.regular : verb.regular;
+
+    return {
+      id: `verb-tf-${categoryId}-${verb.id}`,
+      subtopicId: categoryId,
+      type: "true_false",
+      prompt: `"${verb.infinitive}" fiili düzenli (regular) bir fiildir.`,
+      options: ["Doğru", "Yanlış"],
+      correctIndex: statedRegular === verb.regular ? 0 : 1,
+    };
+  });
+}
+
+function generateVerbFormMatchingExercises(
+  verbs: EnglishVerb[],
+  categoryId: string,
+): VerbFormMatchingExercise[] {
   if (verbs.length < VERB_LISTENING_BATCH_SIZE) {
     return [];
   }
 
-  const shuffled = shuffleSeeded(verbs, `${categoryId}:listen-batches`);
-  const exercises: ListeningExercise[] = [];
+  const shuffled = shuffleSeeded(verbs, `${categoryId}:verb-match-batches`);
+  const exercises: VerbFormMatchingExercise[] = [];
 
   for (
     let index = 0;
@@ -415,7 +454,7 @@ function generateVerbListeningExercises(
     index += VERB_LISTENING_BATCH_SIZE
   ) {
     exercises.push(
-      buildVerbBatchListeningItem(
+      buildVerbFormMatchingItem(
         shuffled.slice(index, index + VERB_LISTENING_BATCH_SIZE),
         categoryId,
       ),
@@ -527,11 +566,25 @@ export function generateVerbExercises(
     sessionSeeds.fill_blank,
   );
 
+  const verbFormMatching = limitVerbExercises(
+    generateVerbFormMatchingExercises(verbs, categoryId),
+    categoryId,
+    "matching",
+    sessionSeeds.matching,
+  );
+
   const listening = limitVerbExercises(
-    generateVerbListeningExercises(verbs, categoryId),
+    generateVerbTripleListeningExercises(verbs, categoryId),
     categoryId,
     "listening",
     sessionSeeds.listening,
+  );
+
+  const trueFalse = limitVerbExercises(
+    generateVerbTrueFalseExercises(verbs, categoryId),
+    categoryId,
+    "true_false",
+    sessionSeeds.true_false,
   );
 
   const crossword = generateVerbCrosswordExercise(
@@ -543,7 +596,9 @@ export function generateVerbExercises(
   return [
     ...multipleChoice,
     ...fillBlank,
+    ...verbFormMatching,
     ...listening,
+    ...trueFalse,
     ...(crossword ? [crossword] : []),
   ];
 }

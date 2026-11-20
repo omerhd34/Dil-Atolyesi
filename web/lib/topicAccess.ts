@@ -24,6 +24,19 @@ export const CEFR_LEVEL_BADGE_CLASS: Record<CefrLevel, string> = {
   C2: "bg-violet-500/15 text-violet-800 dark:bg-violet-400/30 dark:text-violet-200",
 };
 
+export const FILTER_CHIP_BUTTON_CLASS =
+  "interaction-motion inline-flex h-8 min-w-14 cursor-pointer items-center justify-center gap-1.5 rounded-lg border px-2.5 text-[0.8rem] font-medium focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none";
+
+export const SKY_OPTION_HOVER_CLASSES =
+  "hover:border-sky-500/40 hover:bg-sky-500/25 hover:text-sky-700 dark:hover:border-sky-300/50 dark:hover:bg-sky-400/30 dark:hover:text-sky-100";
+
+export const SKY_OPTION_SELECTED_CLASSES =
+  "border-sky-500 bg-sky-500/10 text-sky-800 dark:border-sky-400 dark:bg-sky-400/15 dark:text-sky-100";
+
+export const VERB_LIST_FILTER_INACTIVE_CLASS =
+  "border-border bg-background/80 text-brand-600 dark:bg-brand-950/40 dark:text-brand-400 " +
+  SKY_OPTION_HOVER_CLASSES;
+
 export const CEFR_LEVEL_FILTER_IDLE_CLASS: Record<CefrLevel, string> = {
   A1: "border-sky-500/40 bg-sky-500/15 text-sky-700 hover:bg-sky-500/25 dark:border-sky-300/50 dark:bg-sky-400/20 dark:text-sky-100 dark:hover:bg-sky-400/30",
   A2: "border-teal-500/40 bg-teal-500/15 text-teal-700 hover:bg-teal-500/25 dark:border-teal-300/50 dark:bg-teal-400/20 dark:text-teal-100 dark:hover:bg-teal-400/30",

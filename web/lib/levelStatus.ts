@@ -1,5 +1,8 @@
 import { getCombinedExercisesForLevel } from "@/data/combinedExercises";
-import { dashboardTopics, type CefrLevel } from "@/data/grammar/dashboardTopics";
+import {
+  dashboardTopics,
+  type CefrLevel,
+} from "@/data/grammar/dashboardTopics";
 import { computeCombinedExerciseProgress } from "@/lib/combinedExerciseProgress";
 import {
   getVocabularyCategoriesByLevel,
@@ -96,7 +99,6 @@ function speakingPercents(level: CefrLevel): number[] {
   );
 }
 
-/** Panel menüsündeki altı çalışma alanı (eşit ağırlık). */
 const LEVEL_SKILL_COUNT = 6;
 
 function padBandToTargetSize(band: number[], targetSize: number): number[] {

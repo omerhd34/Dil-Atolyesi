@@ -730,7 +730,6 @@ export function speakDialogue(
   );
 }
 
-/** Oynatmayı keser; duraklama konumu resumeKey ile saklanır. */
 export function pauseSpeaking(): void {
   if (activePlaybackCursor) {
     resumeState = {

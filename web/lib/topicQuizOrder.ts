@@ -37,7 +37,6 @@ type QuizPartDraftLike =
     }
   | undefined;
 
-/** Quiz tamamlanmadan yüzde göstermemek için; oturum sürdürme (sıra, slot) için kullanılır. */
 export function quizPartSessionStarted(
   part: TopicQuizPart,
   partDraft: QuizPartDraftLike,

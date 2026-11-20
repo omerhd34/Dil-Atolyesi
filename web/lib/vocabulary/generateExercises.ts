@@ -4,8 +4,10 @@ import type {
   CrosswordExercise,
   FillBlankExercise,
   ListeningExercise,
+  MatchingExercise,
   MultipleChoiceExercise,
   TopicExercise,
+  TrueFalseExercise,
 } from "@/data/grammar/types";
 
 import { shuffleSeeded } from "@/lib/seededRandom";
@@ -79,54 +81,19 @@ export function generateListeningExercises(
   words: VocabularyWord[],
   categoryId: string,
 ): ListeningExercise[] {
-  if (words.length < 2) {
+  if (words.length === 0) {
     return [];
   }
 
-  return words.map((word) => {
-    const englishDistractors = pickDistractors(
-      words,
-      word.id,
-      3,
-      "en",
-      `${categoryId}:${word.id}:listen-en`,
-    );
-    while (englishDistractors.length < 3) {
-      englishDistractors.push(`Option ${englishDistractors.length + 1}`);
-    }
-
-    const turkishDistractors = pickDistractors(
-      words,
-      word.id,
-      3,
-      "tr",
-      `${categoryId}:${word.id}:listen-tr`,
-    );
-    while (turkishDistractors.length < 3) {
-      turkishDistractors.push(`Seçenek ${turkishDistractors.length + 1}`);
-    }
-
-    const englishOptions = shuffleSeeded(
-      [word.en, ...englishDistractors.slice(0, 3)],
-      `${categoryId}:${word.id}:listen-en-options`,
-    );
-    const turkishOptions = shuffleSeeded(
-      [word.tr, ...turkishDistractors.slice(0, 3)],
-      `${categoryId}:${word.id}:listen-tr-options`,
-    );
-
-    return {
-      id: `vocab-listen-${categoryId}-${word.id}`,
-      subtopicId: categoryId,
-      type: "listening",
-      prompt: "Dinlediğin kelimenin İngilizce ve Türkçe karşılığını seç.",
-      speakText: word.en,
-      englishOptions,
-      englishCorrectIndex: englishOptions.indexOf(word.en),
-      turkishOptions,
-      turkishCorrectIndex: turkishOptions.indexOf(word.tr),
-    };
-  });
+  return words.map((word) => ({
+    id: `vocab-listen-${categoryId}-${word.id}`,
+    subtopicId: categoryId,
+    type: "listening",
+    prompt: "Dinlediğin kelimeyi İngilizce olarak yaz.",
+    speakText: word.en,
+    answer: word.en,
+    acceptedAnswers: [word.en.toLowerCase()],
+  }));
 }
 
 type PlacedWord = {
@@ -342,6 +309,59 @@ export function generateCrosswordExercise(
   };
 }
 
+export function generateVocabularyMatchingExercise(
+  words: VocabularyWord[],
+  categoryId: string,
+): MatchingExercise | null {
+  if (words.length < 3) {
+    return null;
+  }
+
+  const selected = shuffleSeeded(
+    words,
+    `${categoryId}:vocab-match-pairs`,
+  ).slice(0, Math.min(10, words.length));
+
+  return {
+    id: `vocab-match-${categoryId}`,
+    subtopicId: categoryId,
+    type: "matching",
+    prompt: "İngilizce kelimeleri Türkçe anlamlarıyla eşleştir.",
+    pairs: selected.map((word) => ({ left: word.en, right: word.tr })),
+  };
+}
+
+export function generateVocabularyTrueFalseExercises(
+  words: VocabularyWord[],
+  categoryId: string,
+): TrueFalseExercise[] {
+  if (words.length === 0) {
+    return [];
+  }
+
+  return words.map((word) => {
+    const distractor = pickDistractors(
+      words,
+      word.id,
+      1,
+      "tr",
+      `${categoryId}:${word.id}:tf-tr`,
+    )[0];
+    const incorrectTr = distractor ?? `${word.tr} (değil)`;
+    const useCorrectMeaning = word.id.length % 2 === 0;
+    const displayedTr = useCorrectMeaning ? word.tr : incorrectTr;
+
+    return {
+      id: `vocab-tf-${categoryId}-${word.id}`,
+      subtopicId: categoryId,
+      type: "true_false",
+      prompt: `"${word.en}" kelimesi "${displayedTr}" anlamına gelir.`,
+      options: ["Doğru", "Yanlış"],
+      correctIndex: useCorrectMeaning ? 0 : 1,
+    };
+  });
+}
+
 export function generateVocabularyExercises(
   words: VocabularyWord[],
   categoryId: string,
@@ -350,7 +370,13 @@ export function generateVocabularyExercises(
     ...generateMultipleChoiceExercises(words, categoryId),
     ...generateFillBlankExercises(words, categoryId),
     ...generateListeningExercises(words, categoryId),
+    ...generateVocabularyTrueFalseExercises(words, categoryId),
   ];
+
+  const matching = generateVocabularyMatchingExercise(words, categoryId);
+  if (matching) {
+    exercises.push(matching);
+  }
 
   const crossword = generateCrosswordExercise(words, categoryId);
   if (crossword) {

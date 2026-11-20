@@ -121,7 +121,6 @@ function topicProgressPillarCount(topicId: string): number {
   return Math.max(count, 1);
 }
 
-/** Konu başına dilim: Konu (ders) + Alıştırma (tüm türler) + Quiz (tüm bölümler). */
 export function getTopicProgressWeights(topicId: string): TopicProgressWeights {
   const exerciseTypeCount = availableExerciseTypes(topicId).length;
   const quizPartCount = availableQuizParts(topicId).length;

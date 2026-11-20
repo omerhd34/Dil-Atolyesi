@@ -38,6 +38,7 @@ export type LinearSlot = {
   matchingAssignments?: Record<string, number>;
   matchingRevealed?: boolean;
   matchingCorrect?: boolean;
+  dictationAttempts?: number;
 };
 
 export type LinearSessionDraft = {
@@ -224,6 +225,13 @@ function normalizeLinearSession(value: unknown): LinearSessionDraft | null {
       v2Selected: isNullableIndex(slot.v2Selected) ? slot.v2Selected : null,
       verbRows: sanitizeVerbRowSlots(slot.verbRows),
       checked: slot.checked,
+      dictationAttempts:
+        typeof slot.dictationAttempts === "number" &&
+        Number.isInteger(slot.dictationAttempts) &&
+        slot.dictationAttempts >= 0 &&
+        slot.dictationAttempts <= 8
+          ? slot.dictationAttempts
+          : undefined,
       matchingAssignments: sanitizeMatchingAssignments(
         slot.matchingAssignments,
       ),

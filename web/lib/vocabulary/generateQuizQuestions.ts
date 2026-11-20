@@ -1,3 +1,8 @@
+import {
+  vocabularyQuizTrueFalseAnswer,
+  vocabularyQuizTrueFalseUsesCorrectMeaning,
+} from "@/lib/vocabulary/vocabularyQuizTrueFalse";
+
 export type VocabularyQuizWordInput = {
   id: string;
   en: string;
@@ -5,11 +10,16 @@ export type VocabularyQuizWordInput = {
   passed?: {
     multiple_choice: boolean;
     fill_blank: boolean;
+    true_false: boolean;
     listening: boolean;
   };
 };
 
-export type VocabularyQuizType = "multiple_choice" | "fill_blank" | "listening";
+export type VocabularyQuizType =
+  | "multiple_choice"
+  | "fill_blank"
+  | "true_false"
+  | "listening";
 
 export type VocabularyQuizItem = {
   id: string;
@@ -60,6 +70,7 @@ export function generateMixedQuizItems(
   const pool = [
     ...generateQuizItemsByType(words, "multiple_choice"),
     ...generateQuizItemsByType(words, "fill_blank"),
+    ...generateQuizItemsByType(words, "true_false"),
     ...generateQuizItemsByType(words, "listening"),
   ];
 
@@ -105,20 +116,39 @@ export function generateQuizItemsByType(
     }));
   }
 
-  return words.map((word) => {
-    const options = shuffle([word.tr, ...distractors(words, word.id, "tr", 3)]);
-    return {
-      id: `listen-${word.id}`,
-      type,
-      wordId: word.id,
-      prompt: "Dinlediğin kelimenin Türkçesi nedir?",
-      speakText: word.en,
-      options,
-      inputMode: "choice" as const,
-      answerValue: word.tr,
-      expectedDisplay: word.tr,
-    };
-  });
+  if (type === "true_false") {
+    return words.map((word) => {
+      const wrongTr =
+        distractors(words, word.id, "tr", 1)[0] ?? `${word.tr} (değil)`;
+      const statementCorrect = vocabularyQuizTrueFalseUsesCorrectMeaning(
+        word.id,
+      );
+      const displayedTr = statementCorrect ? word.tr : wrongTr;
+      const answerValue = vocabularyQuizTrueFalseAnswer(word.id);
+
+      return {
+        id: `tf-${word.id}`,
+        type,
+        wordId: word.id,
+        prompt: `"${word.en}" kelimesi "${displayedTr}" anlamına gelir.`,
+        options: ["Doğru", "Yanlış"],
+        inputMode: "choice" as const,
+        answerValue,
+        expectedDisplay: answerValue,
+      };
+    });
+  }
+
+  return words.map((word) => ({
+    id: `listen-${word.id}`,
+    type,
+    wordId: word.id,
+    prompt: "Dinlediğin kelimeyi İngilizce olarak yaz.",
+    speakText: word.en,
+    inputMode: "text" as const,
+    answerValue: word.en,
+    expectedDisplay: word.en,
+  }));
 }
 
 export function countQuizTypes(words: VocabularyQuizWordInput[]) {
@@ -127,6 +157,8 @@ export function countQuizTypes(words: VocabularyQuizWordInput[]) {
       (word) => !word.passed || !word.passed.multiple_choice,
     ).length,
     fill_blank: words.filter((word) => !word.passed || !word.passed.fill_blank)
+      .length,
+    true_false: words.filter((word) => !word.passed || !word.passed.true_false)
       .length,
     listening: words.filter((word) => !word.passed || !word.passed.listening)
       .length,

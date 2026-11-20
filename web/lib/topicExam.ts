@@ -23,6 +23,7 @@ import {
   type CrosswordCandidate,
 } from "@/lib/crosswordBuilder";
 import { shuffleSeeded } from "@/lib/seededRandom";
+import { isVerbFormMatchingExercise } from "@/lib/verbFormMatchingExercise";
 
 const LEVEL_EXAM_CLUES: Record<CefrLevel, CrosswordCandidate[]> = {
   A1: examA1Clues,
@@ -41,6 +42,21 @@ export const TOPIC_EXAM_OPTION_COUNT = 4;
 export const TOPIC_EXAM_QUESTION_COUNT = 10;
 export const TOPIC_QUIZ_MC_COUNT = 15;
 export const TOPIC_QUIZ_FB_COUNT = 15;
+export const TOPIC_QUIZ_TF_COUNT = 10;
+export const TOPIC_QUIZ_LISTENING_COUNT = 10;
+
+const TOPIC_QUIZ_STANDARD_TYPES = [
+  "multiple_choice",
+  "fill_blank",
+  "true_false",
+  "listening",
+] as const;
+
+type TopicQuizStandardType = (typeof TOPIC_QUIZ_STANDARD_TYPES)[number];
+
+function isTopicQuizStandardType(type: string): type is TopicQuizStandardType {
+  return (TOPIC_QUIZ_STANDARD_TYPES as readonly string[]).includes(type);
+}
 
 export const LEVEL_EXAM_CROSSWORD_COUNT = 1;
 export const LEVEL_EXAM_CLUE_COUNT = 20;
@@ -152,12 +168,7 @@ export function ensureExamOptionCount(
 }
 
 function isTopicQuizExercise(item: TopicQuizItem): item is TopicQuizExercise {
-  return (
-    item.type === "multiple_choice" ||
-    item.type === "true_false" ||
-    item.type === "fill_blank" ||
-    item.type === "matching"
-  );
+  return isTopicQuizStandardType(item.type);
 }
 
 export function toTopicQuizExercises(
@@ -165,18 +176,36 @@ export function toTopicQuizExercises(
 ): TopicQuizExercise[] {
   return exercises.filter(
     (item): item is TopicQuizExercise =>
-      item.type === "multiple_choice" ||
-      item.type === "true_false" ||
-      item.type === "fill_blank",
+      isTopicQuizStandardType(item.type) &&
+      !isVerbFormMatchingExercise(item as TopicExercise),
   );
 }
 
-function listQuizExercises(content: TopicContent) {
+function listQuizExercises(content: TopicContent): TopicQuizItem[] {
   const quiz = content.quiz ?? [];
   if (quiz.length > 0) {
     return quiz;
   }
   return toTopicQuizExercises(getTopicPracticeExercises(content));
+}
+
+function practiceTrueFalse(content: TopicContent): TrueFalseExercise[] {
+  return getTopicPracticeExercises(content).filter(
+    (item): item is TrueFalseExercise => item.type === "true_false",
+  );
+}
+
+function practiceListening(content: TopicContent): ListeningExercise[] {
+  return getTopicPracticeExercises(content).filter(
+    (item): item is ListeningExercise => item.type === "listening",
+  );
+}
+
+function explicitQuizItems(content: TopicContent): TopicQuizItem[] {
+  return (content.quiz ?? []).filter(
+    (item): item is TopicQuizItem =>
+      item.type !== "error_correction" && item.type !== "matching",
+  );
 }
 
 export function topicQuizUsesErrorCorrectionFormat(
@@ -253,6 +282,29 @@ export function resolveTopicListeningQuiz(
   );
 }
 
+function countAvailableQuizStandardTypes(content: TopicContent): number {
+  const practice = getTopicPracticeExercises(content).filter(
+    (item): item is TopicQuizExercise =>
+      isTopicQuizStandardType(item.type) && !isVerbFormMatchingExercise(item),
+  );
+  const explicit = explicitQuizItems(content).filter(isTopicQuizExercise);
+  const types = new Set<TopicQuizStandardType>();
+
+  for (const item of [...explicit, ...practice]) {
+    types.add(item.type);
+  }
+
+  if (explicit.length > 0) {
+    for (const type of TOPIC_QUIZ_STANDARD_TYPES) {
+      if (!types.has(type) && practice.some((item) => item.type === type)) {
+        types.add(type);
+      }
+    }
+  }
+
+  return types.size;
+}
+
 export function topicQuizUsesMixedFormat(content: TopicContent): boolean {
   if (
     topicQuizUsesListeningFormat(content) ||
@@ -260,17 +312,7 @@ export function topicQuizUsesMixedFormat(content: TopicContent): boolean {
   ) {
     return false;
   }
-  const quiz = listQuizExercises(content);
-  const mixedTypes = [
-    "multiple_choice",
-    "fill_blank",
-    "true_false",
-    "matching",
-  ] as const;
-  const presentCount = mixedTypes.filter((type) =>
-    quiz.some((item) => item.type === type),
-  ).length;
-  return presentCount >= 2;
+  return countAvailableQuizStandardTypes(content) >= 2;
 }
 
 function pushUniqueQuestion(
@@ -384,40 +426,95 @@ export function resolveTopicExamCrosswords(
   return [];
 }
 
-export function resolveMixedTopicQuizPool(
-  content: TopicContent,
-): TopicQuizExercise[] {
-  if (!topicQuizUsesMixedFormat(content)) {
+function mapExplicitQuizToPool(content: TopicContent): TopicQuizExercise[] {
+  const explicit = explicitQuizItems(content).filter(isTopicQuizExercise);
+  if (explicit.length === 0) {
     return [];
   }
 
-  const explicitQuiz = content.quiz ?? [];
-  if (explicitQuiz.length > 0) {
-    const practice = practiceMultipleChoice(content);
-    const pool = [
-      ...practice.flatMap((item) => item.options),
-      ...FALLBACK_DISTRACTORS,
-    ];
-    const optionCount =
-      content.quizOptionCount && content.quizOptionCount > 1
-        ? content.quizOptionCount
-        : TOPIC_EXAM_OPTION_COUNT;
+  const practice = practiceMultipleChoice(content);
+  const optionPool = [
+    ...practice.flatMap((item) => item.options),
+    ...FALLBACK_DISTRACTORS,
+  ];
+  const optionCount =
+    content.quizOptionCount && content.quizOptionCount > 1
+      ? content.quizOptionCount
+      : TOPIC_EXAM_OPTION_COUNT;
 
-    return explicitQuiz
-      .filter(isTopicQuizExercise)
-      .map((item) =>
-        item.type === "multiple_choice"
-          ? ensureExamOptionCount(item, pool, optionCount)
-          : item,
-      );
+  return explicit.map((item) =>
+    item.type === "multiple_choice"
+      ? ensureExamOptionCount(item, optionPool, optionCount)
+      : item,
+  );
+}
+
+function supplementQuizPool(
+  content: TopicContent,
+  base: TopicQuizExercise[],
+): TopicQuizExercise[] {
+  const typesPresent = new Set(base.map((item) => item.type));
+  const supplements: TopicQuizExercise[] = [];
+
+  if (!typesPresent.has("multiple_choice")) {
+    supplements.push(...resolveTopicExamExercises(content).slice(0, 8));
+  }
+  if (!typesPresent.has("fill_blank")) {
+    supplements.push(...resolveTopicExamFillBlanks(content).slice(0, 8));
+  }
+  if (!typesPresent.has("true_false")) {
+    supplements.push(
+      ...shuffleSeeded(
+        practiceTrueFalse(content),
+        `topic:${content.topicId}:quiz-tf`,
+      ).slice(0, TOPIC_QUIZ_TF_COUNT),
+    );
+  }
+  if (!typesPresent.has("listening")) {
+    supplements.push(
+      ...shuffleSeeded(
+        practiceListening(content),
+        `topic:${content.topicId}:quiz-listen`,
+      ).slice(0, TOPIC_QUIZ_LISTENING_COUNT),
+    );
   }
 
-  const multipleChoice = resolveTopicExamExercises(content);
-  const fillBlanks = resolveTopicExamFillBlanks(content);
-  const trueFalse = getTopicPracticeExercises(content).filter(
-    (item): item is TrueFalseExercise => item.type === "true_false",
-  );
-  return [...multipleChoice, ...fillBlanks, ...trueFalse];
+  return [...base, ...supplements];
+}
+
+export function resolveMixedTopicQuizPool(
+  content: TopicContent,
+): TopicQuizExercise[] {
+  let pool: TopicQuizExercise[];
+
+  const explicit = mapExplicitQuizToPool(content);
+  if (explicit.length > 0) {
+    pool = supplementQuizPool(content, explicit);
+  } else {
+    pool = [
+      ...resolveTopicExamExercises(content),
+      ...resolveTopicExamFillBlanks(content),
+      ...shuffleSeeded(
+        practiceTrueFalse(content),
+        `topic:${content.topicId}:quiz-tf`,
+      ).slice(0, TOPIC_QUIZ_TF_COUNT),
+      ...shuffleSeeded(
+        practiceListening(content),
+        `topic:${content.topicId}:quiz-listen`,
+      ).slice(0, TOPIC_QUIZ_LISTENING_COUNT),
+    ];
+  }
+
+  if (pool.length === 0) {
+    return [];
+  }
+
+  const typeCount = new Set(pool.map((item) => item.type)).size;
+  if (typeCount < 2) {
+    return [];
+  }
+
+  return shuffleSeeded(pool, `topic:${content.topicId}:mixed-quiz`);
 }
 
 export function resolveMixedTopicQuiz(

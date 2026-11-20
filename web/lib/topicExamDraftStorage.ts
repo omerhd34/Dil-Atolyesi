@@ -22,6 +22,7 @@ export type TopicExamSlot = {
   matchingAssignments?: Record<string, number>;
   matchingRevealed?: boolean;
   matchingGraded?: boolean;
+  dictationAttempts?: number;
 };
 
 export type TopicExamPartDraft = {
@@ -137,6 +138,13 @@ function normalizeSlot(value: TopicExamSlot): TopicExamSlot {
   }
   if (typeof value.matchingGraded === "boolean") {
     base.matchingGraded = value.matchingGraded;
+  }
+  if (
+    typeof value.dictationAttempts === "number" &&
+    Number.isInteger(value.dictationAttempts) &&
+    value.dictationAttempts >= 0
+  ) {
+    base.dictationAttempts = value.dictationAttempts;
   }
   return base;
 }
