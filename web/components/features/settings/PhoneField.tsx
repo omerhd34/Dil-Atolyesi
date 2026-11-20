@@ -187,7 +187,7 @@ export function PhoneField({
             role="listbox"
             aria-label={t("profilePhoneCountryCode")}
             style={menuStyle}
-            className="phone-country-menu glass-panel overflow-hidden rounded-xl"
+            className="phone-country-menu glass-surface overflow-hidden rounded-xl"
           >
             <div className="border-b border-(--glass-line) p-2">
               <div className="relative">

@@ -15,7 +15,7 @@ type FieldErrors = {
   confirmPassword?: string;
 };
 
-export function ChangePasswordPanel() {
+export function ChangePasswordSection() {
   const t = useTranslations("Settings");
   const tAuth = useTranslations("Auth");
   const changePassword = useAuthStore((state) => state.changePassword);

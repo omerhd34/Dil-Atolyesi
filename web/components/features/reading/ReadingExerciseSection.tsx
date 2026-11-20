@@ -23,7 +23,7 @@ import { cn } from "@/lib/utils";
 
 const PASS_PERCENT = EXAM_PASS_PERCENT;
 
-type ReadingExercisePanelProps = {
+type ReadingExerciseSectionProps = {
   block: ReadingExerciseBlock;
   onComplete?: (passed: boolean, percent: number) => void;
 };
@@ -90,10 +90,10 @@ function canCheckItem(
   return slot.answer.trim() !== "";
 }
 
-export function ReadingExercisePanel({
+export function ReadingExerciseSection({
   block,
   onComplete,
-}: ReadingExercisePanelProps) {
+}: ReadingExerciseSectionProps) {
   const tReading = useTranslations("Reading");
   const tTopic = useTranslations("Topic");
 
@@ -140,7 +140,7 @@ export function ReadingExercisePanel({
 
   if (finished) {
     return (
-      <div className="dashboard-panel mx-auto max-w-lg space-y-4 text-center">
+      <div className="workshop-card mx-auto max-w-lg space-y-4 text-center">
         <h2 className="page-title">{tTopic("finishedTitle")}</h2>
         <p className="page-subtitle mt-0">
           {tReading("scoreSummary", {
@@ -183,7 +183,7 @@ export function ReadingExercisePanel({
         <ExercisePercentBadge percent={percent} />
       </div>
 
-      <article className="dashboard-panel space-y-5">
+      <article className="workshop-card space-y-5">
         <ExerciseQuestionBody
           item={item}
           slot={current}

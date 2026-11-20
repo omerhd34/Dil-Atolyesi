@@ -27,7 +27,7 @@ const SCOPES: ProgressResetScope[] = [
   "all",
 ];
 
-export function ProgressResetPanel() {
+export function ProgressResetSection() {
   const t = useTranslations("Settings");
   const resetProgress = useVocabularyStore((state) => state.resetProgress);
   const isLoading = useVocabularyStore((state) => state.isResettingProgress);

@@ -3,11 +3,11 @@
 import { useTranslations } from "next-intl";
 import type { WritingTip } from "@/data/writings/types";
 
-type WritingTipsPanelProps = {
+type WritingTipsSectionProps = {
   tips: WritingTip[];
 };
 
-export function WritingTipsPanel({ tips }: WritingTipsPanelProps) {
+export function WritingTipsSection({ tips }: WritingTipsSectionProps) {
   const t = useTranslations("Writing");
 
   if (tips.length === 0) {
@@ -19,7 +19,7 @@ export function WritingTipsPanel({ tips }: WritingTipsPanelProps) {
       aria-labelledby="writing-ipuclari-heading"
       className="border-t border-border pt-10"
     >
-      <div className="dashboard-panel space-y-3 p-4 sm:p-6">
+      <div className="workshop-card space-y-3 p-4 sm:p-6">
         <h2 id="writing-ipuclari-heading" className="section-title scroll-mt-6">
           {t("tipsTitle")}
         </h2>

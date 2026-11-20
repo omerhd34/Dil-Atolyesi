@@ -74,7 +74,7 @@ function NotificationRow({
   );
 }
 
-export function NotificationSettingsPanel() {
+export function NotificationSettingsSection() {
   const t = useTranslations("Settings");
   const { preferences, patchPreferences } = useNotificationPreferences();
   const [pushHint, setPushHint] = useState<

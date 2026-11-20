@@ -2,10 +2,10 @@
 
 import { useTranslations } from "next-intl";
 import { Gauge, Palette } from "lucide-react";
-import { ChangePasswordPanel } from "@/components/features/settings/ChangePasswordPanel";
-import { NotificationSettingsPanel } from "@/components/features/settings/NotificationSettingsPanel";
+import { ChangePasswordSection } from "@/components/features/settings/ChangePasswordSection";
+import { NotificationSettingsSection } from "@/components/features/settings/NotificationSettingsSection";
 import { ProfileSetting } from "@/components/features/settings/ProfileSetting";
-import { ProgressResetPanel } from "@/components/features/settings/ProgressResetPanel";
+import { ProgressResetSection } from "@/components/features/settings/ProgressResetSection";
 import { SettingsSection } from "@/components/features/settings/SettingsSection";
 import { LocaleSetting } from "@/components/features/settings/LocaleSetting";
 import { ThemeSetting } from "@/components/features/settings/ThemeSetting";
@@ -39,7 +39,7 @@ export function SettingsView() {
       </div>
 
       <div className="grid gap-5 lg:grid-cols-2 lg:items-start lg:gap-6">
-        <NotificationSettingsPanel />
+        <NotificationSettingsSection />
 
         <SettingsSection
           titleId="settings-speech"
@@ -55,8 +55,8 @@ export function SettingsView() {
       </div>
 
       <div className="grid gap-5 lg:grid-cols-2 lg:items-start lg:gap-6">
-        <ChangePasswordPanel />
-        <ProgressResetPanel />
+        <ChangePasswordSection />
+        <ProgressResetSection />
       </div>
     </div>
   );

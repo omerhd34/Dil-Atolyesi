@@ -24,7 +24,7 @@ export function SettingsSection({
     <section
       id={id}
       className={cn(
-        "dashboard-panel dashboard-panel--stat space-y-2 p-5 sm:p-6",
+        "workshop-card workshop-card--stat space-y-2 p-5 sm:p-6",
         className,
       )}
       aria-labelledby={titleId}

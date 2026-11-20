@@ -4,15 +4,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { Check, Languages } from "lucide-react";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
+import { UI_LOCALE_OPTIONS } from "@/lib/localeUi";
 import { cn } from "@/lib/utils";
-
-const LOCALE_OPTIONS: {
-  id: AppLocale | "en";
-  available: boolean;
-}[] = [
-  { id: "tr", available: true },
-  { id: "en", available: false },
-];
 
 export function LocaleSetting() {
   const t = useTranslations("Settings");
@@ -42,7 +35,7 @@ export function LocaleSetting() {
         role="group"
         aria-label={t("localeLabel")}
       >
-        {LOCALE_OPTIONS.map((option) => {
+        {UI_LOCALE_OPTIONS.map((option) => {
           const selected = option.available && option.id === locale;
           const title =
             option.id === "tr" ? t("localeTurkish") : t("localeEnglish");
