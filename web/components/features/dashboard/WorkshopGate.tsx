@@ -2,18 +2,19 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
-import { PanelLoading } from "@/components/features/dashboard/PanelLoading";
+import { WorkshopLoading } from "@/components/features/dashboard/WorkshopLoading";
 import { LearnMissedDayNotificationWatcher } from "@/components/features/dashboard/LearnMissedDayNotificationWatcher";
 import { QuizReadyNotificationWatcher } from "@/components/features/dashboard/QuizReadyNotificationWatcher";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { useRouter } from "@/i18n/navigation";
+import { AUTH_ACCOUNT_PATH } from "@/lib/appPaths";
 import { useAuthStore } from "@/store/authStore";
 
-type PanelGateProps = {
+type WorkshopGateProps = {
   children: React.ReactNode;
 };
 
-export function PanelGate({ children }: PanelGateProps) {
+export function WorkshopGate({ children }: WorkshopGateProps) {
   const t = useTranslations("Dashboard");
   const user = useAuthStore((state) => state.user);
   const status = useAuthStore((state) => state.status);
@@ -22,21 +23,19 @@ export function PanelGate({ children }: PanelGateProps) {
 
   useEffect(() => {
     if (status === "anonymous") {
-      router.replace("/panelLogin");
+      router.replace(AUTH_ACCOUNT_PATH);
     }
   }, [router, status]);
 
   if (status === "unknown") {
-    return <PanelLoading />;
+    return <WorkshopLoading />;
   }
 
   if (!ready) {
     return (
       <div className="mx-auto flex min-h-[50vh] max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
-        <p className="page-subtitle mt-0">
-          {t("loginRequired")}
-        </p>
-        <ButtonLink href="/panelLogin">{t("goLogin")}</ButtonLink>
+        <p className="page-subtitle mt-0">{t("loginRequired")}</p>
+        <ButtonLink href={AUTH_ACCOUNT_PATH}>{t("goLogin")}</ButtonLink>
       </div>
     );
   }

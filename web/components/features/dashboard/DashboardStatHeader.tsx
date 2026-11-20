@@ -1,17 +1,17 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type DashboardStatPanelHeaderProps = {
+type DashboardStatHeaderProps = {
   children: ReactNode;
   trailing?: ReactNode;
   className?: string;
 };
 
-export function DashboardStatPanelHeader({
+export function DashboardStatHeader({
   children,
   trailing,
   className,
-}: DashboardStatPanelHeaderProps) {
+}: DashboardStatHeaderProps) {
   return (
     <div
       className={cn(
