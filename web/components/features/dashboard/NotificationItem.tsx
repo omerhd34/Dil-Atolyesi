@@ -4,7 +4,7 @@ import type { MouseEvent } from "react";
 import { BookOpen, ClipboardCheck, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
-import { navigatePanelHref } from "@/hooks/usePanelHash";
+import { navigateWorkshopHref } from "@/hooks/useWorkshopHash";
 import { cn } from "@/lib/utils";
 import {
   resolveNotificationHref,
@@ -33,7 +33,7 @@ export function NotificationItem({
 
   function handleOpen(event: MouseEvent<HTMLAnchorElement>) {
     onOpen();
-    if (navigatePanelHref(href)) {
+    if (navigateWorkshopHref(href)) {
       event.preventDefault();
     }
   }

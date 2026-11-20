@@ -37,7 +37,7 @@ function LessonBlock({
     <section
       id={`section-${id}`}
       aria-labelledby={title ? `heading-${id}` : undefined}
-      className="dashboard-panel scroll-mt-24 space-y-4"
+      className="workshop-card scroll-mt-24 space-y-4"
     >
       {title ? (
         <LessonSectionHeader

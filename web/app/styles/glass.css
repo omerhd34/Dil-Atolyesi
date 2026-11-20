@@ -1,7 +1,7 @@
-.glass-panel {
+.glass-surface {
   @apply border-0 backdrop-blur-[20px] backdrop-saturate-200;
   background: var(--glass);
-  box-shadow: var(--glass-panel-shadow);
+  box-shadow: var(--glass-surface-shadow);
 }
 
 .glass-button {

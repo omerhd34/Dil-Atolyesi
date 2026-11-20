@@ -14,7 +14,7 @@ export function AuthHomeSwitch({ children }: AuthHomeSwitchProps) {
 
   useEffect(() => {
     if (status === "authenticated") {
-      router.replace("/panel");
+      router.replace("/atolye");
     }
   }, [router, status]);
 

@@ -127,7 +127,7 @@ export function VerbsSection() {
 
     const query = params.toString();
     router.replace(
-      query ? `/panel/vocabulary/verbs?${query}` : "/panel/vocabulary/verbs",
+      query ? `/atolye/vocabulary/verbs?${query}` : "/atolye/vocabulary/verbs",
       { scroll: false },
     );
   }
@@ -135,8 +135,8 @@ export function VerbsSection() {
   function buildVerbsListUrl(params: URLSearchParams): string {
     const query = params.toString();
     return query
-      ? `/panel/vocabulary/verbs?${query}`
-      : "/panel/vocabulary/verbs";
+      ? `/atolye/vocabulary/verbs?${query}`
+      : "/atolye/vocabulary/verbs";
   }
 
   function handleFilterChange(next: VerbListFilter) {

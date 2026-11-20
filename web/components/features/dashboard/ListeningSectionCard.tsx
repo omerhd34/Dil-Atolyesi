@@ -85,7 +85,7 @@ export function ListeningSectionCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/listening/${section.id}`}
+                href={`/atolye/listening/${section.id}`}
                 variant="outline"
                 size="sm"
               >
@@ -98,7 +98,7 @@ export function ListeningSectionCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/listening/${section.id}#${LISTENING_SECTION_ANCHORS.practice}`}
+                href={`/atolye/listening/${section.id}#${LISTENING_SECTION_ANCHORS.practice}`}
                 variant="outline"
                 size="sm"
               >

@@ -198,52 +198,52 @@
     }
   }
 
-  .panel-motion-card {
+  .workshop-motion-card {
     transition-property:
       transform, background-color, border-color, box-shadow, color;
     transition-duration: 0.95s;
     transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
   }
 
-  .panel-motion-card svg {
+  .workshop-motion-card svg {
     transition-property: transform, opacity, color;
     transition-duration: 0.95s;
     transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
   }
 
-  .panel-motion-card-icon {
+  .workshop-motion-card-icon {
     transition-property: background-color, color, box-shadow;
     transition-duration: 0.95s;
     transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    .panel-motion-card:hover {
+    .workshop-motion-card:hover {
       transform: translateY(-4px);
     }
 
-    .panel-motion-card:hover svg {
+    .workshop-motion-card:hover svg {
       transform: translateX(3px);
       opacity: 0.9;
     }
 
-    .panel-motion-card--icons-static:hover svg {
+    .workshop-motion-card--icons-static:hover svg {
       transform: none;
       opacity: 1;
     }
 
-    .panel-motion-card:active {
+    .workshop-motion-card:active {
       transform: translateY(1px);
       transition-duration: 0.45s;
     }
 
-    .panel-motion-card:active svg {
+    .workshop-motion-card:active svg {
       transform: translateX(0);
       opacity: 1;
       transition-duration: 0.38s;
     }
 
-    .panel-motion-card--icons-static:active svg {
+    .workshop-motion-card--icons-static:active svg {
       transform: none;
     }
   }
@@ -278,5 +278,33 @@
 
   .phone-country-chevron {
     transition: transform 0.95s cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  .marketing-nav-link svg {
+    transition-property: transform, opacity, color;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .marketing-nav-link:hover {
+      transform: translateY(-4px);
+    }
+
+    .marketing-nav-link:hover svg {
+      transform: translateX(3px);
+      opacity: 0.9;
+    }
+
+    .marketing-nav-link:active {
+      transform: translateY(1px);
+      transition-duration: 0.45s;
+    }
+
+    .marketing-nav-link:active svg {
+      transform: translateX(0);
+      opacity: 1;
+      transition-duration: 0.38s;
+    }
   }
 }

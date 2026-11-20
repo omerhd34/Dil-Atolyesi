@@ -671,7 +671,7 @@ export const vocabularyCategory4: VocabularyCategory = {
       examples: [
         {
           en: "Sign in to access your account dashboard.",
-          tr: "Hesap panelinize erişmek için giriş yapın.",
+          tr: "Hesabına giriş yaparak atölyene eriş.",
         },
         {
           en: "You must sign in with your student credentials.",

@@ -27,7 +27,7 @@
   opacity: 0.42;
 }
 
-.auth-overlay-panel {
+.auth-overlay-pane {
   position: absolute;
   inset: 0;
   display: flex;
@@ -43,7 +43,7 @@
     transform 0.45s ease;
 }
 
-.auth-overlay-panel h2 {
+.auth-overlay-pane h2 {
   margin: 0 0 12px;
   color: var(--auth-overlay-text);
   font-size: 32px;
@@ -52,7 +52,7 @@
   text-shadow: 0 2px 16px rgb(0 0 0 / 40%);
 }
 
-.auth-overlay-panel p {
+.auth-overlay-pane p {
   max-width: 380px;
   margin: 0 0 28px;
   color: var(--auth-overlay-text-muted);
@@ -182,17 +182,17 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
-  .auth-overlay-panel {
+  .auth-overlay-pane {
     padding: 28px 22px;
   }
 
-  .auth-overlay-panel h2,
+  .auth-overlay-pane h2,
   .overlay-forgot h2 {
     font-size: 24px;
     white-space: normal;
   }
 
-  .auth-overlay-panel p,
+  .auth-overlay-pane p,
   .overlay-forgot p {
     margin-bottom: 20px;
     font-size: 14px;

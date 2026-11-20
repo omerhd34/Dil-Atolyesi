@@ -12,7 +12,7 @@ import { ListChecks, RotateCcw } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Volume2 } from "lucide-react";
 import { ExerciseCheckButton } from "@/components/features/exercises/ExerciseCheckButton";
-import { ExerciseFinishedPanel } from "@/components/features/exercises/ExerciseFinishedPanel";
+import { ExerciseFinishedSection } from "@/components/features/exercises/ExerciseFinishedSection";
 import { ExerciseQuestionHeader } from "@/components/features/exercises/ExerciseQuestionHeader";
 import { ExercisePercentBadge } from "@/components/features/topics/ExercisePercentBadge";
 import { ExerciseResultDialog } from "@/components/features/topics/ExerciseResultDialog";
@@ -364,7 +364,7 @@ function isVerbRowCorrect(
   );
 }
 
-type VerbListeningBatchPanelProps = {
+type VerbListeningBatchSectionProps = {
   rows: VerbListeningRow[];
   v2Pool: string[];
   v3Pool: string[];
@@ -378,7 +378,7 @@ type VerbListeningBatchPanelProps = {
   onSelectV3: (rowIndex: number, poolIndex: number) => void;
 };
 
-function VerbListeningBatchPanel({
+function VerbListeningBatchSection({
   rows,
   v2Pool,
   v3Pool,
@@ -390,7 +390,7 @@ function VerbListeningBatchPanel({
   pickRowHint,
   onSelectV2,
   onSelectV3,
-}: VerbListeningBatchPanelProps) {
+}: VerbListeningBatchSectionProps) {
   const tVocabulary = useTranslations("Vocabulary");
   const [activeRow, setActiveRow] = useState<number | null>(null);
 
@@ -590,7 +590,7 @@ export function ListeningExercises({
   onBackToTypes,
 }: ListeningExercisesProps) {
   const t = useTranslations("Topic");
-  const [batchPanelKey, setBatchPanelKey] = useState(0);
+  const [batchSectionKey, setBatchSectionKey] = useState(0);
   const skipSessionSave = useRef(true);
   const seededSlots = useMemo(
     () => resolveListeningInitialSlots(exercises, initialSlots),
@@ -682,13 +682,13 @@ export function ListeningExercises({
       })),
       checked: false,
     });
-    setBatchPanelKey((value) => value + 1);
+    setBatchSectionKey((value) => value + 1);
   }
 
   if (finished) {
     const correctCount = countCorrect(exercises, slots);
     return (
-      <ExerciseFinishedPanel
+      <ExerciseFinishedSection
         correct={correctCount}
         total={exercises.length}
         onRetry={resetAll}
@@ -843,7 +843,7 @@ export function ListeningExercises({
         </div>
       </div>
 
-      <article className="dashboard-panel space-y-5">
+      <article className="workshop-card space-y-5">
         {verbBatch ? null : (
           <ExerciseQuestionHeader
             title={exercise.prompt}
@@ -863,8 +863,8 @@ export function ListeningExercises({
         )}
 
         {verbBatch ? (
-          <VerbListeningBatchPanel
-            key={`verb-batch-${index}-${batchPanelKey}`}
+          <VerbListeningBatchSection
+            key={`verb-batch-${index}-${batchSectionKey}`}
             rows={batchRows}
             v2Pool={exercise.verbListeningV2Pool ?? []}
             v3Pool={exercise.verbListeningV3Pool ?? []}

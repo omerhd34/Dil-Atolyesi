@@ -4,7 +4,7 @@ import { ListChecks, RotateCcw } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, type FormEvent } from "react";
 import { ExerciseCheckButton } from "@/components/features/exercises/ExerciseCheckButton";
-import { ExerciseFinishedPanel } from "@/components/features/exercises/ExerciseFinishedPanel";
+import { ExerciseFinishedSection } from "@/components/features/exercises/ExerciseFinishedSection";
 import { ExerciseListenWordButton } from "@/components/features/exercises/ExerciseListenWordButton";
 import { ExerciseQuestionHeader } from "@/components/features/exercises/ExerciseQuestionHeader";
 import { InstantMultipleChoiceOptions } from "@/components/features/exercises/InstantMultipleChoiceOptions";
@@ -142,7 +142,7 @@ export function MultipleChoiceExercises({
   if (finished) {
     const correctCount = countCorrect(exercises, slots);
     return (
-      <ExerciseFinishedPanel
+      <ExerciseFinishedSection
         correct={correctCount}
         total={exercises.length}
         onRetry={resetSession}
@@ -194,7 +194,7 @@ export function MultipleChoiceExercises({
         ) : null}
       </div>
 
-      <article className="dashboard-panel space-y-5">
+      <article className="workshop-card space-y-5">
         <ExerciseQuestionHeader
           title={exercise.prompt}
           hint={exercise.hint}

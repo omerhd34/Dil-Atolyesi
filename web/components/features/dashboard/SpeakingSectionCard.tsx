@@ -88,7 +88,7 @@ export function SpeakingSectionCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/speaking/${section.id}`}
+                href={`/atolye/speaking/${section.id}`}
                 variant="outline"
                 size="sm"
               >
@@ -101,7 +101,7 @@ export function SpeakingSectionCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/speaking/${section.id}?tab=practice`}
+                href={`/atolye/speaking/${section.id}?tab=practice`}
                 variant="outline"
                 size="sm"
               >

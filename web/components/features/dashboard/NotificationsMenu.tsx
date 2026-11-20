@@ -28,15 +28,15 @@ import { cn } from "@/lib/utils";
 
 type NotificationFilter = "all" | AppNotificationType;
 
-const PANEL_WIDTH = 352;
-const PANEL_GAP = 25;
+const NOTIFICATIONS_POPOVER_WIDTH = 352;
+const NOTIFICATIONS_POPOVER_GAP = 25;
 const VIEWPORT_MARGIN = 16;
 
-const notificationPanelButtonClassName =
+const notificationWorkshopButtonClassName =
   "cursor-pointer rounded-md outline-none focus-visible:ring-2 focus-visible:ring-ring/50";
 
-const notificationPanelTabClassName = cn(
-  notificationPanelButtonClassName,
+const notificationWorkshopTabClassName = cn(
+  notificationWorkshopButtonClassName,
   "notification-filter-tab inline-flex shrink-0 items-center gap-1.5 border-b-2 px-2.5 py-2 text-xs font-medium transition-none rounded-t-lg",
 );
 
@@ -93,9 +93,10 @@ export function NotificationsMenu({
     dismissAll,
   } = useAppNotifications();
   const rootRef = useRef<HTMLDivElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
+  const workshopPopoverRef = useRef<HTMLDivElement>(null);
   const [filter, setFilter] = useState<NotificationFilter>("all");
-  const [panelStyle, setPanelStyle] = useState<CSSProperties>({});
+  const [workshopPopoverStyle, setWorkshopPopoverStyle] =
+    useState<CSSProperties>({});
   const isSidebar = variant === "sidebar";
   const { isMobile } = useSidebar();
 
@@ -108,14 +109,17 @@ export function NotificationsMenu({
     const rect = root.getBoundingClientRect();
     const vw = window.innerWidth;
     const vh = window.innerHeight;
-    const width = Math.min(PANEL_WIDTH, vw - VIEWPORT_MARGIN * 2);
+    const width = Math.min(
+      NOTIFICATIONS_POPOVER_WIDTH,
+      vw - VIEWPORT_MARGIN * 2,
+    );
 
     if (isSidebar) {
       const left = Math.min(
-        rect.right + PANEL_GAP,
+        rect.right + NOTIFICATIONS_POPOVER_GAP,
         vw - width - VIEWPORT_MARGIN,
       );
-      setPanelStyle({
+      setWorkshopPopoverStyle({
         left: Math.max(VIEWPORT_MARGIN, left),
         bottom: Math.max(VIEWPORT_MARGIN, vh - rect.bottom),
         width,
@@ -125,7 +129,7 @@ export function NotificationsMenu({
     }
 
     const top = rect.bottom + 8;
-    setPanelStyle({
+    setWorkshopPopoverStyle({
       top,
       right: Math.max(VIEWPORT_MARGIN, vw - rect.right),
       width,
@@ -156,7 +160,7 @@ export function NotificationsMenu({
       const target = event.target as Node;
       if (
         !rootRef.current?.contains(target) &&
-        !panelRef.current?.contains(target)
+        !workshopPopoverRef.current?.contains(target)
       ) {
         closeMenu();
       }
@@ -273,13 +277,13 @@ export function NotificationsMenu({
     );
   }
 
-  const panel = (
+  const workshopPopover = (
     <div
-      ref={panelRef}
+      ref={workshopPopoverRef}
       role="dialog"
       aria-label={t("notifications")}
       style={{
-        ...panelStyle,
+        ...workshopPopoverStyle,
         backgroundColor: "var(--background, #ffffff)",
         backgroundImage: "linear-gradient(var(--sidebar), var(--sidebar))",
       }}
@@ -294,7 +298,7 @@ export function NotificationsMenu({
               <button
                 type="button"
                 className={cn(
-                  notificationPanelButtonClassName,
+                  notificationWorkshopButtonClassName,
                   "inline-flex gap-1 px-1 py-0.5 text-xs font-medium text-brand-600 hover:text-sky-700 dark:text-brand-400 dark:hover:text-sky-300",
                 )}
                 onClick={markAllRead}
@@ -306,7 +310,7 @@ export function NotificationsMenu({
             <button
               type="button"
               className={cn(
-                notificationPanelButtonClassName,
+                notificationWorkshopButtonClassName,
                 "ml-auto inline-flex items-center gap-1 px-1 py-0.5 text-xs font-medium text-brand-600 hover:text-destructive dark:text-brand-400 dark:hover:text-red-300",
               )}
               onClick={dismissAll}
@@ -334,7 +338,7 @@ export function NotificationsMenu({
                 aria-selected={active}
                 data-btn-motion="off"
                 className={cn(
-                  notificationPanelTabClassName,
+                  notificationWorkshopTabClassName,
                   active
                     ? "border-sky-600 bg-sky-500/15 font-semibold text-sky-950 dark:border-sky-400 dark:bg-sky-500/22 dark:text-sky-50"
                     : "border-transparent text-brand-600/90 hover:bg-muted/40 hover:text-brand-800 dark:text-brand-400/90 dark:hover:bg-white/5 dark:hover:text-brand-100",
@@ -394,11 +398,11 @@ export function NotificationsMenu({
 
       <div className="shrink-0 border-t border-border">
         <Link
-          href="/panel/ayarlar#bildirimler"
+          href="/atolye/ayarlar#bildirimler"
           data-btn-motion="off"
           onClick={closeMenu}
           className={cn(
-            notificationPanelButtonClassName,
+            notificationWorkshopButtonClassName,
             "notification-settings-link flex items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-brand-800 hover:bg-muted/70 dark:text-brand-100 dark:hover:bg-white/5",
           )}
         >
@@ -473,7 +477,7 @@ export function NotificationsMenu({
       </span>
 
       {open && typeof document !== "undefined"
-        ? createPortal(panel, document.body)
+        ? createPortal(workshopPopover, document.body)
         : null}
     </div>
   );

@@ -6,7 +6,7 @@ import {
   useVocabularyLearnQuotaQuery,
   useVocabularyQuizQuery,
 } from "@/store/api";
-import { DashboardStatPanelHeader } from "@/components/features/dashboard/DashboardStatPanelHeader";
+import { DashboardStatHeader } from "@/components/features/dashboard/DashboardStatHeader";
 import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
 import { cn } from "@/lib/utils";
 import { useVocabularyUiStore } from "@/store/vocabularyUiStore";
@@ -18,7 +18,7 @@ import { WordTimerCardDetails } from "@/components/features/dashboard/WordTimerC
 import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { navigatePanelSection } from "@/hooks/usePanelHash";
+import { navigateWorkshopSection } from "@/hooks/useWorkshopHash";
 import { useCountdown } from "@/hooks/useCountdown";
 import {
   BYPASS_LEARN_WORD_LOCK,
@@ -52,8 +52,8 @@ export function DashboardStatsBar() {
       <QuickContinueCard className="h-auto" />
       <LevelStatusCard className="h-auto" />
 
-      <article className="dashboard-panel dashboard-panel--stat h-auto md:col-span-2 xl:col-span-1">
-        <DashboardStatPanelHeader
+      <article className="workshop-card workshop-card--stat h-auto md:col-span-2 xl:col-span-1">
+        <DashboardStatHeader
           trailing={
             <span
               className={cn(
@@ -65,11 +65,11 @@ export function DashboardStatsBar() {
             </span>
           }
         >
-          <p className="dashboard-panel__label text-base">
+          <p className="workshop-card__label text-base">
             <Timer className="size-5" aria-hidden />
             {t("wordTimer")}
           </p>
-        </DashboardStatPanelHeader>
+        </DashboardStatHeader>
         <DashboardStatProgressBar
           value={pending}
           max={learnLimit}
@@ -89,7 +89,7 @@ export function DashboardStatsBar() {
           <div className="flex flex-wrap items-center gap-2">
             <StartStudyTimerButton />
             {dueCount > 0 ? (
-              <ButtonLink href="/panel/vocabulary/exam" size="sm">
+              <ButtonLink href="/atolye/vocabulary/exam" size="sm">
                 <ClipboardCheck className="size-3.5 text-current" aria-hidden />
                 {t("quizCardCta")}
               </ButtonLink>
@@ -100,12 +100,12 @@ export function DashboardStatsBar() {
             variant="outline"
             size="sm"
             onClick={() => {
-              const onPanel = pathname === "/panel" || pathname === "/";
-              if (onPanel) {
-                navigatePanelSection("vocabulary");
+              const onWorkshop = pathname === "/atolye" || pathname === "/";
+              if (onWorkshop) {
+                navigateWorkshopSection("vocabulary");
                 return;
               }
-              router.push("/panel#vocabulary");
+              router.push("/atolye#vocabulary");
             }}
           >
             <BookOpen className="size-3.5 text-current" aria-hidden />

@@ -1,6 +1,6 @@
 "use client";
 
-import { ReadingExercisePanel } from "@/components/features/reading/ReadingExercisePanel";
+import { ReadingExerciseSection } from "@/components/features/reading/ReadingExerciseSection";
 import { ReadingMultipleChoiceQuiz } from "@/components/features/reading/ReadingMultipleChoiceQuiz";
 import type { ReadingSection } from "@/data/readings/types";
 import { useReadingSectionStatus } from "@/hooks/useReadingProgress";
@@ -37,5 +37,5 @@ export function ReadingExercisesView({ section }: ReadingExercisesViewProps) {
     );
   }
 
-  return <ReadingExercisePanel block={block} onComplete={handleComplete} />;
+  return <ReadingExerciseSection block={block} onComplete={handleComplete} />;
 }

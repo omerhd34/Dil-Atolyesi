@@ -337,7 +337,7 @@ export function WritingPracticeQuiz({
   return (
     <div className="space-y-6">
       {practicePartConfigs.length > 0 ? (
-        <div className="dashboard-panel space-y-6 p-4 sm:p-6">
+        <div className="workshop-card space-y-6 p-4 sm:p-6">
           {practicePartConfigs.map((part, index) => (
             <Fragment key={part.key}>
               {index > 0 ? <Separator /> : null}

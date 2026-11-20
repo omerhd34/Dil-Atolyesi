@@ -90,7 +90,7 @@ export function SpeakingModelView({ section }: SpeakingModelViewProps) {
   }
 
   return (
-    <div className="dashboard-panel space-y-6">
+    <div className="workshop-card space-y-6">
       <div className="space-y-3">
         <div className="flex flex-wrap items-center gap-2">
           <Button

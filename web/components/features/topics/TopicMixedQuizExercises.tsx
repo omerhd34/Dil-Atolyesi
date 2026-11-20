@@ -4,7 +4,7 @@ import { ListChecks, RotateCcw } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, type FormEvent } from "react";
 import { ExerciseCheckButton } from "@/components/features/exercises/ExerciseCheckButton";
-import { ExerciseFinishedPanel } from "@/components/features/exercises/ExerciseFinishedPanel";
+import { ExerciseFinishedSection } from "@/components/features/exercises/ExerciseFinishedSection";
 import { ExerciseListenWordButton } from "@/components/features/exercises/ExerciseListenWordButton";
 import { ExerciseQuestionHeader } from "@/components/features/exercises/ExerciseQuestionHeader";
 import { InstantMultipleChoiceOptions } from "@/components/features/exercises/InstantMultipleChoiceOptions";
@@ -268,7 +268,7 @@ export function TopicMixedQuizExercises({
   if (finished) {
     const correctCount = countCorrect(exercises, slots);
     return (
-      <ExerciseFinishedPanel
+      <ExerciseFinishedSection
         correct={correctCount}
         total={exercises.length}
         onRetry={resetSession}
@@ -300,7 +300,7 @@ export function TopicMixedQuizExercises({
           ) : null}
         </div>
 
-        <article className="dashboard-panel space-y-5 pb-5 sm:pb-6">
+        <article className="workshop-card space-y-5 pb-5 sm:pb-6">
           <ListeningMatchingBlock
             key={`${exercise.id}-${index}`}
             question={listeningQuestion}
@@ -433,7 +433,7 @@ export function TopicMixedQuizExercises({
           </div>
         </div>
 
-        <article className="dashboard-panel space-y-5 pb-5 sm:pb-6">
+        <article className="workshop-card space-y-5 pb-5 sm:pb-6">
           <ExerciseQuestionHeader
             title={listeningExercise.prompt}
             showHint={false}
@@ -605,7 +605,7 @@ export function TopicMixedQuizExercises({
         ) : null}
       </div>
 
-      <article className="dashboard-panel space-y-5 pb-5 sm:pb-6">
+      <article className="workshop-card space-y-5 pb-5 sm:pb-6">
         <ExerciseQuestionHeader
           title={exercise.prompt}
           hint={exercise.hint}

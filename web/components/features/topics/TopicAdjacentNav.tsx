@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import {
   getAdjacentGrammarTopics,
-  getGrammarTopicPanelHref,
+  getGrammarTopicWorkshopHref,
 } from "@/lib/topicNavigation";
 
 type TopicAdjacentNavProps = {
@@ -24,7 +24,7 @@ export function TopicAdjacentNav({
     return null;
   }
 
-  const href = getGrammarTopicPanelHref(next, activeTab);
+  const href = getGrammarTopicWorkshopHref(next, activeTab);
 
   return (
     <nav

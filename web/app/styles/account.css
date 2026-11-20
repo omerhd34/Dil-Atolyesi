@@ -111,7 +111,7 @@
   @apply absolute top-[calc(100%+10px)] right-0 z-50 w-[min(300px,calc(100vw-1.5rem))] rounded-2xl p-3 backdrop-blur-[20px] backdrop-saturate-200;
   background: var(--glass-solid);
   color: var(--account-text);
-  box-shadow: var(--glass-panel-shadow-lg);
+  box-shadow: var(--glass-surface-shadow-lg);
 }
 
 .account-dropdown__user {

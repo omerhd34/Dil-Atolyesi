@@ -29,7 +29,7 @@ export function ReadingPageHeader({
 
   return (
     <header className="space-y-4">
-      <ButtonLink href="/panel#reading" variant="outline" size="sm">
+      <ButtonLink href="/atolye#reading" variant="outline" size="sm">
         <ArrowLeft className="size-4" aria-hidden />
         {t("backToReading")}
       </ButtonLink>

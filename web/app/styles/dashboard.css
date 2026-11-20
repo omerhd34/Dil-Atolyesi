@@ -1,14 +1,14 @@
-.dashboard-panel {
+.workshop-card {
   @apply rounded-[20px] border-0 p-5 backdrop-blur-[20px] backdrop-saturate-200 sm:p-6;
   background: var(--glass);
-  box-shadow: var(--glass-panel-shadow);
+  box-shadow: var(--glass-surface-shadow);
 }
 
-.dashboard-panel--stat {
+.workshop-card--stat {
   @apply flex h-full flex-col pt-3;
 }
 
-.dashboard-panel__label {
+.workshop-card__label {
   @apply inline-flex items-center gap-2 text-base font-medium leading-snug tracking-tight;
   color: var(--account-text-dim, var(--brand-600));
   text-transform: none;

@@ -210,7 +210,7 @@ export function MatchingExercises({
         ) : null}
       </div>
 
-      <article className="dashboard-panel space-y-5">
+      <article className="workshop-card space-y-5">
         <ListeningMatchingBlock
           key={`${exercise.id}-${index}`}
           question={listeningQuestion}

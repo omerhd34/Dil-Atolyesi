@@ -177,7 +177,7 @@ export function SpeakingAnagramBlock({
   }
 
   return (
-    <article className="dashboard-panel space-y-4 p-4 sm:p-5">
+    <article className="workshop-card space-y-4 p-4 sm:p-5">
       <ExerciseQuestionHeader
         number={number}
         title={t("anagramPrompt")}

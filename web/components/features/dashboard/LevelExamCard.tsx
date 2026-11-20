@@ -96,7 +96,7 @@ export function LevelExamCard({
           </EnglishUiHint>
         ) : passed ? (
           <ButtonLink
-            href={`/panel/grammer/${topic.id}/exercises`}
+            href={`/atolye/grammer/${topic.id}/exercises`}
             size="sm"
             className="w-full"
           >
@@ -105,7 +105,7 @@ export function LevelExamCard({
         ) : (
           <EnglishUiHint hint={t("examCtaHint")} wrapperClassName="w-full">
             <ButtonLink
-              href={`/panel/grammer/${topic.id}/exercises`}
+              href={`/atolye/grammer/${topic.id}/exercises`}
               size="sm"
               className="w-full"
             >

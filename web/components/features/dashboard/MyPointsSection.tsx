@@ -33,7 +33,7 @@ export function MyPointsSection() {
   return (
     <section
       aria-labelledby="my-points-heading"
-      className="dashboard-panel dashboard-panel--stat space-y-5 p-5 sm:p-6"
+      className="workshop-card workshop-card--stat space-y-5 p-5 sm:p-6"
     >
       <div className="flex items-start gap-3">
         <span

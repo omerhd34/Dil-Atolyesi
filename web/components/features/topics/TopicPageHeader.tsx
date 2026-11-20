@@ -19,7 +19,7 @@ import { EnglishUiHint } from "@/components/ui/EnglishUiHint";
 import { cn } from "@/lib/utils";
 import {
   getAdjacentGrammarTopics,
-  getGrammarTopicPanelHref,
+  getGrammarTopicWorkshopHref,
 } from "@/lib/topicNavigation";
 
 export type TopicSectionNavItem = {
@@ -52,21 +52,21 @@ export function TopicPageHeader({
   const t = useTranslations("Topic");
   const englishTitle = getDistinctSecondaryTitle(title, titleEng);
 
-  const lessonHref = `/panel/grammer/${topicId}/lesson`;
-  const exercisesHref = `/panel/grammer/${topicId}/exercises`;
-  const examHref = `/panel/grammer/${topicId}/exam`;
+  const lessonHref = `/atolye/grammer/${topicId}/lesson`;
+  const exercisesHref = `/atolye/grammer/${topicId}/exercises`;
+  const examHref = `/atolye/grammer/${topicId}/exam`;
   const showSectionNav = activeTab === "lesson" && sections.length > 0;
   const showTopicExamTab = !isExam;
   const { previous: previousTopic } = getAdjacentGrammarTopics(topicId);
   const previousTopicHref = previousTopic
-    ? getGrammarTopicPanelHref(previousTopic, activeTab)
+    ? getGrammarTopicWorkshopHref(previousTopic, activeTab)
     : null;
 
   return (
     <header className="space-y-4">
       <div className="flex items-center justify-between gap-3">
         <div className="flex min-w-0 flex-wrap items-center gap-2">
-          <ButtonLink href="/panel#grammer" variant="outline" size="sm">
+          <ButtonLink href="/atolye#grammer" variant="outline" size="sm">
             <ArrowLeft className="size-4" aria-hidden />
             {t("backToTopics")}
           </ButtonLink>

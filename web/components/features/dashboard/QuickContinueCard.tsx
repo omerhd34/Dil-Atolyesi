@@ -15,10 +15,10 @@ import {
   SpellCheck2,
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { DashboardStatPanelHeader } from "@/components/features/dashboard/DashboardStatPanelHeader";
+import { DashboardStatHeader } from "@/components/features/dashboard/DashboardStatHeader";
 import { useContinueActivities } from "@/hooks/useContinueActivity";
 import { quickContinueActivitiesForDisplay } from "@/lib/quickContinueActivities";
-import { navigatePanelHref } from "@/hooks/usePanelHash";
+import { navigateWorkshopHref } from "@/hooks/useWorkshopHash";
 import { resolveContinueActivityDisplay } from "@/lib/resolveContinueActivity";
 import type { ContinueActivity } from "@/lib/continueActivityStorage";
 import { cn } from "@/lib/utils";
@@ -90,7 +90,7 @@ function ContinueActivityRow({
         className="quick-continue-row-link group flex min-w-0 items-center gap-3 rounded-xl px-1 py-1.5 hover:bg-(--glass-btn) focus-visible:bg-(--glass-btn) focus-visible:outline-none"
         aria-label={`${goLabel}: ${display.title}`}
         onClick={(event) => {
-          if (navigatePanelHref(activity.href)) {
+          if (navigateWorkshopHref(activity.href)) {
             event.preventDefault();
           }
         }}
@@ -157,13 +157,13 @@ export function QuickContinueCard({ className }: QuickContinueCardProps = {}) {
   };
 
   return (
-    <article className={cn("dashboard-panel dashboard-panel--stat", className)}>
-      <DashboardStatPanelHeader>
-        <p className="dashboard-panel__label text-base">
+    <article className={cn("workshop-card workshop-card--stat", className)}>
+      <DashboardStatHeader>
+        <p className="workshop-card__label text-base">
           <Play className="size-5" aria-hidden />
           {t("quickContinue")}
         </p>
-      </DashboardStatPanelHeader>
+      </DashboardStatHeader>
 
       <ul className="mt-2 flex flex-1 flex-col justify-start gap-0.5">
         {activities.map((activity, index) => (

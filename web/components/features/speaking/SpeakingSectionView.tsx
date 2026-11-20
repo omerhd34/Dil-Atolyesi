@@ -22,8 +22,8 @@ function speakingSectionHref(
   tab: SpeakingSectionTab,
 ): string {
   return tab === "practice"
-    ? `/panel/speaking/${sectionId}?tab=practice`
-    : `/panel/speaking/${sectionId}`;
+    ? `/atolye/speaking/${sectionId}?tab=practice`
+    : `/atolye/speaking/${sectionId}`;
 }
 
 export function SpeakingSectionView({ section }: SpeakingSectionViewProps) {

@@ -68,7 +68,7 @@ export function SpeakingOpenBoxBlock({
       </div>
 
       {selected && !completedIds.has(selected.id) ? (
-        <div className="dashboard-panel space-y-3 p-4">
+        <div className="workshop-card space-y-3 p-4">
           <div className="space-y-0.5">
             <p className="text-base font-medium text-brand-800 dark:text-brand-200">
               {selected.prompt}

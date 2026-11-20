@@ -3,14 +3,14 @@
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { usePathname } from "@/i18n/navigation";
-import { usePanelHash } from "@/hooks/usePanelHash";
+import { useWorkshopHash } from "@/hooks/useWorkshopHash";
 import { writeContinueActivity } from "@/lib/continueActivityStorage";
 import { parseContinueActivityFromPath } from "@/lib/resolveContinueActivity";
 
 export function ContinueActivityTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const hash = usePanelHash();
+  const hash = useWorkshopHash();
 
   useEffect(() => {
     const search = searchParams.toString();

@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { GraduationCap } from "lucide-react";
 import { useLevelStatus } from "@/hooks/useLevelStatus";
 import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
-import { DashboardStatPanelHeader } from "@/components/features/dashboard/DashboardStatPanelHeader";
+import { DashboardStatHeader } from "@/components/features/dashboard/DashboardStatHeader";
 import { DashboardStatProgressBar } from "@/components/features/dashboard/DashboardStatProgressBar";
 import { LevelStatusSkillBreakdown } from "@/components/features/dashboard/LevelStatusSkillBreakdown";
 import { cn } from "@/lib/utils";
@@ -18,8 +18,8 @@ export function LevelStatusCard({ className }: LevelStatusCardProps = {}) {
   const { level, percent, complete, skills } = useLevelStatus();
 
   return (
-    <article className={cn("dashboard-panel dashboard-panel--stat", className)}>
-      <DashboardStatPanelHeader
+    <article className={cn("workshop-card workshop-card--stat", className)}>
+      <DashboardStatHeader
         trailing={
           <span
             className={cn(
@@ -31,11 +31,11 @@ export function LevelStatusCard({ className }: LevelStatusCardProps = {}) {
           </span>
         }
       >
-        <p className="dashboard-panel__label text-base">
+        <p className="workshop-card__label text-base">
           <GraduationCap className="size-5" aria-hidden />
           {t("levelStatus")}
         </p>
-      </DashboardStatPanelHeader>
+      </DashboardStatHeader>
 
       <DashboardStatProgressBar
         value={percent}

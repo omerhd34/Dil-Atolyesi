@@ -83,7 +83,7 @@ export function ReadingSectionCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/reading/${section.id}`}
+                href={`/atolye/reading/${section.id}`}
                 variant="outline"
                 size="sm"
               >
@@ -96,7 +96,7 @@ export function ReadingSectionCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/reading/${section.id}#${READING_SECTION_ANCHORS.practice}`}
+                href={`/atolye/reading/${section.id}#${READING_SECTION_ANCHORS.practice}`}
                 variant="outline"
                 size="sm"
               >

@@ -4,7 +4,7 @@ import { ListChecks, RotateCcw } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, type FormEvent } from "react";
 import { ExerciseCheckButton } from "@/components/features/exercises/ExerciseCheckButton";
-import { ExerciseFinishedPanel } from "@/components/features/exercises/ExerciseFinishedPanel";
+import { ExerciseFinishedSection } from "@/components/features/exercises/ExerciseFinishedSection";
 import { ExerciseListenWordButton } from "@/components/features/exercises/ExerciseListenWordButton";
 import { ExerciseQuestionHeader } from "@/components/features/exercises/ExerciseQuestionHeader";
 import { ExercisePercentBadge } from "@/components/features/topics/ExercisePercentBadge";
@@ -148,7 +148,7 @@ export function FillBlankExercises({
   if (finished) {
     const correctCount = countCorrect(exercises, slots);
     return (
-      <ExerciseFinishedPanel
+      <ExerciseFinishedSection
         correct={correctCount}
         total={exercises.length}
         onRetry={resetSession}
@@ -188,7 +188,7 @@ export function FillBlankExercises({
         ) : null}
       </div>
 
-      <article className="dashboard-panel space-y-5 pb-5 sm:pb-6">
+      <article className="workshop-card space-y-5 pb-5 sm:pb-6">
         <ExerciseQuestionHeader
           title={exercise.prompt}
           hint={exercise.hint}

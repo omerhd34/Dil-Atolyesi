@@ -83,7 +83,7 @@ export function VocabularyCategoryCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/vocabulary/${category.id}`}
+                href={`/atolye/vocabulary/${category.id}`}
                 variant="outline"
                 size="sm"
               >
@@ -96,7 +96,7 @@ export function VocabularyCategoryCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/vocabulary/${category.id}?tab=exercises`}
+                href={`/atolye/vocabulary/${category.id}?tab=exercises`}
                 variant="outline"
                 size="sm"
               >

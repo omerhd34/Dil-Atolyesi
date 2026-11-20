@@ -75,7 +75,7 @@ export function TopicCard({ topic, index, locked = false }: TopicCardProps) {
           <>
             <EnglishUiHint hint={t("lessonHint")} wrapperClassName="w-full">
               <ButtonLink
-                href={`/panel/grammer/${topic.id}/lesson`}
+                href={`/atolye/grammer/${topic.id}/lesson`}
                 variant="outline"
                 size="sm"
               >
@@ -85,7 +85,7 @@ export function TopicCard({ topic, index, locked = false }: TopicCardProps) {
             </EnglishUiHint>
             <EnglishUiHint hint={t("exercisesHint")} wrapperClassName="w-full">
               <ButtonLink
-                href={`/panel/grammer/${topic.id}/exercises`}
+                href={`/atolye/grammer/${topic.id}/exercises`}
                 variant="outline"
                 size="sm"
               >
@@ -94,7 +94,7 @@ export function TopicCard({ topic, index, locked = false }: TopicCardProps) {
               </ButtonLink>
             </EnglishUiHint>
             <EnglishUiHint hint={t("topicExamHint")} wrapperClassName="w-full">
-              <ButtonLink href={`/panel/grammer/${topic.id}/exam`} size="sm">
+              <ButtonLink href={`/atolye/grammer/${topic.id}/exam`} size="sm">
                 <ClipboardCheck className="text-current" aria-hidden />
                 {t("topicExam")}
               </ButtonLink>

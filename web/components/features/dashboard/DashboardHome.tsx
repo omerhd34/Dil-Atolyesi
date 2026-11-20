@@ -11,7 +11,7 @@ import { WritingSection } from "@/components/features/dashboard/WritingSection";
 import { SkillSection } from "@/components/features/dashboard/SkillSection";
 import { TopicsSection } from "@/components/features/dashboard/TopicsSection";
 import { VocabularySection } from "@/components/features/dashboard/VocabularySection";
-import { usePanelHash } from "@/hooks/usePanelHash";
+import { useWorkshopHash } from "@/hooks/useWorkshopHash";
 
 const SKILL_BY_HASH = {
   listening: "listening",
@@ -36,7 +36,7 @@ const READY_SECTIONS = new Set<string>([
 
 export function DashboardHome() {
   const t = useTranslations("Dashboard");
-  const hash = usePanelHash();
+  const hash = useWorkshopHash();
   const section = hash.replace(/^#/, "");
 
   return (

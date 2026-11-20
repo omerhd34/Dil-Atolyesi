@@ -360,7 +360,7 @@ export function SpeakingPracticeQuiz({
             <ArrowLeft className="size-4" aria-hidden />
             {t("backToExerciseTypes")}
           </Button>
-          <div className="dashboard-panel space-y-6 p-4 sm:p-6">
+          <div className="workshop-card space-y-6 p-4 sm:p-6">
             {activePart.header}
             {activePart.body}
           </div>

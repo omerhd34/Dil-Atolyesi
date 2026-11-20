@@ -46,8 +46,8 @@ export function VocabularyCategoryView({
 
     router.replace(
       next === "exercises"
-        ? `/panel/vocabulary/${categoryId}?tab=exercises`
-        : `/panel/vocabulary/${categoryId}`,
+        ? `/atolye/vocabulary/${categoryId}?tab=exercises`
+        : `/atolye/vocabulary/${categoryId}`,
       { scroll: false },
     );
   }

@@ -16,7 +16,7 @@ const DECK_DRAW_MS = 520;
 const UNDO_MS = 650;
 const SHUFFLE_MS = 680;
 
-type PanelMotion = "reveal" | "undo" | "shuffle-out";
+type WorkshopCardMotion = "reveal" | "undo" | "shuffle-out";
 
 function shuffleItems<T>(items: T[]): T[] {
   const next = [...items];
@@ -55,7 +55,7 @@ export function SpeakingRandomCardsBlock({
   const undoTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const shuffleTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const panelBusy = dealing || undoing || shuffling;
+  const cardsBusy = dealing || undoing || shuffling;
 
   const remainingInDeck = deck.length;
   const active =
@@ -89,7 +89,7 @@ export function SpeakingRandomCardsBlock({
   }, []);
 
   function handleReshuffleClick() {
-    if (panelBusy) {
+    if (cardsBusy) {
       return;
     }
     setShuffling(true);
@@ -101,7 +101,7 @@ export function SpeakingRandomCardsBlock({
   }
 
   function handleDealFromDeck() {
-    if (deck.length === 0 || panelBusy) {
+    if (deck.length === 0 || cardsBusy) {
       return;
     }
     const [top, ...rest] = deck;
@@ -125,7 +125,7 @@ export function SpeakingRandomCardsBlock({
   }
 
   function handleUndo() {
-    if (dealt.length === 0 || panelBusy) {
+    if (dealt.length === 0 || cardsBusy) {
       return;
     }
     setUndoing(true);
@@ -140,13 +140,13 @@ export function SpeakingRandomCardsBlock({
     }, UNDO_MS);
   }
 
-  let panelMotion: PanelMotion | null = null;
+  let cardMotion: WorkshopCardMotion | null = null;
   if (dealing) {
-    panelMotion = "reveal";
+    cardMotion = "reveal";
   } else if (undoing) {
-    panelMotion = "undo";
+    cardMotion = "undo";
   } else if (shuffling && active) {
-    panelMotion = "shuffle-out";
+    cardMotion = "shuffle-out";
   }
 
   return (
@@ -163,7 +163,7 @@ export function SpeakingRandomCardsBlock({
             type="button"
             variant="outline"
             size="sm"
-            disabled={panelBusy}
+            disabled={cardsBusy}
             onClick={handleReshuffleClick}
           >
             <Shuffle className="size-4" aria-hidden />
@@ -173,7 +173,7 @@ export function SpeakingRandomCardsBlock({
             type="button"
             variant="outline"
             size="sm"
-            disabled={dealt.length === 0 || panelBusy}
+            disabled={dealt.length === 0 || cardsBusy}
             onClick={handleUndo}
           >
             <Undo2 className="size-4" aria-hidden />
@@ -194,12 +194,12 @@ export function SpeakingRandomCardsBlock({
             type="button"
             className={cn(
               "group relative h-48 w-36 cursor-pointer rounded-2xl border-0 p-0 outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-45",
-              remainingInDeck > 0 && !panelBusy && "speaking-card-deck-pulse",
+              remainingInDeck > 0 && !cardsBusy && "speaking-card-deck-pulse",
               dealing && "speaking-card-deck-lift",
               shuffling && "speaking-card-deck-shuffle",
               undoing && "speaking-card-deck-catch",
             )}
-            disabled={remainingInDeck === 0 || panelBusy}
+            disabled={remainingInDeck === 0 || cardsBusy}
             onClick={handleDealFromDeck}
             aria-label={t("cardsTapDeck")}
           >
@@ -232,16 +232,16 @@ export function SpeakingRandomCardsBlock({
 
         <div className="w-full min-w-0 max-w-sm overflow-hidden sm:max-w-md">
           {active ? (
-            <SpeakingCardTopicPanel
+            <SpeakingCardTopicSection
               item={active}
-              motion={panelMotion}
+              motion={cardMotion}
               completed={completedIds.has(active.id)}
               showMic
               onMarkComplete={() => onMarkComplete(active.id)}
               topicDoneLabel={t("topicDone")}
             />
           ) : (
-            <div className="dashboard-panel flex items-center justify-center p-6">
+            <div className="workshop-card flex items-center justify-center p-6">
               <p className="text-center text-sm text-brand-500 dark:text-brand-400">
                 {t("cardsDealHint")}
               </p>
@@ -253,23 +253,23 @@ export function SpeakingRandomCardsBlock({
   );
 }
 
-type SpeakingCardTopicPanelProps = {
+type SpeakingCardTopicSectionProps = {
   item: SpeakingPromptItem;
-  motion: PanelMotion | null;
+  motion: WorkshopCardMotion | null;
   completed: boolean;
   showMic: boolean;
   onMarkComplete: () => void;
   topicDoneLabel: string;
 };
 
-function SpeakingCardTopicPanel({
+function SpeakingCardTopicSection({
   item,
   motion,
   completed,
   showMic,
   onMarkComplete,
   topicDoneLabel,
-}: SpeakingCardTopicPanelProps) {
+}: SpeakingCardTopicSectionProps) {
   const animateWholeCard = motion === "undo" || motion === "shuffle-out";
 
   const footer = (
@@ -288,7 +288,7 @@ function SpeakingCardTopicPanel({
   );
 
   return (
-    <article className="dashboard-panel speaking-card-opened speaking-card-face box-border w-full max-w-full p-0">
+    <article className="workshop-card speaking-card-opened speaking-card-face box-border w-full max-w-full p-0">
       <div
         className="speaking-card-book-scene"
         aria-busy={motion !== null}

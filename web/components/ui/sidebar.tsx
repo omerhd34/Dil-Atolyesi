@@ -23,7 +23,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { PanelLeftOpen, PanelRightOpen } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   SIDEBAR_COOKIE_MAX_AGE,
   SIDEBAR_COOKIE_NAME,
@@ -277,13 +277,13 @@ function SidebarTrigger({
       {...props}
     >
       {showExpand ? (
-        <PanelLeftOpen
+        <ChevronRight
           className="size-4.5 text-current"
           strokeWidth={1.75}
           aria-hidden
         />
       ) : (
-        <PanelRightOpen
+        <ChevronLeft
           className="size-4.5 text-current"
           strokeWidth={1.75}
           aria-hidden

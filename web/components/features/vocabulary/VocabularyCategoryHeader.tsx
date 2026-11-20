@@ -25,7 +25,7 @@ export function VocabularyCategoryHeader({
   return (
     <header className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center gap-3">
-        <ButtonLink href="/panel#vocabulary" variant="outline" size="sm">
+        <ButtonLink href="/atolye#vocabulary" variant="outline" size="sm">
           <ArrowLeft className="size-4" aria-hidden />
           {t("backToVocabulary")}
         </ButtonLink>

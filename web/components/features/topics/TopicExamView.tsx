@@ -779,7 +779,7 @@ export function TopicExamView({
 
       {partOutcome === "passed" ? (
         showPicker ? null : (
-          <ButtonLink href="/panel#grammer" size="sm">
+          <ButtonLink href="/atolye#grammer" size="sm">
             {t("examBackToTopics")}
           </ButtonLink>
         )

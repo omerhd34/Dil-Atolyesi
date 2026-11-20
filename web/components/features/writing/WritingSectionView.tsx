@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import type { WritingSection } from "@/data/writings/types";
 import { WritingExercisesView } from "@/components/features/writing/WritingExercisesView";
 import { WritingModelView } from "@/components/features/writing/WritingModelView";
-import { WritingTipsPanel } from "@/components/features/writing/WritingTipsPanel";
+import { WritingTipsSection } from "@/components/features/writing/WritingTipsSection";
 import {
   WRITING_SECTION_ANCHORS,
   scrollToWritingSection,
@@ -45,7 +45,7 @@ export function WritingSectionView({ section }: WritingSectionViewProps) {
       </section>
 
       {section.practice.tips && section.practice.tips.length > 0 ? (
-        <WritingTipsPanel tips={section.practice.tips} />
+        <WritingTipsSection tips={section.practice.tips} />
       ) : null}
 
       <section

@@ -87,7 +87,7 @@ export function ListeningAudioView({ section }: ListeningAudioViewProps) {
   const titleEn = getDistinctSecondaryTitle(section.title, section.titleEn);
 
   return (
-    <div className="dashboard-panel space-y-6">
+    <div className="workshop-card space-y-6">
       <div
         className={cn(
           "flex flex-col items-center gap-4 rounded-2xl border border-border bg-background/40 px-6 py-10 text-center",

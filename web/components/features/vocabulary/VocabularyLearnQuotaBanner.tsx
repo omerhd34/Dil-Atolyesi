@@ -76,7 +76,7 @@ export function VocabularyLearnQuotaBanner({
                 {tDashboard("quizCardReady", { count: quiz?.dueCount ?? 0 })}
               </p>
               <ButtonLink
-                href="/panel/vocabulary/exam"
+                href="/atolye/vocabulary/exam"
                 size="sm"
                 className="shrink-0"
               >

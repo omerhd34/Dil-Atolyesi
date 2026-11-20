@@ -126,7 +126,7 @@ export function ReadingTextView({ section }: ReadingTextViewProps) {
   }
 
   return (
-    <div className="dashboard-panel space-y-6">
+    <div className="workshop-card space-y-6">
       <div className="flex flex-wrap items-center gap-2">
         <Button
           type="button"

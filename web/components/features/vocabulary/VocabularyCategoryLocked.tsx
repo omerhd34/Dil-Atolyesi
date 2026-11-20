@@ -21,7 +21,7 @@ export function VocabularyCategoryLocked({
   const t = useTranslations("Vocabulary");
 
   return (
-    <div className="dashboard-panel mx-auto max-w-lg space-y-4 text-center">
+    <div className="workshop-card mx-auto max-w-lg space-y-4 text-center">
       <span className="mx-auto inline-flex size-12 items-center justify-center rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-300">
         <Lock className="size-5" aria-hidden />
       </span>
@@ -35,7 +35,7 @@ export function VocabularyCategoryLocked({
           ? t("levelLockedBody", { level, requiredLevel })
           : t("categoryLockedBody", { window: ACTIVE_VOCABULARY_WINDOW })}
       </p>
-      <ButtonLink href="/panel#vocabulary" variant="outline">
+      <ButtonLink href="/atolye#vocabulary" variant="outline">
         {t("backToVocabulary")}
       </ButtonLink>
     </div>

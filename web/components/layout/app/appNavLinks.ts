@@ -49,32 +49,32 @@ export type AppNavLink = {
 
 export const vocabularySubNav = [
   {
-    href: "/panel/vocabulary/today-worked",
+    href: "/atolye/vocabulary/today-worked",
     labelKey: "vocabularyStudiedToday",
     Icon: CalendarDays,
   },
   {
-    href: "/panel/vocabulary/known-words",
+    href: "/atolye/vocabulary/known-words",
     labelKey: "vocabularyKnown",
     Icon: CircleCheck,
   },
   {
-    href: "/panel/vocabulary/verbs",
+    href: "/atolye/vocabulary/verbs",
     labelKey: "vocabularyVerbs",
     Icon: ListOrdered,
   },
   {
-    href: "/panel/vocabulary/false-friends",
+    href: "/atolye/vocabulary/false-friends",
     labelKey: "vocabularyFalseFriends",
     Icon: Languages,
   },
   {
-    href: "/panel/vocabulary/phrasal-verbs",
+    href: "/atolye/vocabulary/phrasal-verbs",
     labelKey: "vocabularyPhrasalVerbs",
     Icon: Link2,
   },
   {
-    href: "/panel/vocabulary/prepositions",
+    href: "/atolye/vocabulary/prepositions",
     labelKey: "vocabularyPrepositions",
     Icon: MapPin,
   },
@@ -85,45 +85,45 @@ export const vocabularySubNav = [
 }[];
 
 export const appNavLinks: AppNavLink[] = [
-  { href: "/panel", labelKey: "home", Icon: Home },
+  { href: "/atolye", labelKey: "home", Icon: Home },
   {
-    href: "/panel#grammer",
+    href: "/atolye#grammer",
     labelKey: "topics",
     Icon: SpellCheck2,
   },
   {
-    href: "/panel#vocabulary",
+    href: "/atolye#vocabulary",
     labelKey: "vocabulary",
     Icon: BookA,
   },
   {
-    href: "/panel#reading",
+    href: "/atolye#reading",
     labelKey: "reading",
     Icon: BookOpen,
   },
   {
-    href: "/panel#listening",
+    href: "/atolye#listening",
     labelKey: "listening",
     Icon: Headphones,
   },
   {
-    href: "/panel#writing",
+    href: "/atolye#writing",
     labelKey: "writing",
     Icon: PenLine,
   },
   {
-    href: "/panel#speaking",
+    href: "/atolye#speaking",
     labelKey: "speaking",
     Icon: Mic,
   },
 
   {
-    href: "/panel#progress",
+    href: "/atolye#progress",
     labelKey: "progress",
     Icon: ChartColumnIncreasing,
   },
   {
-    href: "/panel#help",
+    href: "/atolye#help",
     labelKey: "help",
     Icon: CircleHelp,
   },

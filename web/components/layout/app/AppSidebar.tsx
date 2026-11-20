@@ -10,14 +10,20 @@ import {
   type AppNavLink,
 } from "@/components/layout/app/appNavLinks";
 import { sidebarNavButtonClassName } from "@/components/layout/app/sidebarNavButton";
-import { BrandLogo } from "@/components/brand/BrandLogo";
+import { BrandHomeLink } from "@/components/brand/BrandHomeLink";
 import { VocabularyNavItem } from "@/components/layout/app/VocabularyNavItem";
 import { NotificationsMenu } from "@/components/features/dashboard/NotificationsMenu";
 import { ProfileAvatar } from "@/components/features/profile/ProfileAvatar";
 import { Link, usePathname } from "@/i18n/navigation";
-import { navigatePanelSection, usePanelHash } from "@/hooks/usePanelHash";
+import {
+  navigateWorkshopSection,
+  useWorkshopHash,
+} from "@/hooks/useWorkshopHash";
 import { useProfileAvatarUpload } from "@/hooks/useProfileAvatarUpload";
-import { isPanelDashboardPath, isPanelNavLinkActive } from "@/lib/panelNav";
+import {
+  isWorkshopDashboardPath,
+  isWorkshopNavLinkActive,
+} from "@/lib/workshopNav";
 import { cn } from "@/lib/utils";
 import type { AuthUser } from "@/store/api";
 import { useAuthStore } from "@/store/authStore";
@@ -65,18 +71,13 @@ export function AppSidebarMobileBar() {
   const { openMobile } = useSidebar();
 
   return (
-    <div className="glass-panel sticky top-0 z-30 mx-3 mt-3 flex h-14 items-center justify-between rounded-2xl px-4 text-sidebar-foreground lg:hidden">
-      <Link
-        href="/panel"
-        aria-label={tNav("brand")}
-        className="group/brand inline-flex max-w-fit self-start overflow-visible text-sidebar-foreground"
-      >
-        <BrandLogo
-          label={tNav("brand")}
-          iconClassName="size-9"
-          labelClassName={sidebarBrandLabelClassName}
-        />
-      </Link>
+    <div className="glass-surface sticky top-0 z-30 mx-3 mt-3 flex h-14 items-center justify-between rounded-2xl px-4 text-sidebar-foreground lg:hidden">
+      <BrandHomeLink
+        label={tNav("brand")}
+        className="max-w-fit self-start overflow-visible text-sidebar-foreground"
+        iconClassName="size-9"
+        labelClassName={sidebarBrandLabelClassName}
+      />
       <SidebarTrigger
         aria-label={openMobile ? tNav("closeMenu") : tNav("openMenu")}
       />
@@ -89,7 +90,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
   const tNav = useTranslations("Nav");
   const tSettings = useTranslations("Settings");
   const pathname = usePathname();
-  const panelHash = usePanelHash();
+  const workshopHash = useWorkshopHash();
   const { setOpenMobile, state } = useSidebar();
   const collapsed = state === "collapsed";
   const storeUser = useAuthStore((state) => state.user);
@@ -98,27 +99,27 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
   const { pickFile, isUpdatingAvatar } = useProfileAvatarUpload();
 
   function isActive(href: string): boolean {
-    return isPanelNavLinkActive(pathname, panelHash, href);
+    return isWorkshopNavLinkActive(pathname, workshopHash, href);
   }
 
   function handleNavClick(event: MouseEvent<HTMLElement>, href: string) {
     const path = hrefPath(href);
     const hash = hrefHash(href);
-    const onPanel = isPanelDashboardPath(pathname);
+    const onWorkshop = isWorkshopDashboardPath(pathname);
 
     setOpenMobile(false);
 
-    if (path === "/panel") {
-      if (onPanel) {
+    if (path === "/atolye") {
+      if (onWorkshop) {
         event.preventDefault();
-        navigatePanelSection(hash.replace(/^#/, ""));
+        navigateWorkshopSection(hash.replace(/^#/, ""));
         return;
       }
       if (hash) {
         return;
       }
       event.preventDefault();
-      navigatePanelSection("");
+      navigateWorkshopSection("");
     }
   }
 
@@ -145,26 +146,21 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
   }
 
   const settingsActive =
-    pathname === "/panel/ayarlar" || pathname.startsWith("/panel/ayarlar/");
+    pathname === "/atolye/ayarlar" || pathname.startsWith("/atolye/ayarlar/");
 
   return (
     <Sidebar collapsible="icon" variant="floating">
       <SidebarHeader className="p-4 group-data-[collapsible=icon]:items-center group-data-[collapsible=icon]:px-0 group-data-[collapsible=icon]:pt-4.5 group-data-[collapsible=icon]:pb-2.5">
         <div className="flex items-center justify-between gap-3 group-data-[collapsible=icon]:flex-col group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:gap-2">
-          <Link
-            href="/panel"
-            className="group/brand inline-flex max-w-fit min-w-0 self-start overflow-visible text-sidebar-foreground"
-            aria-label={tNav("brand")}
-          >
-            <BrandLogo
-              label={tNav("brand")}
-              iconClassName="size-9 group-data-[collapsible=icon]:size-10"
-              labelClassName={cn(
-                sidebarBrandLabelClassName,
-                "group-data-[collapsible=icon]:hidden",
-              )}
-            />
-          </Link>
+          <BrandHomeLink
+            label={tNav("brand")}
+            className="max-w-fit min-w-0 self-start overflow-visible text-sidebar-foreground"
+            iconClassName="size-9 group-data-[collapsible=icon]:size-10"
+            labelClassName={cn(
+              sidebarBrandLabelClassName,
+              "group-data-[collapsible=icon]:hidden",
+            )}
+          />
           <SidebarTrigger
             aria-label={collapsed ? t("expandSidebar") : t("collapseSidebar")}
             title={collapsed ? t("expandSidebar") : t("collapseSidebar")}
@@ -212,7 +208,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
               isActive={settingsActive}
               tooltip={t("settingsTooltip")}
               className={sidebarNavButtonClassName}
-              render={<Link href="/panel/ayarlar" />}
+              render={<Link href="/atolye/ayarlar" />}
               onClick={() => setOpenMobile(false)}
             >
               <Settings className="size-4" strokeWidth={1.75} aria-hidden />
@@ -236,7 +232,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
                 label={tSettings("profilePhotoChange")}
               />
               <Link
-                href="/panel/ayarlar"
+                href="/atolye/ayarlar"
                 onClick={() => setOpenMobile(false)}
                 className="min-w-0 flex-1 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-brand-400/40 group-data-[collapsible=icon]:hidden"
                 aria-label={t("settings")}

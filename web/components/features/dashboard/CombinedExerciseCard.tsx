@@ -90,7 +90,7 @@ export function CombinedExerciseCard({
             wrapperClassName="w-full"
           >
             <ButtonLink
-              href={`/panel/grammer/combined/${combined.id}`}
+              href={`/atolye/grammer/combined/${combined.id}`}
               size="sm"
               className="w-full"
             >

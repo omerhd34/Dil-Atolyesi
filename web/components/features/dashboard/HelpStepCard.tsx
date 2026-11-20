@@ -21,7 +21,7 @@ export function HelpStepCard({
   return (
     <li
       className={cn(
-        "panel-motion-card panel-motion-card--icons-static group relative flex flex-col gap-3 rounded-2xl border border-border/50 bg-background/30 p-5 shadow-sm",
+        "workshop-motion-card workshop-motion-card--icons-static group relative flex flex-col gap-3 rounded-2xl border border-border/50 bg-background/30 p-5 shadow-sm",
         "hover:bg-(--glass-btn-hover) dark:border-border/40 dark:bg-background/20",
         className,
       )}
@@ -35,7 +35,7 @@ export function HelpStepCard({
         </span>
         <span
           className={cn(
-            "panel-motion-card-icon flex size-10 shrink-0 items-center justify-center rounded-xl",
+            "workshop-motion-card-icon flex size-10 shrink-0 items-center justify-center rounded-xl",
             "bg-brand-500/10 text-brand-600/65",
             "group-hover:bg-sky-500/20 group-hover:text-sky-700",
             "dark:bg-brand-400/12 dark:text-brand-400/70",

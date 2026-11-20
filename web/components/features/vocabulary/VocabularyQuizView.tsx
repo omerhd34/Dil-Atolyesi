@@ -141,7 +141,7 @@ export function VocabularyQuizView() {
 
   if (finished && totalQuestions > 0) {
     return (
-      <div className="dashboard-panel mx-auto max-w-lg space-y-5 text-center">
+      <div className="workshop-card mx-auto max-w-lg space-y-5 text-center">
         <h2 className="page-title">{t("quizFinishedTitle")}</h2>
         <p
           className="font-display text-5xl font-semibold tabular-nums tracking-tight text-brand-950 dark:text-brand-100"
@@ -160,11 +160,11 @@ export function VocabularyQuizView() {
         </p>
         <p className="page-subtitle mt-0">{t("quizFinishedHint")}</p>
         <div className="flex flex-wrap justify-center gap-2">
-          <ButtonLink href="/panel/vocabulary/today-worked" variant="outline">
+          <ButtonLink href="/atolye/vocabulary/today-worked" variant="outline">
             {t("quizBackToStudied")}
           </ButtonLink>
           <ButtonLink
-            href="/panel#progress"
+            href="/atolye#progress"
             onClick={() => {
               void refetch();
             }}
@@ -192,7 +192,7 @@ export function VocabularyQuizView() {
 
   if (!quizInProgress && words.length === 0) {
     return (
-      <div className="dashboard-panel mx-auto max-w-lg space-y-4 text-center">
+      <div className="workshop-card mx-auto max-w-lg space-y-4 text-center">
         <h2 className="page-title">{t("quizEmptyTitle")}</h2>
         <p className="page-subtitle mt-0">{t("quizEmptyBody")}</p>
         {data?.nextDueAt && remainingMs > 0 ? (
@@ -200,7 +200,7 @@ export function VocabularyQuizView() {
             {t("quizNextDue", { time: formatDurationHms(remainingMs) })}
           </p>
         ) : null}
-        <ButtonLink href="/panel#progress" variant="outline">
+        <ButtonLink href="/atolye#progress" variant="outline">
           <ArrowLeft className="size-4" aria-hidden />
           {t("backToProgress")}
         </ButtonLink>
@@ -221,7 +221,7 @@ export function VocabularyQuizView() {
     <div className="mx-auto max-w-2xl space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <ButtonLink
-          href="/panel/vocabulary/today-worked"
+          href="/atolye/vocabulary/today-worked"
           variant="outline"
           size="sm"
         >
@@ -237,7 +237,7 @@ export function VocabularyQuizView() {
         </p>
       </div>
 
-      <article className="dashboard-panel space-y-5">
+      <article className="workshop-card space-y-5">
         <ExerciseQuestionHeader
           title={question.prompt}
           fallbackKey={vocabularyQuizHintKey(question.type)}

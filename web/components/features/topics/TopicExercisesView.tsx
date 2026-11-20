@@ -901,7 +901,7 @@ export function TopicExercisesView({
     if (levelExamPassed) {
       return (
         <div
-          className="dashboard-panel mx-auto max-w-lg space-y-3 border-emerald-500/40 bg-emerald-500/10 text-center"
+          className="workshop-card mx-auto max-w-lg space-y-3 border-emerald-500/40 bg-emerald-500/10 text-center"
           role="status"
         >
           <h2 className="section-title">{t("examPassedTitle")}</h2>
@@ -910,7 +910,7 @@ export function TopicExercisesView({
               ? t("examPassedBody", { nextLevel })
               : t("examPassedBodyFinal")}
           </p>
-          <ButtonLink href="/panel#grammer" size="sm">
+          <ButtonLink href="/atolye#grammer" size="sm">
             {t("examBackToTopics")}
           </ButtonLink>
         </div>
@@ -964,7 +964,7 @@ export function TopicExercisesView({
 
         {levelPartOutcome === "failed" ? (
           <div
-            className="dashboard-panel space-y-3 border-amber-500/40 bg-amber-500/10 text-center"
+            className="workshop-card space-y-3 border-amber-500/40 bg-amber-500/10 text-center"
             role="status"
           >
             <h2 className="section-title">{t("levelExamPartFailedTitle")}</h2>
@@ -990,7 +990,7 @@ export function TopicExercisesView({
 
         {levelPartOutcome === "passed" ? (
           <div
-            className="dashboard-panel space-y-3 border-emerald-500/40 bg-emerald-500/10 text-center"
+            className="workshop-card space-y-3 border-emerald-500/40 bg-emerald-500/10 text-center"
             role="status"
           >
             <h2 className="section-title">{t("levelExamPartPassedTitle")}</h2>

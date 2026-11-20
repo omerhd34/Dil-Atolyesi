@@ -87,7 +87,7 @@ export function WritingSectionCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/writing/${section.id}`}
+                href={`/atolye/writing/${section.id}`}
                 variant="outline"
                 size="sm"
               >
@@ -100,7 +100,7 @@ export function WritingSectionCard({
               wrapperClassName="w-full"
             >
               <ButtonLink
-                href={`/panel/writing/${section.id}#${WRITING_SECTION_ANCHORS.practice}`}
+                href={`/atolye/writing/${section.id}#${WRITING_SECTION_ANCHORS.practice}`}
                 variant="outline"
                 size="sm"
               >

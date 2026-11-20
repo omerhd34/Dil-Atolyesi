@@ -430,7 +430,7 @@ export function CrosswordExerciseView({
 
   if (finished) {
     return (
-      <div className="dashboard-panel mx-auto max-w-lg space-y-4 text-center">
+      <div className="workshop-card mx-auto max-w-lg space-y-4 text-center">
         <h2 className="page-title">{t("crosswordComplete")}</h2>
         <ExerciseFinishedActions
           onRetry={resetAll}
@@ -460,7 +460,7 @@ export function CrosswordExerciseView({
           <ExercisePercentBadge percent={percent} />
         ) : null}
       </div>
-      <article className="dashboard-panel space-y-5">
+      <article className="workshop-card space-y-5">
         <ExerciseQuestionHeader title={t("typeCrossword")} showHint={false} />
         <div className="overflow-x-auto">
           <div

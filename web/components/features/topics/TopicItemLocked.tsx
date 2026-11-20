@@ -28,13 +28,13 @@ export function TopicItemLocked({ kind, index }: TopicItemLockedProps) {
       : t("topicItemLockedBody", { count: TOPIC_BATCH_INTERVAL });
 
   return (
-    <div className="dashboard-panel mx-auto max-w-lg space-y-4 text-center">
+    <div className="workshop-card mx-auto max-w-lg space-y-4 text-center">
       <span className="mx-auto inline-flex size-12 items-center justify-center rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-300">
         <Lock className="size-5" aria-hidden />
       </span>
       <h2 className="section-title">{title}</h2>
       <p className="page-subtitle mt-0">{body}</p>
-      <ButtonLink href="/panel#grammer" variant="outline">
+      <ButtonLink href="/atolye#grammer" variant="outline">
         {t("backToTopics")}
       </ButtonLink>
     </div>

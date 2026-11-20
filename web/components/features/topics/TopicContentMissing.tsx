@@ -5,10 +5,10 @@ export async function TopicContentMissing() {
   const t = await getTranslations("Topic");
 
   return (
-    <div className="dashboard-panel mx-auto max-w-lg space-y-4 text-center">
+    <div className="workshop-card mx-auto max-w-lg space-y-4 text-center">
       <h2 className="section-title">{t("contentMissingTitle")}</h2>
       <p className="page-subtitle mt-0">{t("contentMissingBody")}</p>
-      <ButtonLink href="/panel#grammer" variant="outline">
+      <ButtonLink href="/atolye#grammer" variant="outline">
         {t("backToTopics")}
       </ButtonLink>
     </div>

@@ -59,8 +59,8 @@ export function PrepositionsSection() {
     const query = params.toString();
     router.replace(
       query
-        ? `/panel/vocabulary/prepositions?${query}`
-        : "/panel/vocabulary/prepositions",
+        ? `/atolye/vocabulary/prepositions?${query}`
+        : "/atolye/vocabulary/prepositions",
       { scroll: false },
     );
   }

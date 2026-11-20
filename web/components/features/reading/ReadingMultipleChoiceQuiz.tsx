@@ -127,7 +127,7 @@ export function ReadingMultipleChoiceQuiz({
     <div className="space-y-4">
       <p className="page-subtitle mt-0">{t("sectionMultipleChoice")}</p>
 
-      <div className="dashboard-panel space-y-0 p-4 sm:p-6">
+      <div className="workshop-card space-y-0 p-4 sm:p-6">
         {questions.map((question, questionIndex) => {
           const slot = slots[questionIndex];
           return (

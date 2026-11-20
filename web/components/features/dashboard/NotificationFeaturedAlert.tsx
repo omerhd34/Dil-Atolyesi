@@ -2,7 +2,7 @@
 
 import type { MouseEvent } from "react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { navigatePanelHref } from "@/hooks/usePanelHash";
+import { navigateWorkshopHref } from "@/hooks/useWorkshopHash";
 import {
   resolveNotificationHref,
   type AppNotification,
@@ -23,7 +23,7 @@ export function NotificationFeaturedAlert({
 
   function handleOpen(event: MouseEvent<HTMLAnchorElement>) {
     onOpen();
-    if (navigatePanelHref(href)) {
+    if (navigateWorkshopHref(href)) {
       event.preventDefault();
     }
   }

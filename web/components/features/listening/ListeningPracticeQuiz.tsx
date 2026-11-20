@@ -208,7 +208,7 @@ export function ListeningPracticeQuiz({
     <div className="space-y-6">
       <p className="page-subtitle mt-0">{t("practiceIntro")}</p>
 
-      <div className="dashboard-panel space-y-8 p-4 sm:p-6">
+      <div className="workshop-card space-y-8 p-4 sm:p-6">
         {listenChoice.length > 0 ? (
           <section className="space-y-4">
             {listenChoice.map((question, index) => {

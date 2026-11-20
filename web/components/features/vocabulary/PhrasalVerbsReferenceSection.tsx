@@ -54,8 +54,8 @@ export function PhrasalVerbsReferenceSection() {
     const query = params.toString();
     router.replace(
       query
-        ? `/panel/vocabulary/phrasal-verbs?${query}`
-        : "/panel/vocabulary/phrasal-verbs",
+        ? `/atolye/vocabulary/phrasal-verbs?${query}`
+        : "/atolye/vocabulary/phrasal-verbs",
       { scroll: false },
     );
   }

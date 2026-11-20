@@ -9,16 +9,22 @@
   },
   "Nav": {
     "home": "Ana sayfa",
+    "educationSystem": "Eğitim Sistemi",
     "benefits": "Kazanımlar",
     "packages": "Paketler",
     "sss": "SSS",
     "contact": "İletişim",
-    "myPanel": "Panel",
+    "switchToLightTheme": "Açık temaya geç",
+    "switchToDarkTheme": "Koyu temaya geç",
+    "enterWorkshop": "Atölyeye gir",
+    "myWorkshop": "Atölyem",
     "logout": "Çıkış yap",
     "brand": "Dil Atölyesi",
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
     "search": "Ara",
+    "switchToEnglish": "İngilizce arayüze geç",
+    "switchToTurkish": "Türkçe arayüze geç",
     "messages": "Mesajlar",
     "notifications": "Bildirimler",
     "profileMenu": "Profil menüsü",
@@ -253,9 +259,9 @@
     }
   },
   "Dashboard": {
-    "title": "Panel",
+    "title": "Atölyem",
     "loading": "Oturum kontrol ediliyor…",
-    "loginRequired": "Panele erişmek için giriş yapmalısın.",
+    "loginRequired": "Atölyeye erişmek için giriş yapmalısın.",
     "goLogin": "Giriş yap",
     "statsAria": "Özet istatistikler",
     "myPoints": "Puanlarım",
@@ -414,7 +420,7 @@
     "helpStepsSubtitle": "Günlük oturumda izlemen önerilen sıra; üst kartlardan kaldığın yere hızlı dönebilirsin.",
     "helpSteps": {
       "overview": {
-        "title": "Paneli kontrol et",
+        "title": "Atölyeni kontrol et",
         "body": "Üstteki kartlardan seviye ilerlemeni, hızlı devam bağlantılarını ve kelime sınav sayacını gözden geçir; kaldığın yere oradan dönebilirsin."
       },
       "grammar": {
@@ -1035,18 +1041,19 @@
     "explore": "Keşfet",
     "support": "Destek",
     "contactLink": "Bize yaz",
-    "email": "merhaba@dilatolyesi.com",
+    "email": "admin@dilatolyesi.com",
     "supportNote": "Soruların veya önerilerin için buradayız. Genelde bir iş günü içinde dönüş yaparız.",
     "madeFor": "Yapay zeka destekli alıştırmalarla adım adım İngilizce öğrenmek için."
   },
   "Landing": {
     "aiBadge": "AI",
     "aiBadgeLabel": "Yapay zeka destekli",
-    "headline": "İngilizceyi kendi hızında öğren",
-    "subheadline": "Üye olduktan sonra seviye sınavıyla 0’dan C2’ye yerleştirilirsin; istersen daha alt bir seviyeden veya 0’dan da başlayabilirsin. Dersler, kelime çalışması, yapay zeka destekli alıştırmalar ve ilerleme takibi senin temposuna göre açılır.",
-    "ctaSystem": "Eğitim Sistemi",
+    "headline": "Dil atölyesi: tek çatı altında",
+    "subheadline": "Dersler, <strong>kelime</strong> ve <strong>gramer</strong>, <strong>dinleme–okuma</strong>, <strong>konuşma kalıpları</strong> ve <strong>yapay zeka (AI) destekli alıştırmalar</strong> tek atölyede bir araya gelir. İlerlemen kayıt altında kalır; ne zaman çalışacağını ve ne kadar ilerleyeceğini sen belirlersin.",
+    "ctaHowItWorks": "Nasıl Çalışır?",
+    "ctaStartLearning": "Öğrenmeye Başla",
     "levelsLabel": "Seviye yolu",
-    "levelsCaption": "Sınav sonrası seviyeni görürsün; başlangıç noktanı sen seçersin. Her seviyeden 0’a kadar geriye dönmek mümkün."
+    "levelsCaption": "Üye olduktan sonra kısa seviye sınavıyla <strong>A1</strong>’den <strong>C2</strong>’ye yerleştirilirsin. Başlangıç basamağını sen seçersin; sınavın önerdiğinden daha düşük bir seviyeden de başlayabilirsin, taban <strong>A1</strong>’dir. Basamaklar sırayla açılır; tamamladıkça yolun devamı önünde kalır."
   },
   "EducationSystem": {
     "title": "Eğitim Sistemi",
@@ -1094,18 +1101,50 @@
       },
       "contact": {
         "question": "Yardım için kime yazabilirim?",
-        "answer": "İletişim sayfasından veya merhaba@dilatolyesi.com adresinden bize ulaşabilirsin. Genelde bir iş günü içinde dönüş yaparız."
+        "answer": "İletişim sayfasından veya admin@dilatolyesi.com adresinden bize ulaşabilirsin. Genelde bir iş günü içinde dönüş yaparız."
       }
     }
   },
   "Pages": {
     "benefits": {
       "title": "Kazanımlar",
-      "description": "Düzenli pratik, yapay zeka destekli alıştırmalar, seviyene uygun içerik ve net hedeflerle kelime dağarcığını güçlendir, gramerini netleştir ve güvenle iletişim kur."
+      "description": "Düzenli pratik, yapay zeka destekli alıştırmalar, seviyene uygun içerik ve net hedeflerle kelime dağarcığını güçlendir, gramerini netleştir ve güvenle iletişim kur.",
+      "items": {
+        "vocabulary": {
+          "title": "Kelime dağarcığı",
+          "body": "Kategori kartları, aralıklı tekrar ve bağlam içi örneklerle kelimeleri kalıcı hale getirirsin."
+        },
+        "grammar": {
+          "title": "Gramer netliği",
+          "body": "Konu odaklı dersler ve alıştırmalarla kalıpları okur, dinler ve yazarsın."
+        },
+        "skills": {
+          "title": "Dört beceri",
+          "body": "Dinleme, okuma, yazma ve konuşma pratikleri aynı öğrenme yolunda bir arada ilerler."
+        },
+        "confidence": {
+          "title": "Güvenle iletişim",
+          "body": "Seviyene uygun içerik ve ölçülebilir ilerleme hedefleriyle kendini daha hazır hissedersin."
+        }
+      }
     },
     "packages": {
       "title": "Paketler",
-      "description": "İhtiyacına uygun öğrenme paketleri yakında burada. Ücretsiz başlangıç ve gelişmiş plan seçenekleri üzerinde çalışıyoruz."
+      "description": "Ücretsiz başlangıçla hemen öğrenmeye başla; gelişmiş paket seçenekleri yakında.",
+      "items": {
+        "starter": {
+          "name": "Başlangıç",
+          "price": "Ücretsiz",
+          "badge": "Şu an aktif",
+          "body": "Hesap oluştur, seviye sınavına gir ve atölyedeki dersler, kelime çalışması ile yapay zeka alıştırmalarına eriş."
+        },
+        "pro": {
+          "name": "Gelişmiş",
+          "price": "Yakında",
+          "badge": "Hazırlanıyor",
+          "body": "Ek içerik, derinlemesine pratik ve genişletilmiş ilerleme araçları için gelişmiş paket üzerinde çalışıyoruz."
+        }
+      }
     },
     "sss": {
       "title": "Sıkça Sorulan Sorular",
@@ -1113,7 +1152,10 @@
     },
     "contact": {
       "title": "İletişim",
-      "description": "Soruların, önerilerin veya iş birliği taleplerin için bize ulaşabilirsin. Detaylı iletişim formu yakında eklenecek."
+      "description": "Soruların, önerilerin veya iş birliği taleplerin için bize yazabilirsin.",
+      "email": "admin@dilatolyesi.com",
+      "emailLabel": "E-posta",
+      "responseNote": "Genelde bir iş günü içinde dönüş yaparız. Acil teknik sorunlarda mümkün olduğunca kısa sürede yanıtlamaya çalışırız."
     }
   },
   "Announcements": {
@@ -1141,12 +1183,12 @@
     }
   },
   "Auth": {
-    "myPanel": "Panel",
+    "enterWorkshop": "Atölyeye gir",
     "loginTitle": "Giriş Yap",
     "registerTitle": "Hesap Oluştur",
     "forgotTitle": "Şifremi Unuttum",
     "forgotSubtitle": "Hesabına kayıtlı e-posta adresini gir; güvenlik doğrulamasından sonra yeni şifreni belirlemen için adımları seninle paylaşacağız.",
-    "forgotSoon": "Şifre sıfırlama yakında aktif olacak. Şimdilik destek için merhaba@dilatolyesi.com adresine yazabilirsin.",
+    "forgotSoon": "Şifre sıfırlama yakında aktif olacak. Şimdilik destek için admin@dilatolyesi.com adresine yazabilirsin.",
     "email": "E-posta",
     "emailDomainSuggestions": "E-posta alan adı önerileri",
     "password": "Parola",
@@ -1161,7 +1203,7 @@
     "submitForgot": "Bağlantı Gönder",
     "goLogin": "Giriş yap",
     "promoNoAccountTitle": "Henüz hesabınız yok mu?",
-    "promoNoAccountBody": "Ücretsiz hesap oluşturarak derslerini, kelime çalışmalarını ve ilerlemeni tek panelden yönetebilirsin.",
+    "promoNoAccountBody": "Ücretsiz hesap oluşturarak derslerini, kelime çalışmalarını ve ilerlemeni tek atölyeden yönetebilirsin.",
     "promoHasAccountTitle": "Zaten hesabınız var mı?",
     "promoHasAccountBody": "Hesabına giriş yaparak derslerini yönet, ilerlemeni görüntüle ve alıştırmalarına kaldığın yerden devam et.",
     "promoHaveAccountTitle": "Hesabınız var mı?",

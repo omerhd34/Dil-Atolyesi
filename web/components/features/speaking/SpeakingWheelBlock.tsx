@@ -379,7 +379,7 @@ export function SpeakingWheelBlock({
 
       <div className="w-full min-w-0 max-w-md lg:flex-1">
         {activeItem ? (
-          <div className="dashboard-panel space-y-3 p-4">
+          <div className="workshop-card space-y-3 p-4">
             <div className="space-y-0.5">
               <p className="text-base font-medium text-brand-800 dark:text-brand-200">
                 {activeItem.prompt}

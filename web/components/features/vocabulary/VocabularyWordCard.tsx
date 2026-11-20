@@ -122,7 +122,7 @@ export function VocabularyWordCard({
   const isLearning = status === "LEARNING";
   const knowDisabled = learnDisabled || isLearning;
   const learnButtonDisabled = isUpdating || learnDisabled;
-  const examplesPanelId = `vocab-examples-${word.id}`;
+  const examplesSectionId = `vocab-examples-${word.id}`;
   const similarWords = getSimilarWords(word, categoryWords);
   const similarWordsWithoutLink = similarWords.filter(
     (similar) => !similar.targetWordId,
@@ -333,7 +333,7 @@ export function VocabularyWordCard({
                 data-btn-motion="off"
                 onClick={() => setExamplesOpen((open) => !open)}
                 aria-expanded={examplesOpen}
-                aria-controls={examplesPanelId}
+                aria-controls={examplesSectionId}
                 className="flex w-full cursor-pointer items-center gap-2 text-left"
               >
                 <span className="inline-flex size-7 items-center justify-center rounded-full bg-sky-500/15 text-sky-700 dark:bg-sky-400/20 dark:text-sky-200">
@@ -352,7 +352,7 @@ export function VocabularyWordCard({
               </button>
 
               {examplesOpen ? (
-                <ul id={examplesPanelId} className="mt-3 space-y-3">
+                <ul id={examplesSectionId} className="mt-3 space-y-3">
                   {word.examples.map((example, exampleIndex) => (
                     <li
                       key={`${word.id}-ex-${exampleIndex}`}
