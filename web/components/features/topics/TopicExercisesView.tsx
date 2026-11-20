@@ -68,6 +68,10 @@ import {
 import { toTopicQuizExercises } from "@/lib/topicExam";
 import { shuffleSeeded } from "@/lib/seededRandom";
 import { getNextLevel } from "@/lib/topicAccess";
+import {
+  isVerbFormMatchingExercise,
+  verbFormMatchingForListeningUi,
+} from "@/lib/verbFormMatchingExercise";
 
 type TopicExercisesViewProps = {
   topicId?: string;
@@ -77,6 +81,7 @@ type TopicExercisesViewProps = {
   level?: CefrLevel;
   showHints?: boolean;
   onExerciseSessionStart?: (type?: ExerciseType) => void;
+  typeDescOverrides?: Partial<Record<ExerciseType, string>>;
 };
 
 type LinearSessionInput = {
@@ -93,6 +98,8 @@ type LinearSessionInput = {
       v2Selected: number | null;
       v3Selected: number | null;
     }>;
+    writtenAnswer?: string;
+    dictationAttempts?: number;
     checked: boolean;
     correct?: boolean;
     assignments?: Record<number, number>;
@@ -172,7 +179,8 @@ function createShuffledExerciseOrder(
 function toLinearSlots(session: LinearSessionInput): LinearSlot[] {
   return session.slots.map((slot) => ({
     selected: slot.selected ?? null,
-    answer: slot.answer ?? "",
+    answer: slot.answer ?? slot.writtenAnswer ?? "",
+    dictationAttempts: slot.dictationAttempts,
     englishSelected: slot.englishSelected ?? null,
     turkishSelected: slot.turkishSelected ?? null,
     v2Selected: slot.v2Selected ?? null,
@@ -209,6 +217,7 @@ export function TopicExercisesView({
   level,
   showHints = true,
   onExerciseSessionStart,
+  typeDescOverrides,
 }: TopicExercisesViewProps) {
   const t = useTranslations("Topic");
   const selectionKey = progressKey ?? topicId ?? null;
@@ -222,7 +231,8 @@ export function TopicExercisesView({
   const matchingPracticeExercises = useMemo(
     () =>
       exercises.filter(
-        (item): item is MatchingExercise => item.type === "matching",
+        (item): item is MatchingExercise =>
+          item.type === "matching" && !isVerbFormMatchingExercise(item),
       ),
     [exercises],
   );
@@ -1055,6 +1065,7 @@ export function TopicExercisesView({
           completedTypes={completedTypes}
           progressPercents={typeProgress}
           onSelect={beginExerciseSession}
+          typeDescOverrides={typeDescOverrides}
         />
       );
     }
@@ -1170,6 +1181,7 @@ export function TopicExercisesView({
         completedTypes={completedTypes}
         progressPercents={typeProgress}
         onSelect={beginExerciseSession}
+        typeDescOverrides={typeDescOverrides}
       />
     );
   }
@@ -1183,6 +1195,9 @@ export function TopicExercisesView({
   const savedTrueFalse = savedPracticeSession("true_false", filtered.length);
   const savedFillBlank = savedPracticeSession("fill_blank", filtered.length);
   const savedListening = savedPracticeSession("listening", filtered.length);
+  const savedMatching = savedPracticeSession("matching", filtered.length);
+  const verbFormMatchingSession =
+    filtered.length > 0 && filtered.every(isVerbFormMatchingExercise);
 
   return (
     <div className="space-y-4">
@@ -1273,27 +1288,49 @@ export function TopicExercisesView({
       ) : null}
 
       {selectedType === "matching" ? (
-        <MatchingExercises
-          key={`match-${sessionNonce}`}
-          exercises={filtered as MatchingExercise[]}
-          initialIndex={
-            savedPracticeSession("matching", filtered.length)?.index ?? 0
-          }
-          initialSlots={
-            savedPracticeSession("matching", filtered.length)
-              ? matchingSlotsFromSaved(
-                  savedPracticeSession("matching", filtered.length)!,
-                )
-              : undefined
-          }
-          showHint={showHints}
-          onSessionChange={(session) =>
-            persistPracticeSession("matching", session)
-          }
-          onComplete={handleSessionComplete}
-          onRestart={handleSessionRestart}
-          onBackToTypes={backToExerciseTypePicker}
-        />
+        verbFormMatchingSession ? (
+          <ListeningExercises
+            key={`verb-match-${sessionNonce}`}
+            exercises={filtered
+              .filter(isVerbFormMatchingExercise)
+              .map(verbFormMatchingForListeningUi)}
+            initialIndex={savedMatching?.index ?? 0}
+            initialSlots={savedMatching?.slots.map((slot) => ({
+              englishSelected: slot.englishSelected,
+              turkishSelected: slot.turkishSelected,
+              v2Selected: slot.v2Selected,
+              writtenAnswer: "",
+              dictationAttempts: 0,
+              verbRows: slot.verbRows,
+              checked: slot.checked,
+            }))}
+            onSessionChange={(session) =>
+              persistPracticeSession("matching", session)
+            }
+            onComplete={handleSessionComplete}
+            onRestart={handleSessionRestart}
+            onBackToTypes={backToExerciseTypePicker}
+          />
+        ) : (
+          <MatchingExercises
+            key={`match-${sessionNonce}`}
+            exercises={filtered.filter(
+              (item): item is MatchingExercise =>
+                item.type === "matching" && !isVerbFormMatchingExercise(item),
+            )}
+            initialIndex={savedMatching?.index ?? 0}
+            initialSlots={
+              savedMatching ? matchingSlotsFromSaved(savedMatching) : undefined
+            }
+            showHint={showHints}
+            onSessionChange={(session) =>
+              persistPracticeSession("matching", session)
+            }
+            onComplete={handleSessionComplete}
+            onRestart={handleSessionRestart}
+            onBackToTypes={backToExerciseTypePicker}
+          />
+        )
       ) : null}
 
       {selectedType === "listening" ? (
@@ -1305,6 +1342,9 @@ export function TopicExercisesView({
             englishSelected: slot.englishSelected,
             turkishSelected: slot.turkishSelected,
             v2Selected: slot.v2Selected,
+            writtenAnswer:
+              slot.answer && !/^\d+$/.test(slot.answer) ? slot.answer : "",
+            dictationAttempts: slot.dictationAttempts ?? 0,
             verbRows: slot.verbRows,
             checked: slot.checked,
           }))}

@@ -125,6 +125,7 @@ function LessonFlipCard({ example }: { example: TopicLessonExample }) {
             toggle();
           }
         }}
+        data-btn-motion="off"
         className={cn(
           "relative h-full cursor-pointer transition-transform duration-500 transform-3d",
           flipped && "rotate-y-180",
@@ -190,6 +191,7 @@ function ExampleCarouselControls() {
         type="button"
         variant="outline"
         size="icon-sm"
+        data-btn-motion="off"
         disabled={!canScrollPrev}
         aria-label={t("examplesPrevious")}
         onClick={scrollPrev}
@@ -200,6 +202,7 @@ function ExampleCarouselControls() {
         type="button"
         variant="outline"
         size="icon-sm"
+        data-btn-motion="off"
         disabled={!canScrollNext}
         aria-label={t("examplesNext")}
         onClick={scrollNext}

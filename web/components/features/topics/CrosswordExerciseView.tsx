@@ -626,14 +626,15 @@ export function CrosswordExerciseView({
                     type="button"
                     size="icon-sm"
                     variant="ghost"
-                    className="size-7 shrink-0 text-brand-700 hover:text-brand-950 dark:text-brand-300 dark:hover:text-brand-100"
+                    data-btn-motion="off"
+                    className="size-7 shrink-0 text-brand-700 hover:text-sky-700 dark:text-brand-300 dark:hover:text-sky-300"
                     aria-label={tExercises("listenWord", { word: spoken })}
                     onClick={(event) => {
                       event.stopPropagation();
                       speakText(spoken, "en-US");
                     }}
                   >
-                    <Volume2 className="size-3.5" aria-hidden />
+                    <Volume2 className="size-3.5 text-current" aria-hidden />
                   </Button>
                 ) : null}
               </li>

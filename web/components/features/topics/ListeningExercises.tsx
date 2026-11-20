@@ -1,9 +1,17 @@
 "use client";
 
-import { Fragment, useEffect, useMemo, useRef, useState } from "react";
-import { RotateCcw } from "lucide-react";
+import {
+  Fragment,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type FormEvent,
+} from "react";
+import { ListChecks, RotateCcw } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Volume2 } from "lucide-react";
+import { ExerciseCheckButton } from "@/components/features/exercises/ExerciseCheckButton";
 import { ExerciseFinishedPanel } from "@/components/features/exercises/ExerciseFinishedPanel";
 import { ExerciseQuestionHeader } from "@/components/features/exercises/ExerciseQuestionHeader";
 import { ExercisePercentBadge } from "@/components/features/topics/ExercisePercentBadge";
@@ -14,6 +22,18 @@ import { Button } from "@/components/ui/Button";
 import { VerbFormSpeakButton } from "@/components/features/vocabulary/VerbFormSpeakButton";
 import type { ListeningExercise, VerbListeningRow } from "@/data/grammar/types";
 import { useExerciseNavigation } from "@/hooks/useExerciseNavigation";
+import {
+  SKY_OPTION_HOVER_CLASSES,
+  SKY_OPTION_SELECTED_CLASSES,
+} from "@/lib/topicAccess";
+import {
+  canListeningDictationRetryEdit,
+  canListeningDictationSubmitCheck,
+  isListeningDictationCorrect,
+  isListeningDictationExercise,
+  isListeningDictationInputLocked,
+  LISTENING_DICTATION_MAX_ATTEMPTS,
+} from "@/lib/listeningDictation";
 import { speakText, stopSpeaking } from "@/lib/speakText";
 import { cn } from "@/lib/utils";
 
@@ -43,10 +63,12 @@ type VerbRowSlotSelection = {
   v3Selected: number | null;
 };
 
-type ListeningSlot = {
+export type ListeningSlot = {
   englishSelected: number | null;
   turkishSelected: number | null;
   v2Selected: number | null;
+  writtenAnswer: string;
+  dictationAttempts: number;
   verbRows?: VerbRowSlotSelection[];
   checked: boolean;
 };
@@ -80,6 +102,8 @@ function createListeningSlot(): ListeningSlot {
     englishSelected: null,
     turkishSelected: null,
     v2Selected: null,
+    writtenAnswer: "",
+    dictationAttempts: 0,
     checked: false,
   };
 }
@@ -94,9 +118,6 @@ function listeningSlotForExercise(exercise: ListeningExercise): ListeningSlot {
         v3Selected: null,
       })),
     };
-  }
-  if (isVerbTripleListening(exercise)) {
-    return { ...slot, turkishSelected: exercise.turkishCorrectIndex };
   }
   return slot;
 }
@@ -117,8 +138,11 @@ function resolveListeningInitialSlots(
     }
 
     return {
+      ...preset,
       ...savedSlot,
-      turkishSelected: savedSlot.turkishSelected ?? preset.turkishSelected,
+      writtenAnswer: savedSlot.writtenAnswer ?? preset.writtenAnswer,
+      dictationAttempts:
+        savedSlot.dictationAttempts ?? preset.dictationAttempts,
     };
   });
 }
@@ -153,6 +177,10 @@ function isListeningCorrect(exercise: ListeningExercise, slot: ListeningSlot) {
         selection.v3Selected === row.v3CorrectPoolIndex
       );
     });
+  }
+
+  if (isListeningDictationExercise(exercise)) {
+    return isListeningDictationCorrect(exercise, slot.writtenAnswer);
   }
 
   const base =
@@ -213,7 +241,7 @@ function OptionGroup({
                 disabled={checked}
                 onClick={() => onSelect(optionIndex)}
                 className={cn(
-                  "min-w-0 flex-1 cursor-pointer rounded-xl border px-4 py-3 text-left text-sm transition-colors",
+                  "interaction-motion min-w-0 flex-1 cursor-pointer rounded-xl border px-4 py-3 text-left text-sm",
                   "disabled:cursor-default",
                   showCorrect &&
                     "border-emerald-500/60 bg-emerald-500/10 text-emerald-800 dark:text-emerald-200",
@@ -222,11 +250,15 @@ function OptionGroup({
                   !showCorrect &&
                     !showWrong &&
                     isSelected &&
-                    "border-sky-500 bg-sky-500/10 text-brand-950 dark:text-brand-100",
+                    SKY_OPTION_SELECTED_CLASSES,
                   !showCorrect &&
                     !showWrong &&
                     !isSelected &&
-                    "border-border bg-background/50 text-brand-800 hover:border-brand-400 dark:bg-brand-950/40 dark:text-brand-200",
+                    "border-border bg-background/50 text-brand-800 dark:bg-brand-950/40 dark:text-brand-200",
+                  !showCorrect &&
+                    !showWrong &&
+                    !isSelected &&
+                    SKY_OPTION_HOVER_CLASSES,
                 )}
               >
                 {option}
@@ -277,7 +309,7 @@ function VerbPoolWordButton({
         disabled={disabled}
         onClick={onClick}
         className={cn(
-          "flex min-h-10 min-w-0 flex-1 items-center rounded-xl border px-2.5 py-2 text-left text-sm transition-colors",
+          "interaction-motion flex min-h-10 min-w-0 flex-1 items-center rounded-xl border px-2.5 py-2 text-left text-sm",
           "disabled:cursor-default",
           showCorrect &&
             "border-emerald-500/60 bg-emerald-500/10 text-emerald-800 dark:text-emerald-200",
@@ -286,7 +318,7 @@ function VerbPoolWordButton({
           !showCorrect &&
             !showWrong &&
             isActiveTarget &&
-            "border-sky-500 bg-sky-500/15 text-brand-950 dark:text-brand-100",
+            SKY_OPTION_SELECTED_CLASSES,
           !showCorrect &&
             !showWrong &&
             isAssigned &&
@@ -295,7 +327,13 @@ function VerbPoolWordButton({
           !showCorrect &&
             !showWrong &&
             !isAssigned &&
-            "border-border bg-background/50 text-brand-800 hover:border-brand-400 dark:bg-brand-950/40 dark:text-brand-200",
+            "border-border bg-background/50 text-brand-800 dark:bg-brand-950/40 dark:text-brand-200",
+          !showCorrect &&
+            !showWrong &&
+            !isAssigned &&
+            !disabled &&
+            !checked &&
+            SKY_OPTION_HOVER_CLASSES,
           !disabled && !checked && "cursor-pointer",
         )}
       >
@@ -310,7 +348,7 @@ function VerbPoolWordButton({
 }
 
 const verbListeningWordButtonClass =
-  "flex min-h-10 min-w-0 flex-1 items-center rounded-xl border px-2.5 py-2 text-left text-sm transition-colors";
+  "interaction-motion flex min-h-10 min-w-0 flex-1 items-center rounded-xl border px-2.5 py-2 text-left text-sm";
 
 function isVerbRowRevealed(selection: VerbRowSlotSelection): boolean {
   return selection.v2Selected !== null && selection.v3Selected !== null;
@@ -446,7 +484,10 @@ function VerbListeningBatchPanel({
                         activeRow === rowIndex &&
                         !checked &&
                         !rowLocked &&
-                        "border-sky-500 ring-2 ring-sky-500/25",
+                        cn(
+                          SKY_OPTION_SELECTED_CLASSES,
+                          "ring-2 ring-sky-500/25",
+                        ),
                       rowCorrect &&
                         "border-emerald-500/60 bg-emerald-500/10 text-emerald-800 dark:text-emerald-200",
                       rowWrong &&
@@ -454,7 +495,12 @@ function VerbListeningBatchPanel({
                       !rowCorrect &&
                         !rowWrong &&
                         "border-border bg-background/50 text-brand-950 dark:bg-brand-950/40 dark:text-brand-100",
-                      !checked && "cursor-pointer hover:border-brand-400",
+                      !rowCorrect &&
+                        !rowWrong &&
+                        !checked &&
+                        !rowLocked &&
+                        SKY_OPTION_HOVER_CLASSES,
+                      !checked && !rowLocked && "cursor-pointer",
                     )}
                   >
                     <span className="min-w-0 flex-1 truncate">{row.v1}</span>
@@ -593,6 +639,8 @@ export function ListeningExercises({
         englishSelected: slot.englishSelected,
         turkishSelected: slot.turkishSelected,
         v2Selected: slot.v2Selected,
+        writtenAnswer: slot.writtenAnswer,
+        dictationAttempts: slot.dictationAttempts,
         verbRows: slot.verbRows,
         checked: slot.checked,
       })),
@@ -602,19 +650,8 @@ export function ListeningExercises({
   const exercise = exercises[index];
 
   useEffect(() => {
-    if (
-      !exercise ||
-      finished ||
-      isVerbBatchListening(exercise) ||
-      isVerbTripleListening(exercise)
-    ) {
-      return;
-    }
-    speakText(exercise.speakText);
-    return () => {
-      stopSpeaking();
-    };
-  }, [exercise, finished, index]);
+    stopSpeaking();
+  }, [exercise?.id, index]);
 
   if (exercises.length === 0 || !current || !exercise) {
     return <p className="page-subtitle mt-0">{t("noExercisesForType")}</p>;
@@ -706,31 +743,32 @@ export function ListeningExercises({
     });
   }
 
-  function applyListeningSelection(patch: Partial<ListeningSlot>) {
-    if (current.checked) {
+  function handleDictationCheck(event?: FormEvent) {
+    event?.preventDefault();
+    if (!isListeningDictationExercise(exercise)) {
       return;
     }
-
-    const nextEnglish =
-      patch.englishSelected !== undefined
-        ? patch.englishSelected
-        : current.englishSelected;
-    const nextTurkish =
-      patch.turkishSelected !== undefined
-        ? patch.turkishSelected
-        : current.turkishSelected;
-    const nextV2 =
-      patch.v2Selected !== undefined ? patch.v2Selected : current.v2Selected;
-
-    const triple = isVerbTripleListening(exercise);
-    const allChosen = triple
-      ? nextEnglish !== null && nextTurkish !== null && nextV2 !== null
-      : nextEnglish !== null && nextTurkish !== null;
-
-    updateCurrent({
-      ...patch,
-      ...(allChosen ? { checked: true } : {}),
-    });
+    const answerCorrect = isListeningDictationCorrect(
+      exercise,
+      current.writtenAnswer,
+    );
+    if (
+      !canListeningDictationSubmitCheck(
+        current.dictationAttempts,
+        current.checked,
+        answerCorrect,
+      )
+    ) {
+      return;
+    }
+    if (!current.writtenAnswer.trim()) {
+      return;
+    }
+    const nextAttempts = current.dictationAttempts + 1;
+    updateCurrent({ checked: true, dictationAttempts: nextAttempts });
+    if (exercise.explanation) {
+      setResultOpen(true);
+    }
   }
 
   function handleNext() {
@@ -743,7 +781,7 @@ export function ListeningExercises({
   }
 
   const verbBatch = isVerbBatchListening(exercise);
-  const verbTriple = isVerbTripleListening(exercise);
+  const dictation = isListeningDictationExercise(exercise);
   const batchRows = exercise.verbListeningRows ?? [];
   const batchSelections =
     current.verbRows ??
@@ -755,38 +793,71 @@ export function ListeningExercises({
         (row) => row.v2Selected !== null || row.v3Selected !== null,
       ));
 
+  const dictationAnswerCorrect =
+    dictation && isListeningDictationCorrect(exercise, current.writtenAnswer);
+  const dictationLocked =
+    dictation &&
+    isListeningDictationInputLocked(
+      current.dictationAttempts,
+      current.checked,
+      dictationAnswerCorrect,
+    );
+  const dictationAttemptsLeft =
+    LISTENING_DICTATION_MAX_ATTEMPTS - current.dictationAttempts;
+
   return (
     <div
-      className={cn(
-        "mx-auto space-y-4",
-        verbBatch || verbTriple ? "max-w-4xl" : "max-w-2xl",
-      )}
+      className={cn("mx-auto space-y-4", verbBatch ? "max-w-4xl" : "max-w-2xl")}
     >
       <div className="flex items-center justify-between gap-3">
         <p className="text-sm text-brand-500 dark:text-brand-400">
           {t("progress", { current: index + 1, total: exercises.length })}
         </p>
-        <ExercisePercentBadge percent={percent} />
+        <div className="flex shrink-0 items-center gap-2">
+          {dictation &&
+          current.dictationAttempts > 0 &&
+          dictationAttemptsLeft > 0 &&
+          !dictationLocked ? (
+            <Badge
+              variant="outline"
+              className="max-w-44 truncate text-xs tabular-nums sm:max-w-none"
+            >
+              {t("listeningDictationAttemptsLeft", {
+                remaining: dictationAttemptsLeft,
+              })}
+            </Badge>
+          ) : null}
+          {dictation &&
+          dictationLocked &&
+          current.checked &&
+          !dictationAnswerCorrect &&
+          current.dictationAttempts >= LISTENING_DICTATION_MAX_ATTEMPTS ? (
+            <Badge
+              variant="outline"
+              className="max-w-44 truncate text-xs text-red-700 dark:text-red-300 sm:max-w-none"
+            >
+              {t("listeningDictationNoAttemptsLeft")}
+            </Badge>
+          ) : null}
+          <ExercisePercentBadge percent={percent} />
+        </div>
       </div>
 
       <article className="dashboard-panel space-y-5">
         {verbBatch ? null : (
           <ExerciseQuestionHeader
             title={exercise.prompt}
-            hint={exercise.hint}
-            fallbackKey="topicListening"
+            showHint={false}
             actions={
-              verbTriple ? undefined : (
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={() => speakText(exercise.speakText)}
-                >
-                  <Volume2 className="size-4" aria-hidden />
-                  {t("playAudio")}
-                </Button>
-              )
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => speakText(exercise.speakText)}
+              >
+                <Volume2 className="size-4" aria-hidden />
+                {t("playAudio")}
+              </Button>
             }
           />
         )}
@@ -810,118 +881,122 @@ export function ListeningExercises({
               applyVerbRowSelection(rowIndex, "v3", optionIndex)
             }
           />
-        ) : (
-          <div
-            className={cn(
-              "grid gap-5",
-              verbTriple ? "sm:grid-cols-3" : "sm:grid-cols-2",
-            )}
-          >
-            {verbTriple ? (
-              <>
-                <OptionGroup
-                  label={t("listeningVerbV1Label")}
-                  options={exercise.turkishOptions}
-                  selected={current.turkishSelected}
-                  correctIndex={exercise.turkishCorrectIndex}
-                  checked={current.checked}
-                  ariaLabel={t("listeningVerbV1OptionsAria")}
-                  speakOnCorrectOption
-                  onSelect={(optionIndex) =>
-                    applyListeningSelection({ turkishSelected: optionIndex })
-                  }
-                />
-                {exercise.v2Options ? (
-                  <OptionGroup
-                    label={t("listeningVerbV2Label")}
-                    options={exercise.v2Options}
-                    selected={current.v2Selected}
-                    correctIndex={exercise.v2CorrectIndex ?? -1}
-                    checked={current.checked}
-                    ariaLabel={t("listeningVerbV2OptionsAria")}
-                    speakOnCorrectOption
-                    onSelect={(optionIndex) =>
-                      applyListeningSelection({ v2Selected: optionIndex })
-                    }
-                  />
-                ) : null}
-                <OptionGroup
-                  label={t("listeningVerbV3Label")}
-                  options={exercise.englishOptions}
-                  selected={current.englishSelected}
-                  correctIndex={exercise.englishCorrectIndex}
-                  checked={current.checked}
-                  ariaLabel={t("listeningVerbV3OptionsAria")}
-                  speakOnCorrectOption
-                  onSelect={(optionIndex) =>
-                    applyListeningSelection({ englishSelected: optionIndex })
-                  }
-                />
-              </>
-            ) : (
-              <>
-                <OptionGroup
-                  label={t("listeningEnglishLabel")}
-                  options={exercise.englishOptions}
-                  selected={current.englishSelected}
-                  correctIndex={exercise.englishCorrectIndex}
-                  checked={current.checked}
-                  ariaLabel={t("listeningEnglishOptionsAria")}
-                  onSelect={(optionIndex) =>
-                    applyListeningSelection({ englishSelected: optionIndex })
-                  }
-                />
-                <OptionGroup
-                  label={t("listeningTurkishLabel")}
-                  options={exercise.turkishOptions}
-                  selected={current.turkishSelected}
-                  correctIndex={exercise.turkishCorrectIndex}
-                  checked={current.checked}
-                  ariaLabel={t("listeningTurkishOptionsAria")}
-                  onSelect={(optionIndex) =>
-                    applyListeningSelection({ turkishSelected: optionIndex })
-                  }
-                />
-              </>
-            )}
-          </div>
-        )}
-
-        <ExerciseStepNav
-          canGoPrevious={canGoPrevious}
-          canGoNext={canGoNext && current.checked}
-          nextLabel={continueLabel}
-          nextVariant={current.checked ? "default" : "outline"}
-          onPrevious={handlePrevious}
-          onNext={handleNext}
-          leading={
-            canRestart ? (
-              <Button
-                type="button"
-                variant="outline"
-                className="gap-2"
-                onClick={() => {
-                  onRestart?.();
-                  resetAll();
+        ) : dictation ? (
+          <form className="space-y-4" onSubmit={handleDictationCheck}>
+            <label className="flex w-full flex-col gap-1.5 text-sm">
+              <span className="sr-only">{t("listeningWriteAria")}</span>
+              <input
+                type="text"
+                value={current.writtenAnswer}
+                disabled={dictationLocked}
+                onChange={(event) => {
+                  const next = event.target.value;
+                  const canRetry = canListeningDictationRetryEdit(
+                    current.dictationAttempts,
+                    current.checked,
+                    dictationAnswerCorrect,
+                  );
+                  updateCurrent({
+                    writtenAnswer: next,
+                    ...(canRetry ? { checked: false } : {}),
+                  });
                 }}
-              >
-                <RotateCcw className="size-4" aria-hidden />
-                {t("restart")}
-              </Button>
-            ) : null
-          }
-          trailing={
-            canResetVerbBatch ? (
-              <Button
-                type="button"
-                variant="outline"
-                onClick={resetCurrentVerbBatch}
-              >
-                {t("listeningVerbReset")}
-              </Button>
-            ) : null
-          }
-        />
+                placeholder={t("listeningWritePlaceholder")}
+                autoComplete="off"
+                spellCheck={false}
+                className={cn(
+                  "h-11 rounded-lg border bg-surface px-3 text-brand-950 outline-none transition-colors",
+                  "placeholder:text-brand-600/60 focus:ring-2",
+                  "dark:bg-brand-900 dark:text-brand-100 dark:placeholder:text-brand-400/70",
+                  current.checked &&
+                    isCorrect &&
+                    "border-emerald-500/60 focus:border-emerald-500 focus:ring-emerald-500/20",
+                  current.checked &&
+                    !isCorrect &&
+                    "border-red-500/60 focus:border-red-500 focus:ring-red-500/20",
+                  !current.checked &&
+                    "border-brand-400/70 focus:border-brand-800 focus:ring-brand-800/20 dark:border-brand-600 dark:focus:border-brand-400 dark:focus:ring-brand-400/20",
+                )}
+              />
+            </label>
+            <ExerciseStepNav
+              canGoPrevious={canGoPrevious}
+              canGoNext={canGoNext && current.checked}
+              nextLabel={continueLabel}
+              nextVariant={current.checked ? "default" : "outline"}
+              onPrevious={handlePrevious}
+              onNext={handleNext}
+              leading={
+                canRestart ? (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="gap-2"
+                    onClick={() => {
+                      onRestart?.();
+                      resetAll();
+                    }}
+                  >
+                    <RotateCcw className="size-4" aria-hidden />
+                    {t("restart")}
+                  </Button>
+                ) : null
+              }
+            >
+              {canListeningDictationSubmitCheck(
+                current.dictationAttempts,
+                current.checked,
+                dictationAnswerCorrect,
+              ) ? (
+                <ExerciseCheckButton
+                  type="submit"
+                  disabled={!current.writtenAnswer.trim()}
+                >
+                  <ListChecks className="size-4" aria-hidden />
+                  {t("check")}
+                </ExerciseCheckButton>
+              ) : null}
+            </ExerciseStepNav>
+          </form>
+        ) : null}
+
+        {verbBatch ? (
+          <ExerciseStepNav
+            canGoPrevious={canGoPrevious}
+            canGoNext={canGoNext && current.checked}
+            nextLabel={continueLabel}
+            nextVariant={current.checked ? "default" : "outline"}
+            onPrevious={handlePrevious}
+            onNext={handleNext}
+            leading={
+              canRestart ? (
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="gap-2"
+                  onClick={() => {
+                    onRestart?.();
+                    resetAll();
+                  }}
+                >
+                  <RotateCcw className="size-4" aria-hidden />
+                  {t("restart")}
+                </Button>
+              ) : null
+            }
+            trailing={
+              canResetVerbBatch ? (
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={resetCurrentVerbBatch}
+                >
+                  {t("listeningVerbReset")}
+                </Button>
+              ) : null
+            }
+          />
+        ) : null}
       </article>
 
       <ExerciseResultDialog

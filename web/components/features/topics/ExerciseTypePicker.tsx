@@ -23,6 +23,7 @@ type ExerciseTypePickerProps = {
   onSelect: (type: ExerciseType) => void;
   title?: string;
   subtitle?: string;
+  typeDescOverrides?: Partial<Record<ExerciseType, string>>;
 };
 
 const TYPE_ITEMS: {
@@ -58,22 +59,22 @@ const TYPE_ITEMS: {
     Icon: CircleHelp,
   },
   {
-    type: "true_false",
-    titleKey: "typeTrueFalse",
-    descKey: "typeTrueFalseDesc",
-    Icon: ToggleRight,
-  },
-  {
     type: "fill_blank",
     titleKey: "typeFillBlank",
     descKey: "typeFillBlankDesc",
     Icon: TextCursorInput,
   },
   {
-    type: "crossword",
-    titleKey: "typeCrossword",
-    descKey: "typeCrosswordDesc",
-    Icon: Grid3x3,
+    type: "true_false",
+    titleKey: "typeTrueFalse",
+    descKey: "typeTrueFalseDesc",
+    Icon: ToggleRight,
+  },
+  {
+    type: "matching",
+    titleKey: "typeMatching",
+    descKey: "typeMatchingDesc",
+    Icon: Link2,
   },
   {
     type: "listening",
@@ -82,10 +83,10 @@ const TYPE_ITEMS: {
     Icon: Headphones,
   },
   {
-    type: "matching",
-    titleKey: "typeMatching",
-    descKey: "typeMatchingDesc",
-    Icon: Link2,
+    type: "crossword",
+    titleKey: "typeCrossword",
+    descKey: "typeCrosswordDesc",
+    Icon: Grid3x3,
   },
 ];
 
@@ -97,6 +98,7 @@ export function ExerciseTypePicker({
   onSelect,
   title,
   subtitle,
+  typeDescOverrides,
 }: ExerciseTypePickerProps) {
   const t = useTranslations("Topic");
   const visibleItems = TYPE_ITEMS.filter((item) => counts[item.type] > 0);
@@ -139,7 +141,7 @@ export function ExerciseTypePicker({
                 type="button"
                 onClick={() => onSelect(type)}
                 className={cn(
-                  "flex h-full w-full cursor-pointer flex-col gap-3 rounded-xl border p-4 text-left transition-colors",
+                  "flex h-full w-full cursor-pointer flex-col gap-3 rounded-xl border p-4 text-left",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40",
                   done
                     ? "border-emerald-500/50 bg-emerald-500/10 hover:border-emerald-500/70 hover:bg-emerald-500/15 dark:bg-emerald-950/30"
@@ -149,7 +151,7 @@ export function ExerciseTypePicker({
                 <span className="flex items-start justify-between gap-2">
                   <span
                     className={cn(
-                      "inline-flex size-10 items-center justify-center rounded-lg",
+                      "interaction-motion inline-flex size-10 items-center justify-center rounded-lg",
                       done
                         ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300"
                         : "bg-sky-500/10 text-sky-700 dark:text-sky-300",
@@ -181,7 +183,9 @@ export function ExerciseTypePicker({
                     {t(titleKey)}
                   </span>
                   <span className="block text-sm text-brand-600 dark:text-brand-400">
-                    {done ? t("typeCompletedDesc") : t(descKey)}
+                    {done
+                      ? t("typeCompletedDesc")
+                      : (typeDescOverrides?.[type] ?? t(descKey))}
                   </span>
                   <span className="block text-xs text-brand-500 dark:text-brand-500">
                     {countLabel}

@@ -233,6 +233,7 @@ export function LessonSpeakButton({
         type="button"
         variant={speaking ? "secondary" : "ghost"}
         size={size}
+        data-btn-motion="off"
         className={className}
         aria-pressed={speaking}
         aria-label={
@@ -250,7 +251,7 @@ export function LessonSpeakButton({
   return (
     <div
       className={cn(
-        "glass-button inline-flex shrink-0 items-center gap-0 rounded-xl p-0.5",
+        "lesson-speak-transport glass-button inline-flex shrink-0 items-center gap-0 rounded-xl p-0.5",
         transportIconSize === "icon-sm" ? "min-h-9" : "min-h-7",
         className,
       )}
@@ -261,6 +262,7 @@ export function LessonSpeakButton({
         type="button"
         variant="ghost"
         size={transportIconSize}
+        data-btn-motion="off"
         disabled={!playback.canStepBack}
         aria-label={t("listenSkipBack")}
         onClick={() => handleStep(-1)}
@@ -272,6 +274,7 @@ export function LessonSpeakButton({
           type="button"
           variant="secondary"
           size={transportIconSize}
+          data-btn-motion="off"
           aria-pressed
           aria-label={t("listenPause")}
           onClick={handlePause}
@@ -283,6 +286,7 @@ export function LessonSpeakButton({
           type="button"
           variant={canResume ? "secondary" : "ghost"}
           size={transportIconSize}
+          data-btn-motion="off"
           aria-label={transportPlayLabel}
           onClick={handlePlay}
         >
@@ -293,6 +297,7 @@ export function LessonSpeakButton({
         type="button"
         variant="ghost"
         size={transportIconSize}
+        data-btn-motion="off"
         disabled={!playback.canStepForward && !speaking}
         aria-label={t("listenSkipForward")}
         onClick={() => handleStep(1)}
@@ -303,6 +308,7 @@ export function LessonSpeakButton({
         type="button"
         variant="ghost"
         size={transportIconSize}
+        data-btn-motion="off"
         disabled={!playback.hasProgress}
         aria-label={t("listenReset")}
         onClick={handleReset}

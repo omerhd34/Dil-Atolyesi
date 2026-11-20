@@ -470,10 +470,13 @@ export function TopicExamView({
         selected: number | null;
         answer: string;
         checked: boolean;
+        englishSelected?: number | null;
+        turkishSelected?: number | null;
         matchingCorrect?: boolean;
         assignments?: Record<number, number>;
         revealed?: boolean;
         graded?: boolean;
+        dictationAttempts?: number;
       }[];
     }) => {
       handleSessionChange(
@@ -491,6 +494,9 @@ export function TopicExamView({
               selected: slot.selected,
               answer: slot.answer,
               checked: slot.checked,
+              englishSelected: slot.englishSelected ?? null,
+              turkishSelected: slot.turkishSelected ?? null,
+              dictationAttempts: slot.dictationAttempts,
               matchingCorrect: slot.matchingCorrect,
               matchingAssignments:
                 Object.keys(matchingAssignments).length > 0
@@ -516,6 +522,8 @@ export function TopicExamView({
         englishSelected: number | null;
         turkishSelected: number | null;
         v2Selected: number | null;
+        writtenAnswer: string;
+        dictationAttempts: number;
         checked: boolean;
       }[];
     }) => {
@@ -526,13 +534,13 @@ export function TopicExamView({
           correct: session.correct,
           total: session.total,
           slots: session.slots.map((slot) => ({
-            selected: slot.englishSelected,
-            answer:
-              slot.turkishSelected !== null ? String(slot.turkishSelected) : "",
+            selected: null,
+            answer: slot.writtenAnswer,
             checked: slot.checked,
             englishSelected: slot.englishSelected,
             turkishSelected: slot.turkishSelected,
             v2Selected: slot.v2Selected,
+            dictationAttempts: slot.dictationAttempts,
           })),
         },
         listeningOrderIds,
@@ -793,12 +801,13 @@ export function TopicExamView({
               ? partDraft.slots.map((slot) => ({
                   englishSelected:
                     slot.englishSelected ?? slot.selected ?? null,
-                  turkishSelected:
-                    slot.turkishSelected ??
-                    (slot.answer.length > 0 && /^\d+$/.test(slot.answer)
-                      ? Number(slot.answer)
-                      : null),
+                  turkishSelected: slot.turkishSelected ?? null,
                   v2Selected: slot.v2Selected ?? null,
+                  writtenAnswer:
+                    slot.answer && !/^\d+$/.test(slot.answer)
+                      ? slot.answer
+                      : "",
+                  dictationAttempts: slot.dictationAttempts ?? 0,
                   checked: slot.checked,
                 }))
               : undefined
@@ -873,6 +882,9 @@ export function TopicExamView({
                     selected: slot.selected,
                     answer: slot.answer,
                     checked: slot.checked,
+                    englishSelected: slot.englishSelected ?? null,
+                    turkishSelected: slot.turkishSelected ?? null,
+                    dictationAttempts: slot.dictationAttempts ?? 0,
                     matchingCorrect: slot.matchingCorrect,
                     assignments:
                       Object.keys(assignments).length > 0

@@ -1,13 +1,19 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { ArrowLeft, ChevronDown, ChevronLeft } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  ChevronDown,
+  ChevronLeft,
+  ClipboardCheck,
+  PencilLine,
+} from "lucide-react";
 import type { CefrLevel } from "@/data/grammar/dashboardTopics";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Link } from "@/i18n/navigation";
 import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
 import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
-import { DashboardActionIcon } from "@/components/features/dashboard/DashboardActionIcon";
 import { TopicProgressBadge } from "@/components/features/topics/TopicProgressBadge";
 import { cn } from "@/lib/utils";
 import {
@@ -115,7 +121,7 @@ export function TopicPageHeader({
               )}
               aria-current={activeTab === "lesson" ? "page" : undefined}
             >
-              <DashboardActionIcon kind="subject" />
+              <BookOpen className="size-4" aria-hidden />
               {t("lesson")}
             </Link>
             <Link
@@ -128,7 +134,7 @@ export function TopicPageHeader({
               )}
               aria-current={activeTab === "exercises" ? "page" : undefined}
             >
-              <DashboardActionIcon kind="exercises" />
+              <PencilLine className="size-4" aria-hidden />
               {t("exercises")}
             </Link>
             {showTopicExamTab ? (
@@ -142,7 +148,7 @@ export function TopicPageHeader({
                 )}
                 aria-current={activeTab === "exam" ? "page" : undefined}
               >
-                <DashboardActionIcon kind="quiz" />
+                <ClipboardCheck className="size-4" aria-hidden />
                 {t("topicExamTab")}
               </Link>
             ) : null}
