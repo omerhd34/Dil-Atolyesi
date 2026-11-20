@@ -2,7 +2,6 @@ import { CLIENT_STORAGE_PREFIX } from "@/lib/brand";
 
 export const SESSION_HINT_COOKIE = `${CLIENT_STORAGE_PREFIX}_user`;
 
-/** Eski küçük harf cookie adı. */
 export const LEGACY_SESSION_HINT_COOKIES = ["dilatolyesi_user"] as const;
 export const SESSION_HINT_MAX_AGE = 60 * 60 * 24 * 7;
 

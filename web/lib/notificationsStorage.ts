@@ -22,15 +22,15 @@ export const NOTIFICATIONS_CHANGED_EVENT = clientStorageEvent(
 );
 
 const NOTIFICATION_HREF_BY_TYPE: Record<AppNotificationType, string> = {
-  quiz_ready: "/panel/vocabulary/today-worked",
-  learn_missed_day: "/panel#vocabulary",
+  quiz_ready: "/atolye/vocabulary/today-worked",
+  learn_missed_day: "/atolye#vocabulary",
 };
 
 export function resolveNotificationHref(
   type: AppNotificationType,
   href?: string,
 ): string {
-  return NOTIFICATION_HREF_BY_TYPE[type] ?? href ?? "/panel";
+  return NOTIFICATION_HREF_BY_TYPE[type] ?? href ?? "/atolye";
 }
 
 function canUseStorage(): boolean {

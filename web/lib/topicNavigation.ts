@@ -48,15 +48,15 @@ export function getAdjacentGrammarTopics(topicId: string): {
   };
 }
 
-export function getGrammarTopicPanelHref(
+export function getGrammarTopicWorkshopHref(
   topic: Pick<DashboardTopic, "id" | "isExam">,
   activeTab: "lesson" | "exercises" | "exam",
 ): string {
   if (topic.isExam) {
-    return `/panel/grammer/${topic.id}/exercises`;
+    return `/atolye/grammer/${topic.id}/exercises`;
   }
   if (activeTab === "exam") {
-    return `/panel/grammer/${topic.id}/exam`;
+    return `/atolye/grammer/${topic.id}/exam`;
   }
-  return `/panel/grammer/${topic.id}/${activeTab}`;
+  return `/atolye/grammer/${topic.id}/${activeTab}`;
 }

@@ -40,4 +40,4 @@ export function migrateLocalStorageKey(suffix: string): string {
 
 export const REMEMBER_EMAIL_KEY = clientStorageKey("remember-email");
 export const SIDEBAR_COLLAPSE_KEY = clientStorageKey("sidebar-collapsed");
-export const PANEL_HASH_EVENT = clientStorageEvent("panel-hash");
+export const WORKSHOP_HASH_EVENT = clientStorageEvent("workshop-hash");

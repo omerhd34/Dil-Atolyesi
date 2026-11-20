@@ -6,12 +6,12 @@ import {
 } from "@/lib/continueActivityStorage";
 
 const SKILL_HUB_HREF: Record<ContinueActivitySkill, string> = {
-  vocabulary: "/panel#vocabulary",
-  topics: "/panel#grammer",
-  reading: "/panel#reading",
-  listening: "/panel#listening",
-  writing: "/panel#writing",
-  speaking: "/panel#speaking",
+  vocabulary: "/atolye#vocabulary",
+  topics: "/atolye#grammer",
+  reading: "/atolye#reading",
+  listening: "/atolye#listening",
+  writing: "/atolye#writing",
+  speaking: "/atolye#speaking",
 };
 
 const SUGGESTED_SKILL_ORDER: readonly ContinueActivitySkill[] = [

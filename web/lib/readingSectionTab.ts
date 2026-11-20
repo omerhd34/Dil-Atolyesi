@@ -52,7 +52,7 @@ export function readingSectionTabHref(
   sectionId: string,
   tab: ReadingSectionTab,
 ): string {
-  const base = `/panel/reading/${sectionId}`;
+  const base = `/atolye/reading/${sectionId}`;
   return `${base}#${READING_SECTION_ANCHORS[tab]}`;
 }
 

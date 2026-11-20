@@ -19,8 +19,9 @@ import {
 } from "@/lib/readingSectionTab";
 import { SPEAKING_SECTION_ANCHORS } from "@/lib/speakingSectionTab";
 import { WRITING_SECTION_ANCHORS } from "@/lib/writingSectionTab";
+import { normalizeLegacyWorkshopPath, WORKSHOP_PATH } from "@/lib/appPaths";
 
-const PANEL_HUB_BY_HASH: Record<string, ContinueActivitySkill> = {
+const WORKSHOP_HUB_BY_HASH: Record<string, ContinueActivitySkill> = {
   grammer: "topics",
   vocabulary: "vocabulary",
   reading: "reading",
@@ -29,7 +30,7 @@ const PANEL_HUB_BY_HASH: Record<string, ContinueActivitySkill> = {
   speaking: "speaking",
 };
 
-const PANEL_HASH_BY_SKILL: Record<ContinueActivitySkill, string> = {
+const WORKSHOP_HASH_BY_SKILL: Record<ContinueActivitySkill, string> = {
   topics: "grammer",
   vocabulary: "vocabulary",
   reading: "reading",
@@ -68,8 +69,8 @@ function parseReadingActivity(
   return {
     kind: isPractice ? "reading_exercises" : "reading_text",
     href: isPractice
-      ? `/panel/reading/${sectionId}#${READING_SECTION_ANCHORS.practice}`
-      : `/panel/reading/${sectionId}`,
+      ? `/atolye/reading/${sectionId}#${READING_SECTION_ANCHORS.practice}`
+      : `/atolye/reading/${sectionId}`,
     readingId: sectionId,
   };
 }
@@ -80,11 +81,15 @@ export function parseContinueActivityFromPath(
   hash = "",
 ): Omit<ContinueActivity, "updatedAt"> | null {
   let path = pathname.replace(/\/+$/, "") || "/";
-  if (path.startsWith("/panel/kelime")) {
-    path = path.replace(/^\/panel\/kelime/, "/panel/vocabulary");
+  path = normalizeLegacyWorkshopPath(path);
+  if (path.startsWith(`${WORKSHOP_PATH}/kelime`)) {
+    path = path.replace(
+      new RegExp(`^${WORKSHOP_PATH}/kelime`),
+      `${WORKSHOP_PATH}/vocabulary`,
+    );
   }
   if (
-    path === "/panel/vocabulary/sinav" ||
+    path === "/atolye/vocabulary/sinav" ||
     path.endsWith("/bilinen") ||
     path.endsWith("/bugun-calisilan")
   ) {
@@ -94,14 +99,14 @@ export function parseContinueActivityFromPath(
       .replace(/\/bugun-calisilan$/, "/today-worked");
   }
 
-  if (path === "/panel/vocabulary/exam") {
+  if (path === "/atolye/vocabulary/exam") {
     return {
       kind: "vocabulary_quiz",
-      href: "/panel/vocabulary/exam",
+      href: "/atolye/vocabulary/exam",
     };
   }
 
-  const vocabularyMatch = path.match(/^\/panel\/vocabulary\/([^/]+)$/);
+  const vocabularyMatch = path.match(/^\/atolye\/vocabulary\/([^/]+)$/);
   if (vocabularyMatch) {
     const segment = vocabularyMatch[1];
     const params = new URLSearchParams(
@@ -111,8 +116,8 @@ export function parseContinueActivityFromPath(
 
     if (isVocabularyReferenceId(segment)) {
       const href = query
-        ? `/panel/vocabulary/${segment}?${query}`
-        : `/panel/vocabulary/${segment}`;
+        ? `/atolye/vocabulary/${segment}?${query}`
+        : `/atolye/vocabulary/${segment}`;
       const isVerbExercises =
         segment === "verbs" && params.get("tab") === "exercises";
       return {
@@ -127,8 +132,8 @@ export function parseContinueActivityFromPath(
     const tab = params.get("tab");
     const isExercises = tab === "exercises";
     const href = isExercises
-      ? `/panel/vocabulary/${segment}?tab=exercises`
-      : `/panel/vocabulary/${segment}`;
+      ? `/atolye/vocabulary/${segment}?tab=exercises`
+      : `/atolye/vocabulary/${segment}`;
 
     return {
       kind: isExercises ? "vocabulary_exercises" : "vocabulary_category",
@@ -137,17 +142,17 @@ export function parseContinueActivityFromPath(
     };
   }
 
-  const combinedMatch = path.match(/^\/panel\/grammer\/combined\/([^/]+)$/);
+  const combinedMatch = path.match(/^\/atolye\/grammer\/combined\/([^/]+)$/);
   if (combinedMatch) {
     return {
       kind: "combined_exercise",
-      href: `/panel/grammer/combined/${combinedMatch[1]}`,
+      href: `/atolye/grammer/combined/${combinedMatch[1]}`,
       combinedId: combinedMatch[1],
     };
   }
 
   const topicMatch = path.match(
-    /^\/panel\/grammer\/([^/]+)\/(lesson|exercises|exam)$/,
+    /^\/atolye\/grammer\/([^/]+)\/(lesson|exercises|exam)$/,
   );
   if (topicMatch) {
     const topicId = topicMatch[1];
@@ -161,13 +166,13 @@ export function parseContinueActivityFromPath(
 
     return {
       kind,
-      href: `/panel/grammer/${topicId}/${section}`,
+      href: `/atolye/grammer/${topicId}/${section}`,
       topicId,
     };
   }
 
   const readingNestedMatch = path.match(
-    /^\/panel\/reading\/([^/]+)\/(text|practice|exam)$/,
+    /^\/atolye\/reading\/([^/]+)\/(text|practice|exam)$/,
   );
   if (readingNestedMatch) {
     const nestedHash =
@@ -177,12 +182,12 @@ export function parseContinueActivityFromPath(
     return parseReadingActivity(readingNestedMatch[1], nestedHash, "");
   }
 
-  const readingMatch = path.match(/^\/panel\/reading\/([^/]+)$/);
+  const readingMatch = path.match(/^\/atolye\/reading\/([^/]+)$/);
   if (readingMatch) {
     return parseReadingActivity(readingMatch[1], hash, search);
   }
 
-  const listeningMatch = path.match(/^\/panel\/listening\/([^/]+)$/);
+  const listeningMatch = path.match(/^\/atolye\/listening\/([^/]+)$/);
   if (listeningMatch) {
     const sectionId = listeningMatch[1];
     if (!getListeningSectionById(sectionId)) {
@@ -193,13 +198,13 @@ export function parseContinueActivityFromPath(
     return {
       kind: isPractice ? "listening_exercises" : "listening_audio",
       href: isPractice
-        ? `/panel/listening/${sectionId}#${LISTENING_SECTION_ANCHORS.practice}`
-        : `/panel/listening/${sectionId}`,
+        ? `/atolye/listening/${sectionId}#${LISTENING_SECTION_ANCHORS.practice}`
+        : `/atolye/listening/${sectionId}`,
       listeningId: sectionId,
     };
   }
 
-  const writingMatch = path.match(/^\/panel\/writing\/([^/]+)$/);
+  const writingMatch = path.match(/^\/atolye\/writing\/([^/]+)$/);
   if (writingMatch) {
     const sectionId = writingMatch[1];
     if (!getWritingSectionById(sectionId)) {
@@ -210,13 +215,13 @@ export function parseContinueActivityFromPath(
     return {
       kind: isPractice ? "writing_exercises" : "writing_model",
       href: isPractice
-        ? `/panel/writing/${sectionId}#${WRITING_SECTION_ANCHORS.practice}`
-        : `/panel/writing/${sectionId}`,
+        ? `/atolye/writing/${sectionId}#${WRITING_SECTION_ANCHORS.practice}`
+        : `/atolye/writing/${sectionId}`,
       writingId: sectionId,
     };
   }
 
-  const speakingMatch = path.match(/^\/panel\/speaking\/([^/]+)$/);
+  const speakingMatch = path.match(/^\/atolye\/speaking\/([^/]+)$/);
   if (speakingMatch) {
     const sectionId = speakingMatch[1];
     if (!getSpeakingSectionById(sectionId)) {
@@ -232,18 +237,18 @@ export function parseContinueActivityFromPath(
     return {
       kind: isPractice ? "speaking_exercises" : "speaking_model",
       href: isPractice
-        ? `/panel/speaking/${sectionId}?tab=practice`
-        : `/panel/speaking/${sectionId}`,
+        ? `/atolye/speaking/${sectionId}?tab=practice`
+        : `/atolye/speaking/${sectionId}`,
       speakingId: sectionId,
     };
   }
 
-  if (path === "/panel" || path === "/") {
-    const skill = PANEL_HUB_BY_HASH[hashIdFrom(hash)];
+  if (path === "/atolye" || path === "/") {
+    const skill = WORKSHOP_HUB_BY_HASH[hashIdFrom(hash)];
     if (skill) {
       return {
         kind: "skill_hub",
-        href: `/panel#${PANEL_HASH_BY_SKILL[skill]}`,
+        href: `/atolye#${WORKSHOP_HASH_BY_SKILL[skill]}`,
         skill,
       };
     }
