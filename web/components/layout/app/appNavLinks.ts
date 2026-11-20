@@ -8,8 +8,10 @@ import {
   ClipboardList,
   Headphones,
   Home,
-  Library,
+  Languages,
+  Link2,
   ListOrdered,
+  MapPin,
   Mic,
   PenLine,
   SpellCheck2,
@@ -26,10 +28,12 @@ export type AppNavLabelKey =
   | "overview"
   | "topics"
   | "vocabulary"
-  | "vocabularyWords"
   | "vocabularyStudiedToday"
   | "vocabularyKnown"
   | "vocabularyVerbs"
+  | "vocabularyFalseFriends"
+  | "vocabularyPhrasalVerbs"
+  | "vocabularyPrepositions"
   | "listening"
   | "writing"
   | "speaking"
@@ -45,11 +49,6 @@ export type AppNavLink = {
 
 export const vocabularySubNav = [
   {
-    href: "/panel#vocabulary",
-    labelKey: "vocabularyWords",
-    Icon: Library,
-  },
-  {
     href: "/panel/vocabulary/today-worked",
     labelKey: "vocabularyStudiedToday",
     Icon: CalendarDays,
@@ -63,6 +62,21 @@ export const vocabularySubNav = [
     href: "/panel/vocabulary/verbs",
     labelKey: "vocabularyVerbs",
     Icon: ListOrdered,
+  },
+  {
+    href: "/panel/vocabulary/false-friends",
+    labelKey: "vocabularyFalseFriends",
+    Icon: Languages,
+  },
+  {
+    href: "/panel/vocabulary/phrasal-verbs",
+    labelKey: "vocabularyPhrasalVerbs",
+    Icon: Link2,
+  },
+  {
+    href: "/panel/vocabulary/prepositions",
+    labelKey: "vocabularyPrepositions",
+    Icon: MapPin,
   },
 ] as const satisfies readonly {
   href: string;
