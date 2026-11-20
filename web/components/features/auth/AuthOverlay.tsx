@@ -1,6 +1,7 @@
 "use client";
 
 import { KeyRound, LogIn, UserPlus } from "lucide-react";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import type { AuthMode } from "@/components/features/auth/auth-types";
 
 type AuthOverlayCopy = {
@@ -52,7 +53,12 @@ export function AuthOverlay({ brand, copy, onSwitch }: AuthOverlayProps) {
       <div className="auth-overlay-bg" />
 
       <div className="auth-overlay-panel auth-overlay-left">
-        <span className="overlay-logo-text">{brand}</span>
+        <BrandLogo
+          label={brand}
+          className="mb-5.5 flex justify-center"
+          iconClassName="size-11"
+          labelClassName="overlay-logo-text !m-0"
+        />
         <h2>{copy.promoHasAccountTitle}</h2>
         <p>{copy.promoHasAccountBody}</p>
         <button
@@ -72,7 +78,12 @@ export function AuthOverlay({ brand, copy, onSwitch }: AuthOverlayProps) {
       </div>
 
       <div className="auth-overlay-panel auth-overlay-right">
-        <span className="overlay-logo-text">{brand}</span>
+        <BrandLogo
+          label={brand}
+          className="mb-5.5 flex justify-center"
+          iconClassName="size-11"
+          labelClassName="overlay-logo-text !m-0"
+        />
         <h2>{copy.promoNoAccountTitle}</h2>
         <p>{copy.promoNoAccountBody}</p>
         <button
@@ -92,7 +103,12 @@ export function AuthOverlay({ brand, copy, onSwitch }: AuthOverlayProps) {
       </div>
 
       <div className="auth-overlay-panel auth-overlay-reset">
-        <span className="overlay-logo-text">{brand}</span>
+        <BrandLogo
+          label={brand}
+          className="mb-5.5 flex justify-center"
+          iconClassName="size-11"
+          labelClassName="overlay-logo-text !m-0"
+        />
         <h2>{copy.promoHaveAccountTitle}</h2>
         <p>{copy.promoHaveAccountBody}</p>
         <div className="overlay-actions">

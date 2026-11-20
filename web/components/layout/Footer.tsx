@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Mail, MessagesSquare } from "lucide-react";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
 import { navLinks } from "@/components/layout/navLinks";
@@ -25,9 +26,14 @@ export function Footer() {
           <div className="max-w-sm space-y-4">
             <Link
               href="/"
-              className="inline-block font-display text-xl font-semibold tracking-tight text-brand-800 transition-transform duration-200 hover:scale-105 dark:text-brand-400"
+              aria-label={tNav("brand")}
+              className="group/brand inline-flex font-display text-xl font-semibold tracking-tight text-brand-800 dark:text-brand-400"
             >
-              {tNav("brand")}
+              <BrandLogo
+                label={tNav("brand")}
+                iconClassName="size-8"
+                labelClassName="font-display text-xl font-semibold tracking-tight"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-brand-600 dark:text-brand-400">
               {t("tagline")}

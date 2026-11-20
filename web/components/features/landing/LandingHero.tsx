@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { GraduationCap } from "lucide-react";
+import { BrandMark } from "@/components/brand/BrandMark";
 import { HeroLevelPath } from "@/components/features/landing/HeroLevelPath";
 import { Badge } from "@/components/ui/Badge";
 import { buttonVariants } from "@/components/ui/Button";
@@ -15,7 +16,8 @@ export function LandingHero() {
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_70%_40%,rgba(48,61,89,0.14),transparent_60%)] dark:bg-[radial-gradient(circle_at_70%_40%,rgba(152,169,196,0.12),transparent_60%)]" />
 
       <Container className="relative flex flex-1 flex-col justify-center gap-6 py-12 lg:gap-7 lg:py-14">
-        <div className="animate-[fade-up_0.7s_ease-out_both] flex items-start gap-2.5 sm:gap-3">
+        <div className="animate-[fade-up_0.7s_ease-out_both] flex items-center gap-3 sm:gap-4">
+          <BrandMark className="size-12 shrink-0 sm:size-16" />
           <h1 className="font-display text-3xl font-semibold tracking-tight text-brand-800 sm:text-5xl dark:text-brand-400">
             {tNav("brand")}
           </h1>

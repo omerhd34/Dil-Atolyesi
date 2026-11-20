@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Layers } from "lucide-react";
 import { Link, useRouter } from "@/i18n/navigation";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 import { ProfileAvatar } from "@/components/features/profile/ProfileAvatar";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
@@ -38,9 +39,14 @@ export function Navbar() {
         <div className="justify-self-start">
           <Link
             href="/"
-            className="inline-block font-display text-2xl font-semibold tracking-tight text-brand-800 transition-transform duration-200 hover:scale-110 dark:text-brand-400"
+            aria-label={t("brand")}
+            className="group/brand inline-flex font-display text-2xl font-semibold tracking-tight text-brand-800 dark:text-brand-400"
           >
-            {t("brand")}
+            <BrandLogo
+              label={t("brand")}
+              iconClassName="size-8 sm:size-9"
+              labelClassName="font-display text-2xl font-semibold tracking-tight"
+            />
           </Link>
         </div>
 

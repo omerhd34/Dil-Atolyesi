@@ -15,6 +15,7 @@ import {
   isSidebarOpenFromCookie,
   SIDEBAR_COOKIE_NAME,
 } from "@/lib/sidebarPreference";
+import { BRAND_ICON_SRC } from "@/lib/brand";
 import { parseSessionHint, SESSION_HINT_COOKIE } from "@/lib/sessionHint";
 import "../globals.css";
 
@@ -38,6 +39,10 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    icons: {
+      icon: BRAND_ICON_SRC,
+      apple: BRAND_ICON_SRC,
+    },
   };
 }
 
