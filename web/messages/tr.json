@@ -3,8 +3,9 @@
     "close": "Bildirimi kapat"
   },
   "Meta": {
-    "title": "Pylmor",
-    "description": "Yapay zeka destekli alıştırmalarla adım adım İngilizce öğren"
+    "title": "Dil Atölyesi",
+    "description": "Yapay zeka destekli alıştırmalarla adım adım İngilizce öğren",
+    "pageTitle": "Dil Atölyesi - {title}"
   },
   "Nav": {
     "home": "Ana sayfa",
@@ -14,7 +15,7 @@
     "contact": "İletişim",
     "myPanel": "Panel",
     "logout": "Çıkış yap",
-    "brand": "Pylmor",
+    "brand": "Dil Atölyesi",
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
     "search": "Ara",
@@ -32,7 +33,6 @@
   "AppNav": {
     "menu": "Uygulama menüsü",
     "home": "Home",
-    "overview": "General",
     "topics": "Grammer",
     "vocabulary": "Vocabulary",
     "vocabularyStudiedToday": "Words studied today",
@@ -47,9 +47,9 @@
     "reading": "Reading",
     "exercises": "Exercises",
     "progress": "Progress",
+    "help": "Help",
     "settings": "Settings",
     "homeTooltip": "Ana sayfa",
-    "overviewTooltip": "Genel",
     "topicsTooltip": "Dil bilgisi",
     "vocabularyTooltip": "Kelime hazinesi",
     "vocabularyStudiedTodayTooltip": "Bugün çalışılan kelimeler",
@@ -64,6 +64,7 @@
     "readingTooltip": "Okuma",
     "exercisesTooltip": "Alıştırmalar",
     "progressTooltip": "İlerleme",
+    "helpTooltip": "Yardım",
     "settingsTooltip": "Ayarlar",
     "collapseSidebar": "Kenar çubuğunu daralt",
     "expandSidebar": "Kenar çubuğunu genişlet"
@@ -189,7 +190,7 @@
     "speechRateFaster": "1,5 kat",
     "speechRateMax": "2 kat",
     "speechRatePreview": "{rate} hızını dinle",
-    "speechRatePreviewSample": "Welcome to Pylmor, your English learning platform.",
+    "speechRatePreviewSample": "Welcome to Dil Atölyesi, your English learning platform.",
     "passwordChangeTitle": "Şifre değiştir",
     "passwordChangeSubtitle": "Hesabını korumak için mevcut şifreni doğrulayıp yeni bir şifre belirle.",
     "passwordCurrent": "Mevcut şifre",
@@ -269,6 +270,13 @@
     "levelStatusHint": "Çalışma alanlarının seviyesi.",
     "levelStatusComplete": "{level} seviyesi tamamlandı.",
     "levelStatusProgressAria": "{level} seviye ilerlemesi %{percent}",
+    "levelStatusSkillsAria": "Çalışma alanlarına göre seviye ilerlemesi",
+    "levelStatusSkillProgressAria": "{skill} %{percent}",
+    "wordTimerIdleHint": "Kelime seçip süreyi başlat — sayaç burada işler.",
+    "wordTimerCycleAria": "Kelime öğrenme döngüsü adımları",
+    "wordTimerStep_select": "Kelimeleri seç.",
+    "wordTimerStep_timer": "Çalışma süresini başlat.",
+    "wordTimerStep_quiz": "Kelime sınavına gir.",
     "quickContinue": "Hızlı devam",
     "quickContinueGo": "Git",
     "quickContinueEmpty": "Henüz kaldığın bir yer yok. Bir derse, kelime, Reading veya başka bir bölüme girince burada görünür.",
@@ -361,7 +369,7 @@
     "progressTitle": "Progress",
     "progressSubtitle": "Öğrenme yolundaki birikimini buradan takip et.",
     "knownWordsTitle": "Bilinen kelimeler",
-    "knownWordsDocumentTitle": "Pylmor - Bilinen kelimeler",
+    "knownWordsDocumentTitle": "Dil Atölyesi - Bilinen kelimeler",
     "knownWordsSubtitle": "Kelimeler bölümlere göre gruplanır. Bir bölümü açıp bakabilirsin.",
     "knownWordsCount": "{count} kelime",
     "knownWordsCategoryCount": "{count} kelime",
@@ -374,7 +382,7 @@
     "knownWordsRelearn": "Tekrar öğren",
     "knownWordsRelearnLocked": "Öğrenme kotası dolu. Süre bitince tekrar deneyebilirsin.",
     "studiedTodayTitle": "Bugün çalışılan kelimeler",
-    "studiedTodayDocumentTitle": "Pylmor - Bugün çalışılan kelimeler",
+    "studiedTodayDocumentTitle": "Dil Atölyesi - Bugün çalışılan kelimeler",
     "studiedTodaySubtitle": "Süreyi başlattığın kelimeler 30 saniye sonra günün kelime sınavında sorulur.",
     "studiedTodayCount": "{count} kelime",
     "studiedTodayCategoryCount": "{count} kelime",
@@ -390,11 +398,11 @@
     "studiedTodayDueNow": "Sınav zamanı geldi",
     "quizCardReady": "{count} kelime sınava hazır.",
     "quizCardCta": "Sınava Gir",
-    "generalTitle": "General",
-    "generalSubtitle": "Pylmor’da nasıl ilerleyeceğini, seviye ve kelime kurallarını ve günlük çalışma akışını burada bulursun.",
-    "generalRulesTitle": "Kurallar",
-    "generalRulesSubtitle": "Seviye kilidi, gramer sırası ve kelime çalışma döngüsünün temel kuralları.",
-    "generalRules": {
+    "helpTitle": "Help",
+    "helpSubtitle": "Dil Atölyesi'nde nasıl ilerleyeceğini, seviye ve kelime kurallarını ve günlük çalışma akışını burada bulursun.",
+    "helpRulesTitle": "Kurallar",
+    "helpRulesSubtitle": "Seviye kilidi, gramer sırası ve kelime çalışma döngüsünün temel kuralları.",
+    "helpRules": {
       "levelProgression": "Bir üst CEFR seviyesini ancak alt seviyenin yeterlilik sınavını geçerek açarsın; kilitli seviyedeki içeriklere giremezsin.",
       "grammarSequence": "Grammer’da her konu için önce konu anlatımı, sonra alıştırma ve konu sınavı vardır; sıradaki konu ancak öncekileri tamamlayınca açılır.",
       "vocabularyWindow": "Kelimelerde aynı seviyede aynı anda en fazla {window} bölüm açıktır; açık bölümlerden birini bitirince sıradaki bölüm açılır.",
@@ -402,9 +410,9 @@
       "wordQuota": "Her öğrenme döngüsünde en fazla {limit} kelime seçebilirsin; önceki döngünün süresi bitip sınava girmeden yeni süre başlatamazsın.",
       "skillsCompletion": "Reading, Listening, Writing ve Speaking bölümlerinde içeriği dinleyip veya okuyup alıştırmaları tamamlamadan bölüm tamamlanmış sayılmaz."
     },
-    "generalStepsTitle": "Neler yapılmalıdır?",
-    "generalStepsSubtitle": "Günlük oturumda izlemen önerilen sıra; üst kartlardan kaldığın yere hızlı dönebilirsin.",
-    "generalSteps": {
+    "helpStepsTitle": "Neler yapılmalıdır?",
+    "helpStepsSubtitle": "Günlük oturumda izlemen önerilen sıra; üst kartlardan kaldığın yere hızlı dönebilirsin.",
+    "helpSteps": {
       "overview": {
         "title": "Paneli kontrol et",
         "body": "Üstteki kartlardan seviye ilerlemeni, hızlı devam bağlantılarını ve kelime sınav sayacını gözden geçir; kaldığın yere oradan dönebilirsin."
@@ -440,9 +448,9 @@
   },
   "Reading": {
     "title": "Reading",
-    "documentTitle": "Pylmor - {title}",
-    "documentTitlePractice": "Pylmor - {title} — Alıştırma",
-    "documentTitleExam": "Pylmor - {title} — Sınav",
+    "documentTitle": "Dil Atölyesi - {title}",
+    "documentTitlePractice": "Dil Atölyesi - {title} — Alıştırma",
+    "documentTitleExam": "Dil Atölyesi - {title} — Sınav",
     "dashboardSubtitle": "Her bölümü geçmek için metni dinle ve alıştırmaları tamamla.",
     "levelEmpty": "{level} Reading içerikleri henüz hazır değil.",
     "levelLockedTitle": "{level} seviyesi kilitli",
@@ -472,7 +480,7 @@
     "copyTranslation": "Çeviriyi kopyala",
     "wordTapAria": "{word} — Türkçe anlamını göster",
     "wordTranslationMissing": "Bu kelime için çeviri henüz yok.",
-    "wordDictionaryBrand": "Pylmor kelime sözlüğü",
+    "wordDictionaryBrand": "Dil Atölyesi kelime sözlüğü",
     "showTranslation": "Çeviriyi göster",
     "hideTranslation": "Çeviriyi gizle",
     "sectionMultipleChoice": "Metne göre doğru seçeneği işaretle.",
@@ -499,8 +507,8 @@
   },
   "Listening": {
     "title": "Listening",
-    "documentTitle": "Pylmor - {title}",
-    "documentTitlePractice": "Pylmor - {title} — Alıştırma",
+    "documentTitle": "Dil Atölyesi - {title}",
+    "documentTitlePractice": "Dil Atölyesi - {title} — Alıştırma",
     "dashboardSubtitle": "Her bölümü geçmek için kaydı dinle ve alıştırmaları tamamla.",
     "levelEmpty": "{level} Listening içerikleri henüz hazır değil.",
     "levelLockedTitle": "{level} seviyesi kilitli",
@@ -552,8 +560,8 @@
   },
   "Writing": {
     "title": "Writing",
-    "documentTitle": "Pylmor - {title}",
-    "documentTitlePractice": "Pylmor - {title} — Alıştırma",
+    "documentTitle": "Dil Atölyesi - {title}",
+    "documentTitlePractice": "Dil Atölyesi - {title} — Alıştırma",
     "dashboardSubtitle": "Her bölümü geçmek için örnek mesajı incele ve alıştırmaları tamamla.",
     "levelEmpty": "{level} Writing içerikleri henüz hazır değil.",
     "levelLockedTitle": "{level} seviyesi kilitli",
@@ -604,8 +612,8 @@
   },
   "Speaking": {
     "title": "Konuşma",
-    "documentTitle": "Pylmor - {title}",
-    "documentTitlePractice": "Pylmor - {title} — Alıştırma",
+    "documentTitle": "Dil Atölyesi - {title}",
+    "documentTitlePractice": "Dil Atölyesi - {title} — Alıştırma",
     "dashboardSubtitle": "Her bölümü geçmek için örnek diyaloğu incele ve dört konuşma etkinliğini tamamla.",
     "levelEmpty": "{level} konuşma içerikleri henüz hazır değil.",
     "levelLockedTitle": "{level} seviyesi kilitli",
@@ -732,7 +740,7 @@
   },
   "Vocabulary": {
     "title": "Kelimeler",
-    "documentTitle": "Pylmor - {title}",
+    "documentTitle": "Dil Atölyesi - {title}",
     "backToVocabulary": "Kelimelere dön",
     "categoryLabel": "{index}. BÖLÜM",
     "categoryLockedTitle": "{index}. Bölüm kilitli",
@@ -761,7 +769,7 @@
     "tabWords": "Kelimeler",
     "tabExercises": "Exercises",
     "verbsTitle": "Düzenli & Düzensiz fiiller (Regular & Irregular Verbs)",
-    "verbsDocumentTitle": "Pylmor - Düzenli ve düzensiz fiiller",
+    "verbsDocumentTitle": "Dil Atölyesi - Düzenli ve düzensiz fiiller",
     "verbsSubtitle": "Infinitive (V1), past simple (V2) ve past participle (V3) formlarını incele; alıştırmalarla pekiştir.",
     "verbsFilterAria": "Fiil listesi filtresi",
     "verbsLetterFilterAria": "Infinitive başlangıç harfine göre filtre",
@@ -779,7 +787,7 @@
     "verbsFormMatchingDesc": "Her satırda V1 fiiline karşılık gelen V2 ve V3 formlarını eşleştir.",
     "verbsEmptyFilter": "Bu filtrede fiil bulunamadı.",
     "falseFriendsTitle": "Çeviri tuzakları",
-    "falseFriendsDocumentTitle": "Pylmor - Çeviri tuzakları",
+    "falseFriendsDocumentTitle": "Dil Atölyesi - Çeviri tuzakları",
     "falseFriendsSubtitle": "İngilizce kelimeleri Türkçe benzerleriyle karıştırmadan anlamlarını öğren.",
     "falseFriendsHint": "Bir kelime yazılışı veya sesi Türkçeye benzese de anlamı farklı olabilir; özellikle çeviri yaparken dikkat et.",
     "falseFriendsColEnglish": "İngilizce",
@@ -788,7 +796,7 @@
     "falseFriendsColTrapMeaning": "Türkçe anlam",
     "falseFriendsColExample": "Örnek",
     "phrasalVerbsTitle": "Phrasal verbs",
-    "phrasalVerbsDocumentTitle": "Pylmor - Phrasal verbs",
+    "phrasalVerbsDocumentTitle": "Dil Atölyesi - Phrasal verbs",
     "phrasalVerbsSubtitle": "Fiil + edat/zarftan oluşan günlük kalıplar; anlamı genelde bütün olarak öğrenilir.",
     "phrasalVerbsHint": "Phrasal fiilin anlamı çoğu zaman tek başına fiilden farklıdır. Ayrılabilen (separable) kalıplarda nesne fiil ile edat arasına girebilir.",
     "phrasalVerbsColVerb": "Kalıp",
@@ -803,7 +811,7 @@
     "phrasalVerbsFilterInseparable": "Inseparable",
     "phrasalVerbsEmptyFilter": "Bu filtrede kalıp bulunamadı.",
     "prepositionsTitle": "Edatlar (Prepositions)",
-    "prepositionsDocumentTitle": "Pylmor - Edatlar",
+    "prepositionsDocumentTitle": "Dil Atölyesi - Edatlar",
     "prepositionsSubtitle": "Zaman, yer ve hareket için yaygın edat kullanımlarını örnek cümlelerle incele.",
     "prepositionsHint": "Aynı edat farklı bağlamlarda farklı anlamlar taşıyabilir; örnek cümledeki kullanıma odaklan.",
     "prepositionsColPreposition": "Edat",
@@ -832,7 +840,7 @@
     "startQuizEarly": "Sınava Gir",
     "statusError": "Durum kaydedilemedi. Lütfen tekrar dene.",
     "statusLoading": "Durumlar yükleniyor…",
-    "quizDocumentTitle": "Pylmor - Kelime sınavı",
+    "quizDocumentTitle": "Dil Atölyesi - Kelime sınavı",
     "quizTitle": "Kelime sınavı",
     "quizSubtitle": "Her kelime için çoktan seçmeli, boşluk doldurma ve Listen & Write sorusu çıkar; sıra karışıktır. Sınavı bitirince kelimeler bilinenlere eklenir.",
     "quizLoading": "Sınav yükleniyor…",
@@ -888,7 +896,7 @@
     "exercisesHint": "Alıştırmalar",
     "topicExamTab": "Quiz",
     "topicExamTabHint": "Konu quizi",
-    "examMetaTitle": "{title} — Quiz",
+    "examMetaTitle": "Dil Atölyesi - {title} — Quiz",
     "quizSingleIntro": "Geçmek için en az %{percent} doğru gerekir. Çoktan seçmeli ve boşluk doldurma soruları tek quiste karışık sırayla gelir.",
     "quizChooseTitle": "Quiz bölümü seç",
     "quizChooseSubtitle": "Bölümler ayrıdır. Hepsini tamamlamalısın; her biri için en az %{percent} başarı gerekir.",
@@ -913,7 +921,7 @@
     "lessonTimerDoneTitle": "Artık alıştırmaya geçebilirsin.",
     "lessonTimerDoneBody": "Konu sekmesinde kalman gereken süreyi tamamladın.",
     "lessonTimerExamDoneBody": "Quiz'i geçtiğin için bu sayfada beklemen gerekmez.",
-    "documentTitle": "Pylmor - {title}",
+    "documentTitle": "Dil Atölyesi - {title}",
     "examples": "Örnekler",
     "soundPickerAria": "Ses seç",
     "examplesPrevious": "Önceki örnekler",
@@ -1027,7 +1035,7 @@
     "explore": "Keşfet",
     "support": "Destek",
     "contactLink": "Bize yaz",
-    "email": "merhaba@pylmor.com",
+    "email": "merhaba@dilatolyesi.com",
     "supportNote": "Soruların veya önerilerin için buradayız. Genelde bir iş günü içinde dönüş yaparız.",
     "madeFor": "Yapay zeka destekli alıştırmalarla adım adım İngilizce öğrenmek için."
   },
@@ -1065,12 +1073,12 @@
   "Faq": {
     "items": {
       "what": {
-        "question": "Pylmor nedir?",
-        "answer": "Pylmor, İngilizceyi kendi hızında öğrenmen için adım adım dersler, kelime çalışması, yapay zeka destekli alıştırmalar ve ilerleme takibi sunan bir dil öğrenme platformudur."
+        "question": "Dil Atölyesi nedir?",
+        "answer": "Dil Atölyesi, İngilizceyi kendi hızında öğrenmen için adım adım dersler, kelime çalışması, yapay zeka destekli alıştırmalar ve ilerleme takibi sunan bir dil öğrenme platformudur."
       },
       "level": {
         "question": "Hangi seviyeye uygun?",
-        "answer": "Üye olduktan sonra girdiğin seviye sınavıyla 0, A1, A2, B1, B2, C1 veya C2’ye yerleştirilirsin. İstersen daha alt bir seviyeden, hatta 0’dan da başlayabilirsin; A2 veya üzeri çıksan bile temelini güçlendirmek için sıfırdan ilerlemek senin tercihin. Aynı esneklik tüm seviyeler için geçerlidir."
+        "answer": "Üye olduktan sonra girdiğin seviye sınavıyla A1, A2, B1, B2, C1 veya C2’ye yerleştirilirsin. İstersen daha alt bir seviyeden de başlayabilirsin; A2 veya üzeri çıksan bile temelini güçlendirmek için A1’den ilerlemek senin tercihin. Aynı esneklik tüm seviyeler için geçerlidir."
       },
       "ai": {
         "question": "Yapay zeka destekli alıştırmalar nasıl çalışır?",
@@ -1086,7 +1094,7 @@
       },
       "contact": {
         "question": "Yardım için kime yazabilirim?",
-        "answer": "İletişim sayfasından veya merhaba@pylmor.com adresinden bize ulaşabilirsin. Genelde bir iş günü içinde dönüş yaparız."
+        "answer": "İletişim sayfasından veya merhaba@dilatolyesi.com adresinden bize ulaşabilirsin. Genelde bir iş günü içinde dönüş yaparız."
       }
     }
   },
@@ -1138,7 +1146,7 @@
     "registerTitle": "Hesap Oluştur",
     "forgotTitle": "Şifremi Unuttum",
     "forgotSubtitle": "Hesabına kayıtlı e-posta adresini gir; güvenlik doğrulamasından sonra yeni şifreni belirlemen için adımları seninle paylaşacağız.",
-    "forgotSoon": "Şifre sıfırlama yakında aktif olacak. Şimdilik destek için merhaba@pylmor.com adresine yazabilirsin.",
+    "forgotSoon": "Şifre sıfırlama yakında aktif olacak. Şimdilik destek için merhaba@dilatolyesi.com adresine yazabilirsin.",
     "email": "E-posta",
     "emailDomainSuggestions": "E-posta alan adı önerileri",
     "password": "Parola",

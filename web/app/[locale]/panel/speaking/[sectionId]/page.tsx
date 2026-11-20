@@ -30,10 +30,11 @@ export async function generateMetadata({ params, searchParams }: PageProps) {
   const resolvedSearch = await searchParams;
   const tab = parseSpeakingSectionTab(resolvedSearch.tab);
   const t = await getTranslations({ locale, namespace: "Speaking" });
+  const tMeta = await getTranslations({ locale, namespace: "Meta" });
   const section = getSpeakingSectionById(sectionId);
 
   if (!section) {
-    return { title: t("title") };
+    return { title: tMeta("pageTitle", { title: t("title") }) };
   }
 
   if (tab === "practice") {

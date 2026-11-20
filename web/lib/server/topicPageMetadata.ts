@@ -11,24 +11,27 @@ export async function buildTopicPageMetadata(
   "use cache";
 
   const t = await getTranslations({ locale, namespace: "Topic" });
+  const tMeta = await getTranslations({ locale, namespace: "Meta" });
   const topic = getDashboardTopicById(topicId);
 
   switch (variant) {
     case "lesson":
       return {
-        title: topic ? t("documentTitle", { title: topic.title }) : t("lesson"),
+        title: topic
+          ? t("documentTitle", { title: topic.title })
+          : tMeta("pageTitle", { title: t("lesson") }),
       };
     case "exercises":
       return {
         title: topic
           ? t("documentTitle", { title: topic.title })
-          : t("exercises"),
+          : tMeta("pageTitle", { title: t("exercises") }),
       };
     case "exam":
       return {
         title: topic
           ? t("examMetaTitle", { title: topic.title })
-          : t("topicExamTab"),
+          : tMeta("pageTitle", { title: t("topicExamTab") }),
       };
   }
 }

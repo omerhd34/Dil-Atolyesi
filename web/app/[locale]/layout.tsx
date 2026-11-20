@@ -15,8 +15,9 @@ import {
   isSidebarOpenFromCookie,
   SIDEBAR_COOKIE_NAME,
 } from "@/lib/sidebarPreference";
-import { BRAND_ICON_SRC } from "@/lib/brand";
-import { parseSessionHint, SESSION_HINT_COOKIE } from "@/lib/sessionHint";
+import { BRAND_ICON_SRC, BRAND_NAME } from "@/lib/brand";
+import { getServerEnv } from "@/lib/server/env";
+import { parseSessionHintFromCookies } from "@/lib/sessionHint";
 import "../globals.css";
 
 const urbanist = Urbanist({
@@ -35,10 +36,23 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta" });
+  const title = t("title");
+  const description = t("description");
+  const appUrl = getServerEnv().APP_URL;
 
   return {
-    title: t("title"),
-    description: t("description"),
+    metadataBase: new URL(appUrl),
+    title,
+    description,
+    applicationName: BRAND_NAME,
+    openGraph: {
+      type: "website",
+      locale: locale === "tr" ? "tr_TR" : locale,
+      siteName: BRAND_NAME,
+      title,
+      description,
+      url: appUrl,
+    },
     icons: {
       icon: BRAND_ICON_SRC,
       apple: BRAND_ICON_SRC,
@@ -82,8 +96,8 @@ export default async function LocaleLayout({
 
 async function RequestChrome({ children }: { children: React.ReactNode }) {
   const cookieStore = await cookies();
-  const initialUser = parseSessionHint(
-    cookieStore.get(SESSION_HINT_COOKIE)?.value,
+  const initialUser = parseSessionHintFromCookies(
+    (name) => cookieStore.get(name)?.value,
   );
   const sidebarOpen = isSidebarOpenFromCookie(
     cookieStore.get(SIDEBAR_COOKIE_NAME)?.value,

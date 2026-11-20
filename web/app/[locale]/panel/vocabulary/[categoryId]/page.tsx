@@ -23,12 +23,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { locale, categoryId } = await params;
   const t = await getTranslations({ locale, namespace: "Vocabulary" });
+  const tMeta = await getTranslations({ locale, namespace: "Meta" });
   const category = getVocabularyCategoryById(categoryId);
 
   return {
     title: category
       ? t("documentTitle", { title: category.title })
-      : t("title"),
+      : tMeta("pageTitle", { title: t("title") }),
   };
 }
 

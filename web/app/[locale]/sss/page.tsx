@@ -1,6 +1,16 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { FaqList } from "@/components/features/faq/FaqList";
 import { Container } from "@/components/ui/Container";
+import { buildMarketingPageMetadata } from "@/lib/server/marketingPageMetadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return buildMarketingPageMetadata(locale, "sss");
+}
 
 export default async function FaqPage({
   params,
