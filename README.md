@@ -32,7 +32,7 @@ Yapay zeka destekli alıştırmalarla adım adım İngilizce öğrenmeyi hedefle
 | **Dil bilgisi**                       | Konu anlatımları, alıştırmalar (çoktan seçmeli, boşluk doldurma, dinleme, karışık sınav), birleşik egzersizler ve seviye sınavları |
 | **Kelime**                            | Kategori bazlı kelime listeleri, günlük kota, bilinen kelimeler, fiil tabloları, kelime sınavı                                     |
 | **Okuma / dinleme / yazma / konuşma** | Seviye kilitleri, pratik ve sınav modları, yerel ilerleme ve taslak saklama                                                        |
-| **Panel**                             | Dashboard, seri (streak), bildirimler, kaldığın yerden devam, ayarlar ve ilerleme sıfırlama                                        |
+| **Atölye**                             | Dashboard, seri (streak), bildirimler, kaldığın yerden devam, ayarlar ve ilerleme sıfırlama                                        |
 | **Kimlik doğrulama**                  | Kayıt, e-posta doğrulama, JWT access + refresh, profil ve avatar yönetimi                                                          |
 | **Tema & erişilebilirlik**            | Açık / koyu / sistem teması, mobil öncelikli arayüz, shadcn/ui bileşenleri                                                         |
 
@@ -63,8 +63,8 @@ eng_web/
 └── web/                          # Tek uygulama (frontend + backend)
     ├── app/
     │   ├── [locale]/             # Locale tabanlı sayfalar (/tr/...)
-    │   │   ├── panel/            # Öğrenme paneli (grammer, vocabulary, skills)
-    │   │   ├── register, panelLogin, verify-email, ...
+    │   │   ├── atolye/            # Öğrenme atölyesi (grammer, vocabulary, skills)
+    │   │   ├── register → dilAtolyesi/hesap, verify-email, ...
     │   └── api/v1/                 # REST API
     ├── components/
     │   ├── ui/                     # shadcn primitifleri
@@ -108,7 +108,7 @@ npm run dev
 | `http://localhost:3000/tr`            | Varsayılan arayüz |
 | `http://localhost:3000/api/v1/health` | Sağlık kontrolü   |
 
-Veritabanı boşsa önce migration çalıştırın. Panel ve kelime API’leri için kayıtlı ve **e-postası doğrulanmış** bir kullanıcı gerekir.
+Veritabanı boşsa önce migration çalıştırın. Atölye ve kelime API’leri için kayıtlı ve **e-postası doğrulanmış** bir kullanıcı gerekir.
 
 ---
 
@@ -210,7 +210,7 @@ Hata durumunda `success: false` ve `error` mesajı döner. Korunan uçlar geçer
 ## Üretim dağıtımı
 
 1. Vercel (veya benzeri) projesinde kök dizin olarak `web` seçin.
-2. Ortam değişkenlerini panelden tanımlayın (`DATABASE_URL`, JWT, SMTP, `APP_URL`, `COOKIE_SECURE=true`).
+2. Ortam değişkenlerini ortamınızdan tanımlayın (`DATABASE_URL`, JWT, SMTP, `APP_URL`, `COOKIE_SECURE=true`).
 3. Build komutu: `npm run build` (package.json zaten `prisma generate` içerir).
 4. Migration’ları hedef veritabanında çalıştırın (`prisma migrate deploy`).
 
