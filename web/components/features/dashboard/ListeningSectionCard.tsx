@@ -16,6 +16,7 @@ import type { ListeningSection } from "@/data/listenings/types";
 import { useListeningSectionPercent } from "@/hooks/useListeningProgress";
 import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
 import { LISTENING_SECTION_ANCHORS } from "@/lib/listeningSectionTab";
+import { EnglishUiHint } from "@/components/ui/EnglishUiHint";
 import { cn } from "@/lib/utils";
 
 type ListeningSectionCardProps = {
@@ -96,48 +97,68 @@ export function ListeningSectionCard({
           </div>
         </CardHeader>
 
-        <CardFooter className="mt-0 flex flex-row gap-2">
+        <CardFooter className="mt-0 flex flex-row items-start gap-2">
           {locked ? (
             <>
-              <Button
-                type="button"
-                size="sm"
-                disabled
-                className="min-w-0 flex-1 px-2"
+              <EnglishUiHint
+                hint={tListening("openAudioHint")}
+                wrapperClassName="min-w-0 flex-1"
               >
-                <Headphones aria-hidden />
-                <span className="truncate">{tListening("openAudio")}</span>
-              </Button>
-              <Button
-                type="button"
-                size="sm"
-                variant="outline"
-                disabled
-                className="min-w-0 flex-1 px-2"
+                <Button
+                  type="button"
+                  size="sm"
+                  disabled
+                  className="min-w-0 flex-1 px-2"
+                >
+                  <Headphones aria-hidden />
+                  <span className="truncate">{tListening("openAudio")}</span>
+                </Button>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={tListening("openPracticeHint")}
+                wrapperClassName="min-w-0 flex-1"
               >
-                <PencilLine aria-hidden />
-                <span className="truncate">{tListening("openPractice")}</span>
-              </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="outline"
+                  disabled
+                  className="min-w-0 flex-1 px-2"
+                >
+                  <PencilLine aria-hidden />
+                  <span className="truncate">{tListening("openPractice")}</span>
+                </Button>
+              </EnglishUiHint>
             </>
           ) : (
             <>
-              <ButtonLink
-                href={`/panel/listening/${section.id}`}
-                size="sm"
-                className="min-w-0 flex-1 px-2"
+              <EnglishUiHint
+                hint={tListening("openAudioHint")}
+                wrapperClassName="min-w-0 flex-1"
               >
-                <Headphones aria-hidden />
-                <span className="truncate">{tListening("openAudio")}</span>
-              </ButtonLink>
-              <ButtonLink
-                href={`/panel/listening/${section.id}#${LISTENING_SECTION_ANCHORS.practice}`}
-                size="sm"
-                variant="outline"
-                className="min-w-0 flex-1 px-2"
+                <ButtonLink
+                  href={`/panel/listening/${section.id}`}
+                  size="sm"
+                  className="min-w-0 flex-1 px-2"
+                >
+                  <Headphones aria-hidden />
+                  <span className="truncate">{tListening("openAudio")}</span>
+                </ButtonLink>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={tListening("openPracticeHint")}
+                wrapperClassName="min-w-0 flex-1"
               >
-                <PencilLine aria-hidden />
-                <span className="truncate">{tListening("openPractice")}</span>
-              </ButtonLink>
+                <ButtonLink
+                  href={`/panel/listening/${section.id}#${LISTENING_SECTION_ANCHORS.practice}`}
+                  size="sm"
+                  variant="outline"
+                  className="min-w-0 flex-1 px-2"
+                >
+                  <PencilLine aria-hidden />
+                  <span className="truncate">{tListening("openPractice")}</span>
+                </ButtonLink>
+              </EnglishUiHint>
             </>
           )}
         </CardFooter>

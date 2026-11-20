@@ -16,6 +16,7 @@ import type { WritingSection } from "@/data/writings/types";
 import { useWritingSectionPercent } from "@/hooks/useWritingProgress";
 import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
 import { WRITING_SECTION_ANCHORS } from "@/lib/writingSectionTab";
+import { EnglishUiHint } from "@/components/ui/EnglishUiHint";
 import { cn } from "@/lib/utils";
 
 type WritingSectionCardProps = {
@@ -101,48 +102,68 @@ export function WritingSectionCard({
           </div>
         </CardHeader>
 
-        <CardFooter className="mt-0 flex flex-row gap-2">
+        <CardFooter className="mt-0 flex flex-row items-start gap-2">
           {locked ? (
             <>
-              <Button
-                type="button"
-                size="sm"
-                disabled
-                className="min-w-0 flex-1 px-2"
+              <EnglishUiHint
+                hint={tWriting("openModelHint")}
+                wrapperClassName="min-w-0 flex-1"
               >
-                <MessageSquare aria-hidden />
-                <span className="truncate">{tWriting("openModel")}</span>
-              </Button>
-              <Button
-                type="button"
-                size="sm"
-                variant="outline"
-                disabled
-                className="min-w-0 flex-1 px-2"
+                <Button
+                  type="button"
+                  size="sm"
+                  disabled
+                  className="min-w-0 flex-1 px-2"
+                >
+                  <MessageSquare aria-hidden />
+                  <span className="truncate">{tWriting("openModel")}</span>
+                </Button>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={tWriting("openPracticeHint")}
+                wrapperClassName="min-w-0 flex-1"
               >
-                <PencilLine aria-hidden />
-                <span className="truncate">{tWriting("openPractice")}</span>
-              </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="outline"
+                  disabled
+                  className="min-w-0 flex-1 px-2"
+                >
+                  <PencilLine aria-hidden />
+                  <span className="truncate">{tWriting("openPractice")}</span>
+                </Button>
+              </EnglishUiHint>
             </>
           ) : (
             <>
-              <ButtonLink
-                href={`/panel/writing/${section.id}`}
-                size="sm"
-                className="min-w-0 flex-1 px-2"
+              <EnglishUiHint
+                hint={tWriting("openModelHint")}
+                wrapperClassName="min-w-0 flex-1"
               >
-                <MessageSquare aria-hidden />
-                <span className="truncate">{tWriting("openModel")}</span>
-              </ButtonLink>
-              <ButtonLink
-                href={`/panel/writing/${section.id}#${WRITING_SECTION_ANCHORS.practice}`}
-                size="sm"
-                variant="outline"
-                className="min-w-0 flex-1 px-2"
+                <ButtonLink
+                  href={`/panel/writing/${section.id}`}
+                  size="sm"
+                  className="min-w-0 flex-1 px-2"
+                >
+                  <MessageSquare aria-hidden />
+                  <span className="truncate">{tWriting("openModel")}</span>
+                </ButtonLink>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={tWriting("openPracticeHint")}
+                wrapperClassName="min-w-0 flex-1"
               >
-                <PencilLine aria-hidden />
-                <span className="truncate">{tWriting("openPractice")}</span>
-              </ButtonLink>
+                <ButtonLink
+                  href={`/panel/writing/${section.id}#${WRITING_SECTION_ANCHORS.practice}`}
+                  size="sm"
+                  variant="outline"
+                  className="min-w-0 flex-1 px-2"
+                >
+                  <PencilLine aria-hidden />
+                  <span className="truncate">{tWriting("openPractice")}</span>
+                </ButtonLink>
+              </EnglishUiHint>
             </>
           )}
         </CardFooter>

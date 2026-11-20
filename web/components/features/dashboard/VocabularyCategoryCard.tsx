@@ -15,6 +15,7 @@ import {
 import type { VocabularyCategory } from "@/data/vocabulary";
 import { useVocabularySectionPercent } from "@/hooks/useVocabularySectionPercent";
 import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
+import { EnglishUiHint } from "@/components/ui/EnglishUiHint";
 import { cn } from "@/lib/utils";
 
 type VocabularyCategoryCardProps = {
@@ -96,48 +97,68 @@ export function VocabularyCategoryCard({
           </div>
         </CardHeader>
 
-        <CardFooter className="mt-0 flex-col gap-2 sm:flex-row">
+        <CardFooter className="mt-0 flex-col items-stretch gap-2 sm:flex-row sm:items-start">
           {locked ? (
             <>
-              <Button
-                type="button"
-                size="sm"
-                disabled
-                className="w-full sm:flex-1"
+              <EnglishUiHint
+                hint={t("vocabularyOpenCategoryHint")}
+                wrapperClassName="w-full sm:flex-1"
               >
-                <BookOpen aria-hidden />
-                {t("vocabularyOpenCategory")}
-              </Button>
-              <Button
-                type="button"
-                size="sm"
-                variant="outline"
-                disabled
-                className="w-full sm:flex-1"
+                <Button
+                  type="button"
+                  size="sm"
+                  disabled
+                  className="w-full sm:flex-1"
+                >
+                  <BookOpen aria-hidden />
+                  {t("vocabularyOpenCategory")}
+                </Button>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={t("vocabularyOpenExercisesHint")}
+                wrapperClassName="w-full sm:flex-1"
               >
-                <PencilLine aria-hidden />
-                {t("vocabularyOpenExercises")}
-              </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="outline"
+                  disabled
+                  className="w-full sm:flex-1"
+                >
+                  <PencilLine aria-hidden />
+                  {t("vocabularyOpenExercises")}
+                </Button>
+              </EnglishUiHint>
             </>
           ) : (
             <>
-              <ButtonLink
-                href={`/panel/vocabulary/${category.id}`}
-                size="sm"
-                className="w-full sm:flex-1"
+              <EnglishUiHint
+                hint={t("vocabularyOpenCategoryHint")}
+                wrapperClassName="w-full sm:flex-1"
               >
-                <BookOpen aria-hidden />
-                {t("vocabularyOpenCategory")}
-              </ButtonLink>
-              <ButtonLink
-                href={`/panel/vocabulary/${category.id}?tab=exercises`}
-                size="sm"
-                variant="outline"
-                className="w-full sm:flex-1"
+                <ButtonLink
+                  href={`/panel/vocabulary/${category.id}`}
+                  size="sm"
+                  className="w-full sm:flex-1"
+                >
+                  <BookOpen aria-hidden />
+                  {t("vocabularyOpenCategory")}
+                </ButtonLink>
+              </EnglishUiHint>
+              <EnglishUiHint
+                hint={t("vocabularyOpenExercisesHint")}
+                wrapperClassName="w-full sm:flex-1"
               >
-                <PencilLine aria-hidden />
-                {t("vocabularyOpenExercises")}
-              </ButtonLink>
+                <ButtonLink
+                  href={`/panel/vocabulary/${category.id}?tab=exercises`}
+                  size="sm"
+                  variant="outline"
+                  className="w-full sm:flex-1"
+                >
+                  <PencilLine aria-hidden />
+                  {t("vocabularyOpenExercises")}
+                </ButtonLink>
+              </EnglishUiHint>
             </>
           )}
         </CardFooter>
