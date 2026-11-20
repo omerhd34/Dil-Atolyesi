@@ -63,7 +63,9 @@ function withLevel(
   options?: { prefixIds?: boolean },
 ): VocabularyCategory {
   const titleEn =
-    category.titleEn ?? getVocabularyTitleEn(level, category.id) ?? category.title;
+    category.titleEn ??
+    getVocabularyTitleEn(level, category.id) ??
+    category.title;
 
   if (!options?.prefixIds) {
     return { ...category, level, titleEn };
