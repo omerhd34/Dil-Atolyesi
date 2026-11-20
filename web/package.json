@@ -10,7 +10,8 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
-    "prisma:seed-levels": "tsx prisma/seed-levels.ts"
+    "prisma:seed-levels": "tsx prisma/seed-levels.ts",
+    "postinstall": "node scripts/patch-next-themes-react19.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
