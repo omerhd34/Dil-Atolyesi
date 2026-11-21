@@ -10,9 +10,13 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     agentFeedback: true,
+    hideLogsAfterAbort: true,
   },
   cacheComponents: true,
-  images: { qualities: [75, 92] },
+  images: {
+    qualities: [75, 92],
+    unoptimized: true,
+  },
   partialPrefetching: true,
   turbopack: {
     root: process.cwd(),
