@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     agentFeedback: true,
   },
   cacheComponents: true,
+  images: { qualities: [75, 92] },
   partialPrefetching: true,
   turbopack: {
     root: process.cwd(),
