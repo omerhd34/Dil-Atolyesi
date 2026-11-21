@@ -1043,37 +1043,46 @@
     "contactLink": "Write to us",
     "email": "admin@dilatolyesi.com",
     "supportNote": "We're here for your questions or suggestions. We usually reply within one business day.",
-    "madeFor": "For learning English step by step with AI-powered exercises."
+    "madeFor": "For learning English step by step with AI-powered exercises.",
+    "builtBy": "Built by VeltStack."
   },
   "Landing": {
     "aiBadge": "AI",
     "aiBadgeLabel": "AI-powered",
     "headline": "Dil Atölyesi: everything under one roof",
-    "subheadline": "Lessons, <strong>vocabulary</strong> and <strong>grammar</strong>, <strong>listening–reading</strong>, <strong>speaking patterns</strong>, and <strong>AI-powered exercises</strong> come together in a single workshop. Your progress is saved; you decide when to study and how far to go.",
+    "subheadline": "Lessons, **vocabulary** and **grammar**, **listening–reading**, **speaking patterns**, and **AI-powered exercises** come together in a single workshop. Your progress is saved; you decide when to study and how far to go.",
     "ctaHowItWorks": "How It Works",
     "ctaStartLearning": "Start Learning",
     "levelsLabel": "Level path",
-    "levelsCaption": "After signing up, you are placed from <strong>A1</strong> to <strong>C2</strong> with a short level test. You choose your starting step; you can also start from a level lower than the test suggests, with <strong>A1</strong> as the floor. Steps open in order; as you complete them, the rest of the path lies ahead of you."
+    "levelsCaption": "After signing up, you are placed from **A1** to **C2** with a short level test. You choose your starting step; you can also start from a level lower than the test suggests, with **A1** as the floor. Steps open in order; as you complete them, the rest of the path lies ahead of you."
   },
   "EducationSystem": {
     "title": "Education System",
-    "subtitle": "A learning path that starts with a level test after sign-up and is shaped around your pace with lessons, AI-powered exercises, and progress tracking.",
+    "subtitle": "After sign-up, a short placement test places you from **A1** to **C2**. You can start from a lower level than your result—even **A1**—if you prefer. Lessons at your level unlock in sequence. Each session focuses on **listening**, **reading**, **grammar**, or **speaking**; you move at your own pace in short study blocks. After lessons, **AI-powered** exercises help you practice **vocabulary** and **grammar** in context. Spaced repetition makes what you learn stick. Completed content, stronger word knowledge, and your next **CEFR** goal are visible at a glance. The whole path shapes itself to your pace.",
     "steps": {
       "level": {
         "title": "Determine your level",
-        "body": "After signing up, you take a short level test. Based on your results, we place you at level 0, A1, A2, B1, B2, C1, or C2. If you like, you can start from a level lower than your test result, even from 0; for example, even if you score A2, you can progress from scratch to rebuild the foundation. The same flexibility applies to every level."
+        "body": "After signing up, you take a short **placement test**. Based on your results, we place you at the **A1**, **A2**, **B1**, **B2**, **C1**, or **C2** level. You can also choose a lower level than your test result, even starting from **A1**; for example, even if you score **A2**, you can start from scratch to rebuild your foundation. The same flexibility applies to every level."
       },
       "lessons": {
         "title": "Progress with daily lessons",
-        "body": "Lessons suited to the starting level you choose open in order. Each lesson focuses on a single topic: listening, reading, grammar, or speaking patterns. You practice regularly in short sessions and grow your knowledge day by day; you can progress further on days you wish, and slow down on busy days."
+        "body": "Lessons matching your starting level unlock sequentially. Each lesson focuses on a single topic: **listening**, **reading**, **writing**, **speaking**, or **grammar**. Along with text and audio exercises, you progress through **multiple-choice**, **fill-in-the-blank**, and comprehension questions. You practice regularly with short sessions, growing your knowledge day by day; you can learn more on days you have free time, and slow your pace on busy days."
       },
       "practice": {
         "title": "Reinforce with AI",
-        "body": "After lessons, you apply vocabulary, grammar, and patterns in context with AI-powered exercises. The exercises are shaped by your level and the points where you are weaker; so you get practice that goes beyond memorization and is close to real use. With spaced repetition, what you learn becomes lasting."
+        "body": "After lessons, you apply **vocabulary**, **grammar**, and phrases in context through **AI**-powered exercises. **Multiple-choice**, **fill-in-the-blank**, **true/false**, **dictation**, **crossword**, **matching**, and **mixed-question** sets adapt to your level and weak spots. What you learn becomes permanent with **spaced repetition**."
       },
       "progress": {
-        "title": "See your progress",
-        "body": "Completed lessons, AI exercises, strengthening vocabulary, and your level goals are visible at a glance. Where you are, your next step, and which topic needs more practice stay clear. As you progress, your move to the next CEFR level also becomes measurable."
+        "title": "Track your progress",
+        "body": "Completed lessons, **AI** exercises, strengthened **words**, and level goals are visible at a glance. Where you stand, your next step, and which topics need more **practice** remain crystal clear. As you advance, your progression to the next **language level** becomes measurable."
+      },
+      "vocabulary": {
+        "title": "Vocabulary practice",
+        "body": "You select the words you want to learn from **categories** and start your study **timer**. Once time's up, you take a vocabulary **test** consisting of **multiple-choice**, **fill-in-the-blank**, and **dictation** questions. Words you answer correctly are added to your **mastered words**, while those you want to review stay with you through **spaced repetition**."
+      },
+      "levelAdvance": {
+        "title": "Rise with proficiency",
+        "body": "As you complete the **grammar** topics, integrated exercises, and **listening**, **reading**, **writing**, and **speaking** sections of your current level, you can take the **proficiency exam**. Passing the exam unlocks the next **language level**, and locked content opens up to you step by step."
       }
     }
   },
@@ -1089,7 +1098,7 @@
       },
       "ai": {
         "question": "How do the AI-powered exercises work?",
-        "answer": "After lessons, you get exercises personalized to your level and needs. They help you put vocabulary, grammar, and usage practice into context, and let you focus more on the topics where you are weaker."
+        "answer": "After lessons, you get personalized sets with **multiple-choice**, **fill-in-the-blank**, **true/false**, **listen-and-write**, **crossword**, and **matching** exercises. More weight goes to topics where you are weaker so you practice vocabulary and grammar in context."
       },
       "free": {
         "question": "Can I use it for free?",
@@ -1108,23 +1117,23 @@
   "Pages": {
     "benefits": {
       "title": "Benefits",
-      "description": "Strengthen your vocabulary, clarify your grammar, and communicate with confidence through regular practice, AI-powered exercises, level-appropriate content, and clear goals.",
+      "description": "In the language workshop, learning does not scatter across unrelated resources. Lessons, **vocabulary** study, **grammar** practice, and **AI**-powered exercises come together on one learning path. You reinforce skills with **multiple-choice**, **fill-in-the-blank**, **true/false**, **listen-and-write**, **crossword**, and **matching** formats. Each session produces a concrete result. Your **vocabulary** grows, **grammar** patterns become clearer, and **listening**, **reading**, **writing**, and **speaking** strengthen together. Level-tailored content and measurable progress records show where you stand, so you can move forward at your own pace with confidence.",
       "items": {
         "vocabulary": {
-          "title": "Vocabulary",
-          "body": "You make words stick with category cards, spaced repetition, and in-context examples."
+          "title": "Vocabulary that lasts",
+          "body": "Alongside **category** cards and **spaced repetition**, vocabulary quizzes with **multiple-choice**, **fill-in-the-blank**, and **listen-and-write** questions move words into everyday use."
         },
         "grammar": {
           "title": "Grammar clarity",
-          "body": "With topic-focused lessons and exercises, you read, listen to, and write patterns."
+          "body": "After the lesson, **multiple-choice**, **fill-in-the-blank**, **true/false**, **matching**, **listen-and-write**, and **crossword** exercises help you read, hear, and write patterns until they stick."
         },
         "skills": {
-          "title": "Four skills",
-          "body": "Listening, reading, writing, and speaking practice progress together on the same learning path."
+          "title": "All four skills",
+          "body": "Comprehension in **listening** and **reading**, message-building in **writing**, and wheel, card, and anagram activities in **speaking** complement each other on one path."
         },
         "confidence": {
           "title": "Communicate with confidence",
-          "body": "You feel more prepared with level-appropriate content and measurable progress goals."
+          "body": "Level-appropriate scenarios and measurable goals show how far you’ve come, so you feel more ready when it’s time to use the language."
         }
       }
     },

@@ -1043,37 +1043,46 @@
     "contactLink": "Bize yaz",
     "email": "admin@dilatolyesi.com",
     "supportNote": "Soruların veya önerilerin için buradayız. Genelde bir iş günü içinde dönüş yaparız.",
-    "madeFor": "Yapay zeka destekli alıştırmalarla adım adım İngilizce öğrenmek için."
+    "madeFor": "Yapay zeka destekli alıştırmalarla adım adım İngilizce öğrenmek için.",
+    "builtBy": "VeltStack tarafından geliştirildi."
   },
   "Landing": {
     "aiBadge": "AI",
     "aiBadgeLabel": "Yapay zeka destekli",
     "headline": "Dil atölyesi: tek çatı altında",
-    "subheadline": "Dersler, <strong>kelime</strong> ve <strong>gramer</strong>, <strong>dinleme–okuma</strong>, <strong>konuşma kalıpları</strong> ve <strong>yapay zeka (AI) destekli alıştırmalar</strong> tek atölyede bir araya gelir. İlerlemen kayıt altında kalır; ne zaman çalışacağını ve ne kadar ilerleyeceğini sen belirlersin.",
+    "subheadline": "Dersler, **kelime** ve **dil bilgisi**, **dinleme**, **okuma**, **yazma**, **konuşma** ve **yapay zeka(AI) destekli alıştırmalar** tek atölyede bir araya gelir. İlerlemen kayıt altında kalır; ne zaman çalışacağını ve ne kadar ilerleyeceğini sen belirlersin.",
     "ctaHowItWorks": "Nasıl Çalışır?",
     "ctaStartLearning": "Öğrenmeye Başla",
     "levelsLabel": "Seviye yolu",
-    "levelsCaption": "Üye olduktan sonra kısa seviye sınavıyla <strong>A1</strong>’den <strong>C2</strong>’ye yerleştirilirsin. Başlangıç basamağını sen seçersin; sınavın önerdiğinden daha düşük bir seviyeden de başlayabilirsin, taban <strong>A1</strong>’dir. Basamaklar sırayla açılır; tamamladıkça yolun devamı önünde kalır."
+    "levelsCaption": "Üye olduktan sonra kısa seviye sınavıyla **A1**’den **C2**’ye yerleştirilirsin. Başlangıç basamağını sen seçersin; sınavın önerdiğinden daha düşük bir seviyeden de başlayabilirsin, taban **A1**’dir. Basamaklar sırayla açılır; tamamladıkça yolun devamı önünde kalır."
   },
   "EducationSystem": {
     "title": "Eğitim Sistemi",
-    "subtitle": "Üyelikten sonra seviye sınavıyla başlayan; dersler, yapay zeka destekli alıştırmalar ve ilerleme takibiyle senin hızına göre şekillenen bir öğrenme yolu.",
+    "subtitle": "Üye olduktan sonra kısa bir seviye sınavıyla **A1**'den **C2**'ye yerleştirilirsin. İstersen sınav sonucundan daha alt bir seviyeden, hatta **A1**'dan da başlayabilirsin. Seviyene uygun dersler sırayla açılır. Her oturum **dinleme**, **okuma**, **yazma**, **konuşma** veya **gramer** odaklıdır; kısa çalışmalarla kendi temponda ilerlersin. Derslerden sonra **yapay zeka(AI)** destekli alıştırmalarla **kelime** ve **dil bilgisi** pratiğini bağlam içinde yaparsın. Aralıklı tekrarlarla öğrendiklerin kalıcı hale gelir. Tamamlanan içerik, güçlenen kelimeler ve bir üst dil seviyesi hedefin tek bakışta görünür. Tüm yol senin hızına göre şekillenir.",
     "steps": {
       "level": {
         "title": "Seviyeni belirle",
-        "body": "Üye olduktan sonra kısa bir seviye sınavına girersin. Sonuçlarına göre seni 0, A1, A2, B1, B2, C1 veya C2 seviyesine yerleştiririz. İstersen sınav sonucundan daha alt bir seviyeden, hatta 0’dan da başlayabilirsin; örneğin A2 çıksan bile temeli yeniden kurmak için sıfırdan ilerleyebilirsin. Aynı esneklik her seviye için geçerlidir."
+        "body": "Üye olduktan sonra kısa bir **seviye sınavına** girersin. Sonuçlarına göre seni **A1**, **A2**, **B1**, **B2**, **C1** veya **C2** seviyesine yerleştiririz. İstersen sınav sonucundan daha alt bir seviyeden, hatta **A1**’den de başlayabilirsin; örneğin **A2** çıksan bile temeli yeniden kurmak için sıfırdan ilerleyebilirsin. Aynı esneklik her seviye için geçerlidir."
       },
       "lessons": {
         "title": "Günlük derslerle ilerle",
-        "body": "Seçtiğin başlangıç seviyesine uygun dersler sırayla açılır. Her ders tek bir konuya odaklanır: listening, reading, gramer veya speaking kalıpları. Kısa oturumlarla düzenli pratik yapar, birikimini gün gün büyütürsün; istediğin gün daha fazla ilerleyebilir, yoğun günlerde temposunu düşürebilirsin."
+        "body": "Seçtiğin başlangıç seviyesine uygun dersler sırayla açılır. Her ders tek bir konuya odaklanır: **dinleme**, **okuma**, **yazma**, **konuşma** veya **dil bilgisi**. Metin ve dinleme çalışmalarının yanında **çoktan seçmeli**, **boşluk doldurma** ve anlama sorularıyla ilerlersin. Kısa oturumlarla düzenli **pratik** yapar, birikimini gün gün büyütürsün; istediğin gün daha fazla ilerleyebilir, yoğun günlerde tempoyu düşürebilirsin."
       },
       "practice": {
         "title": "Yapay zeka ile pekiştir",
-        "body": "Derslerden sonra yapay zeka destekli alıştırmalarla kelime, gramer ve kalıpları bağlam içinde uygularsın. Alıştırmalar seviyene ve zayıf kaldığın noktalara göre şekillenir; böylece ezberden öte, gerçek kullanıma yakın bir pratik yaparsın. Aralıklı tekrarlarla öğrendiklerin kalıcı hale gelir."
+        "body": "Derslerden sonra **yapay zeka** destekli alıştırmalarla **kelime**, **dil bilgisi** ve kalıpları bağlam içinde uygularsın. **Çoktan seçmeli**, **boşluk doldurma**, **doğru/yanlış**, **dinleyip yazma**, **bulmaca**, **eşleştirme** ve **karışık soru** setleri seviyene ve zayıf kaldığın noktalara göre şekillenir. **Aralıklı tekrarlarla** öğrendiklerin kalıcı hale gelir."
       },
       "progress": {
         "title": "İlerlemeni gör",
-        "body": "Tamamlanan dersler, yapay zeka alıştırmaları, güçlenen kelimeler ve seviye hedeflerin tek bakışta görünür. Nerede olduğun, bir sonraki adımın ve hangi konuda daha fazla pratik gerektiği net kalır. İlerledikçe bir üst CEFR seviyesine geçişin de ölçülebilir hale gelir."
+        "body": "Tamamlanan dersler, **yapay zeka** alıştırmaları, güçlenen **kelimeler** ve seviye hedeflerin tek bakışta görünür. Nerede olduğun, bir sonraki adımın ve hangi konuda daha fazla **pratik** gerektiği net olarak önündedir. İlerledikçe bir üst **dil seviyesine** geçişin de ölçülebilir hale gelir."
+      },
+      "vocabulary": {
+        "title": "Kelime çalışması",
+        "body": "**Kategori**lerden öğrenmek istediğin kelimeleri seçer, çalışma **süresini** başlatırsın. Süre bitince **çoktan seçmeli**, **boşluk doldurma** ve **dinleyip yazma** sorularından oluşan kelime **sınavına** girersin. Doğru bildiklerin **bilinenlere** eklenir; tekrar etmek istediklerin **aralıklı tekrar** sistemiyle kalıcı hale gelir."
+      },
+      "levelAdvance": {
+        "title": "Yeterlilik ile yüksel",
+        "body": "Seviyendeki **dil bilgisi** konularını, birleşik alıştırmaları ve **dinleme**, **okuma**, **yazma** ile **konuşma** bölümlerini tamamladıkça **yeterlilik sınavına** girebilirsin. Sınavı geçtiğinde bir üst **dil seviyesi** açılır ve kilitli içerikler sırayla erişimine sunulur."
       }
     }
   },
@@ -1089,7 +1098,7 @@
       },
       "ai": {
         "question": "Yapay zeka destekli alıştırmalar nasıl çalışır?",
-        "answer": "Derslerden sonra seviyene ve ihtiyacına göre kişiselleştirilmiş alıştırmalar sunulur. Kelime, gramer ve kullanım pratiklerini bağlama oturtmana yardım eder; zayıf kaldığın konulara daha fazla odaklanmanı sağlar."
+        "answer": "Derslerden sonra seviyene göre **çoktan seçmeli**, **boşluk doldurma**, **doğru/yanlış**, **dinleyip yazma**, **bulmaca** ve **eşleştirme** gibi türlerden oluşan kişiselleştirilmiş setler sunulur. Zayıf kaldığın konulara daha fazla yüklenir; kelime ve gramer pratiğini bağlam içinde yaparsın."
       },
       "free": {
         "question": "Ücretsiz kullanabilir miyim?",
@@ -1108,23 +1117,23 @@
   "Pages": {
     "benefits": {
       "title": "Kazanımlar",
-      "description": "Düzenli pratik, yapay zeka destekli alıştırmalar, seviyene uygun içerik ve net hedeflerle kelime dağarcığını güçlendir, gramerini netleştir ve güvenle iletişim kur.",
+      "description": "Dil atölyesinde öğrenmek dağınık kaynaklar arasında kaybolmaz. **Dersler**, **kelime** çalışması, **dil bilgisi** pratiği ve **yapay zeka(AI)** destekli alıştırmalar tek bir öğrenme yolunda bir araya gelir. **Çoktan seçmeli**, **boşluk doldurma**, **doğru/yanlış**, **dinleyip yazma**, **bulmaca** ve **eşleştirme** gibi türlerle pekiştirirsin. Her oturum somut bir sonuç üretir. **Kelime** dağarcığın genişler, **dil bilgisi** kalıpların netleşir ve **dinleme**, **okuma**, **yazma** ile **konuşma** birlikte güçlenir. Seviyene göre şekillenen içerik ve ölçülebilir ilerleme kaydı sayesinde nerede olduğunu görür, kendi temponda güvenle ilerlersin.",
       "items": {
         "vocabulary": {
           "title": "Kelime dağarcığı",
-          "body": "Kategori kartları, aralıklı tekrar ve bağlam içi örneklerle kelimeleri kalıcı hale getirirsin."
+          "body": "Kategori kartları ve aralıklı tekrarın yanında kelime sınavında **çoktan seçmeli**, **boşluk doldurma** ve **dinleyip yazma** sorularıyla kelimeleri günlük kullanıma taşırsın."
         },
         "grammar": {
           "title": "Gramer netliği",
-          "body": "Konu odaklı dersler ve alıştırmalarla kalıpları okur, dinler ve yazarsın."
+          "body": "Konu anlatımından sonra **çoktan seçmeli**, **boşluk doldurma**, **doğru/yanlış**, **eşleştirme**, **dinleyip yazma** ve **bulmaca** ile kalıpları okur, dinler ve yazarak pekiştirirsin."
         },
         "skills": {
-          "title": "Dört beceri",
-          "body": "Dinleme, okuma, yazma ve konuşma pratikleri aynı öğrenme yolunda bir arada ilerler."
+          "title": "Dört beceri birden",
+          "body": "**Dinleme** ve **okuma**da anlama soruları, **yazma**da mesaj kurma, **konuşma**da çarkıfelek, kart ve anagram etkinlikleri tek yolda birbirini tamamlar."
         },
         "confidence": {
           "title": "Güvenle iletişim",
-          "body": "Seviyene uygun içerik ve ölçülebilir ilerleme hedefleriyle kendini daha hazır hissedersin."
+          "body": "Seviyene uygun senaryolar ve ölçülebilir hedeflerle ne kadar ilerlediğini görürsün; iletişime geçerken kendini daha hazır hissedersin."
         }
       }
     },
