@@ -1,3 +1,4 @@
+import { unstable_rethrow } from "next/navigation";
 import { NextResponse } from "next/server";
 import { ZodError } from "zod";
 import { AppError } from "@/lib/server/AppError";
@@ -46,8 +47,15 @@ export function jsonError(
 }
 
 export function handleRouteError(error: unknown): NextResponse {
+  unstable_rethrow(error);
+
   if (error instanceof AppError) {
-    return jsonError(error.statusCode, error.message, error.code, error.details);
+    return jsonError(
+      error.statusCode,
+      error.message,
+      error.code,
+      error.details,
+    );
   }
 
   if (error instanceof ZodError) {
