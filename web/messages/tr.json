@@ -1110,7 +1110,7 @@
       },
       "contact": {
         "question": "Yardım için kime yazabilirim?",
-        "answer": "İletişim sayfasından veya admin@dilatolyesi.com adresinden bize ulaşabilirsin. Genelde bir iş günü içinde dönüş yaparız."
+        "answer": "İletişim sayfasından veya **admin@dilatolyesi.com** adresinden bize ulaşabilirsin. Genelde bir iş günü içinde dönüş yaparız."
       }
     }
   },
@@ -1157,7 +1157,7 @@
     },
     "sss": {
       "title": "Sıkça Sorulan Sorular",
-      "description": "Hesap, seviye, ücretsiz kullanım ve destek hakkında sık sorulan sorular."
+      "description": "Atölyeye başlamadan önce en çok sorulan konuları burada topladık. **Hesap oluşturma**, **seviye sınavı** ve seviye seçimi, **ücretsiz başlangıç**, **yapay zeka destekli alıştırmaların** işleyişi, günlük pratik için **ne kadar süre** ayırman gerektiği ve **yardım** için kime ulaşabileceğin gibi sorulara kısa ve net yanıtlar bulabilirsin."
     },
     "contact": {
       "title": "İletişim",
