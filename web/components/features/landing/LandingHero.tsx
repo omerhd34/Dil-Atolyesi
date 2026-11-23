@@ -1,6 +1,6 @@
 import { CircleHelp, Rocket, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
-import type { ReactNode } from "react";
+import { BoldMessageText } from "@/components/i18n/BoldMessageText";
 import { BrandMark } from "@/components/brand/BrandMark";
 import { HeroLevelPath } from "@/components/features/landing/HeroLevelPath";
 import { Badge } from "@/components/ui/Badge";
@@ -9,18 +9,9 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { AUTH_ACCOUNT_PATH } from "@/lib/appPaths";
 
-function landingStrong(chunks: ReactNode) {
-  return (
-    <span className="font-semibold text-brand-900 dark:text-brand-100">
-      {chunks}
-    </span>
-  );
-}
-
 export function LandingHero() {
   const t = useTranslations("Landing");
   const tNav = useTranslations("Nav");
-  const landingRich = { strong: landingStrong };
 
   return (
     <section className="relative flex min-h-[calc(100dvh-4rem)] flex-col overflow-hidden">
@@ -57,7 +48,10 @@ export function LandingHero() {
                 {t("headline")}
               </h1>
               <p className="max-w-full text-base leading-7 text-brand-700 sm:text-lg sm:leading-8 dark:text-brand-300">
-                {t.rich("subheadline", landingRich)}
+                <BoldMessageText
+                  text={t("subheadline")}
+                  emphasisClassName="font-semibold text-brand-900 dark:text-brand-100"
+                />
               </p>
             </div>
 
@@ -101,7 +95,12 @@ export function LandingHero() {
               <div className="relative">
                 <HeroLevelPath
                   label={t("levelsLabel")}
-                  caption={t.rich("levelsCaption", landingRich)}
+                  caption={
+                    <BoldMessageText
+                      text={t("levelsCaption")}
+                      emphasisClassName="font-semibold text-brand-900 dark:text-brand-100"
+                    />
+                  }
                 />
               </div>
             </div>

@@ -1,7 +1,15 @@
-import { BookOpen, Bot, Gauge, TrendingUp } from "lucide-react";
+import {
+  Award,
+  BookMarked,
+  BookOpen,
+  Bot,
+  Gauge,
+  TrendingUp,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { EducationStepCard } from "@/components/features/landing/EducationStepCard";
+import { EducationStepsGrid } from "@/components/features/landing/EducationStepsGrid";
 import { LandingReveal } from "@/components/features/landing/LandingReveal";
 import { LandingSectionFrame } from "@/components/features/landing/LandingSectionFrame";
 import { LandingSectionIntro } from "@/components/features/landing/LandingSectionIntro";
@@ -11,6 +19,8 @@ const STEPS = [
   { key: "lessons", Icon: BookOpen },
   { key: "practice", Icon: Bot },
   { key: "progress", Icon: TrendingUp },
+  { key: "vocabulary", Icon: BookMarked },
+  { key: "levelAdvance", Icon: Award },
 ] as const satisfies ReadonlyArray<{
   key: string;
   Icon: LucideIcon;
@@ -28,10 +38,13 @@ export function LandingEducationSystem() {
         description={t("subtitle")}
       />
 
-      <ul className="mt-12 grid list-none gap-5 sm:grid-cols-2 lg:gap-6">
+      <EducationStepsGrid>
         {STEPS.map(({ key, Icon }, index) => (
-          <li key={key}>
-            <LandingReveal delayMs={index * 100} className="h-full">
+          <li key={key} className="flex min-h-0 flex-col">
+            <LandingReveal
+              delayMs={index * 100}
+              className="flex h-full min-h-0 flex-1 flex-col"
+            >
               <EducationStepCard
                 index={index + 1}
                 title={t(`steps.${key}.title`)}
@@ -41,7 +54,7 @@ export function LandingEducationSystem() {
             </LandingReveal>
           </li>
         ))}
-      </ul>
+      </EducationStepsGrid>
     </LandingSectionFrame>
   );
 }

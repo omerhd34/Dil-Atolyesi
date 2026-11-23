@@ -1,3 +1,4 @@
+import { BoldMessageText } from "@/components/i18n/BoldMessageText";
 import { LandingReveal } from "@/components/features/landing/LandingReveal";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +16,7 @@ export function LandingSectionIntro({
   className,
 }: LandingSectionIntroProps) {
   return (
-    <LandingReveal className={cn("max-w-3xl space-y-4", className)}>
+    <LandingReveal className={cn("w-full space-y-4", className)}>
       <h2
         id={headingId}
         className="font-display text-3xl font-semibold tracking-tight text-brand-950 sm:text-4xl dark:text-brand-100"
@@ -23,7 +24,7 @@ export function LandingSectionIntro({
         {title}
       </h2>
       <p className="text-base leading-7 text-brand-600 sm:text-lg sm:leading-8 dark:text-brand-400">
-        {description}
+        <BoldMessageText text={description} />
       </p>
     </LandingReveal>
   );

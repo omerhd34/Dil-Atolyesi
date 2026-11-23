@@ -5,6 +5,12 @@ import { LandingSectionFrame } from "@/components/features/landing/LandingSectio
 import { LandingSectionIntro } from "@/components/features/landing/LandingSectionIntro";
 import { Badge } from "@/components/ui/Badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import {
+  landingMotionBodyClass,
+  landingMotionCardClass,
+  landingMotionIconClass,
+} from "@/lib/landing/landingMotionCard";
+import { cn } from "@/lib/utils";
 
 const PACKAGE_KEYS = ["starter", "pro"] as const;
 
@@ -20,24 +26,34 @@ export function LandingPackagesSection() {
         description={t("description")}
       />
 
-      <ul className="mt-12 grid list-none gap-5 lg:grid-cols-2 lg:gap-6">
+      <ul className="mt-12 grid list-none gap-5 sm:items-stretch lg:grid-cols-2 lg:gap-6">
         {PACKAGE_KEYS.map((key, index) => {
           const highlighted = key === "starter";
           const Icon = key === "starter" ? Layers : Sparkles;
 
           return (
-            <li key={key}>
-              <LandingReveal delayMs={index * 120} className="h-full">
+            <li key={key} className="flex min-h-0 flex-col">
+              <LandingReveal
+                delayMs={index * 120}
+                className="flex h-full min-h-0 flex-1 flex-col"
+              >
                 <Card
-                  className={
+                  className={cn(
+                    "h-full min-h-0 flex-1 overflow-hidden rounded-3xl",
+                    landingMotionCardClass,
                     highlighted
-                      ? "h-full rounded-3xl border-sky-500/25 bg-sky-500/6 dark:border-sky-400/25 dark:bg-sky-500/10"
-                      : "h-full rounded-3xl opacity-95"
-                  }
+                      ? "border-sky-500/25 bg-sky-500/6 dark:border-sky-400/25 dark:bg-sky-500/10"
+                      : "opacity-95",
+                  )}
                 >
                   <CardHeader className="gap-3">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="inline-flex size-11 items-center justify-center rounded-2xl border border-border/80 bg-surface/60 text-brand-800 dark:bg-brand-950/50 dark:text-brand-200">
+                      <span
+                        className={cn(
+                          landingMotionIconClass,
+                          "inline-flex size-11 items-center justify-center rounded-2xl border border-border/80 bg-surface/60 text-brand-800 dark:bg-brand-950/50 dark:text-brand-200",
+                        )}
+                      >
                         <Icon
                           className="size-5"
                           strokeWidth={1.75}
@@ -64,7 +80,12 @@ export function LandingPackagesSection() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm leading-6 text-brand-600 sm:text-base sm:leading-7 dark:text-brand-400">
+                    <p
+                      className={cn(
+                        "m-0 text-base leading-7",
+                        landingMotionBodyClass,
+                      )}
+                    >
                       {t(`items.${key}.body`)}
                     </p>
                   </CardContent>
