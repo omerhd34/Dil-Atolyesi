@@ -45,8 +45,9 @@
   height: 100%;
   overflow: hidden;
   border-radius: 28px;
-  background: transparent;
-  box-shadow: none;
+  background: var(--glass-solid);
+  backdrop-filter: blur(20px) saturate(200%);
+  box-shadow: var(--glass-surface-shadow);
 }
 
 .auth-forms {

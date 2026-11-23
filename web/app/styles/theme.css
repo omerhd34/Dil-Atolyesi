@@ -120,7 +120,7 @@
   --auth-overlay-text: #fff;
   --auth-overlay-text-muted: rgb(255 255 255 / 92%);
   --auth-overlay-line: rgb(255 255 255 / 18%);
-  --auth-overlay-image: url("https://ixirdev.com.tr/templates/ixirdev/img/login.webp");
+  --auth-overlay-image: url("/brand/auth-hero.jpg");
   --auth-remember-bg: #f1f5fb;
   --auth-remember-checked-bg: #eef3ff;
   --auth-tabs-bg: #eef2f7;
@@ -199,6 +199,26 @@
   --account-text-dim: color-mix(in srgb, #ededef 62%, transparent);
   --account-hairline: var(--glass-line);
   --account-icon: color-mix(in srgb, #ededef 78%, transparent);
+
+  --auth-accent: #5f8def;
+  --auth-accent-hover: #7aa3f5;
+  --auth-accent-soft: #6b93f0;
+  --auth-accent-ring: rgb(95 141 239 / 28%);
+  --auth-accent-border-soft: rgb(95 141 239 / 32%);
+  --auth-ink: #ededef;
+  --auth-ink-strong: #f4f4f5;
+  --auth-ink-hover: #fff;
+  --auth-muted: color-mix(in srgb, #ededef 68%, transparent);
+  --auth-muted-2: color-mix(in srgb, #ededef 55%, transparent);
+  --auth-muted-3: color-mix(in srgb, #ededef 48%, transparent);
+  --auth-slate: color-mix(in srgb, #ededef 78%, transparent);
+  --auth-field-border: rgb(148 163 184 / 32%);
+  --auth-field-border-hover: rgb(148 163 184 / 48%);
+  --auth-label-cutout: rgb(22 28 42 / 94%);
+  --auth-remember-bg: rgb(255 255 255 / 6%);
+  --auth-remember-checked-bg: rgb(95 141 239 / 16%);
+  --auth-tabs-bg: rgb(255 255 255 / 8%);
+  --auth-tab-shadow: 0 4px 12px rgb(0 0 0 / 28%);
 }
 
 @theme inline {

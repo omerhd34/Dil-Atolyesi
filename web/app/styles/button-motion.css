@@ -43,9 +43,26 @@
     transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
   }
 
+  .nav-icon-button {
+    transition-property:
+      background-color, border-color, box-shadow, color, filter, transform,
+      opacity;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
+  .nav-icon-button svg {
+    transform: none;
+    transition-property: opacity, color;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+  }
+
   :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
       :disabled
-    ):not([aria-disabled="true"]):not([data-btn-motion="off"]) {
+    ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
+      .nav-icon-button
+    ) {
     transition-property:
       background-color, border-color, box-shadow, color, filter, transform,
       opacity;
@@ -55,7 +72,9 @@
 
   :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
       :disabled
-    ):not([aria-disabled="true"]):not([data-btn-motion="off"])
+    ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
+      .nav-icon-button
+    )
     svg {
     transition-property: transform, opacity, color;
     transition-duration: 0.95s;
@@ -65,13 +84,17 @@
   @media (prefers-reduced-motion: no-preference) {
     :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
         :disabled
-      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):hover {
+      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
+        .nav-icon-button
+      ):hover {
       transform: translateY(-4px);
     }
 
     :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
         :disabled
-      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):hover
+      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
+        .nav-icon-button
+      ):hover
       svg {
       transform: translateX(3px);
       opacity: 0.9;
@@ -79,18 +102,37 @@
 
     :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
         :disabled
-      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):active {
+      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
+        .nav-icon-button
+      ):active {
       transform: translateY(1px);
       transition-duration: 0.45s;
     }
 
     :is(button, [data-slot="button"], [data-slot="sidebar-menu-button"]):not(
         :disabled
-      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):active
+      ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
+        .nav-icon-button
+      ):active
       svg {
       transform: translateX(0);
       opacity: 1;
       transition-duration: 0.38s;
+    }
+
+    .nav-icon-button:not(:disabled):not([aria-disabled="true"]):hover {
+      transform: translateY(-4px);
+    }
+
+    .nav-icon-button:not(:disabled):not([aria-disabled="true"]):active {
+      transform: translateY(1px);
+      transition-duration: 0.45s;
+    }
+
+    .nav-icon-button:not(:disabled):not([aria-disabled="true"]):hover svg,
+    .nav-icon-button:not(:disabled):not([aria-disabled="true"]):active svg {
+      transform: none;
+      opacity: 1;
     }
 
     .vocabulary-speak-button:hover svg,
