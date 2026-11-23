@@ -17,7 +17,7 @@ export function BrandMark({ className, title }: BrandMarkProps) {
       width={512}
       height={512}
       sizes="(max-width: 640px) 36px, 48px"
-      className={cn("shrink-0 rounded-[22%] object-cover", className)}
+      className={cn("block shrink-0 rounded-[22%] object-cover", className)}
       aria-hidden={label ? undefined : true}
     />
   );

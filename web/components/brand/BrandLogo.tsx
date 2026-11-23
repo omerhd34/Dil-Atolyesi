@@ -19,7 +19,7 @@ export function BrandLogo({
   return (
     <span
       className={cn(
-        "group/brand inline-flex max-w-fit items-center gap-2.5 overflow-visible",
+        "group/brand inline-flex max-h-full max-w-fit items-center gap-2.5 overflow-visible",
         className,
       )}
     >

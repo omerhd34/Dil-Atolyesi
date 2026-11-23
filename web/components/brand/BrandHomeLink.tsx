@@ -37,7 +37,7 @@ export function BrandHomeLink({
       aria-label={label}
       onClick={handleClick}
       className={cn(
-        "group/brand inline-flex cursor-pointer transition-colors hover:text-sky-700 dark:hover:text-sky-300",
+        "group/brand inline-flex max-h-full items-center cursor-pointer transition-colors hover:text-sky-700 dark:hover:text-sky-300",
         className,
       )}
     >
