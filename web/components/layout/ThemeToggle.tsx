@@ -32,7 +32,7 @@ export function ThemeToggle() {
       disabled={!mounted}
       aria-label={label}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="size-9 px-0"
+      className="nav-icon-button size-9 px-0"
     >
       {mounted ? (
         isDark ? (

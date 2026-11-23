@@ -17,7 +17,7 @@ export function FaqItem({ question, answer }: FaqItemProps) {
           </span>
         </span>
       </summary>
-      <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-600 sm:text-base sm:leading-7 dark:text-brand-400">
+      <p className="landing-motion-card__body mt-3 max-w-2xl text-base leading-7 text-brand-600 dark:text-brand-400">
         {answer}
       </p>
     </details>

@@ -31,7 +31,7 @@ export function LanguageToggle() {
     if (next === locale) {
       return;
     }
-    router.replace(pathname, { locale: next });
+    router.replace(pathname, { locale: next, scroll: false });
   }
 
   return (

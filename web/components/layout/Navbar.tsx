@@ -38,14 +38,14 @@ export function Navbar() {
     <header className="glass-surface sticky top-0 z-40 rounded-none border-0">
       <Container
         size={user ? "app" : "page"}
-        className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 md:grid-cols-[1fr_auto_1fr]"
+        className="grid h-16 grid-cols-[1fr_auto] items-stretch gap-4 md:grid-cols-[1fr_auto_1fr]"
       >
-        <div className="justify-self-start">
+        <div className="flex items-center justify-self-start">
           <BrandHomeLink
             label={t("brand")}
-            className="font-display text-2xl font-semibold tracking-tight text-brand-800 dark:text-brand-400"
+            className="font-display text-2xl font-semibold leading-none tracking-tight text-brand-800 dark:text-brand-400"
             iconClassName="size-8 sm:size-9"
-            labelClassName="font-display text-2xl font-semibold tracking-tight"
+            labelClassName="font-display text-2xl font-semibold leading-none tracking-tight"
           />
         </div>
 
@@ -78,7 +78,7 @@ export function Navbar() {
           <ThemeToggle />
           {user ? (
             <>
-              <ButtonLink href="/atolye" size="lg">
+              <ButtonLink href="/atolye" size="sm">
                 <Layers className="size-4" strokeWidth={1.75} aria-hidden />
                 {t("myWorkshop")}
               </ButtonLink>
@@ -89,7 +89,7 @@ export function Navbar() {
               />
             </>
           ) : (
-            <ButtonLink href={AUTH_ACCOUNT_PATH} size="lg">
+            <ButtonLink href={AUTH_ACCOUNT_PATH} size="sm">
               <Layers className="size-4" strokeWidth={1.75} aria-hidden />
               {t("enterWorkshop")}
             </ButtonLink>

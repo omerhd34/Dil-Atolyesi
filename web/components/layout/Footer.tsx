@@ -104,9 +104,14 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-brand-600/80 dark:text-brand-400/80">
-            {year ? `© ${year} ${tNav("brand")}. ${t("rights")}` : "\u00a0"}
-          </p>
+          <div className="space-y-1">
+            <p className="text-xs text-brand-600/80 dark:text-brand-400/80">
+              {year ? `© ${year} ${tNav("brand")}. ${t("rights")}` : "\u00a0"}
+            </p>
+            <p className="text-xs text-brand-600/70 dark:text-brand-400/70">
+              {t("builtBy")}
+            </p>
+          </div>
           <p className="text-xs text-brand-600/80 dark:text-brand-400/80">
             {t("madeFor")}
           </p>
