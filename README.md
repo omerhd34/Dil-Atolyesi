@@ -30,7 +30,7 @@ Yapay zeka destekli alıştırmalarla adım adım İngilizce öğrenmeyi hedefle
 | **Dil bilgisi**                       | Konu anlatımları, alıştırmalar (çoktan seçmeli, boşluk doldurma, dinleme, karışık sınav), birleşik egzersizler ve seviye sınavları |
 | **Kelime**                            | Kategori bazlı kelime listeleri, günlük kota, bilinen kelimeler, fiil tabloları, kelime sınavı                                     |
 | **Okuma / dinleme / yazma / konuşma** | Seviye kilitleri, pratik ve sınav modları, yerel ilerleme ve taslak saklama                                                        |
-| **Atölye**                             | Dashboard, seri (streak), bildirimler, kaldığın yerden devam, ayarlar ve ilerleme sıfırlama                                        |
+| **Atölye**                            | Dashboard, seri (streak), bildirimler, kaldığın yerden devam, ayarlar ve ilerleme sıfırlama                                        |
 | **Kimlik doğrulama**                  | Kayıt, e-posta doğrulama, JWT access + refresh, profil ve avatar yönetimi                                                          |
 | **Tema & erişilebilirlik**            | Açık / koyu / sistem teması, mobil öncelikli arayüz, shadcn/ui bileşenleri                                                         |
 
@@ -193,7 +193,7 @@ Hata durumunda `success: false` ve `error` mesajı döner. Korunan uçlar geçer
 
 ## Mimari notlar
 
-**i18n** — Rotalar `[locale]` segmentiyle başlar. UI metinleri `messages/tr.json` içindedir; yeni metin eklerken dosyaya anahtar ekleyin, bileşende `useTranslations` kullanın.
+**i18n** — UI metinleri `messages/tr.json` ve `messages/en.json`. Vurgu: `**kalın**` (gramer dersleriyle aynı); render: `<BoldMessageText text={t("key")} />` veya `<RichText messageKey="..." />`.
 
 **İçerik vs. veritabanı** — Ders konuları, okuma metinleri ve benzeri statik içerik `web/data/` altında versiyonlanır. Prisma modelleri (`User`, `UserVocabularyWord`, `Streak`, `UserProgress`, `Course`, …) kullanıcıya özel durumu ve genişleme için kurs yapısını tutar.
 
