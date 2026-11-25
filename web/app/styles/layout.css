@@ -2,7 +2,7 @@
   @apply mx-auto mt-0 w-full max-w-7xl space-y-5 px-4 pt-0 pb-4 sm:space-y-6 sm:px-6 sm:pb-6 lg:px-7 lg:pb-7;
 }
 
-@media (max-width: 1024px) {
+@media (width < theme(--breakpoint-lg)) {
   .page-shell {
     @apply pt-4;
   }

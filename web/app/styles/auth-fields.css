@@ -550,7 +550,7 @@
   outline: none;
 }
 
-@media (max-width: 1024px) {
+@media (width < theme(--breakpoint-lg)) {
   .domain-checker {
     min-height: 50px;
     padding: 1px 13px;

@@ -181,7 +181,7 @@
   margin: 0 auto 28px;
 }
 
-@media (min-width: 1024px) and (max-width: 1280px) {
+@media (width >= theme(--breakpoint-lg)) and (width < theme(--breakpoint-xl)) {
   .auth-overlay-pane {
     padding: 28px 22px;
   }
