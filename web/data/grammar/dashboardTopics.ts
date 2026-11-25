@@ -3,6 +3,7 @@ import {
   type CefrLevel,
   type GrammarHeading,
 } from "./grammarHeading";
+import { levelExamTopicId, resolveLevelExamTopicId } from "./levelExamTopicIds";
 
 export type { CefrLevel };
 
@@ -25,56 +26,23 @@ export type DashboardTopic = {
   subtopics: DashboardSubtopic[];
 };
 
-const levelExamSeeds: GrammarHeading[] = [
-  {
-    id: "123",
-    level: "A1",
-    title: "A1 Yeterlilik Sınavı",
-    titleEng: "A1 Proficiency Exam",
-    titleEx: "A1 Proficiency Exam",
-    intro: "",
-  },
-  {
-    id: "124",
-    level: "A2",
-    title: "A2 Yeterlilik Sınavı",
-    titleEng: "A2 Proficiency Exam",
-    titleEx: "A2 Proficiency Exam",
-    intro: "",
-  },
-  {
-    id: "125",
-    level: "B1",
-    title: "B1 Yeterlilik Sınavı",
-    titleEng: "B1 Proficiency Exam",
-    titleEx: "B1 Proficiency Exam",
-    intro: "",
-  },
-  {
-    id: "126",
-    level: "B2",
-    title: "B2 Yeterlilik Sınavı",
-    titleEng: "B2 Proficiency Exam",
-    titleEx: "B2 Proficiency Exam",
-    intro: "",
-  },
-  {
-    id: "127",
-    level: "C1",
-    title: "C1 Yeterlilik Sınavı",
-    titleEng: "C1 Proficiency Exam",
-    titleEx: "C1 Proficiency Exam",
-    intro: "",
-  },
-  {
-    id: "128",
-    level: "C2",
-    title: "C2 Yeterlilik Sınavı",
-    titleEng: "C2 Proficiency Exam",
-    titleEx: "C2 Proficiency Exam",
-    intro: "",
-  },
-];
+const levelExamSeeds: GrammarHeading[] = (
+  [
+    ["A1", "A1 Yeterlilik Sınavı", "A1 Proficiency Exam"],
+    ["A2", "A2 Yeterlilik Sınavı", "A2 Proficiency Exam"],
+    ["B1", "B1 Yeterlilik Sınavı", "B1 Proficiency Exam"],
+    ["B2", "B2 Yeterlilik Sınavı", "B2 Proficiency Exam"],
+    ["C1", "C1 Yeterlilik Sınavı", "C1 Proficiency Exam"],
+    ["C2", "C2 Yeterlilik Sınavı", "C2 Proficiency Exam"],
+  ] as const
+).map(([level, title, titleEng]) => ({
+  id: levelExamTopicId(level),
+  level,
+  title,
+  titleEng,
+  titleEx: titleEng,
+  intro: "",
+}));
 
 function toTopic(seed: GrammarHeading, isExam = false): DashboardTopic {
   return {
@@ -118,7 +86,15 @@ export const dashboardTopics: DashboardTopic[] = [
 export function getDashboardTopicById(
   topicId: string,
 ): DashboardTopic | undefined {
-  return dashboardTopics.find((topic) => topic.id === topicId);
+  const direct = dashboardTopics.find((topic) => topic.id === topicId);
+  if (direct) {
+    return direct;
+  }
+  const resolved = resolveLevelExamTopicId(topicId);
+  if (resolved === topicId) {
+    return undefined;
+  }
+  return dashboardTopics.find((topic) => topic.id === resolved);
 }
 
 export function getTopicTitleEx(topicId: string, fallback = ""): string {

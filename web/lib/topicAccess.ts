@@ -124,3 +124,5 @@ export function canAccessLevel(
 export function getRequiredLevelToUnlock(level: CefrLevel): CefrLevel | null {
   return getPreviousLevel(level);
 }
+
+export { CefrLevel };

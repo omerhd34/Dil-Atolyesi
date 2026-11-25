@@ -1,7 +1,7 @@
 import type { TopicContent } from "@/data/grammar/types";
 
-export const topicContent124: TopicContent = {
-  topicId: "124",
+export const topicContentExamA2: TopicContent = {
+  topicId: "exam-a2",
   lesson: {
         title: "A2 Yeterlilik Sınavı",
         titleEn: "A2 Proficiency Exam",
@@ -29,8 +29,8 @@ export const topicContent124: TopicContent = {
   },
   exercises: [
     {
-      id: "124-ex-124-1-1",
-      subtopicId: "124-1",
+      id: "exam-a2-ex-124-1-1",
+      subtopicId: "exam-a2-1",
       type: "multiple_choice",
       prompt: "\"A2 Yeterlilik Sınavı\" alt konusu hangi ana konuya aittir?",
       options: [
@@ -43,8 +43,8 @@ export const topicContent124: TopicContent = {
       explanation: "Bu alt konu \"A2 Yeterlilik Sınavı\" başlığı altındadır.",
     },
     {
-      id: "124-ex-124-1-2",
-      subtopicId: "124-1",
+      id: "exam-a2-ex-124-1-2",
+      subtopicId: "exam-a2-1",
       type: "multiple_choice",
       prompt: "A2 seviyesindeki \"A2 Yeterlilik Sınavı\" için doğru yaklaşım hangisidir?",
       options: [
@@ -57,8 +57,8 @@ export const topicContent124: TopicContent = {
       explanation: "Örnek + kısa pratik, kalıcı öğrenmeye yardımcı olur.",
     },
     {
-      id: "124-tf-124-1-1",
-      subtopicId: "124-1",
+      id: "exam-a2-tf-124-1-1",
+      subtopicId: "exam-a2-1",
       type: "true_false",
       prompt: "\"A2 Yeterlilik Sınavı\" başlığı \"A2 Yeterlilik Sınavı\" konusunun bir parçasıdır.",
       options: [
@@ -69,16 +69,16 @@ export const topicContent124: TopicContent = {
       explanation: "Bu alt başlık \"A2 Yeterlilik Sınavı\" konusu altında işlenir.",
     },
     {
-      id: "124-fb-124-1-1",
-      subtopicId: "124-1",
+      id: "exam-a2-fb-124-1-1",
+      subtopicId: "exam-a2-1",
       type: "fill_blank",
       prompt: "\"A2 Yeterlilik Sınavı\" konusu _____ seviyesine uygundur.",
       answer: "A2",
       explanation: "Bu konu A2 seviyesindedir.",
     },
     {
-      id: "124-match-1",
-      subtopicId: "124-1",
+      id: "exam-a2-match-1",
+      subtopicId: "exam-a2-1",
       type: "matching",
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
@@ -109,8 +109,8 @@ export const topicContent124: TopicContent = {
       ],
     },
     {
-      id: "124-cw-1",
-      subtopicId: "124-1",
+      id: "exam-a2-cw-1",
+      subtopicId: "exam-a2-1",
       type: "crossword",
       rows: 3,
       cols: 5,

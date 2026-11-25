@@ -874,7 +874,7 @@ export const grammarHeadings: Record<CefrLevel, GrammarHeading[]> = {
       titleEng: "Phrasal Verbs",
       titleEx: "Look After, Give Up, Turn On, Phrasal Verbs",
       intro:
-        "Phrasal fiiller edat veya zarf ile birleşince yeni anlam üretir. **\\Look After\\**, **\\Give Up\\**, **\\Turn On\\**, **\\Phrasal Verbs\\** ayrılabilen ve ayrılamayan türleri fiil–nesne sırasını değiştirir. Günlük İngilizcede yüksek frekanslıdır.",
+        "Öbek fiiller edat veya zarf ile birleşince yeni anlam üretir. **\\Look After\\**, **\\Give Up\\**, **\\Turn On\\**, **\\Phrasal Verbs\\** ayrılabilen ve ayrılamayan türleri fiil–nesne sırasını değiştirir. Günlük İngilizcede yüksek frekanslıdır.",
     },
     {
       id: "95",
@@ -883,7 +883,7 @@ export const grammarHeadings: Record<CefrLevel, GrammarHeading[]> = {
       titleEng: "Separable and Inseparable Phrasal Verbs",
       titleEx: "Separable, Inseparable, Put On, Look Up",
       intro:
-        "Phrasal fiiller edat veya zarf ile birleşince yeni anlam üretir. **\\Separable\\**, **\\Inseparable\\**, **\\Put On\\**, **\\Look Up\\** ayrılabilen ve ayrılamayan türleri fiil–nesne sırasını değiştirir. Günlük İngilizcede yüksek frekanslıdır.",
+        "Öbek fiiller edat veya zarf ile birleşince yeni anlam üretir. **\\Separable\\**, **\\Inseparable\\**, **\\Put On\\**, **\\Look Up\\** ayrılabilen ve ayrılamayan türleri fiil–nesne sırasını değiştirir. Günlük İngilizcede yüksek frekanslıdır.",
     },
     {
       id: "96",
@@ -1902,8 +1902,7 @@ export const grammarHeadings: Record<CefrLevel, GrammarHeading[]> = {
   ],
 };
 
+/** Müfredat sırası: seviye blokları ve her seviyedeki diziliş `grammarHeadings` ile aynı (ID'ye göre sıralama yok). */
 export const allGrammarHeadings: GrammarHeading[] = (
   Object.keys(grammarHeadings) as CefrLevel[]
-)
-  .flatMap((level) => grammarHeadings[level])
-  .sort((a, b) => Number.parseInt(a.id, 10) - Number.parseInt(b.id, 10));
+).flatMap((level) => grammarHeadings[level]);

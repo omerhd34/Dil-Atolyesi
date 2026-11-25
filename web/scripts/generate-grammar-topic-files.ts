@@ -5,18 +5,21 @@ import {
   formatTopicContentModule,
 } from "@/data/grammar/createTopicContent";
 import { allGrammarHeadings } from "@/data/grammar/grammarHeading";
+import {
+  levelExamContentExportName,
+  levelExamContentFileName,
+  levelExamTopicId,
+} from "@/data/grammar/levelExamTopicIds";
+import { CEFR_LEVEL_ORDER, type CefrLevel } from "@/lib/topicAccess";
 
 const GRAMMAR_DIR = path.join(process.cwd(), "data", "grammar");
-const EXAM_IDS = new Set(["123", "124", "125", "126", "127", "128"]);
 const TOPIC_ID_MIN = 1;
 const TOPIC_ID_MAX = 207;
 
 function headingById(): Map<string, (typeof allGrammarHeadings)[number]> {
   const map = new Map<string, (typeof allGrammarHeadings)[number]>();
   for (const heading of allGrammarHeadings) {
-    if (!EXAM_IDS.has(heading.id)) {
-      map.set(heading.id, heading);
-    }
+    map.set(heading.id, heading);
   }
   return map;
 }
@@ -25,14 +28,10 @@ function generateTopicFiles(options: {
   overwrite: boolean;
   preserveRich: boolean;
 }): { written: number; skipped: number } {
-  const headings = headingById();
   let written = 0;
   let skipped = 0;
 
   for (const heading of allGrammarHeadings) {
-    if (EXAM_IDS.has(heading.id)) {
-      continue;
-    }
     const id = heading.id;
 
     const filePath = path.join(GRAMMAR_DIR, `${id}.ts`);
@@ -77,31 +76,40 @@ function shouldPreserveRich(filePath: string): boolean {
   }
 }
 
-function topicImportPath(id: string): string {
-  return EXAM_IDS.has(id)
-    ? `@/data/grammar/exam/${id}`
-    : `@/data/grammar/${id}`;
-}
-
 function writeIndexFile(): void {
-  const ids: string[] = [];
+  const numericIds: string[] = [];
   for (let n = TOPIC_ID_MIN; n <= TOPIC_ID_MAX; n += 1) {
-    ids.push(String(n));
+    numericIds.push(String(n));
   }
 
   const importLines: string[] = [
     'import type { TopicContent } from "@/data/grammar/types";',
+    'import { resolveLevelExamTopicId } from "@/data/grammar/levelExamTopicIds";',
   ];
 
-  for (const id of ids) {
+  for (const id of numericIds) {
     importLines.push(
-      `import { topicContent${id} } from "${topicImportPath(id)}";`,
+      `import { topicContent${id} } from "@/data/grammar/${id}";`,
+    );
+  }
+
+  for (const level of CEFR_LEVEL_ORDER) {
+    const examFile = levelExamContentFileName(level);
+    const exportName = levelExamContentExportName(level);
+    importLines.push(
+      `import { ${exportName} } from "@/data/grammar/exam/${examFile}";`,
     );
   }
 
   const mapEntries: string[] = [];
-  for (const id of ids) {
+  for (const id of numericIds) {
     mapEntries.push(`  "${id}": topicContent${id},`);
+  }
+
+  for (const level of CEFR_LEVEL_ORDER) {
+    mapEntries.push(
+      `  "${levelExamTopicId(level)}": ${levelExamContentExportName(level)},`,
+    );
   }
 
   const indexSource = `${importLines.join("\n")}
@@ -111,11 +119,20 @@ ${mapEntries.join("\n")}
 };
 
 export function getTopicContent(topicId: string): TopicContent | null {
-  return topicContentById[topicId] ?? null;
+  const direct = topicContentById[topicId];
+  if (direct) {
+    return direct;
+  }
+  const resolved = resolveLevelExamTopicId(topicId);
+  return topicContentById[resolved] ?? null;
 }
 
 export function hasTopicContent(topicId: string): boolean {
-  return topicId in topicContentById;
+  if (topicId in topicContentById) {
+    return true;
+  }
+  const resolved = resolveLevelExamTopicId(topicId);
+  return resolved in topicContentById;
 }
 `;
 
@@ -136,7 +153,9 @@ function main(): void {
   console.log(
     `Konu dosyaları: ${written} yazıldı, ${skipped} atlandı; klasörde ${numericFiles.length} sayısal dosya.`,
   );
-  console.log(`index.ts: ${TOPIC_ID_MIN}–${TOPIC_ID_MAX} + sınav 123–128.`);
+  console.log(
+    `index.ts: ${TOPIC_ID_MIN}–${TOPIC_ID_MAX} + sınav exam-a1 … exam-c2.`,
+  );
 }
 
 main();

@@ -1,52 +1,52 @@
 import type { TopicContent } from "@/data/grammar/types";
 
-export const topicContent126: TopicContent = {
-  topicId: "126",
+export const topicContentExamC2: TopicContent = {
+  topicId: "exam-c2",
   lesson: {
-        title: "B2 Yeterlilik Sınavı",
-        titleEn: "B2 Proficiency Exam",
+        title: "C2 Yeterlilik Sınavı",
+        titleEn: "C2 Proficiency Exam",
         paragraphs: [
-          '"B2 Yeterlilik Sınavı" başlığında B2 Yeterlilik Sınavı konusunun önemli noktalarını adım adım görürsün.',
-          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. B2 seviyesinde düzenli tekrar yeterlidir.",
+          '"C2 Yeterlilik Sınavı" başlığında C2 Yeterlilik Sınavı konusunun önemli noktalarını adım adım görürsün.',
+          "Bu bölümde kalıpları tanı, örnekleri sesli tekrarla ve ardından alıştırmalara geç. C2 seviyesinde düzenli tekrar yeterlidir.",
           "Bu bir yeterlilik sınavı bölümüdür: önceki konuları hatırlayarak ilerlemeyi hedefle.",
         ],
         examples: [
           {
-            en: "I understand this topic.",
-            tr: "Bu konuyu anlıyorum.",
-            note: "B2 Yeterlilik Sınavı — örnek 1",
+            en: "This is a useful example.",
+            tr: "Bu faydalı bir örnek.",
+            note: "C2 Yeterlilik Sınavı — örnek 1",
           },
           {
-            en: "Topic focus: B2 Yeterlilik Sınavı",
-            tr: "Konu odağı: B2 Yeterlilik Sınavı",
+            en: "Topic focus: C2 Yeterlilik Sınavı",
+            tr: "Konu odağı: C2 Yeterlilik Sınavı",
           },
           {
-            en: "Subtopic: B2 Yeterlilik Sınavı",
-            tr: "Alt konu: B2 Yeterlilik Sınavı",
+            en: "Subtopic: C2 Yeterlilik Sınavı",
+            tr: "Alt konu: C2 Yeterlilik Sınavı",
           },
         ],
       
   },
   exercises: [
     {
-      id: "126-ex-126-1-1",
-      subtopicId: "126-1",
+      id: "exam-c2-ex-128-1-1",
+      subtopicId: "exam-c2-1",
       type: "multiple_choice",
-      prompt: "\"B2 Yeterlilik Sınavı\" alt konusu hangi ana konuya aittir?",
+      prompt: "\"C2 Yeterlilik Sınavı\" alt konusu hangi ana konuya aittir?",
       options: [
-        "B2 Yeterlilik Sınavı",
+        "C2 Yeterlilik Sınavı",
         "Tamamen farklı bir konu",
         "Sadece kelime listesi",
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"B2 Yeterlilik Sınavı\" başlığı altındadır.",
+      explanation: "Bu alt konu \"C2 Yeterlilik Sınavı\" başlığı altındadır.",
     },
     {
-      id: "126-ex-126-1-2",
-      subtopicId: "126-1",
+      id: "exam-c2-ex-128-1-2",
+      subtopicId: "exam-c2-1",
       type: "multiple_choice",
-      prompt: "B2 seviyesindeki \"B2 Yeterlilik Sınavı\" için doğru yaklaşım hangisidir?",
+      prompt: "C2 seviyesindeki \"C2 Yeterlilik Sınavı\" için doğru yaklaşım hangisidir?",
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -57,38 +57,38 @@ export const topicContent126: TopicContent = {
       explanation: "Örnek + kısa pratik, kalıcı öğrenmeye yardımcı olur.",
     },
     {
-      id: "126-tf-126-1-1",
-      subtopicId: "126-1",
+      id: "exam-c2-tf-128-1-1",
+      subtopicId: "exam-c2-1",
       type: "true_false",
-      prompt: "\"B2 Yeterlilik Sınavı\" başlığı \"B2 Yeterlilik Sınavı\" konusunun bir parçasıdır.",
+      prompt: "\"C2 Yeterlilik Sınavı\" başlığı \"C2 Yeterlilik Sınavı\" konusunun bir parçasıdır.",
       options: [
         "Doğru",
         "Yanlış",
       ],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"B2 Yeterlilik Sınavı\" konusu altında işlenir.",
+      explanation: "Bu alt başlık \"C2 Yeterlilik Sınavı\" konusu altında işlenir.",
     },
     {
-      id: "126-fb-126-1-1",
-      subtopicId: "126-1",
+      id: "exam-c2-fb-128-1-1",
+      subtopicId: "exam-c2-1",
       type: "fill_blank",
-      prompt: "\"B2 Yeterlilik Sınavı\" konusu _____ seviyesine uygundur.",
-      answer: "B2",
-      explanation: "Bu konu B2 seviyesindedir.",
+      prompt: "\"C2 Yeterlilik Sınavı\" konusu _____ seviyesine uygundur.",
+      answer: "C2",
+      explanation: "Bu konu C2 seviyesindedir.",
     },
     {
-      id: "126-match-1",
-      subtopicId: "126-1",
+      id: "exam-c2-match-1",
+      subtopicId: "exam-c2-1",
       type: "matching",
       prompt: "İngilizce ifadeleri Türkçe karşılıklarıyla eşleştir.",
       pairs: [
         {
-          left: "B2 Proficiency Exam",
-          right: "B2 Yeterlilik Sınavı",
+          left: "C2 Proficiency Exam",
+          right: "C2 Yeterlilik Sınavı",
         },
         {
-          left: "B2 level",
-          right: "B2 seviyesi",
+          left: "C2 level",
+          right: "C2 seviyesi",
         },
         {
           left: "Practice",
@@ -109,8 +109,8 @@ export const topicContent126: TopicContent = {
       ],
     },
     {
-      id: "126-cw-1",
-      subtopicId: "126-1",
+      id: "exam-c2-cw-1",
+      subtopicId: "exam-c2-1",
       type: "crossword",
       rows: 3,
       cols: 5,

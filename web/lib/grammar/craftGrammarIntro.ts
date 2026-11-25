@@ -187,7 +187,7 @@ function craftByEnglish(heading: GrammarHeading): string {
     return `Fiilden sonra gelen **\\-ing\\** veya **\\to\\** biçimi anlamı değiştirir. ${patterns} hangi fiilin hangi yapıyı aldığını gösterir. Ezber ve örnek cümle burada belirleyicidir.`;
   }
   if (eng.includes("phrasal")) {
-    return `Phrasal fiiller edat veya zarf ile birleşince yeni anlam üretir. ${patterns} ayrılabilen ve ayrılamayan türleri fiil–nesne sırasını değiştirir. Günlük İngilizcede yüksek frekanslıdır.`;
+    return `Öbek fiiller edat veya zarf ile birleşince yeni anlam üretir. ${patterns} ayrılabilen ve ayrılamayan türleri fiil–nesne sırasını değiştirir. Günlük İngilizcede yüksek frekanslıdır.`;
   }
   if (eng.includes("modal")) {
     return `Modal fiiller yardımcı gibi çekimlenir; arkasından fiil yalın kalır. ${patterns} zorunluluk, olasılık, izin veya çıkarım taşır. Bağlama göre anlamı daraltırsın.`;

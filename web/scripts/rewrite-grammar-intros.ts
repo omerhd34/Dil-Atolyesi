@@ -58,9 +58,7 @@ ${levelBlocks}
 
 export const allGrammarHeadings: GrammarHeading[] = (
   Object.keys(grammarHeadings) as CefrLevel[]
-)
-  .flatMap((level) => grammarHeadings[level])
-  .sort((a, b) => Number.parseInt(a.id, 10) - Number.parseInt(b.id, 10));
+).flatMap((level) => grammarHeadings[level]);
 `;
 }
 

@@ -9,7 +9,7 @@ export const topicContent95: TopicContent = {
         title: "Ayrılabilen ve Ayrılamayan Phrasal Verbs",
         titleEn: "Separable and Inseparable Phrasal Verbs",
         paragraphs: [
-          "Phrasal fiiller edatla birleşen günlük kalıplardır; anlamı bağlamla öğrenilir. Kartta gördüğün kalıplar arasında **\\Separable\\**, **\\Inseparable\\**, **\\Put On\\**, **\\Look Up\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
+          "Öbek fiiller edatla birleşen günlük kalıplardır; anlamı bağlamla öğrenilir. Kartta gördüğün kalıplar arasında **\\Separable\\**, **\\Inseparable\\**, **\\Put On\\**, **\\Look Up\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
         examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",

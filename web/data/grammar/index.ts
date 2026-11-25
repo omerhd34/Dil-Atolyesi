@@ -1,4 +1,5 @@
 import type { TopicContent } from "@/data/grammar/types";
+import { resolveLevelExamTopicId } from "@/data/grammar/levelExamTopicIds";
 import { topicContent1 } from "@/data/grammar/1";
 import { topicContent2 } from "@/data/grammar/2";
 import { topicContent3 } from "@/data/grammar/3";
@@ -121,12 +122,12 @@ import { topicContent119 } from "@/data/grammar/119";
 import { topicContent120 } from "@/data/grammar/120";
 import { topicContent121 } from "@/data/grammar/121";
 import { topicContent122 } from "@/data/grammar/122";
-import { topicContent123 } from "@/data/grammar/exam/123";
-import { topicContent124 } from "@/data/grammar/exam/124";
-import { topicContent125 } from "@/data/grammar/exam/125";
-import { topicContent126 } from "@/data/grammar/exam/126";
-import { topicContent127 } from "@/data/grammar/exam/127";
-import { topicContent128 } from "@/data/grammar/exam/128";
+import { topicContentExamA1 } from "@/data/grammar/exam/exam-a1";
+import { topicContentExamA2 } from "@/data/grammar/exam/exam-a2";
+import { topicContentExamB1 } from "@/data/grammar/exam/exam-b1";
+import { topicContentExamB2 } from "@/data/grammar/exam/exam-b2";
+import { topicContentExamC1 } from "@/data/grammar/exam/exam-c1";
+import { topicContentExamC2 } from "@/data/grammar/exam/exam-c2";
 import { topicContent129 } from "@/data/grammar/129";
 import { topicContent130 } from "@/data/grammar/130";
 import { topicContent131 } from "@/data/grammar/131";
@@ -330,12 +331,12 @@ const topicContentById: Record<string, TopicContent> = {
   "120": topicContent120,
   "121": topicContent121,
   "122": topicContent122,
-  "123": topicContent123,
-  "124": topicContent124,
-  "125": topicContent125,
-  "126": topicContent126,
-  "127": topicContent127,
-  "128": topicContent128,
+  "exam-a1": topicContentExamA1,
+  "exam-a2": topicContentExamA2,
+  "exam-b1": topicContentExamB1,
+  "exam-b2": topicContentExamB2,
+  "exam-c1": topicContentExamC1,
+  "exam-c2": topicContentExamC2,
   "129": topicContent129,
   "130": topicContent130,
   "131": topicContent131,
@@ -418,9 +419,18 @@ const topicContentById: Record<string, TopicContent> = {
 };
 
 export function getTopicContent(topicId: string): TopicContent | null {
-  return topicContentById[topicId] ?? null;
+  const direct = topicContentById[topicId];
+  if (direct) {
+    return direct;
+  }
+  const resolved = resolveLevelExamTopicId(topicId);
+  return topicContentById[resolved] ?? null;
 }
 
 export function hasTopicContent(topicId: string): boolean {
-  return topicId in topicContentById;
+  if (topicId in topicContentById) {
+    return true;
+  }
+  const resolved = resolveLevelExamTopicId(topicId);
+  return resolved in topicContentById;
 }

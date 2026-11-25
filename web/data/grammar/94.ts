@@ -9,7 +9,7 @@ export const topicContent94: TopicContent = {
         title: "Deyimsel Fiiller",
         titleEn: "Phrasal Verbs",
         paragraphs: [
-          "Phrasal fiiller edatla birleşen günlük kalıplardır; anlamı bağlamla öğrenilir. Kartta gördüğün kalıplar arasında **\\Look After\\**, **\\Give Up\\**, **\\Turn On\\**, **\\Phrasal Verbs\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
+          "Öbek fiiller edatla birleşen günlük kalıplardır; anlamı bağlamla öğrenilir. Kartta gördüğün kalıplar arasında **\\Look After\\**, **\\Give Up\\**, **\\Turn On\\**, **\\Phrasal Verbs\\** öne çıkar. Olumlu, olumsuz ve soru formlarını B1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
         examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
@@ -48,7 +48,7 @@ export const topicContent94: TopicContent = {
       id: "94-ex-94-1-1",
       subtopicId: "94-1",
       type: "multiple_choice",
-      prompt: "\"Deyimsel Fiiller\" alt konusu hangi ana konuya aittir?",
+      prompt: '"Deyimsel Fiiller" alt konusu hangi ana konuya aittir?',
       options: [
         "Deyimsel Fiiller",
         "Tamamen farklı bir konu",
@@ -56,13 +56,14 @@ export const topicContent94: TopicContent = {
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Deyimsel Fiiller\" başlığı altındadır.",
+      explanation: 'Bu alt konu "Deyimsel Fiiller" başlığı altındadır.',
     },
     {
       id: "94-ex-94-1-2",
       subtopicId: "94-1",
       type: "multiple_choice",
-      prompt: "B1 seviyesindeki \"Deyimsel Fiiller\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'B1 seviyesindeki "Deyimsel Fiiller" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -76,19 +77,17 @@ export const topicContent94: TopicContent = {
       id: "94-tf-94-1-1",
       subtopicId: "94-1",
       type: "true_false",
-      prompt: "\"Deyimsel Fiiller\" başlığı \"Deyimsel Fiiller\" konusunun bir parçasıdır.",
-      options: [
-        "Doğru",
-        "Yanlış",
-      ],
+      prompt:
+        '"Deyimsel Fiiller" başlığı "Deyimsel Fiiller" konusunun bir parçasıdır.',
+      options: ["Doğru", "Yanlış"],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Deyimsel Fiiller\" konusu altında işlenir.",
+      explanation: 'Bu alt başlık "Deyimsel Fiiller" konusu altında işlenir.',
     },
     {
       id: "94-fb-94-1-1",
       subtopicId: "94-1",
       type: "fill_blank",
-      prompt: "\"Deyimsel Fiiller\" konusu _____ seviyesine uygundur.",
+      prompt: '"Deyimsel Fiiller" konusu _____ seviyesine uygundur.',
       answer: "B1",
       explanation: "Bu konu B1 seviyesindedir.",
     },
@@ -174,7 +173,7 @@ export const topicContent94: TopicContent = {
       id: "quiz-94-94-1-1",
       subtopicId: "94-1",
       type: "multiple_choice",
-      prompt: "\"Deyimsel Fiiller\" alt konusu hangi ana konuya aittir?",
+      prompt: '"Deyimsel Fiiller" alt konusu hangi ana konuya aittir?',
       options: [
         "Tamamen farklı bir konu",
         "Deyimsel Fiiller",
@@ -182,13 +181,14 @@ export const topicContent94: TopicContent = {
         "Sadece kelime listesi",
       ],
       correctIndex: 1,
-      explanation: "Bu alt konu \"Deyimsel Fiiller\" başlığı altındadır.",
+      explanation: 'Bu alt konu "Deyimsel Fiiller" başlığı altındadır.',
     },
     {
       id: "quiz-94-94-1-2",
       subtopicId: "94-1",
       type: "multiple_choice",
-      prompt: "B1 seviyesindeki \"Deyimsel Fiiller\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'B1 seviyesindeki "Deyimsel Fiiller" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Hiç alıştırma çözmemek",
@@ -202,7 +202,7 @@ export const topicContent94: TopicContent = {
       id: "quiz-94-94-1-3",
       subtopicId: "94-1",
       type: "multiple_choice",
-      prompt: "\"Deyimsel Fiiller\" çalışırken hangisi doğrudur?",
+      prompt: '"Deyimsel Fiiller" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -216,13 +216,8 @@ export const topicContent94: TopicContent = {
       id: "quiz-94-level",
       subtopicId: "94-1",
       type: "multiple_choice",
-      prompt: "\"Deyimsel Fiiller\" konusu hangi seviyeye aittir?",
-      options: [
-        "Belirsiz",
-        "Seviye yok",
-        "B1",
-        "Yanlış seviye",
-      ],
+      prompt: '"Deyimsel Fiiller" konusu hangi seviyeye aittir?',
+      options: ["Belirsiz", "Seviye yok", "B1", "Yanlış seviye"],
       correctIndex: 2,
       explanation: "Bu konu B1 seviyesindedir.",
     },
