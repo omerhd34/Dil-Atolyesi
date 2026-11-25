@@ -412,6 +412,23 @@
   margin: 8px 0 16px;
 }
 
+.split-form.register-form .field {
+  margin-bottom: 0;
+}
+
+.split-form.register-form .agreements {
+  margin: 0;
+  padding-block: 12px;
+}
+
+.split-form.register-form .agreements .check {
+  margin: 0;
+}
+
+.split-form.register-form .auth-submit {
+  margin-top: 0;
+}
+
 .auth-shell .auth-submit,
 .split-form .auth-submit {
   position: relative;
@@ -435,12 +452,26 @@
   cursor: pointer;
 }
 
+.auth-shell .auth-submit.auth-submit-dark,
+.split-form .auth-submit.auth-submit-dark {
+  background: var(--auth-ink-strong);
+  color: #fff;
+}
+
 .auth-shell .auth-submit:hover,
 .auth-shell .auth-submit:focus,
 .split-form .auth-submit:hover,
 .split-form .auth-submit:focus {
   background: var(--auth-accent-hover);
   color: var(--auth-overlay-text);
+}
+
+.auth-shell .auth-submit.auth-submit-dark:hover,
+.auth-shell .auth-submit.auth-submit-dark:focus,
+.split-form .auth-submit.auth-submit-dark:hover,
+.split-form .auth-submit.auth-submit-dark:focus {
+  background: var(--auth-ink-hover);
+  color: #fff;
 }
 
 .login-form .auth-submit {
@@ -543,11 +574,25 @@
     background 0.2s ease;
 }
 
+.toggle-password svg {
+  transform: none;
+  transition: color 0.2s ease;
+}
+
 .toggle-password:hover,
-.toggle-password:focus {
+.toggle-password:focus,
+.toggle-password:active {
   background: var(--auth-field-border);
   color: var(--auth-ink-hover);
   outline: none;
+  transform: translateY(-50%);
+}
+
+.toggle-password:hover svg,
+.toggle-password:focus svg,
+.toggle-password:active svg {
+  transform: none;
+  opacity: 1;
 }
 
 @media (width < theme(--breakpoint-lg)) {
