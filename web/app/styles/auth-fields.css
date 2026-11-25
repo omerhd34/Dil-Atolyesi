@@ -628,3 +628,65 @@
     transition: none;
   }
 }
+
+.auth-google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 4px;
+  padding: 0 16px;
+  border: 1px solid var(--auth-field-border);
+  border-radius: 10px;
+  background: var(--background);
+  color: var(--auth-ink-strong);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.auth-google-btn:hover,
+.auth-google-btn:focus {
+  border-color: color-mix(
+    in srgb,
+    var(--auth-accent) 55%,
+    var(--auth-field-border)
+  );
+  background: color-mix(in srgb, var(--background) 88%, var(--auth-accent) 12%);
+}
+
+.auth-google-mark {
+  flex: 0 0 auto;
+}
+
+.auth-oauth-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0 8px;
+}
+
+.auth-oauth-divider::before {
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 1px;
+  background: var(--auth-field-border);
+  content: "";
+}
+
+.auth-oauth-divider span {
+  position: relative;
+  z-index: 1;
+  padding: 0 10px;
+  background: var(--background);
+  color: var(--auth-muted);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: lowercase;
+}

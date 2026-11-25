@@ -10,6 +10,8 @@ import { AuthFloatingField } from "@/components/features/auth/AuthFloatingField"
 import { AuthFormMessage } from "@/components/features/auth/AuthFormMessage";
 import { AuthPasswordToggle } from "@/components/features/auth/AuthPasswordToggle";
 import { AuthRememberMe } from "@/components/features/auth/AuthRememberMe";
+import { AuthGoogleButton } from "@/components/features/auth/AuthGoogleButton";
+import { AuthOAuthDivider } from "@/components/features/auth/AuthOAuthDivider";
 import { AuthSubmitButton } from "@/components/features/auth/AuthSubmitButton";
 import { AuthTabs } from "@/components/features/auth/AuthTabs";
 import type { AuthMode } from "@/components/features/auth/auth-types";
@@ -25,10 +27,22 @@ export type { AuthMode };
 
 type WorkshopAccountAuthProps = {
   initialMode?: AuthMode;
+  googleAuthEnabled?: boolean;
 };
+
+const GOOGLE_ERROR_KEYS = {
+  denied: "googleDenied",
+  state_invalid: "googleStateInvalid",
+  email_unverified: "googleEmailUnverified",
+  redirect_mismatch: "googleRedirectMismatch",
+  token_failed: "googleTokenFailed",
+  account_mismatch: "googleAccountMismatch",
+  generic: "googleGeneric",
+} as const;
 
 export function WorkshopAccountAuth({
   initialMode = "giris",
+  googleAuthEnabled = false,
 }: WorkshopAccountAuthProps) {
   const t = useTranslations("Auth");
   const router = useRouter();
@@ -87,10 +101,17 @@ export function WorkshopAccountAuth({
     if (params.get("mod") === "kayit") {
       setMode("kayit");
     }
+    const googleError = params.get("google_error");
+    if (googleError) {
+      const errorKey =
+        GOOGLE_ERROR_KEYS[googleError as keyof typeof GOOGLE_ERROR_KEYS] ??
+        GOOGLE_ERROR_KEYS.generic;
+      setFormError(t(`errors.${errorKey}`));
+    }
     if (window.location.search) {
       router.replace(AUTH_ACCOUNT_PATH);
     }
-  }, [authStatus, authUser, router]);
+  }, [authStatus, authUser, router, t]);
 
   const loginSchema = useMemo(
     () =>
@@ -161,6 +182,10 @@ export function WorkshopAccountAuth({
       if (code === "INVALID_CREDENTIALS") {
         setFieldErrors({ password: true });
         setFormError(t("errors.invalidCredentials"));
+        return;
+      }
+      if (code === "USE_GOOGLE_LOGIN") {
+        setFormError(t("errors.useGoogleLogin"));
         return;
       }
       setFormError(t("errors.generic"));
@@ -276,6 +301,13 @@ export function WorkshopAccountAuth({
                 <h1>{t("loginTitle")}</h1>
               </div>
 
+              {googleAuthEnabled ? (
+                <>
+                  <AuthGoogleButton label={t("continueWithGoogle")} />
+                  <AuthOAuthDivider label={t("googleOrContinue")} />
+                </>
+              ) : null}
+
               <AuthEmailField
                 name="email"
                 label={t("email")}
@@ -311,6 +343,13 @@ export function WorkshopAccountAuth({
                   label={t("rememberMe")}
                   onChange={setRememberMe}
                 />
+                <button
+                  type="button"
+                  className="auth-forgot-link auth-forgot-link-below-lg"
+                  onClick={() => switchMode("sifre")}
+                >
+                  {t("forgotPasswordLink")}
+                </button>
               </div>
 
               {formError && mode === "giris" ? (
@@ -430,6 +469,13 @@ export function WorkshopAccountAuth({
                     <AuthFormMessage>{fieldErrors.terms}</AuthFormMessage>
                   ) : null}
                 </div>
+
+                {googleAuthEnabled ? (
+                  <>
+                    <AuthOAuthDivider label={t("googleOrContinue")} />
+                    <AuthGoogleButton label={t("continueWithGoogle")} />
+                  </>
+                ) : null}
 
                 {formError && mode === "kayit" ? (
                   <AuthFormMessage>{formError}</AuthFormMessage>

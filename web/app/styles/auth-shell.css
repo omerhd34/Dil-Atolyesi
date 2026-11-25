@@ -1,3 +1,8 @@
+main:has(> .auth-shell) {
+  display: flex;
+  flex-direction: column;
+}
+
 .auth-shell {
   --auth-header: 4rem;
   --auth-pad: 40px;
@@ -8,8 +13,10 @@
   --auth-card-nav-w: 108px;
   box-sizing: border-box;
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
   justify-content: center;
+  width: 100%;
   min-height: var(--auth-shell);
   padding: var(--auth-pad) 20px;
   background: color-mix(in srgb, var(--background) 82%, #dce2f0);
@@ -278,6 +285,12 @@
   margin-top: 6px;
 }
 
+@media (width >= theme(--breakpoint-lg)) {
+  .auth-forgot-link-below-lg {
+    display: none;
+  }
+}
+
 .auth-form-footer-copy {
   margin: 0 0 8px;
   color: var(--auth-muted);
@@ -343,7 +356,6 @@
 @media (width < theme(--breakpoint-md)) {
   .auth-shell {
     --auth-pad: 20px;
-    align-items: flex-start;
     min-height: calc(100dvh - 4rem);
   }
 }
@@ -352,12 +364,14 @@
   .auth-shell {
     --auth-pad: 24px;
     background: transparent;
+    overflow-y: auto;
   }
 
   .auth-split-card.auth-card {
     display: block;
     flex-direction: column;
     max-width: 560px;
+    margin-inline: auto;
     height: auto;
     min-height: 0;
     max-height: none;
@@ -388,7 +402,7 @@
     padding: 20px 22px 24px;
   }
 
-  .auth-split:not(.is-reset) .split-form.signin,
+  .auth-split:not(.is-register):not(.is-reset) .split-form.signin,
   .auth-split.is-register:not(.is-reset) .split-form.signup.register-form,
   .auth-split.is-reset .split-form.reset {
     display: flex;
