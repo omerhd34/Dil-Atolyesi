@@ -39,7 +39,7 @@ export function LanguageToggle() {
       type="button"
       variant="outline"
       size="sm"
-      className="relative h-9 w-9 shrink-0 overflow-hidden p-0"
+      className="nav-icon-button relative size-9 shrink-0 overflow-hidden p-0"
       aria-label={ariaLabel}
       onClick={toggleLocale}
     >

@@ -2,10 +2,11 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { Layers } from "lucide-react";
+import { Layers, Menu, X } from "lucide-react";
 import { useRouter } from "@/i18n/navigation";
 import { BrandHomeLink } from "@/components/brand/BrandHomeLink";
 import { ProfileAvatar } from "@/components/features/profile/ProfileAvatar";
+import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { LanguageToggle } from "@/components/layout/LanguageToggle";
@@ -38,7 +39,7 @@ export function Navbar() {
     <header className="glass-surface sticky top-0 z-40 rounded-none border-0">
       <Container
         size={user ? "app" : "page"}
-        className="grid h-16 grid-cols-[1fr_auto] items-stretch gap-4 md:grid-cols-[1fr_auto_1fr]"
+        className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]"
       >
         <div className="flex items-center justify-self-start">
           <BrandHomeLink
@@ -50,7 +51,7 @@ export function Navbar() {
         </div>
 
         <nav
-          className="hidden items-center justify-center gap-6 md:flex lg:gap-8"
+          className="hidden items-center justify-center gap-6 lg:flex lg:gap-8"
           aria-label={t("brand")}
         >
           {navLinks.map((item) => {
@@ -73,7 +74,7 @@ export function Navbar() {
           })}
         </nav>
 
-        <nav className="hidden items-center justify-self-end gap-3 md:flex">
+        <nav className="hidden items-center justify-self-end gap-3 lg:flex">
           <LanguageToggle />
           <ThemeToggle />
           {user ? (
@@ -96,7 +97,7 @@ export function Navbar() {
           )}
         </nav>
 
-        <div className="flex items-center justify-self-end gap-2 md:hidden">
+        <div className="flex items-center justify-self-end gap-2 lg:hidden">
           <LanguageToggle />
           <ThemeToggle />
           {user ? (
@@ -106,26 +107,26 @@ export function Navbar() {
               onLogout={() => void handleLogout()}
             />
           ) : null}
-          <button
+          <Button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-brand-400/70 dark:border-brand-600"
+            variant="outline"
+            size="sm"
+            className="nav-icon-button size-9 px-0"
             aria-expanded={open}
             aria-label={open ? t("closeMenu") : t("openMenu")}
             onClick={() => setOpen((value) => !value)}
           >
-            <span className="sr-only">
-              {open ? t("closeMenu") : t("openMenu")}
-            </span>
-            <span className="flex flex-col gap-1.5">
-              <span className="block h-0.5 w-4 bg-current" />
-              <span className="block h-0.5 w-4 bg-current" />
-            </span>
-          </button>
+            {open ? (
+              <X className="size-4" strokeWidth={1.75} aria-hidden />
+            ) : (
+              <Menu className="size-4" strokeWidth={1.75} aria-hidden />
+            )}
+          </Button>
         </div>
       </Container>
 
       {open ? (
-        <div className="border-t border-border px-4 py-3 md:hidden">
+        <div className="border-t border-border px-4 py-3 lg:hidden">
           <div className="flex flex-col gap-2">
             {navLinks.map((item) => {
               const Icon = item.Icon;
