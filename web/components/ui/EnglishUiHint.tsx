@@ -10,19 +10,23 @@ type EnglishUiHintProps = {
 };
 
 const hintSlotClassName = cn(
-  "grid w-full transition-[grid-template-rows,opacity] duration-200 ease-out",
+  "relative z-0 grid w-full transition-[grid-template-rows,opacity] duration-200 ease-out",
   "grid-rows-[0fr] opacity-0",
-  "group-hover/en-hint:grid-rows-[1fr] group-hover/en-hint:opacity-100",
-  "group-focus-within/en-hint:grid-rows-[1fr] group-focus-within/en-hint:opacity-100",
+  "group-hover/en-hint:z-20 group-hover/en-hint:grid-rows-[1fr] group-hover/en-hint:opacity-100",
+  "group-focus-within/en-hint:z-20 group-focus-within/en-hint:grid-ro ws-[1fr] group-focus-within/en-hint:opacity-100",
   "motion-reduce:transition-none",
 );
 
-const hintInnerClassName =
-  "box-border flex min-h-0 w-full justify-center overflow-hidden px-1.5";
+const hintRevealMeasureClassName = "min-h-0 overflow-hidden";
+
+const hintRevealHeightClassName = "box-border h-7 w-full shrink-0";
+
+const hintChipLayerClassName =
+  "pointer-events-none absolute inset-x-0 top-0 flex w-full justify-center px-1";
 
 const hintChipClassName = cn(
-  "mt-1.5 inline-flex max-w-full items-center justify-center overflow-visible rounded-full",
-  "border border-sky-500/22 bg-sky-500/10 px-3 py-0.5 text-center",
+  "mt-1.5 inline-flex w-max max-w-[min(100vw-2rem,20rem)] shrink-0 items-center justify-center rounded-full",
+  "border border-sky-500/22 bg-sky-500/10 px-3 py-1 text-center",
   "shadow-[0_1px_0_rgb(255_255_255/55%)_inset]",
   "transition-[transform,opacity] duration-200 ease-out",
   "scale-[0.98] group-hover/en-hint:scale-100 group-focus-within/en-hint:scale-100",
@@ -30,7 +34,7 @@ const hintChipClassName = cn(
 );
 
 const hintTextClassName = cn(
-  "whitespace-nowrap pr-0.5 text-[10px] leading-tight font-medium tracking-wide text-sky-950 italic",
+  "whitespace-nowrap text-[10px] leading-normal font-medium tracking-wide text-sky-950 italic",
   "dark:text-sky-50",
 );
 
@@ -65,7 +69,10 @@ export function EnglishUiHint({
     >
       {control}
       <span role="tooltip" className={hintSlotClassName} aria-label={hint}>
-        <span className={hintInnerClassName}>
+        <span className={hintRevealMeasureClassName}>
+          <span className={hintRevealHeightClassName} aria-hidden />
+        </span>
+        <span className={hintChipLayerClassName}>
           <span className={hintChipClassName}>
             <span className={hintTextClassName}>{hint}</span>
           </span>
