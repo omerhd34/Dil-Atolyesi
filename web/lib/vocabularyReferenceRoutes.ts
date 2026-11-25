@@ -3,8 +3,6 @@ export const VOCABULARY_REFERENCE_IDS = [
   "known-words",
   "verbs",
   "false-friends",
-  "phrasal-verbs",
-  "prepositions",
 ] as const;
 
 export type VocabularyReferenceId = (typeof VOCABULARY_REFERENCE_IDS)[number];
