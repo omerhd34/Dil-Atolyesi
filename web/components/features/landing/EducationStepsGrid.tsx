@@ -6,6 +6,7 @@ import {
   type ComponentPropsWithoutRef,
   type ReactNode,
 } from "react";
+import { mediaQueryMin } from "@/lib/breakpoints";
 import { cn } from "@/lib/utils";
 
 type EducationStepsGridProps = {
@@ -13,7 +14,7 @@ type EducationStepsGridProps = {
   className?: string;
 } & Omit<ComponentPropsWithoutRef<"ul">, "children" | "className">;
 
-const GRID_MIN_WIDTH = "(min-width: 640px)";
+const GRID_MIN_WIDTH = mediaQueryMin("sm");
 const CARD_SELECTOR = ".education-step-card";
 
 function syncEducationStepCardHeights(root: HTMLElement, enabled: boolean) {
