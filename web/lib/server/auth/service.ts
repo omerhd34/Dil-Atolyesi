@@ -13,6 +13,7 @@ import { getServerEnv } from "@/lib/server/env";
 import { hashPassword, verifyPassword } from "@/lib/server/password";
 import { getPrisma } from "@/lib/server/prisma";
 import { publicUserSelect, toPublicUser } from "@/lib/server/auth/publicUser";
+import type { GoogleUserProfile } from "@/lib/server/auth/google";
 import type {
   ChangePasswordInput,
   LoginInput,
@@ -190,6 +191,10 @@ export async function loginUser(input: LoginInput) {
     throw new AppError("Invalid email or password", 401, "INVALID_CREDENTIALS");
   }
 
+  if (!user.passwordHash) {
+    throw new AppError("Use Google to sign in", 401, "USE_GOOGLE_LOGIN");
+  }
+
   const valid = await verifyPassword(input.password, user.passwordHash);
 
   if (!valid) {
@@ -199,6 +204,70 @@ export async function loginUser(input: LoginInput) {
   if (!user.emailVerifiedAt) {
     throw new AppError("Email is not verified", 403, "EMAIL_NOT_VERIFIED");
   }
+
+  const tokens = await issueTokens(user.id, user.email);
+
+  return {
+    user: toPublicUser(user),
+    ...tokens,
+  };
+}
+
+export async function loginWithGoogle(profile: GoogleUserProfile) {
+  const prisma = getPrisma();
+  const email = profile.email.toLowerCase();
+
+  const existing = await prisma.user.findFirst({
+    where: {
+      OR: [{ googleId: profile.sub }, { email }],
+    },
+    select: {
+      id: true,
+      email: true,
+      googleId: true,
+      name: true,
+      emailVerifiedAt: true,
+    },
+  });
+
+  if (existing) {
+    if (existing.googleId && existing.googleId !== profile.sub) {
+      throw new AppError(
+        "Google account does not match this user",
+        409,
+        "GOOGLE_ACCOUNT_MISMATCH",
+      );
+    }
+
+    const user = await prisma.user.update({
+      where: { id: existing.id },
+      data: {
+        googleId: existing.googleId ?? profile.sub,
+        name: existing.name ?? profile.name ?? null,
+        emailVerifiedAt: existing.emailVerifiedAt ?? new Date(),
+      },
+      select: publicUserSelect,
+    });
+
+    const tokens = await issueTokens(user.id, user.email);
+    return {
+      user: toPublicUser(user),
+      ...tokens,
+    };
+  }
+
+  const user = await prisma.user.create({
+    data: {
+      email,
+      googleId: profile.sub,
+      name: profile.name ?? null,
+      emailVerifiedAt: new Date(),
+      streak: {
+        create: {},
+      },
+    },
+    select: publicUserSelect,
+  });
 
   const tokens = await issueTokens(user.id, user.email);
 
@@ -327,6 +396,14 @@ export async function changePassword(
 
   if (!user || !user.emailVerifiedAt) {
     throw new AppError("User not found", 404, "NOT_FOUND");
+  }
+
+  if (!user.passwordHash) {
+    throw new AppError(
+      "No password set for this account",
+      400,
+      "NO_PASSWORD_SET",
+    );
   }
 
   const valid = await verifyPassword(input.currentPassword, user.passwordHash);
