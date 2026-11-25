@@ -164,7 +164,7 @@ export function VocabularyQuizView() {
             {t("quizBackToStudied")}
           </ButtonLink>
           <ButtonLink
-            href="/atolye#progress"
+            href="/atolye/progress"
             onClick={() => {
               void refetch();
             }}
@@ -200,7 +200,7 @@ export function VocabularyQuizView() {
             {t("quizNextDue", { time: formatDurationHms(remainingMs) })}
           </p>
         ) : null}
-        <ButtonLink href="/atolye#progress" variant="outline">
+        <ButtonLink href="/atolye/progress" variant="outline">
           <ArrowLeft className="size-4" aria-hidden />
           {t("backToProgress")}
         </ButtonLink>

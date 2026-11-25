@@ -3,6 +3,7 @@ import {
   LEGACY_WORKSHOP_REDIRECT_PREFIX,
   WORKSHOP_PATH,
 } from "@/lib/appPaths";
+import { WORKSHOP_VOCABULARY_PATH } from "@/lib/workshopSectionRoutes";
 
 const LEGACY_VOCABULARY_PREFIX = `${LEGACY_WORKSHOP_REDIRECT_PREFIX}/vocabulary`;
 
@@ -16,64 +17,38 @@ export function isWorkshopDashboardPath(pathname: string): boolean {
 
 export function isVocabularyRoutePath(pathname: string): boolean {
   return (
-    pathname === `${WORKSHOP_PATH}/vocabulary` ||
-    pathname.startsWith(`${WORKSHOP_PATH}/vocabulary/`) ||
+    pathname === WORKSHOP_VOCABULARY_PATH ||
+    pathname.startsWith(`${WORKSHOP_VOCABULARY_PATH}/`) ||
     pathname === LEGACY_VOCABULARY_PREFIX ||
     pathname.startsWith(`${LEGACY_VOCABULARY_PREFIX}/`)
   );
 }
 
-export function isVocabularyNavSectionActive(
-  pathname: string,
-  workshopHash: string,
-): boolean {
-  if (isWorkshopDashboardPath(pathname)) {
-    return workshopHash === "#vocabulary";
-  }
+export function isVocabularyNavSectionActive(pathname: string): boolean {
   return isVocabularyRoutePath(pathname);
 }
 
-function hrefPathAndHash(href: string): { path: string; hash: string } {
+function hrefPath(href: string): string {
   const hashIndex = href.indexOf("#");
-  if (hashIndex < 0) {
-    return { path: href, hash: "" };
-  }
-  return {
-    path: href.slice(0, hashIndex) || WORKSHOP_PATH,
-    hash: href.slice(hashIndex),
-  };
+  return hashIndex >= 0 ? href.slice(0, hashIndex) : href;
 }
 
 export function isVocabularySubNavItemActive(
   pathname: string,
-  workshopHash: string,
   href: string,
 ): boolean {
-  const { path, hash: itemHash } = hrefPathAndHash(href);
-
-  if (itemHash !== "") {
-    return isWorkshopDashboardPath(pathname) && workshopHash === itemHash;
-  }
-
+  const path = hrefPath(href);
   return pathname === path || pathname.startsWith(`${path}/`);
 }
 
 export function isWorkshopNavLinkActive(
   pathname: string,
-  workshopHash: string,
   href: string,
 ): boolean {
-  const { path, hash } = hrefPathAndHash(href);
-
-  if (hash) {
-    if (!isWorkshopDashboardPath(pathname)) {
-      return false;
-    }
-    return workshopHash === hash;
-  }
+  const path = hrefPath(href);
 
   if (path === WORKSHOP_PATH) {
-    return isWorkshopDashboardPath(pathname) && workshopHash === "";
+    return isWorkshopDashboardPath(pathname);
   }
 
   return pathname === path || pathname.startsWith(`${path}/`);
@@ -89,6 +64,7 @@ function isWorkshopHubPathname(pathname: string): boolean {
   );
 }
 
+/** @deprecated Eski hash gezinimi; yalnızca geri uyumluluk için. */
 export function resolveWorkshopDashboardUrl(section: string): string {
   const { pathname, search } = window.location;
   const nextHash = section ? `#${section}` : "";

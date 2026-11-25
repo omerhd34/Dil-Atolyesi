@@ -23,7 +23,7 @@ export async function WritingLevelLocked({
       <p className="page-subtitle mt-0">
         {t("levelLockedHint", { level, requiredLevel })}
       </p>
-      <ButtonLink href="/atolye#writing" variant="outline">
+      <ButtonLink href="/atolye/writing" variant="outline">
         {t("backToWriting")}
       </ButtonLink>
     </div>

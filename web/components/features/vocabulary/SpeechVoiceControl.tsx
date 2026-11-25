@@ -1,10 +1,16 @@
 "use client";
 
+import { BoldMessageText } from "@/components/i18n/BoldMessageText";
 import { useTranslations } from "next-intl";
 import { Check, LetterF, LetterM, type LucideIcon } from "lucide-react";
+import { useBrowserSpeechVoices } from "@/hooks/useBrowserSpeechVoices";
 import { useSpeechVoiceGender } from "@/hooks/useSpeechVoiceGender";
 import { SPEECH_VOICE_GENDERS, speakText } from "@/lib/speakText";
-import type { SpeechVoiceGender } from "@/lib/speechVoiceGender";
+import { getTurkishFemaleMissingMessageKey } from "@/lib/browserSpeechHint";
+import {
+  hasTurkishFemaleSpeechVoice,
+  type SpeechVoiceGender,
+} from "@/lib/speechVoiceGender";
 import { cn } from "@/lib/utils";
 
 const GENDER_LABEL_KEYS = {
@@ -24,12 +30,34 @@ type SpeechVoiceControlProps = {
 export function SpeechVoiceControl({ className }: SpeechVoiceControlProps) {
   const t = useTranslations("Settings");
   const { gender, setGender } = useSpeechVoiceGender();
+  const voices = useBrowserSpeechVoices();
+  const turkishFemaleLocal =
+    voices.length === 0 || hasTurkishFemaleSpeechVoice(voices);
+
+  function previewGender(option: SpeechVoiceGender) {
+    if (option === "female") {
+      speakText(t("speechVoicePreviewSampleTr"), "tr-TR");
+      return;
+    }
+    speakText(t("speechRatePreviewSample"), "en-US");
+  }
 
   return (
     <fieldset className={cn("border-0 p-0", className)}>
       <legend className="mb-3 text-sm font-medium text-brand-950 dark:text-brand-100">
         {t("speechVoiceGenderLabel")}
       </legend>
+      <p className="mb-3 text-xs leading-relaxed text-brand-600 dark:text-brand-400">
+        {t("speechVoiceGenderHint")}
+      </p>
+      {!turkishFemaleLocal ? (
+        <p
+          className="mb-3 rounded-lg border border-amber-500/35 bg-amber-500/10 px-3 py-2 text-xs leading-relaxed text-amber-950 dark:text-amber-100"
+          role="status"
+        >
+          <BoldMessageText text={t(getTurkishFemaleMissingMessageKey())} />
+        </p>
+      ) : null}
       <ul
         className="grid grid-cols-2 gap-2"
         role="group"
@@ -47,7 +75,7 @@ export function SpeechVoiceControl({ className }: SpeechVoiceControlProps) {
                 aria-label={t("speechVoicePreview", { voice: label })}
                 onClick={() => {
                   setGender(option);
-                  speakText(t("speechRatePreviewSample"), "en-US");
+                  previewGender(option);
                 }}
                 className={cn(
                   "settings-tile-button interaction-motion group/settings-tile relative flex h-full w-full min-w-0 cursor-pointer items-center gap-2 rounded-xl border px-3 py-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40",

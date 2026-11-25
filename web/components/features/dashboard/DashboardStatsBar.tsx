@@ -17,8 +17,8 @@ import { StartStudyTimerButton } from "@/components/features/vocabulary/StartStu
 import { WordTimerCardDetails } from "@/components/features/dashboard/WordTimerCardDetails";
 import { Button } from "@/components/ui/Button";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { navigateWorkshopSection } from "@/hooks/useWorkshopHash";
+import { useRouter } from "@/i18n/navigation";
+import { WORKSHOP_VOCABULARY_PATH } from "@/lib/workshopSectionRoutes";
 import { useCountdown } from "@/hooks/useCountdown";
 import {
   BYPASS_LEARN_WORD_LOCK,
@@ -27,7 +27,6 @@ import {
 
 export function DashboardStatsBar() {
   const t = useTranslations("Dashboard");
-  const pathname = usePathname();
   const router = useRouter();
   const { data: quota } = useVocabularyLearnQuotaQuery();
   const { data: quiz } = useVocabularyQuizQuery();
@@ -100,12 +99,7 @@ export function DashboardStatsBar() {
             variant="outline"
             size="sm"
             onClick={() => {
-              const onWorkshop = pathname === "/atolye" || pathname === "/";
-              if (onWorkshop) {
-                navigateWorkshopSection("vocabulary");
-                return;
-              }
-              router.push("/atolye#vocabulary");
+              router.push(WORKSHOP_VOCABULARY_PATH);
             }}
           >
             <BookOpen className="size-3.5 text-current" aria-hidden />

@@ -20,24 +20,11 @@ import {
 import { SPEAKING_SECTION_ANCHORS } from "@/lib/speakingSectionTab";
 import { WRITING_SECTION_ANCHORS } from "@/lib/writingSectionTab";
 import { normalizeLegacyWorkshopPath, WORKSHOP_PATH } from "@/lib/appPaths";
-
-const WORKSHOP_HUB_BY_HASH: Record<string, ContinueActivitySkill> = {
-  grammer: "topics",
-  vocabulary: "vocabulary",
-  reading: "reading",
-  listening: "listening",
-  writing: "writing",
-  speaking: "speaking",
-};
-
-const WORKSHOP_HASH_BY_SKILL: Record<ContinueActivitySkill, string> = {
-  topics: "grammer",
-  vocabulary: "vocabulary",
-  reading: "reading",
-  listening: "listening",
-  writing: "writing",
-  speaking: "speaking",
-};
+import {
+  LEGACY_WORKSHOP_HASH_TO_SEGMENT,
+  parseWorkshopSkillHubSegment,
+  workshopSkillHubPath,
+} from "@/lib/workshopSectionRoutes";
 
 function hashIdFrom(hash: string): string {
   return hash.replace(/^#/, "");
@@ -243,13 +230,25 @@ export function parseContinueActivityFromPath(
     };
   }
 
+  const hubSkill = parseWorkshopSkillHubSegment(path);
+  if (hubSkill) {
+    return {
+      kind: "skill_hub",
+      href: workshopSkillHubPath(hubSkill),
+      skill: hubSkill,
+    };
+  }
+
   if (path === "/atolye" || path === "/") {
-    const skill = WORKSHOP_HUB_BY_HASH[hashIdFrom(hash)];
-    if (skill) {
+    const legacySegment = LEGACY_WORKSHOP_HASH_TO_SEGMENT[hashIdFrom(hash)];
+    const legacySkill = legacySegment
+      ? parseWorkshopSkillHubSegment(`${WORKSHOP_PATH}/${legacySegment}`)
+      : null;
+    if (legacySkill) {
       return {
         kind: "skill_hub",
-        href: `/atolye#${WORKSHOP_HASH_BY_SKILL[skill]}`,
-        skill,
+        href: workshopSkillHubPath(legacySkill),
+        skill: legacySkill,
       };
     }
   }
@@ -263,12 +262,7 @@ export type ContinueActivityDisplay = {
 };
 
 type VocabularyReferenceTitles = Record<
-  | "today-worked"
-  | "known-words"
-  | "verbs"
-  | "false-friends"
-  | "phrasal-verbs"
-  | "prepositions",
+  "today-worked" | "known-words" | "verbs" | "false-friends",
   string
 >;
 

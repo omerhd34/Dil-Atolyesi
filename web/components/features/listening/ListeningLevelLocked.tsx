@@ -23,7 +23,7 @@ export async function ListeningLevelLocked({
       <p className="page-subtitle mt-0">
         {t("levelLockedHint", { level, requiredLevel })}
       </p>
-      <ButtonLink href="/atolye#listening" variant="outline">
+      <ButtonLink href="/atolye/listening" variant="outline">
         {t("backToListening")}
       </ButtonLink>
     </div>

@@ -2,15 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "@/i18n/navigation";
+import { LEGACY_WORKSHOP_REDIRECT_PREFIX, WORKSHOP_PATH } from "@/lib/appPaths";
+import { isWorkshopDashboardPath } from "@/lib/workshopNav";
 import {
-  isLegacyWorkshopPath,
-  LEGACY_WORKSHOP_REDIRECT_PREFIX,
-  WORKSHOP_PATH,
-} from "@/lib/appPaths";
-import {
-  isWorkshopDashboardPath,
-  resolveWorkshopDashboardUrl,
-} from "@/lib/workshopNav";
+  LEGACY_WORKSHOP_HASH_TO_SEGMENT,
+  resolveLegacyWorkshopHref,
+} from "@/lib/workshopSectionRoutes";
 
 import { WORKSHOP_HASH_EVENT } from "@/lib/clientStorageKeys";
 
@@ -19,50 +16,36 @@ export function readWorkshopHash(): string {
   return window.location.hash;
 }
 
+/** @deprecated Hub bölümleri artık `/atolye/<bölüm>` rotalarında. */
 export function navigateWorkshopSection(section: string): void {
-  if (typeof window === "undefined") return;
-
-  const { pathname } = window.location;
-  const nextUrl = resolveWorkshopDashboardUrl(section);
-  const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-
-  if (
-    !isWorkshopDashboardPath(pathname) &&
-    !pathname.endsWith(WORKSHOP_PATH) &&
-    !pathname.endsWith(LEGACY_WORKSHOP_REDIRECT_PREFIX)
-  ) {
-    window.location.assign(nextUrl);
+  if (typeof window === "undefined") {
     return;
   }
 
-  if (currentUrl !== nextUrl) {
-    window.history.pushState(null, "", nextUrl);
-  }
+  const segment = LEGACY_WORKSHOP_HASH_TO_SEGMENT[section];
+  const target = segment ? `${WORKSHOP_PATH}/${segment}` : WORKSHOP_PATH;
 
-  window.dispatchEvent(new HashChangeEvent("hashchange"));
-  window.dispatchEvent(new Event(WORKSHOP_HASH_EVENT));
+  window.location.assign(target);
 }
 
+/** @deprecated `resolveLegacyWorkshopHref` ile normal Link gezinmesi kullanın. */
 export function navigateWorkshopHref(href: string): boolean {
   if (typeof window === "undefined") {
     return false;
   }
 
-  const hashIndex = href.indexOf("#");
-  if (hashIndex < 0) {
+  const resolved = resolveLegacyWorkshopHref(href);
+  if (resolved === href) {
     return false;
   }
 
-  const path = href.slice(0, hashIndex) || WORKSHOP_PATH;
-  const section = href.slice(hashIndex + 1);
   const { pathname } = window.location;
-  const onWorkshop =
+  if (
     isWorkshopDashboardPath(pathname) ||
     pathname.endsWith(WORKSHOP_PATH) ||
-    pathname.endsWith(LEGACY_WORKSHOP_REDIRECT_PREFIX);
-
-  if ((path === WORKSHOP_PATH || isLegacyWorkshopPath(path)) && onWorkshop) {
-    navigateWorkshopSection(section);
+    pathname.endsWith(LEGACY_WORKSHOP_REDIRECT_PREFIX)
+  ) {
+    window.location.assign(resolved);
     return true;
   }
 

@@ -9,13 +9,21 @@ import {
   Headphones,
   Home,
   Languages,
-  Link2,
   ListOrdered,
-  MapPin,
   Mic,
   PenLine,
   SpellCheck2,
 } from "lucide-react";
+import {
+  WORKSHOP_GRAMMER_PATH,
+  WORKSHOP_HELP_PATH,
+  WORKSHOP_LISTENING_PATH,
+  WORKSHOP_PROGRESS_PATH,
+  WORKSHOP_READING_PATH,
+  WORKSHOP_SPEAKING_PATH,
+  WORKSHOP_VOCABULARY_PATH,
+  WORKSHOP_WRITING_PATH,
+} from "@/lib/workshopSectionRoutes";
 
 export type AppNavTooltipKey = `${AppNavLabelKey}Tooltip`;
 
@@ -31,8 +39,6 @@ export type AppNavLabelKey =
   | "vocabularyKnown"
   | "vocabularyVerbs"
   | "vocabularyFalseFriends"
-  | "vocabularyPhrasalVerbs"
-  | "vocabularyPrepositions"
   | "listening"
   | "writing"
   | "speaking"
@@ -68,16 +74,6 @@ export const vocabularySubNav = [
     labelKey: "vocabularyFalseFriends",
     Icon: Languages,
   },
-  {
-    href: "/atolye/vocabulary/phrasal-verbs",
-    labelKey: "vocabularyPhrasalVerbs",
-    Icon: Link2,
-  },
-  {
-    href: "/atolye/vocabulary/prepositions",
-    labelKey: "vocabularyPrepositions",
-    Icon: MapPin,
-  },
 ] as const satisfies readonly {
   href: string;
   labelKey: AppNavLabelKey;
@@ -87,43 +83,43 @@ export const vocabularySubNav = [
 export const appNavLinks: AppNavLink[] = [
   { href: "/atolye", labelKey: "home", Icon: Home },
   {
-    href: "/atolye#grammer",
+    href: WORKSHOP_GRAMMER_PATH,
     labelKey: "topics",
     Icon: SpellCheck2,
   },
   {
-    href: "/atolye#vocabulary",
+    href: WORKSHOP_VOCABULARY_PATH,
     labelKey: "vocabulary",
     Icon: BookA,
   },
   {
-    href: "/atolye#reading",
+    href: WORKSHOP_READING_PATH,
     labelKey: "reading",
     Icon: BookOpen,
   },
   {
-    href: "/atolye#listening",
+    href: WORKSHOP_LISTENING_PATH,
     labelKey: "listening",
     Icon: Headphones,
   },
   {
-    href: "/atolye#writing",
+    href: WORKSHOP_WRITING_PATH,
     labelKey: "writing",
     Icon: PenLine,
   },
   {
-    href: "/atolye#speaking",
+    href: WORKSHOP_SPEAKING_PATH,
     labelKey: "speaking",
     Icon: Mic,
   },
 
   {
-    href: "/atolye#progress",
+    href: WORKSHOP_PROGRESS_PATH,
     labelKey: "progress",
     Icon: ChartColumnIncreasing,
   },
   {
-    href: "/atolye#help",
+    href: WORKSHOP_HELP_PATH,
     labelKey: "help",
     Icon: CircleHelp,
   },

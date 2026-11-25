@@ -4,15 +4,7 @@ import {
   type ContinueActivity,
   type ContinueActivitySkill,
 } from "@/lib/continueActivityStorage";
-
-const SKILL_HUB_HREF: Record<ContinueActivitySkill, string> = {
-  vocabulary: "/atolye#vocabulary",
-  topics: "/atolye#grammer",
-  reading: "/atolye#reading",
-  listening: "/atolye#listening",
-  writing: "/atolye#writing",
-  speaking: "/atolye#speaking",
-};
+import { workshopSkillHubPath } from "@/lib/workshopSectionRoutes";
 
 const SUGGESTED_SKILL_ORDER: readonly ContinueActivitySkill[] = [
   "vocabulary",
@@ -26,7 +18,7 @@ const SUGGESTED_SKILL_ORDER: readonly ContinueActivitySkill[] = [
 function skillHubSuggestion(skill: ContinueActivitySkill): ContinueActivity {
   return {
     kind: "skill_hub",
-    href: SKILL_HUB_HREF[skill],
+    href: workshopSkillHubPath(skill),
     skill,
     updatedAt: "",
   };

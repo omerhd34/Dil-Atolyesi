@@ -15,15 +15,9 @@ import { VocabularyNavItem } from "@/components/layout/app/VocabularyNavItem";
 import { NotificationsMenu } from "@/components/features/dashboard/NotificationsMenu";
 import { ProfileAvatar } from "@/components/features/profile/ProfileAvatar";
 import { Link, usePathname } from "@/i18n/navigation";
-import {
-  navigateWorkshopSection,
-  useWorkshopHash,
-} from "@/hooks/useWorkshopHash";
 import { useProfileAvatarUpload } from "@/hooks/useProfileAvatarUpload";
-import {
-  isWorkshopDashboardPath,
-  isWorkshopNavLinkActive,
-} from "@/lib/workshopNav";
+import { isWorkshopNavLinkActive } from "@/lib/workshopNav";
+import { WORKSHOP_PATH } from "@/lib/appPaths";
 import { cn } from "@/lib/utils";
 import type { AuthUser } from "@/store/api";
 import { useAuthStore } from "@/store/authStore";
@@ -41,16 +35,6 @@ import {
   SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
-
-function hrefHash(href: string): string {
-  const index = href.indexOf("#");
-  return index >= 0 ? href.slice(index) : "";
-}
-
-function hrefPath(href: string): string {
-  const index = href.indexOf("#");
-  return index >= 0 ? href.slice(0, index) : href;
-}
 
 type AppSidebarProps = {
   user: AuthUser;
@@ -90,7 +74,6 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
   const tNav = useTranslations("Nav");
   const tSettings = useTranslations("Settings");
   const pathname = usePathname();
-  const workshopHash = useWorkshopHash();
   const { setOpenMobile, state } = useSidebar();
   const collapsed = state === "collapsed";
   const storeUser = useAuthStore((state) => state.user);
@@ -99,27 +82,13 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
   const { pickFile, isUpdatingAvatar } = useProfileAvatarUpload();
 
   function isActive(href: string): boolean {
-    return isWorkshopNavLinkActive(pathname, workshopHash, href);
+    return isWorkshopNavLinkActive(pathname, href);
   }
 
-  function handleNavClick(event: MouseEvent<HTMLElement>, href: string) {
-    const path = hrefPath(href);
-    const hash = hrefHash(href);
-    const onWorkshop = isWorkshopDashboardPath(pathname);
-
+  function handleNavClick(_event: MouseEvent<HTMLElement>, href: string) {
     setOpenMobile(false);
-
-    if (path === "/atolye") {
-      if (onWorkshop) {
-        event.preventDefault();
-        navigateWorkshopSection(hash.replace(/^#/, ""));
-        return;
-      }
-      if (hash) {
-        return;
-      }
-      event.preventDefault();
-      navigateWorkshopSection("");
+    if (href === WORKSHOP_PATH) {
+      return;
     }
   }
 
@@ -176,7 +145,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
         >
           <SidebarGroupContent>
             <nav aria-label={t("menu")}>
-              <SidebarMenu className="gap-0.5 group-data-[collapsible=icon]:gap-0.5">
+              <SidebarMenu className="gap-1 group-data-[collapsible=icon]:gap-1">
                 {appNavLinks.map((item) =>
                   item.labelKey === "vocabulary" ? (
                     <VocabularyNavItem
@@ -199,7 +168,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
         )}
       >
         <SidebarSeparator className="mx-0 mb-1 bg-(--glass-line) group-data-[collapsible=icon]:mx-1" />
-        <SidebarMenu className="gap-0.5 group-data-[collapsible=icon]:gap-0.5">
+        <SidebarMenu className="gap-1 group-data-[collapsible=icon]:gap-1">
           <SidebarMenuItem>
             <NotificationsMenu variant="sidebar" />
           </SidebarMenuItem>
@@ -218,7 +187,7 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
         </SidebarMenu>
         <div className="mb-1 rounded-[18px] bg-(--glass-2) p-2 shadow-[inset_0_0_0_1px_var(--glass-line)] group-data-[collapsible=icon]:mb-0 group-data-[collapsible=icon]:bg-transparent group-data-[collapsible=icon]:p-0 group-data-[collapsible=icon]:shadow-none">
           <div className="group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:h-10.5 group-data-[collapsible=icon]:items-center group-data-[collapsible=icon]:justify-center">
-            <div className="flex min-w-0 flex-1 items-center gap-3 rounded-lg px-2 py-1.5 transition-colors hover:bg-sidebar-accent group-data-[collapsible=icon]:flex-none group-data-[collapsible=icon]:p-0 group-data-[collapsible=icon]:hover:bg-transparent">
+            <div className="flex min-w-0 flex-1 items-center gap-3 rounded-lg px-2 py-1.5 group-data-[collapsible=icon]:flex-none group-data-[collapsible=icon]:p-0">
               <ProfileAvatar
                 name={resolvedUser.name}
                 email={resolvedUser.email}
@@ -231,16 +200,9 @@ export function AppSidebar({ user, isLoggingOut, onLogout }: AppSidebarProps) {
                 onPickFile={pickFile}
                 label={tSettings("profilePhotoChange")}
               />
-              <Link
-                href="/atolye/ayarlar"
-                onClick={() => setOpenMobile(false)}
-                className="min-w-0 flex-1 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-brand-400/40 group-data-[collapsible=icon]:hidden"
-                aria-label={t("settings")}
-              >
-                <p className="truncate text-base font-medium text-sidebar-foreground">
-                  {displayName}
-                </p>
-              </Link>
+              <p className="min-w-0 flex-1 truncate text-base font-medium text-sidebar-foreground group-data-[collapsible=icon]:hidden">
+                {displayName}
+              </p>
             </div>
           </div>
         </div>

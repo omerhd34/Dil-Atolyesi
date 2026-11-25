@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { WorkshopAccountAuth } from "@/components/features/auth/WorkshopAccountAuth";
 import { WorkshopAccountShell } from "@/components/features/auth/WorkshopAccountShell";
+import { isGoogleAuthConfigured } from "@/lib/server/auth/googleEnv";
 
 export async function generateMetadata({
   params,
@@ -23,10 +24,11 @@ export default async function AuthAccountPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const googleAuthEnabled = isGoogleAuthConfigured();
 
   return (
     <WorkshopAccountShell>
-      <WorkshopAccountAuth />
+      <WorkshopAccountAuth googleAuthEnabled={googleAuthEnabled} />
     </WorkshopAccountShell>
   );
 }

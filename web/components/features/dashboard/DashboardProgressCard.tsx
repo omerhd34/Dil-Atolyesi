@@ -55,7 +55,7 @@ export function DashboardProgressCard({
 
 export function dashboardItemCardFooterClass(buttonCount: 2 | 3): string {
   return cn(
-    "mt-auto grid grid-cols-1 items-start gap-x-2 gap-y-1",
+    "mt-auto grid grid-cols-1 items-start gap-x-2 gap-y-1 overflow-visible",
     buttonCount === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2",
   );
 }

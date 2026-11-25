@@ -34,7 +34,7 @@ export function TopicItemLocked({ kind, index }: TopicItemLockedProps) {
       </span>
       <h2 className="section-title">{title}</h2>
       <p className="page-subtitle mt-0">{body}</p>
-      <ButtonLink href="/atolye#grammer" variant="outline">
+      <ButtonLink href="/atolye/grammer" variant="outline">
         {t("backToTopics")}
       </ButtonLink>
     </div>

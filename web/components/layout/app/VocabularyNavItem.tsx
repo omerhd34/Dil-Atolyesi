@@ -8,7 +8,6 @@ import {
   vocabularySubNav,
 } from "@/components/layout/app/appNavLinks";
 import { Link, usePathname } from "@/i18n/navigation";
-import { useWorkshopHash } from "@/hooks/useWorkshopHash";
 import {
   SidebarMenuButton,
   SidebarMenuItem,
@@ -21,9 +20,8 @@ import {
   isVocabularyNavSectionActive,
   isVocabularySubNavItemActive,
 } from "@/lib/workshopNav";
+import { WORKSHOP_VOCABULARY_PATH } from "@/lib/workshopSectionRoutes";
 import { cn } from "@/lib/utils";
-
-const PARENT_HREF = "/atolye#vocabulary";
 
 type VocabularyNavItemProps = {
   onNavigate: (event: MouseEvent<HTMLElement>, href: string) => void;
@@ -32,8 +30,7 @@ type VocabularyNavItemProps = {
 export function VocabularyNavItem({ onNavigate }: VocabularyNavItemProps) {
   const t = useTranslations("AppNav");
   const pathname = usePathname();
-  const workshopHash = useWorkshopHash();
-  const sectionActive = isVocabularyNavSectionActive(pathname, workshopHash);
+  const sectionActive = isVocabularyNavSectionActive(pathname);
   const parentLabel = t("vocabulary");
   const parentTooltip = t(appNavTooltipKey("vocabulary"));
 
@@ -43,8 +40,8 @@ export function VocabularyNavItem({ onNavigate }: VocabularyNavItemProps) {
         isActive={sectionActive}
         tooltip={parentTooltip}
         className={sidebarNavButtonClassName}
-        render={<Link href={PARENT_HREF} />}
-        onClick={(event) => onNavigate(event, PARENT_HREF)}
+        render={<Link href={WORKSHOP_VOCABULARY_PATH} />}
+        onClick={(event) => onNavigate(event, WORKSHOP_VOCABULARY_PATH)}
       >
         <BookA className="size-4" strokeWidth={1.75} aria-hidden />
         <span>{parentLabel}</span>
@@ -55,7 +52,6 @@ export function VocabularyNavItem({ onNavigate }: VocabularyNavItemProps) {
           {vocabularySubNav.map((item) => {
             const itemActive = isVocabularySubNavItemActive(
               pathname,
-              workshopHash,
               item.href,
             );
 

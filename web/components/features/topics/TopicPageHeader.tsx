@@ -55,7 +55,7 @@ export function TopicPageHeader({
   const lessonHref = `/atolye/grammer/${topicId}/lesson`;
   const exercisesHref = `/atolye/grammer/${topicId}/exercises`;
   const examHref = `/atolye/grammer/${topicId}/exam`;
-  const showSectionNav = activeTab === "lesson" && sections.length > 0;
+  const showSectionNav = activeTab === "lesson" && sections.length > 1;
   const showTopicExamTab = !isExam;
   const { previous: previousTopic } = getAdjacentGrammarTopics(topicId);
   const previousTopicHref = previousTopic
@@ -66,7 +66,7 @@ export function TopicPageHeader({
     <header className="space-y-4">
       <div className="flex items-center justify-between gap-3">
         <div className="flex min-w-0 flex-wrap items-center gap-2">
-          <ButtonLink href="/atolye#grammer" variant="outline" size="sm">
+          <ButtonLink href="/atolye/grammer" variant="outline" size="sm">
             <ArrowLeft className="size-4" aria-hidden />
             {t("backToTopics")}
           </ButtonLink>

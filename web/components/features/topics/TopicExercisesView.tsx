@@ -910,7 +910,7 @@ export function TopicExercisesView({
               ? t("examPassedBody", { nextLevel })
               : t("examPassedBodyFinal")}
           </p>
-          <ButtonLink href="/atolye#grammer" size="sm">
+          <ButtonLink href="/atolye/grammer" size="sm">
             {t("examBackToTopics")}
           </ButtonLink>
         </div>

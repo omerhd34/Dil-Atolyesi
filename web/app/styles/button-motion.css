@@ -62,7 +62,7 @@
       :disabled
     ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
       .nav-icon-button
-    ) {
+    ):not(.sidebar-nav-button) {
     transition-property:
       background-color, border-color, box-shadow, color, filter, transform,
       opacity;
@@ -74,7 +74,7 @@
       :disabled
     ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
       .nav-icon-button
-    )
+    ):not(.sidebar-nav-button)
     svg {
     transition-property: transform, opacity, color;
     transition-duration: 0.95s;
@@ -86,7 +86,7 @@
         :disabled
       ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
         .nav-icon-button
-      ):hover {
+      ):not(.sidebar-nav-button):hover {
       transform: translateY(-4px);
     }
 
@@ -94,7 +94,7 @@
         :disabled
       ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
         .nav-icon-button
-      ):hover
+      ):not(.sidebar-nav-button):hover
       svg {
       transform: translateX(3px);
       opacity: 0.9;
@@ -104,7 +104,7 @@
         :disabled
       ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
         .nav-icon-button
-      ):active {
+      ):not(.sidebar-nav-button):active {
       transform: translateY(1px);
       transition-duration: 0.45s;
     }
@@ -113,7 +113,7 @@
         :disabled
       ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
         .nav-icon-button
-      ):active
+      ):not(.sidebar-nav-button):active
       svg {
       transform: translateX(0);
       opacity: 1;
@@ -131,6 +131,12 @@
 
     .nav-icon-button:not(:disabled):not([aria-disabled="true"]):hover svg,
     .nav-icon-button:not(:disabled):not([aria-disabled="true"]):active svg {
+      transform: none;
+      opacity: 1;
+    }
+
+    .sidebar-nav-button:not(:disabled):not([aria-disabled="true"]):hover svg,
+    .sidebar-nav-button:not(:disabled):not([aria-disabled="true"]):active svg {
       transform: none;
       opacity: 1;
     }

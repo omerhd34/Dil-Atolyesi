@@ -71,10 +71,7 @@
   .sidebar-nav-button:hover:not(:disabled):not([aria-disabled="true"]),
   .sidebar-nav-button:focus-visible:not(:disabled):not([aria-disabled="true"]) {
     filter: brightness(1.03) saturate(1.06);
-    box-shadow:
-      var(--glass-inset),
-      0 10px 28px -8px rgb(14 116 144 / 22%),
-      0 4px 12px -4px rgb(17 21 34 / 14%);
+    box-shadow: var(--glass-inset);
   }
 
   .dark
@@ -85,10 +82,7 @@
       [aria-disabled="true"]
     ) {
     filter: brightness(1.08) saturate(1.08);
-    box-shadow:
-      var(--glass-inset),
-      0 12px 30px -8px rgb(56 189 248 / 16%),
-      0 4px 14px -4px rgb(0 0 0 / 45%);
+    box-shadow: var(--glass-inset);
   }
 }
 

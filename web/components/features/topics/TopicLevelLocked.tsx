@@ -23,7 +23,7 @@ export async function TopicLevelLocked({
       <p className="page-subtitle mt-0">
         {t("levelLockedBody", { requiredLevel })}
       </p>
-      <ButtonLink href="/atolye#grammer" variant="outline">
+      <ButtonLink href="/atolye/grammer" variant="outline">
         {t("backToTopics")}
       </ButtonLink>
     </div>

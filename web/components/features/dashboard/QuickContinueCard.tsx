@@ -18,7 +18,7 @@ import { Link } from "@/i18n/navigation";
 import { DashboardStatHeader } from "@/components/features/dashboard/DashboardStatHeader";
 import { useContinueActivities } from "@/hooks/useContinueActivity";
 import { quickContinueActivitiesForDisplay } from "@/lib/quickContinueActivities";
-import { navigateWorkshopHref } from "@/hooks/useWorkshopHash";
+import { resolveLegacyWorkshopHref } from "@/lib/workshopSectionRoutes";
 import { resolveContinueActivityDisplay } from "@/lib/resolveContinueActivity";
 import type { ContinueActivity } from "@/lib/continueActivityStorage";
 import { cn } from "@/lib/utils";
@@ -86,14 +86,9 @@ function ContinueActivityRow({
   return (
     <li className="notification-list-item">
       <Link
-        href={activity.href}
+        href={resolveLegacyWorkshopHref(activity.href)}
         className="quick-continue-row-link group flex min-w-0 items-center gap-3 rounded-xl px-1 py-1.5 hover:bg-(--glass-btn) focus-visible:bg-(--glass-btn) focus-visible:outline-none"
         aria-label={`${goLabel}: ${display.title}`}
-        onClick={(event) => {
-          if (navigateWorkshopHref(activity.href)) {
-            event.preventDefault();
-          }
-        }}
       >
         <span
           className="quick-continue-row-icon inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-(--glass-btn) text-brand-800 shadow-[inset_0_0_0_1px_var(--glass-line)] group-hover:bg-(--glass-btn-hover) group-hover:text-sky-700 dark:text-brand-100 dark:group-hover:text-sky-200"
@@ -135,8 +130,6 @@ export function QuickContinueCard({ className }: QuickContinueCardProps = {}) {
       "known-words": tNav("vocabularyKnown"),
       verbs: tNav("vocabularyVerbs"),
       "false-friends": tNav("vocabularyFalseFriends"),
-      "phrasal-verbs": tNav("vocabularyPhrasalVerbs"),
-      prepositions: tNav("vocabularyPrepositions"),
     },
     combinedExercise: t("combinedExerciseTitle"),
     skillReading: tNav("reading"),

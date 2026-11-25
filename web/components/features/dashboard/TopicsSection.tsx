@@ -8,7 +8,10 @@ import { LevelLockedDialog } from "@/components/features/dashboard/LevelLockedDi
 import { TopicCard } from "@/components/features/dashboard/TopicCard";
 import { TopicLevelFilter } from "@/components/features/dashboard/TopicLevelFilter";
 import { buildTopicGridItems } from "@/data/combinedExercises";
-import { dashboardTopics, type CefrLevel } from "@/data/grammar/dashboardTopics";
+import {
+  dashboardTopics,
+  type CefrLevel,
+} from "@/data/grammar/dashboardTopics";
 import { usePassedLevelExams } from "@/hooks/usePassedLevelExams";
 import {
   canAccessLevel,
@@ -71,10 +74,17 @@ export function TopicsSection() {
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {gridItems.map((item) => {
+          const itemKey =
+            item.kind === "combined"
+              ? `combined:${item.combined.id}`
+              : item.topic.isExam
+                ? `exam:${item.topic.id}`
+                : `topic:${item.topic.id}`;
+
           if (item.kind === "combined") {
             return (
               <CombinedExerciseCard
-                key={item.combined.id}
+                key={itemKey}
                 combined={item.combined}
                 locked={
                   !levelUnlocked || !canAccessCombinedExercise(item.combined.id)
@@ -86,7 +96,7 @@ export function TopicsSection() {
           if (item.topic.isExam) {
             return (
               <LevelExamCard
-                key={item.topic.id}
+                key={itemKey}
                 topic={item.topic}
                 locked={
                   !levelUnlocked ||
@@ -105,7 +115,7 @@ export function TopicsSection() {
 
           return (
             <TopicCard
-              key={item.topic.id}
+              key={itemKey}
               topic={item.topic}
               index={index}
               locked={!levelUnlocked || !canAccessGrammarTopic(item.topic.id)}
