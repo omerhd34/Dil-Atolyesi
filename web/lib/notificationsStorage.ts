@@ -2,6 +2,10 @@ import {
   clientStorageEvent,
   migrateLocalStorageKey,
 } from "@/lib/clientStorageKeys";
+import {
+  resolveLegacyWorkshopHref,
+  WORKSHOP_VOCABULARY_PATH,
+} from "@/lib/workshopSectionRoutes";
 
 export type AppNotificationType = "quiz_ready" | "learn_missed_day";
 
@@ -23,14 +27,15 @@ export const NOTIFICATIONS_CHANGED_EVENT = clientStorageEvent(
 
 const NOTIFICATION_HREF_BY_TYPE: Record<AppNotificationType, string> = {
   quiz_ready: "/atolye/vocabulary/today-worked",
-  learn_missed_day: "/atolye#vocabulary",
+  learn_missed_day: WORKSHOP_VOCABULARY_PATH,
 };
 
 export function resolveNotificationHref(
   type: AppNotificationType,
   href?: string,
 ): string {
-  return NOTIFICATION_HREF_BY_TYPE[type] ?? href ?? "/atolye";
+  const resolved = NOTIFICATION_HREF_BY_TYPE[type] ?? href ?? "/atolye";
+  return resolveLegacyWorkshopHref(resolved);
 }
 
 function canUseStorage(): boolean {

@@ -1,8 +1,6 @@
 "use client";
 
-import type { MouseEvent } from "react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { navigateWorkshopHref } from "@/hooks/useWorkshopHash";
 import {
   resolveNotificationHref,
   type AppNotification,
@@ -21,11 +19,8 @@ export function NotificationFeaturedAlert({
 }: NotificationFeaturedAlertProps) {
   const href = resolveNotificationHref(item.type, item.href);
 
-  function handleOpen(event: MouseEvent<HTMLAnchorElement>) {
+  function handleOpen() {
     onOpen();
-    if (navigateWorkshopHref(href)) {
-      event.preventDefault();
-    }
   }
 
   return (

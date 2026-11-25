@@ -1,10 +1,8 @@
 "use client";
 
-import type { MouseEvent } from "react";
 import { BookOpen, ClipboardCheck, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
-import { navigateWorkshopHref } from "@/hooks/useWorkshopHash";
 import { cn } from "@/lib/utils";
 import {
   resolveNotificationHref,
@@ -31,11 +29,8 @@ export function NotificationItem({
   const Icon = item.type === "quiz_ready" ? ClipboardCheck : BookOpen;
   const href = resolveNotificationHref(item.type, item.href);
 
-  function handleOpen(event: MouseEvent<HTMLAnchorElement>) {
+  function handleOpen() {
     onOpen();
-    if (navigateWorkshopHref(href)) {
-      event.preventDefault();
-    }
   }
 
   return (
