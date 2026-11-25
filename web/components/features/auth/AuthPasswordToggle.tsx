@@ -19,6 +19,7 @@ export function AuthPasswordToggle({
     <button
       type="button"
       className="toggle-password"
+      data-btn-motion="off"
       tabIndex={-1}
       aria-label={show ? hideLabel : showLabel}
       onClick={onToggle}

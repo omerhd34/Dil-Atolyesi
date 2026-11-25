@@ -2,11 +2,12 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
-import { Lock, LogIn, Mail, User, UserPlus } from "lucide-react";
+import { Link2, Lock, LogIn, Mail, User, UserPlus } from "lucide-react";
+import { AuthCardHero } from "@/components/features/auth/AuthCardHero";
+import { AuthCardNav } from "@/components/features/auth/AuthCardNav";
 import { AuthEmailField } from "@/components/features/auth/AuthEmailField";
 import { AuthFloatingField } from "@/components/features/auth/AuthFloatingField";
 import { AuthFormMessage } from "@/components/features/auth/AuthFormMessage";
-import { AuthOverlay } from "@/components/features/auth/AuthOverlay";
 import { AuthPasswordToggle } from "@/components/features/auth/AuthPasswordToggle";
 import { AuthRememberMe } from "@/components/features/auth/AuthRememberMe";
 import { AuthSubmitButton } from "@/components/features/auth/AuthSubmitButton";
@@ -30,7 +31,6 @@ export function WorkshopAccountAuth({
   initialMode = "giris",
 }: WorkshopAccountAuthProps) {
   const t = useTranslations("Auth");
-  const tNav = useTranslations("Nav");
   const router = useRouter();
   const authStatus = useAuthStore((state) => state.status);
   const authUser = useAuthStore((state) => state.user);
@@ -227,8 +227,6 @@ export function WorkshopAccountAuth({
     setForgotNotice(t("forgotSoon"));
   }
 
-  const brand = tNav("brand");
-
   return (
     <div
       className={cn(
@@ -237,23 +235,44 @@ export function WorkshopAccountAuth({
         mode === "sifre" && "is-reset",
       )}
     >
-      <div className="auth-split-card">
+      <div className="auth-split-card auth-card">
+        <AuthCardNav
+          mode={mode}
+          loginLabel={t("submitLogin")}
+          registerLabel={t("promoRegister")}
+          passwordChangeLabel={t("navPasswordChange")}
+          onSwitch={switchMode}
+        />
+
+        <AuthCardHero
+          mode={mode}
+          copy={{
+            heroWelcomeBack: t("heroWelcomeBack"),
+            heroSignInHint: t("heroSignInHint"),
+            heroJoinToday: t("heroJoinToday"),
+            heroSignUpHint: t("heroSignUpHint"),
+            forgotTitle: t("forgotTitle"),
+            heroForgotHint: t("heroForgotHint"),
+          }}
+        />
+
         <AuthTabs
           mode={mode}
           ariaLabel={t("loginTitle")}
           loginLabel={t("submitLogin")}
-          registerLabel={t("submitRegister")}
+          registerLabel={t("promoRegister")}
           onSwitch={switchMode}
         />
 
-        <div className="auth-forms">
-          <div className="auth-split-pane auth-split-login">
+        <div className="auth-card-form">
+          <div className="auth-card-forms">
             <form
-              className="split-form login-form"
+              className="split-form login-form signin"
               onSubmit={onLoginSubmit}
               noValidate
+              aria-hidden={mode !== "giris"}
             >
-              <div className="split-form-head">
+              <div className="split-form-head auth-form-head-sr">
                 <h1>{t("loginTitle")}</h1>
               </div>
 
@@ -263,7 +282,7 @@ export function WorkshopAccountAuth({
                 value={email}
                 onChange={setEmail}
                 error={fieldErrors.email}
-                autoFocus
+                autoFocus={mode === "giris"}
                 startIcon={<Mail className="size-4" aria-hidden />}
               />
 
@@ -299,6 +318,7 @@ export function WorkshopAccountAuth({
               ) : null}
 
               <AuthSubmitButton
+                className="auth-submit-dark"
                 pressed={loginPressed}
                 disabled={isLoading}
                 onPressAnimationEnd={() => setLoginPressed(false)}
@@ -306,28 +326,21 @@ export function WorkshopAccountAuth({
                 <LogIn className="size-4" aria-hidden />
                 {t("submitLogin")}
               </AuthSubmitButton>
-
-              <div className="auth-mobile-links">
-                <button
-                  type="button"
-                  className="split-switch-link"
-                  onClick={() => switchMode("sifre")}
-                >
-                  {t("promoForgotTitle")}
-                </button>
-              </div>
             </form>
-          </div>
 
-          <div className="auth-split-pane auth-split-register">
             {submittedEmail ? (
-              <div className="split-form" role="status">
+              <div
+                className="split-form signup register-form"
+                role="status"
+                aria-hidden={mode !== "kayit"}
+              >
                 <div className="split-form-head">
                   <h1>{t("checkEmailTitle")}</h1>
                   <p>{t("checkEmailBody", { email: submittedEmail })}</p>
                 </div>
                 <AuthSubmitButton
                   type="button"
+                  className="auth-submit-dark"
                   onClick={() => switchMode("giris")}
                 >
                   <LogIn className="size-4" aria-hidden />
@@ -336,11 +349,12 @@ export function WorkshopAccountAuth({
               </div>
             ) : (
               <form
-                className="split-form register-form"
+                className="split-form signup register-form"
                 onSubmit={onRegisterSubmit}
                 noValidate
+                aria-hidden={mode !== "kayit"}
               >
-                <div className="split-form-head">
+                <div className="split-form-head auth-form-head-sr">
                   <h1>{t("registerTitle")}</h1>
                 </div>
 
@@ -363,46 +377,43 @@ export function WorkshopAccountAuth({
                   startIcon={<Mail className="size-4" aria-hidden />}
                 />
 
-                <div className="field-row">
-                  <AuthFloatingField
-                    name="password"
-                    type={showPassword ? "text" : "password"}
-                    autoComplete="new-password"
-                    label={t("password")}
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                    error={fieldErrors.password}
-                    startIcon={<Lock className="size-4" aria-hidden />}
-                    endIcon={
-                      <AuthPasswordToggle
-                        show={showPassword}
-                        hideLabel={t("hidePassword")}
-                        showLabel={t("showPassword")}
-                        onToggle={() => setShowPassword((value) => !value)}
-                      />
-                    }
-                  />
-                  <AuthFloatingField
-                    name="confirmPassword"
-                    type={showConfirmPassword ? "text" : "password"}
-                    autoComplete="new-password"
-                    label={t("confirmPassword")}
-                    value={confirmPassword}
-                    onChange={(event) => setConfirmPassword(event.target.value)}
-                    error={fieldErrors.confirmPassword}
-                    startIcon={<Lock className="size-4" aria-hidden />}
-                    endIcon={
-                      <AuthPasswordToggle
-                        show={showConfirmPassword}
-                        hideLabel={t("hidePassword")}
-                        showLabel={t("showPassword")}
-                        onToggle={() =>
-                          setShowConfirmPassword((value) => !value)
-                        }
-                      />
-                    }
-                  />
-                </div>
+                <AuthFloatingField
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  autoComplete="new-password"
+                  label={t("password")}
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  error={fieldErrors.password}
+                  startIcon={<Lock className="size-4" aria-hidden />}
+                  endIcon={
+                    <AuthPasswordToggle
+                      show={showPassword}
+                      hideLabel={t("hidePassword")}
+                      showLabel={t("showPassword")}
+                      onToggle={() => setShowPassword((value) => !value)}
+                    />
+                  }
+                />
+
+                <AuthFloatingField
+                  name="confirmPassword"
+                  type={showConfirmPassword ? "text" : "password"}
+                  autoComplete="new-password"
+                  label={t("confirmPassword")}
+                  value={confirmPassword}
+                  onChange={(event) => setConfirmPassword(event.target.value)}
+                  error={fieldErrors.confirmPassword}
+                  startIcon={<Lock className="size-4" aria-hidden />}
+                  endIcon={
+                    <AuthPasswordToggle
+                      show={showConfirmPassword}
+                      hideLabel={t("hidePassword")}
+                      showLabel={t("showPassword")}
+                      onToggle={() => setShowConfirmPassword((value) => !value)}
+                    />
+                  }
+                />
 
                 <div className="agreements">
                   <label className="check">
@@ -424,23 +435,24 @@ export function WorkshopAccountAuth({
                   <AuthFormMessage>{formError}</AuthFormMessage>
                 ) : null}
 
-                <AuthSubmitButton disabled={isLoading}>
+                <AuthSubmitButton
+                  className="auth-submit-dark"
+                  disabled={isLoading}
+                >
                   <UserPlus className="size-4" aria-hidden />
                   {t("submitRegister")}
                 </AuthSubmitButton>
               </form>
             )}
-          </div>
 
-          <div className="auth-split-pane auth-split-reset">
             <form
-              className="split-form reset-form"
+              className="split-form reset-form reset"
               onSubmit={onForgotSubmit}
               noValidate
+              aria-hidden={mode !== "sifre"}
             >
-              <div className="split-form-head">
+              <div className="split-form-head auth-form-head-sr">
                 <h1>{t("forgotTitle")}</h1>
-                <p>{t("forgotSubtitle")}</p>
               </div>
 
               <AuthEmailField
@@ -449,6 +461,7 @@ export function WorkshopAccountAuth({
                 value={email}
                 onChange={setEmail}
                 error={fieldErrors.email}
+                autoFocus={mode === "sifre"}
                 startIcon={<Mail className="size-4" aria-hidden />}
               />
 
@@ -456,28 +469,13 @@ export function WorkshopAccountAuth({
                 <AuthFormMessage tone="info">{forgotNotice}</AuthFormMessage>
               ) : null}
 
-              <AuthSubmitButton>{t("submitForgot")}</AuthSubmitButton>
+              <AuthSubmitButton className="auth-submit-dark">
+                <Link2 className="size-4" aria-hidden />
+                {t("submitForgot")}
+              </AuthSubmitButton>
             </form>
           </div>
         </div>
-
-        <AuthOverlay
-          brand={brand}
-          onSwitch={switchMode}
-          copy={{
-            promoHasAccountTitle: t("promoHasAccountTitle"),
-            promoHasAccountBody: t("promoHasAccountBody"),
-            promoLogin: t("promoLogin"),
-            promoForgotTitle: t("promoForgotTitle"),
-            promoForgotBody: t("promoForgotBody"),
-            promoForgot: t("promoForgot"),
-            promoNoAccountTitle: t("promoNoAccountTitle"),
-            promoNoAccountBody: t("promoNoAccountBody"),
-            promoRegister: t("promoRegister"),
-            promoHaveAccountTitle: t("promoHaveAccountTitle"),
-            promoHaveAccountBody: t("promoHaveAccountBody"),
-          }}
-        />
       </div>
     </div>
   );
