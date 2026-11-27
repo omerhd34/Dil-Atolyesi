@@ -23,7 +23,7 @@ export default async function ProgressHubPage({ params }: PageProps) {
   setRequestLocale(locale);
 
   return (
-    <WorkshopSectionShell>
+    <WorkshopSectionShell showStatsBar={false}>
       <ProgressSection />
     </WorkshopSectionShell>
   );

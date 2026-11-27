@@ -4,10 +4,6 @@ import { useTranslations } from "next-intl";
 import { useStudyCycleOpen } from "@/components/features/vocabulary/StartStudyTimerButton";
 import { CancelStudyTimerButton } from "@/components/features/vocabulary/CancelStudyTimerButton";
 import {
-  resolveWordTimerCycleSteps,
-  WordTimerCycleSteps,
-} from "@/components/features/dashboard/WordTimerCycleSteps";
-import {
   useStudiedTodayVocabularyWordsQuery,
   useVocabularyLearnQuotaQuery,
   useVocabularyQuizQuery,
@@ -45,13 +41,6 @@ export function WordTimerCardDetails({ className }: WordTimerCardDetailsProps) {
     !showBlockedHint &&
     !showQuizReady &&
     !isLocked;
-
-  const cycleSteps = resolveWordTimerCycleSteps({
-    pending,
-    cancellableCount,
-    dueCount,
-    isLocked,
-  });
 
   return (
     <div className={cn("mt-2 flex flex-col gap-3", className)}>
@@ -97,8 +86,6 @@ export function WordTimerCardDetails({ className }: WordTimerCardDetailsProps) {
           {t("wordTimerIdleHint")}
         </p>
       ) : null}
-
-      <WordTimerCycleSteps {...cycleSteps} />
     </div>
   );
 }

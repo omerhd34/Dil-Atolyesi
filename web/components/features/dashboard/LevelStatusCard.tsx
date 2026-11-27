@@ -11,9 +11,13 @@ import { cn } from "@/lib/utils";
 
 type LevelStatusCardProps = {
   className?: string;
+  showSkillBreakdown?: boolean;
 };
 
-export function LevelStatusCard({ className }: LevelStatusCardProps = {}) {
+export function LevelStatusCard({
+  className,
+  showSkillBreakdown = false,
+}: LevelStatusCardProps = {}) {
   const t = useTranslations("Dashboard");
   const { level, percent, complete, skills } = useLevelStatus();
 
@@ -47,10 +51,14 @@ export function LevelStatusCard({ className }: LevelStatusCardProps = {}) {
       <p className="mt-2 text-xs text-brand-600 dark:text-brand-400">
         {complete
           ? t("levelStatusComplete", { level })
-          : t("levelStatusHint", { level })}
+          : showSkillBreakdown
+            ? t("levelStatusHint")
+            : t("levelStatusOverviewHint")}
       </p>
 
-      <LevelStatusSkillBreakdown skills={skills} />
+      {showSkillBreakdown ? (
+        <LevelStatusSkillBreakdown skills={skills} />
+      ) : null}
     </article>
   );
 }

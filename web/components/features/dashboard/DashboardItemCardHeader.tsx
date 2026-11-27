@@ -1,8 +1,11 @@
+"use client";
+
 import type { ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { Lock } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
+import { SpeakEnglishTitleButton } from "@/components/ui/SpeakEnglishTitleButton";
 
 type DashboardItemCardHeaderProps = {
   indexBadge: ReactNode;
@@ -50,12 +53,25 @@ export function DashboardItemCardHeader({
   );
 }
 
-export function dashboardItemTitleSecondary(text: string) {
+type DashboardItemTitleSecondaryProps = {
+  text: string;
+};
+
+export function DashboardItemTitleSecondary({
+  text,
+}: DashboardItemTitleSecondaryProps) {
   return (
-    <CardDescription className="font-medium tracking-wide text-brand-500 italic dark:text-brand-400">
-      {text}
-    </CardDescription>
+    <div className="flex min-w-0 items-center gap-0.5">
+      <CardDescription className="min-w-0 font-medium tracking-wide text-brand-500 italic dark:text-brand-400">
+        {text}
+      </CardDescription>
+      <SpeakEnglishTitleButton text={text} />
+    </div>
   );
+}
+
+export function dashboardItemTitleSecondary(text: string) {
+  return <DashboardItemTitleSecondary text={text} />;
 }
 
 export function dashboardItemDescription(text: string) {

@@ -138,14 +138,7 @@ export function QuickContinueCard({ className }: QuickContinueCardProps = {}) {
     skillSpeaking: tNav("speaking"),
     skillTopics: tNav("topics"),
     skillVocabulary: tNav("vocabulary"),
-    skillHubInnerTitles: {
-      vocabulary: t("vocabularyTitle"),
-      topics: t("topicsTitle"),
-      reading: t("skillReadingTitle"),
-      listening: t("skillListeningTitle"),
-      writing: t("skillWritingTitle"),
-      speaking: t("skillSpeakingTitle"),
-    },
+    skillHubHomeTitle: t("quickContinueSkillHubHome"),
     fallbackTitle: t("quickContinueFallback"),
   };
 

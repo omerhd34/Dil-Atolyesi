@@ -4,6 +4,20 @@
   box-shadow: var(--glass-surface-shadow);
 }
 
+.workshop-card :is(span, button).reading-speak-word-active,
+.workshop-card :is(span, button)[data-reading-speak-word] {
+  display: inline;
+  border-radius: 0.125rem;
+  padding-inline: 0.125rem;
+  box-decoration-break: clone;
+  background: color-mix(in srgb, rgb(254 243 199) 90%, transparent) !important;
+}
+
+.dark .workshop-card :is(span, button).reading-speak-word-active,
+.dark .workshop-card :is(span, button)[data-reading-speak-word] {
+  background: color-mix(in srgb, rgb(251 191 36) 32%, transparent) !important;
+}
+
 .workshop-card--stat {
   @apply flex h-full flex-col pt-3;
 }
@@ -12,4 +26,50 @@
   @apply inline-flex items-center gap-2 text-base font-medium leading-snug tracking-tight;
   color: var(--account-text-dim, var(--brand-600));
   text-transform: none;
+}
+
+.progress-hero-card {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--glass) 92%, rgb(56 189 248 / 12%) 8%),
+    var(--glass)
+  );
+}
+
+.dark .progress-hero-card {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--glass) 88%, rgb(56 189 248 / 8%) 12%),
+    var(--glass)
+  );
+}
+
+.progress-cefr-roadmap {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.progress-cefr-roadmap > * {
+  min-width: 0;
+}
+
+.progress-focus-card {
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--glass) 90%, rgb(251 191 36 / 10%) 10%),
+    var(--glass)
+  );
+}
+
+.dark .progress-focus-card {
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--glass) 88%, rgb(251 191 36 / 6%) 12%),
+    var(--glass)
+  );
 }
