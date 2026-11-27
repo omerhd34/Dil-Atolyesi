@@ -1,4 +1,4 @@
-import type { ReadingLevel } from "@/data/readings/types";
+import type { ReadingLevel, ReadingWordGlossary } from "@/data/readings/types";
 
 export type SpeakingLevel = ReadingLevel;
 
@@ -74,6 +74,7 @@ export type SpeakingSection = {
   titleEn: string;
   summary?: string;
   summaryTr?: string;
+  glossary?: ReadingWordGlossary;
   model: SpeakingModelChat;
   practice: SpeakingExerciseBlock;
 };
