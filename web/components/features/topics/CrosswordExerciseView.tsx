@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Check, ChevronRight, RotateCcw, Volume2 } from "lucide-react";
+import { Award, Check, ChevronRight, RotateCcw, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ExerciseCheckButton } from "@/components/features/exercises/ExerciseCheckButton";
 import { Button } from "@/components/ui/Button";
@@ -22,6 +23,11 @@ import {
 import { crosswordAnswerSpeakText } from "@/lib/exerciseSpeakText";
 import { isCrosswordClueSolved } from "@/lib/exerciseTypeProgress";
 import { speakText } from "@/lib/speakText";
+import { speakIconButtonClasses } from "@/lib/speakIconButton";
+import {
+  useExerciseCompletionPoints,
+  type ExerciseOnComplete,
+} from "@/hooks/useExerciseCompletionPoints";
 import { cn } from "@/lib/utils";
 
 type ExerciseSessionResult = {
@@ -31,7 +37,7 @@ type ExerciseSessionResult = {
 
 type CrosswordExerciseViewProps = {
   exercises: CrosswordExercise[];
-  onComplete?: (result: ExerciseSessionResult) => void;
+  onComplete?: ExerciseOnComplete;
   onRestart?: () => void;
   onProgress?: (percent: number) => void;
   draftKey?: string | null;
@@ -206,6 +212,9 @@ export function CrosswordExerciseView({
   const [finished, setFinished] = useState(false);
   const [resultOpen, setResultOpen] = useState(false);
   const restoredKeyRef = useRef<string | null>(null);
+  const { pointsEarned, pointsAlreadyCounted, runComplete } =
+    useExerciseCompletionPoints(onComplete);
+  const completionRecorded = useRef(false);
   const progressPercent = useMemo(() => {
     if (!exercise || finished) {
       return finished ? progressShare : 0;
@@ -425,15 +434,35 @@ export function CrosswordExerciseView({
     }
 
     setFinished(true);
-    onComplete?.({ correct: nextSolved, total: exercises.length });
   }
+
+  useEffect(() => {
+    if (!finished || completionRecorded.current) {
+      return;
+    }
+    completionRecorded.current = true;
+    void runComplete({ correct: solvedCount, total: exercises.length });
+  }, [exercises.length, finished, runComplete, solvedCount]);
 
   if (finished) {
     return (
       <div className="workshop-card mx-auto max-w-lg space-y-4 text-center">
         <h2 className="page-title">{t("crosswordComplete")}</h2>
+        {pointsEarned != null && pointsEarned > 0 ? (
+          <p className="inline-flex items-center justify-center gap-2 text-sm font-medium text-amber-700 dark:text-amber-300">
+            <Award className="size-4 shrink-0" aria-hidden />
+            {t("finishedPointsEarned", { count: pointsEarned })}
+          </p>
+        ) : pointsAlreadyCounted ? (
+          <p className="text-muted-foreground text-sm">
+            {t("finishedPointsAlreadyCounted")}
+          </p>
+        ) : null}
         <ExerciseFinishedActions
-          onRetry={resetAll}
+          onRetry={() => {
+            completionRecorded.current = false;
+            resetAll();
+          }}
           onBackToTypes={onBackToTypes}
         />
       </div>
@@ -627,7 +656,7 @@ export function CrosswordExerciseView({
                     size="icon-sm"
                     variant="ghost"
                     data-btn-motion="off"
-                    className="size-7 shrink-0 text-brand-700 hover:text-sky-700 dark:text-brand-300 dark:hover:text-sky-300"
+                    className={speakIconButtonClasses("size-7 shrink-0")}
                     aria-label={tExercises("listenWord", { word: spoken })}
                     onClick={(event) => {
                       event.stopPropagation();

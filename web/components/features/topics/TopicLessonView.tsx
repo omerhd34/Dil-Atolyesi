@@ -7,6 +7,7 @@ import { LessonIntroBlock } from "@/components/features/topics/LessonIntroBlock"
 import { LessonParagraph } from "@/components/features/topics/LessonParagraph";
 import { LessonSectionHeader } from "@/components/features/topics/LessonSectionHeader";
 import { LessonSoundParts } from "@/components/features/topics/LessonSoundParts";
+import { LessonVisual } from "@/components/features/topics/LessonVisual";
 import type { TopicLesson, TopicLessonPart } from "@/data/grammar/types";
 
 type TopicLessonViewProps = {
@@ -22,6 +23,7 @@ function LessonBlock({
   examples,
   examplesTitle,
   parts,
+  visual,
   examplesLabel,
 }: {
   id: string;
@@ -31,6 +33,7 @@ function LessonBlock({
   examples?: TopicLessonPart["examples"];
   examplesTitle?: string;
   parts?: TopicLessonPart[];
+  visual?: TopicLessonPart["visual"];
   examplesLabel: string;
 }) {
   return (
@@ -56,6 +59,8 @@ function LessonBlock({
           ))}
         </div>
       ) : null}
+
+      {visual ? <LessonVisual visual={visual} /> : null}
 
       <SectionExamples
         section={{ examples, examplesTitle }}
@@ -112,6 +117,7 @@ export async function TopicLessonView({ lesson, intro }: TopicLessonViewProps) {
             examples={part.examples}
             examplesTitle={part.examplesTitle}
             parts={part.parts}
+            visual={part.visual}
             examplesLabel={examplesLabel}
           />
         ))

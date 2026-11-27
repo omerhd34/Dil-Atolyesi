@@ -32,6 +32,7 @@ import {
   SPEECH_PLAYBACK_CHANGED_EVENT,
   type SpeechPlaybackSnapshot,
 } from "@/lib/speakText";
+import { speakIconButtonClasses } from "@/lib/speakIconButton";
 import { cn } from "@/lib/utils";
 
 type LessonSpeakButtonProps = {
@@ -234,7 +235,7 @@ export function LessonSpeakButton({
         variant={speaking ? "secondary" : "ghost"}
         size={size}
         data-btn-motion="off"
-        className={className}
+        className={speakIconButtonClasses(className)}
         aria-pressed={speaking}
         aria-label={
           speaking ? t("listenStop") : canResume ? t("listenResume") : playLabel

@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { speakIconButtonClasses } from "@/lib/speakIconButton";
 import { speakText } from "@/lib/speakText";
 
 type ExerciseListenWordButtonProps = {
@@ -23,7 +24,10 @@ export function ExerciseListenWordButton({
       type="button"
       size="sm"
       variant="outline"
-      className="border-brand-400/50 text-brand-800 dark:border-brand-500/40 dark:text-brand-200"
+      data-btn-motion="off"
+      className={speakIconButtonClasses(
+        "border-brand-400/50 dark:border-brand-500/40",
+      )}
       aria-label={t("listenWord", { word: spoken })}
       onClick={(event) => {
         event.stopPropagation();

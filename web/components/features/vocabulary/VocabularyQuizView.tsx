@@ -14,6 +14,7 @@ import { ExerciseQuestionHeader } from "@/components/features/exercises/Exercise
 import { ExerciseResultDialog } from "@/components/features/topics/ExerciseResultDialog";
 import { useCountdown } from "@/hooks/useCountdown";
 import { formatDurationHms } from "@/lib/formatDuration";
+import { speakIconButtonClasses } from "@/lib/speakIconButton";
 import { speakText, stopSpeaking } from "@/lib/speakText";
 import {
   generateMixedQuizItems,
@@ -247,6 +248,8 @@ export function VocabularyQuizView() {
                 type="button"
                 variant="outline"
                 size="sm"
+                data-btn-motion="off"
+                className={speakIconButtonClasses()}
                 onClick={() => speakText(question.speakText!)}
               >
                 <Volume2 className="size-4" aria-hidden />

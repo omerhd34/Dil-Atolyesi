@@ -1,6 +1,7 @@
 "use client";
 
 import { LessonExampleCarousel } from "@/components/features/topics/LessonExampleCarousel";
+import { LessonVisual } from "@/components/features/topics/LessonVisual";
 import { LessonParagraph } from "@/components/features/topics/LessonParagraph";
 import { LessonSectionHeader } from "@/components/features/topics/LessonSectionHeader";
 import type { TopicLessonPart } from "@/data/grammar/types";
@@ -51,6 +52,8 @@ export function LessonPartBlock({
           ))}
         </div>
       ) : null}
+
+      {part.visual ? <LessonVisual visual={part.visual} /> : null}
 
       <SectionExamples section={part} defaultTitle={defaultExamplesTitle} />
     </div>

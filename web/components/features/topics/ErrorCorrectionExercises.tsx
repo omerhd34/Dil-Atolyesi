@@ -11,6 +11,10 @@ import { ExerciseResultDialog } from "@/components/features/topics/ExerciseResul
 import { ExerciseStepNav } from "@/components/features/topics/ExerciseStepNav";
 import { Button } from "@/components/ui/Button";
 import type { ErrorCorrectionExercise } from "@/data/grammar/types";
+import {
+  useExerciseCompletionPoints,
+  type ExerciseOnComplete,
+} from "@/hooks/useExerciseCompletionPoints";
 import { useExerciseNavigation } from "@/hooks/useExerciseNavigation";
 import {
   correctedSentence,
@@ -32,7 +36,7 @@ type ErrorCorrectionSlot = {
 
 type ErrorCorrectionExercisesProps = {
   exercises: ErrorCorrectionExercise[];
-  onComplete?: (result: ExerciseSessionResult) => void;
+  onComplete?: ExerciseOnComplete;
   onRestart?: () => void;
   initialIndex?: number;
   initialSlots?: ErrorCorrectionSlot[];
@@ -82,6 +86,9 @@ export function ErrorCorrectionExercises({
 }: ErrorCorrectionExercisesProps) {
   const t = useTranslations("Topic");
   const skipSessionSave = useRef(true);
+  const { pointsEarned, pointsAlreadyCounted, runComplete } =
+    useExerciseCompletionPoints(onComplete);
+  const completionRecorded = useRef(false);
   const {
     index,
     slots,
@@ -124,6 +131,22 @@ export function ErrorCorrectionExercises({
     });
   }, [exercises, index, onSessionChange, slots]);
 
+  useEffect(() => {
+    if (!finished || completionRecorded.current) {
+      return;
+    }
+    completionRecorded.current = true;
+    void runComplete({
+      correct: countCorrect(exercises, slots),
+      total: exercises.length,
+    });
+  }, [exercises, finished, runComplete, slots]);
+
+  function handleRetry() {
+    completionRecorded.current = false;
+    resetSession();
+  }
+
   if (exercises.length === 0 || !current) {
     return <p className="page-subtitle mt-0">{t("noExercisesForType")}</p>;
   }
@@ -157,8 +180,10 @@ export function ErrorCorrectionExercises({
       <ExerciseFinishedSection
         correct={correctCount}
         total={exercises.length}
-        onRetry={resetSession}
+        onRetry={handleRetry}
         onBackToTypes={onBackToTypes}
+        pointsEarned={pointsEarned}
+        pointsAlreadyCounted={pointsAlreadyCounted}
       />
     );
   }
@@ -173,12 +198,7 @@ export function ErrorCorrectionExercises({
   }
 
   function handleNext() {
-    handleAdvance((answeredSlots) => {
-      onComplete?.({
-        correct: countCorrect(exercises, answeredSlots),
-        total: exercises.length,
-      });
-    });
+    handleAdvance(() => undefined);
   }
 
   function handleTokenClick(tokenIndex: number) {

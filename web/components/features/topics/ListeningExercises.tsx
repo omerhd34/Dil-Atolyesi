@@ -21,6 +21,10 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { VerbFormSpeakButton } from "@/components/features/vocabulary/VerbFormSpeakButton";
 import type { ListeningExercise, VerbListeningRow } from "@/data/grammar/types";
+import {
+  useExerciseCompletionPoints,
+  type ExerciseOnComplete,
+} from "@/hooks/useExerciseCompletionPoints";
 import { useExerciseNavigation } from "@/hooks/useExerciseNavigation";
 import {
   SKY_OPTION_HOVER_CLASSES,
@@ -34,6 +38,7 @@ import {
   isListeningDictationInputLocked,
   LISTENING_DICTATION_MAX_ATTEMPTS,
 } from "@/lib/listeningDictation";
+import { speakIconButtonClasses } from "@/lib/speakIconButton";
 import { speakText, stopSpeaking } from "@/lib/speakText";
 import { cn } from "@/lib/utils";
 
@@ -44,7 +49,7 @@ type ExerciseSessionResult = {
 
 type ListeningExercisesProps = {
   exercises: ListeningExercise[];
-  onComplete?: (result: ExerciseSessionResult) => void;
+  onComplete?: ExerciseOnComplete;
   onRestart?: () => void;
   initialIndex?: number;
   initialSlots?: ListeningSlot[];
@@ -592,6 +597,9 @@ export function ListeningExercises({
   const t = useTranslations("Topic");
   const [batchSectionKey, setBatchSectionKey] = useState(0);
   const skipSessionSave = useRef(true);
+  const { pointsEarned, pointsAlreadyCounted, runComplete } =
+    useExerciseCompletionPoints(onComplete);
+  const completionRecorded = useRef(false);
   const seededSlots = useMemo(
     () => resolveListeningInitialSlots(exercises, initialSlots),
     [exercises, initialSlots],
@@ -647,6 +655,17 @@ export function ListeningExercises({
     });
   }, [exercises, index, onSessionChange, slots]);
 
+  useEffect(() => {
+    if (!finished || completionRecorded.current) {
+      return;
+    }
+    completionRecorded.current = true;
+    void runComplete({
+      correct: countCorrect(exercises, slots),
+      total: exercises.length,
+    });
+  }, [exercises, finished, runComplete, slots]);
+
   const exercise = exercises[index];
 
   useEffect(() => {
@@ -668,6 +687,7 @@ export function ListeningExercises({
 
   function resetAll() {
     stopSpeaking();
+    completionRecorded.current = false;
     resetSession();
   }
 
@@ -693,6 +713,8 @@ export function ListeningExercises({
         total={exercises.length}
         onRetry={resetAll}
         onBackToTypes={onBackToTypes}
+        pointsEarned={pointsEarned}
+        pointsAlreadyCounted={pointsAlreadyCounted}
       />
     );
   }
@@ -772,12 +794,7 @@ export function ListeningExercises({
   }
 
   function handleNext() {
-    handleAdvance((answered) => {
-      onComplete?.({
-        correct: countCorrect(exercises, answered),
-        total: exercises.length,
-      });
-    });
+    handleAdvance(() => undefined);
   }
 
   const verbBatch = isVerbBatchListening(exercise);
@@ -853,6 +870,8 @@ export function ListeningExercises({
                 type="button"
                 variant="outline"
                 size="sm"
+                data-btn-motion="off"
+                className={speakIconButtonClasses()}
                 onClick={() => speakText(exercise.speakText)}
               >
                 <Volume2 className="size-4" aria-hidden />

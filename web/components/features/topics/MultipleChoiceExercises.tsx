@@ -13,6 +13,10 @@ import { ExerciseResultDialog } from "@/components/features/topics/ExerciseResul
 import { ExerciseStepNav } from "@/components/features/topics/ExerciseStepNav";
 import { Button } from "@/components/ui/Button";
 import type { MultipleChoiceExercise } from "@/data/grammar/types";
+import {
+  useExerciseCompletionPoints,
+  type ExerciseOnComplete,
+} from "@/hooks/useExerciseCompletionPoints";
 import { useExerciseNavigation } from "@/hooks/useExerciseNavigation";
 import { multipleChoiceSpeakText } from "@/lib/exerciseSpeakText";
 import { cn } from "@/lib/utils";
@@ -29,7 +33,7 @@ type ChoiceSlot = {
 
 type MultipleChoiceExercisesProps = {
   exercises: MultipleChoiceExercise[];
-  onComplete?: (result: ExerciseSessionResult) => void;
+  onComplete?: ExerciseOnComplete;
   onRestart?: () => void;
   initialIndex?: number;
   initialSlots?: ChoiceSlot[];
@@ -76,6 +80,9 @@ export function MultipleChoiceExercises({
 }: MultipleChoiceExercisesProps) {
   const t = useTranslations("Topic");
   const skipSessionSave = useRef(true);
+  const { pointsEarned, pointsAlreadyCounted, runComplete } =
+    useExerciseCompletionPoints(onComplete);
+  const completionRecorded = useRef(false);
   const {
     index,
     slots,
@@ -117,6 +124,22 @@ export function MultipleChoiceExercises({
     });
   }, [exercises, index, onSessionChange, slots]);
 
+  useEffect(() => {
+    if (!finished || completionRecorded.current) {
+      return;
+    }
+    completionRecorded.current = true;
+    void runComplete({
+      correct: countCorrect(exercises, slots),
+      total: exercises.length,
+    });
+  }, [exercises, finished, runComplete, slots]);
+
+  function handleRetry() {
+    completionRecorded.current = false;
+    resetSession();
+  }
+
   if (exercises.length === 0 || !current) {
     return <p className="page-subtitle mt-0">{t("noExercisesForType")}</p>;
   }
@@ -145,8 +168,10 @@ export function MultipleChoiceExercises({
       <ExerciseFinishedSection
         correct={correctCount}
         total={exercises.length}
-        onRetry={resetSession}
+        onRetry={handleRetry}
         onBackToTypes={onBackToTypes}
+        pointsEarned={pointsEarned}
+        pointsAlreadyCounted={pointsAlreadyCounted}
       />
     );
   }
@@ -168,12 +193,7 @@ export function MultipleChoiceExercises({
   }
 
   function handleNext() {
-    handleAdvance((answered) => {
-      onComplete?.({
-        correct: countCorrect(exercises, answered),
-        total: exercises.length,
-      });
-    });
+    handleAdvance(() => undefined);
   }
 
   return (

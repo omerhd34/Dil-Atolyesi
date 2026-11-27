@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, RefreshCw } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { LessonBoldText } from "@/components/features/topics/LessonBoldText";
 import { LessonSpeakButton } from "@/components/features/topics/LessonSpeakButton";
+import { lessonTextToSpeech } from "@/lib/lessonSpeakText";
 import { Button } from "@/components/ui/Button";
 import {
   Carousel,
@@ -12,6 +14,7 @@ import {
   useCarousel,
 } from "@/components/ui/carousel";
 import type { TopicLessonExample } from "@/data/grammar/types";
+import { resolveLessonExampleTr } from "@/lib/grammar/lessonExampleTr";
 import { cn } from "@/lib/utils";
 
 type LessonExampleCarouselProps = {
@@ -23,11 +26,34 @@ function stopCardToggle(event: { stopPropagation: () => void }) {
   event.stopPropagation();
 }
 
-function spellingLabel(note?: string): string | null {
-  if (!note) {
+const PLACEHOLDER_NOTE = "grammarHeading";
+const LESSON_EN_MARKER = /\\[^\\]+\\/;
+
+function exampleEnDisplay(en: string, note?: string) {
+  if (LESSON_EN_MARKER.test(en)) {
+    return <LessonBoldText text={en} />;
+  }
+
+  const noteText = lessonExampleNote(note);
+  const spelling = spellingLabel(noteText ?? undefined);
+  const letters = spelling ? spellingLetters(spelling) : null;
+
+  return <SpelledWord word={en} letters={letters} />;
+}
+
+function lessonExampleNote(note?: string): string | null {
+  if (!note || note === PLACEHOLDER_NOTE) {
     return null;
   }
-  const match = note.match(/^(.+?)\s*→/);
+  return note;
+}
+
+function spellingLabel(note?: string): string | null {
+  const resolved = lessonExampleNote(note);
+  if (!resolved) {
+    return null;
+  }
+  const match = resolved.match(/^(.+?)\s*→/);
   const label = match?.[1]?.trim();
   return label ? label : null;
 }
@@ -95,13 +121,15 @@ function LessonFlipCard({ example }: { example: TopicLessonExample }) {
     return () => window.clearTimeout(timeout);
   }, [flipped]);
 
-  const hero = example.exampleEn ?? example.tr;
+  const spokenEn = lessonTextToSpeech(example.en);
+  const meaningTr = resolveLessonExampleTr(spokenEn, example.tr);
+  const hero = example.exampleEn ?? meaningTr;
   const caption = example.exampleTr;
-  const reading = example.exampleEn ? example.tr : null;
-  const spelling = spellingLabel(example.note);
-  const letters = spelling ? spellingLetters(spelling) : null;
-  const spoken =
-    example.exampleEn ?? (example.speakTr ? example.tr : example.en);
+  const reading = example.exampleEn ? meaningTr : null;
+  const noteText = lessonExampleNote(example.note);
+  const note2Text = lessonExampleNote(example.note2);
+  const note3Text = lessonExampleNote(example.note3);
+  const spoken = example.exampleEn ?? (example.speakTr ? meaningTr : spokenEn);
 
   function toggle() {
     setFlipped((value) => !value);
@@ -115,8 +143,8 @@ function LessonFlipCard({ example }: { example: TopicLessonExample }) {
         aria-pressed={flipped}
         aria-label={
           flipped
-            ? t("cardFlipBack", { text: example.en })
-            : t("cardFlip", { text: example.en })
+            ? t("cardFlipBack", { text: spokenEn })
+            : t("cardFlip", { text: spokenEn })
         }
         onClick={toggle}
         onKeyDown={(event) => {
@@ -137,20 +165,25 @@ function LessonFlipCard({ example }: { example: TopicLessonExample }) {
             onClick={stopCardToggle}
             onKeyDown={stopCardToggle}
           >
-            <LessonSpeakButton text={example.en} size="icon-sm" />
+            <LessonSpeakButton text={spokenEn} size="icon-sm" />
           </span>
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 px-3 text-center">
             <p className="font-display text-2xl leading-none font-semibold text-brand-950 dark:text-brand-100">
-              <SpelledWord word={example.en} letters={letters} />
+              {exampleEnDisplay(example.en, example.note)}
             </p>
             {reading ? (
               <p className="text-sm leading-snug font-medium text-sky-600 dark:text-sky-400">
                 {reading}
               </p>
             ) : null}
-            {example.note ? (
+            {noteText ? (
               <p className="text-sm leading-snug font-medium text-sky-600 dark:text-sky-400">
-                {example.note}
+                {noteText}
+              </p>
+            ) : null}
+            {note3Text ? (
+              <p className="text-sm leading-snug font-medium text-brand-600 dark:text-brand-300">
+                {note3Text}
               </p>
             ) : null}
           </div>
@@ -168,7 +201,11 @@ function LessonFlipCard({ example }: { example: TopicLessonExample }) {
           <p className="font-display text-2xl leading-none font-semibold text-brand-950 dark:text-brand-50">
             {hero}
           </p>
-          {caption ? (
+          {note2Text ? (
+            <p className="text-sm leading-snug font-medium text-brand-600 dark:text-brand-300">
+              {note2Text}
+            </p>
+          ) : caption ? (
             <p className="text-sm text-brand-600 dark:text-brand-300">
               {caption}
             </p>

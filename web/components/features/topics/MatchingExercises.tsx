@@ -13,6 +13,10 @@ import { RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import type { ListeningMatchingQuestion } from "@/data/listenings/types";
 import type { MatchingExercise } from "@/data/grammar/types";
+import {
+  useExerciseCompletionPoints,
+  type ExerciseOnComplete,
+} from "@/hooks/useExerciseCompletionPoints";
 import { useExerciseNavigation } from "@/hooks/useExerciseNavigation";
 
 type ExerciseSessionResult = {
@@ -30,7 +34,7 @@ type MatchingSlot = {
 
 type MatchingExercisesProps = {
   exercises: MatchingExercise[];
-  onComplete?: (result: ExerciseSessionResult) => void;
+  onComplete?: ExerciseOnComplete;
   onRestart?: () => void;
   initialIndex?: number;
   initialSlots?: MatchingSlot[];
@@ -107,6 +111,9 @@ export function MatchingExercises({
 }: MatchingExercisesProps) {
   const t = useTranslations("Topic");
   const skipSessionSave = useRef(true);
+  const { pointsEarned, pointsAlreadyCounted, runComplete } =
+    useExerciseCompletionPoints(onComplete);
+  const completionRecorded = useRef(false);
 
   const {
     index,
@@ -148,14 +155,15 @@ export function MatchingExercises({
   }, [exercises, index, onSessionChange, slots]);
 
   useEffect(() => {
-    if (!finished) {
+    if (!finished || completionRecorded.current) {
       return;
     }
-    onComplete?.({
+    completionRecorded.current = true;
+    void runComplete({
       correct: countCorrect(exercises, slots),
       total: exercises.length,
     });
-  }, [exercises, finished, onComplete, slots]);
+  }, [exercises, finished, runComplete, slots]);
 
   const matchingSessionDone = isLast && allChecked;
 
@@ -168,12 +176,7 @@ export function MatchingExercises({
   const continueLabel = t(nextLabelKey);
 
   function finishOrAdvance() {
-    handleAdvance((answeredSlots) => {
-      onComplete?.({
-        correct: countCorrect(exercises, answeredSlots),
-        total: exercises.length,
-      });
-    });
+    handleAdvance(() => undefined);
   }
 
   function handleNext() {
@@ -243,6 +246,7 @@ export function MatchingExercises({
                     className="gap-2"
                     onClick={() => {
                       onRestart?.();
+                      completionRecorded.current = false;
                       resetSession();
                     }}
                   >

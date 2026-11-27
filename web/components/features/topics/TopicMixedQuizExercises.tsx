@@ -25,6 +25,10 @@ import type {
 } from "@/data/grammar/types";
 import { speakText, stopSpeaking } from "@/lib/speakText";
 import type { ListeningMatchingQuestion } from "@/data/listenings/types";
+import {
+  useExerciseCompletionPoints,
+  type ExerciseOnComplete,
+} from "@/hooks/useExerciseCompletionPoints";
 import { useExerciseNavigation } from "@/hooks/useExerciseNavigation";
 import {
   fillBlankSpeakText,
@@ -59,7 +63,7 @@ type MixedSlot = {
 
 type TopicMixedQuizExercisesProps = {
   exercises: (TopicQuizExercise | MatchingExercise)[];
-  onComplete?: (result: ExerciseSessionResult) => void;
+  onComplete?: ExerciseOnComplete;
   onRestart?: () => void;
   initialIndex?: number;
   initialSlots?: MixedSlot[];
@@ -190,6 +194,9 @@ export function TopicMixedQuizExercises({
 }: TopicMixedQuizExercisesProps) {
   const t = useTranslations("Topic");
   const skipSessionSave = useRef(true);
+  const { pointsEarned, pointsAlreadyCounted, runComplete } =
+    useExerciseCompletionPoints(onComplete);
+  const completionRecorded = useRef(false);
   const {
     index,
     slots,
@@ -227,6 +234,22 @@ export function TopicMixedQuizExercises({
       slots,
     });
   }, [exercises, index, onSessionChange, slots]);
+
+  useEffect(() => {
+    if (!finished || completionRecorded.current) {
+      return;
+    }
+    completionRecorded.current = true;
+    void runComplete({
+      correct: countCorrect(exercises, slots),
+      total: exercises.length,
+    });
+  }, [exercises, finished, runComplete, slots]);
+
+  function handleRetry() {
+    completionRecorded.current = false;
+    resetSession();
+  }
 
   useEffect(() => {
     return () => stopSpeaking();
@@ -271,18 +294,15 @@ export function TopicMixedQuizExercises({
       <ExerciseFinishedSection
         correct={correctCount}
         total={exercises.length}
-        onRetry={resetSession}
+        onRetry={handleRetry}
+        pointsEarned={pointsEarned}
+        pointsAlreadyCounted={pointsAlreadyCounted}
       />
     );
   }
 
   function handleNext() {
-    handleAdvance((answeredSlots) => {
-      onComplete?.({
-        correct: countCorrect(exercises, answeredSlots),
-        total: exercises.length,
-      });
-    });
+    handleAdvance(() => undefined);
   }
 
   if (exercise.type === "matching") {

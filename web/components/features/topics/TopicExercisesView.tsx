@@ -40,11 +40,20 @@ import {
   type LevelExamPart,
 } from "@/lib/topicExam";
 import {
+  VOCABULARY_EXERCISE_PROGRESS_CHANGED_EVENT,
+  getCompletedVocabularyExerciseTypes,
+  markVocabularyExerciseTypeCompleted,
+  unmarkVocabularyExerciseTypeCompleted,
+} from "@/lib/vocabularyExerciseProgressStorage";
+import { parseVocabularyCategoryIdFromProgressKey } from "@/lib/vocabularySectionProgress";
+import {
   TOPIC_PROGRESS_CHANGED_EVENT,
+  completeTopicExerciseTypeForPoints,
   getCompletedTopicExerciseTypes,
   markTopicExerciseTypeCompleted,
   unmarkTopicExerciseTypeCompleted,
 } from "@/lib/topicProgressStorage";
+import type { ExerciseOnComplete } from "@/hooks/useExerciseCompletionPoints";
 import {
   EXERCISE_DRAFT_EVENT,
   clearCrosswordDraft,
@@ -286,14 +295,47 @@ export function TopicExercisesView({
     setLevelExamPassed(false);
   }, [isExam, level]);
 
+  const vocabularyCategoryId = useMemo(
+    () =>
+      progressKey
+        ? parseVocabularyCategoryIdFromProgressKey(progressKey)
+        : null,
+    [progressKey],
+  );
+
   useEffect(() => {
-    if (!topicId) {
+    if (vocabularyCategoryId !== null) {
+      const categoryId = vocabularyCategoryId;
+
+      function refresh() {
+        setCompletedTypes(getCompletedVocabularyExerciseTypes(categoryId));
+      }
+
+      refresh();
+      window.addEventListener(
+        VOCABULARY_EXERCISE_PROGRESS_CHANGED_EVENT,
+        refresh,
+      );
+      window.addEventListener("storage", refresh);
+
+      return () => {
+        window.removeEventListener(
+          VOCABULARY_EXERCISE_PROGRESS_CHANGED_EVENT,
+          refresh,
+        );
+        window.removeEventListener("storage", refresh);
+      };
+    }
+
+    if (topicId === undefined) {
       setCompletedTypes([]);
       return;
     }
 
+    const grammarTopicId = topicId;
+
     function refresh() {
-      setCompletedTypes(getCompletedTopicExerciseTypes(topicId!));
+      setCompletedTypes(getCompletedTopicExerciseTypes(grammarTopicId));
     }
 
     refresh();
@@ -304,7 +346,7 @@ export function TopicExercisesView({
       window.removeEventListener(TOPIC_PROGRESS_CHANGED_EVENT, refresh);
       window.removeEventListener("storage", refresh);
     };
-  }, [topicId]);
+  }, [topicId, vocabularyCategoryId]);
 
   useEffect(() => {
     setProgressReady(true);
@@ -706,11 +748,21 @@ export function TopicExercisesView({
     setLevelPartOutcome(null);
   }
 
-  function handleSessionComplete() {
-    if (topicId && selectedType) {
-      markTopicExerciseTypeCompleted(topicId, selectedType);
+  const handleSessionComplete = useCallback<ExerciseOnComplete>(async () => {
+    if (!selectedType) {
+      return {};
     }
-  }
+    if (topicId) {
+      return completeTopicExerciseTypeForPoints(topicId, selectedType);
+    }
+    if (vocabularyCategoryId) {
+      return markVocabularyExerciseTypeCompleted(
+        vocabularyCategoryId,
+        selectedType,
+      );
+    }
+    return {};
+  }, [selectedType, topicId, vocabularyCategoryId]);
 
   const orderedMixedPractice = useMemo(() => {
     if (!practiceMixed || mixedPracticeExercises.length === 0) {
@@ -862,6 +914,9 @@ export function TopicExercisesView({
   function handleSessionRestart() {
     if (topicId && selectedType) {
       unmarkTopicExerciseTypeCompleted(topicId, selectedType);
+    }
+    if (vocabularyCategoryId && selectedType) {
+      unmarkVocabularyExerciseTypeCompleted(vocabularyCategoryId, selectedType);
     }
     onExerciseSessionStart?.(selectedType ?? undefined);
     if (selectedType === "mixed" && practiceMixed) {

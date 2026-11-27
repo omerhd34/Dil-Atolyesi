@@ -26,6 +26,7 @@ import {
   getVocabularyWordElementId,
   scrollToVocabularyWord,
 } from "@/lib/vocabulary/similarWords";
+import { speakIconButtonClassName } from "@/lib/speakIconButton";
 import { cn } from "@/lib/utils";
 
 type VocabularyWordCardProps = {
@@ -46,8 +47,10 @@ type VocabularyWordCardProps = {
 const lockedButtonClassName =
   "cursor-not-allowed border-brand-200 bg-brand-100/80 text-brand-400 opacity-100 hover:bg-brand-100/80 hover:text-brand-400 dark:border-brand-800 dark:bg-brand-900/70 dark:text-brand-500 dark:hover:bg-brand-900/70";
 
-const vocabSpeakButtonClassName =
-  "vocabulary-speak-button inline-flex shrink-0 cursor-pointer items-center justify-center border-0 p-0 leading-none [&_svg]:block [&_svg]:shrink-0 [&_svg]:text-current";
+const vocabSpeakButtonClassName = cn(
+  "vocabulary-speak-button inline-flex shrink-0 cursor-pointer items-center justify-center border-0 p-0 leading-none [&_svg]:block [&_svg]:shrink-0 [&_svg]:text-current",
+  speakIconButtonClassName,
+);
 
 type VocabularySpeakIconButtonProps = {
   className?: string;
