@@ -2,6 +2,7 @@
 
 import type { ReadingLevel, ReadingParagraph } from "@/data/readings/types";
 import { ReadingClickableEnglishText } from "@/components/features/reading/ReadingClickableEnglishText";
+import { readingParagraphBlockKey } from "@/lib/reading/readingSpeakHighlight";
 import { cn } from "@/lib/utils";
 
 type ReadingParagraphTextProps = {
@@ -9,6 +10,8 @@ type ReadingParagraphTextProps = {
   showTranslation: boolean;
   readingLevel: ReadingLevel;
   mergedGlossary?: Record<string, string>;
+  speakWordOffset?: number;
+  activeSpeakWordIndex?: number | null;
 };
 
 export function ReadingParagraphText({
@@ -16,8 +19,10 @@ export function ReadingParagraphText({
   showTranslation,
   readingLevel,
   mergedGlossary,
+  speakWordOffset,
+  activeSpeakWordIndex,
 }: ReadingParagraphTextProps) {
-  const paragraphKey = `p-${paragraph.number ?? 0}-${paragraph.en.slice(0, 16)}`;
+  const paragraphKey = readingParagraphBlockKey(paragraph);
   const glossary = {
     ...mergedGlossary,
     ...paragraph.glossary,
@@ -32,6 +37,8 @@ export function ReadingParagraphText({
           readingLevel={readingLevel}
           glossary={glossary}
           paragraphKey={paragraphKey}
+          speakWordOffset={speakWordOffset}
+          activeSpeakWordIndex={activeSpeakWordIndex}
         />
       </p>
       {showTranslation ? (

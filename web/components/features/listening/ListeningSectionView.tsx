@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { ListeningSection } from "@/data/listenings/types";
 import { ListeningAudioView } from "@/components/features/listening/ListeningAudioView";
 import { ListeningExercisesView } from "@/components/features/listening/ListeningExercisesView";
+import { useListeningSectionSpeak } from "@/hooks/useListeningSectionSpeak";
 import {
   LISTENING_SECTION_ANCHORS,
   listeningSectionHeadingId,
@@ -18,6 +19,9 @@ type ListeningSectionViewProps = {
 
 export function ListeningSectionView({ section }: ListeningSectionViewProps) {
   const t = useTranslations("Listening");
+  const speak = useListeningSectionSpeak(section);
+  const [showTranscript, setShowTranscript] = useState(false);
+  const [showTranslation, setShowTranslation] = useState(false);
 
   useEffect(() => {
     const tab = tabFromListeningLocationHash();
@@ -39,7 +43,14 @@ export function ListeningSectionView({ section }: ListeningSectionViewProps) {
         <h2 id={listeningSectionHeadingId("audio")} className="sr-only">
           {t("tabAudio")}
         </h2>
-        <ListeningAudioView section={section} />
+        <ListeningAudioView
+          section={section}
+          speak={speak}
+          showTranscript={showTranscript}
+          onShowTranscriptChange={setShowTranscript}
+          showTranslation={showTranslation}
+          onShowTranslationChange={setShowTranslation}
+        />
       </section>
 
       <section
@@ -53,7 +64,7 @@ export function ListeningSectionView({ section }: ListeningSectionViewProps) {
         >
           {t("tabPractice")}
         </h2>
-        <ListeningExercisesView section={section} />
+        <ListeningExercisesView section={section} speak={speak} />
       </section>
     </div>
   );

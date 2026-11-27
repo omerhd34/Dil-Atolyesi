@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { speakIconButtonClasses } from "@/lib/speakIconButton";
 
 type ListeningPlayButtonProps = {
   playId: string;
@@ -23,6 +24,8 @@ export function ListeningPlayButton({
       type="button"
       size="sm"
       variant={isActive ? "default" : "outline"}
+      data-btn-motion="off"
+      className={speakIconButtonClasses()}
       onClick={() => onPlay(playId)}
     >
       {isActive ? (

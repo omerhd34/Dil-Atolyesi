@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Check, Languages, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -15,6 +15,11 @@ import {
   markWritingModelTranslationShown,
 } from "@/lib/writingProgressStorage";
 import { WritingChatThread } from "@/components/features/writing/WritingChatThread";
+import {
+  buildChatMessagesSpeakLayout,
+  isSpeechWordBoundaryEvent,
+  wordIndexAtChar,
+} from "@/lib/reading/readingSpeakHighlight";
 import { speakDialogue, stopSpeaking } from "@/lib/speakText";
 
 type WritingModelViewProps = {
@@ -25,7 +30,20 @@ export function WritingModelView({ section }: WritingModelViewProps) {
   const t = useTranslations("Writing");
   const [showTranslation, setShowTranslation] = useState(false);
   const [speaking, setSpeaking] = useState(false);
+  const [activeSpeakWordIndex, setActiveSpeakWordIndex] = useState<
+    number | null
+  >(null);
   const aliveRef = useRef(true);
+  const speakLayout = useMemo(
+    () =>
+      buildChatMessagesSpeakLayout(
+        section.model.messages.map((message) => ({
+          id: message.id,
+          text: message.text,
+        })),
+      ),
+    [section.model.messages],
+  );
   const { modelViewed, modelTranslationShown, modelListened } =
     useWritingSectionStatus(section.id);
   const summaryEn = getDistinctSecondaryTitle(
@@ -49,24 +67,41 @@ export function WritingModelView({ section }: WritingModelViewProps) {
     }
   }
 
+  function stopSpeechWordHighlight() {
+    setActiveSpeakWordIndex(null);
+  }
+
   function handleSpeakToggle() {
     if (speaking) {
       stopSpeaking();
       setSpeaking(false);
+      stopSpeechWordHighlight();
       return;
     }
 
     setSpeaking(true);
+    stopSpeechWordHighlight();
     const dialogueLines = section.model.messages.map((message) => ({
       text: message.text,
       gender: message.sender === "me" ? ("female" as const) : ("male" as const),
     }));
     speakDialogue(dialogueLines, "en-US", undefined, {
+      wordBoundarySourceText: speakLayout.fullText,
+      onSpeechBoundary: ({ charIndex, name }) => {
+        if (!aliveRef.current || !isSpeechWordBoundaryEvent(name)) {
+          return;
+        }
+        const wordIndex = wordIndexAtChar(speakLayout.wordSpans, charIndex);
+        if (wordIndex !== null) {
+          setActiveSpeakWordIndex(wordIndex);
+        }
+      },
       onEnd: () => {
         if (!aliveRef.current) {
           return;
         }
         setSpeaking(false);
+        stopSpeechWordHighlight();
         if (!modelListened) {
           const wasComplete = isWritingSectionComplete(section.id);
           markWritingModelListened(section.id);
@@ -83,6 +118,7 @@ export function WritingModelView({ section }: WritingModelViewProps) {
       onCancel: () => {
         if (aliveRef.current) {
           setSpeaking(false);
+          stopSpeechWordHighlight();
         }
       },
     });
@@ -144,6 +180,9 @@ export function WritingModelView({ section }: WritingModelViewProps) {
       <WritingChatThread
         model={section.model}
         showTranslation={showTranslation}
+        level={section.level}
+        glossary={section.glossary}
+        dialogueSpeakWordIndex={speaking ? activeSpeakWordIndex : null}
       />
     </div>
   );

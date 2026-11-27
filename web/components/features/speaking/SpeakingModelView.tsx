@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Check, Languages, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -16,6 +16,11 @@ import {
   isSpeakingSectionComplete,
   markSpeakingModelTranslationShown,
 } from "@/lib/speakingProgressStorage";
+import {
+  buildChatMessagesSpeakLayout,
+  isSpeechWordBoundaryEvent,
+  wordIndexAtChar,
+} from "@/lib/reading/readingSpeakHighlight";
 import { speakDialogue, stopSpeaking } from "@/lib/speakText";
 
 type SpeakingModelViewProps = {
@@ -26,7 +31,20 @@ export function SpeakingModelView({ section }: SpeakingModelViewProps) {
   const t = useTranslations("Speaking");
   const [showTranslation, setShowTranslation] = useState(false);
   const [speaking, setSpeaking] = useState(false);
+  const [activeSpeakWordIndex, setActiveSpeakWordIndex] = useState<
+    number | null
+  >(null);
   const aliveRef = useRef(true);
+  const speakLayout = useMemo(
+    () =>
+      buildChatMessagesSpeakLayout(
+        section.model.messages.map((message) => ({
+          id: message.id,
+          text: message.text,
+        })),
+      ),
+    [section.model.messages],
+  );
   const dialogueRef = useRef<SpeakingChatThreadHandle>(null);
   const { modelViewed, modelTranslationShown } = useSpeakingSectionStatus(
     section.id,
@@ -63,27 +81,45 @@ export function SpeakingModelView({ section }: SpeakingModelViewProps) {
     }
   }
 
+  function stopSpeechWordHighlight() {
+    setActiveSpeakWordIndex(null);
+  }
+
   function handleSpeakToggle() {
     if (speaking) {
       stopSpeaking();
       setSpeaking(false);
+      stopSpeechWordHighlight();
       return;
     }
 
     setSpeaking(true);
+    stopSpeechWordHighlight();
     const dialogueLines = section.model.messages.map((message) => ({
       text: message.text,
       gender: message.sender === "me" ? ("female" as const) : ("male" as const),
     }));
     speakDialogue(dialogueLines, "en-US", undefined, {
+      wordBoundarySourceText: speakLayout.fullText,
+      onSpeechBoundary: ({ charIndex, name }) => {
+        if (!aliveRef.current || !isSpeechWordBoundaryEvent(name)) {
+          return;
+        }
+        const wordIndex = wordIndexAtChar(speakLayout.wordSpans, charIndex);
+        if (wordIndex !== null) {
+          setActiveSpeakWordIndex(wordIndex);
+        }
+      },
       onEnd: () => {
         if (aliveRef.current) {
           setSpeaking(false);
+          stopSpeechWordHighlight();
         }
       },
       onCancel: () => {
         if (aliveRef.current) {
           setSpeaking(false);
+          stopSpeechWordHighlight();
         }
       },
     });
@@ -128,6 +164,7 @@ export function SpeakingModelView({ section }: SpeakingModelViewProps) {
             onClick={() => {
               stopSpeaking();
               setSpeaking(false);
+              stopSpeechWordHighlight();
               dialogueRef.current?.resetDialogue();
             }}
           >
@@ -147,6 +184,9 @@ export function SpeakingModelView({ section }: SpeakingModelViewProps) {
         sectionId={section.id}
         model={section.model}
         showTranslation={showTranslation}
+        level={section.level}
+        glossary={section.glossary}
+        dialogueSpeakWordIndex={speaking ? activeSpeakWordIndex : null}
         onAllLinesSpoken={handleAllLinesSpoken}
       />
     </div>

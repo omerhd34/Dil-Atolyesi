@@ -29,8 +29,8 @@ import type {
   ListeningExerciseBlock,
   ListeningClipQuestion,
 } from "@/data/listenings/types";
+import type { ListeningSectionSpeak } from "@/hooks/useListeningSectionSpeak";
 import { scrollToListeningSection } from "@/lib/listeningSectionTab";
-import { speakText, stopSpeaking } from "@/lib/speakText";
 import { EXAM_PASS_PERCENT } from "@/lib/examPassThreshold";
 import { cn } from "@/lib/utils";
 
@@ -42,7 +42,7 @@ type TrueFalseSlot = { answer: boolean | null; revealed: boolean };
 
 type ListeningPracticeQuizProps = {
   block: ListeningExerciseBlock;
-  recordingText: string;
+  speak: ListeningSectionSpeak;
   listened?: boolean;
   onComplete?: (passed: boolean, percent: number) => void;
 };
@@ -68,7 +68,7 @@ function totalGradableItems(block: ListeningExerciseBlock): number {
 
 export function ListeningPracticeQuiz({
   block,
-  recordingText,
+  speak,
   listened = false,
   onComplete,
 }: ListeningPracticeQuizProps) {
@@ -94,13 +94,12 @@ export function ListeningPracticeQuiz({
 
   function handlePlayToggle(playId: string) {
     if (activePlayId === playId) {
-      stopSpeaking();
+      speak.stopPlayback();
       setActivePlayId(null);
       return;
     }
-    stopSpeaking();
     setActivePlayId(playId);
-    speakText(recordingText, "en-US", undefined, {
+    speak.playFullRecording("practice", {
       onEnd: () => {
         if (aliveRef.current) {
           setActivePlayId(null);
@@ -118,9 +117,14 @@ export function ListeningPracticeQuiz({
     aliveRef.current = true;
     return () => {
       aliveRef.current = false;
-      stopSpeaking();
     };
   }, []);
+
+  useEffect(() => {
+    if (!speak.speaking) {
+      setActivePlayId(null);
+    }
+  }, [speak.speaking]);
 
   const { correct, total, percent, allDone } = useMemo(() => {
     const totalItems = totalGradableItems(block);
@@ -194,7 +198,7 @@ export function ListeningPracticeQuiz({
     setClipSlots(listenChoice.map(() => null));
     setTfSlots(trueFalse.map(() => null));
     setMatchScores(matching.map(() => null));
-    stopSpeaking();
+    speak.stopPlayback();
     setActivePlayId(null);
   }
 

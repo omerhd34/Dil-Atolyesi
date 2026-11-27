@@ -2,20 +2,22 @@
 
 import { ListeningPracticeQuiz } from "@/components/features/listening/ListeningPracticeQuiz";
 import type { ListeningSection } from "@/data/listenings/types";
+import type { ListeningSectionSpeak } from "@/hooks/useListeningSectionSpeak";
 import { useListeningSectionStatus } from "@/hooks/useListeningProgress";
 import { tryMarkListeningLevelPassed } from "@/lib/listeningAccess";
-import { getListeningSpeakText } from "@/lib/listeningContent";
 import { markListeningPracticeDone } from "@/lib/listeningProgressStorage";
 import { EXAM_PASS_PERCENT } from "@/lib/examPassThreshold";
 
 type ListeningExercisesViewProps = {
   section: ListeningSection;
+  speak: ListeningSectionSpeak;
 };
 
 const PRACTICE_PASS_PERCENT = EXAM_PASS_PERCENT;
 
 export function ListeningExercisesView({
   section,
+  speak,
 }: ListeningExercisesViewProps) {
   const { listened } = useListeningSectionStatus(section.id);
 
@@ -30,8 +32,8 @@ export function ListeningExercisesView({
   return (
     <ListeningPracticeQuiz
       block={section.practice}
-      recordingText={getListeningSpeakText(section)}
       listened={listened}
+      speak={speak}
       onComplete={handleComplete}
     />
   );

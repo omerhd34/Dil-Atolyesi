@@ -9,7 +9,10 @@ import {
 } from "@/components/ui/popover";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import type { CSSProperties } from "react";
 import type { ReadingWordLookupResult } from "@/lib/reading/readingWordLookup";
+import { READING_WORD_SURFACE_HIGHLIGHT_CLASS } from "@/lib/reading/readingSpeakHighlight";
+import { speakIconButtonClasses } from "@/lib/speakIconButton";
 import { speakText } from "@/lib/speakText";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +24,8 @@ type ReadingWordLookupPopoverProps = {
   onOpenChange: (open: boolean) => void;
   emphasize?: boolean;
   wordClassName?: string;
+  speakHighlight?: boolean;
+  speakHighlightStyle?: CSSProperties;
 };
 
 export function ReadingWordLookupPopover({
@@ -31,6 +36,8 @@ export function ReadingWordLookupPopover({
   onOpenChange,
   emphasize = false,
   wordClassName,
+  speakHighlight = false,
+  speakHighlightStyle,
 }: ReadingWordLookupPopoverProps) {
   const t = useTranslations("Reading");
   const display = lookup?.display ?? surface;
@@ -47,20 +54,30 @@ export function ReadingWordLookupPopover({
     }
   }
 
+  function handleOpenChange(nextOpen: boolean) {
+    onOpenChange(nextOpen);
+    if (nextOpen) {
+      speakText(display, "en-US");
+    }
+  }
+
   return (
-    <Popover open={open} onOpenChange={onOpenChange}>
+    <Popover open={open} onOpenChange={handleOpenChange}>
       <PopoverTrigger
         type="button"
         id={tokenId}
         className={cn(
-          "cursor-pointer rounded-sm px-0.5 transition-colors",
+          "cursor-pointer rounded-sm border-0 bg-transparent px-0.5 shadow-none transition-colors",
           "hover:bg-amber-100/90 dark:hover:bg-amber-400/15",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50",
-          open && "bg-amber-100 dark:bg-amber-400/20",
+          speakHighlight && READING_WORD_SURFACE_HIGHLIGHT_CLASS,
+          open && !speakHighlight && "bg-amber-100 dark:bg-amber-400/20",
           emphasize && "font-semibold text-brand-950 dark:text-brand-50",
           wordClassName,
         )}
         aria-label={t("wordTapAria", { word: display })}
+        data-reading-speak-word={speakHighlight ? "" : undefined}
+        style={speakHighlight ? speakHighlightStyle : undefined}
       >
         {surface}
       </PopoverTrigger>
@@ -91,6 +108,8 @@ export function ReadingWordLookupPopover({
               type="button"
               size="icon-sm"
               variant="ghost"
+              data-btn-motion="off"
+              className={speakIconButtonClasses()}
               aria-label={t("listenWord")}
               onClick={() => speakText(display)}
             >

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import {
   Check,
@@ -12,32 +12,41 @@ import {
 } from "lucide-react";
 import { ReadingParagraphText } from "@/components/features/reading/ReadingParagraphText";
 import { Button } from "@/components/ui/Button";
+import { SpeakEnglishTitleButton } from "@/components/ui/SpeakEnglishTitleButton";
 import { toast } from "@/components/ui/toast";
 import type { ListeningSection } from "@/data/listenings/types";
+import type { ListeningSectionSpeak } from "@/hooks/useListeningSectionSpeak";
 import { useListeningSectionStatus } from "@/hooks/useListeningProgress";
 import { tryMarkListeningLevelPassed } from "@/lib/listeningAccess";
-import { getListeningSpeakText } from "@/lib/listeningContent";
 import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
 import { mergeReadingGlossaries } from "@/lib/reading/mergeReadingGlossaries";
 import {
   isListeningSectionComplete,
   markListeningListened,
 } from "@/lib/listeningProgressStorage";
-import { speakText, stopSpeaking } from "@/lib/speakText";
 import { cn } from "@/lib/utils";
 
 type ListeningAudioViewProps = {
   section: ListeningSection;
+  speak: ListeningSectionSpeak;
+  showTranscript: boolean;
+  onShowTranscriptChange: (value: boolean) => void;
+  showTranslation: boolean;
+  onShowTranslationChange: (value: boolean) => void;
 };
 
-export function ListeningAudioView({ section }: ListeningAudioViewProps) {
+export function ListeningAudioView({
+  section,
+  speak,
+  showTranscript,
+  onShowTranscriptChange,
+  showTranslation,
+  onShowTranslationChange,
+}: ListeningAudioViewProps) {
   const t = useTranslations("Listening");
-  const [showTranscript, setShowTranscript] = useState(false);
-  const [showTranslation, setShowTranslation] = useState(false);
-  const [speaking, setSpeaking] = useState(false);
   const aliveRef = useRef(true);
   const { listened } = useListeningSectionStatus(section.id);
-  const speakTextFull = getListeningSpeakText(section);
+  const mainSpeaking = speak.speaking && speak.playbackSource === "audio";
   const mergedGlossary = mergeReadingGlossaries(
     section.glossary,
     section.body.glossary,
@@ -47,24 +56,20 @@ export function ListeningAudioView({ section }: ListeningAudioViewProps) {
     aliveRef.current = true;
     return () => {
       aliveRef.current = false;
-      stopSpeaking();
     };
   }, []);
 
   function handleListenClick() {
-    if (speaking) {
-      stopSpeaking();
-      setSpeaking(false);
+    if (mainSpeaking) {
+      speak.stopPlayback();
       return;
     }
 
-    setSpeaking(true);
-    speakText(speakTextFull, "en-US", undefined, {
+    speak.playFullRecording("audio", {
       onEnd: () => {
         if (!aliveRef.current) {
           return;
         }
-        setSpeaking(false);
         const wasComplete = isListeningSectionComplete(section.id);
         markListeningListened(section.id);
         tryMarkListeningLevelPassed(section.level);
@@ -76,34 +81,36 @@ export function ListeningAudioView({ section }: ListeningAudioViewProps) {
           });
         }
       },
-      onCancel: () => {
-        if (aliveRef.current) {
-          setSpeaking(false);
-        }
-      },
     });
   }
 
   const titleEn = getDistinctSecondaryTitle(section.title, section.titleEn);
+  const displayTitleEn = titleEn ?? section.titleEn;
 
   return (
     <div className="workshop-card space-y-6">
       <div
         className={cn(
           "flex flex-col items-center gap-4 rounded-2xl border border-border bg-background/40 px-6 py-10 text-center",
-          speaking && "ring-2 ring-sky-400/50",
+          mainSpeaking && "ring-2 ring-sky-400/50",
         )}
       >
         <span
           className={cn(
             "inline-flex size-16 items-center justify-center rounded-full bg-sky-500/15 text-sky-600 dark:text-sky-300",
-            speaking && "motion-safe:animate-pulse",
+            mainSpeaking && "motion-safe:animate-pulse",
           )}
         >
           <Headphones className="size-8" aria-hidden />
         </span>
         <div className="space-y-1">
-          <h2 className="section-title">{titleEn ?? section.titleEn}</h2>
+          <div className="flex min-w-0 items-center justify-center gap-1">
+            <h2 className="section-title min-w-0">{displayTitleEn}</h2>
+            <SpeakEnglishTitleButton
+              text={displayTitleEn}
+              iconClassName="size-4"
+            />
+          </div>
           <p className="text-sm text-brand-600 dark:text-brand-400">
             {t("audioHint")}
           </p>
@@ -112,18 +119,18 @@ export function ListeningAudioView({ section }: ListeningAudioViewProps) {
           <Button
             type="button"
             size="lg"
-            variant={speaking ? "default" : "outline"}
+            variant={mainSpeaking ? "default" : "outline"}
             className="min-w-40"
             onClick={handleListenClick}
           >
-            {speaking ? (
+            {mainSpeaking ? (
               <VolumeX className="size-5" aria-hidden />
             ) : listened ? (
               <Check className="size-5" aria-hidden />
             ) : (
               <Volume2 className="size-5" aria-hidden />
             )}
-            {speaking
+            {mainSpeaking
               ? t("listenStop")
               : listened
                 ? t("listenDone")
@@ -134,7 +141,7 @@ export function ListeningAudioView({ section }: ListeningAudioViewProps) {
             size="lg"
             variant={showTranscript ? "default" : "outline"}
             aria-pressed={showTranscript}
-            onClick={() => setShowTranscript((value) => !value)}
+            onClick={() => onShowTranscriptChange(!showTranscript)}
           >
             <FileText className="size-5" aria-hidden />
             {showTranscript ? t("hideTranscript") : t("showTranscript")}
@@ -145,7 +152,7 @@ export function ListeningAudioView({ section }: ListeningAudioViewProps) {
               size="lg"
               variant={showTranslation ? "default" : "outline"}
               aria-pressed={showTranslation}
-              onClick={() => setShowTranslation((value) => !value)}
+              onClick={() => onShowTranslationChange(!showTranslation)}
             >
               <Languages className="size-5" aria-hidden />
               {showTranslation ? t("hideTranslation") : t("showTranslation")}
@@ -156,15 +163,22 @@ export function ListeningAudioView({ section }: ListeningAudioViewProps) {
 
       {showTranscript ? (
         <article className="space-y-6 border-t border-border pt-6">
-          {section.body.paragraphs.map((paragraph) => (
-            <ReadingParagraphText
-              key={`${paragraph.number ?? 0}-${paragraph.en.slice(0, 24)}`}
-              paragraph={paragraph}
-              showTranslation={showTranslation}
-              readingLevel={section.level}
-              mergedGlossary={mergedGlossary}
-            />
-          ))}
+          {section.body.paragraphs.map((paragraph) => {
+            const blockKey = speak.paragraphBlockKey(paragraph);
+            return (
+              <ReadingParagraphText
+                key={blockKey}
+                paragraph={paragraph}
+                showTranslation={showTranslation}
+                readingLevel={section.level}
+                mergedGlossary={mergedGlossary}
+                speakWordOffset={speak.blockStartWordByKey.get(blockKey)}
+                activeSpeakWordIndex={
+                  speak.speaking ? speak.activeSpeakWordIndex : null
+                }
+              />
+            );
+          })}
         </article>
       ) : null}
     </div>

@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import type { ListeningLevel } from "@/data/listenings/types";
 import { ListeningSectionPassStatus } from "./ListeningSectionPassStatus";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { SpeakEnglishTitleButton } from "@/components/ui/SpeakEnglishTitleButton";
 import { getDistinctSecondaryTitle } from "@/lib/bilingualTitle";
 import { getCefrLevelBadgeClass } from "@/lib/topicAccess";
 import { cn } from "@/lib/utils";
@@ -52,9 +53,12 @@ export function ListeningPageHeader({
         <div className="space-y-1">
           <h1 className="page-title">{title}</h1>
           {englishTitle ? (
-            <p className="text-base font-medium tracking-wide text-brand-500 italic dark:text-brand-400">
-              {englishTitle}
-            </p>
+            <div className="flex min-w-0 items-center gap-0.5">
+              <p className="min-w-0 text-base font-medium tracking-wide text-brand-500 italic dark:text-brand-400">
+                {englishTitle}
+              </p>
+              <SpeakEnglishTitleButton text={englishTitle} />
+            </div>
           ) : null}
         </div>
         <ListeningSectionPassStatus sectionId={sectionId} />

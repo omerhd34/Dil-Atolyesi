@@ -1,19 +1,33 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Volume2, VolumeX } from "lucide-react";
+import { ReadingClickableEnglishText } from "@/components/features/reading/ReadingClickableEnglishText";
 import { Button } from "@/components/ui/Button";
+import type { ReadingWordGlossary } from "@/data/readings/types";
 import type {
   WritingChatMessage,
+  WritingLevel,
   WritingModelChat,
 } from "@/data/writings/types";
+import {
+  buildChatMessagesSpeakLayout,
+  indexSpeakTextWords,
+  isSpeechWordBoundaryEvent,
+  resolveChatMessageSpeakHighlight,
+  wordIndexAtChar,
+} from "@/lib/reading/readingSpeakHighlight";
 import { speakDialogue, stopSpeaking } from "@/lib/speakText";
+import { speakIconButtonMotionClassName } from "@/lib/speakIconButton";
 import { cn } from "@/lib/utils";
 
 type WritingChatThreadProps = {
   model: WritingModelChat;
   showTranslation: boolean;
+  level: WritingLevel;
+  glossary?: ReadingWordGlossary;
+  dialogueSpeakWordIndex?: number | null;
 };
 
 function contactInitial(name: string): string {
@@ -40,10 +54,26 @@ function toolbarButtonClass(outgoing: boolean, active?: boolean): string {
 export function WritingChatThread({
   model,
   showTranslation,
+  level,
+  glossary,
+  dialogueSpeakWordIndex = null,
 }: WritingChatThreadProps) {
   const t = useTranslations("Writing");
   const { contactName, contactStatus, messages } = model;
+  const speakLayout = useMemo(
+    () =>
+      buildChatMessagesSpeakLayout(
+        messages.map((message) => ({ id: message.id, text: message.text })),
+      ),
+    [messages],
+  );
   const [listeningMessageId, setListeningMessageId] = useState<string | null>(
+    null,
+  );
+  const [activeWordTokenId, setActiveWordTokenId] = useState<string | null>(
+    null,
+  );
+  const [lineSpeakWordIndex, setLineSpeakWordIndex] = useState<number | null>(
     null,
   );
 
@@ -53,19 +83,43 @@ export function WritingChatThread({
     };
   }, []);
 
+  function stopLineSpeechWordHighlight() {
+    setLineSpeakWordIndex(null);
+  }
+
   function handleListenLine(message: WritingChatMessage) {
     const { id: messageId, text, sender } = message;
     if (listeningMessageId === messageId) {
       stopSpeaking();
       setListeningMessageId(null);
+      stopLineSpeechWordHighlight();
       return;
     }
     stopSpeaking();
     setListeningMessageId(messageId);
+    stopLineSpeechWordHighlight();
+    const lineText = text.trim();
+    const lineWordSpans = indexSpeakTextWords(lineText);
     const gender = sender === "me" ? ("female" as const) : ("male" as const);
     speakDialogue([{ text, gender }], "en-US", undefined, {
-      onEnd: () => setListeningMessageId(null),
-      onCancel: () => setListeningMessageId(null),
+      wordBoundarySourceText: lineText,
+      onSpeechBoundary: ({ charIndex, name }) => {
+        if (!isSpeechWordBoundaryEvent(name)) {
+          return;
+        }
+        const wordIndex = wordIndexAtChar(lineWordSpans, charIndex);
+        if (wordIndex !== null) {
+          setLineSpeakWordIndex(wordIndex);
+        }
+      },
+      onEnd: () => {
+        setListeningMessageId(null);
+        stopLineSpeechWordHighlight();
+      },
+      onCancel: () => {
+        setListeningMessageId(null);
+        stopLineSpeechWordHighlight();
+      },
     });
   }
 
@@ -88,9 +142,13 @@ export function WritingChatThread({
           type="button"
           size="icon-xs"
           variant="ghost"
+          data-btn-motion="off"
           aria-pressed={listening}
           aria-label={t("lineListenAria")}
-          className={toolbarButtonClass(outgoing, listening)}
+          className={cn(
+            toolbarButtonClass(outgoing, listening),
+            speakIconButtonMotionClassName,
+          )}
           onClick={() => handleListenLine(message)}
         >
           {listening ? (
@@ -146,6 +204,14 @@ export function WritingChatThread({
         <ul className="flex flex-col gap-2.5">
           {messages.map((message) => {
             const outgoing = message.sender === "me";
+            const { speakWordOffset, activeSpeakWordIndex } =
+              resolveChatMessageSpeakHighlight({
+                messageId: message.id,
+                speakLayout,
+                dialogueSpeakWordIndex,
+                listeningMessageId,
+                lineSpeakWordIndex,
+              });
 
             return (
               <li
@@ -163,7 +229,19 @@ export function WritingChatThread({
                       : "bg-white text-[#111b21] dark:bg-[#1f2c3a] dark:text-[#e9edef]",
                   )}
                 >
-                  <p className="whitespace-pre-wrap">{message.text}</p>
+                  <p className="whitespace-pre-wrap">
+                    <ReadingClickableEnglishText
+                      text={message.text}
+                      readingLevel={level}
+                      glossary={glossary}
+                      paragraphKey={message.id}
+                      wordTapMode="allWords"
+                      speakWordOffset={speakWordOffset}
+                      activeSpeakWordIndex={activeSpeakWordIndex}
+                      activeTokenId={activeWordTokenId}
+                      onActiveTokenIdChange={setActiveWordTokenId}
+                    />
+                  </p>
                   {showTranslation && message.textTr ? (
                     <p
                       className={cn(
