@@ -180,6 +180,7 @@ export type ProgressResetPayload = {
   vocabularyDeleted: number;
   topicProgressDeleted: number;
   streakReset: boolean;
+  pointsDeleted: number;
 };
 
 export type StreakPayload = {
@@ -187,4 +188,16 @@ export type StreakPayload = {
   longestStreak: number;
   activeToday: boolean;
   lastActivityAt: string | null;
+};
+
+export type PointsSummaryPayload = {
+  daily: number;
+  weekly: number;
+  monthly: number;
+  total: number;
+};
+
+export type AwardPointsPayload = {
+  awarded: boolean;
+  amount: number;
 };
