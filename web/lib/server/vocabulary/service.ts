@@ -4,6 +4,7 @@ import {
 } from "@/data/vocabulary";
 import { AppError } from "@/lib/server/AppError";
 import { getPrisma } from "@/lib/server/prisma";
+import { awardPoints } from "@/lib/server/points/service";
 import { recordStreakActivity } from "@/lib/server/streak/service";
 import { canAccessVocabularyCategory } from "@/lib/vocabularyAccess";
 import {
@@ -472,6 +473,10 @@ export async function setVocabularyWordStatus(
         : {}),
     },
   });
+
+  if (enteringLearning) {
+    await awardPoints(userId, "VOCABULARY_LEARN", `vocab:learn:${wordId}`);
+  }
 
   return getVocabularyStatusForUser(userId, found.category.id);
 }

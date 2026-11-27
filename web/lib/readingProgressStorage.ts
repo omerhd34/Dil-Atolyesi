@@ -1,4 +1,5 @@
 import type { ReadingLevel } from "@/data/readings/types";
+import { awardPointsActivity } from "@/lib/points/award";
 
 const STORAGE_KEY = "eng_reading_progress_v1";
 const PASSED_EVENT = "reading-progress-changed";
@@ -91,13 +92,20 @@ export function markReadingListened(sectionId: string): void {
 
 export function markReadingPracticeDone(sectionId: string): void {
   const id = normalizeSectionId(sectionId);
+  if (isReadingPracticeDone(id)) {
+    return;
+  }
   const next = { ...readRaw() };
   next[id] = { ...next[id], practiceDone: true };
   writeRaw(next);
+  awardPointsActivity("READING_PRACTICE", `reading:practice:${id}`);
 }
 
 export function markReadingExamPassed(sectionId: string): void {
   const id = normalizeSectionId(sectionId);
+  if (isReadingExamPassed(id)) {
+    return;
+  }
   const next = { ...readRaw() };
   next[id] = {
     ...next[id],
@@ -105,6 +113,7 @@ export function markReadingExamPassed(sectionId: string): void {
     examPassed: true,
   };
   writeRaw(next);
+  awardPointsActivity("READING_EXAM", `reading:exam:${id}`);
 }
 
 export function isReadingExamPassed(sectionId: string): boolean {

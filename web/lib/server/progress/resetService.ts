@@ -1,3 +1,4 @@
+import { deletePointsForUser } from "@/lib/server/points/service";
 import { getPrisma } from "@/lib/server/prisma";
 import type { ProgressResetScope } from "@/validators/progress.schema";
 
@@ -6,6 +7,7 @@ export type ProgressResetPayload = {
   vocabularyDeleted: number;
   topicProgressDeleted: number;
   streakReset: boolean;
+  pointsDeleted: number;
 };
 
 async function resetVocabulary(userId: string): Promise<number> {
@@ -66,6 +68,7 @@ export async function resetUserProgress(
   let vocabularyDeleted = 0;
   let topicProgressDeleted = 0;
   let streakReset = false;
+  let pointsDeleted = 0;
 
   if (scope === "vocabulary" || scope === "all") {
     vocabularyDeleted = await resetVocabulary(userId);
@@ -77,10 +80,15 @@ export async function resetUserProgress(
     streakReset = topics.streakReset;
   }
 
+  if (scope === "all") {
+    pointsDeleted = await deletePointsForUser(userId);
+  }
+
   return {
     scope,
     vocabularyDeleted,
     topicProgressDeleted,
     streakReset,
+    pointsDeleted,
   };
 }

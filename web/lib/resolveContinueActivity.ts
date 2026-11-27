@@ -266,8 +266,6 @@ type VocabularyReferenceTitles = Record<
   string
 >;
 
-type SkillHubInnerTitles = Record<ContinueActivitySkill, string>;
-
 type ContinueActivityLabels = {
   vocabularyQuiz: string;
   vocabularyReferenceTitles: VocabularyReferenceTitles;
@@ -278,7 +276,7 @@ type ContinueActivityLabels = {
   skillSpeaking: string;
   skillTopics: string;
   skillVocabulary: string;
-  skillHubInnerTitles: SkillHubInnerTitles;
+  skillHubHomeTitle: string;
   fallbackTitle: string;
 };
 
@@ -302,16 +300,6 @@ function mainSectionLabel(
     default:
       return labels.fallbackTitle;
   }
-}
-
-function skillHubInnerTitle(
-  skill: ContinueActivitySkill | undefined,
-  labels: ContinueActivityLabels,
-): string {
-  if (!skill) {
-    return labels.fallbackTitle;
-  }
-  return labels.skillHubInnerTitles[skill] ?? labels.fallbackTitle;
 }
 
 export function resolveContinueActivityDisplay(
@@ -414,7 +402,7 @@ export function resolveContinueActivityDisplay(
     }
     case "skill_hub":
       return {
-        title: skillHubInnerTitle(activity.skill, labels),
+        title: labels.skillHubHomeTitle,
         kindLabel: sectionLabel,
       };
   }

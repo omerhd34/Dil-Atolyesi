@@ -2,12 +2,16 @@ import { DashboardStatsBar } from "@/components/features/dashboard/DashboardStat
 
 type WorkshopSectionShellProps = {
   children: React.ReactNode;
+  showStatsBar?: boolean;
 };
 
-export function WorkshopSectionShell({ children }: WorkshopSectionShellProps) {
+export function WorkshopSectionShell({
+  children,
+  showStatsBar = true,
+}: WorkshopSectionShellProps) {
   return (
     <div className="page-shell">
-      <DashboardStatsBar />
+      {showStatsBar ? <DashboardStatsBar /> : null}
       {children}
     </div>
   );

@@ -1,4 +1,5 @@
 import type { ListeningLevel } from "@/data/listenings/types";
+import { awardPointsActivity } from "@/lib/points/award";
 
 const STORAGE_KEY = "eng_listening_progress_v1";
 const PASSED_EVENT = "listening-progress-changed";
@@ -52,9 +53,13 @@ export function markListeningListened(sectionId: string): void {
 }
 
 export function markListeningPracticeDone(sectionId: string): void {
+  if (isListeningPracticeDone(sectionId)) {
+    return;
+  }
   const next = { ...readRaw() };
   next[sectionId] = { ...next[sectionId], practiceDone: true };
   writeRaw(next);
+  awardPointsActivity("LISTENING_PRACTICE", `listening:practice:${sectionId}`);
 }
 
 export function isListeningListened(sectionId: string): boolean {

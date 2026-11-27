@@ -1,4 +1,5 @@
 import type { CefrLevel } from "@/data/grammar/dashboardTopics";
+import { awardPointsActivity } from "@/lib/points/award";
 import {
   clientStorageEvent,
   clientStorageKey,
@@ -143,6 +144,7 @@ export function markLevelExamPassed(level: CefrLevel): CefrLevel[] {
   }
   const next = [...current, level];
   writePassedLevelExams(next);
+  awardPointsActivity("GRAMMAR_LEVEL_EXAM", `grammar:level:${level}`);
   return next;
 }
 

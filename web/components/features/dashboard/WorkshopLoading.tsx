@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 
 export function WorkshopLoading() {
   const t = useTranslations("Dashboard");
@@ -16,11 +17,17 @@ export function WorkshopLoading() {
       <p className="sr-only">{t("loading")}</p>
 
       <div
-        className="grid gap-3 md:grid-cols-2 xl:grid-cols-[1fr_1.15fr_1.35fr_11rem]"
+        className="grid items-start gap-3 md:grid-cols-2 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]"
         aria-hidden
       >
-        {Array.from({ length: 4 }, (_, index) => (
-          <div key={index} className="workshop-card space-y-3">
+        {Array.from({ length: 3 }, (_, index) => (
+          <div
+            key={index}
+            className={cn(
+              "workshop-card space-y-3",
+              index === 2 && "md:col-span-2 xl:col-span-1",
+            )}
+          >
             <Skeleton className="h-3 w-24" />
             <Skeleton className="h-8 w-16" />
             <Skeleton className="h-3 w-32" />

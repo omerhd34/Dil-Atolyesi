@@ -1,5 +1,11 @@
 import { getTopicContent } from "@/data/grammar";
+import { isLevelExamTopicId } from "@/data/grammar/levelExamTopicIds";
 import type { ExerciseType } from "@/data/grammar/types";
+import type { ExerciseCompleteOutcome } from "@/lib/exerciseCompleteOutcome";
+import {
+  awardPointsActivity,
+  awardPointsActivityAsync,
+} from "@/lib/points/award";
 import {
   clientStorageEvent,
   migrateLocalStorageKey,
@@ -105,23 +111,34 @@ export function getTopicLessonViewRemainingMs(topicId: string): number {
   return Math.max(0, requiredMs - getTopicLessonViewMs(topicId));
 }
 
+export type LessonViewTickResult = {
+  complete: boolean;
+  newlyCompleted: boolean;
+};
+
 export function addTopicLessonViewMs(
   topicId: string,
   deltaMs: number,
-): boolean {
+): LessonViewTickResult {
   const requiredMs = getLessonViewRequiredMs(topicId);
   if (deltaMs <= 0) {
-    return isLessonProgressEarned(getTopicProgressRecord(topicId), requiredMs);
+    const complete = isLessonProgressEarned(
+      getTopicProgressRecord(topicId),
+      requiredMs,
+    );
+    return { complete, newlyCompleted: false };
   }
 
   const all = readAll();
   const current = normalizeRecord(all[topicId] ?? {});
-  if (isLessonProgressEarned(current, requiredMs)) {
-    return true;
+  const wasEarned = isLessonProgressEarned(current, requiredMs);
+  if (wasEarned) {
+    return { complete: true, newlyCompleted: false };
   }
 
   const nextMs = Math.min(requiredMs, (current.lessonViewMs ?? 0) + deltaMs);
   const lessonViewed = requiredMs <= 0 || nextMs >= requiredMs;
+  const newlyCompleted = !wasEarned && lessonViewed;
 
   writeAll({
     ...all,
@@ -132,15 +149,15 @@ export function addTopicLessonViewMs(
     },
   });
 
-  return lessonViewed;
+  return { complete: lessonViewed, newlyCompleted };
 }
 
-export function markTopicLessonViewed(topicId: string): void {
+export function markTopicLessonViewed(topicId: string): boolean {
   const requiredMs = getLessonViewRequiredMs(topicId);
   const all = readAll();
   const current = normalizeRecord(all[topicId] ?? {});
   if (isLessonProgressEarned(current, requiredMs)) {
-    return;
+    return false;
   }
   writeAll({
     ...all,
@@ -150,17 +167,41 @@ export function markTopicLessonViewed(topicId: string): void {
       lessonViewMs: requiredMs,
     },
   });
+  return true;
+}
+
+export async function awardGrammarLessonTimePoints(
+  topicId: string,
+): Promise<ExerciseCompleteOutcome> {
+  const result = await awardPointsActivityAsync(
+    "GRAMMAR_LESSON_TIME",
+    `grammar:lesson:${topicId}`,
+  );
+  if (result?.awarded && result.amount > 0) {
+    return { pointsEarned: result.amount };
+  }
+  if (result && !result.awarded) {
+    return { pointsAlreadyCounted: true };
+  }
+  return {};
 }
 
 export function markTopicExerciseTypeCompleted(
   topicId: string,
   type: ExerciseType,
 ): void {
+  void completeTopicExerciseTypeForPoints(topicId, type);
+}
+
+export async function completeTopicExerciseTypeForPoints(
+  topicId: string,
+  type: ExerciseType,
+): Promise<ExerciseCompleteOutcome> {
   const all = readAll();
   const current = all[topicId] ?? {};
   const completed = new Set(current.completedTypes ?? []);
   if (completed.has(type)) {
-    return;
+    return { pointsAlreadyCounted: true };
   }
   completed.add(type);
   writeAll({
@@ -170,6 +211,14 @@ export function markTopicExerciseTypeCompleted(
       completedTypes: Array.from(completed),
     },
   });
+  const result = await awardPointsActivityAsync(
+    "GRAMMAR_EXERCISE",
+    `grammar:exercise:${topicId}:${type}`,
+  );
+  if (result?.awarded && result.amount > 0) {
+    return { pointsEarned: result.amount };
+  }
+  return { pointsAlreadyCounted: true };
 }
 
 export function unmarkTopicExerciseTypeCompleted(
@@ -219,6 +268,10 @@ export function markTopicExamPassed(topicId: string): void {
       examPassed: true,
     },
   });
+  awardPointsActivity(
+    isLevelExamTopicId(topicId) ? "GRAMMAR_LEVEL_EXAM" : "GRAMMAR_TOPIC_EXAM",
+    `grammar:exam:${topicId}`,
+  );
 }
 
 export function isTopicExamPassed(topicId: string): boolean {

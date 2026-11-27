@@ -23,6 +23,18 @@ export function vocabularyExerciseProgressKey(categoryId: string): string {
   return `vocabulary:${categoryId}`;
 }
 
+const VOCABULARY_PROGRESS_PREFIX = "vocabulary:";
+
+export function parseVocabularyCategoryIdFromProgressKey(
+  progressKey: string,
+): string | null {
+  if (!progressKey.startsWith(VOCABULARY_PROGRESS_PREFIX)) {
+    return null;
+  }
+  const categoryId = progressKey.slice(VOCABULARY_PROGRESS_PREFIX.length);
+  return categoryId.length > 0 ? categoryId : null;
+}
+
 function answeredCount(
   categoryId: string,
   type: ExerciseType,

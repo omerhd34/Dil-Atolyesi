@@ -586,6 +586,10 @@ export const useVocabularyStore = create<VocabularyState>((set, get) => ({
         const { useStreakStore } = await import("@/store/streakStore");
         void useStreakStore.getState().fetchStreak({ force: true });
       }
+      if (data.pointsDeleted > 0) {
+        const { usePointsStore } = await import("@/store/pointsStore");
+        void usePointsStore.getState().fetchPoints({ force: true });
+      }
       return data;
     } finally {
       set({ isResettingProgress: false });

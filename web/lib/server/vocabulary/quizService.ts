@@ -2,6 +2,7 @@ import type { VocabularyWord } from "@/data/vocabulary";
 import { getVocabularyWordById, vocabularyCategories } from "@/data/vocabulary";
 import { AppError } from "@/lib/server/AppError";
 import { getPrisma } from "@/lib/server/prisma";
+import { awardPoints } from "@/lib/server/points/service";
 import { recordStreakActivity } from "@/lib/server/streak/service";
 import { releaseLearnSelections } from "@/lib/server/vocabulary/service";
 import {
@@ -264,6 +265,7 @@ export async function answerVocabularyQuizQuestion(
   let status: "KNOWN" | "LEARNING" = "LEARNING";
 
   if (correct) {
+    const newlyPassedType = !passed[quizType];
     passed = {
       ...passed,
       [quizType]: true,
@@ -271,6 +273,14 @@ export async function answerVocabularyQuizQuestion(
 
     newlyKnown = false;
     status = "LEARNING";
+
+    if (newlyPassedType) {
+      await awardPoints(
+        userId,
+        "VOCABULARY_QUIZ_ANSWER",
+        `vocab:quiz:${wordId}:${quizType}`,
+      );
+    }
 
     await prisma.userVocabularyWord.update({
       where: { id: existing.id },
@@ -336,6 +346,9 @@ export async function completeVocabularyQuiz(
   });
   await releaseLearnSelections(userId, rows.length);
   await recordStreakActivity(userId);
+
+  const sourceKey = `vocab:quiz-complete:${uniqueIds.slice().sort().join(",")}`;
+  await awardPoints(userId, "VOCABULARY_QUIZ_COMPLETE", sourceKey);
 
   return { knownCount: rows.length };
 }

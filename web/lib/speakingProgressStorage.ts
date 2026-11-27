@@ -1,5 +1,6 @@
 import type { SpeakingLevel } from "@/data/speakings/types";
 import { getSpeakingSectionById } from "@/lib/speakingContent";
+import { awardPointsActivity } from "@/lib/points/award";
 
 const STORAGE_KEY = "eng_speaking_progress_v1";
 const PASSED_EVENT = "speaking-progress-changed";
@@ -77,6 +78,9 @@ export function markSpeakingPracticeAllDone(sectionId: string): void {
 }
 
 export function markSpeakingPracticeDone(sectionId: string): void {
+  if (readRaw()[sectionId]?.practiceDone === true) {
+    return;
+  }
   const next = { ...readRaw() };
   next[sectionId] = {
     ...next[sectionId],
@@ -84,6 +88,7 @@ export function markSpeakingPracticeDone(sectionId: string): void {
     practiceDone: true,
   };
   writeRaw(next);
+  awardPointsActivity("SPEAKING_PRACTICE", `speaking:practice:${sectionId}`);
 }
 
 export function clearSpeakingPracticeProgress(sectionId: string): void {

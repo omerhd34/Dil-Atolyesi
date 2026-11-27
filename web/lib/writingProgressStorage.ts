@@ -1,4 +1,5 @@
 import type { WritingLevel } from "@/data/writings/types";
+import { awardPointsActivity } from "@/lib/points/award";
 
 const STORAGE_KEY = "eng_writing_progress_v1";
 const PASSED_EVENT = "writing-progress-changed";
@@ -67,6 +68,9 @@ export function markWritingPracticeAllDone(sectionId: string): void {
 }
 
 export function markWritingPracticeDone(sectionId: string): void {
+  if (readRaw()[sectionId]?.practiceDone === true) {
+    return;
+  }
   const next = { ...readRaw() };
   next[sectionId] = {
     ...next[sectionId],
@@ -74,6 +78,7 @@ export function markWritingPracticeDone(sectionId: string): void {
     practiceDone: true,
   };
   writeRaw(next);
+  awardPointsActivity("WRITING_PRACTICE", `writing:practice:${sectionId}`);
 }
 
 export function clearWritingPracticeProgress(sectionId: string): void {

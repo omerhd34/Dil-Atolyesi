@@ -6,6 +6,8 @@ import {
 } from "@/lib/continueActivityStorage";
 import { workshopSkillHubPath } from "@/lib/workshopSectionRoutes";
 
+export const QUICK_CONTINUE_DISPLAY_LIMIT = 2;
+
 const SUGGESTED_SKILL_ORDER: readonly ContinueActivitySkill[] = [
   "vocabulary",
   "topics",
@@ -26,8 +28,10 @@ function skillHubSuggestion(skill: ContinueActivitySkill): ContinueActivity {
 
 export function quickContinueActivitiesForDisplay(
   stored: ContinueActivity[],
+  limit: number = QUICK_CONTINUE_DISPLAY_LIMIT,
 ): ContinueActivity[] {
-  const result = stored.slice(0, CONTINUE_ACTIVITY_LIMIT);
+  const cap = Math.min(Math.max(1, limit), CONTINUE_ACTIVITY_LIMIT);
+  const result = stored.slice(0, cap);
   const covered = new Set<ContinueActivitySkill>();
 
   for (const activity of result) {
@@ -38,7 +42,7 @@ export function quickContinueActivitiesForDisplay(
   }
 
   for (const skill of SUGGESTED_SKILL_ORDER) {
-    if (result.length >= CONTINUE_ACTIVITY_LIMIT) {
+    if (result.length >= cap) {
       break;
     }
     if (covered.has(skill)) {
