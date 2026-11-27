@@ -117,6 +117,8 @@ export function setSpeechRate(rate: number): void {
 export type SpeakTextCallbacks = {
   onEnd?: () => void;
   onCancel?: () => void;
+  wordBoundarySourceText?: string;
+  onSpeechBoundary?: (payload: { charIndex: number; name: string }) => void;
 };
 
 export type SpeakDialogueLine = {
@@ -181,6 +183,35 @@ function cancelActiveSpeech(invokeCancel: boolean): void {
   if (invokeCancel) {
     onCancel?.();
   }
+}
+
+function computeChunkCharOffsets(
+  sourceText: string,
+  items: { chunks: string[] }[],
+): number[] {
+  const trimmed = sourceText.trim();
+  const offsets: number[] = [];
+  let searchPos = 0;
+
+  for (const item of items) {
+    for (const chunk of item.chunks) {
+      if (!chunk) {
+        offsets.push(searchPos);
+        continue;
+      }
+      if (trimmed.slice(searchPos, searchPos + chunk.length) === chunk) {
+        offsets.push(searchPos);
+        searchPos += chunk.length;
+        continue;
+      }
+      const found = trimmed.indexOf(chunk, searchPos);
+      const start = found >= 0 ? found : searchPos;
+      offsets.push(start);
+      searchPos = found >= 0 ? found + chunk.length : searchPos + chunk.length;
+    }
+  }
+
+  return offsets;
 }
 
 function splitSpeakChunks(text: string): string[] {
@@ -265,10 +296,22 @@ function speakChunkSequence(
   startItemIndex = 0,
   startChunkIndex = 0,
   resumeFingerprint?: string,
+  callbacks?: SpeakTextCallbacks,
 ): void {
   const synth = window.speechSynthesis;
   let itemIndex = startItemIndex;
   let chunkIndex = startChunkIndex;
+  let flatChunkIndex = 0;
+  for (let i = 0; i < startItemIndex; i += 1) {
+    flatChunkIndex += items[i]?.chunks.length ?? 0;
+  }
+  flatChunkIndex += startChunkIndex;
+
+  const boundarySource = callbacks?.wordBoundarySourceText?.trim();
+  const chunkCharOffsets =
+    boundarySource && callbacks?.onSpeechBoundary
+      ? computeChunkCharOffsets(boundarySource, items)
+      : null;
 
   if (resumeFingerprint) {
     activePlaybackCursor = {
@@ -304,7 +347,9 @@ function speakChunkSequence(
     }
     syncResumePosition(resumeFingerprint, items, rate, itemIndex, chunkIndex);
     const chunk = item.chunks[chunkIndex] ?? "";
+    const utterChunkIndex = flatChunkIndex;
     chunkIndex += 1;
+    flatChunkIndex += 1;
     const utterance = new SpeechSynthesisUtterance(chunk);
     utterance.lang = item.lang;
     const letterChunk =
@@ -312,6 +357,18 @@ function speakChunkSequence(
       isTurkishLetterNameSpeechChunk(chunk);
     utterance.rate = letterChunk ? rate * 0.82 : rate;
     utterance.voice = pickVoiceForGender(voices, item.gender, item.lang);
+    if (chunkCharOffsets && callbacks?.onSpeechBoundary) {
+      const chunkStart = chunkCharOffsets[utterChunkIndex] ?? 0;
+      utterance.onboundary = (event) => {
+        if (session !== speakSession) {
+          return;
+        }
+        callbacks.onSpeechBoundary?.({
+          charIndex: chunkStart + event.charIndex,
+          name: event.name,
+        });
+      };
+    }
     utterance.onend = () => {
       if (session !== speakSession) {
         return;
@@ -682,7 +739,7 @@ function startSpeechSequence(
     }
   }
 
-  cancelActiveSpeech(true);
+  cancelActiveSpeech(false);
   const session = speakSession;
   activeOnCancel = callbacks?.onCancel ?? null;
 
@@ -699,6 +756,7 @@ function startSpeechSequence(
       startItemIndex,
       startChunkIndex,
       fingerprint,
+      callbacks,
     );
   };
 

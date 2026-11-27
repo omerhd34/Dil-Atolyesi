@@ -1,8 +1,14 @@
 export type EnglishTextToken =
   | { kind: "word"; value: string; id: string }
+  | { kind: "number"; value: string; id: string }
   | { kind: "other"; value: string; id: string };
 
-const TOKEN_PATTERN = /[A-Za-z]+(?:[''][A-Za-z]+)*|\d+|\s+|[^\sA-Za-z0-9]+/g;
+export const ENGLISH_WORD_PATTERN = /[A-Za-z]+(?:[''][A-Za-z]+)*/g;
+
+const TOKEN_PATTERN = new RegExp(
+  `${ENGLISH_WORD_PATTERN.source}|\\d+|\\s+|[^\\sA-Za-z0-9]+`,
+  "g",
+);
 
 export function tokenizeEnglishText(
   text: string,
@@ -10,17 +16,18 @@ export function tokenizeEnglishText(
 ): EnglishTextToken[] {
   const tokens: EnglishTextToken[] = [];
   let wordIndex = 0;
+  let numberIndex = 0;
   let otherIndex = 0;
 
   for (const match of text.matchAll(TOKEN_PATTERN)) {
     const value = match[0];
     if (/^\d+$/.test(value)) {
       tokens.push({
-        kind: "other",
+        kind: "number",
         value,
-        id: `${idPrefix}-o-${otherIndex}`,
+        id: `${idPrefix}-n-${numberIndex}`,
       });
-      otherIndex += 1;
+      numberIndex += 1;
     } else if (/^[A-Za-z]/.test(value)) {
       tokens.push({
         kind: "word",

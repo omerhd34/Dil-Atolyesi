@@ -20,15 +20,17 @@
     transform: none;
   }
 
-  .vocabulary-speak-button {
-    transition-property: background-color, border-color;
+  :is(.vocabulary-speak-button, .speak-icon-button) {
+    transition-property: background-color, border-color, color;
     transition-duration: 0.95s;
     transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
   }
 
-  .vocabulary-speak-button svg {
+  :is(.vocabulary-speak-button, .speak-icon-button) svg {
     transform: none;
-    transition: none;
+    transition-property: color;
+    transition-duration: 0.95s;
+    transition-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
   }
 
   .word-jump-nav-control svg {
@@ -62,7 +64,7 @@
       :disabled
     ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
       .nav-icon-button
-    ):not(.sidebar-nav-button) {
+    ):not(.sidebar-nav-button):not(.speak-icon-button) {
     transition-property:
       background-color, border-color, box-shadow, color, filter, transform,
       opacity;
@@ -74,7 +76,7 @@
       :disabled
     ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
       .nav-icon-button
-    ):not(.sidebar-nav-button)
+    ):not(.sidebar-nav-button):not(.speak-icon-button)
     svg {
     transition-property: transform, opacity, color;
     transition-duration: 0.95s;
@@ -86,7 +88,7 @@
         :disabled
       ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
         .nav-icon-button
-      ):not(.sidebar-nav-button):hover {
+      ):not(.sidebar-nav-button):not(.speak-icon-button):hover {
       transform: translateY(-4px);
     }
 
@@ -94,7 +96,7 @@
         :disabled
       ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
         .nav-icon-button
-      ):not(.sidebar-nav-button):hover
+      ):not(.sidebar-nav-button):not(.speak-icon-button):hover
       svg {
       transform: translateX(3px);
       opacity: 0.9;
@@ -104,7 +106,7 @@
         :disabled
       ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
         .nav-icon-button
-      ):not(.sidebar-nav-button):active {
+      ):not(.sidebar-nav-button):not(.speak-icon-button):active {
       transform: translateY(1px);
       transition-duration: 0.45s;
     }
@@ -113,7 +115,7 @@
         :disabled
       ):not([aria-disabled="true"]):not([data-btn-motion="off"]):not(
         .nav-icon-button
-      ):not(.sidebar-nav-button):active
+      ):not(.sidebar-nav-button):not(.speak-icon-button):active
       svg {
       transform: translateX(0);
       opacity: 1;
@@ -141,8 +143,19 @@
       opacity: 1;
     }
 
+    :is(.vocabulary-speak-button, .speak-icon-button):not(:disabled):not(
+        [aria-disabled="true"]
+      ):hover,
+    :is(.vocabulary-speak-button, .speak-icon-button):not(:disabled):not(
+        [aria-disabled="true"]
+      ):active {
+      transform: none;
+    }
+
     .vocabulary-speak-button:hover svg,
     .vocabulary-speak-button:active svg,
+    .speak-icon-button:hover svg,
+    .speak-icon-button:active svg,
     .word-jump-nav-control:hover svg,
     .word-jump-nav-control:active svg,
     .settings-tile-button:hover svg,
