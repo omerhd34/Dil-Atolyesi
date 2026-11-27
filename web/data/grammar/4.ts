@@ -21,38 +21,31 @@ export const topicContent4: TopicContent = {
         examples: [
           {
             en: "My",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Benim",
           },
           {
             en: "Your",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Senin",
           },
           {
             en: "His",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Onun (Erkek)",
           },
           {
             en: "Her",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Onun (Kadın)",
           },
           {
             en: "Its",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Onun (Eşya, hayvan vb.)",
           },
           {
             en: "Our",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Bizim",
           },
           {
             en: "Their",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Onların",
           },
         ],
       },
@@ -63,7 +56,7 @@ export const topicContent4: TopicContent = {
       id: "4-ex-4-1-1",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: "\"İyelik Sıfatları\" alt konusu hangi ana konuya aittir?",
+      prompt: '"İyelik Sıfatları" alt konusu hangi ana konuya aittir?',
       options: [
         "İyelik Sıfatları",
         "Tamamen farklı bir konu",
@@ -71,13 +64,14 @@ export const topicContent4: TopicContent = {
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"İyelik Sıfatları\" başlığı altındadır.",
+      explanation: 'Bu alt konu "İyelik Sıfatları" başlığı altındadır.',
     },
     {
       id: "4-ex-4-1-2",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"İyelik Sıfatları\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "İyelik Sıfatları" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -91,19 +85,17 @@ export const topicContent4: TopicContent = {
       id: "4-tf-4-1-1",
       subtopicId: "4-1",
       type: "true_false",
-      prompt: "\"İyelik Sıfatları\" başlığı \"İyelik Sıfatları\" konusunun bir parçasıdır.",
-      options: [
-        "Doğru",
-        "Yanlış",
-      ],
+      prompt:
+        '"İyelik Sıfatları" başlığı "İyelik Sıfatları" konusunun bir parçasıdır.',
+      options: ["Doğru", "Yanlış"],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"İyelik Sıfatları\" konusu altında işlenir.",
+      explanation: 'Bu alt başlık "İyelik Sıfatları" konusu altında işlenir.',
     },
     {
       id: "4-fb-4-1-1",
       subtopicId: "4-1",
       type: "fill_blank",
-      prompt: "\"İyelik Sıfatları\" konusu _____ seviyesine uygundur.",
+      prompt: '"İyelik Sıfatları" konusu _____ seviyesine uygundur.',
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },
@@ -189,7 +181,7 @@ export const topicContent4: TopicContent = {
       id: "quiz-4-4-1-1",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: "\"İyelik Sıfatları\" alt konusu hangi ana konuya aittir?",
+      prompt: '"İyelik Sıfatları" alt konusu hangi ana konuya aittir?',
       options: [
         "Hiçbiri",
         "İyelik Sıfatları",
@@ -197,13 +189,14 @@ export const topicContent4: TopicContent = {
         "Sadece kelime listesi",
       ],
       correctIndex: 1,
-      explanation: "Bu alt konu \"İyelik Sıfatları\" başlığı altındadır.",
+      explanation: 'Bu alt konu "İyelik Sıfatları" başlığı altındadır.',
     },
     {
       id: "quiz-4-4-1-2",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"İyelik Sıfatları\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "İyelik Sıfatları" için doğru yaklaşım hangisidir?',
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Hiç alıştırma çözmemek",
@@ -217,7 +210,7 @@ export const topicContent4: TopicContent = {
       id: "quiz-4-4-1-3",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: "\"İyelik Sıfatları\" çalışırken hangisi doğrudur?",
+      prompt: '"İyelik Sıfatları" çalışırken hangisi doğrudur?',
       options: [
         "Konuyu tamamen atlamak",
         "Sadece dinleyip bırakmak",
@@ -231,13 +224,8 @@ export const topicContent4: TopicContent = {
       id: "quiz-4-level",
       subtopicId: "4-1",
       type: "multiple_choice",
-      prompt: "\"İyelik Sıfatları\" konusu hangi seviyeye aittir?",
-      options: [
-        "A1",
-        "Yanlış seviye",
-        "Belirsiz",
-        "Seviye yok",
-      ],
+      prompt: '"İyelik Sıfatları" konusu hangi seviyeye aittir?',
+      options: ["A1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
       explanation: "Bu konu A1 seviyesindedir.",
     },

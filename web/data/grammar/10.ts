@@ -21,33 +21,27 @@ export const topicContent10: TopicContent = {
         examples: [
           {
             en: "Countable Nouns",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Sayılabilir İsimler",
           },
           {
             en: "Uncountable Nouns",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Sayılamayan İsimler",
           },
           {
             en: "A",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Bir (Ünsüz ses öncesi)",
           },
           {
             en: "An",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Bir (Ünlü ses öncesi)",
           },
           {
             en: "Much",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Çok (Sayılamayan isimler için)",
           },
           {
             en: "Many",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Çok / Birçok (Sayılabilir isimler için)",
           },
         ],
       },

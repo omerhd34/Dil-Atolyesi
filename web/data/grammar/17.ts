@@ -9,8 +9,9 @@ export const topicContent17: TopicContent = {
         title: "Sıklık Zarfları",
         titleEn: "Adverbs of Frequency",
         paragraphs: [
-          "**Sıklık Zarfları** konusu A1 müfredatında temel taşlardan biridir. Kartta gördüğün kalıplar arasında **\\Always\\**, **\\Usually\\**, **\\Often\\**, **\\Sometimes\\** öne çıkar. Olumlu, olumsuz ve soru formlarını A1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
+          "**Sıklık Zarfları** konusu A1 müfredatında temel taşlardan biridir. Aşağıdaki piramit **\\Always\\** ile **\\Never\\** arasındaki sırayı yüzdeyle özetler; üstteki katmanlar daha yüksek sıklığı anlatır. Kartta gördüğün kalıplar arasında **\\Always\\**, **\\Usually\\**, **\\Often\\**, **\\Sometimes\\** öne çıkar. Olumlu, olumsuz ve soru formlarını A1 düzeyinde kısa alıştırmalarla pekiştirmeyi hedefle. Günlük konuşma ve okuma metinlerinde bu kalıpları tanıyıp doğru kullanmaya odaklan.",
         ],
+        visual: "adverbsOfFrequency",
         examplesTitle: "İşlenecek kalıplar",
         examplesLayout: "columns",
         examplesPerRow: 2,
@@ -40,7 +41,7 @@ export const topicContent17: TopicContent = {
             note: "grammarHeading",
           },
           {
-            en: "Rarely",
+            en: "Hardly ever",
             tr: "Bu derste işlenir.",
             note: "grammarHeading",
           },
@@ -58,7 +59,7 @@ export const topicContent17: TopicContent = {
       id: "17-ex-17-1-1",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: "\"Sıklık Zarfları\" alt konusu hangi ana konuya aittir?",
+      prompt: '"Sıklık Zarfları" alt konusu hangi ana konuya aittir?',
       options: [
         "Sıklık Zarfları",
         "Tamamen farklı bir konu",
@@ -66,13 +67,14 @@ export const topicContent17: TopicContent = {
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Sıklık Zarfları\" başlığı altındadır.",
+      explanation: 'Bu alt konu "Sıklık Zarfları" başlığı altındadır.',
     },
     {
       id: "17-ex-17-1-2",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Sıklık Zarfları\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "Sıklık Zarfları" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -86,19 +88,17 @@ export const topicContent17: TopicContent = {
       id: "17-tf-17-1-1",
       subtopicId: "17-1",
       type: "true_false",
-      prompt: "\"Sıklık Zarfları\" başlığı \"Sıklık Zarfları\" konusunun bir parçasıdır.",
-      options: [
-        "Doğru",
-        "Yanlış",
-      ],
+      prompt:
+        '"Sıklık Zarfları" başlığı "Sıklık Zarfları" konusunun bir parçasıdır.',
+      options: ["Doğru", "Yanlış"],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Sıklık Zarfları\" konusu altında işlenir.",
+      explanation: 'Bu alt başlık "Sıklık Zarfları" konusu altında işlenir.',
     },
     {
       id: "17-fb-17-1-1",
       subtopicId: "17-1",
       type: "fill_blank",
-      prompt: "\"Sıklık Zarfları\" konusu _____ seviyesine uygundur.",
+      prompt: '"Sıklık Zarfları" konusu _____ seviyesine uygundur.',
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },
@@ -184,7 +184,7 @@ export const topicContent17: TopicContent = {
       id: "quiz-17-17-1-1",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: "\"Sıklık Zarfları\" alt konusu hangi ana konuya aittir?",
+      prompt: '"Sıklık Zarfları" alt konusu hangi ana konuya aittir?',
       options: [
         "Sıklık Zarfları",
         "Sadece kelime listesi",
@@ -192,13 +192,14 @@ export const topicContent17: TopicContent = {
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Sıklık Zarfları\" başlığı altındadır.",
+      explanation: 'Bu alt konu "Sıklık Zarfları" başlığı altındadır.',
     },
     {
       id: "quiz-17-17-1-2",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Sıklık Zarfları\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "Sıklık Zarfları" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -212,7 +213,7 @@ export const topicContent17: TopicContent = {
       id: "quiz-17-17-1-3",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: "\"Sıklık Zarfları\" çalışırken hangisi doğrudur?",
+      prompt: '"Sıklık Zarfları" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -226,13 +227,8 @@ export const topicContent17: TopicContent = {
       id: "quiz-17-level",
       subtopicId: "17-1",
       type: "multiple_choice",
-      prompt: "\"Sıklık Zarfları\" konusu hangi seviyeye aittir?",
-      options: [
-        "A1",
-        "Seviye yok",
-        "Belirsiz",
-        "Yanlış seviye",
-      ],
+      prompt: '"Sıklık Zarfları" konusu hangi seviyeye aittir?',
+      options: ["A1", "Seviye yok", "Belirsiz", "Yanlış seviye"],
       correctIndex: 0,
       explanation: "Bu konu A1 seviyesindedir.",
     },

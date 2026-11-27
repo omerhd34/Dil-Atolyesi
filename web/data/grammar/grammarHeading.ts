@@ -1902,7 +1902,6 @@ export const grammarHeadings: Record<CefrLevel, GrammarHeading[]> = {
   ],
 };
 
-/** Müfredat sırası: seviye blokları ve her seviyedeki diziliş `grammarHeadings` ile aynı (ID'ye göre sıralama yok). */
 export const allGrammarHeadings: GrammarHeading[] = (
   Object.keys(grammarHeadings) as CefrLevel[]
 ).flatMap((level) => grammarHeadings[level]);

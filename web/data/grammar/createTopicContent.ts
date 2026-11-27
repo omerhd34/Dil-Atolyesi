@@ -8,6 +8,11 @@ import type {
   TrueFalseExercise,
 } from "@/data/grammar/types";
 import {
+  LESSON_PATTERN_PLACEHOLDER_TR,
+  LESSON_SENTENCE_PLACEHOLDER_TR,
+  resolveLessonExampleTr,
+} from "@/lib/grammar/lessonExampleTr";
+import {
   TOPIC_EXAM_QUESTION_COUNT,
   ensureExamOptionCount,
 } from "@/lib/topicExam";
@@ -347,8 +352,7 @@ function examplesFromTitleEx(titleEx: string): TopicLessonExample[] {
     if (tokens.length > 0) {
       return tokens.map((en) => ({
         en,
-        tr: "Bu derste işlenir.",
-        note: "grammarHeading",
+        tr: resolveLessonExampleTr(en, LESSON_PATTERN_PLACEHOLDER_TR),
       }));
     }
   }
@@ -361,13 +365,17 @@ function examplesFromTitleEx(titleEx: string): TopicLessonExample[] {
     .map((part) => (part.endsWith(".") ? part : `${part}.`));
 
   if (segments.length === 0) {
-    return [{ en: trimmed, tr: "Bağlamda incele.", note: "grammarHeading" }];
+    return [
+      {
+        en: trimmed,
+        tr: resolveLessonExampleTr(trimmed, LESSON_SENTENCE_PLACEHOLDER_TR),
+      },
+    ];
   }
 
   return segments.map((en) => ({
     en,
-    tr: "Bağlamda incele.",
-    note: "grammarHeading",
+    tr: resolveLessonExampleTr(en, LESSON_SENTENCE_PLACEHOLDER_TR),
   }));
 }
 

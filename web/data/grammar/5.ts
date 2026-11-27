@@ -21,33 +21,27 @@ export const topicContent5: TopicContent = {
         examples: [
           {
             en: "Mine",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Benimki",
           },
           {
             en: "Yours",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Seninki (veya Sizinki)",
           },
           {
             en: "His",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Onunki (Erkek)",
           },
           {
             en: "Hers",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Onunki (Kadın)",
           },
           {
             en: "Ours",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Bizimki",
           },
           {
             en: "Theirs",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Onlarınki",
           },
         ],
       },
@@ -58,7 +52,7 @@ export const topicContent5: TopicContent = {
       id: "5-ex-5-1-1",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: "\"İyelik Zamirleri\" alt konusu hangi ana konuya aittir?",
+      prompt: '"İyelik Zamirleri" alt konusu hangi ana konuya aittir?',
       options: [
         "İyelik Zamirleri",
         "Tamamen farklı bir konu",
@@ -66,13 +60,14 @@ export const topicContent5: TopicContent = {
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"İyelik Zamirleri\" başlığı altındadır.",
+      explanation: 'Bu alt konu "İyelik Zamirleri" başlığı altındadır.',
     },
     {
       id: "5-ex-5-1-2",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"İyelik Zamirleri\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "İyelik Zamirleri" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -86,19 +81,17 @@ export const topicContent5: TopicContent = {
       id: "5-tf-5-1-1",
       subtopicId: "5-1",
       type: "true_false",
-      prompt: "\"İyelik Zamirleri\" başlığı \"İyelik Zamirleri\" konusunun bir parçasıdır.",
-      options: [
-        "Doğru",
-        "Yanlış",
-      ],
+      prompt:
+        '"İyelik Zamirleri" başlığı "İyelik Zamirleri" konusunun bir parçasıdır.',
+      options: ["Doğru", "Yanlış"],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"İyelik Zamirleri\" konusu altında işlenir.",
+      explanation: 'Bu alt başlık "İyelik Zamirleri" konusu altında işlenir.',
     },
     {
       id: "5-fb-5-1-1",
       subtopicId: "5-1",
       type: "fill_blank",
-      prompt: "\"İyelik Zamirleri\" konusu _____ seviyesine uygundur.",
+      prompt: '"İyelik Zamirleri" konusu _____ seviyesine uygundur.',
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },
@@ -184,7 +177,7 @@ export const topicContent5: TopicContent = {
       id: "quiz-5-5-1-1",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: "\"İyelik Zamirleri\" alt konusu hangi ana konuya aittir?",
+      prompt: '"İyelik Zamirleri" alt konusu hangi ana konuya aittir?',
       options: [
         "Tamamen farklı bir konu",
         "Hiçbiri",
@@ -192,13 +185,14 @@ export const topicContent5: TopicContent = {
         "Sadece kelime listesi",
       ],
       correctIndex: 2,
-      explanation: "Bu alt konu \"İyelik Zamirleri\" başlığı altındadır.",
+      explanation: 'Bu alt konu "İyelik Zamirleri" başlığı altındadır.',
     },
     {
       id: "quiz-5-5-1-2",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"İyelik Zamirleri\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "İyelik Zamirleri" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -212,7 +206,7 @@ export const topicContent5: TopicContent = {
       id: "quiz-5-5-1-3",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: "\"İyelik Zamirleri\" çalışırken hangisi doğrudur?",
+      prompt: '"İyelik Zamirleri" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Konuyu tamamen atlamak",
@@ -226,13 +220,8 @@ export const topicContent5: TopicContent = {
       id: "quiz-5-level",
       subtopicId: "5-1",
       type: "multiple_choice",
-      prompt: "\"İyelik Zamirleri\" konusu hangi seviyeye aittir?",
-      options: [
-        "Yanlış seviye",
-        "Seviye yok",
-        "Belirsiz",
-        "A1",
-      ],
+      prompt: '"İyelik Zamirleri" konusu hangi seviyeye aittir?',
+      options: ["Yanlış seviye", "Seviye yok", "Belirsiz", "A1"],
       correctIndex: 3,
       explanation: "Bu konu A1 seviyesindedir.",
     },

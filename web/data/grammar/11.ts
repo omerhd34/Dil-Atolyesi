@@ -58,7 +58,7 @@ export const topicContent11: TopicContent = {
       id: "11-ex-11-1-1",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt: "\"Miktar Belirteçleri\" alt konusu hangi ana konuya aittir?",
+      prompt: '"Miktar Belirteçleri" alt konusu hangi ana konuya aittir?',
       options: [
         "Miktar Belirteçleri",
         "Tamamen farklı bir konu",
@@ -66,13 +66,14 @@ export const topicContent11: TopicContent = {
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Miktar Belirteçleri\" başlığı altındadır.",
+      explanation: 'Bu alt konu "Miktar Belirteçleri" başlığı altındadır.',
     },
     {
       id: "11-ex-11-1-2",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Miktar Belirteçleri\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "Miktar Belirteçleri" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -86,19 +87,18 @@ export const topicContent11: TopicContent = {
       id: "11-tf-11-1-1",
       subtopicId: "11-1",
       type: "true_false",
-      prompt: "\"Miktar Belirteçleri\" başlığı \"Miktar Belirteçleri\" konusunun bir parçasıdır.",
-      options: [
-        "Doğru",
-        "Yanlış",
-      ],
+      prompt:
+        '"Miktar Belirteçleri" başlığı "Miktar Belirteçleri" konusunun bir parçasıdır.',
+      options: ["Doğru", "Yanlış"],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Miktar Belirteçleri\" konusu altında işlenir.",
+      explanation:
+        'Bu alt başlık "Miktar Belirteçleri" konusu altında işlenir.',
     },
     {
       id: "11-fb-11-1-1",
       subtopicId: "11-1",
       type: "fill_blank",
-      prompt: "\"Miktar Belirteçleri\" konusu _____ seviyesine uygundur.",
+      prompt: '"Miktar Belirteçleri" konusu _____ seviyesine uygundur.',
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },
@@ -184,7 +184,7 @@ export const topicContent11: TopicContent = {
       id: "quiz-11-11-1-1",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt: "\"Miktar Belirteçleri\" alt konusu hangi ana konuya aittir?",
+      prompt: '"Miktar Belirteçleri" alt konusu hangi ana konuya aittir?',
       options: [
         "Sadece kelime listesi",
         "Hiçbiri",
@@ -192,13 +192,14 @@ export const topicContent11: TopicContent = {
         "Tamamen farklı bir konu",
       ],
       correctIndex: 2,
-      explanation: "Bu alt konu \"Miktar Belirteçleri\" başlığı altındadır.",
+      explanation: 'Bu alt konu "Miktar Belirteçleri" başlığı altındadır.',
     },
     {
       id: "quiz-11-11-1-2",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Miktar Belirteçleri\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "Miktar Belirteçleri" için doğru yaklaşım hangisidir?',
       options: [
         "Sadece çeviri yapmadan ezberlemek",
         "Konuyu tamamen atlamak",
@@ -212,7 +213,7 @@ export const topicContent11: TopicContent = {
       id: "quiz-11-11-1-3",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt: "\"Miktar Belirteçleri\" çalışırken hangisi doğrudur?",
+      prompt: '"Miktar Belirteçleri" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Hiç örnek okumamak",
@@ -226,13 +227,8 @@ export const topicContent11: TopicContent = {
       id: "quiz-11-level",
       subtopicId: "11-1",
       type: "multiple_choice",
-      prompt: "\"Miktar Belirteçleri\" konusu hangi seviyeye aittir?",
-      options: [
-        "A1",
-        "Yanlış seviye",
-        "Belirsiz",
-        "Seviye yok",
-      ],
+      prompt: '"Miktar Belirteçleri" konusu hangi seviyeye aittir?',
+      options: ["A1", "Yanlış seviye", "Belirsiz", "Seviye yok"],
       correctIndex: 0,
       explanation: "Bu konu A1 seviyesindedir.",
     },

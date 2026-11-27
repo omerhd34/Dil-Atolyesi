@@ -2,6 +2,8 @@ export type TopicLessonExample = {
   en: string;
   tr: string;
   note?: string;
+  note2?: string;
+  note3?: string;
   speakTr?: boolean;
   exampleEn?: string;
   exampleTr?: string;
@@ -13,6 +15,8 @@ export type TopicLessonExampleHeaders = {
 };
 
 export type TopicLessonExamplesLayout = "list" | "columns";
+
+export type TopicLessonVisual = "adverbsOfFrequency";
 
 export type TopicLessonPart = {
   id: string;
@@ -26,6 +30,7 @@ export type TopicLessonPart = {
   examplesPerRow?: 2 | 3 | 4;
   examplesPerColumn?: number;
   exampleHeaders?: TopicLessonExampleHeaders;
+  visual?: TopicLessonVisual;
   parts?: TopicLessonPart[];
 };
 

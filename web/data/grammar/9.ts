@@ -21,8 +21,7 @@ export const topicContent9: TopicContent = {
         examples: [
           {
             en: "There is / There are",
-            tr: "Bu derste işlenir.",
-            note: "grammarHeading",
+            tr: "Var / Vardır",
           },
         ],
       },
@@ -33,7 +32,7 @@ export const topicContent9: TopicContent = {
       id: "9-ex-9-1-1",
       subtopicId: "9-1",
       type: "multiple_choice",
-      prompt: "\"Varlık Bildirme\" alt konusu hangi ana konuya aittir?",
+      prompt: '"Varlık Bildirme" alt konusu hangi ana konuya aittir?',
       options: [
         "Varlık Bildirme",
         "Tamamen farklı bir konu",
@@ -41,13 +40,14 @@ export const topicContent9: TopicContent = {
         "Hiçbiri",
       ],
       correctIndex: 0,
-      explanation: "Bu alt konu \"Varlık Bildirme\" başlığı altındadır.",
+      explanation: 'Bu alt konu "Varlık Bildirme" başlığı altındadır.',
     },
     {
       id: "9-ex-9-1-2",
       subtopicId: "9-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Varlık Bildirme\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "Varlık Bildirme" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Konuyu tamamen atlamak",
@@ -61,19 +61,17 @@ export const topicContent9: TopicContent = {
       id: "9-tf-9-1-1",
       subtopicId: "9-1",
       type: "true_false",
-      prompt: "\"Varlık Bildirme\" başlığı \"Varlık Bildirme\" konusunun bir parçasıdır.",
-      options: [
-        "Doğru",
-        "Yanlış",
-      ],
+      prompt:
+        '"Varlık Bildirme" başlığı "Varlık Bildirme" konusunun bir parçasıdır.',
+      options: ["Doğru", "Yanlış"],
       correctIndex: 0,
-      explanation: "Bu alt başlık \"Varlık Bildirme\" konusu altında işlenir.",
+      explanation: 'Bu alt başlık "Varlık Bildirme" konusu altında işlenir.',
     },
     {
       id: "9-fb-9-1-1",
       subtopicId: "9-1",
       type: "fill_blank",
-      prompt: "\"Varlık Bildirme\" konusu _____ seviyesine uygundur.",
+      prompt: '"Varlık Bildirme" konusu _____ seviyesine uygundur.',
       answer: "A1",
       explanation: "Bu konu A1 seviyesindedir.",
     },
@@ -159,7 +157,7 @@ export const topicContent9: TopicContent = {
       id: "quiz-9-9-1-1",
       subtopicId: "9-1",
       type: "multiple_choice",
-      prompt: "\"Varlık Bildirme\" alt konusu hangi ana konuya aittir?",
+      prompt: '"Varlık Bildirme" alt konusu hangi ana konuya aittir?',
       options: [
         "Sadece kelime listesi",
         "Hiçbiri",
@@ -167,13 +165,14 @@ export const topicContent9: TopicContent = {
         "Varlık Bildirme",
       ],
       correctIndex: 3,
-      explanation: "Bu alt konu \"Varlık Bildirme\" başlığı altındadır.",
+      explanation: 'Bu alt konu "Varlık Bildirme" başlığı altındadır.',
     },
     {
       id: "quiz-9-9-1-2",
       subtopicId: "9-1",
       type: "multiple_choice",
-      prompt: "A1 seviyesindeki \"Varlık Bildirme\" için doğru yaklaşım hangisidir?",
+      prompt:
+        'A1 seviyesindeki "Varlık Bildirme" için doğru yaklaşım hangisidir?',
       options: [
         "Örnekleri okuyup kısa pratik yapmak",
         "Sadece çeviri yapmadan ezberlemek",
@@ -187,7 +186,7 @@ export const topicContent9: TopicContent = {
       id: "quiz-9-9-1-3",
       subtopicId: "9-1",
       type: "multiple_choice",
-      prompt: "\"Varlık Bildirme\" çalışırken hangisi doğrudur?",
+      prompt: '"Varlık Bildirme" çalışırken hangisi doğrudur?',
       options: [
         "Anlamadığın örneği işaretleyip tekrar etmek",
         "Sadece dinleyip bırakmak",
@@ -201,13 +200,8 @@ export const topicContent9: TopicContent = {
       id: "quiz-9-level",
       subtopicId: "9-1",
       type: "multiple_choice",
-      prompt: "\"Varlık Bildirme\" konusu hangi seviyeye aittir?",
-      options: [
-        "Belirsiz",
-        "Seviye yok",
-        "Yanlış seviye",
-        "A1",
-      ],
+      prompt: '"Varlık Bildirme" konusu hangi seviyeye aittir?',
+      options: ["Belirsiz", "Seviye yok", "Yanlış seviye", "A1"],
       correctIndex: 3,
       explanation: "Bu konu A1 seviyesindedir.",
     },
